@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Me</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:2px}
+.crumb a{color:var(--accent);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.bar .gap{flex:1}
+.linkbtn{display:inline-block;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.role{font-size:13.5px;color:var(--muted);margin-top:2px}
+.about{display:grid;grid-template-columns:200px 1fr;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;align-items:start}
+.about img{width:200px;height:200px;object-fit:cover;border-radius:8px;display:block}
+.about .greet{margin:0;font-size:14px;color:var(--accent);font-weight:600}
+.about h3{margin:4px 0 8px;font-size:19px}
+.about p{margin:0 0 10px}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.steps .step{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:8px 14px}
+.steps .step h3{margin:0 0 4px}
+.steps .step ul{border:0;padding:0 0 0 18px;margin:0;background:none}
+@media (max-width:700px){.about{grid-template-columns:1fr}.about img{width:160px;height:160px}.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="wrap">
+<div class="top"><div class="crumb"><a href="index.html">AI Projects</a> › About me</div><h1>Lee Yih Ven</h1>
+<div class="role">Applied AI Systems and Business Workflow Automation, Malaysia</div>
+<div class="bar"><nav id="toc"></nav><span class="gap"></span><a class="linkbtn" href="index.html">All projects</a><a class="linkbtn primary" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project</a></div></div>
+
+<h2>About</h2>
+<div class="about">
+  <img src="profile.jpg" alt="Lee Yih Ven, Applied AI Systems and Business Workflow Automation, Kuala Lumpur">
+  <div>
+    <p class="greet">Hello, I'm Lee.</p>
+    <h3>Every Business Has Work That Could Be Easier</h3>
+    <p>Answering the same customer questions, checking documents, and preparing reports take time away from more important work. These are everyday problems that practical AI applications can help solve.</p>
+    <p>I build AI tools that handle routine enquiries, process information, and support business decisions. The goal is not to replace people, but to make their work easier and give them more time for tasks that need their attention.</p>
+    <p>With experience in insurance claims, e-commerce, and AI development, I understand both business processes and technology. Let's explore how AI can help your team work better.</p>
+  </div>
+</div>
+
+<h2>How I Work</h2>
+<div class="steps">
+  <div class="step"><h3>1. Understand the process</h3><ul><li>The problem and who it costs</li><li>The scope of a first version</li><li>What the AI may and may not do</li><li>How success will be measured</li></ul></div>
+  <div class="step"><h3>2. Design the workflow</h3><ul><li>Which tasks the AI handles</li><li>Which follow fixed rules</li><li>When a person takes over</li><li>Which data the system may read</li></ul></div>
+  <div class="step"><h3>3. Test before trust</h3><ul><li>Valid requests</li><li>Unauthorised access</li><li>Outdated information</li><li>System failures</li></ul></div>
+  <div class="step"><h3>4. Prepare for launch</h3><ul><li>Security review</li><li>A named owner for monitoring</li><li>A rollback plan</li><li>Approval before real users</li></ul></div>
+</div>
+
+<h2>Tools I Reach For</h2>
+<table>
+  <tr><th>Data &amp; Analytics</th><td>Python · pandas · NumPy · SQL · BigQuery · DuckDB · scikit-learn · statsmodels · Jupyter · Colab</td></tr>
+  <tr><th>AI &amp; Agents</th><td>Claude · Gemini · OpenAI · MCP · Vertex · AlloyDB · BYO-key apps, no infra · Chart.js · sql.js</td></tr>
+  <tr><th>Cloud &amp; Deploy</th><td>Google Cloud Run · GitHub Pages · Railway · Vercel · Docker · FastAPI</td></tr>
+  <tr><th>Content &amp; Ops</th><td>HTML · CSS · Chart.js · Markdown · Hugo · n8n · Cloud Scheduler · Claude Code skills</td></tr>
+</table>
+
+<h2>Connect</h2>
+<table>
+  <tr><th>Email</th><td><a href="mailto:yven81@gmail.com">yven81@gmail.com</a></td></tr>
+  <tr><th>LinkedIn</th><td><a href="https://www.linkedin.com/in/lee-yih-ven/" target="_blank" rel="noopener">lee-yih-ven</a></td></tr>
+  <tr><th>WhatsApp</th><td><a href="https://wa.me/60149207099" target="_blank" rel="noopener">Lee Yih Ven</a></td></tr>
+  <tr><th>CV</th><td><a href="https://lyven81.github.io/cv.html" target="_blank" rel="noopener">View my CV</a></td></tr>
+</table>
+
+<footer>© 2026 Lee Yih Ven · About Me</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);h.textContent=(i+1)+'. '+h.textContent;const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "note": "The only prices the assistant may quote. Anything not listed here is quoted by staff, usually after a mechanic's inspection. Prices include labour and the parts named under 'includes'. Fictional prices for a demo workshop.",
+  "currency": "RM",
+  "packages": [
+    {"package_id": "OIL-MIN-10W40", "name": "Engine oil change, mineral 10W-40", "service": "Engine Oil Change", "includes": "Up to 4 litres mineral 10W-40, oil filter, labour", "price_rm": 120, "duration_min": 30},
+    {"package_id": "OIL-SEMI-10W30", "name": "Engine oil change, semi-synthetic 10W-30", "service": "Engine Oil Change", "includes": "Up to 4 litres semi-synthetic 10W-30, oil filter, labour", "price_rm": 150, "duration_min": 30},
+    {"package_id": "OIL-FULL-5W30", "name": "Engine oil change, fully synthetic 5W-30", "service": "Engine Oil Change", "includes": "Up to 4 litres fully synthetic 5W-30, oil filter, labour", "price_rm": 190, "duration_min": 30},
+    {"package_id": "OIL-FULL-0W20", "name": "Engine oil change, fully synthetic 0W-20", "service": "Engine Oil Change", "includes": "Up to 4 litres fully synthetic 0W-20, oil filter, labour", "price_rm": 210, "duration_min": 30},
+    {"package_id": "PUNCTURE", "name": "Puncture repair", "service": "Puncture Repair", "includes": "Plug or patch on one tyre, labour", "price_rm": 25, "duration_min": 30},
+    {"package_id": "ROTATION", "name": "Tyre rotation", "service": "Tyre Rotation", "includes": "Rotate four wheels, pressure check", "price_rm": 30, "duration_min": 30},
+    {"package_id": "BALANCING", "name": "Wheel balancing", "service": "Wheel Balancing", "includes": "Balance four wheels, weights included", "price_rm": 40, "duration_min": 30},
+    {"package_id": "ALIGNMENT", "name": "Hunter wheel alignment", "service": "Hunter Alignment", "includes": "Four-wheel alignment on the Hunter rack, before and after printout", "price_rm": 80, "duration_min": 60},
+    {"package_id": "AC-TOPUP", "name": "Air-cond gas top-up", "service": "AC Gas Top-up", "includes": "Refrigerant top-up and leak check by gauge", "price_rm": 80, "duration_min": 30},
+    {"package_id": "AC-SERVICE", "name": "Air-cond service", "service": "AC Service", "includes": "Cabin filter, evaporator cleaning, gas top-up", "price_rm": 180, "duration_min": 75},
+    {"package_id": "BATTERY-TEST", "name": "Battery and charging test", "service": "Battery Test", "includes": "Battery health and alternator charging test", "price_rm": 20, "duration_min": 10},
+    {"package_id": "SPARK-4CYL", "name": "Spark plug replacement, 4-cylinder", "service": "Spark Plug Replacement", "includes": "Four standard spark plugs, labour", "price_rm": 90, "duration_min": 45},
+    {"package_id": "DIAGNOSTIC", "name": "Engine diagnostic scan", "service": "Engine Diagnostic", "includes": "OBD scan and fault report. Any repair found is quoted by staff afterwards.", "price_rm": 100, "duration_min": 45}
+  ],
+  "not_packaged": [
+    "Tyre replacement (price depends on tyre size and brand)",
+    "Battery replacement (price depends on battery model)",
+    "Timing belt replacement",
+    "Air-cond compressor repair",
+    "Any repair found during a diagnostic scan",
+    "Windscreen, bodywork, paint, brakes, suspension, gearbox, and anything else not listed above"
+  ]
+}

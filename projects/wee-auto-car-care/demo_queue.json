@@ -1,0 +1,99 @@
+{
+  "bookings": [
+    {
+      "booking_id": "SVC143",
+      "date": "2026-03-10",
+      "start_slot": "14:00",
+      "slots_occupied": 1,
+      "slot_list": [
+        "14:00"
+      ],
+      "bay": "BAY2",
+      "mechanic": "Albert",
+      "service": "Engine Oil Change",
+      "package_id": "OIL-SEMI-10W30",
+      "package_name": "Engine oil change, semi-synthetic 10W-30",
+      "duration_minutes": 30,
+      "ready_at": "14:30",
+      "next_bookable_at": "15:00",
+      "customer_name": "Nur Hidayah",
+      "plate": "WRT 5521",
+      "phone": "011-2345 6612",
+      "price_rm": 150,
+      "status": "pending",
+      "customer_id": "CUS124",
+      "source": "assistant"
+    },
+    {
+      "booking_id": "SVC144",
+      "date": "2026-03-12",
+      "start_slot": "13:00",
+      "slots_occupied": 1,
+      "slot_list": [
+        "13:00"
+      ],
+      "bay": "BAY3",
+      "mechanic": "Vishnu",
+      "service": "Hunter Alignment",
+      "package_id": "ALIGNMENT",
+      "package_name": "Hunter wheel alignment",
+      "duration_minutes": 60,
+      "ready_at": "14:00",
+      "next_bookable_at": "14:00",
+      "customer_name": "Kevin Ong",
+      "plate": "VDE 3307",
+      "phone": "012-640 7781",
+      "price_rm": 80,
+      "status": "pending",
+      "customer_id": "CUS125",
+      "source": "assistant"
+    }
+  ],
+  "handovers": [
+    {
+      "handover_id": "HO001",
+      "reason": "money",
+      "summary": "Customer asks how much the bill is for booking SVC001 (timing belt replacement). Booking check not done in the chat; no amount was shared.",
+      "customer_name": "Melvin Chua",
+      "contact_phone": "017-576 8424",
+      "booking_id": "SVC001",
+      "status": "open"
+    },
+    {
+      "handover_id": "HO002",
+      "reason": "not_covered",
+      "summary": "Customer asks whether the workshop does car wrapping and window tint. Not in the policy guide, FAQ or package list.",
+      "customer_name": "Daniel Lim",
+      "contact_phone": "012-778 3140",
+      "booking_id": "",
+      "status": "open"
+    },
+    {
+      "handover_id": "HO003",
+      "reason": "money",
+      "summary": "Customer asks whether a deposit is needed to hold booking request SVC143 and how to pay it online.",
+      "customer_name": "Nur Hidayah",
+      "contact_phone": "011-2345 6612",
+      "booking_id": "SVC143",
+      "status": "open"
+    },
+    {
+      "handover_id": "HO004",
+      "reason": "not_covered",
+      "summary": "Customer asks if the workshop can collect the car from Puchong and send it back after the service. Not covered by the policy guide or FAQ.",
+      "customer_name": "Aisyah Rahman",
+      "contact_phone": "013-552 9018",
+      "booking_id": "",
+      "status": "open"
+    },
+    {
+      "handover_id": "HO005",
+      "reason": "money",
+      "summary": "Customer asks for a refund on the air-cond gas top-up from booking SVC014; says the air is still not cold. Wants a call back.",
+      "customer_name": "Ivy Goh",
+      "contact_phone": "012-544 4191",
+      "booking_id": "SVC014",
+      "status": "open"
+    }
+  ]
+}

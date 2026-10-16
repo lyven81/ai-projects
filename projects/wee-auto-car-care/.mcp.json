@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wee-auto-car-care": {
+      "command": "node",
+      "args": ["mcp_server.mjs"]
+    }
+  }
+}

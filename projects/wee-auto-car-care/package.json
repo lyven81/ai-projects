@@ -1,0 +1,15 @@
+{
+  "name": "wee-auto-car-care-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wee Auto Car Care customer service assistant: MCP server, shared tools, benchmark",
+  "type": "commonjs",
+  "scripts": {
+    "mcp": "node mcp_server.mjs",
+    "benchmark": "node benchmark/run_benchmark.mjs",
+    "build": "python build_dashboard.py && node build_assistant.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.0"
+  }
+}
