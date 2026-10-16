@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Me</title>
 <style>
@@ -27,7 +27,7 @@ ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padd
 footer{margin-top:36px;font-size:12px;color:var(--muted)}
 .bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
 .bar .gap{flex:1}
-.linkbtn{display:inline-block;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.linkbtn{display:inline-block;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
 .linkbtn.primary{background:var(--accent);color:#fff}
 .role{font-size:13.5px;color:var(--muted);margin-top:2px}
 .about{display:grid;grid-template-columns:200px 1fr;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;align-items:start}
@@ -45,7 +45,7 @@ footer{margin-top:36px;font-size:12px;color:var(--muted)}
 <body><div class="wrap">
 <div class="top"><div class="crumb"><a href="index.html">AI Projects</a> › About me</div><h1>Lee Yih Ven</h1>
 <div class="role">Applied AI Systems and Business Workflow Automation, Malaysia</div>
-<div class="bar"><nav id="toc"></nav><span class="gap"></span><a class="linkbtn" href="index.html">All projects</a><a class="linkbtn primary" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project</a></div></div>
+<div class="bar"><nav id="toc"></nav><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn" id="latest-link" href="badminton-booking-agent.html">Latest project</a><a class="linkbtn primary" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project</a></div></div>
 
 <h2>About</h2>
 <div class="about">
@@ -88,5 +88,7 @@ footer{margin-top:36px;font-size:12px;color:var(--muted)}
 const toc=document.getElementById('toc');
 document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);h.textContent=(i+1)+'. '+h.textContent;const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
 document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
-</script></body>
+</script><script src="site-data.js"></script>
+<script>try{const L=window.SITE.projects.slice().sort((a,b)=>b.added.localeCompare(a.added))[0];document.getElementById("latest-link").href=encodeURI(L.page);}catch(e){}</script>
+</body>
 </html>

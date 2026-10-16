@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Projects</title>
 <style>
@@ -25,7 +25,7 @@ ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padd
 footer{margin-top:36px;font-size:12px;color:var(--muted)}
 .bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
 .bar .gap{flex:1}
-.linkbtn{display:inline-block;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.linkbtn{display:inline-block;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
 .linkbtn.primary{background:var(--accent);color:#fff}
 .feature{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .feature img{width:100%;height:100%;object-fit:cover;display:block}
@@ -42,22 +42,29 @@ footer{margin-top:36px;font-size:12px;color:var(--muted)}
 .type.empty{border-left-color:var(--line);opacity:.7}
 .type.empty .n{color:var(--muted)}
 @media (max-width:700px){.feature{grid-template-columns:1fr}.feature img{height:200px}.types{grid-template-columns:1fr}}
+.plist{display:grid;gap:10px}
+.pitem{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 14px}
+.pitem b{font-size:15.5px}.pitem b a{color:var(--navy);text-decoration:none}
+.pitem p{margin:2px 0 4px;font-size:14px;color:var(--muted)}
+.pitem .lk{font-size:13.5px}
 </style>
 </head>
 <body><div class="wrap">
 <div class="top"><h1>AI Projects · Lee Yih Ven</h1>
-<div class="bar"><nav id="toc"></nav><span class="gap"></span><a class="linkbtn" href="about.html">About me</a><a class="linkbtn primary" id="wa-link" target="_blank" rel="noopener">Discuss a project</a></div></div>
+<div class="bar"><nav id="toc"></nav><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn" href="about.html">About me</a><a class="linkbtn primary" id="wa-link" target="_blank" rel="noopener">Discuss a project</a></div></div>
 
 <p>I build practical AI applications that help businesses answer customers, process documents, research and route work. Each project starts from an operational problem and decides what the AI should and should not do. Each one is tested before it is shown, and you can try it yourself.</p>
 
 <h2>Latest Project</h2>
 <div id="latest"></div>
 
+<!-- Browse by Problem hidden (founder, 17 Oct). Restore with the script block below.
 <h2>Browse by Problem</h2>
 <div class="types" id="types"></div>
+-->
 
 <h2>All Projects</h2>
-<table><thead><tr><th>Project</th><th>Problem</th><th>What it does</th><th>Links</th></tr></thead><tbody id="all"></tbody></table>
+<div class="plist" id="all"></div>
 
 <h2>How Each Project Is Built</h2>
 <ol>
@@ -84,16 +91,16 @@ const latest = S.projects.slice().sort((a,b) => b.added.localeCompare(a.added))[
 document.getElementById("latest").innerHTML = `<div class="feature">
   <a href="${encodeURI(latest.page)}"><img src="${encodeURI(latest.cover)}" alt="${esc(latest.title)} cover"></a>
   <div class="fb"><div class="kick">${esc(typeOf(latest.type).name)} · ${esc(latest.valueProposition)}</div>
-  <h3><a href="${encodeURI(latest.page)}">${esc(latest.title)}</a></h3><p>${esc(latest.tagline)}</p><p>${esc(latest.problem)}</p>
+  <h3><a href="${encodeURI(latest.page)}">${esc(latest.title)}</a></h3><p>${esc(latest.hero || latest.tagline)}</p>
   <div class="acts"><a class="linkbtn primary" href="${encodeURI(latest.page)}">View project</a><a class="linkbtn" href="${latest.demo}" target="_blank" rel="noopener">Live demo</a></div></div></div>`;
 
-// A problem type appears only once it has its first project (founder, 16 Oct).
-document.getElementById("types").innerHTML = S.types.map(t => {
+// Browse by Problem is hidden; its builder runs only if the section is restored.
+if (document.getElementById("types")) document.getElementById("types").innerHTML = S.types.map(t => {
   const n = S.projects.filter(p => p.type === t.id).length;
   return n ? `<a class="type" href="category-${t.id}.html"><span class="n">${n} project${n > 1 ? "s" : ""}</span><b>${esc(t.name)}</b><p>${esc(t.intro.split(". ")[0])}.</p></a>` : "";
 }).join("");
 
-document.getElementById("all").innerHTML = S.projects.map(p => `<tr><td><b><a href="${encodeURI(p.page)}">${esc(p.title)}</a></b></td><td>${esc(typeOf(p.type).name)}</td><td>${esc(p.tagline)}</td><td><a href="${encodeURI(p.page)}">Page</a> · <a href="${p.demo}" target="_blank" rel="noopener">Demo</a></td></tr>`).join("");
+document.getElementById("all").innerHTML = S.projects.map(p => `<div class="pitem"><b><a href="${encodeURI(p.page)}">${esc(p.title)}</a></b><p>${esc(p.short || p.tagline)}</p><div class="lk"><a href="${encodeURI(p.page)}">Page</a> · <a href="${p.demo}" target="_blank" rel="noopener">Demo</a></div></div>`).join("");
 
 const toc = document.getElementById("toc");
 document.querySelectorAll("h2").forEach((h,i) => { h.id = "s" + (i+1); h.textContent = (i+1) + ". " + h.textContent; const a = document.createElement("a"); a.href = "#" + h.id; a.textContent = h.textContent; toc.appendChild(a); });

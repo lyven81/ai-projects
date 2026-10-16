@@ -22,6 +22,8 @@ window.SITE = {
   projects: [
     { slug: "badminton-booking-agent", title: "Badminton Court Booking Agent", type: "customer-service",
       valueProposition: "Customer Experience", added: "2026-10-16",
+      hero: "A court booking assistant that handles routine enquiries and prepares booking or cancellation requests under centre policies. It protects booking details and reduces manual follow-up, while staff retain approval, payment and exception handling.",
+      short: "Handles enquiries and prepares booking or cancellation requests within policy.",
       tagline: "A court booking assistant that answers only from the centre's policies, with staff in control of payments.",
       problem: "A badminton centre takes court bookings and deposits by chat, and staff check every payment by hand. Players ask the same rule questions all day. One player must never see another player's booking.",
       page: "badminton-booking-agent.html",
@@ -29,6 +31,8 @@ window.SITE = {
       demo: "https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" },
     { slug: "wee-auto-car-care", title: "Wee Auto Car Care", type: "customer-service",
       valueProposition: "Customer Experience", added: "2026-10-16",
+      hero: "A car workshop assistant that answers price and slot questions and prepares booking requests from the workshop's approved information. It checks identity before sharing a booking and reduces routine replies, while staff retain booking approval, payments and repairs.",
+      short: "Provides prices, available appointments and booking status while protecting privacy.",
       tagline: "A customer service assistant for a car workshop, with staff in control.",
       problem: "A car workshop gets the same customer questions all day: prices, free slots and car status. The owner checks the booking dashboard for every answer. One customer must never see another customer's booking.",
       page: "wee-auto-car-care.html",
