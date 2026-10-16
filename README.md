@@ -4,17 +4,25 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 1**
+**Total published AI projects: 2**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 2 | 2026-10-16 | Badminton Court Booking Agent | [page](https://lyven81.github.io/ai-projects/badminton-booking-agent.html) |
 | 1 | 2026-10-16 | Wee Auto Car Care | [page](https://lyven81.github.io/ai-projects/wee-auto-car-care.html) |
 
 ## Projects by Problem Type
 
 ### Customer service
+
+#### Badminton Court Booking Agent
+- **What it does:** A court booking assistant that answers only from the centre's policies, with staff in control of payments.
+- **How it's built:** Claude with an MCP server (Node.js) offering three policies with 59 numbered clauses and nine tools; the booking, hold, deposit and receipt rules are checked in the tools' code; payments, holds, cancellations and handovers wait for staff on a dashboard.
+- **Problem solved:** A badminton centre answers the same rule questions all day and checks every deposit screenshot by hand. The assistant answers from the policies, reads receipts against the booking, and passes the rest to staff with a summary they can act on.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/badminton-booking-agent.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html)
+- **Rebuilt:** 2026-10-16
 
 #### Wee Auto Car Care
 - **What it does:** A customer service assistant for a car workshop, with staff in control.

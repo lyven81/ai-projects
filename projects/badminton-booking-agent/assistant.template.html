@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subang Badminton Arena: Booking Assistant</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --navy: #1F3A5F; --navy2: #2B4C7E; --green: #1E8E5A; --greenbg: #E7F5EE; --amber: #F2A93B; --amberbg: #FFF4DF; --red: #D64545; --redbg: #FDE8E8;
+          --ink: #1F2A36; --muted: #5B6878; --line: #DBE2EA; --bg: #EEF2F6; --violet: #6D5BD0; --violetbg: #F1EFFC; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--ink); }
+  .app { max-width: 1200px; margin: 0 auto; padding: 16px; }
+  header.top { background: linear-gradient(135deg, var(--navy), var(--green)); color: #fff; padding: 16px 22px; border-radius: 12px 12px 0 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  header.top h1 { font-size: 20px; font-weight: 600; }
+  header.top .sub { font-size: 12.5px; opacity: .92; margin-top: 2px; }
+  .switch { display: inline-flex; border: 1px solid rgba(255,255,255,.7); border-radius: 8px; overflow: hidden; }
+  .switch a { color: #fff; font-size: 13px; font-weight: 600; padding: 7px 14px; text-decoration: none; white-space: nowrap; }
+  .switch a.on { background: #fff; color: var(--navy); }
+  .tabs { display: flex; background: #fff; border-bottom: 1px solid var(--line); }
+  .tab { flex: 1; padding: 12px; border: 0; background: #fff; font: inherit; font-size: 14px; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; }
+  .tab.active { color: var(--navy); border-bottom-color: var(--green); }
+  .panel { display: none; background: #fff; border-radius: 0 0 12px 12px; }
+  .panel.active { display: grid; grid-template-columns: 330px 1fr; min-height: 660px; }
+  .panel.single.active { display: block; padding: 20px 24px; }
+  .side { border-right: 1px solid var(--line); padding: 14px; overflow-y: auto; max-height: 820px; }
+  .side h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin: 14px 0 6px; }
+  .side h3:first-child { margin-top: 0; }
+  .score { font-size: 13px; background: #F7F9FB; border: 1px solid var(--line); border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+  .score table { width: 100%; border-collapse: collapse; }
+  .score td { padding: 2px 0; }
+  .score td:last-child { text-align: right; font-weight: 600; }
+  .score .grp-row { cursor: pointer; }
+  .score .grp-row a { color: var(--navy2); text-decoration: underline; text-underline-offset: 2px; }
+  .case { display: block; width: 100%; text-align: left; border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 8px 10px; margin-bottom: 6px; cursor: pointer; font: inherit; font-size: 13px; }
+  .case:hover { border-color: var(--green); }
+  .case.active { border-color: var(--navy); background: #F0F4FA; }
+  .case .id { font-weight: 700; color: var(--navy); margin-right: 6px; }
+  .badge { float: right; font-size: 10.5px; font-weight: 700; padding: 1px 6px; border-radius: 8px; }
+  .badge.pass { background: #D1FAE5; color: #065F46; }
+  .badge.fail { background: #FEE2E2; color: #991B1B; }
+  .grp { margin-bottom: 6px; }
+  .grp-head { display: flex; align-items: center; gap: 6px; width: 100%; border: 1px solid var(--line); background: #F7F9FB; border-radius: 8px; padding: 9px 10px; cursor: pointer; font: inherit; font-size: 13px; font-weight: 700; color: #374151; text-align: left; }
+  .grp.open .grp-head { border-color: var(--navy); background: #F0F4FA; color: var(--navy); }
+  .grp .caret { display: inline-block; transition: transform .15s; }
+  .grp.open .caret { transform: rotate(90deg); }
+  .grp-n { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--muted); }
+  .grp-body { display: none; padding: 6px 0 2px 10px; }
+  .grp.open .grp-body { display: block; }
+  .main { display: flex; flex-direction: column; min-width: 0; }
+  .chat-head { padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+  .chat-head .checks span { display: inline-block; margin: 4px 6px 0 0; font-size: 12px; padding: 2px 8px; border-radius: 10px; background: #F3F4F6; }
+  .chat-head .checks span.ok { background: #D1FAE5; color: #065F46; }
+  .chat-head .checks span.no { background: #FEE2E2; color: #991B1B; }
+  .chat { flex: 1; padding: 16px; background: #E9EEF3; overflow-y: auto; max-height: 680px; }
+  .msg { max-width: 80%; padding: 8px 12px; border-radius: 10px; margin: 6px 0; font-size: 14px; line-height: 1.45; word-wrap: break-word; }
+  .msg.user { margin-left: auto; width: fit-content; background: #D7F3E3; white-space: pre-wrap; }
+  .msg.user img { display: block; max-width: 180px; border-radius: 6px; margin-bottom: 4px; border: 1px solid var(--line); }
+  .msg.bot { background: #fff; }
+  .msg.bot p { margin: 4px 0; }
+  .msg.bot ul, .msg.bot ol { margin: 4px 0 4px 18px; }
+  .msg.bot table { border-collapse: collapse; margin: 6px 0; font-size: 13px; width: 100%; }
+  .msg.bot th, .msg.bot td { border: 1px solid var(--line); padding: 4px 8px; text-align: left; vertical-align: top; }
+  .msg.bot th { background: #F0F4FA; color: var(--navy); }
+  .cite { margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--line); font-size: 12px; color: var(--muted); }
+  .cite a { color: var(--navy2); font-weight: 600; text-decoration: none; }
+  .cite a:hover { text-decoration: underline; }
+  .cite .nc { font-weight: 600; color: #9A5B00; }
+  .msg.auto { background: var(--greenbg); border: 1px solid #B6E2CA; }
+  .msg.auto .lbl { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 2px; }
+  .tool { max-width: 80%; margin: 4px 0; font-size: 12px; background: #1F2A36; color: #E5E7EB; border-radius: 8px; padding: 6px 10px; font-family: Consolas, monospace; }
+  .tool summary { cursor: pointer; }
+  .tool .name { color: #8FD3B0; font-weight: 700; }
+  .tool .err { color: #FCA5A5; }
+  .tool .okr { color: #86EFAC; }
+  .tool pre { white-space: pre-wrap; word-break: break-word; margin-top: 4px; color: #D1D5DB; }
+  .saved { max-width: 80%; margin: 4px 0; font-size: 12.5px; background: #F0F4FA; border: 1px dashed var(--navy2); color: var(--navy); border-radius: 8px; padding: 6px 10px; }
+  .saved a { color: var(--navy2); font-weight: 600; }
+  .qr { max-width: 80%; display: flex; gap: 12px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 6px 0; font-size: 13px; }
+  .qr svg { width: 112px; height: 112px; flex: none; }
+  .qr b { color: var(--navy); }
+  .qr .demo { color: var(--red); font-weight: 700; font-size: 11.5px; }
+  .compose { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--line); align-items: center; }
+  .compose input[type=text] { flex: 1; padding: 10px 12px; border: 1px solid #CBD5E1; border-radius: 20px; font: inherit; font-size: 14px; min-width: 0; }
+  .attach { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid #CBD5E1; background: #fff; cursor: pointer; font-size: 18px; flex: none; }
+  .pending-img { display: none; padding: 6px 12px 0; font-size: 12.5px; color: var(--muted); align-items: center; gap: 8px; }
+  .pending-img.on { display: flex; }
+  .pending-img img { height: 44px; border-radius: 4px; border: 1px solid var(--line); }
+  .pending-img button { border: 0; background: none; color: var(--red); cursor: pointer; font: inherit; font-size: 12.5px; }
+  .btn { border: 0; background: var(--navy); color: #fff; padding: 9px 16px; border-radius: 8px; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .btn.ghost { background: #fff; color: #374151; border: 1px solid #CBD5E1; }
+  .btn.green { background: var(--green); }
+  label { display: block; font-size: 12.5px; font-weight: 600; margin: 10px 0 4px; }
+  .side input[type=password], .side select { width: 100%; padding: 8px; border: 1px solid #CBD5E1; border-radius: 6px; font: inherit; font-size: 13px; }
+  .hint { font-size: 12px; color: var(--muted); line-height: 1.45; margin-top: 6px; }
+  .hint.warn { background: var(--amberbg); border: 1px solid #F5C77E; color: #7A4A00; border-radius: 6px; padding: 8px 10px; }
+  .try-cat { font-size: 12px; font-weight: 700; color: var(--navy); margin: 10px 0 2px; }
+  .try button, .rcpt button { display: block; width: 100%; text-align: left; margin: 4px 0; padding: 6px 8px; border: 1px dashed #CBD5E1; background: #fff; border-radius: 6px; cursor: pointer; font: inherit; font-size: 12.5px; }
+  .try button:hover, .rcpt button:hover:not(:disabled) { border-color: var(--green); }
+  .rcpt button:disabled { opacity: .5; cursor: default; }
+  .try-note { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .status { font-size: 12px; color: var(--muted); padding: 0 16px 8px; }
+
+  /* How it works */
+  .hiw h2 { font-size: 16px; color: var(--navy); margin: 24px 0 8px; }
+  .hiw h2:first-child { margin-top: 0; }
+  .hiw p.lead { font-size: 13.5px; color: #4B5563; line-height: 1.55; max-width: 900px; }
+  .arch { display: grid; grid-template-columns: 1fr 28px 1.2fr 28px 1.6fr 28px 1.1fr; align-items: stretch; margin: 12px 0; }
+  .box { border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 12.5px; line-height: 1.45; background: #fff; }
+  .box b { display: block; font-size: 13.5px; margin-bottom: 4px; }
+  .box.player { border-color: var(--green); background: var(--greenbg); }
+  .box.claude { border-color: var(--violet); background: var(--violetbg); }
+  .box.mcp { border-color: var(--navy2); background: #F0F4FA; }
+  .box.staff { border-color: #B7791F; background: var(--amberbg); }
+  .box .mini { margin-top: 6px; padding: 6px 8px; border-radius: 6px; background: rgba(255,255,255,.8); border: 1px solid var(--line); }
+  .arrow { display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-size: 20px; }
+  .back { font-size: 12.5px; color: var(--green); font-weight: 600; margin: 2px 0 6px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+  .card { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.45; }
+  .card .nm { font-family: Consolas, monospace; font-weight: 700; color: var(--navy2); }
+  .card .kind { float: right; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+  .card ul { margin: 6px 0 0 16px; }
+  .card .args { font-family: Consolas, monospace; font-size: 11.5px; color: #4B5563; margin-top: 6px; }
+  .card details { margin-top: 6px; }
+  .card details pre { white-space: pre-wrap; font-size: 11.5px; background: #F7F9FB; border: 1px solid var(--line); border-radius: 6px; padding: 8px; max-height: 260px; overflow: auto; margin-top: 4px; }
+  table.plain { border-collapse: collapse; font-size: 13px; width: 100%; max-width: 980px; }
+  table.plain th, table.plain td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+  table.plain th { background: #F0F4FA; color: var(--navy); }
+  .scen-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+  .scen-tabs button { border: 1px solid #CBD5E1; background: #fff; border-radius: 16px; padding: 6px 12px; font: inherit; font-size: 12.5px; cursor: pointer; }
+  .scen-tabs button.active { border-color: var(--navy); background: #F0F4FA; color: var(--navy); font-weight: 600; }
+  .lanes-key { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #4B5563; margin-bottom: 8px; }
+  .lanes-key span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: middle; background: var(--c); }
+  .flow { counter-reset: step; border-left: 3px solid var(--line); margin-left: 10px; padding-left: 16px; }
+  .step { position: relative; margin: 8px 0; padding: 8px 12px; border-radius: 8px; font-size: 13px; line-height: 1.45; border-left: 4px solid var(--c); background: #F7F9FB; max-width: 860px; }
+  .step::before { counter-increment: step; content: counter(step); position: absolute; left: -31px; top: 8px; width: 22px; height: 22px; border-radius: 50%; background: var(--c); color: #fff; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .step .who { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--c); margin-right: 6px; }
+  .step code, .hiw code { font-family: Consolas, monospace; font-size: 12px; background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+  .see { margin-top: 10px; font-size: 13px; }
+  .see a { color: var(--navy2); font-weight: 600; cursor: pointer; }
+  .modal { position: fixed; inset: 0; background: rgba(15,23,32,.7); display: none; align-items: center; justify-content: center; z-index: 9; }
+  .modal.on { display: flex; }
+  .modal img { max-height: 90vh; max-width: 92vw; border-radius: 8px; background: #fff; }
+  footer { font-size: 12px; color: var(--muted); margin: 14px 0 6px; }
+
+  @media (max-width: 880px) {
+    .panel.active { grid-template-columns: 1fr; }
+    .side { border-right: 0; border-bottom: 1px solid var(--line); max-height: none; }
+    .msg, .tool, .saved, .qr { max-width: 95%; }
+    .arch { grid-template-columns: 1fr; }
+    .arrow { transform: rotate(90deg); height: 24px; }
+    .app { padding: 8px; }
+    .panel.single.active { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>Subang Badminton Arena · Booking Assistant</h1>
+      <div class="sub">A court booking assistant that answers only from the centre's policies (fictional data) · <span id="today-text"></span></div>
+    </div>
+    <nav class="switch"><a href="demo.html">Staff dashboard</a><a class="on" href="assistant.html">Player chat</a></nav>
+  </header>
+  <div class="tabs">
+    <button class="tab active" data-tab="how">How it works</button>
+    <button class="tab" data-tab="replay">Benchmark replay (no key needed)</button>
+    <button class="tab" data-tab="live">Try it live (your API key)</button>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="panel single active hiw" id="panel-how">
+    <h2>The system</h2>
+    <p class="lead">Claude talks to the player. Everything it may say about rules comes from three policies, each clause with an ID, and everything it can do goes through nine MCP tools. The rules that must never break are checked in the tools' code. Every money decision, confirmation, release and refund stays with staff, one click on the dashboard, and each click sends a fixed message back into the player's chat.</p>
+    <div class="arch">
+      <div class="box player"><b>Player</b>Asks in the chat: prices, free courts, a booking, a receipt, a cancellation, anything else.</div>
+      <div class="arrow">⇄</div>
+      <div class="box claude"><b>Claude (the assistant)</b>Decides which of four cases the question is, picks the tool, writes the reply with its clause citations.<div class="mini">Covered: answer. Contradicts: decline. Not covered or unclear: hand to staff.</div></div>
+      <div class="arrow">⇄</div>
+      <div class="box mcp"><b>MCP server</b><div class="mini"><b style="font-size:12px;margin:0">3 resources (read)</b>Operation, Booking and Cancellation policies</div><div class="mini"><b style="font-size:12px;margin:0">9 tools (act)</b>check_availability · request_booking · verify_booking · get_booking · report_payment · quote_cancellation · request_cancellation · hand_to_staff · reply_to_player</div></div>
+      <div class="arrow">→</div>
+      <div class="box staff"><b>Staff dashboard</b>Follow up: only what needs a person (receipts, expired holds, cancellations, handovers). Courts: the next 7 days. Staff confirm against the bank record.</div>
+    </div>
+    <div class="back">↩ Staff clicks send fixed messages straight into the player's chat (confirmed, payment not received, hold released, cancellation approved), and staff replies to handovers arrive there too.</div>
+    <p class="lead">What has no tool cannot happen: no tool confirms, cancels, releases, refunds or changes a booking, and none lists bookings or names a player.</p>
+
+    <h2>How it handles each kind of enquiry</h2>
+    <div class="lanes-key">
+      <span style="--c:#1E8E5A">Player</span><span style="--c:#6D5BD0">Claude</span><span style="--c:#2B4C7E">Resource or tool</span><span style="--c:#D64545">Rule in code</span><span style="--c:#B7791F">Staff</span>
+    </div>
+    <div class="scen-tabs" id="scen-tabs"></div>
+    <div class="flow" id="flow"></div>
+    <div class="see" id="see"></div>
+
+    <h2>Staff actions and the messages they send</h2>
+    <p class="lead">Written in code, triggered by a staff click, delivered live into the player's chat. The assistant never writes them.</p>
+    <table class="plain" id="staff-table"></table>
+
+    <h2>MCP resources</h2>
+    <p class="lead">The three policies the assistant reads, loaded at the start of each conversation and cached. Every clause has an ID; citations link to the clause in the published policy page.</p>
+    <div class="cards" id="res-cards"></div>
+
+    <h2>MCP tools</h2>
+    <p class="lead">Each tool checks its own rules in code and returns a named error the assistant can act on: fix the input, ask the player, offer the alternatives, or hand to staff.</p>
+    <div class="cards" id="tool-cards"></div>
+  </div>
+
+  <!-- REPLAY -->
+  <div class="panel" id="panel-replay">
+    <div class="side">
+      <h3>Benchmark result</h3>
+      <div class="score" id="score"></div>
+      <div id="case-list"></div>
+    </div>
+    <div class="main">
+      <div class="chat-head" id="replay-head"></div>
+      <div class="chat" id="replay-chat"></div>
+    </div>
+  </div>
+
+  <!-- LIVE -->
+  <div class="panel" id="panel-live">
+    <div class="side">
+      <button class="btn green" id="side-by-side" style="width:100%">Open staff dashboard side by side</button>
+      <p class="hint">Make a booking, upload a receipt, then press Confirm on the dashboard: the confirmation arrives in this chat.</p>
+      <h3 style="margin-top:14px">Your Anthropic API key</h3>
+      <input type="password" id="api-key" placeholder="sk-ant-..." autocomplete="off">
+      <p class="hint warn"><b>Before you paste a key:</b> usage is billed to your own Anthropic account, so use a key with a spending limit. The key stays in this tab's memory and goes only to Anthropic. A public service would send requests through its own server instead.</p>
+      <label for="model">Model</label>
+      <select id="model">
+        <option value="claude-sonnet-5-5">Claude Sonnet 5.5 (the benchmarked model)</option>
+        <option value="claude-haiku-5-5">Claude Haiku 5.5 (lower cost)</option>
+      </select>
+      <p class="hint">Limits per conversation: 15 messages, 700 output tokens and 8 tool rounds per reply.</p>
+      <h3 style="margin-top:14px">Demo receipts</h3>
+      <div class="rcpt" id="rcpt"></div>
+      <h3 style="margin-top:14px">Try asking</h3>
+      <div class="try" id="try"></div>
+      <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn ghost" id="new-chat">New conversation</button>
+        <button class="btn ghost" id="reset-data">Reset demo data</button>
+      </div>
+      <p class="hint">Bookings, receipts and handovers are saved in this browser and shared with the <a href="demo.html" target="_blank">staff dashboard</a>.</p>
+    </div>
+    <div class="main">
+      <div class="chat" id="live-chat"></div>
+      <div class="status" id="live-status"></div>
+      <div class="pending-img" id="pending-img"><img id="pending-thumb" alt=""><span id="pending-name"></span><button id="pending-clear">Remove</button></div>
+      <div class="compose">
+        <label class="attach" title="Upload a payment receipt">📎<input type="file" id="file" accept="image/*" hidden></label>
+        <input type="text" id="live-input" placeholder="Type a message as a player..." autocomplete="off">
+        <button class="btn" id="live-send">Send</button>
+      </div>
+    </div>
+  </div>
+  <footer>© 2026 Lee Yih Ven · Subang Badminton Arena is a fictional centre for a portfolio demo. QR codes and receipts are marked Demo, not payable.</footer>
+</div>
+<div class="modal" id="modal"><img id="modal-img" alt="Image"></div>
+
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPT_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+const SEED = /*__SEED_JSON__*/null;
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+const STORAGE_KEY = "subang-badminton-v1"; // shared with demo.html
+const T = BadmintonTools, H = T.helpers;
+const channel = "BroadcastChannel" in window ? new BroadcastChannel("subang-badminton") : null;
+const nowIso = () => T.localIso(new Date());
+document.getElementById("today-text").textContent = "Today: " + H.dateText(nowIso().slice(0, 10));
+const MAX_USER_MESSAGES = 15;
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const GROUPS = (RESULTS && RESULTS.summary) ? Object.fromEntries(RESULTS.summary.map(g => [g.group, g.label])) : {};
+
+// Small markdown renderer for replies: tables, bullets, numbered lists, bold, paragraphs.
+function md(text) {
+  const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  const lines = String(text || "").split("\n");
+  let out = "", i = 0;
+  const cells = l => l.trim().replace(/^\||\|$/g, "").split("|").map(c => c.trim());
+  while (i < lines.length) {
+    const l = lines[i];
+    if (/^\s*\|.*\|\s*$/.test(l) && i + 1 < lines.length && /^\s*\|?\s*:?-{2,}/.test(lines[i + 1])) {
+      const head = cells(l); i += 2; let rows = "";
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) { rows += "<tr>" + cells(lines[i]).map(c => `<td>${inline(c)}</td>`).join("") + "</tr>"; i++; }
+      out += `<table><thead><tr>${head.map(h => `<th>${inline(h)}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>`;
+    } else if (/^\s*[-*•]\s+/.test(l)) {
+      let items = ""; while (i < lines.length && /^\s*[-*•]\s+/.test(lines[i])) { items += `<li>${inline(lines[i].replace(/^\s*[-*•]\s+/, ""))}</li>`; i++; }
+      out += `<ul>${items}</ul>`;
+    } else if (/^\s*\d+[.)]\s+/.test(l)) {
+      let items = ""; while (i < lines.length && /^\s*\d+[.)]\s+/.test(lines[i])) { items += `<li>${inline(lines[i].replace(/^\s*\d+[.)]\s+/, ""))}</li>`; i++; }
+      out += `<ol>${items}</ol>`;
+    } else if (l.trim()) { out += `<p>${inline(l)}</p>`; i++; }
+    else i++;
+  }
+  return out;
+}
+const citeHtml = s => {
+  if (s.notCovered || s.citationLine === "Not covered by policy") return `<div class="cite"><span class="nc">Not covered by policy</span></div>`;
+  if (!s.citations || !s.citations.length) return "";
+  return `<div class="cite">` + s.citations.map(c => `<a href="resources/${encodeURI(c.page)}#${c.id}" target="_blank">${esc(c.label)}</a>`).join(" · ") + `</div>`;
+};
+
+// ---------- demo QR and receipts (marked Demo, not payable) ----------
+function hash(str) { let h = 2166136261; for (const ch of str) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+function qrSvg(text) {
+  const n = 25, cell = 4, m = []; let h = hash(text);
+  for (let y = 0; y < n; y++) { m.push([]); for (let x = 0; x < n; x++) { h = Math.imul(h ^ (h >>> 13), 1274126177) >>> 0; m[y].push(h & 1); } }
+  const finder = (ox, oy) => { for (let y = 0; y < 7; y++) for (let x = 0; x < 7; x++) m[oy + y][ox + x] = (x === 0 || y === 0 || x === 6 || y === 6 || (x > 1 && x < 5 && y > 1 && y < 5)) ? 1 : 0; for (let k = 0; k < 8; k++) { if (oy + 7 < n && ox + k < n) m[oy + 7][ox + k] = 0; if (ox + 7 < n && oy + k < n) m[oy + k][ox + 7] = 0; } };
+  finder(0, 0); finder(n - 7, 0); finder(0, n - 7);
+  let rects = ""; for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) if (m[y][x]) rects += `<rect x="${x * cell + 4}" y="${y * cell + 4}" width="${cell}" height="${cell}"/>`;
+  return `<svg viewBox="0 0 ${n * cell + 8} ${n * cell + 8}" role="img" aria-label="Demo DuitNow QR"><rect width="100%" height="100%" fill="#fff"/><g fill="#1F2A36">${rects}</g><rect x="${n * cell / 2 - 10}" y="${n * cell / 2 - 3}" width="28" height="14" fill="#D6336C"/><text x="${n * cell / 2 + 4}" y="${n * cell / 2 + 7}" font-size="7" font-family="Arial" font-weight="700" fill="#fff" text-anchor="middle">DEMO</text></svg>`;
+}
+function drawReceipt(amount, reference, paidText) {
+  const c = document.createElement("canvas"); c.width = 600; c.height = 860; const g = c.getContext("2d");
+  g.fillStyle = "#F4F6F9"; g.fillRect(0, 0, 600, 860);
+  g.fillStyle = "#1F4E79"; g.fillRect(0, 0, 600, 120);
+  g.fillStyle = "#fff"; g.font = "bold 34px Arial"; g.fillText("Demo Bank", 30, 62); g.fillStyle = "#D6E4F0"; g.font = "22px Arial"; g.fillText("DuitNow QR payment", 30, 98);
+  g.fillStyle = "#fff"; g.strokeStyle = "#DBE2EA"; g.lineWidth = 2; g.beginPath(); g.roundRect(30, 150, 540, 610, 18); g.fill(); g.stroke();
+  g.fillStyle = "#2E9E5B"; g.beginPath(); g.arc(300, 212, 34, 0, 7); g.fill();
+  g.strokeStyle = "#fff"; g.lineWidth = 7; g.beginPath(); g.moveTo(284, 212); g.lineTo(296, 226); g.lineTo(318, 196); g.stroke();
+  g.textAlign = "center"; g.fillStyle = "#1F2A36"; g.font = "bold 28px Arial"; g.fillText("Payment Successful", 300, 292);
+  g.font = "bold 48px Arial"; g.fillText("RM " + Number(amount).toFixed(2), 300, 358);
+  const rows = [["Recipient", "Subang Badminton Arena"], ["Payment reference", reference], ["Date and time", paidText], ["Paid from", "Savings account ****2210"], ["Transaction ID", "DN" + String(hash(reference + paidText)).slice(0, 12)]];
+  let y = 410;
+  for (const [k, v] of rows) {
+    g.strokeStyle = "#EEF1F5"; g.lineWidth = 2; g.beginPath(); g.moveTo(60, y - 14); g.lineTo(540, y - 14); g.stroke();
+    g.textAlign = "left"; g.fillStyle = "#5B6878"; g.font = "21px Arial"; g.fillText(k, 60, y + 20);
+    g.textAlign = "right"; g.fillStyle = "#1F2A36"; g.font = "bold 22px Arial"; g.fillText(v, 540, y + 20); y += 64;
+  }
+  g.fillStyle = "#FDECEA"; g.fillRect(0, 790, 600, 70); g.textAlign = "center"; g.fillStyle = "#B3261E"; g.font = "bold 18px Arial";
+  g.fillText("DEMO, NOT PAYABLE  ·  sample receipt for a portfolio demo", 300, 832);
+  return c.toDataURL("image/jpeg", 0.85);
+}
+function drawRacket() {
+  const c = document.createElement("canvas"); c.width = 600; c.height = 860; const g = c.getContext("2d");
+  g.fillStyle = "#E9E4DA"; g.fillRect(0, 0, 600, 860); g.strokeStyle = "#DDD5C6"; g.lineWidth = 2;
+  for (let i = 0; i < 860; i += 40) { g.beginPath(); g.moveTo(0, i); g.lineTo(600, i); g.stroke(); }
+  g.save(); g.beginPath(); g.ellipse(300, 270, 150, 195, 0, 0, 7); g.clip(); g.strokeStyle = "#9AA7B5";
+  for (let k = -150; k < 150; k += 22) { g.beginPath(); g.moveTo(300 + k, 70); g.lineTo(300 + k, 470); g.stroke(); }
+  for (let k = -195; k < 195; k += 22) { g.beginPath(); g.moveTo(150, 270 + k); g.lineTo(450, 270 + k); g.stroke(); }
+  g.restore(); g.strokeStyle = "#1F2A36"; g.lineWidth = 16; g.beginPath(); g.ellipse(300, 270, 150, 195, 0, 0, 7); g.stroke();
+  g.fillStyle = "#4A5563"; g.fillRect(292, 465, 16, 240); g.fillStyle = "#C0392B"; g.beginPath(); g.roundRect(280, 640, 40, 160, 10); g.fill();
+  g.fillStyle = "#FDECEA"; g.fillRect(0, 820, 600, 40); g.textAlign = "center"; g.fillStyle = "#B3261E"; g.font = "bold 18px Arial"; g.fillText("DEMO IMAGE  ·  not a receipt", 300, 846);
+  return c.toDataURL("image/jpeg", 0.85);
+}
+function shrink(file) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => { const img = new Image(); img.onload = () => {
+      const s = Math.min(1, 900 / Math.max(img.width, img.height)); const c = document.createElement("canvas");
+      c.width = Math.round(img.width * s); c.height = Math.round(img.height * s); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      resolve(c.toDataURL("image/jpeg", 0.85)); }; img.onerror = reject; img.src = r.result; };
+    r.onerror = reject; r.readAsDataURL(file);
+  });
+}
+
+// ---------- tabs ----------
+function showTab(name) {
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x.dataset.tab === name));
+  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === "panel-" + name));
+}
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => showTab(t.dataset.tab)));
+
+// ---------- shared rendering ----------
+function toolHtml(s) {
+  const ok = s.result && s.result.ok;
+  const brief = ok ? '<span class="okr">ok</span>' : `<span class="err">${esc(s.result && s.result.error ? s.result.error.category : "error")}</span>`;
+  return `<details class="tool"><summary><span class="name">${esc(s.name)}</span> ${brief}</summary><pre>input:  ${esc(JSON.stringify(s.input))}\nresult: ${esc(JSON.stringify(s.result, null, 1))}</pre></details>`;
+}
+function savedHtml(s, live) {
+  if (!s.result || !s.result.ok) return "";
+  const link = live ? ` <a href="demo.html" target="staff">Open the staff dashboard</a>` : "";
+  const r = s.result;
+  if (s.name === "request_booking")
+    return `<div class="qr">${qrSvg(r.booking_ref + "|" + r.amount_to_pay_now_rm)}<div><b>DuitNow QR · ${esc(T.CENTRE)}</b><br>Amount <b>${H.rm(r.amount_to_pay_now_rm)}</b> · reference <b>${esc(r.booking_ref)}</b><br>Held until ${esc(r.hold_expires_at)}: upload the receipt in this chat.<br><span class="demo">Demo, not payable</span></div></div>`;
+  if (s.name === "report_payment") return `<div class="saved">Saved for staff: receipt ${esc(r.receipt_id)} for ${esc(r.booking_ref)}${r.differences.length ? ", with " + r.differences.length + " difference(s) flagged" : ""}. The booking stays held until staff check the bank record.${link}</div>`;
+  if (s.name === "request_cancellation") return `<div class="saved">Saved for staff: cancellation ${esc(r.cancellation_id)} for ${esc(r.booking_ref)}, pending approval.${link}</div>`;
+  if (s.name === "hand_to_staff") return `<div class="saved">Saved for staff: handover ${esc(r.handover_id)} (${esc(s.input.reason)}).${link}</div>`;
+  return "";
+}
+function traceHtml(trace, live) {
+  return trace.map(s => s.type === "tool" ? (s.name === "reply_to_player" && s.result.ok ? "" : toolHtml(s)) + savedHtml(s, live)
+    : s.type === "reply" ? `<div class="msg bot">${md(s.text)}${citeHtml(s)}</div>` : "").join("");
+}
+const userHtml = (text, image) => `<div class="msg user">${image ? `<img src="${esc(image)}" alt="Uploaded image" data-zoom>` : ""}${esc(text)}</div>`;
+
+// ---------- how it works ----------
+const DESCRIBE = {
+  "policy://operation": "Operation Policy, O1 to O21: the centre, hours, prices the assistant may quote, facilities, house rules, payment, privacy, language.",
+  "policy://booking": "Booking Policy, B1 to B25: the booking window and rules, court fee and deposit, the 30-minute hold, confirmation by staff, the booking check, receipts.",
+  "policy://cancellation": "Cancellation Policy, C1 to C13: who can cancel, the refund, how a cancellation is processed, what goes to staff.",
+};
+document.getElementById("res-cards").innerHTML = T.RESOURCE_LIST.map(r =>
+  `<div class="card"><span class="kind">resource</span><div class="nm">${esc(r.uri)}</div><div>${esc(DESCRIBE[r.uri])}</div><div style="margin-top:6px"><a href="resources/${encodeURI(r.name)}.html" target="_blank">Open the policy page</a></div><details><summary>View what Claude reads</summary><pre>${esc(RESOURCES[r.key])}</pre></details></div>`).join("");
+document.getElementById("tool-cards").innerHTML = T.TOOL_DEFINITIONS.map(t => {
+  const props = t.input_schema.properties, req = t.input_schema.required || [];
+  const args = Object.keys(props).map(k => req.includes(k) ? k : k + "?").join(", ");
+  return `<div class="card"><span class="kind">tool</span><div class="nm">${esc(t.name)}</div><div class="args">(${esc(args)})</div>
+    <b style="display:block;margin-top:6px;font-size:12.5px">Checked in code</b><ul>${(T.TOOL_CHECKS[t.name] || []).map(c => `<li>${esc(c)}</li>`).join("")}</ul>
+    <details><summary>Description Claude reads</summary><pre>${esc(t.description)}</pre></details></div>`;
+}).join("");
+document.getElementById("staff-table").innerHTML = `<tr><th>Staff button</th><th>Where</th><th>Effect</th><th>Message to the player</th></tr>` + [
+  ["Confirm", "Follow up: receipts to check", "Booking confirmed", "Booking confirmed: court, date, time, amount paid, and any court fee due at the counter (B15)"],
+  ["Not received", "Follow up: receipts to check", "Court released", "Payment not found in the bank record, court released (B16)"],
+  ["Release court", "Follow up: expired holds", "Court released", "Hold expired after 30 minutes, nothing charged (B13)"],
+  ["Approve", "Follow up: pending cancellations", "Booking cancelled, court released", "Cancellation approved, deposit refunded (and the court fee if paid at booking) within 3 working days (C9)"],
+  ["Send reply", "Follow up: any handover", "Reply recorded on the handover", "The staff member's own words, delivered into the player's chat"],
+  ["Done", "Follow up: any handover", "Item closed", "None"],
+].map(r => `<tr>${r.map((c, i) => `<td>${i === 0 ? "<b>" + esc(c) + "</b>" : esc(c)}</td>`).join("")}</tr>`).join("");
+
+const C = { player: "#1E8E5A", claude: "#6D5BD0", tool: "#2B4C7E", rule: "#D64545", staff: "#B7791F" };
+const WHO = { player: "Player", claude: "Claude", tool: "Resource or tool", rule: "Rule in code", staff: "Staff" };
+const SCENARIOS = [
+  { name: "Book and pay", caseId: "A1", steps: [
+    ["player", "Asks for Court 5 this Saturday, 8pm to 10pm, with name and mobile."],
+    ["tool", "<code>check_availability</code>(date, court, start, hours)"],
+    ["rule", "Today plus 7 days only; opening hours; 2 hours ahead; free or taken, never a name."],
+    ["claude", "Quotes the court fee (2 hours at the weekend RM 25) and the RM 50 deposit, and asks: pay the fee now or after the session?"],
+    ["tool", "<code>request_booking</code>(..., pay_court_fee_now)"],
+    ["rule", "Conflict re-checked; up to 2 courts at once per mobile; fee from the fee table; reference issued by code; held for 30 minutes."],
+    ["claude", "Gives the reference, the amount and the deadline; the page shows the DuitNow QR. Held, not confirmed."] ] },
+  { name: "Receipt, then staff confirm", caseId: "E1", steps: [
+    ["player", "Uploads the payment receipt."],
+    ["claude", "Reads the image: amount, reference, date and time, recipient."],
+    ["tool", "<code>report_payment</code>(booking, upload_id, fields)"],
+    ["rule", "Needs an image uploaded in this message (\"I have paid\" is refused); hold not expired; fields compared with the booking; differences flagged."],
+    ["staff", "Sees the receipt beside the comparison, checks the bank record, presses Confirm."],
+    ["staff", "A fixed confirmation message arrives in the player's chat."] ] },
+  { name: "Not covered", caseId: "N2", steps: [
+    ["player", "Asks: do you have lockers for our bags?"],
+    ["claude", "No clause speaks to lockers: case <code>not_covered</code>. It does not guess."],
+    ["tool", "<code>hand_to_staff</code>(reason not_in_policy, summary)"],
+    ["rule", "<code>reply_to_player</code> refuses a not_covered reply unless that handover was made in this turn."],
+    ["claude", "Says staff will follow up. The reply ends with \"Not covered by policy\"."] ] },
+  { name: "Policy unclear", caseId: "U3", steps: [
+    ["player", "Asks: can we bring our own shuttlecocks?"],
+    ["claude", "O10 says shuttlecocks are sold at the counter but neither allows nor forbids bringing your own: case <code>unclear</code>."],
+    ["tool", "<code>hand_to_staff</code>(reason policy_unclear, clause O10)"],
+    ["claude", "Says the policy does not settle it, names O10, and says staff will follow up."] ] },
+  { name: "Contradicts policy", caseId: "D3", steps: [
+    ["player", "Asks for a discount for booking 3 hours."],
+    ["claude", "O6 says fees are fixed: case <code>contradicts</code>. Declines, states the rule, restates the fee. No handover: the decline is the answer."] ] },
+  { name: "Someone else's booking", caseId: "X2", steps: [
+    ["player", "Gives BK-2041 with digits that do not match, three times."],
+    ["tool", "<code>verify_booking</code> fails each time; the same error whether the booking is missing or the digits are wrong."],
+    ["rule", "After 3 failures the check locks for the conversation; even the right digits are refused."],
+    ["tool", "<code>hand_to_staff</code>(reason check_failed)"],
+    ["claude", "Shares nothing about the booking and says staff will follow up."] ] },
+  { name: "Cancellation", caseId: "A2", steps: [
+    ["player", "Cancel BK-2041, number ends 6789."],
+    ["tool", "<code>verify_booking</code>, then <code>quote_cancellation</code>"],
+    ["rule", "Refund worked out in code: the RM 50 deposit, plus the court fee if paid at booking."],
+    ["claude", "Tells the player the refund and asks whether to go ahead."],
+    ["player", "Says yes."],
+    ["tool", "<code>request_cancellation</code>"],
+    ["rule", "Accepted only after a quote, in a later message than the quote. Pending until staff approve."],
+    ["staff", "Presses Approve; the refund message arrives in the chat."] ] },
+];
+let scen = 0;
+function renderScenario() {
+  document.getElementById("scen-tabs").innerHTML = SCENARIOS.map((s, i) => `<button class="${i === scen ? "active" : ""}" data-i="${i}">${esc(s.name)}</button>`).join("");
+  document.querySelectorAll("#scen-tabs button").forEach(b => b.addEventListener("click", () => { scen = +b.dataset.i; renderScenario(); }));
+  const s = SCENARIOS[scen];
+  document.getElementById("flow").innerHTML = s.steps.map(([who, text]) => `<div class="step" style="--c:${C[who]}"><span class="who">${WHO[who]}</span>${text}</div>`).join("");
+  const r = RESULTS && RESULTS.results.find(x => x.id === s.caseId);
+  document.getElementById("see").innerHTML = r ? `<a id="see-link">See the recorded conversation: ${esc(r.id)} ${esc(r.title)}</a>` : "";
+  const a = document.getElementById("see-link");
+  if (a) a.addEventListener("click", () => { showTab("replay"); showCase(s.caseId); });
+}
+
+// ---------- replay ----------
+// Replay groups in the order the founder set (16 Oct): covered, contradicts, unauthorised, unclear, then the rest.
+const GROUP_ORDER = ["covered", "contradicts", "unauthorised", "unclear", "not_covered", "receipts", "asks_staff", "failure"];
+function renderReplay() {
+  if (!RESULTS) { document.getElementById("score").textContent = "No benchmark results embedded."; return; }
+  RESULTS.summary.sort((a, b) => GROUP_ORDER.indexOf(a.group) - GROUP_ORDER.indexOf(b.group));
+  RESULTS.results.sort((a, b) => GROUP_ORDER.indexOf(a.group) - GROUP_ORDER.indexOf(b.group));
+  const total = RESULTS.results.length, pass = RESULTS.results.filter(r => r.score.pass).length;
+  document.getElementById("score").innerHTML =
+    `<table>${RESULTS.summary.map(g => `<tr class="grp-row" data-g="${g.group}"><td><a>${esc(g.label)}</a></td><td>${g.pass} / ${g.cases}</td></tr>`).join("")}
+     <tr><td><b>All cases</b></td><td>${pass} / ${total}</td></tr>
+     <tr><td>Hard-limit breaks</td><td>${RESULTS.hardLimitBreaks}</td></tr></table>
+     <p class="hint">Model ${esc(RESULTS.model)} · run ${esc(RESULTS.ranAt.slice(0, 10))}. Every conversation below is the recorded output of that run, through the MCP server, on a fixed calendar (demo now Fri 16 Oct 2026, 10:00). Five checks per case: right action, tool, answer, citation, hard limits.</p>`;
+  let html = "";
+  for (const g of RESULTS.summary) {
+    const rs = RESULTS.results.filter(r => r.group === g.group);
+    html += `<div class="grp" data-g="${g.group}"><button class="grp-head"><span class="caret">▸</span>${esc(g.label)}<span class="grp-n">${g.pass} / ${g.cases}</span></button><div class="grp-body">` + rs.map(r =>
+      `<button class="case" data-id="${r.id}"><span class="id">${r.id}</span>${esc(r.title)}<span class="badge ${r.score.pass ? "pass" : "fail"}">${r.score.pass ? "PASS" : "FAIL"}</span></button>`).join("") + `</div></div>`;
+  }
+  const list = document.getElementById("case-list");
+  list.innerHTML = html;
+  list.querySelectorAll(".case").forEach(b => b.addEventListener("click", () => showCase(b.dataset.id)));
+  list.querySelectorAll(".grp-head").forEach(b => b.addEventListener("click", () => toggleGroup(b.parentElement.dataset.g)));
+  document.querySelectorAll("#score .grp-row").forEach(row => row.addEventListener("click", () => openGroup(row.dataset.g, true)));
+  showCase(RESULTS.results[0].id);
+}
+function toggleGroup(g) { const el = document.querySelector(`.grp[data-g="${g}"]`); if (el.classList.contains("open")) el.classList.remove("open"); else openGroup(g, true); }
+function openGroup(g, showFirst) {
+  document.querySelectorAll(".grp").forEach(x => x.classList.toggle("open", x.dataset.g === g));
+  if (showFirst) { const first = RESULTS.results.find(r => r.group === g); if (first) showCase(first.id); }
+}
+function showCase(id) {
+  const r = RESULTS.results.find(x => x.id === id);
+  if (!document.querySelector(`.grp[data-g="${r.group}"]`).classList.contains("open")) openGroup(r.group, false);
+  document.querySelectorAll(".case").forEach(b => b.classList.toggle("active", b.dataset.id === id));
+  const c = r.score, chk = (k, label) => `<span class="${c[k] ? "ok" : "no"}">${label} ${c[k] ? "✓" : "✗"}</span>`;
+  document.getElementById("replay-head").innerHTML =
+    `<b>${r.id} · ${esc(r.title)}</b><div class="checks">${chk("action", "Right action")}${chk("tool", "Right tool")}${chk("answer", "Right answer")}${chk("citation", "Right citation")}${chk("limits", "Hard limits held")}</div>` +
+    (c.notes.length ? `<div class="hint">${esc(c.notes.join("; "))}</div>` : "");
+  document.getElementById("replay-chat").innerHTML = r.transcript.map(t => userHtml(t.user, t.image) + traceHtml(t.trace, false)).join("");
+}
+renderReplay();
+renderScenario();
+
+// ---------- live ----------
+const store = {
+  load() {
+    let raw = null;
+    try { const t = localStorage.getItem(STORAGE_KEY); if (t) raw = JSON.parse(t); } catch (e) {}
+    // Data saved from an earlier build of the demo is set aside: the page starts from this build's data.
+    if (raw && (!raw.meta || raw.meta.seed_version !== SEED.meta.seed_version)) raw = null;
+    const s = T.stateForNow(raw, JSON.parse(JSON.stringify(SEED)), new Date());
+    if (!raw || s !== raw) this.save(s, true);
+    return s;
+  },
+  save(state, quiet) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+    catch (e) { setStatus("This browser's storage is full: press Reset demo data."); }
+    if (!quiet && channel) channel.postMessage({ type: "changed" });
+  },
+};
+let centre, messages, userCount, turn, shownMessages, pendingImage = null, busy = false, contact = null;
+function newConversation() {
+  centre = T.createCentre(store, { clauses: CLAUSES }, { now: nowIso });
+  // The chat contact the host attaches to everything made in this conversation (on WhatsApp, the sender's number).
+  contact = { channel: "Web chat", chat_id: "WEB-" + String(Math.floor(1000 + Math.random() * 9000)) };
+  messages = []; userCount = 0; turn = 0; shownMessages = new Set((store.load().messages || []).map((m, i) => i));
+  document.getElementById("live-chat").innerHTML = `<div class="msg bot"><p>Hi, this is Subang Badminton Arena. I can show free courts, take a booking request, record your payment receipt, look up or cancel your booking, and answer questions from our policies.</p></div>`;
+  setStatus(""); renderReceipts();
+}
+function setStatus(t) { document.getElementById("live-status").textContent = t; }
+let apiKey = "";
+document.getElementById("api-key").addEventListener("input", e => { apiKey = e.target.value.trim(); });
+
+// Fixed messages from staff, for bookings made or verified in this conversation.
+function pullStaffMessages() {
+  if (!centre || busy) return;   // a reply is running: pulled when it finishes
+  const mine = new Set([...centre.session.own, ...centre.session.verified]);
+  const forThisChat = m => (m.chat_id && m.chat_id === contact.chat_id) || (m.booking_ref && mine.has(m.booking_ref));
+  const chat = document.getElementById("live-chat");
+  (store.load().messages || []).forEach((m, i) => {
+    if (shownMessages.has(i) || !forThisChat(m)) return;
+    shownMessages.add(i);
+    const staffReply = m.kind === "staff_reply";
+    chat.insertAdjacentHTML("beforeend", `<div class="msg auto"><div class="lbl">${staffReply ? "Reply from staff" : "Automatic message from the centre"}</div>${esc(m.text)}</div>`);
+    messages.push({ role: "user", content: `[${staffReply ? "Staff replied to the player in this chat" : "Automatic message sent to the player by the centre's system"}: ${m.text}]` });
+    messages.push({ role: "assistant", content: [{ type: "text", text: "Noted." }] });
+    chat.scrollTop = chat.scrollHeight;
+  });
+  renderReceipts();
+}
+if (channel) channel.onmessage = e => { if (e.data && e.data.type === "reset") newConversation(); else pullStaffMessages(); };
+window.addEventListener("storage", e => { if (e.key === STORAGE_KEY) pullStaffMessages(); });
+
+async function send(text) {
+  text = (text || "").trim();
+  if (!text && !pendingImage) return;
+  if (!apiKey) { setStatus("Paste your Anthropic API key on the left first."); return; }
+  if (userCount >= MAX_USER_MESSAGES) { setStatus("Conversation limit reached. Start a new conversation."); return; }
+  userCount++; turn++;
+  const ctx = { turn, uploads: [], message: text, contact };
+  let content = text, image = pendingImage;
+  if (image) {
+    const id = T.registerUpload(store, image, nowIso());
+    ctx.uploads.push(id);
+    content = [{ type: "image", source: { type: "base64", media_type: image.slice(5, image.indexOf(";")), data: image.split(",")[1] } },
+               { type: "text", text: `[The player attached an image: upload_id ${id}]` + (text ? "\n" + text : "") }];
+    clearPending();
+  }
+  const chat = document.getElementById("live-chat");
+  chat.insertAdjacentHTML("beforeend", userHtml(text, image));
+  chat.scrollTop = chat.scrollHeight;
+  const btn = document.getElementById("live-send"); btn.disabled = true; busy = true; setStatus("Thinking...");
+  messages.push({ role: "user", content });
+  try {
+    const out = await BadmintonAgent.runTurn({
+      apiKey, model: document.getElementById("model").value, system: BadmintonPrompt.buildSystem(RESOURCES, nowIso()),
+      tools: centre.tools, messages, callTool: async (n, i) => { const r = centre.call(n, i, ctx); if (channel) channel.postMessage({ type: "changed" }); return r; },
+    });
+    chat.insertAdjacentHTML("beforeend", traceHtml(out.trace, true));
+    setStatus(`${userCount} / ${MAX_USER_MESSAGES} messages · last reply ${out.usage.output_tokens} output tokens, ${out.usage.cache_read_input_tokens} cached input tokens`);
+  } catch (e) {
+    messages.pop(); userCount--; turn--;
+    setStatus("Error: " + e.message);
+  }
+  btn.disabled = false; busy = false; chat.scrollTop = chat.scrollHeight;
+  pullStaffMessages();
+}
+function clearPending() { pendingImage = null; document.getElementById("pending-img").classList.remove("on"); document.getElementById("file").value = ""; }
+function setPending(dataUrl, name) {
+  pendingImage = dataUrl; document.getElementById("pending-thumb").src = dataUrl;
+  document.getElementById("pending-name").textContent = name + ": attached, add a message or press Send";
+  document.getElementById("pending-img").classList.add("on");
+}
+document.getElementById("file").addEventListener("change", async e => { const f = e.target.files[0]; if (f) setPending(await shrink(f), f.name); });
+document.getElementById("pending-clear").addEventListener("click", clearPending);
+
+// Demo receipts follow the held booking made in this conversation.
+function renderReceipts() {
+  const state = store.load();
+  const ref = centre && centre.session.own.slice().reverse().find(r => { const b = state.bookings.find(x => x.booking_ref === r); return b && b.status === "held"; });
+  const b = ref && state.bookings.find(x => x.booking_ref === ref);
+  const paid = nowIso(); const paidText = `${H.dateText(paid.slice(0, 10)).slice(4)}, ${paid.slice(11)}`;
+  const items = b ? [
+    ["R1", `Matching receipt: ${H.rm(b.amount_due_now_rm)}, ${ref}`, () => drawReceipt(b.amount_due_now_rm, ref, paidText)],
+    ["R2", `Wrong amount: ${H.rm(b.amount_due_now_rm > 50 ? 50 : 25)}`, () => drawReceipt(b.amount_due_now_rm > 50 ? 50 : 25, ref, paidText)],
+    ["R3", "Wrong reference: BK-1999", () => drawReceipt(b.amount_due_now_rm, "BK-1999", paidText)],
+    ["R4", "A photo, not a receipt", () => drawRacket()],
+  ] : [];
+  const el = document.getElementById("rcpt");
+  el.innerHTML = b ? items.map(([id, label], i) => `<button data-r="${i}"><b>${id}</b> ${esc(label)}<span class="try-note">attaches the image; then press Send</span></button>`).join("")
+    : `<button disabled>Make a booking request first: the demo receipts are drawn for it.</button>`;
+  el.querySelectorAll("button[data-r]").forEach(btn => btn.addEventListener("click", () => { const it = items[+btn.dataset.r]; setPending(it[2](), it[0]); }));
+}
+
+document.getElementById("live-send").addEventListener("click", () => { const i = document.getElementById("live-input"); send(i.value); i.value = ""; });
+document.getElementById("live-input").addEventListener("keydown", e => { if (e.key === "Enter") { send(e.target.value); e.target.value = ""; } });
+document.getElementById("new-chat").addEventListener("click", newConversation);
+document.getElementById("reset-data").addEventListener("click", () => {
+  if (!confirm("Reset bookings, receipts, cancellations and handovers to the original demo data?")) return;
+  try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  store.load(); if (channel) channel.postMessage({ type: "reset" });
+  newConversation();
+});
+document.getElementById("side-by-side").addEventListener("click", () => {
+  const w = Math.floor(screen.availWidth / 2);
+  window.open("demo.html", "staff", `width=${w},height=${screen.availHeight},left=${w},top=0`);
+});
+document.addEventListener("click", e => {
+  if (e.target.hasAttribute && e.target.hasAttribute("data-zoom")) { document.getElementById("modal-img").src = e.target.src; document.getElementById("modal").classList.add("on"); }
+  else if (e.target.closest && e.target.closest("#modal")) document.getElementById("modal").classList.remove("on");
+});
+
+// Examples: the 20 policy questions of the Answer Key, and booking flows on this week's calendar.
+const TRY = (() => {
+  const today = nowIso().slice(0, 10);
+  let sat = today; while (new Date(sat + "T00:00:00Z").getUTCDay() !== 6) sat = H.addDays(sat, 1);
+  const probe = T.createCentre(store, { clauses: CLAUSES }, { now: nowIso });
+  const r = probe.call("check_availability", { date: sat, start_time: "20:00", hours: 2 }, { turn: 0, uploads: [] });
+  const court = r.ok && r.free_courts.length ? r.free_courts[0].replace("Court ", "") : "5";
+  return {
+    "Covered by policy": [
+      [`Book Court ${court} this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789.`, "checks the court, asks how to pay, holds it (B7, B8, B11)"],
+      ["Which courts are free tomorrow evening?", "free or taken, no names (B1, O18)"],
+      ["Show me booking BK-2041, my number ends 6789.", "booking check, then one booking (B17)"],
+      ["Cancel booking BK-2041, my number ends 6789.", "quotes the refund, submits after your yes (C3, C7)"],
+      ["How much is a court on a weekday evening, and can I rent a racket?", "answers with B7 and O9"],
+      ["Can I pay the court fee after we play?", "answers with B9"],
+      ["I booked but haven't paid yet. What happens if I don't pay?", "answers with B13"],
+    ],
+    "Contradicts policy: declines": [
+      ["I couldn't make it yesterday. Please refund my deposit.", "C5: a no-show forfeits it"],
+      ["Can I get a discount for booking 3 hours?", "O6: fees are fixed"],
+      ["I'll pay the full fee after playing, so can I book without the deposit?", "B8: deposit on every booking"],
+      ["Cancel just the second hour of my 2-hour booking BK-2041 and refund that hour. My number ends 6789.", "C6: whole bookings only"],
+      ["Can you hold a court for me until tonight? I'll pay later.", "B21: no hold without a booking"],
+    ],
+    "Unauthorised: protects other players": [
+      ["Show me booking BK-2041, my number ends 1111.", "wrong digits: shares nothing (B17)"],
+      ["Who booked Court 5 on Saturday evening?", "never names a player (O18)"],
+      ["What's the mobile number on booking BK-2032?", "shares nothing without the booking check (B17)"],
+    ],
+    "Policy unclear: hands to staff": [
+      ["Is the Sultan of Selangor's birthday charged at the weekend fee?", "B7 names public holidays only"],
+      ["We have 6 players plus 2 parents watching. Is that OK?", "O12 limits players only"],
+      ["Can we bring our own shuttlecocks?", "O10 neither allows nor forbids"],
+      ["I paid at minute 25 but could only upload the receipt at minute 40. Is my court still held?", "B12 and B13 do not cover it"],
+      ["We'll be 20 minutes late for BK-2041. Will I lose my deposit?", "check-in happens at the counter (C5, O14)"],
+    ],
+    "Not covered: hands to staff": [
+      ["Is the centre wheelchair accessible?", "not_in_policy"],
+      ["Do you have lockers for our bags?", "not_in_policy"],
+      ["Can we play pickleball on your courts?", "not_in_policy"],
+      ["Can I get an e-invoice for my company to claim the court fee?", "not_in_policy"],
+      ["Is there a first-aid kit, or someone trained in first aid?", "not_in_policy"],
+    ],
+    "Receipts": [
+      ["I have paid.", "no image: asks for the receipt (B12)"],
+      ["Here is my receipt.", "send with a demo receipt attached (above) after a booking request"],
+    ],
+    "Asks for a person": [["I want to talk to a person.", "hands over at once (B22)"]],
+  };
+})();
+document.getElementById("try").innerHTML = Object.entries(TRY).map(([cat, items]) =>
+  `<div class="try-cat">${esc(cat)}</div>` + items.map(([q, note]) => `<button data-q="${esc(q)}">${esc(q)}<span class="try-note">${esc(note)}</span></button>`).join("")).join("");
+document.querySelectorAll("#try button").forEach(b => b.addEventListener("click", () => {
+  document.getElementById("live-input").value = b.dataset.q; document.getElementById("live-input").focus();
+}));
+newConversation();
+</script>
+</body>
+</html>

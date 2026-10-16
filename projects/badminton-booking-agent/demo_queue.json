@@ -1,0 +1,498 @@
+{
+ "bookings": [
+  {
+   "booking_ref": "BK-2051",
+   "court": 10,
+   "date": "2026-10-18",
+   "start_hour": 19,
+   "hours": 2,
+   "player_name": "Kumar Selvam",
+   "mobile": "016-552 8190",
+   "court_fee_rm": 50,
+   "deposit_rm": 50,
+   "pay_fee_now": true,
+   "amount_due_now_rm": 100,
+   "status": "held",
+   "requested_at": "2026-10-16T09:52",
+   "hold_expires_at": "2026-10-16T10:22",
+   "confirmed_at": null,
+   "paid": {
+    "deposit_rm": 0,
+    "court_fee_rm": 0
+   },
+   "source": "assistant",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0165528190",
+    "mobile": "016-552 8190"
+   },
+   "question": "Book Court 10 on Sunday at 7pm for 2 hours. Name Kumar Selvam, 016-552 8190. I'll pay the court fee now.",
+   "told_player": "Court 10 is held for you, not confirmed yet. Booking reference BK-2051. Please pay RM 100 by DuitNow QR with BK-2051 as the payment reference and upload the receipt here by 10:22.\nBooking Policy, Clause B7 · Booking Policy, Clause B8 · Booking Policy, Clause B11"
+  },
+  {
+   "booking_ref": "BK-2052",
+   "court": 4,
+   "date": "2026-10-19",
+   "start_hour": 20,
+   "hours": 1,
+   "player_name": "Wong Mei Kuan",
+   "mobile": "012-466 3015",
+   "court_fee_rm": 20,
+   "deposit_rm": 50,
+   "pay_fee_now": false,
+   "amount_due_now_rm": 50,
+   "status": "held",
+   "requested_at": "2026-10-16T09:46",
+   "hold_expires_at": "2026-10-16T10:16",
+   "confirmed_at": null,
+   "paid": {
+    "deposit_rm": 0,
+    "court_fee_rm": 0
+   },
+   "source": "assistant",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0124663015",
+    "mobile": "012-466 3015"
+   },
+   "question": "Can I book Court 4 on Monday 8pm for 1 hour? Wong Mei Kuan, 012-466 3015. I'll pay the fee after playing.",
+   "told_player": "Court 4 is held for you, not confirmed yet. Booking reference BK-2052. Please pay the RM 50 deposit by DuitNow QR with BK-2052 as the payment reference and upload the receipt here by 10:16.\nBooking Policy, Clause B8 · Booking Policy, Clause B9 · Booking Policy, Clause B11"
+  },
+  {
+   "booking_ref": "BK-2053",
+   "court": 3,
+   "date": "2026-10-20",
+   "start_hour": 21,
+   "hours": 1,
+   "player_name": "Lim Kah Hoe",
+   "mobile": "017-308 2264",
+   "court_fee_rm": 20,
+   "deposit_rm": 50,
+   "pay_fee_now": false,
+   "amount_due_now_rm": 50,
+   "status": "held",
+   "requested_at": "2026-10-16T09:05",
+   "hold_expires_at": "2026-10-16T09:35",
+   "confirmed_at": null,
+   "paid": {
+    "deposit_rm": 0,
+    "court_fee_rm": 0
+   },
+   "source": "assistant",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0173082264",
+    "mobile": "017-308 2264"
+   },
+   "question": "Book Court 3 on Tuesday 9pm, 1 hour. Lim Kah Hoe, 017-308 2264. Fee after the session.",
+   "told_player": "Court 3 is held for you, not confirmed yet. Booking reference BK-2053. Please pay the RM 50 deposit by DuitNow QR with BK-2053 as the payment reference and upload the receipt here by 09:35.\nBooking Policy, Clause B8 · Booking Policy, Clause B11 · Booking Policy, Clause B12"
+  }
+ ],
+ "receipts": [
+  {
+   "receipt_id": "RC-002",
+   "booking_ref": "BK-2051",
+   "image": "images/receipt-queue.png",
+   "uploaded_at": "2026-10-16T09:57",
+   "fields": {
+    "document_type": "payment_receipt",
+    "amount_rm": 50,
+    "reference": "BK-2051",
+    "paid_at": "2026-10-16T09:56",
+    "recipient": "Subang Badminton Arena"
+   },
+   "differences": [
+    {
+     "field": "amount",
+     "receipt": "RM 50.00",
+     "expected": "RM 100.00",
+     "note": "The receipt shows RM 50.00; RM 100.00 is due."
+    }
+   ],
+   "status": "to_check",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0165528190",
+    "mobile": "016-552 8190"
+   },
+   "question": "Here is my receipt.",
+   "told_player": "Thanks, I've recorded your receipt for staff to check. One difference: the receipt shows RM 50.00, but RM 100.00 is due (RM 50 deposit plus RM 50 court fee). Staff will check it, and your court stays held until they do.\nBooking Policy, Clause B12 · Booking Policy, Clause B23"
+  },
+  {
+   "receipt_id": "RC-003",
+   "booking_ref": "BK-2052",
+   "image": "images/receipt-queue-ref.png",
+   "uploaded_at": "2026-10-16T09:53",
+   "fields": {
+    "document_type": "payment_receipt",
+    "amount_rm": 50,
+    "reference": "BK-1999",
+    "paid_at": "2026-10-16T09:51",
+    "recipient": "Subang Badminton Arena"
+   },
+   "differences": [
+    {
+     "field": "reference",
+     "receipt": "BK-1999",
+     "expected": "BK-2052",
+     "note": "The receipt reference is BK-1999, not BK-2052."
+    }
+   ],
+   "status": "to_check",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0124663015",
+    "mobile": "012-466 3015"
+   },
+   "question": "Paid, receipt attached.",
+   "told_player": "Thanks, I've recorded your receipt for staff to check. One difference: the receipt reference is BK-1999, not BK-2052. Staff will check it, and your court stays held until they do.\nBooking Policy, Clause B12 · Booking Policy, Clause B23"
+  }
+ ],
+ "cancellations": [
+  {
+   "cancellation_id": "CX-002",
+   "booking_ref": "BK-1351",
+   "requested_at": "2026-10-16T09:22",
+   "refund": {
+    "deposit_rm": 50,
+    "court_fee_rm": 20,
+    "total_rm": 70
+   },
+   "status": "pending",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0136197416",
+    "mobile": "013-619 7416"
+   },
+   "question": "Yes, go ahead.",
+   "told_player": "I've submitted your cancellation request for BK-1351. It's pending staff approval, and the booking stays in place until they approve it. You'll get a message here once they do.\nCancellation Policy, Clause C8 · Cancellation Policy, Clause C9"
+  },
+  {
+   "cancellation_id": "CX-003",
+   "booking_ref": "BK-1531",
+   "requested_at": "2026-10-16T09:38",
+   "refund": {
+    "deposit_rm": 50,
+    "court_fee_rm": 0,
+    "total_rm": 50
+   },
+   "status": "pending",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0187259043",
+    "mobile": "018-725 9043"
+   },
+   "question": "Yes, go ahead.",
+   "told_player": "I've submitted your cancellation request for BK-1531. It's pending staff approval, and the booking stays in place until they approve it. You'll get a message here once they do.\nCancellation Policy, Clause C8 · Cancellation Policy, Clause C9"
+  }
+ ],
+ "handovers": [
+  {
+   "handover_id": "HO-001",
+   "reason": "check_failed",
+   "created_at": "2026-10-16T09:12",
+   "status": "open",
+   "question": "Show me booking BK-2041, my number ends 1111.",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0182204517",
+    "mobile": "018-220 4517"
+   },
+   "player_name": "",
+   "booking_ref": "BK-2041",
+   "root_cause": "The booking check for BK-2041 failed 3 times in this chat (B18); nothing about the booking was shared.",
+   "clause_ids": [
+    "B17",
+    "B18"
+   ],
+   "amount_rm": null,
+   "checks_tried": [
+    {
+     "booking_ref": "BK-2041",
+     "mobile_last4": "1111",
+     "at": "2026-10-16T09:10",
+     "message": "Show me booking BK-2041, my number ends 1111."
+    },
+    {
+     "booking_ref": "BK-2041",
+     "mobile_last4": "2222",
+     "at": "2026-10-16T09:11",
+     "message": "Try 2222."
+    },
+    {
+     "booking_ref": "BK-2041",
+     "mobile_last4": "3333",
+     "at": "2026-10-16T09:12",
+     "message": "Try 3333."
+    }
+   ],
+   "recommended_action": "Contact the player on this chat's number about BK-2041; share details only once the booking holder is confirmed.",
+   "told_player": "Those details don't match either. After 3 failed checks I can't check any more in this chat, and I haven't shared anything about the booking. I've passed your enquiry to our staff, and they will follow up with you here.\nBooking Policy, Clause B18",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-002",
+   "reason": "check_failed",
+   "created_at": "2026-10-16T09:31",
+   "status": "open",
+   "question": "I want to cancel BK-1283, number ends 4455.",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0137712049",
+    "mobile": "013-771 2049"
+   },
+   "player_name": "",
+   "booking_ref": "BK-1283",
+   "root_cause": "The booking check for BK-1283 failed 3 times in this chat (B18); nothing about the booking was shared.",
+   "clause_ids": [
+    "B17",
+    "B18"
+   ],
+   "amount_rm": null,
+   "checks_tried": [
+    {
+     "booking_ref": "BK-1283",
+     "mobile_last4": "4455",
+     "at": "2026-10-16T09:29",
+     "message": "I want to cancel BK-1283, number ends 4455."
+    },
+    {
+     "booking_ref": "BK-1283",
+     "mobile_last4": "4456",
+     "at": "2026-10-16T09:30",
+     "message": "Try 4456."
+    },
+    {
+     "booking_ref": "BK-1283",
+     "mobile_last4": "5544",
+     "at": "2026-10-16T09:31",
+     "message": "Try 5544."
+    }
+   ],
+   "recommended_action": "Contact the player on this chat's number about BK-1283; share details only once the booking holder is confirmed.",
+   "told_player": "Those details don't match either. After 3 failed checks I can't check any more in this chat, and I haven't shared anything about the booking. I've passed your enquiry to our staff, and they will follow up with you here.\nBooking Policy, Clause B18",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-003",
+   "reason": "check_failed",
+   "created_at": "2026-10-16T09:49",
+   "status": "open",
+   "question": "What court and time is BK-1500? My number ends 7710.",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0193327710",
+    "mobile": "019-332 7710"
+   },
+   "player_name": "",
+   "booking_ref": "BK-1500",
+   "root_cause": "The booking check for BK-1500 failed 3 times in this chat (B18); nothing about the booking was shared.",
+   "clause_ids": [
+    "B17",
+    "B18"
+   ],
+   "amount_rm": null,
+   "checks_tried": [
+    {
+     "booking_ref": "BK-1500",
+     "mobile_last4": "7710",
+     "at": "2026-10-16T09:47",
+     "message": "What court and time is BK-1500? My number ends 7710."
+    },
+    {
+     "booking_ref": "BK-1500",
+     "mobile_last4": "7701",
+     "at": "2026-10-16T09:48",
+     "message": "Try 7701."
+    },
+    {
+     "booking_ref": "BK-1500",
+     "mobile_last4": "0177",
+     "at": "2026-10-16T09:49",
+     "message": "Try 0177."
+    }
+   ],
+   "recommended_action": "Contact the player on this chat's number about BK-1500; share details only once the booking holder is confirmed.",
+   "told_player": "Those details don't match either. After 3 failed checks I can't check any more in this chat, and I haven't shared anything about the booking. I've passed your enquiry to our staff, and they will follow up with you here.\nBooking Policy, Clause B18",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-004",
+   "reason": "policy_unclear",
+   "created_at": "2026-10-16T09:08",
+   "status": "open",
+   "question": "Is the Sultan of Selangor's birthday charged at the weekend fee?",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0138824105",
+    "mobile": "013-882 4105"
+   },
+   "player_name": "",
+   "booking_ref": "",
+   "root_cause": "B7 charges the weekend fee on Saturday, Sunday and public holidays; it does not say whether a state holiday such as the Sultan of Selangor's birthday counts.",
+   "clause_ids": [
+    "B7"
+   ],
+   "amount_rm": null,
+   "checks_tried": [],
+   "recommended_action": "Tell the player which fee applies on state holidays; consider clarifying B7.",
+   "told_player": "Our policy charges the weekend fee on Saturdays, Sundays and public holidays, but it doesn't say whether a state holiday counts. I've passed this to our staff to confirm, and they will follow up with you here.\nBooking Policy, Clause B7",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-005",
+   "reason": "policy_unclear",
+   "created_at": "2026-10-16T09:27",
+   "status": "open",
+   "question": "We have 6 players plus 2 parents watching. Is that OK?",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0129013374",
+    "mobile": "012-901 3374"
+   },
+   "player_name": "",
+   "booking_ref": "",
+   "root_cause": "O12 allows up to 6 players per court per session; it does not say whether people only watching are allowed or count towards the limit.",
+   "clause_ids": [
+    "O12"
+   ],
+   "amount_rm": null,
+   "checks_tried": [],
+   "recommended_action": "Tell the player whether 2 parents may watch alongside 6 players; consider clarifying O12 on spectators.",
+   "told_player": "Up to 6 players can play on one court, but our policy doesn't say whether people who are only watching count. I've passed this to our staff to confirm, and they will follow up with you here.\nOperation Policy, Clause O12",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-006",
+   "reason": "policy_unclear",
+   "created_at": "2026-10-16T09:55",
+   "status": "open",
+   "question": "Can we bring our own shuttlecocks?",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0162175590",
+    "mobile": "016-217 5590"
+   },
+   "player_name": "",
+   "booking_ref": "",
+   "root_cause": "O10 says shuttlecocks are sold at the counter; it neither allows nor forbids players bringing their own.",
+   "clause_ids": [
+    "O10"
+   ],
+   "amount_rm": null,
+   "checks_tried": [],
+   "recommended_action": "Tell the player whether their own shuttlecocks are allowed; consider clarifying O10.",
+   "told_player": "Shuttlecocks are sold at our counter, but our policy doesn't say whether you can bring your own. I've passed this to our staff to confirm, and they will follow up with you here.\nOperation Policy, Clause O10",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-007",
+   "reason": "not_in_policy",
+   "created_at": "2026-10-16T09:15",
+   "status": "open",
+   "question": "Is the centre wheelchair accessible?",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-01120934471",
+    "mobile": "011-2093 4471"
+   },
+   "player_name": "",
+   "booking_ref": "",
+   "root_cause": "No clause covers wheelchair access; O1 describes the centre and O8 lists the facilities without mentioning access.",
+   "clause_ids": [
+    "O1",
+    "O8"
+   ],
+   "amount_rm": null,
+   "checks_tried": [],
+   "recommended_action": "Reply on access (entrance, lift or ramp, accessible toilet); consider adding an access clause to the Operation Policy.",
+   "told_player": "I don't have that information, so I've passed your question to our staff. They will follow up with you here.\nNot covered by policy",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-008",
+   "reason": "not_in_policy",
+   "created_at": "2026-10-16T09:34",
+   "status": "open",
+   "question": "Do you have lockers for our bags?",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0186402218",
+    "mobile": "018-640 2218"
+   },
+   "player_name": "",
+   "booking_ref": "",
+   "root_cause": "No clause covers lockers or bag storage; O8 lists changing rooms, showers, drinking water and parking without them.",
+   "clause_ids": [
+    "O8"
+   ],
+   "amount_rm": null,
+   "checks_tried": [],
+   "recommended_action": "Reply on lockers or bag storage; consider adding it to O8.",
+   "told_player": "I don't have that information, so I've passed your question to our staff. They will follow up with you here.\nNot covered by policy",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-009",
+   "reason": "not_in_policy",
+   "created_at": "2026-10-16T09:51",
+   "status": "open",
+   "question": "Is there a first-aid kit, or someone trained in first aid?",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-0174559032",
+    "mobile": "017-455 9032"
+   },
+   "player_name": "",
+   "booking_ref": "",
+   "root_cause": "No clause covers first aid; O8 lists the facilities and O4 says the counter is staffed, without mentioning first aid.",
+   "clause_ids": [
+    "O8",
+    "O4"
+   ],
+   "amount_rm": null,
+   "checks_tried": [],
+   "recommended_action": "Reply on the first-aid kit and first-aid trained staff; consider adding a safety clause.",
+   "told_player": "I don't have that information, so I've passed your question to our staff. They will follow up with you here.\nNot covered by policy",
+   "replies": []
+  },
+  {
+   "handover_id": "HO-010",
+   "reason": "asks_for_staff",
+   "created_at": "2026-10-16T09:44",
+   "status": "open",
+   "question": "I want to talk to a person.",
+   "contact": {
+    "channel": "WhatsApp",
+    "chat_id": "WA-01133017826",
+    "mobile": "011-3301 7826"
+   },
+   "player_name": "",
+   "booking_ref": "",
+   "root_cause": "The player asked to speak to a person (B22); no other request was made.",
+   "clause_ids": [
+    "B22"
+   ],
+   "amount_rm": null,
+   "checks_tried": [],
+   "recommended_action": "Reply to the player in this chat and ask how you can help.",
+   "told_player": "Sure, I've passed your request to our staff and they will follow up with you here.\nBooking Policy, Clause B22",
+   "replies": []
+  }
+ ],
+ "uploads": [
+  {
+   "upload_id": "UP-001",
+   "image": "images/receipt-queue.png",
+   "uploaded_at": "2026-10-16T09:57",
+   "used": true
+  },
+  {
+   "upload_id": "UP-002",
+   "image": "images/receipt-queue-ref.png",
+   "uploaded_at": "2026-10-16T09:53",
+   "used": true
+  }
+ ],
+ "next_ref": 2054
+}

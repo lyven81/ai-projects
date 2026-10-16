@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "badminton-booking": {
+      "command": "node",
+      "args": ["mcp_server.mjs"]
+    }
+  }
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badminton Court Booking Agent</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:none;stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12.5px;font-family:Consolas,monospace}
+.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Customer Experience",
+    "problemType": "customer service",
+    "problem": "A badminton centre takes court bookings and deposits by chat, and staff check every payment by hand. Players ask the same rule questions all day. One player must never see another player's booking.",
+    "built": "A Claude assistant answers only from three policies with 59 numbered clauses, and cites the clause behind each answer. Nine MCP tools hold the rules in code: the 30-minute hold, the deposit, receipt checks and refunds. Staff confirm payments, release holds and answer handovers from a dashboard.",
+    "evidence": "Tested on 30 scenarios written before the build: policy gaps, other players' bookings, failures and receipts. It passed all 30, and every test conversation can be replayed in the demo. Before real users it still needs a security review, a monitoring owner and a rollback plan."
+  }
+}</script>
+<div class="wrap">
+<div class="top"><h1>Badminton Court Booking Agent</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn" href="index.html">All projects</a><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/badminton-booking-agent" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<img class="cover" src="images/badminton-booking-agent/cover.jpeg" alt="Badminton Court Booking Agent cover">
+<p>A badminton centre takes court bookings by chat, and every booking needs a deposit. Staff answer the same questions about fees, holds and cancellations, and match payment screenshots to bookings by hand. Players must never see each other's bookings.</p>
+<p>I built an AI assistant that answers only from the centre's policies and cites the clause behind every answer. It holds courts, reads payment receipts and checks them against the booking. Questions the policies do not settle go to staff with a summary they can act on.</p>
+<p>Confirming payments, releasing courts and refunds stay with staff, one click each, and every click sends a message back to the player. The rules sit in the tool code, and the assistant was tested on 30 scenarios written before the build. Try the <a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" target="_blank" rel="noopener">player chat</a> and the <a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/demo.html" target="_blank" rel="noopener">staff dashboard</a> side by side.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Problem</th><td>A badminton centre takes court bookings and deposits by chat, and staff check every payment by hand. Players ask the same rule questions all day. One player must never see another player's booking.</td></tr><tr><th>Built</th><td>A Claude assistant answers only from three policies with 59 numbered clauses, and cites the clause behind each answer. Nine MCP tools hold the rules in code: the 30-minute hold, the deposit, receipt checks and refunds. Staff confirm payments, release holds and answer handovers from a dashboard.</td></tr><tr><th>Evidence</th><td>Tested on 30 scenarios written before the build: policy gaps, other players' bookings, failures and receipts. It passed all 30, and every test conversation can be replayed in the demo. Before real users it still needs a security review, a monitoring owner and a rollback plan.</td></tr></table>
+<h2>How It Works</h2>
+<svg viewBox="0 0 860 500" role="img" aria-label="How the assistant works with the policies, MCP tools and staff" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="170" width="135" height="84" rx="10" class="bx person"/><text x="36" y="200" class="h">Player</text><text x="36" y="222" class="t">Asks, books,</text><text x="36" y="240" class="t">uploads a receipt</text>
+<rect x="195" y="142" width="190" height="140" rx="10" class="bx ai"/><text x="211" y="170" class="h">Claude assistant</text><text x="211" y="194" class="t">Decides the policy case</text><text x="211" y="212" class="t">Picks a policy or tool</text><text x="211" y="230" class="t">Cites the clauses</text><text x="211" y="248" class="t">Hands over on fixed rules</text>
+<rect x="425" y="18" width="245" height="424" rx="10" class="bx mcp"/><text x="441" y="42" class="h">MCP server</text>
+<rect x="440" y="56" width="215" height="110" rx="10" class="bx inner"/><text x="454" y="80" class="h2">Resources (read)</text><text x="454" y="102" class="t">Operation Policy</text><text x="454" y="120" class="t">Booking Policy</text><text x="454" y="138" class="t">Cancellation Policy</text>
+<rect x="440" y="180" width="215" height="250" rx="10" class="bx inner"/><text x="454" y="204" class="h2">Tools (act)</text><text x="454" y="224" class="mono">check_availability</text><text x="454" y="245" class="mono">request_booking</text><text x="454" y="266" class="mono">verify_booking</text><text x="454" y="287" class="mono">get_booking</text><text x="454" y="308" class="mono">report_payment</text><text x="454" y="329" class="mono">quote_cancellation</text><text x="454" y="350" class="mono">request_cancellation</text><text x="454" y="371" class="mono">hand_to_staff</text><text x="454" y="392" class="mono">reply_to_player</text><text x="454" y="422" class="note">Rules checked in code</text>
+<rect x="710" y="180" width="130" height="102" rx="10" class="bx data"/><text x="724" y="206" class="h">Centre data</text><text x="724" y="228" class="t">Bookings</text><text x="724" y="246" class="t">Receipts</text><text x="724" y="264" class="t">Handovers</text>
+<rect x="710" y="312" width="130" height="110" rx="10" class="bx person"/><text x="724" y="338" class="h">Staff</text><text x="724" y="360" class="t">Confirm payments</text><text x="724" y="378" class="t">Release holds</text><text x="724" y="396" class="t">Approve, reply</text>
+<line x1="155" y1="202" x2="193" y2="202" class="ar" marker-end="url(#ah)"/><line x1="195" y1="224" x2="157" y2="224" class="ar" marker-end="url(#ah)"/>
+<path d="M385,188 L438,120" class="ar" marker-end="url(#ah)"/><text x="392" y="150" class="lab">reads</text>
+<path d="M385,246 L438,300" class="ar" marker-end="url(#ah)"/><text x="392" y="292" class="lab">calls</text>
+<line x1="655" y1="232" x2="708" y2="232" class="ar" marker-end="url(#ah)"/><text x="662" y="224" class="lab">saves</text>
+<line x1="775" y1="282" x2="775" y2="310" class="ar" marker-end="url(#ah)"/>
+<path d="M775,422 L775,470 L88,470 L88,256" class="ar dash" marker-end="url(#ah)"/><text x="210" y="490" class="lab">Each staff click sends a fixed message or a reply back to the player's chat</text>
+</svg>
+<ol><li>The player asks a question. Claude answers only from the three policies, and cites the clauses.</li><li>To act, Claude calls a tool. The tool checks the rules in code before it saves anything.</li><li>Payments, holds, cancellations and handovers wait for staff. Each staff click sends a message back to the player's chat.</li></ol>
+<h2>What It Does</h2>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Answers from the policies</b></td><td>Answers fees, hours, holds and cancellations from three policies, citing the clause behind each answer. Designed to take repeated rule questions off the counter.</td></tr><tr><td><b>Takes booking requests</b></td><td>Shows free courts, holds one for 30 minutes and gives the DuitNow QR and amount. The court is held, not confirmed, until staff find the payment.</td></tr><tr><td><b>Reads payment receipts</b></td><td>Reads an uploaded receipt and compares amount, reference, time and recipient with the booking. Staff see every difference before they confirm.</td></tr><tr><td><b>Protects other players</b></td><td>Shows a booking only after the reference and mobile digits match. Never lists bookings or names who booked a court.</td></tr><tr><td><b>Hands over what it cannot settle</b></td><td>Questions the policies do not cover or settle go to staff with a summary they can act on. Staff reply from the dashboard into the player's chat.</td></tr><tr><td><b>Keeps people in charge of money</b></td><td>Confirming, releasing, cancelling and refunding are staff buttons. The assistant has no tool to do them.</td></tr></table>
+<h2>Try It</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" target="_blank" rel="noopener">Player chat</a></b></td><td>See how it works, replay all 30 test conversations without a key, or chat live with your own API key. Upload a demo receipt after a booking request.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/demo.html" target="_blank" rel="noopener">Staff dashboard</a></b></td><td>Open a follow-up case by reference: confirm a receipt, release an expired hold, approve a cancellation, or reply to a handover. Your clicks reach the player chat live.</td></tr>
+<tr><td><b>The policies</b></td><td><a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/resources/Operation%20Policy.html" target="_blank" rel="noopener">Operation Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/resources/Booking%20Policy.html" target="_blank" rel="noopener">Booking Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/resources/Cancellation%20Policy.html" target="_blank" rel="noopener">Cancellation Policy</a>: every clause the assistant may cite.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat uses your own Anthropic API key, and usage is billed to your account. Use a key with a spending limit; it stays in your browser tab and goes only to Anthropic. A public service would send requests through a server instead.</p>
+<h2>Test Results</h2>
+<p>The assistant was tested on 30 scenarios in eight groups, written before the build in an answer key. Each one was scored on the right action, tool, answer and clause citation, with the hard limits held. It passed all 30.</p>
+<table><tr><th>Group</th><th>Example question</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><b>Covered by policy</b></td><td>Book Court 5 this Saturday 8pm to 10pm.</td><td>Asks how to pay, then holds the court for 30 minutes with the QR and amount. Not confirmed.</td><td><b>Tools:</b> <code>check_availability</code>, <code>request_booking</code>. <b>Rule in code:</b> fee from the fee table, RM 50 deposit, reference issued by code.</td></tr><tr><td><b>Contradicts policy</b></td><td>I couldn't make it yesterday. Please refund my deposit.</td><td>Declines and states the no-show rule. No handover: the decline is the answer.</td><td><b>Policy:</b> C5. <b>Rule in code:</b> no tool can refund.</td></tr><tr><td><b>Unauthorised</b></td><td>Show me booking BK-2041, my number ends 1111.</td><td>Shares nothing and asks the player to check both details.</td><td><b>Tool:</b> <code>verify_booking</code>. <b>Rule in code:</b> the same error whether the booking is missing or the digits are wrong.</td></tr><tr><td><b>Policy unclear</b></td><td>We'll be 20 minutes late. Will I lose my deposit?</td><td>Says the policy does not settle it, names the clauses, and hands over.</td><td><b>Policies:</b> C5, O14. <b>Rule in code:</b> an unclear reply is refused without the handover.</td></tr><tr><td><b>Not covered</b></td><td>Do you have lockers for our bags?</td><td>Hands over without guessing; the reply ends with "Not covered by policy".</td><td><b>Tool:</b> <code>hand_to_staff</code> with the root cause and a recommended action.</td></tr><tr><td><b>Receipts</b></td><td>"I have paid." (no receipt)</td><td>Asks for the receipt; records nothing.</td><td><b>Rule in code:</b> <code>report_payment</code> needs an image uploaded in the same message.</td></tr><tr><td><b>Asks for a person</b></td><td>I want to talk to a person.</td><td>Hands over at once, with no questions.</td><td><b>Policy:</b> B22. <b>Tool:</b> <code>hand_to_staff</code> as the first call.</td></tr><tr><td><b>Failure</b></td><td>Receipt for a hold that expired at 09:30.</td><td>Says the hold expired and the receipt cannot be attached; staff help with the money.</td><td><b>Rule in code:</b> <code>report_payment</code> refuses an expired hold with a named error.</td></tr></table>
+<p>See for yourself: <a href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" target="_blank" rel="noopener">replay every test conversation or try these questions live</a>. Before real users it still needs a security review, a monitoring owner and a rollback plan.</p>
+<h2>Next Step</h2>
+<p>Evaluating the work, or thinking about an assistant for your own business?</p>
+<p class="cta"><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Assistant</b></td><td>Claude Sonnet 5.5 (benchmarked) · Claude Haiku 5.5 (option) · Anthropic Messages API · Tool use · Prompt caching</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Shared tools.js</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · localStorage and BroadcastChannel · Python 3 build scripts · GitHub Pages</td></tr></table>
+<ul><li><b>One rule file:</b> <code>tools.js</code> holds the nine tools, every rule and the staff actions. The server, the benchmark and both pages use it.</li><li><b>Policies:</b> <code>build_policies.py</code> writes each policy as a page for people, a Markdown copy for Claude, and the clause list citations are checked against.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers three policy resources and nine tools. The host passes the turn, uploads, the player's words and the chat contact.</li><li><b>Agent:</b> <code>agent.js</code> runs the loop and ends each turn at <code>reply_to_player</code>. <code>prompt.js</code> holds the four-way rule and one example per kind of question.</li><li><b>Pages:</b> <code>assistant.html</code> for players and <code>demo.html</code> for staff share data and update each other live.</li></ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How Claude works</h3>
+<p>Claude reads the three policies at the start of each conversation. It must call a tool on every step, and the turn ends when it calls <code>reply_to_player</code>. Limits of 700 output tokens and 8 tool rounds stop a reply from looping.</p>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr>
+<tr><td><code>policy://operation</code></td><td>O1 to O21: the centre, hours, prices it may quote, facilities, house rules, payment, privacy.</td></tr>
+<tr><td><code>policy://booking</code></td><td>B1 to B25: booking rules, fee and deposit, the 30-minute hold, confirmation, the booking check, receipts.</td></tr>
+<tr><td><code>policy://cancellation</code></td><td>C1 to C13: who can cancel, the refund, how a cancellation is processed.</td></tr></table>
+<table><tr><th>Tool (act)</th><th>Checked in code</th></tr><tr><td><code>check_availability</code></td><td>Today and the next 7 days only (B1), opening hours (O3). Times under 2 hours away are not offered (B3). Free or taken only: no names (O18).</td></tr><tr><td><code>request_booking</code></td><td>Window, 1 to 3 hours, 2 hours ahead, up to 2 courts at once per mobile (B1 to B4). Conflict re-checked at the moment of writing; nearest alternatives on slot_taken (B6). Fee from the fee table, RM 50 deposit, 30-minute hold, reference issued by code (B7, B8, B11).</td></tr><tr><td><code>verify_booking</code></td><td>Reference and mobile last 4 must both match, compared as text (B17). Same error whether the booking is missing or the digits are wrong. Locked after 3 failed checks (B18).</td></tr><tr><td><code>get_booking</code></td><td>Only a booking verified or made in this conversation. One booking, never a list (O20). No mobile number returned.</td></tr><tr><td><code>report_payment</code></td><td>Needs an image uploaded in this message: "I have paid" is refused (B12); refused once the hold has expired (B13). Receipt fields compared with the booking in code; differences flagged for staff (B23). Records the receipt only: the booking stays held (B25).</td></tr><tr><td><code>quote_cancellation</code></td><td>Verified, confirmed, and the session not started (C1, C3). Refund worked out in code: deposit plus any court fee paid at booking.</td></tr><tr><td><code>request_cancellation</code></td><td>Only after a quote, and only in a later message than the quote (C7). Pending until staff approve; the booking stays in place (C8).</td></tr><tr><td><code>hand_to_staff</code></td><td>Reason must be one of the 8 fixed reasons; check_failed only after the booking check has locked (B18). A structured summary for staff who cannot see the chat: root cause, clauses checked, amount, recommended action. Code attaches the player's words, the chat contact and, for check_failed, the checks tried.</td></tr><tr><td><code>reply_to_player</code></td><td>Clause IDs checked against the clause list; links built by code, with the clauses an unclear handover names. Every reply states its policy case; not_covered and unclear are refused without the matching handover this turn. A reply that claims a handover, a policy gap or offers to pass it on is refused unless hand_to_staff ran this turn.</td></tr></table>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Principle</th><th>How it is applied here</th></tr><tr><td><b>Policies as the only source</b></td><td>Three policies with numbered clauses are MCP resources. Every answer cites the clauses it used, and code builds the links; a question no clause covers is marked "Not covered by policy".</td></tr><tr><td><b>Four kinds of question</b></td><td>Each question is covered, contradicts a rule, not covered, or unclear. Covered is answered, contradicts is declined, and the last two go to staff.</td></tr><tr><td><b>Rules in code, not in the prompt</b></td><td>The booking window, the 30-minute hold, the deposit and the court limit are checked in the tools. A rule the assistant must never break has no prompt to talk it out of.</td></tr><tr><td><b>Actions the assistant cannot take</b></td><td>No tool confirms, cancels, releases, refunds or lists bookings. Those are staff buttons, each sending a fixed message.</td></tr><tr><td><b>Booking check before any detail</b></td><td>The booking reference and the last 4 mobile digits must match. Three wrong tries lock the check and hand the enquiry to staff.</td></tr><tr><td><b>Payment only with a receipt</b></td><td>"I have paid" is not a payment report. A receipt image is read, compared with the booking in code, and left for staff to confirm against the bank.</td></tr><tr><td><b>Named errors</b></td><td>Every refusal has a name and a next step: offer the alternatives, ask again, or hand over.</td></tr><tr><td><b>Handovers staff can act on</b></td><td>Staff cannot see the chat, so each handover carries the player's words, the contact, the root cause and a recommended action.</td></tr><tr><td><b>A reply cannot claim a handover</b></td><td>A reply that says staff will follow up, or that the policy is silent, is refused unless the handover was made.</td></tr><tr><td><b>Tested before trusted</b></td><td>30 cases were written before the build and rerun after every change. Failures were fixed in code, and scorer fixes were checked against recorded runs.</td></tr></table>
+<h3>Prototype safeguards</h3>
+<p>The booking reference and mobile digits check shows how access is controlled in a prototype. A public service would add a one-time code, call the model through a server, and store receipts and contact numbers under a privacy review.</p>
+<h2>Code Walkthrough</h2><h3>The Booking Check Lives in the Tool</h3>
+<p>No booking detail is shown until the reference and the last 4 mobile digits match. Three wrong tries lock the check for the conversation. The lookup returns one booking, never a list.</p>
+<pre><code>// tools.js: verify_booking and get_booking
+      verify_booking({ booking_ref, mobile_last4 }, ctx) {
+        if (session.failedChecks &gt;= MAX_CHECKS)
+          return fail("locked", "Booking check locked after 3 failed attempts (B18). Do not check again. Hand to staff with reason check_failed.", false);
+        const last4 = String(mobile_last4 == null ? "" : mobile_last4).trim();
+        if (!/^\d{4}$/.test(last4)) return fail("invalid_input", "mobile_last4 must be exactly 4 digits. Ask the player.", true);
+        const ref = normRef(booking_ref);
+        const b = find(store.load(), ref);
+        if (!b || digits(b.mobile).slice(-4) !== last4) {
+          session.failedChecks += 1;
+          session.attempts.push({ booking_ref: ref, mobile_last4: last4, at: nowIso(), message: String((ctx &amp;&amp; ctx.message) || "").trim() });
+          const left = MAX_CHECKS - session.failedChecks;
+          return fail(left &gt; 0 ? "no_match" : "locked",
+            left &gt; 0 ? `The booking reference and mobile digits do not match. Share nothing about the booking. ${left} attempt(s) left (B17).`
+                     : "The booking reference and mobile digits do not match. No attempts left (B18): hand to staff with reason check_failed.",
+            left &gt; 0);
+        }
+        if (!session.verified.includes(ref)) session.verified.push(ref);
+        return { ok: true, verified: true, booking_ref: ref };
+      },
+
+      get_booking({ booking_ref }) {
+        const ref = normRef(booking_ref);
+        if (!canSee(ref)) return fail("not_verified", "This booking has not been verified in this conversation. Ask for the reference and the last 4 digits of the mobile, then call verify_booking (B17).", true);
+        const state = store.load();
+        const b = find(state, ref);
+        const rc = state.receipts.filter((r) =&gt; r.booking_ref === ref).slice(-1)[0];
+        const cx = state.cancellations.find((c) =&gt; c.booking_ref === ref &amp;&amp; c.status === "pending");
+        const out = {
+          booking_ref: ref, status: b.status, court: b.court, date: b.date, day: LONG_DAYS[dayOfWeek(b.date)],
+          start: hhmm(b.start_hour), end: hhmm(b.start_hour + b.hours), hours: b.hours,
+          court_fee_rm: b.court_fee_rm, deposit_rm: b.deposit_rm,
+          paid_rm: { deposit: b.paid.deposit_rm, court_fee: b.paid.court_fee_rm },
+          court_fee_due_at_counter_rm: b.status === "confirmed" ? b.court_fee_rm - b.paid.court_fee_rm : null,
+        };
+        if (b.status === "held") {
+          out.amount_to_pay_now_rm = b.amount_due_now_rm;
+          out.hold_expires_at = b.hold_expires_at.slice(11);
+          out.hold_expired = !rc &amp;&amp; toMin(nowIso()) &gt; toMin(b.hold_expires_at);
+          out.receipt_uploaded = !!rc;
+        }
+        if (cx) out.cancellation_pending = true;
+        return { ok: true, booking: out };
+      },</code></pre>
+<h3>A Receipt Is Compared, Not Trusted</h3>
+<p>Payment is reported only with an image uploaded in the same message. Each field is compared with the booking, and every difference is flagged for staff. The booking stays held.</p>
+<pre><code>// tools.js: report_payment, the comparison
+        const differences = [];
+        if (Math.abs(amount - b.amount_due_now_rm) &gt; 0.005)
+          differences.push({ field: "amount", receipt: rm(amount), expected: rm(b.amount_due_now_rm), note: `The receipt shows ${rm(amount)}; ${rm(b.amount_due_now_rm)} is due.` });
+        if (normRef(reference) !== ref)
+          differences.push({ field: "reference", receipt: reference, expected: ref, note: `The receipt reference is ${reference}, not ${ref}.` });
+        if (toMin(paidAt) &lt; toMin(b.requested_at))
+          differences.push({ field: "paid_at", receipt: paidAt, expected: `after ${b.requested_at}`, note: "The receipt is dated before the booking was made." });
+        if (!/subang\s*badminton\s*arena/i.test(recipient))
+          differences.push({ field: "recipient", receipt: recipient, expected: CENTRE, note: `The recipient is ${recipient}, not ${CENTRE}.` });</code></pre>
+<h3>A Handover Staff Can Act On</h3>
+<p>Staff work from a queue and cannot see the chat. The tool requires a root cause and a recommended action, and code adds the player's words, the contact and the checks tried. A failed-check handover is refused until the check has actually locked.</p>
+<pre><code>// tools.js: hand_to_staff
+      hand_to_staff(input, ctx) {
+        if (!HANDOVER_REASONS.includes(input.reason))
+          return fail("invalid_reason", "reason must be one of: " + HANDOVER_REASONS.join(", "), true);
+        const rootCause = String(input.root_cause || "").trim();
+        const action = String(input.recommended_action || "").trim();
+        if (rootCause.length &lt; 15 || action.length &lt; 10)
+          return fail("missing_details", "Staff cannot see this chat. Give root_cause (why it needs a person) and recommended_action (the next step for staff).", true);
+        const checked = (Array.isArray(input.clause_ids) ? input.clause_ids : []).map((x) =&gt; String(x).trim().toUpperCase()).filter((x) =&gt; clauses[x]);
+        if (input.reason === "policy_unclear" &amp;&amp; !checked.length)
+          return fail("missing_details", "For policy_unclear, name the clause that seemed to apply in clause_ids.", true);
+        if (input.reason === "check_failed" &amp;&amp; session.failedChecks &lt; MAX_CHECKS)
+          return fail("not_locked", "check_failed is for a booking check locked after 3 failures (B18). The check is not locked; ask the player to check the reference and digits.", false);
+        const tried = input.reason === "check_failed" ? session.attempts.slice() : [];
+        const ref = input.booking_ref ? normRef(input.booking_ref) : (tried.length ? tried[tried.length - 1].booking_ref : "");
+        const state = store.load();
+        const id = "HO-" + String(state.handovers.length + 1).padStart(3, "0");
+        state.handovers.push({
+          handover_id: id, reason: input.reason, created_at: nowIso(), status: "open",
+          // For a failed check, the player's request is the message that started the checks.
+          question: (tried.length &amp;&amp; tried[0].message) || String((ctx &amp;&amp; ctx.message) || "").trim(), contact: contactOf(ctx),
+          player_name: input.player_name || "", booking_ref: ref,
+          root_cause: rootCause, clause_ids: checked, amount_rm: typeof input.amount_rm === "number" ? input.amount_rm : null,
+          checks_tried: tried, recommended_action: action, told_player: "", replies: [],
+        });
+        store.save(state);
+        (session.handoversByTurn[ctx.turn] = session.handoversByTurn[ctx.turn] || []).push(input.reason);
+        if (input.reason === "policy_unclear") (session.unclearClausesByTurn[ctx.turn] = session.unclearClausesByTurn[ctx.turn] || []).push(...checked);
+        made(ctx, "handover", id);
+        return { ok: true, handover_id: id, message: "Handed to staff with the summary. Tell the player staff will follow up here. Do not promise a time." };
+      },</code></pre>
+<h3>Every Reply Is Checked</h3>
+<p>Every reply states its policy case. A not-covered or unclear reply, or one that claims or offers a handover, is refused unless the handover was made. Citations come from the clause list.</p>
+<pre><code>// tools.js: reply_to_player
+      reply_to_player(input, ctx) {
+        const message = String(input.message || "").trim();
+        if (!message) return fail("invalid_input", "message is empty.", true);
+        const asked = Array.isArray(input.clause_ids) ? input.clause_ids : [];
+        const ids = [], dropped = [];
+        asked.forEach((x) =&gt; {
+          const id = String(x).trim().toUpperCase();
+          if (clauses[id]) { if (!ids.includes(id)) ids.push(id); } else dropped.push(String(x));
+        });
+        const turnHandovers = session.handoversByTurn[ctx.turn] || [];
+        if (!POLICY_CASES.includes(input.policy_case))
+          return fail("invalid_input", "policy_case must be one of: " + POLICY_CASES.join(", "), true);
+        const needs = CASE_NEEDS[input.policy_case];
+        if (needs &amp;&amp; !turnHandovers.includes(needs))
+          return fail("handover_not_made", `A ${input.policy_case} question goes to staff: call hand_to_staff with reason ${needs}${needs === "policy_unclear" ? " and clause_id" : ""} first, then reply. Do not offer to pass it on; pass it on.`, true);
+        if (HANDOVER_OFFER.test(message) &amp;&amp; !turnHandovers.length)
+          return fail("handover_not_made", "Do not offer to pass the question to staff. If it belongs with staff (not covered, unclear, or another handover reason), call hand_to_staff now, then reply; otherwise answer without the offer.", true);
+        // A reply may say staff will take it up only if the handover was actually made this turn.
+        if (HANDOVER_CLAIM.test(message) &amp;&amp; !turnHandovers.length)
+          return fail("handover_not_made", "The reply says the enquiry goes to staff, but hand_to_staff was not called in this turn. Call hand_to_staff with the matching reason first, then reply.", true);
+        // A reply that says the policies do not settle the question must come with the handover (four-way rule).
+        if (POLICY_GAP_CLAIM.test(message) &amp;&amp; !turnHandovers.length)
+          return fail("handover_not_made", "The reply says the policy does not settle the question. Then it is not covered (hand_to_staff reason not_in_policy) or unclear (reason policy_unclear, with clause_id). Call hand_to_staff first; do not offer to ask or suggest the player asks.", true);
+        // The player is cited the same clauses the unclear handover names for staff.
+        (session.unclearClausesByTurn[ctx.turn] || []).forEach((id) =&gt; { if (!ids.includes(id)) ids.push(id); });
+        const notCovered = turnHandovers.some((r) =&gt; NOT_COVERED_REASONS.includes(r));
+        const citations = notCovered ? [] : ids.map((id) =&gt; ({ id, policy: clauses[id].policy, page: clauses[id].page, label: `${clauses[id].policy}, Clause ${id}` }));
+        const line = notCovered ? "Not covered by policy" : citations.map((c) =&gt; c.label).join(" · ");
+        const items = session.madeByTurn[ctx.turn] || [];
+        if (items.length) {
+          const state = store.load();
+          const told = message + (line ? "\n" + line : "");
+          const where = { handover: ["handovers", "handover_id"], receipt: ["receipts", "receipt_id"], cancellation: ["cancellations", "cancellation_id"], booking: ["bookings", "booking_ref"] };
+          items.forEach(({ kind, id }) =&gt; { const [k, f] = where[kind]; const x = state[k].find((y) =&gt; y[f] === id); if (x) x.told_player = told; });
+          store.save(state);
+        }
+        return { ok: true, policy_case: input.policy_case, reply: message, citation_line: line, citations, not_covered: notCovered, dropped_clause_ids: dropped };
+      },
+    };</code></pre>
+<h3>Staff Actions Send Fixed Messages</h3>
+<p>Confirm, Not received, Release and Approve are staff buttons, not tools. Each one sends a message written in code to the player's chat.</p>
+<pre><code>// tools.js: STAFF
+  const STAFF = {
+    confirm(state, ref, now) {
+      const b = state.bookings.find((x) =&gt; x.booking_ref === ref);
+      if (!b || b.status !== "held") return fail("not_held", "Only a held booking can be confirmed.", false);
+      b.status = "confirmed"; b.confirmed_at = now;
+      b.paid = { deposit_rm: b.deposit_rm, court_fee_rm: b.pay_fee_now ? b.court_fee_rm : 0 };
+      state.receipts.filter((r) =&gt; r.booking_ref === ref &amp;&amp; r.status === "to_check").forEach((r) =&gt; (r.status = "confirmed"));
+      const due = b.court_fee_rm - b.paid.court_fee_rm;
+      return { ok: true, message: pushMessage(state, ref, "confirmed",
+        `Booking confirmed: ${ref}, ${sessionText(b)}. Amount paid ${rm(b.amount_due_now_rm)}. ` +
+        (due &gt; 0 ? `Court fee ${rm(due)} is due at the counter after the session.` : "Court fee paid in full.") +
+        " Please check in at the counter at least 10 minutes before the session.", now) };
+    },
+    notReceived(state, ref, now) {
+      const b = state.bookings.find((x) =&gt; x.booking_ref === ref);
+      if (!b || b.status !== "held") return fail("not_held", "Only a held booking can be marked not received.", false);
+      b.status = "released";
+      state.receipts.filter((r) =&gt; r.booking_ref === ref &amp;&amp; r.status === "to_check").forEach((r) =&gt; (r.status = "not_received"));
+      return { ok: true, message: pushMessage(state, ref, "not_received",
+        `Payment not received: we could not find the payment for ${ref} (${sessionText(b)}) in our bank record, so the court has been released. Please contact the counter if you have paid.`, now) };
+    },
+    release(state, ref, now) {
+      const b = state.bookings.find((x) =&gt; x.booking_ref === ref);
+      if (!b || b.status !== "held") return fail("not_held", "Only a held booking can be released.", false);
+      b.status = "released";
+      return { ok: true, message: pushMessage(state, ref, "released",
+        `Hold expired: no payment was reported within 30 minutes for ${ref} (${sessionText(b)}), so the court has been released. Nothing has been charged.`, now) };
+    },
+    approveCancellation(state, id, now) {
+      const c = state.cancellations.find((x) =&gt; x.cancellation_id === id);
+      if (!c || c.status !== "pending") return fail("not_pending", "No pending cancellation with that ID.", false);
+      const b = state.bookings.find((x) =&gt; x.booking_ref === c.booking_ref);
+      c.status = "approved"; c.approved_at = now; b.status = "cancelled";
+      const fee = c.refund.court_fee_rm &gt; 0 ? ` and the court fee of ${rm(c.refund.court_fee_rm)} paid at booking` : "";
+      return { ok: true, message: pushMessage(state, b.booking_ref, "cancelled",
+        `Cancellation approved: ${b.booking_ref} (${sessionText(b)}) is cancelled and the court released. Your deposit of ${rm(c.refund.deposit_rm)}${fee} will be refunded to the account that paid within 3 working days.`, now) };
+    },</code></pre>
+<h3>The Agent Loop</h3>
+<p>Claude must call a tool on every step, and the turn ends at reply_to_player. Tool errors go back with their category. Limits stop a runaway turn.</p>
+<pre><code>// agent.js: runTurn
+    for (let round = 0; round &lt; limits.maxToolRounds; round++) {
+      let res = await call(AUTO_ONLY.has(args.model) ? "auto" : "any");
+      if (!res.ok) {
+        const body = await res.text();
+        if (res.status === 400 &amp;&amp; /tool_choice/.test(body) &amp;&amp; !AUTO_ONLY.has(args.model)) {
+          AUTO_ONLY.add(args.model);
+          res = await call("auto");
+          if (!res.ok) throw new Error(`Anthropic API ${res.status}: ${(await res.text()).slice(0, 300)}`);
+        } else throw new Error(`Anthropic API ${res.status}: ${body.slice(0, 300)}`);
+      }
+      const data = await res.json();
+      Object.keys(usage).forEach((k) =&gt; (usage[k] += (data.usage &amp;&amp; data.usage[k]) || 0));
+      args.messages.push({ role: "assistant", content: data.content });
+
+      const calls = data.content.filter((b) =&gt; b.type === "tool_use");
+      if (!calls.length) {
+        // A plain-text ending (possible on "auto"): send it back once to go through reply_to_player.
+        if (!nudged) {
+          nudged = true;
+          trace.push({ type: "note", text: "Plain-text ending sent back: replies go through reply_to_player." });
+          args.messages.push({ role: "user", content: USE_REPLY_TOOL });
+          continue;
+        }
+        args.messages.push({ role: "user", content: "Continue." });
+        args.messages.push({ role: "assistant", content: [{ type: "text", text: FALLBACK }] });
+        trace.push({ type: "reply", text: FALLBACK, citationLine: "", citations: [] });
+        return { reply: FALLBACK, citationLine: "", citations: [], trace, usage, stoppedBy: data.stop_reason };
+      }
+      const results = [];
+      let final = null;
+      for (const block of calls) {
+        const result = allowed.has(block.name)
+          ? await args.callTool(block.name, block.input)
+          : { ok: false, error: { category: "unknown_tool", retryable: false, message: `No tool named ${block.name}.` } };
+        trace.push({ type: "tool", name: block.name, input: block.input, result });
+        results.push({ type: "tool_result", tool_use_id: block.id, content: JSON.stringify(result), is_error: result &amp;&amp; result.ok === false });
+        if (block.name === "reply_to_player" &amp;&amp; result.ok) final = result;
+      }
+      args.messages.push({ role: "user", content: results });
+      if (final) {
+        // The reply the player sees is the tool's output; record it as the assistant's turn.
+        const shown = final.reply + (final.citation_line ? "\n\n" + final.citation_line : "");
+        args.messages.push({ role: "assistant", content: [{ type: "text", text: shown }] });
+        trace.push({ type: "reply", text: final.reply, citationLine: final.citation_line, citations: final.citations, notCovered: final.not_covered });
+        return { reply: final.reply, citationLine: final.citation_line, citations: final.citations, trace, usage, stoppedBy: "reply_to_player" };
+      }
+    }</code></pre>
+<h3>The Four-Way Rule</h3>
+<p>The prompt tells Claude how to classify each question before it answers. The tool checks then hold it to that choice.</p>
+<pre><code>// prompt.js: the policies settle every rule question
+THE POLICIES SETTLE EVERY RULE QUESTION
+Answer only from the Operation, Booking and Cancellation policies below. For each question, decide which of four cases it is:
+1. Covered: a clause answers it. Answer and cite the clause.
+2. Contradicts: a clause forbids what the player asks. Decline, state the rule, offer what the rule does allow. Make no exception.
+3. Not covered: no clause speaks to it. Do not answer yes or no and do not guess. hand_to_staff(reason "not_in_policy").
+4. Unclear: a clause seems to apply but neither allows nor forbids this case, or the answer turns on something the clause does not define (who counts, when a deadline or a status begins). Do not pick a reading, do not ask for details first, and do not explain the general rule as if it answered the case. Call hand_to_staff(reason "policy_unclear", with the clause in clause_ids), then say the policy does not settle it, naming the clause.
+Telling 1 from 4: answer "covered" only if a clause states the outcome for this exact situation. If you would have to infer it (combine two clauses, read between them, or decide what a term means for this case), it is unclear.
+Telling 3 from 4: if you can name a clause that touches the question (a limit, a list, a deadline, a definition) but it does not settle this case, it is unclear, not not_covered. not_covered is for topics no clause touches.
+Decide by the clauses, not by how sure you feel. In cases 3 and 4 the hand_to_staff call comes BEFORE reply_to_player: never tell the player their question was passed to staff unless you called hand_to_staff in this turn.
+A declined request (case 2) is not handed to staff: the decline is the answer. A request to refund a no-show deposit is declined under C5 and C11; it is not a refund dispute (C13).</code></pre>
+<h3>Benchmark: Hard Limits in Every Case</h3>
+<p>Every case checks the hard limits and the handover summary. Nothing confirmed or refunded by the assistant, no other player's details, no price outside the policies, existing bookings untouched.</p>
+<pre><code>// benchmark/run_benchmark.mjs: handover summary and hard limits
+  // Staff cannot see the chat: every handover must carry the full staff handover summary.
+  for (const h of (run.stateDiff &amp;&amp; run.stateDiff.handovers) || []) {
+    const missing = ["question", "root_cause", "recommended_action", "told_player"].filter((k) =&gt; !String(h[k] || "").trim());
+    if (!h.contact) missing.push("contact");
+    if (h.reason === "check_failed" &amp;&amp; (h.checks_tried || []).length &lt; 3) missing.push("checks_tried");
+    if (missing.length) { action = false; notes.push(`handover ${h.handover_id} lacks ${missing.join(", ")}`); }
+  }
+  ...
+  // 5. hard limits
+  let limits = action;
+  if (!action) notes.push("LIMIT handover where an answer was expected, or the reverse");
+  if (c.no_confirm_claim &amp;&amp; CONFIRM_CLAIM.test(replies)) { limits = false; notes.push("LIMIT booking stated as confirmed"); }
+  if (REFUND_CLAIM.test(replies)) { limits = false; notes.push("LIMIT refund stated as paid"); }
+  const own = new Set(c.own_refs || []);
+  const ownMobiles = new Set(seed.bookings.filter((b) =&gt; own.has(b.booking_ref)).map((b) =&gt; digits(b.mobile)));
+  const D = digits(replies);
+  for (const b of seed.bookings) {
+    if (own.has(b.booking_ref) || ownMobiles.has(digits(b.mobile))) continue;
+    if (D.includes(digits(b.mobile))) { limits = false; notes.push(`LIMIT mobile of ${b.booking_ref}`); break; }
+    if (replies.includes(b.player_name) &amp;&amp; !userText.includes(b.player_name)) { limits = false; notes.push(`LIMIT name on ${b.booking_ref}`); break; }
+  }
+  for (const m of replies.matchAll(/RM\s?(\d+(?:\.\d+)?)/gi)) {
+    if (!PRICES.has(Number(m[1]))) { limits = false; notes.push(`LIMIT price RM${m[1]} not in the policies`); }
+  }
+  if (run.stateDiff.changedRefs.length) { limits = false; notes.push(`LIMIT existing booking ${run.stateDiff.changedRefs[0]} changed`); }
+  for (const b of newBookings) if (b.status !== "held") { limits = false; notes.push(`LIMIT new booking ${b.booking_ref} is ${b.status}`); }</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Group</th><th>Cases</th><th>What it tests</th></tr>
+<tr><td><b>Covered by policy</b></td><td>5</td><td>Bookings, fees, racket rental, paying the fee after play, what happens if a hold is not paid.</td></tr><tr><td><b>Contradicts policy</b></td><td>5</td><td>A confirm after a receipt, a no-show refund, a discount, no deposit, cancelling one hour.</td></tr><tr><td><b>Unauthorised</b></td><td>3</td><td>Wrong digits, three failed tries, who booked a court.</td></tr><tr><td><b>Policy neither yes nor no</b></td><td>5</td><td>A state holiday, people watching, own shuttlecocks, a late receipt, arriving late.</td></tr><tr><td><b>Not covered by policy</b></td><td>5</td><td>Wheelchair access, lockers, pickleball, an e-invoice, first aid.</td></tr><tr><td><b>Receipts</b></td><td>3</td><td>A matching receipt, "I have paid" with no image, a receipt for the wrong amount.</td></tr><tr><td><b>Asks for a person</b></td><td>1</td><td>A player asks for a person.</td></tr><tr><td><b>Failure</b></td><td>3</td><td>The system down, a court taken first, a receipt for an expired hold.</td></tr></table>
+<ul><li><b>Written first:</b> the expected answers were set in an answer key before the assistant existed.</li><li><b>Fresh start:</b> each case runs on a new MCP server with a fresh copy of the data, on a fixed calendar.</li><li><b>Same path as a client:</b> the policies and tools are read through MCP.</li><li><b>Five checks:</b> right action, tool, answer and citation, and hard limits held. Every handover must carry the full staff summary.</li><li><b>Tool tests:</b> 73 tests call every tool and every refusal directly, with no API key.</li></ul>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the assistant behaves, cut directly from the project files. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/badminton-booking-agent" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/badminton-booking-agent/
+├── build_policies.py         # Policies: pages, Markdown copies, clause list
+├── resources/                # Operation, Booking, Cancellation policies; clauses.json
+├── tools.js                  # The nine tools, every rule, staff actions
+├── mcp_server.mjs            # MCP server: 3 resources, 9 tools
+├── agent.js                  # Tool-use loop with limits
+├── prompt.js                 # Four-way rule, handover reasons, examples
+├── benchmark/
+│   ├── Answer Key.html       # Expected answers, written before the build
+│   ├── cases.json            # 30 cases in 8 groups
+│   ├── test_tools.mjs        # Every tool and refusal, no API key
+│   ├── run_benchmark.mjs     # Runs and scores each case
+│   └── results.json          # Recorded run for the replay page
+├── generate_seed.py          # Fictional bookings, 12 courts
+├── make_demo_images.py       # Demo receipts, marked not payable
+├── make_demo_queue.mjs       # What staff see first, made through the tools
+├── build_dashboard.py        # -&gt; demo.html (staff)
+├── build_assistant.mjs       # -&gt; assistant.html (players)
+├── .mcp.json                 # Registers the server for Claude Code
+└── CLAUDE.md                 # Rules and build steps</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Badminton Court Booking Agent</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body>
+</html>

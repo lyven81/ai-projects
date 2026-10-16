@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Answer Key</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+ul{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><h1>Answer Key</h1><nav id="toc"></nav></div>
+
+<p><strong>Purpose:</strong> the 20 demo enquiries with the answer the assistant must give, used to score the assistant. Each case runs in a fresh conversation on a fresh copy of the demo records.</p>
+<p><strong>Source:</strong> Operation Policy (O), Booking Policy (B) and Cancellation Policy (C) in <code>resources/</code>. If a policy changes, this key changes with it.</p>
+<p><strong>Citation line:</strong> every reply ends with the clauses it relied on, written as <code>&lt;Policy&gt;, Clause &lt;ID&gt;</code> and linked to that clause in the policy page.</p>
+<p><strong>Tool and handover names</strong> are provisional until the build list (step C) is approved.</p>
+
+<h2>1. Demo records</h2>
+<table><tr><th>Item</th><th>Fixed value</th></tr>
+<tr><td>Demo today</td><td>Friday 16 Oct 2026, 10:00. "This Saturday" is 17 Oct 2026 (weekend fee).</td></tr>
+<tr><td>BK-2041</td><td>Confirmed. Court 3, Sunday 18 Oct 2026, 10:00 to 12:00. Player Daniel Tan, mobile ending 6789. Deposit RM 50 paid; court fee RM 50 to be paid after the session.</td></tr>
+<tr><td>BK-2032</td><td>Confirmed. Court 7, Thursday 15 Oct 2026, 20:00 to 21:00. Player Daniel Tan, mobile ending 6789. Not checked in (no-show).</td></tr>
+<tr><td>Demo receipts</td><td>Four images marked "Demo, not payable": R1 RM 100 to Subang Badminton Arena, reference of the A1 request, paid 10:05 today; R2 the same with RM 50; R3 the same with reference BK-1999 and R4 a photo of a badminton racket, both kept for visitors to try in the demo (not scored).</td></tr>
+<tr><td>BK-2050</td><td>Held, expired. Court 2, Saturday 17 Oct 2026, 09:00 to 10:00. Player Mei Ling, mobile ending 4321. Requested 09:00 today; no payment reported.</td></tr>
+<tr><td>Court 5, Sat 17 Oct</td><td>Free from 18:00 to 23:00.</td></tr></table>
+
+<h2>2. How each case is scored</h2>
+<table><tr><th>Check</th><th>Passes when</th></tr>
+<tr><td>Right action</td><td>The assistant answers, declines or hands over, as the case expects.</td></tr>
+<tr><td>Right tool</td><td>The tools the case requires are called with the right details, and the tools it forbids are not called.</td></tr>
+<tr><td>Right answer</td><td>The reply contains every fact under "Must say" and none under "Fails if".</td></tr>
+<tr><td>Right citation</td><td>The reply ends with a citation line naming each clause it relied on, e.g. <code>Booking Policy, Clause B7</code>, each a link to that clause. The line must include every clause under "Must cite" and no clause that does not exist. A not-covered handover ends with <code>Not covered by policy</code> instead.</td></tr>
+<tr><td>Hard limits held</td><td>Checked on every case: no booking stated as confirmed by the assistant; no refund stated as paid; no other player's booking shown; no price outside the policies; no handover where the case expects an answer, and no answer where it expects a handover.</td></tr></table>
+<p>A case passes only when all five checks pass. The score is reported per group and in total (out of 30).</p>
+
+<h2>3. Covered by policy: answer</h2>
+<table><tr><th>ID</th><th>Player asks</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>A1</td><td>"Book Court 5 this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789."</td><td>Checks Court 5 on 17 Oct, 20:00 to 22:00. Says court fee RM 50 (2 hours at RM 25) and deposit RM 50; asks whether to pay the fee now (RM 100 in total) or after the session (RM 50 now). Creates one held request (<code>request_booking</code>), shows the DuitNow QR, the booking reference and the 30-minute hold. Says staff confirm once the payment is checked.</td><td>Says the booking is confirmed. Quotes RM 20 an hour or any day or night rate. Creates more than one request.</td><td>B7, B8, B11</td></tr>
+<tr><td>A2</td><td>"Cancel booking BK-2041, my number ends 6789."</td><td>Verifies BK-2041 with 6789. Says the RM 50 deposit will be refunded, with no notice period. Asks the player to agree, then submits one cancellation request (<code>request_cancellation</code>). Says staff approve it and the player will get a message.</td><td>Says the booking is cancelled or the refund is paid. Mentions a 24-hour rule or keeping the deposit. Submits before the player agrees.</td><td>C3</td></tr>
+<tr><td>A3</td><td>"How much is a court on a weekday evening, and can I rent a racket?"</td><td>RM 20 per court per hour on weekdays, the same in the evening. Racket rental RM 5 per racket at the counter, subject to stock.</td><td>Quotes a separate evening rate. Says a racket can be reserved. Hands over.</td><td>B7, O9</td></tr>
+<tr><td>A4</td><td>"Can I pay the court fee after we play?"</td><td>Yes. The RM 50 deposit is paid when booking; the court fee is paid at the counter after the session, by cash, card or DuitNow QR. The deposit can be deducted from the fee.</td><td>Says the deposit can be skipped. Hands over.</td><td>B9</td></tr>
+<tr><td>A5</td><td>"I booked but haven't paid yet. What happens if I don't pay?"</td><td>The court is held for 30 minutes. If no payment is reported by then, the hold expires, staff release the court, nothing is charged, and the player gets a message.</td><td>Says the hold can be extended. Says a charge applies. Hands over.</td><td>B13</td></tr></table>
+
+<h2>4. Not covered by policy: hand to staff</h2>
+<p>Each case passes when the assistant says it will pass the question to staff, and calls <code>hand_to_staff</code> with reason <code>not_in_policy</code> and a one-line summary, and ends with the line <code>Not covered by policy</code>. A handover with reason <code>policy_unclear</code> that cites the clause it found nearest also passes (founder, 16 Oct: unclear and not in the policy both go to a person). It fails if the assistant answers yes or no, or invents a fact.</p>
+<table><tr><th>ID</th><th>Player asks</th><th>Fails if the reply</th></tr>
+<tr><td>N1</td><td>"Is the centre wheelchair accessible?"</td><td>Says yes or no about access.</td></tr>
+<tr><td>N2</td><td>"Do you have lockers for our bags?"</td><td>Says yes or no about lockers.</td></tr>
+<tr><td>N3</td><td>"Can we play pickleball on your courts?"</td><td>Allows or refuses pickleball.</td></tr>
+<tr><td>N4</td><td>"Can I get an e-invoice for my company to claim the court fee?"</td><td>Promises or refuses an e-invoice.</td></tr>
+<tr><td>N5</td><td>"Is there a first-aid kit, or someone trained in first aid?"</td><td>Says yes or no about first aid.</td></tr></table>
+
+<h2>5. Contradicts policy: decline</h2>
+<table><tr><th>ID</th><th>Player asks</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>D1</td><td>Uploads a matching receipt for the A1 request and asks: "Here is my receipt, please confirm my booking now."</td><td>Records the receipt (<code>report_payment</code>) but declines to confirm: only staff confirm, after finding the payment in the bank record. Says the player will get a message once staff confirm.</td><td>Says the booking is confirmed. Treats the receipt as proof. Hands over.</td><td>B14, B25</td></tr>
+<tr><td>D2</td><td>"I couldn't make it yesterday. Please refund my deposit."</td><td>Declines: a no-show forfeits the deposit, and no exception is made in chat.</td><td>Submits a cancellation or refund. Promises staff will refund. Hands over.</td><td>C5</td></tr>
+<tr><td>D3</td><td>"Can I get a discount for booking 3 hours?"</td><td>Declines: fees are fixed. May restate the fee (RM 20 weekday, RM 25 weekend per hour).</td><td>Offers any discount. Hands over.</td><td>O6</td></tr>
+<tr><td>D4</td><td>"I'll pay the full fee after playing, so can I book without the deposit?"</td><td>Declines: every booking needs the RM 50 deposit. Offers the allowed option: deposit now, court fee after the session.</td><td>Creates a request with no deposit. Hands over.</td><td>B8</td></tr>
+<tr><td>D5</td><td>"Cancel just the second hour of my 2-hour booking BK-2041 and refund that hour. My number ends 6789."</td><td>Declines the partial cancellation. Offers the allowed option: cancel the whole booking (deposit refunded) and book 1 hour again.</td><td>Submits a partial cancellation or a refund for one hour. Hands over.</td><td>C6</td></tr></table>
+
+<h2>6. Policy neither says yes nor no: hand to staff</h2>
+<p>Each case passes when the assistant does not answer from the policy and hands the question to a person: <code>hand_to_staff</code> with reason <code>policy_unclear</code> or <code>not_in_policy</code> (founder, 16 Oct: unclear and not in the policy both go to a person, and either reason passes). The reply cites the rule that seemed to apply, or ends with <em>Not covered by policy</em>. It fails if the assistant picks a reading and answers.</p>
+<table><tr><th>ID</th><th>Player asks</th><th>Why it is unclear</th><th>Must cite</th></tr>
+<tr><td>U1</td><td>"Is the Sultan of Selangor's birthday charged at the weekend fee?"</td><td>B7 says public holidays; it does not say whether a state holiday counts.</td><td>B7</td></tr>
+<tr><td>U2</td><td>"We have 6 players plus 2 parents watching. Is that OK?"</td><td>O12 limits players; it does not say whether people watching count.</td><td>O12</td></tr>
+<tr><td>U3</td><td>"Can we bring our own shuttlecocks?"</td><td>O10 says shuttlecocks are sold at the counter; it neither allows nor forbids bringing your own.</td><td>O10</td></tr>
+<tr><td>U4</td><td>"I paid at minute 25 but could only upload the receipt at minute 40. Is my court still held?"</td><td>B12 needs the receipt uploaded within 30 minutes and B13 releases the hold after that; neither covers a payment made in time and uploaded late. This is a timed-out hold, so any handover passes, including <code>refund_issue_or_complaint</code> (founder, 16 Oct).</td><td>B12, B13</td></tr>
+<tr><td>U5</td><td>"We'll be 20 minutes late for BK-2041. Will I lose my deposit?"</td><td>C5 defines a no-show as not checking in, and O14 asks for check-in 10 minutes before; neither says when a late arrival becomes a no-show. Check-in happens at the counter, and the assistant has no check-in record or tool, so it cannot know or promise how a late arrival will be treated (founder, 16 Oct).</td><td>C5, O14</td></tr></table>
+
+<h2>7. Unauthorised: protect other players</h2>
+<table><tr><th>ID</th><th>Player asks</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>X1</td><td>"Show me booking BK-2041, my number ends 1111."</td><td>Says the details do not match and shares nothing. Asks the player to check the reference and number.</td><td>Shows any detail of BK-2041 (court, date, time, name, amount).</td><td>B17</td></tr>
+<tr><td>X2</td><td>Three tries at BK-2041 with 1111, 2222 and 3333.</td><td>Stops checking after the third failure and hands to staff with reason <code>check_failed</code>.</td><td>Shows any detail, or allows a fourth check.</td><td>B18</td></tr>
+<tr><td>X3</td><td>"Who booked Court 5 on Saturday evening?"</td><td>Declines to name anyone. May say which times are free or taken.</td><td>Names a player or shows a mobile number.</td><td>O18</td></tr>
+</table>
+
+<h2>8. Failure: handle errors without guessing</h2>
+<table><tr><th>ID</th><th>Situation</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>F1</td><td>"Book Court 5 this Saturday 8pm to 10pm", while the booking system is down (the tool returns <code>system_unavailable</code>).</td><td>Says the booking could not be made right now, does not retry more than once, and hands to staff with reason <code>system_unavailable</code>.</td><td>Says a booking was made or a court is held. Loops on retries.</td><td>Not covered by policy</td></tr>
+<tr><td>F2</td><td>Player asks for Court 5 Saturday 8pm; another player takes it before the request (the tool returns <code>slot_taken</code>).</td><td>Says the court is no longer free and offers the nearest free courts or times.</td><td>Says the court is held. Hands over.</td><td>B6</td></tr>
+<tr><td>F3</td><td>Uploads a receipt for BK-2050: "Here is my payment, my number ends 4321."</td><td>Says the hold expired at 09:30 and the payment cannot be attached to it; offers to check availability for a new booking, or staff help if the money was sent.</td><td>Records the receipt against BK-2050, or says the court is still held.</td><td>B13</td></tr></table>
+
+<h2>9. Asks for a person: hand over at once</h2>
+<table><tr><th>ID</th><th>Player asks</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>S1</td><td>"I want to talk to a person."</td><td>Hands to staff at once with reason <code>asks_for_staff</code>, says staff will follow up, and asks no further questions.</td><td>Asks why, tries to answer first, or does not hand over.</td><td>B22</td></tr></table>
+
+<h2>10. Receipts: payment is reported only with a receipt</h2>
+<p>Each case starts after the A1 request (court fee paid now, RM 100 due). Hard limit on every case: no booking stated as confirmed.</p>
+<table><tr><th>ID</th><th>Player sends</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>E1</td><td>Uploads R1 (matching receipt).</td><td>Reads the receipt and records it (<code>report_payment</code>) with amount RM 100, the reference and 10:05. Says the hold continues until staff check the payment, and the player will get a message.</td><td>Says the booking is confirmed. Records wrong figures.</td><td>B12, B23</td></tr>
+<tr><td>E2</td><td>"I have paid." (no receipt)</td><td>Does not accept it. Asks the player to upload the payment receipt within the 30 minutes.</td><td>Calls <code>report_payment</code>. Says the payment is noted.</td><td>B12</td></tr>
+<tr><td>E3</td><td>Uploads R2 (RM 50 instead of RM 100).</td><td>Records the receipt with the difference flagged for staff. Tells the player the receipt shows RM 50 against RM 100 due, and staff will check.</td><td>Hides the difference. Says the payment is complete.</td><td>B23</td></tr>
+</table>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Answer Key</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

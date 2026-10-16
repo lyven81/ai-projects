@@ -20,6 +20,13 @@ window.SITE = {
       common: ["Explicit criteria for each route.", "Uncertain cases sent to a person.", "Every routing decision recorded."] },
   ],
   projects: [
+    { slug: "badminton-booking-agent", title: "Badminton Court Booking Agent", type: "customer-service",
+      valueProposition: "Customer Experience", added: "2026-10-16",
+      tagline: "A court booking assistant that answers only from the centre's policies, with staff in control of payments.",
+      problem: "A badminton centre takes court bookings and deposits by chat, and staff check every payment by hand. Players ask the same rule questions all day. One player must never see another player's booking.",
+      page: "badminton-booking-agent.html",
+      cover: "images/badminton-booking-agent/cover.jpeg",
+      demo: "https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" },
     { slug: "wee-auto-car-care", title: "Wee Auto Car Care", type: "customer-service",
       valueProposition: "Customer Experience", added: "2026-10-16",
       tagline: "A customer service assistant for a car workshop, with staff in control.",

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badminton Court Booking Agent — Live Demo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      min-height: 100vh;
+    }
+
+    /* ── API Key Bar ── */
+    #keyBar {
+      background: #1a1a2e;
+      color: white;
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      flex-wrap: wrap;
+    }
+    #keyBar label { white-space: nowrap; opacity: 0.8; }
+    #apiKeyInput {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      width: 260px;
+      font-size: 0.82rem;
+    }
+    #apiKeyInput::placeholder { color: rgba(255,255,255,0.45); }
+    #saveKeyBtn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 5px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.82rem;
+    }
+    #keySaved {
+      color: #86efac;
+      font-size: 0.78rem;
+      display: none;
+    }
+
+    /* ── Page Header ── */
+    .page-header {
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      padding: 28px 20px 24px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; }
+    .page-header p { font-size: 0.92rem; opacity: 0.88; }
+    .back-link {
+      position: absolute;
+      top: 48px; left: 16px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.82rem;
+      opacity: 0.8;
+    }
+    .back-link:hover { opacity: 1; }
+
+    /* ── Layout ── */
+    .layout {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    /* ── Card ── */
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 18px;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+    .card-body { padding: 16px 18px; }
+
+    /* ── Chat ── */
+    #chatBox {
+      height: 420px;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #fafafa;
+    }
+    .msg { display: flex; gap: 8px; }
+    .msg.user { flex-direction: row-reverse; }
+    .bubble {
+      max-width: 78%;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .msg.user .bubble {
+      background: #4CAF50;
+      color: white;
+      border-radius: 14px 14px 2px 14px;
+    }
+    .msg.bot .bubble {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px 14px 14px 2px;
+      color: #1a1a2e;
+    }
+    .msg.bot .bubble.error { background: #fef2f2; border-color: #fecaca; }
+    .avatar {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .msg.bot .avatar { background: #4CAF50; color: white; }
+    .msg.user .avatar { background: #e5e7eb; color: #374151; }
+
+    /* status badge inside bubble */
+    .status-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .status-success { background: #dcfce7; color: #166534; }
+    .status-conflict { background: #fef9c3; color: #854d0e; }
+    .status-unavailable { background: #fee2e2; color: #991b1b; }
+    .status-info { background: #dbeafe; color: #1e40af; }
+
+    /* booking card inside bubble */
+    .booking-card {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-top: 8px;
+      font-size: 0.82rem;
+    }
+    .booking-card .bk-row { display: flex; justify-content: space-between; margin-bottom: 3px; }
+    .booking-card .bk-label { color: #6b7280; }
+    .booking-card .bk-val { font-weight: 600; color: #065f46; }
+    .booking-card .bk-total {
+      border-top: 1px solid #bbf7d0;
+      margin-top: 8px;
+      padding-top: 6px;
+      font-size: 0.9rem;
+    }
+
+    /* typing indicator */
+    .typing .bubble { background: white; border: 1px solid #e5e7eb; padding: 12px 16px; }
+    .dots span {
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: #9ca3af;
+      border-radius: 50%;
+      margin: 0 2px;
+      animation: bounce 1.2s infinite;
+    }
+    .dots span:nth-child(2) { animation-delay: 0.2s; }
+    .dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce {
+      0%,60%,100% { transform: translateY(0); }
+      30% { transform: translateY(-6px); }
+    }
+
+    /* ── Input row ── */
+    .input-row {
+      display: flex;
+      gap: 8px;
+      padding: 12px 16px;
+      border-top: 1px solid #f0f0f0;
+      background: white;
+    }
+    #msgInput {
+      flex: 1;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 9px 13px;
+      font-size: 0.88rem;
+      resize: none;
+      font-family: inherit;
+      outline: none;
+      line-height: 1.4;
+    }
+    #msgInput:focus { border-color: #4CAF50; }
+    #sendBtn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    #sendBtn:disabled { opacity: 0.55; cursor: default; }
+
+    /* ── Quick actions ── */
+    .quick-actions {
+      display: flex;
+      gap: 6px;
+      padding: 10px 16px 12px;
+      flex-wrap: wrap;
+      background: white;
+      border-top: 1px solid #f0f0f0;
+    }
+    .chip {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #166534;
+      padding: 4px 10px;
+      border-radius: 16px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .chip:hover { background: #dcfce7; }
+
+    /* ── Side panel ── */
+    .side { display: flex; flex-direction: column; gap: 16px; }
+
+    /* pricing table */
+    .pricing-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .pricing-table th {
+      background: #f9fafb;
+      padding: 6px 10px;
+      text-align: left;
+      color: #6b7280;
+      font-weight: 600;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .pricing-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .pricing-table tr:last-child td { border-bottom: none; }
+    .price-val { font-weight: 700; color: #166534; }
+
+    /* courts grid */
+    .courts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+    .court-cell {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      padding: 6px 4px;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #166534;
+    }
+    .court-cell.booked { background: #fef2f2; border-color: #fecaca; color: #991b1b; }
+
+    /* recent bookings */
+    .booking-list { display: flex; flex-direction: column; gap: 8px; }
+    .bk-item {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.78rem;
+    }
+    .bk-item .bk-id { font-weight: 700; color: #374151; margin-bottom: 2px; }
+    .bk-item .bk-detail { color: #6b7280; }
+    .bk-item .bk-amount { color: #166534; font-weight: 700; float: right; }
+
+    /* footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #9ca3af;
+      font-size: 0.78rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- API Key Bar -->
+<div id="keyBar">
+  <label>Gemini API Key:</label>
+  <input id="apiKeyInput" type="password" placeholder="Enter your Gemini API key" />
+  <button id="saveKeyBtn" onclick="saveKey()">Save</button>
+  <span id="keySaved">✓ Key saved</span>
+  <span style="opacity:0.5;margin-left:auto;font-size:0.75rem;">No key? The demo runs in simulation mode.</span>
+</div>
+
+<!-- Page Header -->
+<div class="page-header" style="position:relative;">
+  <a href="../../badminton-booking-agent.html" class="back-link">← Back to Project</a>
+  <h1>🏸 Badminton Court Booking Agent</h1>
+  <p>Subang Arena · 12 Courts · AI-powered booking via natural language</p>
+</div>
+
+<!-- Main Layout -->
+<div class="layout">
+
+  <!-- Chat Panel -->
+  <div>
+    <div class="card">
+      <div class="card-header">💬 Chat with the Booking Agent</div>
+      <div id="chatBox"></div>
+      <div class="quick-actions" id="quickActions">
+        <span class="chip" onclick="useChip(this)">Check court availability tomorrow</span>
+        <span class="chip" onclick="useChip(this)">Book Court 3 for Saturday 8pm, 2 hours</span>
+        <span class="chip" onclick="useChip(this)">What's the pricing?</span>
+        <span class="chip" onclick="useChip(this)">Show all bookings</span>
+        <span class="chip" onclick="useChip(this)">Cancel booking BKG002</span>
+      </div>
+      <div class="input-row">
+        <textarea id="msgInput" rows="2" placeholder="e.g. Book Court 5 for tomorrow evening 7pm, 2 hours. Name: Ahmad, IC: 900101-14-5678"></textarea>
+        <button id="sendBtn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side Panel -->
+  <div class="side">
+
+    <!-- Pricing -->
+    <div class="card">
+      <div class="card-header">💰 Pricing (per hour)</div>
+      <div class="card-body" style="padding:0;">
+        <table class="pricing-table">
+          <tr><th>Session</th><th>Weekday</th><th>Weekend</th></tr>
+          <tr>
+            <td>Day (6am–6pm)</td>
+            <td class="price-val">RM 80</td>
+            <td class="price-val">RM 90</td>
+          </tr>
+          <tr>
+            <td>Night (6pm–6am)</td>
+            <td class="price-val">RM 100</td>
+            <td class="price-val">RM 120</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Courts -->
+    <div class="card">
+      <div class="card-header">🏸 Courts (Today)</div>
+      <div class="card-body">
+        <div class="courts-grid" id="courtsGrid"></div>
+        <p style="font-size:0.73rem;color:#9ca3af;margin-top:8px;">
+          <span style="color:#166534;">■</span> Available &nbsp;
+          <span style="color:#991b1b;">■</span> Booked
+        </p>
+      </div>
+    </div>
+
+    <!-- Recent Bookings -->
+    <div class="card">
+      <div class="card-header">📋 Recent Bookings</div>
+      <div class="card-body" style="padding:12px 14px;">
+        <div class="booking-list" id="recentBookings">
+          <p style="font-size:0.82rem;color:#9ca3af;">No bookings yet.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2025 Lee Yih Ven | AI Project Portfolio &nbsp;·&nbsp; Demo runs in-browser · No server required</footer>
+
+<script>
+// ─── State ────────────────────────────────────────────────────────────
+const courts = Array.from({length:12}, (_,i) => ({
+  court_id: `CRT${String(i+1).padStart(3,'0')}`,
+  court_name: `Court ${i+1}`,
+  status: 'available'
+}));
+
+let bookings = [];
+let bookingCounter = 1;
+let chartCount = 0;
+
+// ─── Helpers ─────────────────────────────────────────────────────────
+function getKey() { return sessionStorage.getItem('gemini_key') || ''; }
+function saveKey() {
+  const v = document.getElementById('apiKeyInput').value.trim();
+  if (v) {
+    sessionStorage.setItem('gemini_key', v);
+    document.getElementById('keySaved').style.display = 'inline';
+    setTimeout(() => document.getElementById('keySaved').style.display = 'none', 2000);
+  }
+}
+
+function isWeekend(dateStr) {
+  return [0,6].includes(new Date(dateStr).getDay());
+}
+function isDaytime(timeStr) {
+  return parseInt(timeStr.split(':')[0]) >= 6 && parseInt(timeStr.split(':')[0]) < 18;
+}
+function getRate(dateStr, timeStr) {
+  const wk = isWeekend(dateStr), day = isDaytime(timeStr);
+  if (day && !wk) return 80;
+  if (day && wk)  return 90;
+  if (!day && !wk) return 100;
+  return 120;
+}
+function addHours(timeStr, h) {
+  const [hr, mn] = timeStr.split(':').map(Number);
+  const total = hr * 60 + mn + h * 60;
+  return `${String(Math.floor(total/60)%24).padStart(2,'0')}:${String(total%60).padStart(2,'0')}`;
+}
+function hasConflict(courtId, dateStr, startTime, endTime) {
+  const s = new Date(`${dateStr}T${startTime}`);
+  const e = new Date(`${dateStr}T${endTime}`);
+  return bookings.some(b =>
+    b.court_id === courtId && b.booking_date === dateStr && b.status === 'confirmed' &&
+    !(e <= new Date(`${dateStr}T${b.start_time}`) || s >= new Date(`${dateStr}T${b.end_time}`))
+  );
+}
+function validateIC(ic) {
+  return /^\d{6}-\d{2}-\d{4}$/.test(ic);
+}
+function todayStr() {
+  return new Date().toISOString().split('T')[0];
+}
+function nextBookingId() {
+  return `BKG${String(++bookingCounter).padStart(3,'0')}`;
+}
+
+// ─── In-memory booking logic ─────────────────────────────────────────
+function bookCourt({court_number, court_id, date, start_time, hours, customer_name, customer_ic}) {
+  // Defaults
+  if (!date) date = todayStr();
+  if (!start_time) start_time = '10:00';
+  if (!hours) hours = 1;
+  if (!customer_name) customer_name = 'Walk-in Customer';
+
+  const cid = court_id || (court_number ? `CRT${String(court_number).padStart(3,'0')}` : 'CRT001');
+  const court = courts.find(c => c.court_id === cid);
+  if (!court) return { status: 'invalid_request', answer: `Court ${cid} does not exist. Valid courts are CRT001–CRT012.` };
+
+  if (customer_ic && !validateIC(customer_ic)) {
+    return { status: 'invalid_request', answer: `IC number format is invalid. Expected format: YYMMDD-PB-####, e.g. 900101-14-5678.` };
+  }
+
+  const end_time = addHours(start_time, hours);
+  if (hasConflict(cid, date, start_time, end_time)) {
+    return { status: 'time_conflict', answer: `Sorry, ${court.court_name} is already booked on ${date} between ${start_time} and ${end_time}. Please choose a different time or court.` };
+  }
+
+  const rates = [];
+  let total = 0;
+  for (let h = 0; h < hours; h++) {
+    const slotStart = addHours(start_time, h);
+    const rate = getRate(date, slotStart);
+    rates.push(rate);
+    total += rate;
+  }
+
+  const bkgId = nextBookingId();
+  const booking = {
+    booking_id: bkgId, court_id: cid, court_name: court.court_name,
+    customer_name, customer_ic: customer_ic || 'N/A',
+    booking_date: date, start_time, end_time,
+    duration_hours: hours, hourly_rates: rates,
+    total_amount_myr: total, status: 'confirmed',
+    timestamp: new Date().toISOString()
+  };
+  bookings.push(booking);
+  renderSidePanel();
+  return {
+    status: 'success',
+    answer: `Booking confirmed!`,
+    booking
+  };
+}
+
+function cancelBooking(bookingId) {
+  const bk = bookings.find(b => b.booking_id === bookingId);
+  if (!bk) return { status: 'invalid_request', answer: `No booking found with ID ${bookingId}.` };
+  if (bk.status === 'cancelled') return { status: 'invalid_request', answer: `Booking ${bookingId} is already cancelled.` };
+  bk.status = 'cancelled';
+  renderSidePanel();
+  return { status: 'success', answer: `Booking ${bookingId} for ${bk.customer_name} (${bk.court_name}, ${bk.booking_date} ${bk.start_time}–${bk.end_time}) has been cancelled.` };
+}
+
+function checkAvailability(date, courtId) {
+  if (!date) date = todayStr();
+  const targetCourts = courtId ? courts.filter(c => c.court_id === courtId) : courts;
+  const results = targetCourts.map(c => {
+    const courtBookings = bookings.filter(b => b.court_id === c.court_id && b.booking_date === date && b.status === 'confirmed');
+    const bookedSlots = courtBookings.map(b => `${b.start_time}–${b.end_time}`);
+    return { court: c.court_name, booked_slots: bookedSlots, available: bookedSlots.length === 0 };
+  });
+  const available = results.filter(r => r.available).map(r => r.court);
+  const busy = results.filter(r => !r.available);
+  let answer = `**Availability for ${date}:**\n\n`;
+  if (available.length) answer += `✅ Available: ${available.join(', ')}\n\n`;
+  if (busy.length) {
+    answer += `🔴 Booked:\n` + busy.map(b => `• ${b.court}: ${b.booked_slots.join(', ')}`).join('\n');
+  }
+  if (!available.length && !busy.length) answer = `All courts are available on ${date}.`;
+  return { status: 'info', answer };
+}
+
+function listBookings(filterStatus) {
+  const filtered = filterStatus ? bookings.filter(b => b.status === filterStatus) : bookings.filter(b => b.status === 'confirmed');
+  if (!filtered.length) return { status: 'info', answer: `No ${filterStatus || 'active'} bookings found.` };
+  const lines = filtered.map(b =>
+    `• **${b.booking_id}** — ${b.court_name}, ${b.booking_date} ${b.start_time}–${b.end_time}, ${b.customer_name} · RM${b.total_amount_myr}`
+  );
+  return { status: 'info', answer: `**Current bookings (${filtered.length}):**\n\n` + lines.join('\n') };
+}
+
+function showPricing() {
+  return {
+    status: 'info',
+    answer: `**Subang Arena Pricing (per hour):**\n\n| Session | Weekday | Weekend |\n|---|---|---|\n| Day (6am–6pm) | RM 80 | RM 90 |\n| Night (6pm–6am) | RM 100 | RM 120 |`
+  };
+}
+
+// ─── Gemini NLP (intent parsing) ─────────────────────────────────────
+async function parseIntent(userMessage) {
+  const key = getKey();
+  if (!key) return simulateIntent(userMessage);
+
+  const today = todayStr();
+  const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+  const tomorrowStr = tomorrow.toISOString().split('T')[0];
+
+  const prompt = `You are a booking intent parser for a badminton court booking system.
+Today is ${today}. Tomorrow is ${tomorrowStr}.
+
+Parse the user message and return ONLY valid JSON (no markdown):
+{
+  "intent": "book_court|cancel_booking|check_availability|list_bookings|show_pricing|unknown",
+  "court_number": null or integer 1-12,
+  "court_id": null or "CRT001" format,
+  "date": null or "YYYY-MM-DD",
+  "start_time": null or "HH:MM" (24hr),
+  "hours": null or integer,
+  "customer_name": null or string,
+  "customer_ic": null or string,
+  "booking_id": null or "BKGXXX" format
+}
+
+User message: "${userMessage.replace(/"/g,'\"')}"`;
+
+  try {
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`,
+      {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          contents: [{parts: [{text: prompt}]}],
+          generationConfig: {temperature: 0.1, maxOutputTokens: 512}
+        })
+      }
+    );
+    const data = await res.json();
+    if (data.error) throw new Error(data.error.message);
+    const text = data.candidates[0].content.parts[0].text;
+    const m = text.match(/\{[\s\S]*\}/);
+    return m ? JSON.parse(m[0]) : simulateIntent(userMessage);
+  } catch(e) {
+    return simulateIntent(userMessage);
+  }
+}
+
+// Fallback: simple keyword-based intent parsing (no API needed)
+function simulateIntent(msg) {
+  const m = msg.toLowerCase();
+  const today = todayStr();
+  const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+  const tomorrowStr = tomorrow.toISOString().split('T')[0];
+
+  let intent = 'unknown';
+  if (/book|reserve|want court/i.test(m)) intent = 'book_court';
+  else if (/cancel/i.test(m)) intent = 'cancel_booking';
+  else if (/availab|free|open|which court/i.test(m)) intent = 'check_availability';
+  else if (/list|show.*book|all book|my book/i.test(m)) intent = 'list_bookings';
+  else if (/price|rate|cost|how much/i.test(m)) intent = 'show_pricing';
+
+  // Extract court number
+  const courtMatch = m.match(/court\s*(\d+)/i);
+  const courtNum = courtMatch ? parseInt(courtMatch[1]) : null;
+
+  // Extract date
+  let date = null;
+  if (/tomorrow/i.test(m)) date = tomorrowStr;
+  else if (/today/i.test(m)) date = today;
+  else if (/saturday/i.test(m)) { const d = new Date(); while(d.getDay()!==6)d.setDate(d.getDate()+1); date = d.toISOString().split('T')[0]; }
+  else if (/sunday/i.test(m)) { const d = new Date(); while(d.getDay()!==0)d.setDate(d.getDate()+1); date = d.toISOString().split('T')[0]; }
+  const dateMatch = m.match(/(\d{4}-\d{2}-\d{2})/);
+  if (dateMatch) date = dateMatch[1];
+
+  // Extract time
+  let start_time = null;
+  const timeMatch = msg.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/i);
+  if (timeMatch) {
+    let h = parseInt(timeMatch[1]);
+    const mn = timeMatch[2] ? parseInt(timeMatch[2]) : 0;
+    const ampm = timeMatch[3]?.toLowerCase();
+    if (ampm === 'pm' && h < 12) h += 12;
+    if (ampm === 'am' && h === 12) h = 0;
+    start_time = `${String(h).padStart(2,'0')}:${String(mn).padStart(2,'0')}`;
+  }
+
+  // Extract hours
+  const hrsMatch = m.match(/(\d+)\s*hour/i);
+  const hours = hrsMatch ? parseInt(hrsMatch[1]) : null;
+
+  // Extract booking ID
+  const bkgMatch = msg.match(/BKG\d+/i);
+  const booking_id = bkgMatch ? bkgMatch[0].toUpperCase() : null;
+
+  // Extract name (after "name:" or "for [Name]")
+  const nameMatch = msg.match(/(?:name[:\s]+)([A-Za-z ]{2,25})/i) ||
+                    msg.match(/(?:for\s+)([A-Z][a-z]+ ?[A-Z]?[a-z]*)/);
+  const customer_name = nameMatch ? nameMatch[1].trim() : null;
+
+  // Extract IC
+  const icMatch = msg.match(/(\d{6}-\d{2}-\d{4})/);
+  const customer_ic = icMatch ? icMatch[1] : null;
+
+  return { intent, court_number: courtNum, court_id: courtNum ? `CRT${String(courtNum).padStart(3,'0')}` : null,
+           date, start_time, hours, customer_name, customer_ic, booking_id };
+}
+
+// ─── Dispatch intent → action ─────────────────────────────────────────
+function dispatch(parsed) {
+  switch(parsed.intent) {
+    case 'book_court':     return bookCourt(parsed);
+    case 'cancel_booking': return cancelBooking(parsed.booking_id);
+    case 'check_availability': return checkAvailability(parsed.date, parsed.court_id);
+    case 'list_bookings':  return listBookings(parsed.filter_status);
+    case 'show_pricing':   return showPricing();
+    default:
+      return {
+        status: 'info',
+        answer: `I can help you with:\n• **Book a court** — "Book Court 3 for Saturday 8pm, 2 hours"\n• **Check availability** — "Which courts are free tomorrow?"\n• **Cancel a booking** — "Cancel BKG002"\n• **List bookings** — "Show all bookings"\n• **Pricing** — "What are the rates?"`
+      };
+  }
+}
+
+// ─── Chat rendering ───────────────────────────────────────────────────
+function appendMsg(role, html, statusClass) {
+  const box = document.getElementById('chatBox');
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  const avatarText = role === 'bot' ? '🤖' : '👤';
+  div.innerHTML = `<div class="avatar">${avatarText}</div><div class="bubble ${statusClass||''}">${html}</div>`;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+  return div;
+}
+
+function showTyping() {
+  const box = document.getElementById('chatBox');
+  const div = document.createElement('div');
+  div.className = 'msg bot typing';
+  div.id = 'typingIndicator';
+  div.innerHTML = `<div class="avatar">🤖</div><div class="bubble"><div class="dots"><span></span><span></span><span></span></div></div>`;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+function removeTyping() {
+  const el = document.getElementById('typingIndicator');
+  if (el) el.remove();
+}
+
+function formatAnswer(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+}
+
+function renderResult(result) {
+  const statusMap = {
+    success: 'status-success',
+    time_conflict: 'status-conflict',
+    invalid_request: 'status-unavailable',
+    court_unavailable: 'status-unavailable',
+    info: 'status-info'
+  };
+  const cls = statusMap[result.status] || 'status-info';
+
+  let html = `<span class="status-badge ${cls}">${result.status.replace('_',' ')}</span><br>${formatAnswer(result.answer)}`;
+
+  if (result.booking) {
+    const b = result.booking;
+    html += `<div class="booking-card">
+      <div class="bk-row"><span class="bk-label">Booking ID</span><span class="bk-val">${b.booking_id}</span></div>
+      <div class="bk-row"><span class="bk-label">Court</span><span class="bk-val">${b.court_name}</span></div>
+      <div class="bk-row"><span class="bk-label">Date</span><span class="bk-val">${b.booking_date}</span></div>
+      <div class="bk-row"><span class="bk-label">Time</span><span class="bk-val">${b.start_time} – ${b.end_time}</span></div>
+      <div class="bk-row"><span class="bk-label">Customer</span><span class="bk-val">${b.customer_name}</span></div>
+      <div class="bk-row"><span class="bk-label">IC</span><span class="bk-val">${b.customer_ic}</span></div>
+      <div class="bk-row bk-total"><span class="bk-label">Total</span><span class="bk-val" style="font-size:1rem;">RM ${b.total_amount_myr}</span></div>
+    </div>`;
+  }
+
+  appendMsg('bot', html, result.status === 'success' ? '' : (result.status === 'info' ? '' : 'error'));
+}
+
+// ─── Send message ─────────────────────────────────────────────────────
+async function sendMessage() {
+  const input = document.getElementById('msgInput');
+  const btn = document.getElementById('sendBtn');
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  appendMsg('user', msg);
+  input.value = '';
+  btn.disabled = true;
+  showTyping();
+
+  // Hide chips after first message
+  document.getElementById('quickActions').style.display = 'none';
+
+  try {
+    const parsed = await parseIntent(msg);
+    const result = dispatch(parsed);
+    removeTyping();
+    renderResult(result);
+  } catch(e) {
+    removeTyping();
+    appendMsg('bot', `<span class="status-badge status-unavailable">error</span><br>Something went wrong: ${e.message}`, 'error');
+  }
+
+  btn.disabled = false;
+  input.focus();
+}
+
+function useChip(el) {
+  document.getElementById('msgInput').value = el.textContent;
+  sendMessage();
+}
+
+// Enter to send
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('msgInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+  });
+
+  // Restore API key
+  const saved = sessionStorage.getItem('gemini_key');
+  if (saved) document.getElementById('apiKeyInput').value = saved;
+
+  renderSidePanel();
+
+  // Welcome message
+  appendMsg('bot', `<span class="status-badge status-info">welcome</span><br>Hello! I'm the <strong>Subang Arena Booking Agent</strong>.<br><br>I manage <strong>12 courts</strong> with real-time availability and dynamic pricing. Try the quick actions below, or type any request in natural language.${!getKey() ? '<br><br><em style="color:#9ca3af;font-size:0.82rem;">Running in simulation mode — add your Gemini API key above for enhanced natural language understanding.</em>' : ''}`);
+});
+
+// ─── Side panel rendering ─────────────────────────────────────────────
+function renderSidePanel() {
+  // Courts grid — show today's bookings
+  const today = todayStr();
+  const grid = document.getElementById('courtsGrid');
+  grid.innerHTML = courts.map(c => {
+    const bookedToday = bookings.some(b => b.court_id === c.court_id && b.booking_date === today && b.status === 'confirmed');
+    return `<div class="court-cell ${bookedToday ? 'booked' : ''}">${c.court_name.replace('Court ','C')}</div>`;
+  }).join('');
+
+  // Recent bookings
+  const rb = document.getElementById('recentBookings');
+  const recent = [...bookings].filter(b => b.status === 'confirmed').reverse().slice(0, 5);
+  if (!recent.length) {
+    rb.innerHTML = '<p style="font-size:0.82rem;color:#9ca3af;">No bookings yet.</p>';
+  } else {
+    rb.innerHTML = recent.map(b => `
+      <div class="bk-item">
+        <div class="bk-id">${b.booking_id} <span class="bk-amount">RM ${b.total_amount_myr}</span></div>
+        <div class="bk-detail">${b.court_name} · ${b.booking_date}</div>
+        <div class="bk-detail">${b.start_time}–${b.end_time} · ${b.customer_name}</div>
+      </div>
+    `).join('');
+  }
+}
+</script>
+</body>
+</html>

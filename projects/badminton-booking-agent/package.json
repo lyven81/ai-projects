@@ -1,0 +1,16 @@
+{
+  "name": "badminton-court-booking-agent",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Subang Badminton Arena booking assistant: MCP server, shared tools, tool tests, benchmark",
+  "type": "commonjs",
+  "scripts": {
+    "mcp": "node mcp_server.mjs",
+    "test:tools": "node benchmark/test_tools.mjs",
+    "benchmark": "node benchmark/run_benchmark.mjs",
+    "build": "python build_dashboard.py && node build_assistant.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.0"
+  }
+}

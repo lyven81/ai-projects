@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Booking Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><h1>Booking Policy</h1><nav id="toc"></nav></div>
+<h2>1. Making a booking</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="B1"><td>B1</td><td>Bookings can be made for today and the next 7 days. A date further ahead is refused, with the date it opens for booking.</td><td>Code</td></tr>
+<tr id="B2"><td>B2</td><td>A session starts on the hour and lasts 1, 2 or 3 hours, inside opening hours (Operation Policy O3).</td><td>Code</td></tr>
+<tr id="B3"><td>B3</td><td>A booking must be made at least 2 hours before the session starts. Later than that, the player books at the counter.</td><td>Code</td></tr>
+<tr id="B4"><td>B4</td><td>One booking is for one court. A player may hold up to 2 courts at the same time under one mobile number.</td><td>Code</td></tr>
+<tr id="B5"><td>B5</td><td>The player gives a name and a Malaysian mobile number. No IC number is asked for or stored.</td><td>Code</td></tr>
+<tr id="B6"><td>B6</td><td>A court that is held or confirmed for any part of the requested time cannot be booked. The assistant offers the nearest free courts or times instead.</td><td>Code</td></tr>
+</table>
+<h2>2. Court fee and deposit</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="B7"><td>B7</td><td>Court fee, per court per hour: weekday RM 20, weekend RM 25. The weekend fee applies on Saturday, Sunday and public holidays.</td><td>Code (fee table)</td></tr>
+<tr id="B8"><td>B8</td><td>Every booking needs a deposit of RM 50, whatever its length.</td><td>Code</td></tr>
+<tr id="B9"><td>B9</td><td>The player chooses when to pay the court fee: together with the deposit when booking, or at the counter after the session (Operation Policy O16).</td><td>Code (amount shown by the tool)</td></tr>
+<tr id="B10"><td>B10</td><td>After the session, the deposit is refunded. If the court fee was not paid at booking, the deposit can instead be deducted from it at the counter.</td><td>Prompt</td></tr>
+</table>
+<h2>3. Hold</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="B11"><td>B11</td><td>A booking request gets a booking reference (e.g. <code>BK-2041</code>) and holds the court for 30 minutes. The assistant shows the DuitNow QR, the amount (RM 50, or RM 50 plus the court fee) and the reference.</td><td>Code</td></tr>
+<tr id="B12"><td>B12</td><td>Payment is reported only by uploading the payment receipt in the chat within the 30 minutes. A message saying the payment was made, without a receipt, is not accepted. Once a receipt is uploaded, the hold continues until staff check it.</td><td>Code (report needs a receipt)</td></tr>
+<tr id="B13"><td>B13</td><td>If the payment is not reported within 30 minutes, the hold is marked expired on the staff dashboard. Staff release it, the court becomes available again, and the player receives an automatic message. Nothing is charged.</td><td>Code (dashboard and fixed message)</td></tr>
+</table>
+<h2>4. Confirmation</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="B14"><td>B14</td><td>A booking is confirmed only when staff find the payment in the centre's bank record and press Confirm. The assistant never confirms a booking.</td><td>Code (no confirm tool)</td></tr>
+<tr id="B15"><td>B15</td><td>On Confirm, the player receives an automatic message: court, date, time, amount paid, and the court fee due at the counter if not yet paid.</td><td>Code (fixed message)</td></tr>
+<tr id="B16"><td>B16</td><td>If staff cannot find the payment, they press Not received. The court is released and the player receives an automatic message.</td><td>Code (fixed message)</td></tr>
+</table>
+<h2>5. Checking a booking</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="B17"><td>B17</td><td>To see a booking, the player gives the booking reference and the last 4 digits of the mobile number on it. Both must match. The assistant then shares that booking only: court, date, time, amounts and status.</td><td>Code</td></tr>
+<tr id="B18"><td>B18</td><td>After 3 failed checks in one conversation, the assistant stops checking and hands the enquiry to staff.</td><td>Code</td></tr>
+</table>
+<h2>6. What the assistant does not handle</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="B19"><td>B19</td><td>Changing or moving a booking is not done in chat. The player cancels (Cancellation Policy) and books again, or asks staff.</td><td>Code (no change tool)</td></tr>
+<tr id="B20"><td>B20</td><td>These go to staff: weekly or recurring bookings, sessions longer than 3 hours, more than 2 courts, tournaments, events, coaching, corporate and school bookings.</td><td>Prompt (handover reason)</td></tr>
+<tr id="B21"><td>B21</td><td>Requests to skip the deposit, hold a court without a booking, or extend a hold are declined under B8 and B11 to B13.</td><td>Code</td></tr>
+<tr id="B22"><td>B22</td><td>A player who asks for a person is handed to staff at once, with no further questions. The request appears on the staff dashboard for follow-up.</td><td>Code (handover reason)</td></tr>
+</table>
+<h2>7. Receipts</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="B23"><td>B23</td><td>The assistant reads the uploaded receipt: amount, reference, date and time, and recipient. The system compares them with the booking and shows staff the receipt with any difference (wrong amount, wrong reference, paid before the booking was made).</td><td>Code (fixed fields, compared in code)</td></tr>
+<tr id="B24"><td>B24</td><td>An image that is not a payment receipt, or cannot be read, is not accepted. The player is asked to upload the receipt again.</td><td>Code</td></tr>
+<tr id="B25"><td>B25</td><td>A receipt does not confirm a booking. Staff confirm only after finding the payment in the bank record (B14).</td><td>Code (no confirm tool)</td></tr>
+</table>
+<h2>8. How the assistant uses this policy</h2>
+<table><tr><th>Enquiry</th><th>What the assistant does</th></tr>
+<tr><td>Covered by policy</td><td>Answers from this policy and names the rule (e.g. B7).</td></tr>
+<tr><td>Contradicts policy</td><td>Declines, states the rule that applies, and offers what the rule does allow. No exceptions are made in chat.</td></tr>
+<tr><td>Not covered by policy</td><td>Does not guess. Hands the enquiry to staff with a short summary and the handover reason.</td></tr>
+<tr><td>Policy neither says yes nor no</td><td>Does not choose a reading. Hands the enquiry to staff with the rule that seemed to apply and why it is unclear.</td></tr></table>
+<p>Rules marked <b>Code</b> are enforced by the booking tools, so the assistant cannot break them even if asked. Rules marked <b>Prompt</b> guide what the assistant says.</p>
+<footer>&copy; 2026 Lee Yih Ven &middot; Booking Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

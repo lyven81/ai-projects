@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subang Badminton Arena: Staff Dashboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --navy: #1F3A5F; --navy2: #2B4C7E; --green: #1E8E5A; --free: #DCF3E6; --amber: #F2A93B; --amberbg: #FFF4DF; --red: #D64545; --redbg: #FDE8E8;
+          --ink: #1F2A36; --muted: #5B6878; --line: #DBE2EA; --bg: #EEF2F6; --card: #fff; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--ink); font-size: 14px; }
+  .app { max-width: 1280px; margin: 0 auto; padding: 16px; }
+  header.top { background: linear-gradient(135deg, var(--navy), var(--green)); color: #fff; padding: 16px 22px; border-radius: 12px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  header.top h1 { font-size: 20px; font-weight: 600; }
+  header.top .sub { font-size: 12.5px; opacity: .92; margin-top: 2px; }
+  .switch { display: inline-flex; border: 1px solid rgba(255,255,255,.7); border-radius: 8px; overflow: hidden; }
+  .switch a { color: #fff; font-size: 13px; font-weight: 600; padding: 7px 14px; text-decoration: none; white-space: nowrap; }
+  .switch a.on { background: #fff; color: var(--navy); }
+  .bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 6px; font-size: 13px; color: var(--muted); }
+  .bar .live { display: inline-flex; align-items: center; gap: 6px; }
+  .bar .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(30,142,90,.2); }
+  .bar .spacer { flex: 1; }
+  .btn { border: 0; background: var(--navy); color: #fff; padding: 7px 14px; border-radius: 7px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .btn:hover { background: var(--navy2); }
+  .btn.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  .btn.red { background: var(--red); }
+  .btn.green { background: var(--green); }
+  h2.sec { font-size: 15px; color: var(--navy); margin: 18px 0 8px; display: flex; align-items: baseline; gap: 8px; }
+  h2.sec small { font-weight: 400; color: var(--muted); font-size: 12.5px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .fu-total { font-size: 12.5px; color: var(--muted); margin: 2px 0 6px; }
+  .fu-case { display: flex; align-items: center; gap: 10px; margin: 6px 0 10px; }
+  .fu-case label { font-size: 13px; font-weight: 600; color: var(--muted); }
+  .fu-case select { flex: 1; max-width: 640px; min-width: 0; font: inherit; font-size: 14px; color: var(--navy); padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  .fu-menu { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 4px; }
+  .fu-menu button { border: 1px solid var(--line); background: #fff; border-radius: 16px; padding: 4px 11px; font: inherit; font-size: 12.5px; cursor: pointer; color: var(--ink); }
+  .fu-menu button .n { display: inline-block; min-width: 18px; margin-left: 5px; font-size: 11px; font-weight: 700; padding: 0 6px; border-radius: 9px; background: var(--bg); color: var(--muted); }
+  .fu-menu button.has .n { background: var(--navy); color: #fff; }
+  .fu-menu button.on { border-color: var(--navy); background: #E3EAF4; color: var(--navy); font-weight: 600; }
+  .fu-new { font-size: 12.5px; color: #9A5B00; margin: 4px 0; min-height: 0; }
+  .fu-new button { border: 0; background: var(--amberbg); color: #9A5B00; font: inherit; font-size: 12.5px; font-weight: 600; padding: 3px 9px; border-radius: 12px; cursor: pointer; margin-left: 4px; }
+  .fu-head { font-size: 12.5px; color: var(--muted); margin: 8px 0; }
+  table.sum { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 6px; }
+  table.sum td { border-top: 1px solid var(--line); padding: 5px 8px; vertical-align: top; }
+  table.sum td:first-child { width: 150px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+  table.sum tr.act td { background: #F0F4FA; }
+  table.sum tr.act td:last-child { color: var(--navy); font-weight: 600; }
+  table.sum .told { white-space: pre-wrap; color: #374151; }
+  .replybox { display: flex; gap: 6px; margin-top: 8px; }
+  .replybox textarea { flex: 1; min-width: 0; font: inherit; font-size: 13px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; resize: vertical; min-height: 36px; }
+  .replies { font-size: 12.5px; color: var(--green); margin-top: 6px; }
+  @media (max-width: 600px) { table.sum td:first-child { width: 96px; white-space: normal; } .replybox { flex-direction: column; } }
+  .log .m { border-bottom: 1px solid var(--line); padding: 7px 0; font-size: 13px; }
+  .log .m:last-child { border-bottom: 0; }
+  .log .m b { color: var(--navy); }
+  .q { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; min-width: 0; }
+  .q > h3 { font-size: 13.5px; display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .q > h3 .n { font-size: 11.5px; font-weight: 700; padding: 1px 8px; border-radius: 10px; background: var(--bg); color: var(--muted); }
+  .q > h3 .n.hot { background: var(--navy); color: #fff; }
+  .q.receipts > h3 { color: #9A5B00; } .q.expired > h3 { color: var(--red); } .q.cancels > h3 { color: var(--navy); } .q.handovers > h3 { color: var(--green); }
+  .empty { font-size: 12.5px; color: var(--muted); padding: 6px 0; }
+  .item { border: 1px solid var(--line); border-radius: 8px; padding: 10px; margin-bottom: 8px; font-size: 13px; line-height: 1.45; }
+  .item.new { animation: flash 2.4s ease-out; }
+  @keyframes flash { 0% { background: #FFF7D6; } 100% { background: #fff; } }
+  .item .head { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-weight: 600; }
+  .item .meta { color: var(--muted); font-size: 12.5px; }
+  .item .acts { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .rc { display: grid; grid-template-columns: 96px 1fr; gap: 10px; margin-top: 6px; }
+  .rc img { width: 96px; border: 1px solid var(--line); border-radius: 6px; cursor: zoom-in; background: #fff; }
+  .cmp { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  .cmp th, .cmp td { border: 1px solid var(--line); padding: 3px 6px; text-align: left; }
+  .cmp th { background: #F6F8FB; color: var(--muted); font-weight: 600; }
+  .cmp tr.diff td { background: var(--redbg); color: #9B1C1C; font-weight: 600; }
+  .note { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .chip { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 9px; background: #E7F5EE; color: var(--green); }
+  .chip.red { background: var(--redbg); color: var(--red); } .chip.amber { background: var(--amberbg); color: #9A5B00; } .chip.navy { background: #E3EAF4; color: var(--navy); }
+  a.cl { color: var(--navy2); font-weight: 600; }
+
+  .courts { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .days { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .days button { border: 1px solid var(--line); background: #fff; border-radius: 16px; padding: 5px 11px; font: inherit; font-size: 12.5px; cursor: pointer; }
+  .days button.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .days button .we { font-size: 10.5px; opacity: .8; margin-left: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -2px; background: var(--c); }
+  .gridwrap { overflow-x: auto; }
+  table.grid { border-collapse: separate; border-spacing: 2px; font-size: 11px; min-width: 860px; width: 100%; }
+  table.grid th { color: var(--muted); font-weight: 600; padding: 2px; }
+  table.grid th.c { text-align: left; white-space: nowrap; padding-right: 6px; color: var(--ink); }
+  table.grid td { height: 26px; border-radius: 4px; background: var(--free); cursor: default; text-align: center; color: #fff; font-weight: 700; }
+  table.grid td.past { background: #EEF1F4; }
+  table.grid td.held { background: var(--amber); cursor: pointer; }
+  table.grid td.expired { background: var(--red); cursor: pointer; }
+  table.grid td.booked { background: var(--navy); cursor: pointer; }
+  table.grid td.done { background: #8796A8; cursor: pointer; }
+  table.grid td.sel { outline: 2px solid #111; }
+  .detail { margin-top: 10px; font-size: 13px; }
+  .detail table { border-collapse: collapse; }
+  .detail td { padding: 2px 12px 2px 0; vertical-align: top; }
+  .detail td:first-child { color: var(--muted); }
+
+  .modal { position: fixed; inset: 0; background: rgba(15,23,32,.7); display: none; align-items: center; justify-content: center; z-index: 9; }
+  .modal.on { display: flex; }
+  .modal img { max-height: 90vh; max-width: 92vw; border-radius: 8px; background: #fff; }
+  footer { font-size: 12px; color: var(--muted); margin: 18px 0 6px; }
+  @media (max-width: 860px) { .fu-case select { max-width: none; } header.top { padding: 14px 16px; } .app { padding: 10px; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>Subang Badminton Arena · Staff Dashboard</h1>
+      <div class="sub">Staff confirm payments, release holds, approve cancellations and answer handovers (fictional data) · <span id="now-text"></span></div>
+    </div>
+    <nav class="switch"><a class="on" href="demo.html">Staff dashboard</a><a href="assistant.html">Player chat</a></nav>
+  </header>
+
+  <div class="bar">
+    <span class="live">Live: updates as soon as the player chat changes something</span>
+    <span class="spacer"></span>
+    <button class="btn ghost" id="reset">Reset demo</button>
+  </div>
+
+  <h2 class="sec">Follow up <small>Only what needs a person. Each button sends a fixed message to the player's chat; the assistant never confirms, releases, cancels or refunds.</small></h2>
+  <div class="card fu">
+    <div class="fu-menu" id="fu-menu"></div>
+    <div class="fu-total" id="fu-total"></div>
+    <div class="fu-head" id="fu-head"></div>
+    <div class="fu-case" id="fu-case-row"><label for="fu-case">Case</label><select id="fu-case"></select></div>
+    <div class="fu-new" id="fu-new"></div>
+    <div id="fu-items"></div>
+  </div>
+
+  <h2 class="sec">Courts <small>Today and the next 7 days. Click a booking for its details.</small></h2>
+  <div class="courts">
+    <div class="days" id="days"></div>
+    <div class="legend">
+      <span style="--c:var(--free)">Available</span><span style="--c:var(--amber)">Held, waiting for payment (R: receipt uploaded)</span>
+      <span style="--c:var(--red)">Held past 30 minutes, no receipt</span><span style="--c:var(--navy)">Booked</span><span style="--c:#8796A8">Played or no-show</span>
+    </div>
+    <div class="gridwrap"><table class="grid" id="grid"></table></div>
+    <div class="detail" id="detail"></div>
+  </div>
+
+  <footer>© 2026 Lee Yih Ven · Subang Badminton Arena is a fictional centre for a portfolio demo. Data is saved in this browser only.</footer>
+</div>
+<div class="modal" id="modal"><img id="modal-img" alt="Receipt"></div>
+
+<script>/*__TOOLS_JS__*/</script>
+<script>
+const SEED = /*__SEED_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const STORAGE_KEY = "subang-badminton-v1"; // shared with assistant.html
+const T = BadmintonTools, H = T.helpers;
+const channel = "BroadcastChannel" in window ? new BroadcastChannel("subang-badminton") : null;
+const nowIso = () => T.localIso(new Date());
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+const store = {
+  load() {
+    let raw = null;
+    try { const t = localStorage.getItem(STORAGE_KEY); if (t) raw = JSON.parse(t); } catch (e) {}
+    // Data saved from an earlier build of the demo is set aside: the page starts from this build's data.
+    if (raw && (!raw.meta || raw.meta.seed_version !== SEED.meta.seed_version)) raw = null;
+    const s = T.stateForNow(raw, JSON.parse(JSON.stringify(SEED)), new Date());
+    if (!raw || s !== raw) this.save(s, true);
+    return s;
+  },
+  save(state, quiet) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+    if (!quiet && channel) channel.postMessage({ type: "changed" });
+  },
+};
+
+const REASONS = { not_in_policy: "Not covered by policy", policy_unclear: "Policy unclear", staff_only_booking: "Staff-only booking",
+  check_failed: "Booking check failed", centre_cancelled: "Centre cancelled", refund_issue_or_complaint: "Refund issue or complaint",
+  asks_for_staff: "Asked for a person", system_unavailable: "System unavailable" };
+const policyLink = id => CLAUSES[id] ? `<a class="cl" href="resources/${encodeURI(CLAUSES[id].page)}#${id}" target="_blank">${esc(CLAUSES[id].policy)}, Clause ${id}</a>` : esc(id);
+const timeOf = iso => iso ? iso.slice(11, 16) : "";
+const ago = iso => { const m = Math.round((H.toMin(nowIso()) - H.toMin(iso)) / 1); return m < 1 ? "just now" : m < 60 ? `${m} min ago` : `${Math.floor(m / 60)} h ${m % 60} min ago`; };
+let seen = new Set(), firstRender = true, selDay = null, selRef = null, newCases = [];
+
+function act(fn, id, text) {
+  const state = store.load();
+  const r = fn(state, id, nowIso(), text);
+  if (!r.ok) { alert(r.error.message); return; }
+  store.save(state);
+  if (fn !== T.STAFF.reply) selCase = null;
+  render();
+}
+
+// The Follow up menu: only what needs a person. The line is sorted by number of cases, highest first
+// (founder, 16 Oct); ties keep the order below, most time-pressed first.
+const OTHER_REASONS = ["staff_only_booking", "centre_cancelled", "refund_issue_or_complaint", "system_unavailable"];
+const CATS = [
+  { key: "receipts", label: "Receipts to check", note: "A booking is confirmed only when staff find the payment in the centre's bank record and press Confirm (B14). A receipt does not confirm a booking (B25)." },
+  { key: "expired", label: "Expired holds", note: "If the payment is not reported within 30 minutes, the hold is marked expired. Staff release it, the court becomes available again, and the player receives an automatic message. Nothing is charged (B13)." },
+  { key: "person", label: "Asks for a person", note: "A player who asks for a person is handed to staff at once, with no further questions. The request appears on the staff dashboard for follow-up (B22).", reasons: ["asks_for_staff"] },
+  { key: "check_failed", label: "Booking check failed (B18)", note: "After 3 failed checks in one conversation, the assistant stopped checking and handed the enquiry to staff (B18).", reasons: ["check_failed"] },
+  { key: "cancels", label: "Pending cancellations", note: "The booking stays in place until staff approve (C8). On Approve, the court is released and the player receives an automatic message (C9). Refunds are paid by staff outside the chat (C10), within 3 working days (C4)." },
+  { key: "unclear", label: "Policy unclear", note: "Policy neither says yes nor no: the assistant does not choose a reading, and hands the enquiry to staff with the rule that seemed to apply and why it is unclear (How the assistant uses this policy).", reasons: ["policy_unclear"] },
+  { key: "not_covered", label: "Not covered by policy", note: "Not covered by policy: the assistant does not guess, and hands the enquiry to staff with a short summary and the handover reason (How the assistant uses this policy).", reasons: ["not_in_policy"] },
+  { key: "other", label: "Other handovers", note: "Complaints, refund disputes and refunds not received (C13); staff-only bookings (B20); sessions the centre cancels (C12); system failures.", reasons: OTHER_REASONS, optional: true },
+  { key: "log", label: "Messages sent to players", note: "Fixed messages from the buttons (B13, B15, B16, C9) and staff replies, as delivered to the player's chat.", optional: true, info: true },
+];
+let selCat = null, selCase = null;
+
+function itemsFor(state, now) {
+  const byRef = Object.fromEntries(state.bookings.map(b => [b.booking_ref, b]));
+  const short = t => { t = String(t || ""); return t.length > 60 ? t.slice(0, 57) + "..." : t; };
+  const open = state.handovers.filter(h => h.status === "open");
+  const out = {};
+  for (const c of CATS) if (c.reasons) out[c.key] = open.filter(h => c.reasons.includes(h.reason))
+    .map(h => ({ id: "ho" + h.handover_id, ref: h.handover_id, at: h.created_at, label: short(h.question || h.root_cause), html: handoverHtml(h) }));
+  out.receipts = state.receipts.filter(r => r.status === "to_check" && byRef[r.booking_ref] && byRef[r.booking_ref].status === "held")
+    .map(r => { const b = byRef[r.booking_ref]; return { id: "rc" + r.receipt_id, ref: `${r.receipt_id} · ${r.booking_ref}`, at: r.uploaded_at, label: `${b.player_name}, ${H.rm(r.fields.amount_rm)}${r.differences.length ? ", " + r.differences.length + " difference" + (r.differences.length > 1 ? "s" : "") : ""}`, html: receiptHtml(r, b) }; });
+  out.expired = state.bookings.filter(b => T.holdState(state, b, now) === "expired")
+    .map(b => ({ id: "ex" + b.booking_ref, ref: b.booking_ref, at: b.hold_expires_at, label: `${b.player_name}, Court ${b.court} ${H.dateText(b.date).slice(0, -5)} ${H.hhmm(b.start_hour)}`, html: expiredHtml(b) }));
+  out.cancels = state.cancellations.filter(c => c.status === "pending")
+    .map(c => { const b = byRef[c.booking_ref]; return { id: "cx" + c.cancellation_id, ref: `${c.cancellation_id} · ${c.booking_ref}`, at: c.requested_at, label: `${b.player_name}, refund ${H.rm(c.refund.total_rm)}`, html: cancelHtml(c, b) }; });
+  for (const k of Object.keys(out)) out[k].sort((a, b) => (a.at < b.at ? -1 : a.at > b.at ? 1 : 0));   // oldest first
+  out.log = (state.messages || []).map((m, i) => ({ id: "ms" + i, html: `<div class="m"><b>${esc(m.booking_ref || m.chat_id)}</b> · ${timeOf(m.at)} · ${esc(m.text)}</div>` })).reverse();
+  return out;
+}
+
+// Every follow-up item is a structured handoff for staff who cannot see the chat:
+// player and contact, their words, root cause, clauses checked, amount, what they were told, recommended action.
+const contactText = (ct, b) => ct ? `${esc(ct.channel)} ${esc(ct.mobile || ct.chat_id)}` : b ? `mobile on booking ${esc(b.mobile)}` : "none given";
+const clauseList = ids => (ids || []).length ? ids.map(policyLink).join(", ") : "none";
+function summary(rows) {
+  return `<table class="sum">${rows.filter(Boolean).map(([k, v, cls]) => `<tr class="${cls || ""}"><td>${k}</td><td>${v}</td></tr>`).join("")}</table>`;
+}
+const toldRow = t => ["Told the player", t ? `<span class="told">${esc(t)}</span>` : "nothing recorded"];
+
+function receiptHtml(r, b) {
+  const f = r.fields, d = new Set(r.differences.map(x => x.field));
+  const row = (k, label, got, want) => `<tr class="${d.has(k) ? "diff" : ""}"><td>${label}</td><td>${esc(got)}</td><td>${esc(want)}</td></tr>`;
+  return `<div class="head"><span>${esc(r.receipt_id)} · ${esc(r.booking_ref)}</span><span class="chip amber">${r.differences.length ? r.differences.length + " difference" + (r.differences.length > 1 ? "s" : "") : "matches the booking"} · uploaded ${ago(r.uploaded_at)}</span></div>` +
+    summary([
+      ["Player", `${esc(b.player_name)} · ${contactText(r.contact, b)}`],
+      ["Player's words", esc(r.question || "(receipt image only)")],
+      ["Request", `Payment for ${esc(H.sessionText(b))}`],
+      ["Root cause", "A payment is confirmed only when staff find it in the bank record (B14); a receipt alone does not confirm (B25)." + r.differences.map(x => ` <b style="color:#9B1C1C">${esc(x.note)}</b>`).join("")],
+      ["Clauses", clauseList(["B12", "B14", "B23", "B25"])],
+      ["Amount", `${H.rm(b.amount_due_now_rm)} due · receipt shows ${H.rm(f.amount_rm)}`],
+      toldRow(r.told_player),
+      ["Recommended action", `Find ${H.rm(b.amount_due_now_rm)} with reference ${esc(b.booking_ref)} in the bank record, then Confirm; if it is not there, Not received.`, "act"],
+    ]) +
+    `<div class="rc" style="margin-top:8px"><img src="${esc(r.image)}" alt="Receipt for ${esc(r.booking_ref)}" data-zoom>
+    <table class="cmp"><tr><th></th><th>Receipt</th><th>Booking</th></tr>
+      ${row("amount", "Amount", H.rm(f.amount_rm), H.rm(b.amount_due_now_rm))}
+      ${row("reference", "Reference", f.reference, b.booking_ref)}
+      ${row("paid_at", "Paid at", f.paid_at.replace("T", " "), "after " + b.requested_at.replace("T", " "))}
+      ${row("recipient", "Recipient", f.recipient, T.CENTRE)}</table></div>
+    <div class="acts"><button class="btn" data-act="confirm" data-id="${esc(r.booking_ref)}">Confirm</button><button class="btn ghost" data-act="notReceived" data-id="${esc(r.booking_ref)}">Not received</button></div>`;
+}
+function expiredHtml(b) {
+  return `<div class="head"><span>${esc(b.booking_ref)}</span><span class="chip red">hold expired ${timeOf(b.hold_expires_at)}</span></div>` +
+    summary([
+      ["Player", `${esc(b.player_name)} · ${contactText(b.contact, b)}`],
+      ["Player's words", esc(b.question || "(booking made at the counter)")],
+      ["Request", `Hold on ${esc(H.sessionText(b))}, requested ${timeOf(b.requested_at)}`],
+      ["Root cause", `No payment receipt within 30 minutes; the hold expired at ${timeOf(b.hold_expires_at)} (B13). The court stays held until staff release it.`],
+      ["Clauses", clauseList(["B11", "B12", "B13"])],
+      ["Amount", `${H.rm(b.amount_due_now_rm)} was due; nothing has been paid or charged`],
+      toldRow(b.told_player),
+      ["Recommended action", "Release the court. The player gets the hold-expired message; nothing is charged (B13).", "act"],
+    ]) +
+    `<div class="acts"><button class="btn red" data-act="release" data-id="${esc(b.booking_ref)}">Release court</button></div>`;
+}
+function cancelHtml(c, b) {
+  return `<div class="head"><span>${esc(c.cancellation_id)} · ${esc(c.booking_ref)}</span><span class="chip navy">refund ${H.rm(c.refund.total_rm)} · ${ago(c.requested_at)}</span></div>` +
+    summary([
+      ["Player", `${esc(b.player_name)} · ${contactText(c.contact, b)} · verified`],
+      ["Player's words", esc(c.question || "")],
+      ["Request", `Cancel ${esc(H.sessionText(b))}`],
+      ["Root cause", "Cancellations are approved by staff; the booking stays in place until then (C8)."],
+      ["Clauses", clauseList(["C3", "C4", "C8", "C9"])],
+      ["Amount", `Refund ${H.rm(c.refund.total_rm)}: deposit ${H.rm(c.refund.deposit_rm)}${c.refund.court_fee_rm ? ", court fee " + H.rm(c.refund.court_fee_rm) : ""}`],
+      toldRow(c.told_player),
+      ["Recommended action", `Approve, then refund ${H.rm(c.refund.total_rm)} to the account that paid within 3 working days (C4, C10).`, "act"],
+    ]) +
+    `<div class="acts"><button class="btn" data-act="approveCancellation" data-id="${esc(c.cancellation_id)}">Approve</button></div>`;
+}
+function handoverHtml(h) {
+  const tried = (h.checks_tried || []).map(a => `${esc(a.mobile_last4)} at ${timeOf(a.at)}`).join(", ");
+  return `<div class="head"><span>${esc(h.handover_id)} · ${esc(REASONS[h.reason] || h.reason)}</span><span class="chip">${ago(h.created_at)}</span></div>` +
+    summary([
+      ["Player", `${esc(h.player_name || "name not given")} · ${contactText(h.contact)}`],
+      ["Player's words", esc(h.question || "")],
+      h.booking_ref ? ["Booking", esc(h.booking_ref)] : null,
+      tried ? ["Checks tried", `mobile endings ${tried}; nothing shared (B18)`] : null,
+      ["Root cause", esc(h.root_cause || h.summary || "")],
+      ["Clauses checked", clauseList(h.clause_ids || (h.clause_id ? [h.clause_id] : []))],
+      ["Amount", h.amount_rm != null ? H.rm(h.amount_rm) : "none"],
+      toldRow(h.told_player),
+      ["Recommended action", esc(h.recommended_action || ""), "act"],
+    ]) +
+    ((h.replies || []).length ? `<div class="replies">${h.replies.map(x => `Replied ${timeOf(x.at)}: ${esc(x.text)}`).join("<br>")}</div>` : "") +
+    `<div class="replybox"><textarea data-for="${esc(h.handover_id)}" placeholder="Reply to the player: appears in their chat"></textarea><button class="btn" data-act="reply" data-id="${esc(h.handover_id)}">Send reply</button></div>
+    <div class="acts"><button class="btn green" data-act="closeHandover" data-id="${esc(h.handover_id)}">Done</button></div>`;
+}
+
+function render() {
+  const state = store.load(), now = nowIso();
+  document.getElementById("now-text").textContent = "Now: " + H.dateText(now.slice(0, 10)) + ", " + now.slice(11, 16);
+  const items = itemsFor(state, now);
+  const rank = c => (c.info ? 1e6 : -items[c.key].length * 100 + CATS.indexOf(c));   // most cases first; ties by urgency
+  const shown = CATS.filter(c => !c.optional || items[c.key].length).sort((a, b) => rank(a) - rank(b));
+  if (!selCat || !shown.some(c => c.key === selCat)) selCat = shown[0].key;
+
+  // New cases since the page opened, named by reference so staff can go straight to them.
+  const fresh = [];
+  for (const c of shown) for (const it of items[c.key]) {
+    if (!firstRender && !seen.has(it.id) && !c.info) fresh.push([c, it]);
+    seen.add(it.id);
+  }
+  const waiting = shown.filter(c => !c.info).reduce((n, c) => n + items[c.key].length, 0);
+  document.getElementById("fu-menu").innerHTML = shown.map(c => `<button data-cat="${c.key}" class="${c.key === selCat ? "on" : ""}${items[c.key].length && !c.info ? " has" : ""}">${esc(c.label)}<span class="n">${items[c.key].length}</span></button>`).join("");
+  document.getElementById("fu-total").textContent = `${waiting} case${waiting === 1 ? "" : "s"} waiting · categories sorted by number of cases; cases oldest first`;
+  if (fresh.length) newCases = fresh.map(([c, it]) => ({ cat: c.key, id: it.id, ref: it.ref })).concat(newCases).slice(0, 4);
+  document.getElementById("fu-new").innerHTML = newCases.length ? "New:" + newCases.map(n => `<button data-cat="${n.cat}" data-case="${n.id}">${esc(n.ref)}</button>`).join("") : "";
+
+  const cat = CATS.find(c => c.key === selCat);
+  const list = items[selCat];
+  document.getElementById("fu-head").textContent = cat.note;
+  const caseRow = document.getElementById("fu-case-row"), sel = document.getElementById("fu-case");
+  if (cat.info) {
+    caseRow.style.display = "none";
+    document.getElementById("fu-items").innerHTML = list.length ? `<div class="log">${list.map(it => it.html).join("")}</div>` : `<div class="empty">Nothing yet.</div>`;
+  } else {
+    caseRow.style.display = "";
+    if (selCase && !list.some(it => it.id === selCase)) selCase = null;
+    sel.innerHTML = `<option value="">${list.length ? `Select a case by reference (${list.length})` : "No cases waiting"}</option>` +
+      list.map(it => `<option value="${it.id}"${it.id === selCase ? " selected" : ""}>${esc(it.ref)} · ${ago(it.at)} · ${esc(it.label)}</option>`).join("");
+    const it = list.find(x => x.id === selCase);
+    document.getElementById("fu-items").innerHTML = it ? `<div class="item">${it.html}</div>`
+      : list.length ? `<div class="empty">Select a case above to open its card.</div>` : `<div class="empty">Nothing waiting here.</div>`;
+  }
+  renderGrid(state, now);
+  firstRender = false;
+}
+
+function renderGrid(state, now) {
+  const today = now.slice(0, 10);
+  if (!selDay) selDay = today;
+  const days = []; for (let i = 0; i <= 7; i++) days.push(H.addDays(today, i));
+  document.getElementById("days").innerHTML = days.map(d => `<button class="${d === selDay ? "on" : ""}" data-day="${d}">${H.dateText(d).slice(0, -5)}${H.isWeekend(state, d) ? '<span class="we">RM 25</span>' : '<span class="we">RM 20</span>'}</button>`).join("");
+  const hours = []; for (let h = T.OPEN_HOUR; h < T.CLOSE_HOUR; h++) hours.push(h);
+  const cell = {};
+  state.bookings.filter(b => b.date === selDay && b.status !== "released" && b.status !== "cancelled").forEach(b => {
+    for (let h = b.start_hour; h < b.start_hour + b.hours; h++) cell[b.court + ":" + h] = b;
+  });
+  const nowMin = H.toMin(now);
+  let html = `<tr><th></th>${hours.map(h => `<th>${H.hhmm(h).slice(0, 2)}</th>`).join("")}</tr>`;
+  for (const c of T.COURTS) {
+    html += `<tr><th class="c">Court ${c}</th>` + hours.map(h => {
+      const b = cell[c + ":" + h];
+      if (!b) return `<td class="${H.toMin(selDay) + h * 60 < nowMin ? "past" : ""}"></td>`;
+      const hs = T.holdState(state, b, now);
+      const cls = hs === "expired" ? "expired" : hs ? "held" : (b.status === "completed" || b.status === "no_show") ? "done" : "booked";
+      const mark = hs === "receipt_uploaded" && h === b.start_hour ? "R" : "";
+      return `<td class="${cls}${b.booking_ref === selRef ? " sel" : ""}" data-ref="${b.booking_ref}" title="${esc(b.booking_ref)}">${mark}</td>`;
+    }).join("") + `</tr>`;
+  }
+  document.getElementById("grid").innerHTML = html;
+  const b = selRef && state.bookings.find(x => x.booking_ref === selRef);
+  document.getElementById("detail").innerHTML = b ? `<table>
+    <tr><td>Booking</td><td><b>${esc(b.booking_ref)}</b> · ${esc(b.status.replace("_", "-"))}${T.holdState(state, b, now) ? " (" + T.holdState(state, b, now).replace("_", " ") + ")" : ""}</td></tr>
+    <tr><td>Session</td><td>${esc(H.sessionText(b))}</td></tr>
+    <tr><td>Player</td><td>${esc(b.player_name)} · ${esc(b.mobile)}</td></tr>
+    <tr><td>Amounts</td><td>court fee ${H.rm(b.court_fee_rm)}, deposit ${H.rm(b.deposit_rm)} · ${b.pay_fee_now ? "fee paid at booking" : "fee at the counter"} · paid so far ${H.rm(b.paid.deposit_rm + b.paid.court_fee_rm)}</td></tr>
+    <tr><td>Requested</td><td>${esc(b.requested_at.replace("T", " "))} via ${esc(b.source)}${b.hold_expires_at && b.status === "held" ? " · hold until " + timeOf(b.hold_expires_at) : ""}</td></tr></table>` : "";
+}
+
+document.addEventListener("click", e => {
+  const t = e.target;
+  if (t.dataset.act === "reply") { const box = document.querySelector(`textarea[data-for="${t.dataset.id}"]`); act(T.STAFF.reply, t.dataset.id, box ? box.value : ""); }
+  else if (t.dataset.act) act(T.STAFF[t.dataset.act], t.dataset.id);
+  else if (t.closest && t.closest("[data-cat]")) {
+    const el = t.closest("[data-cat]");
+    if (el.dataset.cat !== selCat || !el.dataset.case) selCase = null;
+    selCat = el.dataset.cat;
+    if (el.dataset.case) { selCase = el.dataset.case; newCases = newCases.filter(n => n.id !== selCase); }
+    render();
+  }
+  else if (t.dataset.day) { selDay = t.dataset.day; selRef = null; render(); }
+  else if (t.dataset.ref) { selRef = t.dataset.ref; render(); }
+  else if (t.hasAttribute("data-zoom")) { document.getElementById("modal-img").src = t.src; document.getElementById("modal").classList.add("on"); }
+  else if (t.closest("#modal")) document.getElementById("modal").classList.remove("on");
+});
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Reset bookings, receipts, cancellations, handovers and messages to the original demo data?")) return;
+  try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  seen = new Set(); firstRender = true; selCase = null; newCases = [];
+  store.load(); if (channel) channel.postMessage({ type: "reset" });
+  render();
+});
+document.getElementById("fu-case").addEventListener("change", e => { selCase = e.target.value || null; newCases = newCases.filter(n => n.id !== selCase); render(); });
+if (channel) channel.onmessage = () => render();
+window.addEventListener("storage", e => { if (e.key === STORAGE_KEY) render(); });
+setInterval(() => { if (!(document.activeElement && document.activeElement.tagName === "TEXTAREA" && document.activeElement.value)) render(); }, 30000);   // holds turn red as they pass 30 minutes
+render();
+</script>
+</body>
+</html>

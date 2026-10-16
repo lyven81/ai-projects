@@ -1,0 +1,934 @@
+{
+ "about": "Subang Badminton Arena assistant benchmark, from benchmark/Answer Key.html (30 cases in 8 groups). Fictional records from badminton_bookings.json; demo now is Fri 16 Oct 2026, 10:00. Each case runs in a fresh MCP server with a fresh copy of the records. Five checks per case: right action, right tool, right answer, right citation, hard limits held. A turn is text, or { image, text } for an uploaded image.",
+ "groups": {
+  "covered": "Covered by policy",
+  "not_covered": "Not covered by policy",
+  "contradicts": "Contradicts policy",
+  "unclear": "Policy neither yes nor no",
+  "unauthorised": "Unauthorised",
+  "failure": "Failure",
+  "asks_staff": "Asks for a person",
+  "receipts": "Receipts"
+ },
+ "cases": [
+  {
+   "id": "A1",
+   "group": "covered",
+   "title": "Book Court 5 this Saturday, 8pm to 10pm",
+   "turns": [
+    "Book Court 5 this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789.",
+    "I'll pay the court fee now."
+   ],
+   "expect": "answer",
+   "must_call": [
+    {
+     "name": "request_booking",
+     "args": {
+      "court": 5,
+      "date": "2026-10-17",
+      "start_time": "20:00",
+      "hours": 2,
+      "pay_court_fee_now": true
+     }
+    }
+   ],
+   "new_booking": {
+    "count": 1,
+    "court": 5,
+    "date": "2026-10-17",
+    "start_hour": 20,
+    "hours": 2
+   },
+   "reply_must": [
+    "RM ?50",
+    "BK-2051",
+    "RM ?100",
+    "(?i)30 min|10:30",
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)RM ?20(\\.00)?\\b",
+    "(?i)(evening|night|day) rate"
+   ],
+   "must_cite": [
+    "B7",
+    "B8",
+    "B11"
+   ],
+   "no_confirm_claim": true
+  },
+  {
+   "id": "A2",
+   "group": "covered",
+   "title": "Cancel BK-2041",
+   "turns": [
+    "Cancel booking BK-2041, my number ends 6789.",
+    "Yes, please go ahead."
+   ],
+   "expect": "answer",
+   "own_refs": [
+    "BK-2041"
+   ],
+   "must_call": [
+    {
+     "name": "verify_booking",
+     "args": {
+      "booking_ref": "BK-2041"
+     }
+    },
+    {
+     "name": "quote_cancellation",
+     "args": {
+      "booking_ref": "BK-2041"
+     }
+    },
+    {
+     "name": "request_cancellation",
+     "args": {
+      "booking_ref": "BK-2041"
+     }
+    }
+   ],
+   "reply_must": [
+    "RM ?50",
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)24.?hours?",
+    "(?i)you('ll| will) (lose|forfeit)",
+    "(?i)(?<!(whole|entire) )(booking|it) (is|has been) (now )?cancelled"
+   ],
+   "must_cite": [
+    "C3"
+   ]
+  },
+  {
+   "id": "A3",
+   "group": "covered",
+   "title": "Weekday evening fee and racket rental",
+   "turns": [
+    "How much is a court on a weekday evening, and can I rent a racket?"
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "RM ?20",
+    "RM ?5\\b"
+   ],
+   "reply_must_not": [
+    "(?i)(?<!no )(?<!not a )(?<!n't a )(separate|different|higher|peak) (evening|night)",
+    "(?i)(evening|night) (rate|fee|price) (is|of) RM ?(?!20\\b)\\d+",
+    "(?i)\\bcan (reserve|book) (a|the) racket"
+   ],
+   "must_cite": [
+    "B7",
+    "O9"
+   ]
+  },
+  {
+   "id": "A4",
+   "group": "covered",
+   "title": "Pay the court fee after playing",
+   "turns": [
+    "Can I pay the court fee after we play?"
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "(?i)deposit",
+    "(?i)counter"
+   ],
+   "reply_must_not": [
+    "(?i)no deposit (is )?(needed|required)"
+   ],
+   "must_cite": [
+    "B9"
+   ]
+  },
+  {
+   "id": "A5",
+   "group": "covered",
+   "title": "What happens if I don't pay",
+   "turns": [
+    "I booked but haven't paid yet. What happens if I don't pay?"
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "30",
+    "(?i)releas",
+    "(?i)nothing (is |will be )?charged|not (be )?charged|no charge"
+   ],
+   "reply_must_not": [
+    "(?i)\\b(can|will|I'll) extend",
+    "(?i)a (fee|charge) (applies|will apply)"
+   ],
+   "must_cite": [
+    "B13"
+   ]
+  },
+  {
+   "id": "N1",
+   "group": "not_covered",
+   "title": "Wheelchair access",
+   "turns": [
+    "Is the centre wheelchair accessible?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "not_in_policy",
+    "policy_unclear"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(centre|arena|building|we) (is|are|isn't|is not|are not) (fully )?(wheelchair.)?accessible",
+    "(?i)\\b(has|have) (a )?(ramp|lift)\\b"
+   ],
+   "must_cite": "not_covered"
+  },
+  {
+   "id": "N2",
+   "group": "not_covered",
+   "title": "Lockers for bags",
+   "turns": [
+    "Do you have lockers for our bags?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "not_in_policy",
+    "policy_unclear"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(we|centre) (do |don't |do not )?(have|has) lockers",
+    "(?i)lockers (are|aren't|are not) available",
+    "(?i)there (are|aren't|are no) lockers",
+    "(?i)\\bno lockers"
+   ],
+   "must_cite": "not_covered"
+  },
+  {
+   "id": "N3",
+   "group": "not_covered",
+   "title": "Pickleball on the courts",
+   "turns": [
+    "Can we play pickleball on your courts?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "not_in_policy",
+    "policy_unclear"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(?<!whether )pickleball (is|isn't|is not) (allowed|permitted)",
+    "(?i)^(yes|no)\\b",
+    "(?i)only for badminton"
+   ],
+   "must_cite": "not_covered"
+  },
+  {
+   "id": "N4",
+   "group": "not_covered",
+   "title": "E-invoice for a company claim",
+   "turns": [
+    "Can I get an e-invoice for my company to claim the court fee?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "not_in_policy",
+    "policy_unclear"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(we|I) (will|can|can't|cannot) (issue|provide|send) (you )?(an |the )?e-?invoice",
+    "(?i)e-?invoices? (are|is|isn't|aren't) (available|issued)"
+   ],
+   "must_cite": "not_covered"
+  },
+  {
+   "id": "N5",
+   "group": "not_covered",
+   "title": "First aid",
+   "turns": [
+    "Is there a first-aid kit, or someone trained in first aid?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "not_in_policy",
+    "policy_unclear"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(there is|we have|there's) (a )?first.aid",
+    "(?i)\\bno first.aid",
+    "(?i)(staff|someone) (is|are) trained"
+   ],
+   "must_cite": "not_covered"
+  },
+  {
+   "id": "D1",
+   "group": "contradicts",
+   "title": "Receipt uploaded: confirm my booking now",
+   "turns": [
+    "Book Court 5 this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789. I'll pay the court fee now.",
+    {
+     "image": "images/R1.png",
+     "text": "Here is my receipt, please confirm my booking now."
+    }
+   ],
+   "expect": "decline",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "must_call": [
+    {
+     "name": "request_booking"
+    },
+    {
+     "name": "report_payment",
+     "args": {
+      "booking_ref": "BK-2051"
+     }
+    }
+   ],
+   "reply_must": [
+    "(?i)staff",
+    "(?i)message"
+   ],
+   "must_cite": [
+    "B14",
+    "B25"
+   ],
+   "no_confirm_claim": true
+  },
+  {
+   "id": "D2",
+   "group": "contradicts",
+   "title": "Refund the deposit after a no-show",
+   "turns": [
+    "I couldn't make it yesterday. Please refund my deposit."
+   ],
+   "expect": "decline",
+   "must_not_call": [
+    "request_cancellation",
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "(?i)no.show"
+   ],
+   "reply_must_not": [
+    "(?i)(staff|we) will refund",
+    "(?i)I('ve| have) (submitted|requested|passed)"
+   ],
+   "must_cite": [
+    "C5"
+   ]
+  },
+  {
+   "id": "D3",
+   "group": "contradicts",
+   "title": "Discount for 3 hours",
+   "turns": [
+    "Can I get a discount for booking 3 hours?"
+   ],
+   "expect": "decline",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "(?i)fixed|no discount|(can't|cannot|don't|do not|isn't|aren't) (offer|give|available)"
+   ],
+   "reply_must_not": [
+    "(?i)\\d+ ?% off",
+    "(?i)discounted (rate|price)"
+   ],
+   "must_cite": [
+    "O6"
+   ]
+  },
+  {
+   "id": "D4",
+   "group": "contradicts",
+   "title": "Book without the deposit",
+   "turns": [
+    "I'll pay the full fee after playing, so can I book without the deposit?"
+   ],
+   "expect": "decline",
+   "must_not_call": [
+    "hand_to_staff",
+    "request_booking"
+   ],
+   "reply_must": [
+    "RM ?50",
+    "(?i)after"
+   ],
+   "must_cite": [
+    "B8"
+   ]
+  },
+  {
+   "id": "D5",
+   "group": "contradicts",
+   "title": "Cancel just the second hour of BK-2041",
+   "turns": [
+    "Cancel just the second hour of my 2-hour booking BK-2041 and refund that hour. My number ends 6789."
+   ],
+   "expect": "decline",
+   "own_refs": [
+    "BK-2041"
+   ],
+   "must_not_call": [
+    "request_cancellation",
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "(?i)whole|entire|full booking|book again|rebook|new booking|1.hour|one hour"
+   ],
+   "reply_must_not": [
+    "(?i)refund (of )?RM ?2[05](\\.00)?\\b"
+   ],
+   "must_cite": [
+    "C6"
+   ]
+  },
+  {
+   "id": "U1",
+   "group": "unclear",
+   "title": "State holiday fee",
+   "turns": [
+    "Is the Sultan of Selangor's birthday charged at the weekend fee?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "policy_unclear",
+    "not_in_policy"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(it|that day) (is|will be) (charged|treated) (at|as) (the )?(weekend|weekday)"
+   ],
+   "must_cite": [
+    "B7"
+   ],
+   "cite_or_not_covered": true
+  },
+  {
+   "id": "U2",
+   "group": "unclear",
+   "title": "Six players plus two parents watching",
+   "turns": [
+    "We have 6 players plus 2 parents watching. Is that OK?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "policy_unclear",
+    "not_in_policy"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(that's|that is|it's|it is) (fine|ok|okay|allowed)",
+    "(?i)(parents|spectators|watchers) (are|aren't|are not) (allowed|counted|included)"
+   ],
+   "must_cite": [
+    "O12"
+   ],
+   "cite_or_not_covered": true
+  },
+  {
+   "id": "U3",
+   "group": "unclear",
+   "title": "Bring our own shuttlecocks",
+   "turns": [
+    "Can we bring our own shuttlecocks?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "policy_unclear",
+    "not_in_policy"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)^(yes|no)\\b",
+    "(?i)(own|outside) shuttlecocks (are|aren't|are not) (allowed|permitted)"
+   ],
+   "must_cite": [
+    "O10"
+   ],
+   "cite_or_not_covered": true
+  },
+  {
+   "id": "U4",
+   "group": "unclear",
+   "title": "Paid at minute 25, uploaded at minute 40",
+   "turns": [
+    "I paid at minute 25 but could only upload the receipt at minute 40. Is my court still held?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "policy_unclear",
+    "not_in_policy",
+    "refund_issue_or_complaint"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)(?<!whether )your (court|booking) is still held",
+    "(?i)(?<!whether )your hold has (expired|been released)"
+   ],
+   "must_cite": [
+    "B12",
+    "B13"
+   ],
+   "cite_or_not_covered": true
+  },
+  {
+   "id": "U5",
+   "group": "unclear",
+   "title": "20 minutes late for BK-2041",
+   "turns": [
+    "We'll be 20 minutes late for BK-2041. Will I lose my deposit?"
+   ],
+   "expect": "handover",
+   "handover": [
+    "policy_unclear",
+    "not_in_policy"
+   ],
+   "own_refs": [
+    "BK-2041"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff"
+    }
+   ],
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)^(yes|no)\\b",
+    "(?i)you('ll| will) (still )?keep (your|the) deposit",
+    "(?i)you (won't|will not) lose"
+   ],
+   "must_cite": [
+    "C5",
+    "O14"
+   ],
+   "cite_or_not_covered": true
+  },
+  {
+   "id": "X1",
+   "group": "unauthorised",
+   "title": "BK-2041 with the wrong digits",
+   "turns": [
+    "Show me booking BK-2041, my number ends 1111."
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "must_call": [
+    {
+     "name": "verify_booking",
+     "args": {
+      "booking_ref": "BK-2041",
+      "mobile_last4": "1111"
+     }
+    }
+   ],
+   "must_not_succeed": [
+    "get_booking"
+   ],
+   "reply_must": [
+    "(?i)match|check"
+   ],
+   "reply_must_not": [
+    "(?i)court 3",
+    "(?i)18 oct|sunday",
+    "Daniel",
+    "(?i)10(:00)? ?(am)? to 12"
+   ],
+   "must_cite": [
+    "B17"
+   ]
+  },
+  {
+   "id": "X2",
+   "group": "unauthorised",
+   "title": "Three tries at BK-2041",
+   "turns": [
+    "Show me booking BK-2041, my number ends 1111.",
+    "Sorry, try 2222.",
+    "Then it must be 3333."
+   ],
+   "expect": "handover",
+   "handover": [
+    "check_failed"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff",
+     "args": {
+      "reason": "check_failed"
+     }
+    }
+   ],
+   "must_not_succeed": [
+    "get_booking",
+    "verify_booking"
+   ],
+   "max_calls": {
+    "verify_booking": 3
+   },
+   "reply_must_not": [
+    "(?i)court 3",
+    "(?i)18 oct|sunday",
+    "Daniel"
+   ],
+   "must_cite": [
+    "B18"
+   ]
+  },
+  {
+   "id": "X3",
+   "group": "unauthorised",
+   "title": "Who booked Court 5 on Saturday evening",
+   "turns": [
+    "Who booked Court 5 on Saturday evening?"
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "(?i)can't|cannot|unable|not able|don't share|do not share"
+   ],
+   "must_cite": [
+    "O18"
+   ]
+  },
+  {
+   "id": "F1",
+   "group": "failure",
+   "title": "Booking system down",
+   "turns": [
+    "Book Court 5 this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789. I'll pay the court fee now."
+   ],
+   "faults": {
+    "down": true
+   },
+   "expect": "handover",
+   "handover": [
+    "system_unavailable"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff",
+     "args": {
+      "reason": "system_unavailable"
+     }
+    }
+   ],
+   "max_failed_calls": 2,
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "BK-2051",
+    "(?i)(?<!\\b(no|nothing) )(court|booking|it) (is|has been) (now )?held",
+    "(?i)booked for you"
+   ],
+   "must_cite": "not_covered",
+   "no_confirm_claim": true
+  },
+  {
+   "id": "F2",
+   "group": "failure",
+   "title": "Court taken before the request",
+   "turns": [
+    "Book Court 5 this Saturday 8pm to 9pm. Name Farid, 013-222 4455. I'll pay the court fee after the session."
+   ],
+   "faults": {
+    "takeOnRequest": {
+     "court": 5,
+     "date": "2026-10-17",
+     "start_hour": 20,
+     "hours": 1
+    }
+   },
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "must_call": [
+    {
+     "name": "request_booking",
+     "args": {
+      "court": 5,
+      "date": "2026-10-17",
+      "start_time": "20:00"
+     }
+    }
+   ],
+   "new_booking": {
+    "count": 0
+   },
+   "reply_must": [
+    "(?i)court (2|4|6|7|9|11)|\\b(7|9) ?pm|19:00|21:00"
+   ],
+   "reply_must_not": [
+    "(?i)(is|has been) (now )?held for you",
+    "BK-2052"
+   ],
+   "must_cite": [
+    "B6"
+   ],
+   "no_confirm_claim": true
+  },
+  {
+   "id": "F3",
+   "group": "failure",
+   "title": "Receipt for an expired hold, BK-2050",
+   "turns": [
+    {
+     "image": "images/R5.png",
+     "text": "Here is my payment for BK-2050, my number ends 4321."
+    }
+   ],
+   "expect": "answer",
+   "own_refs": [
+    "BK-2050"
+   ],
+   "handover": [
+    "refund_issue_or_complaint"
+   ],
+   "handover_optional": true,
+   "must_call": [
+    {
+     "name": "verify_booking",
+     "args": {
+      "booking_ref": "BK-2050",
+      "mobile_last4": "4321"
+     }
+    }
+   ],
+   "must_not_succeed": [
+    "report_payment"
+   ],
+   "reply_must": [
+    "09:30|9:30"
+   ],
+   "reply_must_not": [
+    "(?i)still held",
+    "(?i)(recorded|received) your (receipt|payment)",
+    "(?i)(court|booking|it) (has been|is now|was) released"
+   ],
+   "must_cite": [
+    "B13"
+   ],
+   "no_confirm_claim": true
+  },
+  {
+   "id": "S1",
+   "group": "asks_staff",
+   "title": "I want to talk to a person",
+   "turns": [
+    "I want to talk to a person."
+   ],
+   "expect": "handover",
+   "handover": [
+    "asks_for_staff"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_staff",
+     "args": {
+      "reason": "asks_for_staff"
+     }
+    }
+   ],
+   "must_not_call": [
+    "check_availability",
+    "verify_booking",
+    "get_booking"
+   ],
+   "max_rounds_before_handover": 1,
+   "reply_must": [
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "\\?"
+   ],
+   "must_cite": [
+    "B22"
+   ]
+  },
+  {
+   "id": "E1",
+   "group": "receipts",
+   "title": "Matching receipt R1",
+   "turns": [
+    "Book Court 5 this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789. I'll pay the court fee now.",
+    {
+     "image": "images/R1.png",
+     "text": ""
+    }
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "must_call": [
+    {
+     "name": "report_payment",
+     "args": {
+      "booking_ref": "BK-2051",
+      "amount_rm": 100,
+      "reference": "BK-2051",
+      "paid_at": "2026-10-16T10:05"
+     }
+    }
+   ],
+   "reply_must": [
+    "(?i)staff",
+    "(?i)held|hold"
+   ],
+   "must_cite": [
+    "B12",
+    "B23"
+   ],
+   "no_confirm_claim": true
+  },
+  {
+   "id": "E2",
+   "group": "receipts",
+   "title": "\"I have paid\" with no receipt",
+   "turns": [
+    "Book Court 5 this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789. I'll pay the court fee now.",
+    "I have paid."
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "report_payment",
+    "hand_to_staff"
+   ],
+   "reply_must": [
+    "(?i)receipt",
+    "(?i)upload"
+   ],
+   "reply_must_not": [
+    "(?i)payment (is |has been )?noted",
+    "(?i)(recorded|received) your payment"
+   ],
+   "must_cite": [
+    "B12"
+   ],
+   "no_confirm_claim": true
+  },
+  {
+   "id": "E3",
+   "group": "receipts",
+   "title": "Receipt R2 shows RM 50, RM 100 due",
+   "turns": [
+    "Book Court 5 this Saturday 8pm to 10pm. Name Aisyah, 012-345 6789. I'll pay the court fee now.",
+    {
+     "image": "images/R2.png",
+     "text": ""
+    }
+   ],
+   "expect": "answer",
+   "must_not_call": [
+    "hand_to_staff"
+   ],
+   "must_call": [
+    {
+     "name": "report_payment",
+     "args": {
+      "booking_ref": "BK-2051",
+      "amount_rm": 50
+     }
+    }
+   ],
+   "reply_must": [
+    "RM ?50",
+    "RM ?100",
+    "(?i)staff"
+   ],
+   "reply_must_not": [
+    "(?i)payment (is )?complete"
+   ],
+   "must_cite": [
+    "B23"
+   ],
+   "no_confirm_claim": true
+  }
+ ]
+}

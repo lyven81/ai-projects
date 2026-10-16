@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cancellation Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><h1>Cancellation Policy</h1><nav id="toc"></nav></div>
+<h2>1. Who can cancel</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="C1"><td>C1</td><td>Only the player who made the booking, verified by booking reference and the last 4 digits of the mobile number (Booking Policy B17).</td><td>Code</td></tr>
+<tr id="C2"><td>C2</td><td>A held booking whose payment is not reported within 30 minutes is released by staff (Booking Policy B13). Nothing is charged.</td><td>Code</td></tr>
+</table>
+<h2>2. Refund</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="C3"><td>C3</td><td>A confirmed booking can be cancelled at any time before the session starts. The RM 50 deposit is refunded in full once the player is verified, with no notice period. A court fee paid at booking is refunded with it.</td><td>Code (outcome calculated)</td></tr>
+<tr id="C4"><td>C4</td><td>Refunds go to the account that paid, within 3 working days of staff approval.</td><td>Prompt</td></tr>
+<tr id="C5"><td>C5</td><td>Only a no-show forfeits the deposit: the player neither cancels before the session starts nor checks in. A court fee paid at booking is refunded.</td><td>Code (outcome calculated)</td></tr>
+<tr id="C6"><td>C6</td><td>Part of a booking cannot be cancelled. To play fewer hours, the player cancels the booking and books again.</td><td>Code</td></tr>
+</table>
+<h2>3. How a cancellation is processed</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="C7"><td>C7</td><td>The assistant tells the player the refund amount before submitting, and submits only when the player agrees.</td><td>Code (outcome returned by the tool)</td></tr>
+<tr id="C8"><td>C8</td><td>The request appears on the staff dashboard as a pending cancellation. The booking stays in place until staff approve.</td><td>Code</td></tr>
+<tr id="C9"><td>C9</td><td>On Approve, the court is released and the player receives an automatic message stating the deposit refunded (and the court fee, if paid at booking).</td><td>Code (fixed message)</td></tr>
+<tr id="C10"><td>C10</td><td>Refunds are paid by staff outside the chat. The assistant never refunds, waives or reduces an amount.</td><td>Code (no refund tool)</td></tr>
+</table>
+<h2>4. Outside this policy</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="C11"><td>C11</td><td>Requests to refund a no-show deposit are declined in chat with C5 stated. No exception is made by the assistant.</td><td>Prompt</td></tr>
+<tr id="C12"><td>C12</td><td>A session the centre cancels (power failure, court repair, an event) is handled by staff, who offer a full refund or another slot. The assistant hands these to staff.</td><td>Prompt (handover reason)</td></tr>
+<tr id="C13"><td>C13</td><td>Complaints, disputes about a refund, and refunds not received after 3 working days go to staff.</td><td>Prompt (handover reason)</td></tr>
+</table>
+<h2>5. How the assistant uses this policy</h2>
+<table><tr><th>Enquiry</th><th>What the assistant does</th></tr>
+<tr><td>Covered by policy</td><td>Answers from this policy and names the rule (e.g. C3).</td></tr>
+<tr><td>Contradicts policy</td><td>Declines, states the rule that applies, and offers what the rule does allow. No exceptions are made in chat.</td></tr>
+<tr><td>Not covered by policy</td><td>Does not guess. Hands the enquiry to staff with a short summary and the handover reason.</td></tr>
+<tr><td>Policy neither says yes nor no</td><td>Does not choose a reading. Hands the enquiry to staff with the rule that seemed to apply and why it is unclear.</td></tr></table>
+<p>Rules marked <b>Code</b> are enforced by the booking tools, so the assistant cannot break them even if asked. Rules marked <b>Prompt</b> guide what the assistant says.</p>
+<footer>&copy; 2026 Lee Yih Ven &middot; Cancellation Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

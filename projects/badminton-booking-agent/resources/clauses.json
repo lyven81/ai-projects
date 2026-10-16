@@ -1,0 +1,415 @@
+{
+ "O1": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The centre",
+  "text": "Subang Badminton Arena, Subang Jaya, Selangor. 12 indoor courts, Court 1 to Court 12.",
+  "enforced_by": "Code (court list)"
+ },
+ "O2": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The centre",
+  "text": "Every court has a rubber mat surface, LED lighting, air-conditioning and a scoreboard. All courts are the same and charged the same fee.",
+  "enforced_by": "Prompt"
+ },
+ "O3": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The centre",
+  "text": "Open every day, including public holidays, from 07:00 to 01:00. The last session ends at 01:00.",
+  "enforced_by": "Code (slot list)"
+ },
+ "O4": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The centre",
+  "text": "The counter is staffed during opening hours. Payments are verified and requests reviewed only while the counter is open.",
+  "enforced_by": "Prompt"
+ },
+ "O5": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Prices",
+  "text": "The court fee, the deposit and when each is paid are set in the Booking Policy (B7 to B10).",
+  "enforced_by": "Code (fee table)"
+ },
+ "O6": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Prices",
+  "text": "Fees are fixed. No discount, package, membership price or price match is offered through the assistant.",
+  "enforced_by": "Code (no discount tool)"
+ },
+ "O7": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Prices",
+  "text": "The assistant quotes only the court fee, the deposit and the racket rental (O9). Any other price (coaching, events, shuttlecocks, merchandise) is quoted by staff.",
+  "enforced_by": "Prompt"
+ },
+ "O8": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Facilities",
+  "text": "Changing rooms with showers, drinking water and free parking for players.",
+  "enforced_by": "Prompt"
+ },
+ "O9": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Facilities",
+  "text": "Racket rental at the counter: RM 5 per racket per booking, subject to stock. Rackets cannot be reserved in advance.",
+  "enforced_by": "Prompt"
+ },
+ "O10": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Facilities",
+  "text": "Shuttlecocks are sold at the counter. Prices are given by staff.",
+  "enforced_by": "Prompt"
+ },
+ "O11": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "House rules",
+  "text": "Non-marking indoor shoes only on court.",
+  "enforced_by": "Prompt"
+ },
+ "O12": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "House rules",
+  "text": "Up to 6 players per court per session.",
+  "enforced_by": "Prompt"
+ },
+ "O13": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "House rules",
+  "text": "No food on court. Bottled drinks are allowed.",
+  "enforced_by": "Prompt"
+ },
+ "O14": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "House rules",
+  "text": "Check in at the counter at least 10 minutes before the session. Sessions end on time, whatever time play starts.",
+  "enforced_by": "Prompt"
+ },
+ "O15": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Payment",
+  "text": "Paid at booking (the deposit, and the court fee if the player pays it then): DuitNow QR only, with the booking reference in the payment reference field.",
+  "enforced_by": "Code (QR and reference shown by the tool)"
+ },
+ "O16": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Payment",
+  "text": "Paid after the session (the court fee, if not paid at booking): at the counter, by cash, card or DuitNow QR.",
+  "enforced_by": "Prompt"
+ },
+ "O17": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Payment",
+  "text": "The assistant never receives, checks or confirms a payment. Staff check every payment against the centre's bank record. A receipt screenshot helps staff find the payment but does not confirm it.",
+  "enforced_by": "Code (no payment tool)"
+ },
+ "O18": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Privacy",
+  "text": "Availability is shown as free or taken only. The assistant never names who booked a court.",
+  "enforced_by": "Code (availability tool returns no names)"
+ },
+ "O19": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Privacy",
+  "text": "A player sees only their own booking, after verification (Booking Policy B17).",
+  "enforced_by": "Code"
+ },
+ "O20": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Privacy",
+  "text": "The assistant never lists bookings.",
+  "enforced_by": "Code (no list tool)"
+ },
+ "O21": {
+  "policy": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Language",
+  "text": "The assistant replies in English.",
+  "enforced_by": "Prompt"
+ },
+ "B1": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Making a booking",
+  "text": "Bookings can be made for today and the next 7 days. A date further ahead is refused, with the date it opens for booking.",
+  "enforced_by": "Code"
+ },
+ "B2": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Making a booking",
+  "text": "A session starts on the hour and lasts 1, 2 or 3 hours, inside opening hours (Operation Policy O3).",
+  "enforced_by": "Code"
+ },
+ "B3": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Making a booking",
+  "text": "A booking must be made at least 2 hours before the session starts. Later than that, the player books at the counter.",
+  "enforced_by": "Code"
+ },
+ "B4": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Making a booking",
+  "text": "One booking is for one court. A player may hold up to 2 courts at the same time under one mobile number.",
+  "enforced_by": "Code"
+ },
+ "B5": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Making a booking",
+  "text": "The player gives a name and a Malaysian mobile number. No IC number is asked for or stored.",
+  "enforced_by": "Code"
+ },
+ "B6": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Making a booking",
+  "text": "A court that is held or confirmed for any part of the requested time cannot be booked. The assistant offers the nearest free courts or times instead.",
+  "enforced_by": "Code"
+ },
+ "B7": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Court fee and deposit",
+  "text": "Court fee, per court per hour: weekday RM 20, weekend RM 25. The weekend fee applies on Saturday, Sunday and public holidays.",
+  "enforced_by": "Code (fee table)"
+ },
+ "B8": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Court fee and deposit",
+  "text": "Every booking needs a deposit of RM 50, whatever its length.",
+  "enforced_by": "Code"
+ },
+ "B9": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Court fee and deposit",
+  "text": "The player chooses when to pay the court fee: together with the deposit when booking, or at the counter after the session (Operation Policy O16).",
+  "enforced_by": "Code (amount shown by the tool)"
+ },
+ "B10": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Court fee and deposit",
+  "text": "After the session, the deposit is refunded. If the court fee was not paid at booking, the deposit can instead be deducted from it at the counter.",
+  "enforced_by": "Prompt"
+ },
+ "B11": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Hold",
+  "text": "A booking request gets a booking reference (e.g. BK-2041) and holds the court for 30 minutes. The assistant shows the DuitNow QR, the amount (RM 50, or RM 50 plus the court fee) and the reference.",
+  "enforced_by": "Code"
+ },
+ "B12": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Hold",
+  "text": "Payment is reported only by uploading the payment receipt in the chat within the 30 minutes. A message saying the payment was made, without a receipt, is not accepted. Once a receipt is uploaded, the hold continues until staff check it.",
+  "enforced_by": "Code (report needs a receipt)"
+ },
+ "B13": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Hold",
+  "text": "If the payment is not reported within 30 minutes, the hold is marked expired on the staff dashboard. Staff release it, the court becomes available again, and the player receives an automatic message. Nothing is charged.",
+  "enforced_by": "Code (dashboard and fixed message)"
+ },
+ "B14": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Confirmation",
+  "text": "A booking is confirmed only when staff find the payment in the centre's bank record and press Confirm. The assistant never confirms a booking.",
+  "enforced_by": "Code (no confirm tool)"
+ },
+ "B15": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Confirmation",
+  "text": "On Confirm, the player receives an automatic message: court, date, time, amount paid, and the court fee due at the counter if not yet paid.",
+  "enforced_by": "Code (fixed message)"
+ },
+ "B16": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Confirmation",
+  "text": "If staff cannot find the payment, they press Not received. The court is released and the player receives an automatic message.",
+  "enforced_by": "Code (fixed message)"
+ },
+ "B17": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Checking a booking",
+  "text": "To see a booking, the player gives the booking reference and the last 4 digits of the mobile number on it. Both must match. The assistant then shares that booking only: court, date, time, amounts and status.",
+  "enforced_by": "Code"
+ },
+ "B18": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Checking a booking",
+  "text": "After 3 failed checks in one conversation, the assistant stops checking and hands the enquiry to staff.",
+  "enforced_by": "Code"
+ },
+ "B19": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "What the assistant does not handle",
+  "text": "Changing or moving a booking is not done in chat. The player cancels (Cancellation Policy) and books again, or asks staff.",
+  "enforced_by": "Code (no change tool)"
+ },
+ "B20": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "What the assistant does not handle",
+  "text": "These go to staff: weekly or recurring bookings, sessions longer than 3 hours, more than 2 courts, tournaments, events, coaching, corporate and school bookings.",
+  "enforced_by": "Prompt (handover reason)"
+ },
+ "B21": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "What the assistant does not handle",
+  "text": "Requests to skip the deposit, hold a court without a booking, or extend a hold are declined under B8 and B11 to B13.",
+  "enforced_by": "Code"
+ },
+ "B22": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "What the assistant does not handle",
+  "text": "A player who asks for a person is handed to staff at once, with no further questions. The request appears on the staff dashboard for follow-up.",
+  "enforced_by": "Code (handover reason)"
+ },
+ "B23": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Receipts",
+  "text": "The assistant reads the uploaded receipt: amount, reference, date and time, and recipient. The system compares them with the booking and shows staff the receipt with any difference (wrong amount, wrong reference, paid before the booking was made).",
+  "enforced_by": "Code (fixed fields, compared in code)"
+ },
+ "B24": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Receipts",
+  "text": "An image that is not a payment receipt, or cannot be read, is not accepted. The player is asked to upload the receipt again.",
+  "enforced_by": "Code"
+ },
+ "B25": {
+  "policy": "Booking Policy",
+  "page": "Booking Policy.html",
+  "section": "Receipts",
+  "text": "A receipt does not confirm a booking. Staff confirm only after finding the payment in the bank record (B14).",
+  "enforced_by": "Code (no confirm tool)"
+ },
+ "C1": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Who can cancel",
+  "text": "Only the player who made the booking, verified by booking reference and the last 4 digits of the mobile number (Booking Policy B17).",
+  "enforced_by": "Code"
+ },
+ "C2": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Who can cancel",
+  "text": "A held booking whose payment is not reported within 30 minutes is released by staff (Booking Policy B13). Nothing is charged.",
+  "enforced_by": "Code"
+ },
+ "C3": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Refund",
+  "text": "A confirmed booking can be cancelled at any time before the session starts. The RM 50 deposit is refunded in full once the player is verified, with no notice period. A court fee paid at booking is refunded with it.",
+  "enforced_by": "Code (outcome calculated)"
+ },
+ "C4": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Refund",
+  "text": "Refunds go to the account that paid, within 3 working days of staff approval.",
+  "enforced_by": "Prompt"
+ },
+ "C5": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Refund",
+  "text": "Only a no-show forfeits the deposit: the player neither cancels before the session starts nor checks in. A court fee paid at booking is refunded.",
+  "enforced_by": "Code (outcome calculated)"
+ },
+ "C6": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Refund",
+  "text": "Part of a booking cannot be cancelled. To play fewer hours, the player cancels the booking and books again.",
+  "enforced_by": "Code"
+ },
+ "C7": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "How a cancellation is processed",
+  "text": "The assistant tells the player the refund amount before submitting, and submits only when the player agrees.",
+  "enforced_by": "Code (outcome returned by the tool)"
+ },
+ "C8": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "How a cancellation is processed",
+  "text": "The request appears on the staff dashboard as a pending cancellation. The booking stays in place until staff approve.",
+  "enforced_by": "Code"
+ },
+ "C9": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "How a cancellation is processed",
+  "text": "On Approve, the court is released and the player receives an automatic message stating the deposit refunded (and the court fee, if paid at booking).",
+  "enforced_by": "Code (fixed message)"
+ },
+ "C10": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "How a cancellation is processed",
+  "text": "Refunds are paid by staff outside the chat. The assistant never refunds, waives or reduces an amount.",
+  "enforced_by": "Code (no refund tool)"
+ },
+ "C11": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Outside this policy",
+  "text": "Requests to refund a no-show deposit are declined in chat with C5 stated. No exception is made by the assistant.",
+  "enforced_by": "Prompt"
+ },
+ "C12": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Outside this policy",
+  "text": "A session the centre cancels (power failure, court repair, an event) is handled by staff, who offer a full refund or another slot. The assistant hands these to staff.",
+  "enforced_by": "Prompt (handover reason)"
+ },
+ "C13": {
+  "policy": "Cancellation Policy",
+  "page": "Cancellation Policy.html",
+  "section": "Outside this policy",
+  "text": "Complaints, disputes about a refund, and refunds not received after 3 working days go to staff.",
+  "enforced_by": "Prompt (handover reason)"
+ }
+}
