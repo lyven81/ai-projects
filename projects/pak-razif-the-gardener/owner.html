@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pak Razif's page</title>
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#fff;--card:#fff;--ink:#1f4f8f;--muted:#5d7ea8;--line:#d6e2f0;--navy:#1f4f8f;--accent:#2f6fb0;--box:#f3f8fd;--field:#e3efe5;--fieldink:#2f5d3a;--warn:#b5651d;--warnbg:#fbf1e6;--flash:#fff3c4;--barbg:#fff;--barink:#1f4f8f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--field:#1e3324;--fieldink:#9fd3ab;--warn:#e0a060;--warnbg:#2b2117;--flash:#4a3f17;--barbg:#1d2f45;--barink:#e3e8ee}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--field:#1e3324;--fieldink:#9fd3ab;--warn:#e0a060;--warnbg:#2b2117;--flash:#4a3f17;--barbg:#1d2f45;--barink:#e3e8ee}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",Arial,sans-serif;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit}
+a{color:var(--accent)}
+.page{max-width:430px;margin:0 auto;padding:12px 16px 20px}
+.crumbs{font-size:12.5px;color:var(--muted);margin:0 2px 8px}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+footer{font-size:12px;color:var(--muted);margin:12px 2px 0}
+.app{display:flex;flex-direction:column;height:min(860px,calc(100vh - 90px));min-height:560px;background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative}
+@supports (height:100dvh){.app{height:min(860px,calc(100dvh - 90px))}}
+@media (max-width:500px){.page{padding:8px 0 12px}.crumbs,footer{margin-left:16px;margin-right:16px}.app{border-radius:0;border-left:0;border-right:0}}
+body.embed .page{max-width:none;padding:0}
+body.embed .app{height:100vh;min-height:0;border:0;border-radius:0}
+@supports (height:100dvh){body.embed .app{height:100dvh}}
+.bar{background:var(--barbg);color:var(--barink);border-bottom:1px solid var(--line);padding:11px 16px 10px;display:flex;justify-content:space-between;align-items:baseline;flex:none}
+.bar b{font-size:16px}
+.bar span{font-size:13px;opacity:.9}
+.scroll{flex:1;overflow:auto;padding:12px 12px 16px;-webkit-overflow-scrolling:touch}
+.pane{display:none}.pane.on{display:block}
+.tabs{display:flex;border-top:1px solid var(--line);background:var(--card);flex:none;padding-bottom:env(safe-area-inset-bottom)}
+.tabs button{flex:1;background:none;border:0;font-size:12px;padding:7px 0 8px;color:var(--muted);cursor:pointer;position:relative}
+.tabs button.on{color:var(--accent);font-weight:700}
+.tabs svg{display:block;margin:0 auto 1px;width:22px;height:22px}
+.badge{position:absolute;top:3px;left:calc(50% + 6px);background:var(--warn);color:#fff;font-size:10.5px;font-weight:700;border-radius:9px;padding:0 6px;line-height:17px;min-width:18px}
+.badge:empty{display:none}
+.bump{animation:bump .6s ease}
+@keyframes bump{0%{transform:scale(1)}30%{transform:scale(1.45)}60%{transform:scale(.9)}100%{transform:scale(1)}}
+.m{color:var(--muted);font-size:12.5px}
+.sum{margin:0 2px 8px}
+.sec{font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin:14px 2px 6px}
+.sec:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:4px 10px;font-size:12.5px;cursor:pointer;color:var(--ink)}
+.chip .n{display:inline-block;min-width:18px;margin-left:5px;font-size:11px;font-weight:700;padding:0 6px;border-radius:9px;background:var(--navy);color:var(--card);text-align:center}
+.chip.on{border-color:var(--accent);background:var(--box);color:var(--accent);font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
+.chip.closed .n{background:var(--line);color:var(--muted)}
+.list{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.list button{display:flex;width:100%;justify-content:space-between;gap:8px;align-items:baseline;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 11px;cursor:pointer;font-size:13px}
+.list button:last-child{border-bottom:0}
+.list button.on{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+.list b{color:var(--navy);font-weight:600}
+.list small{color:var(--muted);white-space:nowrap;font-size:11.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:10px}
+.card.flash{animation:flash 1.5s ease}
+@keyframes flash{0%,35%{background:var(--flash);box-shadow:0 0 0 3px var(--warn)}100%{background:var(--card);box-shadow:none}}
+.ch{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:9px 12px;background:var(--box);border-bottom:1px solid var(--line);font-weight:700;color:var(--navy);font-size:14px}
+.ch small{font-weight:400;color:var(--muted);font-size:12px;white-space:nowrap}
+.kv{padding:7px 12px;border-bottom:1px solid var(--line);font-size:13.5px}
+.kv>.k{display:block;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.kv .q{white-space:pre-line;font-style:italic;display:block}
+.kv.rec{background:var(--warnbg)}
+.kv.rec>.k{color:var(--warn)}
+.kv a.rule{display:inline-block;margin:0 6px 2px 0;padding:0 7px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;text-decoration:none;background:var(--box)}
+.thumbs{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.thumbs button{padding:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;width:76px;height:58px;cursor:zoom-in;background:var(--box)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.btns{display:flex;gap:7px;padding:10px 12px 12px}
+.btn{flex:1;text-align:center;font-size:13.5px;font-weight:600;border-radius:8px;padding:8px 0;background:var(--accent);color:#fff;border:1px solid var(--accent);text-decoration:none;cursor:pointer}
+.btn.alt{background:var(--card);color:var(--accent)}
+.btn.done{background:var(--navy);border-color:var(--navy);color:var(--card)}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--muted);font-size:13.5px}
+.line{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:7px 11px;border-bottom:1px solid var(--line)}
+.line:last-child{border-bottom:0}
+.line .h{width:44px;flex:none;font-weight:700;color:var(--navy)}
+.tag{border-radius:6px;padding:1px 7px;display:inline-block}
+.fw{background:var(--field);color:var(--fieldink)}
+.open{color:var(--accent);border:1px dashed var(--accent)}
+.vis{background:var(--navy);color:var(--card)}
+.blk{background:var(--box);color:var(--muted);border:1px solid var(--line)}
+.vcard{padding:10px 12px;font-size:13.5px}
+.vcard .t{font-weight:700;color:var(--navy)}
+.vcard .btns{padding:8px 0 0}
+.mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.mhead b{color:var(--navy);font-size:15px}
+.mhead button{width:40px;height:32px;border:1px solid var(--line);background:var(--card);border-radius:8px;cursor:pointer;color:var(--accent);font-size:16px}
+.mhead button:disabled{opacity:.35;cursor:default}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}
+.grid .wd{font-size:11px;font-weight:700;color:var(--muted);padding:2px 0}
+.grid button{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px 0 3px;cursor:pointer;min-height:42px;font-size:12.5px;font-weight:700;color:var(--navy)}
+.grid button.past{opacity:.55}
+.grid button.sun{background:var(--box);color:var(--muted);font-weight:400}
+.grid button.today{border-color:var(--warn);box-shadow:inset 0 0 0 1px var(--warn)}
+.grid button.sel{outline:2px solid var(--accent);outline-offset:-1px}
+.grid .pad{visibility:hidden}
+.dots{display:flex;justify-content:center;gap:2px;margin-top:3px;height:6px}
+.dots i{width:6px;height:6px;border-radius:50%;display:block}
+.d-open{border:1.5px solid var(--accent)}
+.d-booked{background:var(--navy)}
+.d-field{background:#5f9a6b}
+.d-blocked{background:var(--muted);opacity:.55}
+.grid .cl{font-size:9px;font-weight:400;display:block;margin-top:2px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11.5px;color:var(--muted);margin:7px 2px 4px}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:0}
+.slot{display:flex;width:100%;align-items:center;gap:10px;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:9px 11px;font-size:13.5px;cursor:pointer}
+.slot:last-child{border-bottom:0}
+.slot .h{width:44px;flex:none;font-weight:700;color:var(--navy)}
+.slot .s{flex:1}
+.slot .act{font-size:12px;font-weight:600;color:var(--accent)}
+.slot.flash{animation:flash 1.5s ease}
+.slot.fixed{cursor:default}
+.slot.fixed .act{color:var(--muted);font-weight:400}
+.note{font-size:12.5px;color:var(--warn);background:var(--warnbg);border-radius:8px;padding:6px 10px;margin:6px 0 0}
+.note:empty{display:none}
+.lb{position:fixed;inset:0;background:rgba(10,14,20,.88);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:50;padding:16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:78vh;border-radius:8px}
+.lb .cap{color:#e3e8ee;font-size:13px;margin-top:8px;text-align:center}
+.lb .x{position:absolute;top:10px;right:12px;width:40px;height:40px;border-radius:20px;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
+.lb .nav{display:flex;gap:10px;margin-top:10px}
+.lb .nav button{border:1px solid rgba(255,255,255,.4);background:none;color:#fff;border-radius:8px;padding:5px 14px;cursor:pointer}
+/* Phone home screen (embedded demo only): shown while nothing waits for Pak Razif */
+.home{position:absolute;inset:0;z-index:5;display:none;flex-direction:column;align-items:center;color:#fff;overflow:hidden}
+.home.on{display:flex}
+.home svg.wp{position:absolute;inset:0;width:100%;height:100%}
+.home .sb{position:relative;width:100%;display:flex;justify-content:space-between;padding:8px 18px 0;font-size:12.5px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.home .clock{position:relative;margin-top:56px;font-size:64px;font-weight:300;line-height:1;letter-spacing:1px;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.home .date{position:relative;margin-top:6px;font-size:15px;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.home .widget{position:relative;margin:26px 18px 0;align-self:stretch;background:rgba(255,255,255,.82);color:#1f4f8f;border-radius:16px;padding:12px 14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.home .widget b{display:block;font-size:13.5px}
+.home .widget span{display:block;font-size:12.5px;color:#3d6a9c;margin-top:2px}
+.home .dock{position:relative;margin-top:auto;margin-bottom:26px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.home .dock button{width:58px;height:58px;border-radius:16px;border:0;background:#fff;color:#2f6fb0;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center}
+.home .dock svg{width:30px;height:30px}
+.notif{position:absolute;left:10px;right:10px;top:10px;z-index:8;background:rgba(255,255,255,.97);color:#1f2a36;border-radius:16px;padding:10px 12px;box-shadow:0 8px 26px rgba(0,0,0,.22);transform:translateY(-140%);transition:transform .35s ease;border:1px solid #d6e2f0}
+.notif.on{transform:translateY(0)}
+.notif .nh{display:flex;justify-content:space-between;font-size:11.5px;color:#5d7ea8;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.notif .nt{font-size:14px;font-weight:700;color:#1f4f8f;margin-top:3px}
+.notif .nb{font-size:13px;color:#3d4f63;margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media (prefers-reduced-motion:reduce){.notif{transition:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="crumbs" id="crumbs"><a href="../../index.html">AI Projects</a> / <a href="../../pak-razif-the-gardener.html">Pak Razif The Gardener</a></div>
+  <div class="app">
+    <div class="home" id="home" aria-label="Pak Razif's phone home screen">
+      <svg class="wp" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8fd8"/><stop offset=".55" stop-color="#9fd0f2"/><stop offset="1" stop-color="#e9f6ff"/></linearGradient>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff7d6"/><stop offset=".55" stop-color="#ffe9a3" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a3" stop-opacity="0"/></radialGradient>
+          <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fcf8a"/><stop offset="1" stop-color="#5fae6a"/></linearGradient>
+          <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fb36a"/><stop offset="1" stop-color="#3f8f52"/></linearGradient>
+          <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f9a55"/><stop offset="1" stop-color="#2a6e3f"/></linearGradient>
+        </defs>
+        <rect width="400" height="800" fill="url(#sky)"/>
+        <circle cx="300" cy="300" r="120" fill="url(#sun)"/>
+        <circle cx="300" cy="300" r="34" fill="#fff6cf"/>
+        <g fill="#fff" opacity=".85"><ellipse cx="90" cy="250" rx="46" ry="14"/><ellipse cx="120" cy="240" rx="30" ry="16"/><ellipse cx="330" cy="190" rx="38" ry="11"/><ellipse cx="352" cy="182" rx="22" ry="12"/></g>
+        <path d="M0 520 C80 470 160 480 230 505 S350 470 400 480 V800 H0Z" fill="url(#h1)"/>
+        <path d="M0 590 C90 545 190 560 270 585 S370 560 400 565 V800 H0Z" fill="url(#h2)"/>
+        <g fill="#2f7a46"><circle cx="62" cy="548" r="22"/><circle cx="84" cy="540" r="18"/><rect x="70" y="556" width="6" height="26" fill="#6b4a2b"/><circle cx="338" cy="555" r="20"/><circle cx="356" cy="548" r="15"/><rect x="343" y="562" width="5" height="22" fill="#6b4a2b"/></g>
+        <path d="M0 660 C110 620 230 640 400 625 V800 H0Z" fill="url(#h3)"/>
+        <g stroke="#2a6e3f" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M40 740 l-6 -22 M48 742 l2 -24 M56 740 l8 -20"/><path d="M180 760 l-6 -22 M188 762 l2 -24 M196 760 l8 -20"/><path d="M320 748 l-6 -22 M328 750 l2 -24 M336 748 l8 -20"/></g>
+        <g><circle cx="120" cy="700" r="7" fill="#ffd166"/><circle cx="120" cy="700" r="3" fill="#e07a5f"/><circle cx="262" cy="716" r="6" fill="#f4a6c0"/><circle cx="262" cy="716" r="2.5" fill="#fff3b0"/><circle cx="372" cy="700" r="6" fill="#ffd166"/></g>
+      </svg>
+      <div class="sb"><span>10:00</span><span>4G &#9646;&#9646;&#9646;&#9646; 86%</span></div>
+      <div class="clock">10:00</div>
+      <div class="date">Saturday, 17 October</div>
+      <div class="widget"><b>Pak Razif Garden</b><span>Nothing needs you right now. Your assistant is answering customers.</span></div>
+      <div class="dock"><button id="home-open" aria-label="Open Pak Razif Garden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 11C12 7 9 5 5 5c0 4 3 6 7 6z"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></button>Pak Razif Garden</div>
+    </div>
+    <div class="notif" id="notif" role="status" aria-live="polite"><div class="nh"><span>Pak Razif Garden</span><span>now</span></div><div class="nt" id="notif-t"></div><div class="nb" id="notif-b"></div></div>
+    <div class="bar"><b>Pak Razif Garden</b><span id="today-text"></span></div>
+    <div class="scroll" id="scroll">
+      <section class="pane on" data-p="inbox" id="p-inbox"></section>
+      <section class="pane" data-p="today" id="p-today"></section>
+      <section class="pane" data-p="cal" id="p-cal"></section>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button data-t="inbox" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 13l2.5-7.5h13L21 13v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1.5 2.5h5L16 13h5"/></svg>Inbox<span class="badge" id="badge"></span></button>
+      <button data-t="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>Today</button>
+      <button data-t="cal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Calendar</button>
+    </nav>
+  </div>
+  <footer id="footer">© 2026 Lee Yih Ven · Pak Razif's page</footer>
+</div>
+<div class="lb" id="lb"><button class="x" data-lb="close" aria-label="Close">×</button><img id="lb-img" alt=""><div class="cap" id="lb-cap"></div><div class="nav" id="lb-nav"><button data-lb="prev">Previous</button><button data-lb="next">Next</button></div></div>
+
+<script>/* Pak Razif Garden: the assistant's tools and Pak Razif's page actions, written once.
+ *
+ * Loaded by the MCP server (mcp_server.mjs, Node), the tool tests, the benchmark and both
+ * pages (Pak Razif's page and assistant.html), so every rule below is the same everywhere.
+ *
+ * Every rule the assistant must never break lives here, in code, not in the prompt:
+ * coverage by postcode, the booking window from first contact, same-day and closed days,
+ * open slots only, the slot re-checked when saving, one upcoming visit per address,
+ * references issued by code, photos forwarded without the model seeing them, the duty
+ * number only after the ETA check matches, and handovers on a fixed list of reasons.
+ * No tool quotes a price, changes or cancels a visit, books field work, lists bookings,
+ * reads a location or names another customer. Pak Razif's own actions (Done, block or open
+ * a slot) are in OWNER below.
+ *
+ * Each tool returns { ok: true, ... } or
+ * { ok: false, error: { category, retryable, message } }.
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) module.exports = factory();
+  else root.GardenTools = factory();
+})(typeof self !== "undefined" ? self : this, function () {
+  "use strict";
+
+  const BUSINESS = "Pak Razif Garden";
+  const SLOTS = ["08:00", "10:00", "14:00", "16:00"];   // W3
+  const VISIT_MINUTES = 30;                               // W5, W6
+  const DEFAULT_NOW = "2026-10-17T10:00";                 // fixed demo clock
+
+  // Service Area A1 to A3: [from, to, area, rule]
+  const COVERAGE = [
+    [40000, 40470, "Shah Alam", "A1"],
+    [41000, 41300, "Klang", "A2"],
+    [47500, 47500, "Subang Jaya", "A3"],
+    [47600, 47650, "Subang Jaya (USJ)", "A3"],
+  ];
+  // Known localities, so a covered postcode can be named more precisely than the area.
+  const LOCALITY = {
+    "40000": "Seksyen 7", "40100": "Seksyen 9 and 13", "40150": "Bukit Jelutong", "40170": "Setia Alam",
+    "40460": "Kota Kemuning", "40470": "Alam Impian", "41050": "Bukit Raja", "41200": "Bandar Botanic and Bukit Tinggi",
+    "47500": "SS15", "47610": "USJ",
+  };
+  // Klang Valley postcodes outside the coverage are "nearby" (A4); anything else is outstation (A5).
+  const NEARBY = [[40000, 48999], [50000, 62999], [63000, 68199]];
+
+  const HANDOVER_REASONS = {
+    price_request: { label: "Price request", rules: ["P23", "Q3"] },
+    unusual_work: { label: "Unusual work", rules: ["P24", "P6"] },
+    outside_area: { label: "Outside the area", rules: ["P25", "A4"] },
+    outstation: { label: "Outstation", rules: ["P26", "A5"] },
+    time_not_bookable: { label: "Time not bookable", rules: ["P27", "W8", "W9", "W12"] },
+    change_or_cancel: { label: "Change or cancel", rules: ["P28", "P16"] },
+    after_visit: { label: "After the visit", rules: ["P29", "Q5"] },
+    complaint_or_payment: { label: "Complaint or payment", rules: ["P30", "P35", "P21"] },
+    asks_for_him_or_unclear: { label: "Asks for you, or unclear", rules: ["P31"] },
+  };
+  const REASON_IDS = Object.keys(HANDOVER_REASONS);
+
+  // ---------- tool definitions (shared by MCP, the benchmark and the pages) ----------
+
+  const TOOL_DEFINITIONS = [
+    {
+      name: "check_coverage",
+      description:
+        "Check whether a 5-digit Malaysian postcode is inside Pak Razif's approved coverage (Service Area A1 to A3). " +
+        "Ask the customer for the postcode if they have not given it; never guess it from a town or place name. " +
+        "Covered returns the area name. Not covered returns where: nearby (Klang Valley, forward as outside_area) or outstation (forward as outstation). " +
+        "Errors: bad_postcode, not_covered.",
+      input_schema: {
+        type: "object",
+        properties: { postcode: { type: "string", description: "5 digits, e.g. \"40460\"" } },
+        required: ["postcode"],
+      },
+    },
+    {
+      name: "find_open_slots",
+      description:
+        "List the open site visit slots in Pak Razif's calendar for one date, or for a range of up to 14 days. " +
+        "Only open slots are returned, never who booked or why a slot is closed. " +
+        "Bookable dates run from the day after the customer's first contact to the same date next month (W8). " +
+        "Today is never offered: same-day requests go to Pak Razif (W9). Sundays and holidays are closed (W1, W2). " +
+        "Date format YYYY-MM-DD. Errors: same_day, beyond_window, closed_day, past_date.",
+      input_schema: {
+        type: "object",
+        properties: {
+          date: { type: "string", description: "YYYY-MM-DD, the first or only date" },
+          to_date: { type: "string", description: "YYYY-MM-DD, optional end of a range (at most 14 days after date)" },
+        },
+        required: ["date"],
+      },
+    },
+    {
+      name: "book_site_visit",
+      description:
+        "Reserve an open site visit slot and confirm it. The slot is checked again when saving; the reference is issued by code. " +
+        "Ask the customer first for anything missing: name, phone number, full address, 5-digit postcode, gardening needs in their words, and access instructions (gate, parking, pets). " +
+        "Returns the confirmation to give the customer (R3): date, time window, address and booking reference. " +
+        "Errors: missing_fields, not_covered, same_day, beyond_window, closed_day, slot_unavailable, duplicate_address.",
+      input_schema: {
+        type: "object",
+        properties: {
+          date: { type: "string", description: "YYYY-MM-DD" },
+          slot: { type: "string", enum: SLOTS },
+          name: { type: "string" },
+          phone: { type: "string", description: "Malaysian phone number, e.g. 012-345 6789" },
+          address: { type: "string", description: "Street address without the postcode, e.g. 7 Jalan Melur 2, Seksyen 7, Shah Alam" },
+          postcode: { type: "string", description: "5 digits" },
+          needs: { type: "string", description: "The gardening work needed, in the customer's words" },
+          access: { type: "string", description: "Access instructions: gate, parking, pets" },
+        },
+        required: ["date", "slot", "name", "phone", "address", "postcode", "needs", "access"],
+      },
+    },
+    {
+      name: "forward_photo",
+      description:
+        "Send photos the customer attached in this conversation to Pak Razif unchanged. You never see the photos: pass their photo IDs as shown in the customer's message. " +
+        "Use it when the photos come with a gardening enquiry or a booking. Do not use it for a request only to measure or assess a photo (P13): decline that and offer a site visit. " +
+        "The photos are linked to a visit booked in this conversation. Errors: no_photo.",
+      input_schema: {
+        type: "object",
+        properties: {
+          photo_ids: { type: "array", items: { type: "string" }, description: "e.g. [\"PH-001\", \"PH-002\"]" },
+          note: { type: "string", description: "One line: the gardening enquiry the photos come with" },
+        },
+        required: ["photo_ids", "note"],
+      },
+    },
+    {
+      name: "hand_to_pak_razif",
+      description:
+        "Forward the enquiry to Pak Razif's inbox. He cannot see this chat and replies to the customer himself by phone or WhatsApp, so the summary must let him act on its own. " +
+        "Reasons: price_request (any price, transport charge, tax or discount), unusual_work (work not in P5, or unclear requirements), " +
+        "outside_area (a nearby postcode outside the coverage), outstation (another state, e.g. Melaka, Penang, Johor), " +
+        "time_not_bookable (same day, beyond the booking window, or no open slot suits), change_or_cancel (change of date or time, cancellation, address correction), " +
+        "after_visit (work date or arrangements after a site visit), complaint_or_payment (complaint, damage, compensation, payment or refund), " +
+        "asks_for_him_or_unclear (asks to speak to Pak Razif, or a business question the resources do not cover). " +
+        "Code adds the customer's own words, name and phone from the chat, any photos forwarded, and the time received. Returns the inbox item number. " +
+        "Errors: missing_fields.",
+      input_schema: {
+        type: "object",
+        properties: {
+          reason: { type: "string", enum: REASON_IDS },
+          what_was_asked: { type: "string", description: "One line, e.g. \"Move the site visit HG-1015 to Friday 23 Oct\"" },
+          told_customer: { type: "string", description: "One line: what you are telling the customer, e.g. \"Request passed on; Pak Razif will get back to him\"" },
+          recommended_next_step: { type: "string", description: "One line for Pak Razif, e.g. \"Call to agree a Friday slot; 10:00, 14:00 and 16:00 are open\"" },
+          address: { type: "string", description: "Address and postcode, if the customer gave them" },
+          preferred_time: { type: "string", description: "Preferred day or time, if the customer gave one" },
+        },
+        required: ["reason", "what_was_asked", "told_customer", "recommended_next_step"],
+      },
+    },
+    {
+      name: "eta_contact_check",
+      description:
+        "For a customer asking whether Pak Razif is on his way or when he will arrive. Needs the booking reference and the last 4 digits of the phone number on the booking, both from the customer; never guess either. " +
+        "If both match a confirmed visit today or later, returns Pak Razif's duty number for the customer to call (P15, P18). It returns no other booking detail, no location and no arrival time. " +
+        "The same error is returned whichever part is wrong. Errors: no_match.",
+      input_schema: {
+        type: "object",
+        properties: {
+          booking_ref: { type: "string", description: "e.g. HG-1010" },
+          phone_last4: { type: "string", description: "4 digits as text, e.g. \"1428\"" },
+        },
+        required: ["booking_ref", "phone_last4"],
+      },
+    },
+  ];
+
+  // What each tool's code enforces, for the "How it works" view. Keep in step with the handlers.
+  const TOOL_CHECKS = {
+    check_coverage: ["5-digit postcode only; never guessed from a place name (A6)", "Covered: Shah Alam, Klang, Subang Jaya (A1 to A3)", "Not covered: nearby or outstation, for Pak Razif to decide (A4, A5)"],
+    find_open_slots: ["Open slots only: no names, addresses or reasons for taken slots (P34)", "Window from the day after first contact to the same date next month (W8)", "Today refused as same_day; Sundays and holidays closed (W9, W1, W2)"],
+    book_site_visit: ["Every detail present and the postcode covered (P7, P8)", "Slot re-checked when saving; one upcoming visit per address (W11, P11)", "Reference issued by code; the confirmation built from the result (P9, P12)"],
+    forward_photo: ["Only photos attached in this conversation, passed by ID (P13)", "The image never reaches the model, so it cannot be measured or described (P22)", "Linked to a visit booked in the same conversation"],
+    hand_to_pak_razif: ["Reason on the fixed list of nine (P23 to P31)", "Every summary field required, so Pak Razif can act without the chat (P32)", "Code adds the customer's words, contact, photos and time"],
+    eta_contact_check: ["Reference and last 4 phone digits must both match a confirmed visit today or later (P15)", "Same reply whichever part is wrong", "Returns the duty number only: no location, no arrival time (P17, P18)"],
+  };
+
+  // ---------- helpers ----------
+
+  const fail = (category, message, retryable) => ({ ok: false, error: { category, retryable: !!retryable, message } });
+  const str = (s) => String(s == null ? "" : s).trim();
+  const digits = (s) => str(s).replace(/\D/g, "");
+  const isIsoDate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(s) && !isNaN(new Date(s + "T00:00:00Z"));
+  const toDay = (iso) => Math.round(Date.parse(iso.slice(0, 10) + "T00:00:00Z") / 86400000);
+  const fromDay = (n) => new Date(n * 86400000).toISOString().slice(0, 10);
+  const addDays = (iso, n) => fromDay(toDay(iso) + n);
+  const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const dateText = (iso) => { const d = new Date(iso.slice(0, 10) + "T00:00:00Z"); return `${DAYS[d.getUTCDay()]} ${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+  const windowText = (slot) => { const m = parseInt(slot, 10) * 60 + parseInt(slot.slice(3), 10) + VISIT_MINUTES; return `${slot} to ${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`; };
+  const normRef = (s) => { const d = digits(s); return d ? "HG-" + d : ""; };
+
+  // W8: the same date next month, or that month's last day when it is shorter.
+  function sameDateNextMonth(iso) {
+    const [y, m, d] = iso.split("-").map(Number);
+    const ny = m === 12 ? y + 1 : y, nm = m === 12 ? 1 : m + 1;
+    const last = new Date(Date.UTC(ny, nm, 0)).getUTCDate();
+    return `${ny}-${String(nm).padStart(2, "0")}-${String(Math.min(d, last)).padStart(2, "0")}`;
+  }
+
+  function coverageOf(pc) {
+    const n = Number(pc);
+    const hit = COVERAGE.find(([a, b]) => n >= a && n <= b);
+    if (hit) return { covered: true, area: hit[2], rule: hit[3], locality: LOCALITY[pc] || null };
+    return { covered: false, where: NEARBY.some(([a, b]) => n >= a && n <= b) ? "nearby" : "outstation" };
+  }
+
+  // One normalising function for the duplicate check: lower case, "jln" to "jalan", commas and
+  // spaces collapsed, then house number + street + postcode (Step C, section 6).
+  function addressKey(address, postcode) {
+    const pc = digits(postcode);
+    let n = str(address).toLowerCase().replace(/\bjln\b\.?/g, "jalan").replace(/\bno\.?\s*/g, "").replace(/[,.#]/g, " ");
+    if (pc) n = n.split(pc).join(" ");
+    n = n.replace(/\s+/g, " ").trim();
+    const m = /^(\d+[a-z]?(?:-\d+)?)\s+(jalan\s+(?:[a-z/]+\s+)*?[a-z/]*\d+[a-z]?)\b/.exec(n);
+    return (m ? `${m[1]}|${m[2]}` : n) + "|" + pc;
+  }
+
+  function normPhone(s) {
+    let d = digits(s);
+    if (d.startsWith("60")) d = d.slice(1);
+    return /^0\d{8,10}$/.test(d) ? d : null;
+  }
+  const prettyPhone = (d) => d.length === 10 ? `${d.slice(0, 3)}-${d.slice(3, 6)} ${d.slice(6)}` : `${d.slice(0, 3)}-${d.slice(3, 7)} ${d.slice(7)}`;
+
+  /**
+   * createAssistant(store, options)
+   *   store:   { load() -> state, save(state) }   state = calendar.json
+   *   options: { now: "YYYY-MM-DDTHH:MM" or () => string }
+   * Returns { tools, call(name, input, ctx), session }.
+   *   ctx (from the host, never from the model):
+   *     { turn, uploads: ["PH-001"], message, contact: { channel, chat_id, name, phone }, first_contact: "YYYY-MM-DD" }
+   * One assistant object = one conversation.
+   */
+  function createAssistant(store, options) {
+    const opts = options || {};
+    const nowIso = () => (typeof opts.now === "function" ? opts.now() : opts.now || DEFAULT_NOW);
+    const today = () => nowIso().slice(0, 10);
+    const session = { firstContact: null, uploads: [], own: [], photoItems: [], messages: [], usedMessages: 0 };
+
+    // The first-contact date is fixed at the first message (W8), from the host.
+    function windowFor() {
+      const fc = session.firstContact || today();
+      return { from: addDays(fc, 1), to: sameDateNextMonth(fc) };
+    }
+    function remember(ctx) {
+      if (!session.firstContact) session.firstContact = (ctx.first_contact && isIsoDate(ctx.first_contact)) ? ctx.first_contact : today();
+      (ctx.uploads || []).forEach((id) => { if (!session.uploads.includes(id)) session.uploads.push(id); });
+      // ctx.history: the customer's earlier messages in this chat, so turns with no tool call still count.
+      const all = (Array.isArray(ctx.history) ? ctx.history.map(str) : []).concat(str(ctx.message) ? [str(ctx.message)] : []);
+      if (all.length > session.messages.length) session.messages = all;
+    }
+    // The customer's own words not yet sent to Pak Razif in an item from an earlier turn;
+    // items made in the same turn carry the same words.
+    function customerWords(ctx) {
+      if (session.wordsTurn !== ctx.turn) {
+        session.words = session.messages.slice(session.usedMessages).join("\n");
+        session.usedMessages = session.messages.length;
+        session.wordsTurn = ctx.turn;
+      }
+      return session.words;
+    }
+    const contactOf = (ctx) => {
+      const c = (ctx && ctx.contact) || {};
+      return { channel: c.channel || "", chat_id: c.chat_id || "", name: c.name || "", phone: c.phone || "" };
+    };
+
+    // Date checks shared by find_open_slots and book_site_visit.
+    function checkDate(state, date) {
+      if (!isIsoDate(date)) return fail("invalid_input", "Date must be YYYY-MM-DD.", true);
+      const w = windowFor();
+      if (date < today()) return fail("past_date", `That date has passed. Today is ${dateText(today())}.`, true);
+      if (date === today()) return fail("same_day", "Same-day visits need Pak Razif's go-ahead (W9). Do not book; forward with hand_to_pak_razif, reason time_not_bookable, and reply with R11.", false);
+      if (date > w.to) return fail("beyond_window", `Visits can be booked up to ${dateText(w.to)}, the same date next month from first contact (W8). Do not book; forward with hand_to_pak_razif, reason time_not_bookable.`, false);
+      const day = state.days[date];
+      if (!day) return fail("beyond_window", "That date is not in Pak Razif's calendar yet. Forward with hand_to_pak_razif, reason time_not_bookable.", false);
+      if (day.closed) return fail("closed_day", `${dateText(date)} is closed (${day.closed}; W1, W2). Offer the nearest open day.`, true);
+      return null;
+    }
+    const openSlots = (day) => SLOTS.filter((s) => day.slots[s] && day.slots[s].status === "open").map((s) => ({ slot: s, window: windowText(s) }));
+
+    function newItem(state, item) {
+      const id = "IN-" + String(state.inbox.length + 1).padStart(3, "0");
+      state.inbox.push(Object.assign({ id, status: "open", received: nowIso() }, item));
+      return id;
+    }
+
+    const handlers = {
+      check_coverage({ postcode }) {
+        const pc = digits(postcode);
+        if (!/^\d{5}$/.test(str(postcode).replace(/\s/g, "")) || pc.length !== 5)
+          return fail("bad_postcode", "A postcode is 5 digits. Ask the customer once for the postcode; if it is still missing or unclear, forward the enquiry (A6).", true);
+        const c = coverageOf(pc);
+        if (c.covered) return { ok: true, postcode: pc, covered: true, area: c.area, locality: c.locality, rules: [c.rule] };
+        return Object.assign(fail("not_covered", c.where === "nearby"
+          ? `${pc} is outside the approved coverage but nearby. Do not book. Reply with R5 and forward with hand_to_pak_razif, reason outside_area, with the address and work required (A4).`
+          : `${pc} is outstation. Do not book or promise acceptance. Forward with hand_to_pak_razif, reason outstation, for assessment (A5).`, false),
+          { postcode: pc, where: c.where, rules: [c.where === "nearby" ? "A4" : "A5"] });
+      },
+
+      find_open_slots({ date, to_date }) {
+        const state = store.load();
+        const end = str(to_date) || date;
+        if (!isIsoDate(date) || !isIsoDate(end)) return fail("invalid_input", "Dates must be YYYY-MM-DD.", true);
+        if (end < date || toDay(end) - toDay(date) > 14) return fail("invalid_input", "to_date must be on or after date, at most 14 days later.", true);
+        if (end === date) {
+          const bad = checkDate(state, date); if (bad) return bad;
+          const open = openSlots(state.days[date]);
+          return { ok: true, date, day: dateText(date), open, rules: ["W3", "W10"],
+            note: open.length ? "Open slots only. Each visit takes about 30 minutes." : "No open slot on this date. Offer open slots on nearby days, or forward (W12)." };
+        }
+        const days = [], skipped = [];
+        for (let d = date; d <= end; d = addDays(d, 1)) {
+          const bad = checkDate(state, d);
+          if (bad) { skipped.push({ date: d, reason: bad.error.category }); continue; }
+          days.push({ date: d, day: dateText(d), open: openSlots(state.days[d]) });
+        }
+        if (!days.length) return fail(skipped.some((s) => s.reason === "beyond_window") ? "beyond_window" : skipped[0].reason,
+          "No bookable date in that range (W8, W9, W1). Today and dates beyond the window go to Pak Razif with reason time_not_bookable.", false);
+        return { ok: true, days, skipped, rules: ["W3", "W8", "W10"] };
+      },
+
+      book_site_visit(input, ctx) {
+        const f = {};
+        ["date", "slot", "name", "phone", "address", "postcode", "needs", "access"].forEach((k) => (f[k] = str(input[k])));
+        const missing = Object.keys(f).filter((k) => !f[k]);
+        if (missing.length) return fail("missing_fields", `Ask the customer for: ${missing.join(", ")} (P8, V4). Then book.`, true);
+        const phone = normPhone(f.phone);
+        if (!phone) return fail("missing_fields", "The phone number looks incomplete. Ask the customer to check it (P8).", true);
+        if (!/^\d{5}$/.test(f.postcode)) return fail("missing_fields", "The postcode must be 5 digits. Ask the customer for it (A6).", true);
+        const cov = coverageOf(f.postcode);
+        if (!cov.covered) return Object.assign(fail("not_covered", cov.where === "nearby"
+          ? "Outside the approved coverage (P7, A4). Do not book. Reply with R5 and forward as outside_area."
+          : "Outstation (A5). Do not book. Forward as outstation for assessment.", false), { where: cov.where });
+        if (!SLOTS.includes(f.slot)) return fail("slot_unavailable", "Visit slots are 08:00, 10:00, 14:00 and 16:00 (W3). Offer an open slot.", true);
+
+        const state = store.load();
+        const bad = checkDate(state, f.date); if (bad) return bad;
+        const key = addressKey(f.address, f.postcode);
+        const dup = state.bookings.find((b) => b.status === "confirmed" && b.date >= today() && addressKey(b.address, b.postcode) === key);
+        if (dup) return fail("duplicate_address", "A site visit is already booked for this address (P11). Book nothing and give no details of that visit (no date, time or name). A change of date is forwarded as change_or_cancel.", false);
+        // W11: read the calendar again at the moment of saving.
+        const cell = state.days[f.date].slots[f.slot];
+        if (!cell || cell.status !== "open") {
+          const open = openSlots(state.days[f.date]);
+          return Object.assign(fail("slot_unavailable", `That slot is unavailable (R4). ${open.length ? "Offer the open slots below" : "No slot is open that day; offer nearby days"} or forward as time_not_bookable.`, true),
+            { open_same_day: open });
+        }
+
+        const ref = "HG-" + state.next_ref++;
+        const address = `${f.address.replace(/[\s,]+$/, "")} ${f.postcode}`.replace(/\s+/g, " ");
+        const booking = {
+          ref, date: f.date, slot: f.slot, window: windowText(f.slot), name: f.name, phone: prettyPhone(phone),
+          address: f.address, postcode: f.postcode, needs: f.needs, access: f.access, status: "confirmed",
+          source: "assistant", booked_at: nowIso(), contact: contactOf(ctx),
+        };
+        state.bookings.push(booking);
+        state.days[f.date].slots[f.slot] = { status: "booked", ref };
+        // Photos forwarded earlier in this conversation are linked to the visit.
+        const photos = [];
+        state.inbox.filter((i) => session.photoItems.includes(i.id) && !i.booking_ref).forEach((i) => { i.booking_ref = ref; photos.push(...i.photos); });
+        newItem(state, {
+          kind: "new_visit", category: "new_visit", ref, date: f.date, window: booking.window,
+          customer: { name: f.name, phone: booking.phone }, address, needs: f.needs, access: f.access,
+          customer_words: customerWords(ctx), photos, contact: contactOf(ctx),
+        });
+        store.save(state);
+        session.own.push(ref);
+        const confirmation = `Your site visit is confirmed for ${dateText(f.date)}, ${booking.window}, at ${address}. Your booking reference is ${ref}.`;
+        return { ok: true, booking_ref: ref, date: f.date, day: dateText(f.date), window: booking.window, address, confirmation, rules: ["P9", "P12", "W6", "W11"],
+          message: "Booked and confirmed. Give the customer the confirmation (R3) as written." };
+      },
+
+      forward_photo({ photo_ids, note }, ctx) {
+        const state = store.load();
+        const asked = (Array.isArray(photo_ids) ? photo_ids : [photo_ids]).map((x) => str(x).toUpperCase());
+        const ids = asked.filter((id) => session.uploads.includes(id) && (state.uploads || []).some((u) => u.id === id && !u.forwarded));
+        if (!ids.length) return fail("no_photo", "No photo from this conversation matches those IDs, or it was already forwarded. Only photos the customer attached here can be forwarded. Do not say a photo was passed on.", false);
+        state.uploads.forEach((u) => { if (ids.includes(u.id)) u.forwarded = true; });
+        const ref = session.own[session.own.length - 1] || "";
+        const item = newItem(state, {
+          kind: "photos", category: "photos", photos: ids, images: ids.map((id) => state.uploads.find((u) => u.id === id).image),
+          note: str(note), booking_ref: ref, customer: { name: contactOf(ctx).name, phone: contactOf(ctx).phone },
+          customer_words: customerWords(ctx), contact: contactOf(ctx),
+        });
+        if (ref) { const v = state.inbox.find((i) => i.kind === "new_visit" && i.ref === ref); if (v) v.photos.push(...ids); }
+        store.save(state);
+        session.photoItems.push(item);
+        return { ok: true, forwarded: ids, inbox_item: item, booking_ref: ref || null, rules: ["P13", "P14"],
+          message: "Forwarded unchanged. Tell the customer the photo has been passed to Pak Razif (R2). Do not describe or measure it." };
+      },
+
+      hand_to_pak_razif(input, ctx) {
+        const reason = str(input.reason);
+        if (!HANDOVER_REASONS[reason]) return fail("missing_fields", "reason must be one of: " + REASON_IDS.join(", "), true);
+        const asked = str(input.what_was_asked), told = str(input.told_customer), next = str(input.recommended_next_step);
+        const missing = [["what_was_asked", asked], ["told_customer", told], ["recommended_next_step", next]].filter(([, v]) => v.length < 8).map(([k]) => k);
+        if (missing.length) return fail("missing_fields", `Pak Razif cannot see this chat. Fill in: ${missing.join(", ")}, one line each (P32).`, true);
+        const state = store.load();
+        const c = contactOf(ctx);
+        const photos = state.inbox.filter((i) => session.photoItems.includes(i.id)).flatMap((i) => i.photos);
+        const id = newItem(state, {
+          kind: "handover", category: reason, reason, reason_label: HANDOVER_REASONS[reason].label, rules: HANDOVER_REASONS[reason].rules,
+          customer: { name: c.name, phone: c.phone }, customer_words: customerWords(ctx),
+          address: str(input.address), what_was_asked: asked, preferred_time: str(input.preferred_time),
+          told_customer: told, recommended_next_step: next, photos, contact: c,
+        });
+        store.save(state);
+        return { ok: true, inbox_item: id, rules: HANDOVER_REASONS[reason].rules.concat(["P33"]),
+          message: "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when." };
+      },
+
+      eta_contact_check({ booking_ref, phone_last4 }) {
+        const last4 = str(phone_last4);
+        if (!/^\d{4}$/.test(last4)) return fail("invalid_input", "phone_last4 must be exactly 4 digits. Ask the customer.", true);
+        const state = store.load();
+        const ref = normRef(booking_ref);
+        const b = state.bookings.find((x) => x.ref === ref);
+        if (!b || b.status !== "confirmed" || b.date < today() || digits(b.phone).slice(-4) !== last4)
+          return fail("no_match", "Those details do not match an upcoming visit. Reply with R12. Do not give the duty number or any booking detail.", true);
+        return { ok: true, duty_number: state.duty_number, rules: ["P15", "P18"],
+          message: "Give the customer this number to call for the latest update. Give no arrival time, location or reason for a delay (P17)." };
+      },
+    };
+
+    function call(name, input, ctx) {
+      const h = handlers[name];
+      const c = ctx || { turn: 0, uploads: [] };
+      remember(c);
+      if (!h) return fail("unknown_tool", `No tool named ${name}.`, false);
+      try { return h(input || {}, c); }
+      catch (e) { return fail("system_unavailable", "The tool failed. Forward the enquiry with hand_to_pak_razif, reason asks_for_him_or_unclear.", false); }
+    }
+    // The host calls this once per customer message, so the session records the words and
+    // photos even when no tool is called.
+    function begin(ctx) { remember(ctx || {}); }
+
+    return { tools: TOOL_DEFINITIONS, call, begin, session };
+  }
+
+  // ---------- host actions: what the page or benchmark records, never the model ----------
+
+  // The customer attached a photo: store it and return the photo ID shown to Claude in its place.
+  function registerUpload(store, image, now) {
+    const state = store.load();
+    state.uploads = state.uploads || [];
+    const id = "PH-" + String(state.uploads.length + 1).padStart(3, "0");
+    state.uploads.push({ id, image, uploaded_at: now || DEFAULT_NOW, forwarded: false });
+    store.save(state);
+    return id;
+  }
+
+  // ---------- Pak Razif's actions (his page): no messages are sent by these ----------
+
+  const OWNER = {
+    // Done (Seen for a new visit): the item moves to the closed list.
+    done(state, id, now) {
+      const i = state.inbox.find((x) => x.id === id);
+      if (!i || i.status !== "open") return fail("not_open", "No open inbox item with that ID.", false);
+      i.status = "done"; i.closed_at = now || DEFAULT_NOW;
+      return { ok: true };
+    },
+    // Tap an open slot to block it; tap any blocked slot, field work included, to open it
+    // (P38, W10): his calendar is his to run. Booked slots hold a customer and are not changed here.
+    toggleSlot(state, date, slot) {
+      const day = state.days[date];
+      const cell = day && day.slots[slot];
+      if (!cell) return fail("no_slot", "No such slot.", false);
+      if (cell.status === "open") { day.slots[slot] = { status: "blocked", reason: "Blocked by Pak Razif" }; return { ok: true, status: "blocked" }; }
+      if (cell.status === "blocked") { day.slots[slot] = { status: "open" }; return { ok: true, status: "open" }; }
+      return fail("not_changeable", "A booked visit is changed with the customer, not here.", false);
+    },
+  };
+
+  // Resources as the MCP server exposes them.
+  const RESOURCE_LIST = [
+    { uri: "resource://operation", name: "Operation Policy", mimeType: "text/markdown", key: "operation", file: "Operation Policy.md" },
+    { uri: "resource://work-schedule", name: "Work Schedule", mimeType: "text/markdown", key: "work_schedule", file: "Work Schedule.md" },
+    { uri: "resource://quotation", name: "Quotation Policy", mimeType: "text/markdown", key: "quotation", file: "Quotation Policy.md" },
+    { uri: "resource://service-area", name: "Service Area", mimeType: "text/markdown", key: "service_area", file: "Service Area.md" },
+    { uri: "resource://site-visit", name: "Site Visit Guide", mimeType: "text/markdown", key: "site_visit", file: "Site Visit Guide.md" },
+    { uri: "resource://faq", name: "FAQ", mimeType: "text/markdown", key: "faq", file: "FAQ.md" },
+  ];
+
+  return {
+    createAssistant, registerUpload, OWNER, TOOL_DEFINITIONS, TOOL_CHECKS, RESOURCE_LIST,
+    HANDOVER_REASONS, REASON_IDS, BUSINESS, SLOTS, DEFAULT_NOW,
+    helpers: { dateText, windowText, addDays, sameDateNextMonth, addressKey, coverageOf, normRef, digits },
+  };
+});
+</script>
+<script>
+"use strict";
+const SEED = {"business":"Pak Razif Garden","months":["2026-10","2026-11"],"now":"2026-10-17T10:00","first_contact":"2026-10-17","duty_number":"012-555 0188","window":{"from":"2026-10-18","to":"2026-11-17"},"slots":["08:00","10:00","14:00","16:00"],"visit_minutes":30,"buffer_minutes":30,"max_visits_per_day":4,"days":{"2026-10-01":{"date":"2026-10-01","weekday":"Thu","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1001"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":false},"2026-10-02":{"date":"2026-10-02","weekday":"Fri","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting","area":"Bukit Tinggi, Klang"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"booked","ref":"HG-1002"},"16:00":{"status":"open"}},"bookable":false},"2026-10-03":{"date":"2026-10-03","weekday":"Sat","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"blocked","reason":"Blocked by Pak Razif"}},"bookable":false},"2026-10-04":{"date":"2026-10-04","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-10-05":{"date":"2026-10-05","weekday":"Mon","closed":null,"field":[{"start":"16:00","end":"18:00","work":"Garden waste removal","area":"Seksyen 7, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Blocked by Pak Razif"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-10-06":{"date":"2026-10-06","weekday":"Tue","closed":null,"field":[{"start":"10:00","end":"12:00","work":"Garden clean-up","area":"Bukit Tinggi, Klang"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":false},"2026-10-07":{"date":"2026-10-07","weekday":"Wed","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Garden clean-up","area":"Seksyen 13, Shah Alam"},{"start":"14:00","end":"18:00","work":"Garden clean-up","area":"SS15, Subang Jaya"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-10-08":{"date":"2026-10-08","weekday":"Thu","closed":null,"field":[{"start":"16:00","end":"18:00","work":"Grass cutting and edge trimming","area":"Seksyen 7, Shah Alam"}],"slots":{"08:00":{"status":"booked","ref":"HG-1003"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-10-09":{"date":"2026-10-09","weekday":"Fri","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Garden waste removal","area":"Seksyen 13, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":false},"2026-10-10":{"date":"2026-10-10","weekday":"Sat","closed":null,"field":[{"start":"10:00","end":"12:00","work":"Grass cutting and edge trimming","area":"Seksyen 13, Shah Alam"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"booked","ref":"HG-1004"},"16:00":{"status":"open"}},"bookable":false},"2026-10-11":{"date":"2026-10-11","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-10-12":{"date":"2026-10-12","weekday":"Mon","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting","area":"Seksyen 9, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Blocked by Pak Razif"},"16:00":{"status":"booked","ref":"HG-1005"}},"bookable":false},"2026-10-13":{"date":"2026-10-13","weekday":"Tue","closed":null,"field":[],"slots":{"08:00":{"status":"booked","ref":"HG-1006"},"10:00":{"status":"blocked","reason":"Blocked by Pak Razif"},"14:00":{"status":"open"},"16:00":{"status":"booked","ref":"HG-1007"}},"bookable":false},"2026-10-14":{"date":"2026-10-14","weekday":"Wed","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting","area":"Seksyen 9, Shah Alam"},{"start":"14:00","end":"18:00","work":"Grass cutting","area":"Seksyen 9, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-10-15":{"date":"2026-10-15","weekday":"Thu","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Hedge and bush trimming","area":"Bukit Tinggi, Klang"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"booked","ref":"HG-1008"},"16:00":{"status":"open"}},"bookable":false},"2026-10-16":{"date":"2026-10-16","weekday":"Fri","closed":null,"field":[{"start":"14:00","end":"17:30","work":"Garden clean-up","area":"Kota Kemuning, Shah Alam"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1009"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-10-17":{"date":"2026-10-17","weekday":"Sat","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Garden clean-up","area":"USJ 6, Subang Jaya"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"open"},"16:00":{"status":"booked","ref":"HG-1010"}},"bookable":false},"2026-10-18":{"date":"2026-10-18","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-10-19":{"date":"2026-10-19","weekday":"Mon","closed":null,"field":[],"slots":{"08:00":{"status":"booked","ref":"HG-1011"},"10:00":{"status":"booked","ref":"HG-1012"},"14:00":{"status":"booked","ref":"HG-1013"},"16:00":{"status":"booked","ref":"HG-1014"}},"bookable":true},"2026-10-20":{"date":"2026-10-20","weekday":"Tue","closed":null,"field":[{"start":"15:00","end":"18:00","work":"Hedge and bush trimming","area":"Kota Kemuning, Shah Alam"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1015"},"14:00":{"status":"open"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-10-21":{"date":"2026-10-21","weekday":"Wed","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Hedge and bush trimming","area":"Bukit Raja, Klang"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"booked","ref":"HG-1016"},"16:00":{"status":"open"}},"bookable":true},"2026-10-22":{"date":"2026-10-22","weekday":"Thu","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"open"},"14:00":{"status":"blocked","reason":"Family commitment"},"16:00":{"status":"blocked","reason":"Family commitment"}},"bookable":true},"2026-10-23":{"date":"2026-10-23","weekday":"Fri","closed":null,"field":[],"slots":{"08:00":{"status":"booked","ref":"HG-1017"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":true},"2026-10-24":{"date":"2026-10-24","weekday":"Sat","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1018"},"14:00":{"status":"booked","ref":"HG-1019"},"16:00":{"status":"booked","ref":"HG-1020"}},"bookable":true},"2026-10-25":{"date":"2026-10-25","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-10-26":{"date":"2026-10-26","weekday":"Mon","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Hedge and bush trimming","area":"Setia Alam, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":true},"2026-10-27":{"date":"2026-10-27","weekday":"Tue","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Hedge and bush trimming","area":"Alam Impian, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"booked","ref":"HG-1021"},"16:00":{"status":"booked","ref":"HG-1022"}},"bookable":true},"2026-10-28":{"date":"2026-10-28","weekday":"Wed","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1023"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":true},"2026-10-29":{"date":"2026-10-29","weekday":"Thu","closed":null,"field":[{"start":"14:00","end":"18:00","work":"Garden waste removal","area":"Alam Impian, Shah Alam"}],"slots":{"08:00":{"status":"booked","ref":"HG-1024"},"10:00":{"status":"blocked","reason":"Blocked by Pak Razif"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-10-30":{"date":"2026-10-30","weekday":"Fri","closed":null,"field":[{"start":"10:00","end":"12:00","work":"Garden clean-up","area":"Seksyen 7, Shah Alam"},{"start":"16:00","end":"18:00","work":"Hedge and bush trimming","area":"Bandar Botanic, Klang"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"open"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-10-31":{"date":"2026-10-31","weekday":"Sat","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting","area":"Bukit Jelutong, Shah Alam"},{"start":"14:00","end":"18:00","work":"Garden clean-up","area":"SS15, Subang Jaya"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-11-01":{"date":"2026-11-01","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-11-02":{"date":"2026-11-02","weekday":"Mon","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"open"},"14:00":{"status":"booked","ref":"HG-1025"},"16:00":{"status":"open"}},"bookable":true},"2026-11-03":{"date":"2026-11-03","weekday":"Tue","closed":null,"field":[{"start":"10:00","end":"12:00","work":"Garden clean-up","area":"Bandar Botanic, Klang"}],"slots":{"08:00":{"status":"booked","ref":"HG-1026"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"booked","ref":"HG-1027"},"16:00":{"status":"booked","ref":"HG-1028"}},"bookable":true},"2026-11-04":{"date":"2026-11-04","weekday":"Wed","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Garden waste removal","area":"Seksyen 7, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"booked","ref":"HG-1029"},"16:00":{"status":"booked","ref":"HG-1030"}},"bookable":true},"2026-11-05":{"date":"2026-11-05","weekday":"Thu","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":true},"2026-11-06":{"date":"2026-11-06","weekday":"Fri","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1031"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":true},"2026-11-07":{"date":"2026-11-07","weekday":"Sat","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting","area":"Setia Alam, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":true},"2026-11-08":{"date":"2026-11-08","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-11-09":{"date":"2026-11-09","weekday":"Mon","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting and edge trimming","area":"Bukit Raja, Klang"},{"start":"14:00","end":"18:00","work":"Grass cutting and edge trimming","area":"Setia Alam, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-11-10":{"date":"2026-11-10","weekday":"Tue","closed":null,"field":[{"start":"14:00","end":"18:00","work":"Grass cutting and edge trimming","area":"Setia Alam, Shah Alam"}],"slots":{"08:00":{"status":"booked","ref":"HG-1045"},"10:00":{"status":"booked","ref":"HG-1032"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-11-11":{"date":"2026-11-11","weekday":"Wed","closed":null,"field":[],"slots":{"08:00":{"status":"booked","ref":"HG-1033"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"booked","ref":"HG-1034"}},"bookable":true},"2026-11-12":{"date":"2026-11-12","weekday":"Thu","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Hedge and bush trimming","area":"Setia Alam, Shah Alam"},{"start":"14:00","end":"18:00","work":"Grass cutting and edge trimming","area":"USJ 6, Subang Jaya"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-11-13":{"date":"2026-11-13","weekday":"Fri","closed":null,"field":[],"slots":{"08:00":{"status":"booked","ref":"HG-1035"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":true},"2026-11-14":{"date":"2026-11-14","weekday":"Sat","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Garden waste removal","area":"Seksyen 7, Shah Alam"},{"start":"14:00","end":"18:00","work":"Hedge and bush trimming","area":"Bukit Jelutong, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-11-15":{"date":"2026-11-15","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-11-16":{"date":"2026-11-16","weekday":"Mon","closed":null,"field":[{"start":"14:00","end":"18:00","work":"Hedge and bush trimming","area":"Kota Kemuning, Shah Alam"}],"slots":{"08:00":{"status":"booked","ref":"HG-1036"},"10:00":{"status":"booked","ref":"HG-1037"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-11-17":{"date":"2026-11-17","weekday":"Tue","closed":null,"field":[{"start":"14:00","end":"18:00","work":"Garden clean-up","area":"Seksyen 13, Shah Alam"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"blocked","reason":"Blocked by Pak Razif"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":true},"2026-11-18":{"date":"2026-11-18","weekday":"Wed","closed":null,"field":[{"start":"14:00","end":"18:00","work":"Garden waste removal","area":"Bukit Raja, Klang"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1038"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-11-19":{"date":"2026-11-19","weekday":"Thu","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"booked","ref":"HG-1039"}},"bookable":false},"2026-11-20":{"date":"2026-11-20","weekday":"Fri","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Garden waste removal","area":"Bukit Raja, Klang"},{"start":"14:00","end":"18:00","work":"Hedge and bush trimming","area":"Kota Kemuning, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Field work"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-11-21":{"date":"2026-11-21","weekday":"Sat","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1040"},"14:00":{"status":"booked","ref":"HG-1041"},"16:00":{"status":"open"}},"bookable":false},"2026-11-22":{"date":"2026-11-22","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-11-23":{"date":"2026-11-23","weekday":"Mon","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting","area":"Seksyen 7, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Blocked by Pak Razif"},"16:00":{"status":"open"}},"bookable":false},"2026-11-24":{"date":"2026-11-24","weekday":"Tue","closed":null,"field":[{"start":"16:00","end":"18:00","work":"Grass cutting and edge trimming","area":"Bukit Jelutong, Shah Alam"}],"slots":{"08:00":{"status":"open"},"10:00":{"status":"booked","ref":"HG-1042"},"14:00":{"status":"open"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false},"2026-11-25":{"date":"2026-11-25","weekday":"Wed","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":false},"2026-11-26":{"date":"2026-11-26","weekday":"Thu","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Grass cutting","area":"Kota Kemuning, Shah Alam"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"blocked","reason":"Blocked by Pak Razif"},"16:00":{"status":"open"}},"bookable":false},"2026-11-27":{"date":"2026-11-27","weekday":"Fri","closed":null,"field":[],"slots":{"08:00":{"status":"open"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"booked","ref":"HG-1043"}},"bookable":false},"2026-11-28":{"date":"2026-11-28","weekday":"Sat","closed":null,"field":[],"slots":{"08:00":{"status":"booked","ref":"HG-1044"},"10:00":{"status":"open"},"14:00":{"status":"open"},"16:00":{"status":"open"}},"bookable":false},"2026-11-29":{"date":"2026-11-29","weekday":"Sun","closed":"Sunday rest day","field":[],"slots":{},"bookable":false},"2026-11-30":{"date":"2026-11-30","weekday":"Mon","closed":null,"field":[{"start":"08:00","end":"12:00","work":"Garden clean-up","area":"Bukit Raja, Klang"},{"start":"16:00","end":"18:00","work":"Grass cutting","area":"SS15, Subang Jaya"}],"slots":{"08:00":{"status":"blocked","reason":"Field work"},"10:00":{"status":"blocked","reason":"Field work"},"14:00":{"status":"open"},"16:00":{"status":"blocked","reason":"Field work"}},"bookable":false}},"bookings":[{"ref":"HG-1001","date":"2026-10-01","slot":"10:00","window":"10:00 to 10:30","name":"Nurul Izzah Rahman","phone":"012-227 5078","address":"25, Jalan Kemboja 5, SS15, Subang Jaya","postcode":"47500","needs":"Bushes overgrown near the gate","access":"Side gate open, no pets","status":"visited"},{"ref":"HG-1002","date":"2026-10-02","slot":"14:00","window":"14:00 to 14:30","name":"Priya Nair","phone":"016-752 3023","address":"57, Jalan Cempaka 5, SS15, Subang Jaya","postcode":"47500","needs":"Monthly grass cutting, want to discuss","access":"Gate unlocked, dog kept indoors","status":"visited"},{"ref":"HG-1003","date":"2026-10-08","slot":"08:00","window":"08:00 to 08:30","name":"Aminah Yusof","phone":"018-962 5464","address":"31, Jalan Kenari 12, Kota Kemuning, Shah Alam","postcode":"40460","needs":"Overgrown lawn, not cut for three months","access":"Park outside, gate code given on the day","status":"visited"},{"ref":"HG-1004","date":"2026-10-10","slot":"14:00","window":"14:00 to 14:30","name":"Tan Wei Ming","phone":"019-512 6169","address":"52, Jalan Seroja 1, Setia Alam, Shah Alam","postcode":"40170","needs":"Garden clean-up after renovation","access":"Side gate open, no pets","status":"visited"},{"ref":"HG-1005","date":"2026-10-12","slot":"16:00","window":"16:00 to 16:30","name":"Wong Kok Leong","phone":"014-745 5345","address":"37, Jalan Melur 5, SS15, Subang Jaya","postcode":"47500","needs":"Grass cutting for front and back lawn","access":"Side gate open, no pets","status":"visited"},{"ref":"HG-1006","date":"2026-10-13","slot":"08:00","window":"08:00 to 08:30","name":"Priya Nair","phone":"014-694 6214","address":"53, Jalan Teratai 6, Bandar Botanic, Klang","postcode":"41200","needs":"Grass cutting for front and back lawn","access":"Call on arrival","status":"visited"},{"ref":"HG-1007","date":"2026-10-13","slot":"16:00","window":"16:00 to 16:30","name":"Daniel Lee","phone":"017-254 6386","address":"38, Jalan Melur 9, Bukit Raja, Klang","postcode":"41050","needs":"Overgrown lawn, not cut for three months","access":"Call on arrival","status":"visited"},{"ref":"HG-1008","date":"2026-10-15","slot":"14:00","window":"14:00 to 14:30","name":"Rosnah Ali","phone":"018-663 1198","address":"19, Jalan Dahlia 3, Bukit Tinggi, Klang","postcode":"41200","needs":"Grass cutting for front and back lawn","access":"Side gate open, no pets","status":"visited"},{"ref":"HG-1009","date":"2026-10-16","slot":"10:00","window":"10:00 to 10:30","name":"Tan Wei Ming","phone":"015-300 9480","address":"43, Jalan Kenari 1, Setia Alam, Shah Alam","postcode":"40170","needs":"Hedge trimming along the fence","access":"Side gate open, no pets","status":"visited"},{"ref":"HG-1010","date":"2026-10-17","slot":"16:00","window":"16:00 to 16:30","name":"Priya Nair","phone":"012-996 1428","address":"30, Jalan Mawar 4, Bukit Raja, Klang","postcode":"41050","needs":"Grass cutting for front and back lawn","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1011","date":"2026-10-19","slot":"08:00","window":"08:00 to 08:30","name":"Kavitha Raj","phone":"011-956 9833","address":"4, Jalan Teratai 9, Seksyen 9, Shah Alam","postcode":"40100","needs":"Grass cutting and garden waste removal","access":"Park outside, gate code given on the day","status":"confirmed"},{"ref":"HG-1012","date":"2026-10-19","slot":"10:00","window":"10:00 to 10:30","name":"Grace Teoh","phone":"019-795 7826","address":"26, Jalan Kenari 9, Kota Kemuning, Shah Alam","postcode":"40460","needs":"Bushes overgrown near the gate","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1013","date":"2026-10-19","slot":"14:00","window":"14:00 to 14:30","name":"Tan Wei Ming","phone":"015-533 6269","address":"8, Jalan Seroja 3, USJ 6, Subang Jaya","postcode":"47610","needs":"Overgrown lawn, not cut for three months","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1014","date":"2026-10-19","slot":"16:00","window":"16:00 to 16:30","name":"Ong Boon Hock","phone":"012-461 5095","address":"5, Jalan Kemboja 5, Bukit Jelutong, Shah Alam","postcode":"40150","needs":"Overgrown lawn, not cut for three months","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1015","date":"2026-10-20","slot":"10:00","window":"10:00 to 10:30","name":"Daniel Lee","phone":"013-500 2363","address":"28, Jalan Anggerik 9, Setia Alam, Shah Alam","postcode":"40170","needs":"Monthly grass cutting, want to discuss","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1016","date":"2026-10-21","slot":"14:00","window":"14:00 to 14:30","name":"Rosnah Ali","phone":"013-368 9762","address":"60, Jalan Seroja 8, SS15, Subang Jaya","postcode":"47500","needs":"Grass cutting and garden waste removal","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1017","date":"2026-10-23","slot":"08:00","window":"08:00 to 08:30","name":"Yap Hui Min","phone":"014-372 3472","address":"50, Jalan Teratai 7, Seksyen 9, Shah Alam","postcode":"40100","needs":"Bushes overgrown near the gate","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1018","date":"2026-10-24","slot":"10:00","window":"10:00 to 10:30","name":"Grace Teoh","phone":"011-850 3005","address":"22, Jalan Anggerik 2, Setia Alam, Shah Alam","postcode":"40170","needs":"Monthly grass cutting, want to discuss","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1019","date":"2026-10-24","slot":"14:00","window":"14:00 to 14:30","name":"Zainal Abidin","phone":"014-374 2156","address":"60, Jalan Dahlia 2, Bukit Tinggi, Klang","postcode":"41200","needs":"Grass cutting and garden waste removal","access":"Park outside, gate code given on the day","status":"confirmed"},{"ref":"HG-1020","date":"2026-10-24","slot":"16:00","window":"16:00 to 16:30","name":"Hafiz Ismail","phone":"013-353 5358","address":"20, Jalan Kemboja 6, Bandar Botanic, Klang","postcode":"41200","needs":"Garden clean-up after renovation","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1021","date":"2026-10-27","slot":"14:00","window":"14:00 to 14:30","name":"Aminah Yusof","phone":"011-782 1984","address":"23, Jalan Anggerik 7, Kota Kemuning, Shah Alam","postcode":"40460","needs":"Monthly grass cutting, want to discuss","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1022","date":"2026-10-27","slot":"16:00","window":"16:00 to 16:30","name":"Khoo Chee Keong","phone":"015-660 3659","address":"49, Jalan Kemboja 4, Bukit Jelutong, Shah Alam","postcode":"40150","needs":"Overgrown lawn, not cut for three months","access":"Someone home, ring the bell","status":"confirmed"},{"ref":"HG-1023","date":"2026-10-28","slot":"10:00","window":"10:00 to 10:30","name":"Ong Boon Hock","phone":"014-563 9202","address":"51, Jalan Melur 10, Seksyen 9, Shah Alam","postcode":"40100","needs":"Corner lot lawn and side garden","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1024","date":"2026-10-29","slot":"08:00","window":"08:00 to 08:30","name":"Khoo Chee Keong","phone":"014-534 7322","address":"60, Jalan Teratai 3, Kota Kemuning, Shah Alam","postcode":"40460","needs":"Corner lot lawn and side garden","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1025","date":"2026-11-02","slot":"14:00","window":"14:00 to 14:30","name":"Rosnah Ali","phone":"015-747 2174","address":"46, Jalan Kenari 5, USJ 6, Subang Jaya","postcode":"47610","needs":"Grass cutting and garden waste removal","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1026","date":"2026-11-03","slot":"08:00","window":"08:00 to 08:30","name":"Grace Teoh","phone":"014-208 2860","address":"23, Jalan Mawar 3, Bandar Botanic, Klang","postcode":"41200","needs":"Monthly grass cutting, want to discuss","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1027","date":"2026-11-03","slot":"14:00","window":"14:00 to 14:30","name":"Rosnah Ali","phone":"012-241 7418","address":"8, Jalan Anggerik 3, Bukit Raja, Klang","postcode":"41050","needs":"Overgrown lawn, not cut for three months","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1028","date":"2026-11-03","slot":"16:00","window":"16:00 to 16:30","name":"Tan Wei Ming","phone":"015-218 2740","address":"50, Jalan Cempaka 3, Bandar Botanic, Klang","postcode":"41200","needs":"Corner lot lawn and side garden","access":"Someone home, ring the bell","status":"confirmed"},{"ref":"HG-1029","date":"2026-11-04","slot":"14:00","window":"14:00 to 14:30","name":"Hafiz Ismail","phone":"019-971 6298","address":"48, Jalan Anggerik 1, Seksyen 9, Shah Alam","postcode":"40100","needs":"Corner lot lawn and side garden","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1030","date":"2026-11-04","slot":"16:00","window":"16:00 to 16:30","name":"Azlan Shah Omar","phone":"018-504 3013","address":"47, Jalan Kekwa 11, Bukit Tinggi, Klang","postcode":"41200","needs":"Garden clean-up after renovation","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1031","date":"2026-11-06","slot":"10:00","window":"10:00 to 10:30","name":"Daniel Lee","phone":"017-623 5315","address":"37, Jalan Teratai 10, Bandar Botanic, Klang","postcode":"41200","needs":"Monthly grass cutting, want to discuss","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1032","date":"2026-11-10","slot":"10:00","window":"10:00 to 10:30","name":"Tan Wei Ming","phone":"015-929 6926","address":"54, Jalan Kemboja 7, Bukit Jelutong, Shah Alam","postcode":"40150","needs":"Grass cutting for front and back lawn","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1033","date":"2026-11-11","slot":"08:00","window":"08:00 to 08:30","name":"Hafiz Ismail","phone":"013-566 6194","address":"39, Jalan Teratai 5, Bukit Raja, Klang","postcode":"41050","needs":"Corner lot lawn and side garden","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1034","date":"2026-11-11","slot":"16:00","window":"16:00 to 16:30","name":"Lim Mei Ling","phone":"011-340 8439","address":"33, Jalan Melur 12, Seksyen 9, Shah Alam","postcode":"40100","needs":"Corner lot lawn and side garden","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1035","date":"2026-11-13","slot":"08:00","window":"08:00 to 08:30","name":"Khoo Chee Keong","phone":"018-680 2468","address":"12, Jalan Cempaka 4, Bukit Jelutong, Shah Alam","postcode":"40150","needs":"Corner lot lawn and side garden","access":"Someone home, ring the bell","status":"confirmed"},{"ref":"HG-1036","date":"2026-11-16","slot":"08:00","window":"08:00 to 08:30","name":"Daniel Lee","phone":"013-366 1156","address":"32, Jalan Kenari 12, Setia Alam, Shah Alam","postcode":"40170","needs":"Corner lot lawn and side garden","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1037","date":"2026-11-16","slot":"10:00","window":"10:00 to 10:30","name":"Hafiz Ismail","phone":"019-754 8630","address":"38, Jalan Kenari 1, Alam Impian, Shah Alam","postcode":"40470","needs":"Hedge trimming along the fence","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1038","date":"2026-11-18","slot":"10:00","window":"10:00 to 10:30","name":"Azlan Shah Omar","phone":"017-421 3767","address":"37, Jalan Kekwa 7, Bukit Jelutong, Shah Alam","postcode":"40150","needs":"Grass cutting and garden waste removal","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1039","date":"2026-11-19","slot":"16:00","window":"16:00 to 16:30","name":"Tan Wei Ming","phone":"011-949 5976","address":"51, Jalan Cempaka 2, Kota Kemuning, Shah Alam","postcode":"40460","needs":"Bushes overgrown near the gate","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1040","date":"2026-11-21","slot":"10:00","window":"10:00 to 10:30","name":"Wong Kok Leong","phone":"019-397 9596","address":"42, Jalan Cempaka 7, Seksyen 7, Shah Alam","postcode":"40000","needs":"Overgrown lawn, not cut for three months","access":"Side gate open, no pets","status":"confirmed"},{"ref":"HG-1041","date":"2026-11-21","slot":"14:00","window":"14:00 to 14:30","name":"Suresh Pillai","phone":"015-744 3853","address":"22, Jalan Anggerik 3, Bukit Jelutong, Shah Alam","postcode":"40150","needs":"Bushes overgrown near the gate","access":"Park outside, gate code given on the day","status":"confirmed"},{"ref":"HG-1042","date":"2026-11-24","slot":"10:00","window":"10:00 to 10:30","name":"Azlan Shah Omar","phone":"016-464 9369","address":"24, Jalan Dahlia 12, Bukit Raja, Klang","postcode":"41050","needs":"Overgrown lawn, not cut for three months","access":"Gate unlocked, dog kept indoors","status":"confirmed"},{"ref":"HG-1043","date":"2026-11-27","slot":"16:00","window":"16:00 to 16:30","name":"Chong Siew Lan","phone":"019-261 1082","address":"17, Jalan Seroja 1, Bukit Tinggi, Klang","postcode":"41200","needs":"Overgrown lawn, not cut for three months","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1044","date":"2026-11-28","slot":"08:00","window":"08:00 to 08:30","name":"Grace Teoh","phone":"011-404 5903","address":"33, Jalan Dahlia 9, Bukit Raja, Klang","postcode":"41050","needs":"Overgrown lawn, not cut for three months","access":"Call on arrival","status":"confirmed"},{"ref":"HG-1045","date":"2026-11-10","slot":"08:00","window":"08:00 to 08:30","name":"Aminah Yusof","phone":"012-345 6789","address":"7 Jalan Melur 2, Seksyen 7, Shah Alam","postcode":"40000","needs":"hedge trimming","access":"gate unlocked","status":"confirmed","source":"assistant","booked_at":"2026-10-17T10:00","contact":{"channel":"WhatsApp","chat_id":"WA-E7","name":"WhatsApp customer","phone":"019-555 1025"}}],"next_ref":1046,"inbox":[{"id":"IN-001","status":"open","received":"2026-10-17T07:42","kind":"handover","category":"change_or_cancel","reason":"change_or_cancel","reason_label":"Change or cancel","rules":["P28","P16"],"customer":{"name":"Daniel Lee","phone":"013-500 2363"},"customer_words":"Please move my confirmed visit to Friday.","address":"","what_was_asked":"Move the customer's confirmed site visit to Friday (no booking reference or address given in chat)","preferred_time":"Friday (date not specified; presumably Fri 23 Oct 2026)","told_customer":"R10: request to move the visit passed on; Pak Razif will get back to them. Existing visit stays booked until he changes it.","recommended_next_step":"Contact the customer to confirm which visit and agree a Friday slot (likely Fri 23 Oct; confirm the date).","photos":[],"contact":{"channel":"WhatsApp","chat_id":"WA-13","name":"Daniel Lee","phone":"013-500 2363"}},{"id":"IN-002","status":"open","received":"2026-10-17T08:05","kind":"handover","category":"price_request","reason":"price_request","reason_label":"Price request","rules":["P23","Q3"],"customer":{"name":"Farah Hamzah","phone":"012-718 4402"},"customer_words":"Give me a rough price, including transport and tax.","address":"","what_was_asked":"Rough price including transport charge and tax (no job details or address given yet)","preferred_time":"","told_customer":"R1: quotation, transport and tax confirmed after a site visit; offered to book a free visit","recommended_next_step":"Contact customer for job details and address; quote after a site visit, which the customer may book","photos":[],"contact":{"channel":"WhatsApp","chat_id":"WA-6","name":"WhatsApp customer","phone":"019-555 1005"}},{"id":"IN-003","status":"open","received":"2026-10-17T08:31","kind":"photos","category":"photos","photos":["PH-001","PH-002"],"images":["images/pak-razif-the-gardener/demo/P1 front lawn.jpeg","images/pak-razif-the-gardener/demo/P2 side garden.jpeg"],"note":"Customer sent photos of their garden as a gardening enquiry; no other details yet.","booking_ref":"","customer":{"name":"Kumar Selvam","phone":"016-930 2217"},"customer_words":"Here are photos of my garden.","contact":{"channel":"WhatsApp","chat_id":"WA-5","name":"WhatsApp customer","phone":"019-555 1004"}},{"id":"IN-004","status":"open","received":"2026-10-17T08:48","kind":"handover","category":"outside_area","reason":"outside_area","reason_label":"Outside the area","rules":["P25","A4"],"customer":{"name":"Hafizah Rahim","phone":"013-622 9081"},"customer_words":"My area is near Klang but isn't listed. 42000, I need grass cutting.","address":"Postcode 42000 (near Klang); full address not given yet","what_was_asked":"Grass cutting at a location near Klang, postcode 42000 (outside coverage); wants approval/site visit","preferred_time":"","told_customer":"R5: location needs Pak Razif's approval; request passed on, he will get back; asked for full address and work details","recommended_next_step":"Contact the customer to get the full address and job details, then decide whether to approve a visit","photos":[],"contact":{"channel":"WhatsApp","chat_id":"WA-11","name":"WhatsApp customer","phone":"019-555 1010"}},{"id":"IN-005","status":"open","received":"2026-10-17T09:02","kind":"new_visit","category":"new_visit","ref":"HG-1045","date":"2026-11-10","window":"08:00 to 08:30","customer":{"name":"Aminah Yusof","phone":"012-345 6789"},"address":"7 Jalan Melur 2, Seksyen 7, Shah Alam 40000","needs":"hedge trimming","access":"gate unlocked","customer_words":"Book Tuesday 10 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked.","photos":[],"contact":{"channel":"WhatsApp","chat_id":"WA-E7","name":"WhatsApp customer","phone":"019-555 1025"}},{"id":"IN-006","status":"open","received":"2026-10-17T09:20","kind":"handover","category":"after_visit","reason":"after_visit","reason_label":"After the visit","rules":["P29","Q5"],"customer":{"name":"Tan Wei Ming","phone":"015-300 9480"},"customer_words":"Pak Razif visited yesterday. When can work start?","address":"","what_was_asked":"Customer says Pak Razif visited yesterday (Fri 16 Oct) and asks when the work can start.","preferred_time":"","told_customer":"Request passed on; Pak Razif agrees the work date directly with the customer and will get back to them.","recommended_next_step":"Contact the customer to follow up on the quotation and agree a work date.","photos":[],"contact":{"channel":"WhatsApp","chat_id":"WA-15","name":"Tan Wei Ming","phone":"015-300 9480"}},{"id":"IN-007","status":"open","received":"2026-10-17T09:37","kind":"handover","category":"unusual_work","reason":"unusual_work","reason_label":"Unusual work","rules":["P24","P6"],"customer":{"name":"Jason Ong","phone":"017-245 6630"},"customer_words":"Can you set up a drip irrigation system for my plants? 7 Jalan Melur 2, Seksyen 7, 40000.","address":"7 Jalan Melur 2, Seksyen 7, 40000","what_was_asked":"Set up a drip irrigation system for the customer's plants (not among the general services)","preferred_time":"","told_customer":"Request passed on for assessment; offered a free site visit; no promise whether he will take the work","recommended_next_step":"Assess the drip irrigation request and contact the customer; a site visit can be booked if the customer wants one","photos":[],"contact":{"channel":"WhatsApp","chat_id":"WA-E11","name":"WhatsApp customer","phone":"019-555 1029"}},{"id":"IN-008","status":"open","received":"2026-10-17T09:51","kind":"handover","category":"complaint_or_payment","reason":"complaint_or_payment","reason_label":"Complaint or payment","rules":["P30","P35","P21"],"customer":{"name":"Melissa Chan","phone":"011-508 7714"},"customer_words":"Your worker damaged my fence.\nThe side fence near the gate is bent, it happened on Friday.","address":"","what_was_asked":"Complaint: customer says a worker damaged their side fence near the gate, which is bent. It happened on Friday (16 Oct).","preferred_time":"","told_customer":"Apologised; complaint passed on and Pak Razif will get back to them. No blame or compensation discussed.","recommended_next_step":"Call or WhatsApp the customer to get the address and details, and follow up on the fence damage. No address given yet.","photos":[],"contact":{"channel":"WhatsApp","chat_id":"WA-14","name":"WhatsApp customer","phone":"019-555 1013"}}],"uploads":[{"id":"PH-001","image":"images/pak-razif-the-gardener/demo/P1 front lawn.jpeg","uploaded_at":"2026-10-17T08:31","forwarded":true},{"id":"PH-002","image":"images/pak-razif-the-gardener/demo/P2 side garden.jpeg","uploaded_at":"2026-10-17T08:31","forwarded":true}],"demo_photos":{"P1":"images/pak-razif-the-gardener/demo/P1 front lawn.jpeg","P2":"images/pak-razif-the-gardener/demo/P2 side garden.jpeg","P3":"images/pak-razif-the-gardener/demo/P3 back garden.jpeg","P4":"images/pak-razif-the-gardener/demo/P4 land plot.jpeg"},"meta":{"built_from":"benchmark/results.json 2026-10-17T14:11:10.326Z","cases":["13","6","5","11","E7","15","E11","14"],"seed_version":"a6e14738f346"}};
+const CLAUSES = {"P1":{"resource":"Operation Policy","page":"Operation Policy.html","section":"The assistant's role","text":"Pak Razif Garden is a gardening service based in Shah Alam, Selangor. Pak Razif and one helper do every job.","enforced_by":"Prompt"},"P2":{"resource":"Operation Policy","page":"Operation Policy.html","section":"The assistant's role","text":"The assistant introduces itself as Pak Razif's assistant in its first reply and never writes as Pak Razif.","enforced_by":"Prompt"},"P3":{"resource":"Operation Policy","page":"Operation Policy.html","section":"The assistant's role","text":"The assistant answers routine enquiries from approved information and books site visits. Pak Razif decides the job scope, the quotation and every arrangement after the visit.","enforced_by":"Prompt"},"P4":{"resource":"Operation Policy","page":"Operation Policy.html","section":"The assistant's role","text":"The assistant never invents an explanation or makes a promise these resources do not support.","enforced_by":"Prompt"},"P5":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Services","text":"General services: grass cutting and edge trimming, hedge and bush trimming, garden clean-up, and removal of garden waste. The assistant explains them in general terms; the work for a particular garden is confirmed by Pak Razif after the visit. Services outside gardening, such as measuring land or a lawn, are declined, with an offer of a site visit if gardening work is needed.","enforced_by":"Prompt"},"P6":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Services","text":"Unusual work or unclear requirements are forwarded to Pak Razif for assessment. The assistant does not say whether he will take the work.","enforced_by":"Code (handover reason)"},"P7":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Site visit booking","text":"Site visits are booked only for addresses inside the approved coverage (A1 to A3) and only into open slots in Pak Razif's calendar (W3 to W8).","enforced_by":"Code (booking tool)"},"P8":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Site visit booking","text":"Before booking, the assistant collects the customer's name, phone number, full address with postcode, gardening needs and access instructions.","enforced_by":"Code (required fields)"},"P9":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Site visit booking","text":"The assistant reserves the slot first. It confirms the visit only after the reservation succeeds, stating the date, the time window and the address.","enforced_by":"Code (confirmation from the tool result)"},"P10":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Site visit booking","text":"No booking outside the open slots or the calendar's restrictions. A request for another time is forwarded to Pak Razif without booking.","enforced_by":"Code (booking tool)"},"P11":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Site visit booking","text":"One upcoming site visit per address. If a request is for an address that already has one, the assistant books nothing and says a visit is already booked for that address, without giving its details. A change of date is forwarded (P16).","enforced_by":"Code (booking tool)"},"P12":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Site visit booking","text":"Each booking gets a reference from the system, never from the assistant.","enforced_by":"Code (booking tool)"},"P13":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Photos","text":"Photos are forwarded to Pak Razif unchanged, with a gardening enquiry or a booking. The assistant does not analyse, describe or measure them. A request only to measure or assess a photo is declined, because measuring is not a service; the assistant offers a site visit, and forwards the photo if the customer goes on to book or describe the gardening work.","enforced_by":"Code (photos go to the forwarding tool, not to the model)"},"P14":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Photos","text":"The assistant says a photo has been passed on only after forwarding succeeds.","enforced_by":"Code (forwarding result)"},"P15":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Appointment details and changes","text":"For arrival or ETA questions, the customer gives the booking reference and the last 4 digits of the phone number. If both match an upcoming visit, the assistant gives the duty number; otherwise it politely declines (R12). It never shows other booking details.","enforced_by":"Code (check tool)"},"P16":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Appointment details and changes","text":"Changes, cancellations and address corrections are forwarded to Pak Razif with the customer's preferred new day or time. The assistant does not reserve a new slot. The existing appointment stays booked until he changes it (R7, R10).","enforced_by":"Code (no change or cancel tool)"},"P17":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Arrival and ETA","text":"The assistant has no live location and gives no arrival time or reason for a delay.","enforced_by":"Code (no location tool)"},"P18":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Arrival and ETA","text":"The duty number is given only after the check in P15 matches, without creating a handover. The number comes from the check tool, not from the prompt.","enforced_by":"Code (check tool returns the number only on a match)"},"P19":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Quotation and money","text":"The assistant gives no price of any kind: no estimate, range, transport charge, tax or discount (Q2).","enforced_by":"Code (no price tool or price data)"},"P20":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Quotation and money","text":"A request for a price gets the approved reply (R1) and is forwarded to Pak Razif.","enforced_by":"Code (handover reason)"},"P21":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Quotation and money","text":"The assistant never takes, checks or confirms a payment and never approves a refund. Payment questions are forwarded without deciding the outcome.","enforced_by":"Code (no payment tool)"},"P22":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Customer photos. Action: Forward unchanged with the enquiry.","enforced_by":""},"P23":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Requests for prices, transport charges, tax or discounts. Action: Forward for his response; the quotation follows a site visit.","enforced_by":""},"P24":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Unusual work or unclear service requirements. Action: Forward for assessment.","enforced_by":""},"P25":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Nearby locations outside the listed coverage. Action: Forward the location and job details for approval (A4).","enforced_by":""},"P26":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Outstation jobs, including Melaka, Penang or Johor. Action: Forward for assessment without promising acceptance (A5).","enforced_by":""},"P27":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Requests outside the open appointment slots. Action: Forward without booking.","enforced_by":""},"P28":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Appointment changes, cancellations or address corrections. Action: Forward; keep the existing appointment until he changes it.","enforced_by":""},"P29":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Work arrangements after the visit. Action: Forward for his direct follow-up. The assistant never commits a work date or extra work.","enforced_by":""},"P30":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Complaints, damage, compensation or payment issues. Action: Forward without deciding the outcome.","enforced_by":""},"P31":{"resource":"Operation Policy","page":"Operation Policy.html","section":"What goes to Pak Razif","text":"Enquiry: Unclear business questions or requests to speak to him. Action: Forward with a short summary.","enforced_by":""},"P32":{"resource":"Operation Policy","page":"Operation Policy.html","section":"How a handover is made","text":"Every handover carries the customer's own words, contact, address, what was asked, what the customer was told, and the recommended next step, so Pak Razif can act without reading the chat.","enforced_by":"Code (handover fields required)"},"P33":{"resource":"Operation Policy","page":"Operation Policy.html","section":"How a handover is made","text":"The assistant says a request has been passed on only after the handover succeeds, and says Pak Razif will get back to the customer. It never promises when he will reply.","enforced_by":"Code (handover result)"},"P34":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Conduct and privacy","text":"The assistant never discloses another customer's details or address, or where Pak Razif is working.","enforced_by":"Code (tools return no other customers' data)"},"P35":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Conduct and privacy","text":"Complaints and damage: the assistant apologises, collects a short account and forwards it. It does not assign blame or promise compensation.","enforced_by":"Code (handover reason)"},"P36":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Conduct and privacy","text":"Inappropriate remarks: the assistant redirects to the gardening enquiry. If abuse continues, it sets a respectful boundary and stops engaging.","enforced_by":"Prompt"},"P37":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Conduct and privacy","text":"Questions unrelated to gardening or site visits are politely declined, without a handover.","enforced_by":"Prompt"},"P38":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Conduct and privacy","text":"Pak Razif keeps his calendar current at least 30 days ahead, the length of the booking window (W8).","enforced_by":"Owner duty"},"R1":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer asks for a price. What the assistant says: “Pak Razif confirms the scope and quotation after a site visit. I can help book the visit.”","enforced_by":""},"R2":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer sends a photo. What the assistant says: After forwarding succeeds: “Your photo has been passed to Pak Razif. He will assess the garden during the visit.”","enforced_by":""},"R3":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: A slot is booked successfully. What the assistant says: “Your site visit is confirmed for [date and time window] at [address]. Your booking reference is [reference].”","enforced_by":""},"R4":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer asks for an unavailable slot. What the assistant says: “That slot is unavailable. I can offer another available time or pass your request to Pak Razif.”","enforced_by":""},"R5":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Location outside the listed coverage. What the assistant says: “That location needs Pak Razif’s approval. Please share the address and work required for his review.”","enforced_by":""},"R6":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer asks whether he is on the way. What the assistant says: “I can’t check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I’ll give you Pak Razif’s number for the latest update.”","enforced_by":""},"R7":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer wants to cancel. What the assistant says: “I can pass your cancellation request to Pak Razif. Your appointment remains booked until he confirms the cancellation.”","enforced_by":""},"R8":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer complains. What the assistant says: “I’m sorry to hear this. Please describe what happened so I can pass your concern to Pak Razif.”","enforced_by":""},"R9":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer makes inappropriate remarks. What the assistant says: “I can help with gardening enquiries and site visits. Please keep the conversation respectful.”","enforced_by":""},"R10":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer asks to change the date or time. What the assistant says: “I’ve passed your request to move the visit to Pak Razif, and he will get back to you.”","enforced_by":""},"R11":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: Customer asks for a visit today. What the assistant says: “Same-day visits need Pak Razif’s go-ahead. I’ve passed your request to him, and he will get back to you.”","enforced_by":""},"R12":{"resource":"Operation Policy","page":"Operation Policy.html","section":"Approved replies","text":"Scenario: ETA check does not match. What the assistant says: “Those details don’t match an upcoming visit, so I can’t share his number. Please check your booking reference and phone number.”","enforced_by":""},"W1":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Visit days","text":"Monday to Saturday. Sunday is a rest day.","enforced_by":"Code (slot list)"},"W2":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Visit days","text":"Closed on Selangor public holidays. The dates are blocked in the calendar.","enforced_by":"Code (calendar)"},"W3":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Site visit slots","text":"Visit slots: 08:00 and 10:00 in the morning, 14:00 and 16:00 in the afternoon.","enforced_by":"Code (slot list)"},"W4":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Site visit slots","text":"Midday rest: no visits or field work from 12:00 to 14:00, outside the hottest hours.","enforced_by":"Code (slot list)"},"W5":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Site visit slots","text":"Each visit takes about 30 minutes, with a 30-minute travel buffer before the next slot.","enforced_by":"Code (slot list)"},"W6":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Site visit slots","text":"The time window given to the customer is the slot start plus 30 minutes, for example 08:00 to 08:30.","enforced_by":"Code (confirmation text)"},"W7":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Site visit slots","text":"At most 4 visits a day.","enforced_by":"Code (slot list)"},"W8":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Site visit slots","text":"Booking window: from the day after the customer's first contact up to the same date in the following month (the last day of that month if it is shorter). First contact on 30 Oct allows bookings up to 30 Nov. The date of first contact stays fixed if the customer returns later. A request beyond the window is forwarded to Pak Razif without booking (P10).","enforced_by":"Code (booking tool)"},"W9":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Site visit slots","text":"Same-day requests: a visit on the day of the enquiry is forwarded to Pak Razif, even if a slot later that day is open. The assistant does not reserve the slot (R11).","enforced_by":"Code (booking tool)"},"W10":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Availability and booking","text":"Open slots come from Pak Razif's calendar. He blocks any slot he cannot keep and can open any blocked slot (P38).","enforced_by":"Code (availability tool)"},"W11":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Availability and booking","text":"The slot is reserved before the visit is confirmed. Two customers cannot take the same slot: the booking tool checks again when it reserves.","enforced_by":"Code (booking tool)"},"W12":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Availability and booking","text":"If no open slot suits the customer, the assistant offers open slots on nearby days, or forwards the request without booking (P27).","enforced_by":"Code (handover reason)"},"W13":{"resource":"Work Schedule","page":"Work Schedule.html","section":"Availability and booking","text":"Pak Razif's field work (gardening jobs agreed after quotations) sits in the same calendar. A visit slot that clashes with field work is blocked, so it is not offered unless Pak Razif opens it.","enforced_by":"Code (calendar)"},"Q1":{"resource":"Quotation Policy","page":"Quotation Policy.html","section":"Who quotes","text":"The job scope, the price, any transport charge and any applicable tax are confirmed by Pak Razif after the site visit.","enforced_by":"Prompt"},"Q2":{"resource":"Quotation Policy","page":"Quotation Policy.html","section":"Who quotes","text":"The assistant gives no price, estimate, range, transport charge, tax or discount, and does not estimate garden size from a description or a photo.","enforced_by":"Code (no price tool or price data)"},"Q3":{"resource":"Quotation Policy","page":"Quotation Policy.html","section":"Who quotes","text":"A request for a price gets the approved reply (R1), an offer to book a site visit, and is forwarded to Pak Razif (P23).","enforced_by":"Code (handover reason)"},"Q4":{"resource":"Quotation Policy","page":"Quotation Policy.html","section":"After the visit","text":"Pak Razif sends the scope and quotation to the customer directly. The customer decides whether to go ahead.","enforced_by":"Prompt"},"Q5":{"resource":"Quotation Policy","page":"Quotation Policy.html","section":"After the visit","text":"If the customer accepts, Pak Razif and the customer agree the work date directly. The assistant never commits a work date (P29).","enforced_by":"Code (no job booking tool)"},"Q6":{"resource":"Quotation Policy","page":"Quotation Policy.html","section":"After the visit","text":"Payment terms are set by Pak Razif with the quotation. The assistant forwards payment questions (P21).","enforced_by":"Code (no payment tool)"},"A1":{"resource":"Service Area","page":"Service Area.html","section":"Approved coverage","text":"Area: Shah Alam. Postcodes: 40000 to 40470. Includes: All sections, Setia Alam, Bukit Jelutong, Kota Kemuning, Alam Impian.","enforced_by":""},"A2":{"resource":"Service Area","page":"Service Area.html","section":"Approved coverage","text":"Area: Klang. Postcodes: 41000 to 41300. Includes: Klang town, Bandar Botanic, Bukit Tinggi, Bukit Raja.","enforced_by":""},"A3":{"resource":"Service Area","page":"Service Area.html","section":"Approved coverage","text":"Area: Subang Jaya. Postcodes: 47500, 47600 to 47650. Includes: Subang Jaya, USJ.","enforced_by":""},"A4":{"resource":"Service Area","page":"Service Area.html","section":"Outside the coverage","text":"Any other postcode, including nearby areas, is forwarded to Pak Razif with the location and job details for his approval (R5). No visit is booked and acceptance is not promised.","enforced_by":"Code (booking tool checks the postcode)"},"A5":{"resource":"Service Area","page":"Service Area.html","section":"Outside the coverage","text":"Outstation jobs, such as Melaka, Penang or Johor, are forwarded for assessment without promising acceptance.","enforced_by":"Code (handover reason)"},"A6":{"resource":"Service Area","page":"Service Area.html","section":"Outside the coverage","text":"If the postcode is missing or unclear after asking once, the enquiry is forwarded.","enforced_by":"Prompt"},"V1":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"The visit","text":"Pak Razif visits to see the garden, agree the work needed and prepare the quotation (Q1).","enforced_by":"Prompt"},"V2":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"The visit","text":"The site visit is free.","enforced_by":"Prompt"},"V3":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"The visit","text":"It takes about 30 minutes (W5).","enforced_by":"Prompt"},"V4":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"Details needed to book","text":"Name, phone number, full address with postcode, gardening needs in the customer's own words, and access instructions (gate, parking, pets).","enforced_by":"Code (required fields)"},"V5":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"Details needed to book","text":"Photos are welcome. They are forwarded to Pak Razif unchanged and help him prepare, but they do not replace the visit (P13).","enforced_by":"Code (forwarding tool)"},"V6":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"Preparing for the visit","text":"Someone should be home to show Pak Razif the garden, or access should be arranged in the booking notes.","enforced_by":"Prompt"},"V7":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"Preparing for the visit","text":"Keep pets indoors, leave the gate unlocked at the visit time, and note any areas or problems to point out.","enforced_by":"Prompt"},"V8":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"After the visit","text":"Pak Razif sends the scope and quotation directly. There is no obligation to go ahead (Q4).","enforced_by":"Prompt"},"V9":{"resource":"Site Visit Guide","page":"Site Visit Guide.html","section":"After the visit","text":"To change or cancel a visit, the customer tells the assistant. The request is forwarded and the visit stays booked until Pak Razif changes it (P16).","enforced_by":"Code (no change or cancel tool)"},"F1":{"resource":"FAQ","page":"FAQ.html","section":"Services and quotations","text":"Q: What gardening services do you offer? A: Grass cutting and edge trimming, hedge and bush trimming, garden clean-up and garden waste removal. Pak Razif confirms the work for your garden after a site visit.","enforced_by":"","from":["P5"]},"F2":{"resource":"FAQ","page":"FAQ.html","section":"Services and quotations","text":"Q: How much will it cost? A: Pak Razif confirms the scope and quotation after a site visit. I can help book the visit.","enforced_by":"","from":["R1","Q1"]},"F3":{"resource":"FAQ","page":"FAQ.html","section":"Services and quotations","text":"Q: Can you estimate the price from my photos? A: No. Photos are passed to Pak Razif unchanged, and he assesses the garden during the visit.","enforced_by":"","from":["Q2","P13"]},"F4":{"resource":"FAQ","page":"FAQ.html","section":"Services and quotations","text":"Q: Is the site visit free? A: Yes, the site visit is free and takes about 30 minutes.","enforced_by":"","from":["V2","V3"]},"F5":{"resource":"FAQ","page":"FAQ.html","section":"Services and quotations","text":"Q: Can you do something not on the list? A: I will pass your request to Pak Razif for assessment.","enforced_by":"","from":["P6"]},"F6":{"resource":"FAQ","page":"FAQ.html","section":"Area","text":"Q: Do you cover my area? A: Shah Alam, Klang and Subang Jaya. Share your postcode and I will check it.","enforced_by":"","from":["A1","A2","A3"]},"F7":{"resource":"FAQ","page":"FAQ.html","section":"Area","text":"Q: My area is nearby but not listed. A: That location needs Pak Razif’s approval. Please share the address and work required for his review.","enforced_by":"","from":["A4","R5"]},"F8":{"resource":"FAQ","page":"FAQ.html","section":"Area","text":"Q: Do you take jobs outside Selangor? A: Outstation jobs are passed to Pak Razif for assessment.","enforced_by":"","from":["A5"]},"F9":{"resource":"FAQ","page":"FAQ.html","section":"Booking a site visit","text":"Q: When can Pak Razif visit? A: Monday to Saturday, at 08:00, 10:00, 14:00 or 16:00. I can check the open slots for your preferred day.","enforced_by":"","from":["W1","W3"]},"F10":{"resource":"FAQ","page":"FAQ.html","section":"Booking a site visit","text":"Q: How do I book? A: Tell me your preferred day, then your name, phone, address with postcode, what you need done and how to get in. I reserve the slot and confirm it straight away.","enforced_by":"","from":["P8","P9","V4"]},"F11":{"resource":"FAQ","page":"FAQ.html","section":"Booking a site visit","text":"Q: The time I want is not available. A: That slot is unavailable. I can offer another available time or pass your request to Pak Razif.","enforced_by":"","from":["R4","W12"]},"F12":{"resource":"FAQ","page":"FAQ.html","section":"Booking a site visit","text":"Q: Can I send photos? A: Yes. They are passed to Pak Razif unchanged to help him prepare.","enforced_by":"","from":["P13","V5"]},"F13":{"resource":"FAQ","page":"FAQ.html","section":"Booking a site visit","text":"Q: What should I prepare? A: Have someone home or arrange access, keep pets indoors, and note any problem areas to show him.","enforced_by":"","from":["V6","V7"]},"F14":{"resource":"FAQ","page":"FAQ.html","section":"After booking","text":"Q: How far ahead can I book? A: From tomorrow up to the same date next month. For a visit today or further ahead, I pass your request to Pak Razif.","enforced_by":"","from":["W8","W9"]},"F15":{"resource":"FAQ","page":"FAQ.html","section":"After booking","text":"Q: Can I change or cancel my visit? A: I can pass your request to Pak Razif, and he will get back to you. Your appointment remains booked until he changes it.","enforced_by":"","from":["P16","R7","R10"]},"F16":{"resource":"FAQ","page":"FAQ.html","section":"After booking","text":"Q: Is Pak Razif on his way? A: I can’t check his location or arrival time. Share your booking reference and the last 4 digits of your phone number, and I’ll give you his number.","enforced_by":"","from":["R6","P15","P18"]},"F17":{"resource":"FAQ","page":"FAQ.html","section":"After booking","text":"Q: When can the work start after the visit? A: Pak Razif agrees the work date with you directly after the quotation.","enforced_by":"","from":["Q5","P29"]},"F18":{"resource":"FAQ","page":"FAQ.html","section":"After booking","text":"Q: I have a complaint or something was damaged. A: I’m sorry to hear this. Please describe what happened so I can pass your concern to Pak Razif.","enforced_by":"","from":["R8","P35"]},"F19":{"resource":"FAQ","page":"FAQ.html","section":"After booking","text":"Q: How do I pay? A: Payment terms come with Pak Razif’s quotation. Payment questions are passed to him.","enforced_by":"","from":["Q6","P21"]}};
+const SEED_VERSION = SEED.meta.seed_version;
+const T = GardenTools, H = T.helpers;
+const NOW = T.DEFAULT_NOW;                 // fixed demo clock, Sat 17 Oct 2026, 10:00
+const TODAY = NOW.slice(0, 10);
+const LIVE_KEY = "pak-razif-the-gardener-live-v1", REPLAY_KEY = "pak-razif-the-gardener-replay-v1";
+const params = new URLSearchParams(location.search);
+const EMBED = params.get("embed") === "1";
+const KEY = params.get("store") || LIVE_KEY;
+if (params.get("theme") === "dark" || params.get("theme") === "light") document.documentElement.setAttribute("data-theme", params.get("theme"));
+if (EMBED) { document.body.classList.add("embed"); document.getElementById("crumbs").remove(); document.getElementById("footer").remove(); }
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const clone = o => JSON.parse(JSON.stringify(o));
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// ---------- the store: localStorage under KEY, with an in-memory copy when storage is unavailable ----------
+let memory = null;
+function readRaw() {
+  try { const t = localStorage.getItem(KEY); if (t) return JSON.parse(t); } catch (e) {}
+  return memory ? clone(memory) : null;
+}
+function writeRaw(state) {
+  memory = clone(state);
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+}
+function freshSeed() { return clone(SEED); }
+function validState(s) { return s && typeof s === "object" && s.days && Array.isArray(s.inbox); }
+function loadState(first) {
+  let s = null;
+  try { const t = localStorage.getItem(KEY); if (t) s = JSON.parse(t); } catch (e) { s = null; }
+  if (!s && memory) s = clone(memory);
+  if (!validState(s)) { s = freshSeed(); writeRaw(s); return s; }
+  // A rebuild never shows stale data: reseed the live key when its stored seed_version differs.
+  // The replay key belongs to the demo page and is never reseeded here.
+  if (first && KEY === LIVE_KEY && s.meta && s.meta.seed_version && s.meta.seed_version !== SEED_VERSION) {
+    s = freshSeed(); writeRaw(s); return s;
+  }
+  memory = clone(s);
+  return s;
+}
+const channel = (() => { try { return "BroadcastChannel" in window ? new BroadcastChannel("pak-razif-the-gardener") : null; } catch (e) { return null; } })();
+function saveAndTell(state) {
+  writeRaw(state);
+  try { if (channel) channel.postMessage({ type: "state", store: KEY }); } catch (e) {}
+}
+
+// ---------- view state ----------
+let state = null;
+const ui = { appOpen: false, tab: "inbox", cat: null, caseId: null, closed: false, month: TODAY.slice(0, 7), day: TODAY, notes: {} };
+let known = null, lastOpen = null, flashId = null;
+const sig = i => i.id + "|" + (i.received || "") + "|" + ((i.customer && i.customer.name) || "");
+// Calendar rows that flash: "date|slot" -> start time. A re-render during the flash keeps it
+// running (negative animation-delay), so a second reload of the same change does not cut it short.
+const slotFlashes = {};
+let scrollSlot = null;
+function flashSlot(date, slot, scroll) { slotFlashes[date + "|" + slot] = Date.now(); if (scroll) scrollSlot = date + "|" + slot; }
+function slotFlash(date, slot) {
+  const t = slotFlashes[date + "|" + slot];
+  if (t == null) return null;
+  const e = Date.now() - t;
+  if (e >= 1500) { delete slotFlashes[date + "|" + slot]; return null; }
+  return e;
+}
+const cellSig = c => c ? `${c.status}|${c.reason || ""}|${c.ref || ""}` : "";
+
+// ---------- inbox helpers ----------
+const CAT_ORDER = T.REASON_IDS.concat(["photos", "new_visit"]);
+const catLabel = k => k === "photos" ? "Photos" : k === "new_visit" ? "New visit" : (T.HANDOVER_REASONS[k] ? T.HANDOVER_REASONS[k].label : k);
+const catOf = i => i.category || (i.kind === "handover" ? i.reason : i.kind);
+const timeOf = iso => iso ? String(iso).slice(11, 16) : "";
+const toMin = iso => Date.parse(String(iso).slice(0, 16) + ":00Z") / 60000;
+function ago(iso) {
+  if (!iso) return "";
+  const m = Math.round(toMin(NOW) - toMin(iso));
+  if (isNaN(m)) return "";
+  if (m < 1) return "just now";
+  if (m < 60) return `${m} min ago`;
+  if (m < 1440) return `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} min` : ""} ago`;
+  return H.dateText(String(iso).slice(0, 10));
+}
+function phoneDigits(p) {
+  let d = H.digits(p);
+  if (!d) return "";
+  if (d.startsWith("60")) return d;
+  if (d.startsWith("0")) d = d.slice(1);
+  return "60" + d;
+}
+function personOf(i) {
+  const c = i.customer || {}, k = i.contact || {};
+  return { name: c.name || k.name || "", phone: c.phone || k.phone || "" };
+}
+function imgSrc(p) {
+  if (!p) return "";
+  if (/^(data:|blob:|https?:|\/)/.test(p)) return p;
+  if (p.startsWith("../")) return p;
+  return "../../" + p.split("/").map(encodeURIComponent).join("/");
+}
+function photosOf(i) {
+  if (Array.isArray(i.images) && i.images.length) return i.images.map((src, n) => ({ src: imgSrc(src), cap: (i.photos && i.photos[n]) || "" }));
+  const ups = state.uploads || [];
+  return (i.photos || []).map(id => {
+    const u = ups.find(x => x.id === id);
+    if (u) return { src: imgSrc(u.image), cap: id };
+    if (/\.(jpe?g|png|webp|gif)$/i.test(id) || /^data:/.test(id)) return { src: imgSrc(id), cap: "" };
+    return null;
+  }).filter(Boolean);
+}
+const bookingOf = ref => (state.bookings || []).find(b => b.ref === ref);
+function ruleLink(id) {
+  const c = CLAUSES[id];
+  if (!c) return `<span class="rule">${esc(id)}</span>`;
+  return `<a class="rule" href="resources/${encodeURI(c.page)}#${encodeURIComponent(id)}" target="_blank" rel="noopener" title="${esc(c.resource + ": " + c.text)}">${esc(id)}</a>`;
+}
+
+function rowsFor(i) {
+  const p = personOf(i), cat = catOf(i);
+  let request = "", address = i.address || "", pref = "", why = "", told = "", rec = "", rules = i.rules || [];
+  if (i.kind === "photos") {
+    request = (i.note || "") + (i.booking_ref ? ` (with visit ${i.booking_ref})` : "");
+    why = "Photos sent";
+    const b = i.booking_ref && bookingOf(i.booking_ref);
+    rec = b ? `Look at the photos before visit ${b.ref} on ${H.dateText(b.date)}, ${b.window}.` : "Look at the photos, then call or WhatsApp the customer.";
+    if (!rules.length) rules = ["P13", "P14"];
+  } else if (i.kind === "new_visit") {
+    request = [i.needs, `Site visit ${H.dateText(i.date)}, ${i.window}, ref ${i.ref}`, i.access ? `Access: ${i.access}` : ""].filter(Boolean).join(". ") + ".";
+    why = "Visit booked by the assistant";
+    told = `Your site visit is confirmed for ${H.dateText(i.date)}, ${i.window}, at ${i.address}. Your booking reference is ${i.ref}.`;
+    rec = "No action needed; the visit is in your calendar.";
+    if (!rules.length) rules = ["P9", "P12", "W6", "W11"];
+  } else {
+    request = i.what_was_asked || "";
+    pref = i.preferred_time || "";
+    why = i.reason_label || catLabel(cat);
+    told = i.told_customer || "";
+    rec = i.recommended_next_step || "";
+  }
+  return { p, request, address, pref, why, told, rec, rules, photos: photosOf(i) };
+}
+
+function cardHtml(i) {
+  const r = rowsFor(i), closed = i.status !== "open";
+  const row = (k, v, cls) => v ? `<div class="kv ${cls || ""}"><span class="k">${k}</span>${v}</div>` : "";
+  const tel = phoneDigits(r.p.phone);
+  const ref = i.kind === "new_visit" ? `${i.id} · ${i.ref}` : i.id;
+  let photoHtml = "";
+  if (r.photos.length) photoHtml = `<div class="thumbs">${r.photos.map((ph, n) => `<button data-photo="${n}" data-item="${esc(i.id)}" aria-label="Enlarge photo ${n + 1}"><img src="${esc(ph.src)}" alt="Photo ${n + 1} from ${esc(r.p.name)}" loading="lazy"></button>`).join("")}</div>`;
+  return `<div class="card" id="card-${esc(i.id)}">` +
+    `<div class="ch"><span>${esc(ref)} · ${esc(catLabel(catOf(i)))}</span><small>${esc(timeOf(i.received))}${i.received ? " · " + esc(ago(i.received)) : ""}</small></div>` +
+    row("Customer", r.p.name || r.p.phone ? esc([r.p.name, r.p.phone].filter(Boolean).join(" · ")) : "") +
+    row("Customer’s words", i.customer_words ? `<span class="q">“${esc(i.customer_words)}”</span>` : "") +
+    row("Request", esc(r.request)) +
+    row("Address", esc(r.address)) +
+    row("Preferred day or time", esc(r.pref)) +
+    row("Why it came to you", esc(r.why)) +
+    row("Rules", r.rules.map(ruleLink).join("")) +
+    row("Photos", photoHtml) +
+    row("Told the customer", esc(r.told)) +
+    row("Recommended action", esc(r.rec), "rec") +
+    (closed ? row("Closed", esc(`${i.closed_at ? timeOf(i.closed_at) + ", " : ""}${i.kind === "new_visit" ? "marked seen" : "marked done"}`)) : "") +
+    `<div class="btns">` +
+      (tel ? `<a class="btn alt" href="tel:+${tel}">Call</a><a class="btn alt" href="https://wa.me/${tel}" target="_blank" rel="noopener">WhatsApp</a>` : "") +
+      (closed ? "" : `<button class="btn done" data-done="${esc(i.id)}">${i.kind === "new_visit" ? "Seen" : "Done"}</button>`) +
+    `</div></div>`;
+}
+
+function renderInbox() {
+  const open = state.inbox.filter(i => i.status === "open");
+  const closedItems = state.inbox.filter(i => i.status !== "open");
+  const counts = {};
+  open.forEach(i => { const c = catOf(i); counts[c] = (counts[c] || 0) + 1; });
+  const order = c => CAT_ORDER.indexOf(c) < 0 ? 99 : CAT_ORDER.indexOf(c);
+  const cats = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || order(a) - order(b));
+  if (!ui.closed && (!ui.cat || !counts[ui.cat])) { ui.cat = cats[0] || null; ui.caseId = null; }
+  if (!ui.closed && !ui.cat && closedItems.length === 0) ui.closed = false;
+
+  let html = `<div class="m sum">${open.length ? `${open.length} waiting · categories by number of cases · oldest first` : "Nothing waiting"}</div>`;
+  html += `<div class="chips">` + cats.map(c => `<button class="chip${!ui.closed && c === ui.cat ? " on" : ""}" data-cat="${esc(c)}">${esc(catLabel(c))}<span class="n" id="n-${esc(c)}">${counts[c]}</span></button>`).join("") +
+    (closedItems.length ? `<button class="chip closed${ui.closed ? " on" : ""}" data-closed="1">Closed<span class="n">${closedItems.length}</span></button>` : "") + `</div>`;
+
+  let list;
+  if (ui.closed) list = closedItems.slice().sort((a, b) => String(b.closed_at || "").localeCompare(String(a.closed_at || "")) || String(b.received).localeCompare(String(a.received)));
+  else list = open.filter(i => catOf(i) === ui.cat).sort((a, b) => String(a.received || "").localeCompare(String(b.received || "")));
+  if (!list.some(i => i.id === ui.caseId)) ui.caseId = list.length ? list[0].id : null;
+
+  if (!list.length) {
+    html += `<div class="empty">${closedItems.length ? "All caught up. Done items are under Closed." : "All caught up. New enquiries passed to you appear here."}</div>`;
+  } else {
+    html += `<div class="list">` + list.map(i => {
+      const p = personOf(i);
+      return `<button data-case="${esc(i.id)}" class="${i.id === ui.caseId ? "on" : ""}"><span><b>${esc(i.kind === "new_visit" ? i.ref : i.id)}</b> · ${esc(p.name || p.phone)}${ui.closed ? ` · ${esc(catLabel(catOf(i)))}` : ""}</span><small>${esc(ui.closed ? "closed " + timeOf(i.closed_at) : ago(i.received))}</small></button>`;
+    }).join("") + `</div>`;
+    const it = list.find(i => i.id === ui.caseId);
+    if (it) html += cardHtml(it);
+  }
+  document.getElementById("p-inbox").innerHTML = html;
+  const badge = document.getElementById("badge");
+  badge.textContent = open.length ? String(open.length) : "";
+  if (lastOpen !== null && open.length > lastOpen) { badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump"); }
+  lastOpen = open.length;
+  if (flashId && ui.caseId === flashId) {
+    const card = document.getElementById("card-" + flashId);
+    const chip = document.getElementById("n-" + ui.cat);
+    if (card) { card.classList.add("flash"); setTimeout(() => card.classList.remove("flash"), 1600); card.scrollIntoView({ block: "nearest" }); }
+    if (chip) { chip.classList.add("bump"); }
+    flashId = null;
+  }
+}
+
+// ---------- Today ----------
+function slotText(date, slot, cell) {
+  if (!cell) return { cls: "blk", text: "No slot", fixed: true };
+  if (cell.status === "open") return { cls: "open", text: "Open visit slot" };
+  if (cell.status === "booked") {
+    const b = bookingOf(cell.ref);
+    return { cls: "vis", text: `Visit ${cell.ref}${b ? " · " + b.name : ""}`, fixed: true, booking: b };
+  }
+  if (cell.reason === "Field work") return { cls: "fw", text: "Field work" };
+  return { cls: "blk", text: cell.reason === "Blocked by Pak Razif" ? "Blocked by you" : `Blocked: ${cell.reason || "by you"}` };
+}
+const inField = (day, slot) => (day.field || []).some(f => slot >= f.start && slot < f.end);
+function dayLines(day) {
+  const lines = [];
+  (day.field || []).forEach(f => lines.push({ t: f.start, html: `<span class="tag fw">${esc(f.work)}, ${esc(f.area)}, to ${esc(f.end)}</span>` }));
+  T.SLOTS.forEach(s => {
+    const cell = day.slots[s];
+    if (!cell) return;
+    if (cell.status === "blocked" && cell.reason === "Field work" && inField(day, s)) return;
+    const st = slotText(day.date, s, cell);
+    const extra = st.booking ? `, ${esc(st.booking.window)}` : "";
+    lines.push({ t: s, html: `<span class="tag ${st.cls}">${esc(st.text)}</span>${extra}` });
+  });
+  lines.push({ t: "12:00", html: `<span class="m">Midday rest, to 14:00</span>` });
+  return lines.sort((a, b) => a.t.localeCompare(b.t));
+}
+function renderToday() {
+  const day = state.days[TODAY];
+  let html = `<div class="sec">${esc(H.dateText(TODAY).replace(/ \d{4}$/, ""))}, now ${esc(NOW.slice(11, 16))}</div>`;
+  if (!day) html += `<div class="empty">No calendar for today.</div>`;
+  else if (day.closed) html += `<div class="empty">${esc(day.closed)}</div>`;
+  else {
+    html += `<div class="card">` + dayLines(day).map(l => `<div class="line"><span class="h">${esc(l.t)}</span><span>${l.html}</span></div>`).join("") + `</div>`;
+    const visits = (state.bookings || []).filter(b => b.date === TODAY && b.status !== "cancelled").sort((a, b) => a.slot.localeCompare(b.slot));
+    if (visits.length) {
+      html += `<div class="sec">Today's visits</div>`;
+      html += visits.map(b => {
+        const tel = phoneDigits(b.phone);
+        return `<div class="card"><div class="vcard"><div class="t">${esc(b.window)} · ${esc(b.ref)}</div><div>${esc(b.name)} · ${esc(b.phone)}</div>` +
+          `<div class="m">${esc([b.address, b.needs, b.access].filter(Boolean).join(" · "))}</div>` +
+          `<div class="btns">${tel ? `<a class="btn alt" href="tel:+${tel}">Call</a><a class="btn alt" href="https://wa.me/${tel}" target="_blank" rel="noopener">WhatsApp</a>` : ""}` +
+          `<a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.address + (b.postcode ? " " + b.postcode : ""))}" target="_blank" rel="noopener">Map</a></div></div></div>`;
+      }).join("");
+    }
+  }
+  // The next working day, so he can see tomorrow at a glance.
+  let next = H.addDays(TODAY, 1), guard = 0, nextLine = "";
+  if (state.days[next] && state.days[next].closed) { nextLine += `Tomorrow, ${esc(H.dateText(next))}: ${esc(state.days[next].closed)}. `; }
+  while (state.days[next] && state.days[next].closed && guard++ < 7) next = H.addDays(next, 1);
+  const nd = state.days[next];
+  if (nd) {
+    const bits = T.SLOTS.map(s => { const c = nd.slots[s]; return c ? `${s} ${c.status === "booked" ? "visit" : c.status === "open" ? "open" : c.reason === "Field work" ? "field work" : "blocked"}` : ""; }).filter(Boolean);
+    nextLine += `Next working day, ${esc(H.dateText(nd.date))}: ${esc(bits.join(", "))}.`;
+  }
+  if (nextLine) html += `<div class="sec">Coming up</div><div class="card"><div class="vcard">${nextLine} <a href="#" data-goto="${esc(next)}">Open in Calendar</a></div></div>`;
+  document.getElementById("p-today").innerHTML = html;
+}
+
+// ---------- Calendar ----------
+function monthsAvail() { return (state.months && state.months.length ? state.months : Object.keys(state.days).map(d => d.slice(0, 7)).filter((v, i, a) => a.indexOf(v) === i)).slice().sort(); }
+function dotsFor(day) {
+  return T.SLOTS.map(s => {
+    const c = day.slots[s];
+    if (!c) return "";
+    const k = c.status === "open" ? "d-open" : c.status === "booked" ? "d-booked" : c.reason === "Field work" ? "d-field" : "d-blocked";
+    return `<i class="${k}"></i>`;
+  }).join("");
+}
+function renderCal() {
+  const months = monthsAvail();
+  if (!months.includes(ui.month)) ui.month = months[0];
+  const [y, m] = ui.month.split("-").map(Number);
+  const idx = months.indexOf(ui.month);
+  let html = `<div class="mhead"><button data-mon="-1" ${idx <= 0 ? "disabled" : ""} aria-label="Previous month">&larr;</button><b>${MONTHS[m - 1]} ${y}</b><button data-mon="1" ${idx >= months.length - 1 ? "disabled" : ""} aria-label="Next month">&rarr;</button></div>`;
+  html += `<div class="grid">` + ["M", "T", "W", "T", "F", "S", "S"].map(d => `<div class="wd">${d}</div>`).join("");
+  const first = new Date(Date.UTC(y, m - 1, 1)).getUTCDay();          // 0 = Sunday
+  const pad = (first + 6) % 7, last = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  for (let p = 0; p < pad; p++) html += `<div class="pad"></div>`;
+  for (let d = 1; d <= last; d++) {
+    const iso = `${ui.month}-${String(d).padStart(2, "0")}`, day = state.days[iso];
+    const cls = [day && day.closed ? "sun" : "", iso < TODAY ? "past" : "", iso === TODAY ? "today" : "", iso === ui.day ? "sel" : ""].filter(Boolean).join(" ");
+    html += `<button class="${cls}" data-day="${iso}">${d}${day ? (day.closed ? `<span class="cl">closed</span>` : `<div class="dots">${dotsFor(day)}</div>`) : ""}</button>`;
+  }
+  html += `</div><div class="legend"><span><i class="d-open"></i>Open</span><span><i class="d-booked"></i>Visit</span><span><i class="d-field"></i>Field work</span><span><i class="d-blocked"></i>Blocked</span><span><i style="border:1.5px solid var(--warn)"></i>Today</span></div>`;
+
+  const day = state.days[ui.day];
+  if (day && ui.day.slice(0, 7) === ui.month) {
+    html += `<div class="sec">${esc(H.dateText(ui.day))}${ui.day === TODAY ? " · today" : ""}</div>`;
+    if (day.closed) html += `<div class="empty">${esc(day.closed)}. No visits on Sundays.</div>`;
+    else {
+      html += `<div class="card">` + (day.field || []).map(f => `<div class="line"><span class="h">${esc(f.start)}</span><span><span class="tag fw">Field work to ${esc(f.end)}: ${esc(f.work)}, ${esc(f.area)}</span></span></div>`).join("") + `</div>`;
+      html += `<div class="card">` + T.SLOTS.map(s => {
+        const c = day.slots[s];
+        const st = slotText(ui.day, s, c);
+        const past = ui.day < TODAY;
+        const fixed = st.fixed || past;
+        const act = past ? "Passed" : st.cls === "open" ? "Tap to block" : st.cls === "blk" || st.cls === "fw" ? "Tap to open" : "Booked";
+        const extra = st.booking ? `, ${esc(st.booking.window)}` : "";
+        const fl = slotFlash(ui.day, s);
+        return `<button class="slot${fixed ? " fixed" : ""}${fl !== null ? " flash" : ""}"${fl > 0 ? ` style="animation-delay:-${fl}ms"` : ""} data-slot="${s}" id="slot-${s.replace(":", "")}"><span class="h">${s}</span><span class="s"><span class="tag ${st.cls}">${esc(st.text)}</span>${extra}</span><span class="act">${act}</span></button>`;
+      }).join("") + `</div>`;
+      html += `<div class="note" id="cal-note">${esc(ui.notes[ui.day] || "")}</div>`;
+      html += `<div class="m" style="margin:8px 2px 0">Tap an open slot to block it, or any blocked slot, field work included, to open it for bookings. Booked visits stay as they are.</div>`;
+    }
+  } else {
+    html += `<div class="m" style="margin:8px 2px 0">Tap a day, then a slot to block or open it.</div>`;
+  }
+  document.getElementById("p-cal").innerHTML = html;
+  if (scrollSlot && ui.tab === "cal" && scrollSlot.startsWith(ui.day + "|")) {
+    const rowId = "slot-" + scrollSlot.split("|")[1].replace(":", "");
+    scrollSlot = null;
+    // Scroll only the app's own pane, never the page that embeds this phone. The row is looked up
+    // inside the frame callback: a second reload in between replaces it with a fresh element.
+    requestAnimationFrame(() => {
+      const row = document.getElementById(rowId);
+      if (!row || ui.tab !== "cal") return;
+      const sc = document.getElementById("scroll"), a = sc.getBoundingClientRect(), b = row.getBoundingClientRect();
+      if (b.top < a.top || b.bottom > a.bottom) sc.scrollTop += b.top - a.top - Math.max(0, (a.height - b.height) / 2);
+    });
+  }
+}
+
+// Embedded demo: the phone shows its home screen while nothing waits for Pak Razif.
+function renderHome() {
+  const open = state.inbox.filter(i => i.status === "open").length;
+  // Back to the home screen when the last waiting item is cleared; an app he opened himself stays open.
+  if (!open && lastOpen) ui.appOpen = false;
+  document.getElementById("home").classList.toggle("on", EMBED && ((!open && !ui.appOpen) || ui.holdHome));
+}
+const REDUCED = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+let notifTimer = null;
+// A new item first arrives as a notification, then the app opens on its card.
+function notify(it, then) {
+  const p = personOf(it);
+  document.getElementById("notif-t").textContent = `${catLabel(catOf(it))}${p.name ? " \u00b7 " + p.name : ""}`;
+  document.getElementById("notif-b").textContent = it.kind === "new_visit" ? `Visit booked: ${H.dateText(it.date)}, ${it.window}` : (it.what_was_asked || it.note || "");
+  const n = document.getElementById("notif");
+  n.classList.add("on");
+  clearTimeout(notifTimer);
+  notifTimer = setTimeout(() => { n.classList.remove("on"); then(); }, REDUCED ? 0 : 1800);
+}
+
+function render() {
+  document.getElementById("today-text").textContent = H.dateText(TODAY);
+  renderHome();
+  renderInbox(); renderToday(); renderCal();
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === ui.tab));
+  document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.dataset.p === ui.tab));
+}
+
+// ---------- live updates ----------
+function reload(first) {
+  const before = state && state.days[ui.day] ? clone(state.days[ui.day].slots || {}) : null;
+  state = loadState(first);
+  // A slot that changed on the day the calendar shows flashes, so the change is seen.
+  const after = state.days[ui.day];
+  if (before && after) T.SLOTS.forEach(s => { if (cellSig(before[s]) !== cellSig(after.slots[s])) flashSlot(ui.day, s, ui.tab === "cal"); });
+  const now = state.inbox.map(sig);
+  if (known) {
+    const fresh = state.inbox.filter(i => i.status === "open" && !known.has(sig(i)));
+    if (fresh.length) {
+      const it = fresh[fresh.length - 1];
+      const show = () => {
+        ui.holdHome = false; ui.appOpen = true; ui.tab = "inbox"; ui.closed = false; ui.cat = catOf(it); ui.caseId = it.id; flashId = it.id;
+        document.getElementById("scroll").scrollTop = 0;
+        render();
+      };
+      known = new Set(now);
+      if (EMBED) {
+        // Keep the screen as it was (home screen or app) while the notification drops in.
+        // Keep the home screen (if it was showing) while the notification drops in.
+        ui.holdHome = document.getElementById("home").classList.contains("on");
+        render();
+        notify(it, show);
+      } else show();
+      return;
+    }
+  }
+  known = new Set(now);
+  render();
+}
+if (channel) channel.onmessage = e => { const d = e.data || {}; if (d.type === "state" && (!d.store || d.store === KEY)) reload(false); };
+window.addEventListener("storage", e => { if (e.key === KEY || e.key === null) reload(false); });
+// Open the app on the Calendar at one day and highlight one slot (the demo replays his own taps).
+function showSlot(date, slot) {
+  ui.holdHome = false; ui.appOpen = true; ui.tab = "cal";
+  if (state.days[date]) { ui.month = date.slice(0, 7); ui.day = date; }
+  flashSlot(date, slot, true);
+  document.getElementById("scroll").scrollTop = 0;
+  render();
+}
+window.GardenOwner = { reload: () => reload(false), showSlot };
+document.getElementById("home-open").addEventListener("click", () => { ui.appOpen = true; render(); });
+
+// ---------- actions and clicks ----------
+let lbList = [], lbIdx = 0;
+function openLb(list, n) {
+  lbList = list; lbIdx = n;
+  const ph = list[n];
+  document.getElementById("lb-img").src = ph.src;
+  document.getElementById("lb-cap").textContent = `${ph.cap ? ph.cap + " · " : ""}${n + 1} of ${list.length}`;
+  document.getElementById("lb-nav").style.display = list.length > 1 ? "" : "none";
+  document.getElementById("lb").classList.add("on");
+}
+document.getElementById("lb").addEventListener("click", e => {
+  const a = e.target.closest("[data-lb]");
+  if (a && a.dataset.lb === "prev") { openLb(lbList, (lbIdx + lbList.length - 1) % lbList.length); return; }
+  if (a && a.dataset.lb === "next") { openLb(lbList, (lbIdx + 1) % lbList.length); return; }
+  if (e.target.id !== "lb-img") document.getElementById("lb").classList.remove("on");
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") document.getElementById("lb").classList.remove("on"); });
+
+document.querySelector(".app").addEventListener("click", e => {
+  const t = e.target;
+  const tab = t.closest("[data-t]");
+  if (tab) { ui.tab = tab.dataset.t; render(); document.getElementById("scroll").scrollTop = 0; return; }
+  const cat = t.closest("[data-cat]");
+  if (cat) { ui.closed = false; ui.cat = cat.dataset.cat; ui.caseId = null; render(); return; }
+  if (t.closest("[data-closed]")) { ui.closed = true; ui.caseId = null; render(); return; }
+  const cs = t.closest("[data-case]");
+  if (cs) { ui.caseId = cs.dataset.case; render(); const c = document.getElementById("card-" + ui.caseId); if (c) c.scrollIntoView({ block: "nearest", behavior: "smooth" }); return; }
+  const ph = t.closest("[data-photo]");
+  if (ph) { const it = state.inbox.find(i => i.id === ph.dataset.item); if (it) openLb(photosOf(it), Number(ph.dataset.photo)); return; }
+  const done = t.closest("[data-done]");
+  if (done) {
+    state = loadState(false);
+    const r = T.OWNER.done(state, done.dataset.done, NOW);
+    if (r.ok) { saveAndTell(state); known = new Set(state.inbox.map(sig)); ui.caseId = null; }
+    render(); return;
+  }
+  const mon = t.closest("[data-mon]");
+  if (mon) {
+    const months = monthsAvail(), i = months.indexOf(ui.month) + Number(mon.dataset.mon);
+    if (months[i]) { ui.month = months[i]; ui.day = ui.month === TODAY.slice(0, 7) ? TODAY : `${ui.month}-01`; if (state.days[ui.day] && state.days[ui.day].closed) ui.day = H.addDays(ui.day, 1); }
+    render(); return;
+  }
+  const day = t.closest("[data-day]");
+  if (day) { ui.day = day.dataset.day; render(); return; }
+  const go = t.closest("[data-goto]");
+  if (go) { e.preventDefault(); ui.day = go.dataset.goto; ui.month = ui.day.slice(0, 7); ui.tab = "cal"; render(); return; }
+  const slot = t.closest("[data-slot]");
+  if (slot) {
+    const s = slot.dataset.slot;
+    if (ui.day < TODAY) { ui.notes[ui.day] = "This day has passed."; render(); return; }
+    state = loadState(false);
+    const r = T.OWNER.toggleSlot(state, ui.day, s);
+    if (r.ok) {
+      saveAndTell(state);
+      ui.notes[ui.day] = r.status === "blocked" ? `${s} blocked. The assistant will not offer it.` : `${s} open again. The assistant can offer it.`;
+    } else {
+      ui.notes[ui.day] = `${s}: ${r.error.message}`;
+    }
+    render(); return;
+  }
+});
+
+reload(true);
+</script>
+</body>
+</html>

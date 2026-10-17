@@ -1,0 +1,9 @@
+node_modules/
+.env
+__pycache__/
+*.pyc
+calendar.state.json
+benchmark/runs/
+benchmark/results-partial.*
+.DS_Store
+*.log

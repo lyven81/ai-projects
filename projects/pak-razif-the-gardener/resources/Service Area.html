@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Service Area</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+.lead{background:var(--card);border-left:3px solid var(--accent);padding:8px 14px;margin:6px 0}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../pak-razif-the-gardener.html" style="color:inherit;text-decoration:none">Pak Razif The Gardener</a></div><h1>Service Area</h1><nav id="toc"></nav></div>
+<p class="lead">Where a site visit can be booked instantly. The check uses the postcode; the assistant asks for it if the customer has not given it.</p>
+<h2>1. Approved coverage</h2>
+<table><tr><th>Rule</th><th>Area</th><th>Postcodes</th><th>Includes</th></tr>
+<tr id="A1"><td>A1</td><td>Shah Alam</td><td>40000 to 40470</td><td>All sections, Setia Alam, Bukit Jelutong, Kota Kemuning, Alam Impian</td></tr>
+<tr id="A2"><td>A2</td><td>Klang</td><td>41000 to 41300</td><td>Klang town, Bandar Botanic, Bukit Tinggi, Bukit Raja</td></tr>
+<tr id="A3"><td>A3</td><td>Subang Jaya</td><td>47500, 47600 to 47650</td><td>Subang Jaya, USJ</td></tr>
+</table>
+<h2>2. Outside the coverage</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="A4"><td>A4</td><td>Any other postcode, including nearby areas, is forwarded to Pak Razif with the location and job details for his approval (<a href="Operation Policy.html#R5">R5</a>). No visit is booked and acceptance is not promised.</td><td>Code (booking tool checks the postcode)</td></tr>
+<tr id="A5"><td>A5</td><td>Outstation jobs, such as Melaka, Penang or Johor, are forwarded for assessment without promising acceptance.</td><td>Code (handover reason)</td></tr>
+<tr id="A6"><td>A6</td><td>If the postcode is missing or unclear after asking once, the enquiry is forwarded.</td><td>Prompt</td></tr>
+</table>
+<p>Demo data: the business is fictional. The postcode ranges were drafted for the demo and should be checked before real use.</p>
+<footer>&copy; 2026 Lee Yih Ven &middot; Service Area</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

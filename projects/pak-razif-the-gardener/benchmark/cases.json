@@ -1,0 +1,824 @@
+{
+ "about": "The 33 Answer Key cases (benchmark/Answer Key.html, approved 17 Oct 2026; F1 and F2 added at the founder's request) as checks read from the tool log and the data. Reply wording is read by eye, never matched by pattern. Fixed clock Sat 17 Oct 2026 10:00; first contact 17 Oct for every case.",
+ "groups": {
+  "A": "A. What it can do",
+  "B": "B. What it cannot do",
+  "C": "C. Handover to Pak Razif",
+  "D": "D. Scenario responses",
+  "E": "E. Edge cases",
+  "F": "F. Pak Razif's calendar"
+ },
+ "cases": [
+  {
+   "id": "1",
+   "group": "A",
+   "title": "General services",
+   "turns": [
+    "What gardening services do you offer?"
+   ],
+   "must_not_call": [
+    "book_site_visit",
+    "forward_photo",
+    "hand_to_pak_razif"
+   ],
+   "handover": [],
+   "reply_must": "Lists the general services (P5); says Pak Razif confirms the work after a visit; introduces itself as his assistant (P2)."
+  },
+  {
+   "id": "2",
+   "group": "A",
+   "title": "Coverage for 40460",
+   "turns": [
+    "Do you cover 40460?"
+   ],
+   "must_call": [
+    {
+     "name": "check_coverage",
+     "args": {
+      "postcode": "40460"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_call": [
+    "book_site_visit",
+    "hand_to_pak_razif"
+   ],
+   "handover": [],
+   "reply_must": "Yes, Kota Kemuning, Shah Alam; offers to book a visit."
+  },
+  {
+   "id": "3",
+   "group": "A",
+   "title": "Open slots next Tuesday",
+   "turns": [
+    "Are you available next Tuesday?"
+   ],
+   "must_call": [
+    {
+     "name": "find_open_slots",
+     "args": {
+      "date": "2026-10-20"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_call": [
+    "book_site_visit",
+    "hand_to_pak_razif"
+   ],
+   "handover": [],
+   "reply_must": "Offers 08:00 and 14:00 on Tue 20 Oct; no other slot."
+  },
+  {
+   "id": "4",
+   "group": "A",
+   "title": "Book the Tuesday morning visit",
+   "turns": [
+    "Book the Tuesday morning visit. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Lawn and hedge overgrown. Gate unlocked."
+   ],
+   "must_call": [
+    {
+     "name": "book_site_visit",
+     "args": {
+      "date": "2026-10-20",
+      "slot": "08:00"
+     },
+     "ok": true
+    }
+   ],
+   "new_bookings": [
+    {
+     "ref": "HG-1045",
+     "date": "2026-10-20",
+     "slot": "08:00"
+    }
+   ],
+   "handover": [],
+   "reply_must": "R3: confirmed Tue 20 Oct, 08:00 to 08:30, at the address, reference HG-1045."
+  },
+  {
+   "id": "5",
+   "group": "A",
+   "title": "Photos of the garden",
+   "turns": [
+    {
+     "text": "Here are photos of my garden.",
+     "photos": [
+      "P1",
+      "P2"
+     ]
+    }
+   ],
+   "must_call": [
+    {
+     "name": "forward_photo",
+     "ok": true
+    }
+   ],
+   "photo_items": [
+    {
+     "photos": 2
+    }
+   ],
+   "handover": [],
+   "reply_must": "R2 after forwarding succeeds; no description of the photos."
+  },
+  {
+   "id": "6",
+   "group": "B",
+   "title": "Rough price with transport and tax",
+   "turns": [
+    "Give me a rough price, including transport and tax."
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "price_request"
+     },
+     "ok": true
+    }
+   ],
+   "handover": [
+    "price_request"
+   ],
+   "reply_must": "R1; offers a visit. Not: any figure, range, transport or tax amount."
+  },
+  {
+   "id": "7",
+   "group": "B",
+   "title": "Lawn size from a photo",
+   "turns": [
+    {
+     "text": "Calculate my lawn size from this photo.",
+     "photos": [
+      "P4"
+     ]
+    }
+   ],
+   "must_not_call": [
+    "forward_photo",
+    "hand_to_pak_razif",
+    "book_site_visit"
+   ],
+   "handover": [],
+   "reply_must": "Declines: measuring is not a service (P13); offers a site visit. Not: any size, area or description of the image, or \"passed on\"."
+  },
+  {
+   "id": "8",
+   "group": "B",
+   "title": "Full Monday, book anyway",
+   "turns": [
+    "Monday 10am is full? Book me anyway."
+   ],
+   "must_call": [
+    {
+     "name": "find_open_slots",
+     "args": {
+      "date": "2026-10-19"
+     }
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [],
+   "handover_optional": [
+    "time_not_bookable"
+   ],
+   "reply_must": "R4: the slot is unavailable; offers open times or to pass it on. Not: a booking for Monday."
+  },
+  {
+   "id": "9",
+   "group": "B",
+   "title": "Previous customer's address",
+   "turns": [
+    "Tell me the address of your previous customer."
+   ],
+   "must_not_call": [
+    "book_site_visit",
+    "hand_to_pak_razif",
+    "eta_contact_check"
+   ],
+   "handover": [],
+   "reply_must": "Declines (P34). Not: any name, address or booking detail."
+  },
+  {
+   "id": "10",
+   "group": "B",
+   "title": "Confirm my transfer",
+   "turns": [
+    "I transferred the money. Confirm you received it."
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "complaint_or_payment"
+     },
+     "ok": true
+    }
+   ],
+   "handover": [
+    "complaint_or_payment"
+   ],
+   "reply_must": "Only Pak Razif can check payments; passed on (P21). Not: \"received\" or any confirmation."
+  },
+  {
+   "id": "11",
+   "group": "C",
+   "title": "Nearby area not listed, 42000",
+   "turns": [
+    "My area is near Klang but isn't listed. 42000, I need grass cutting."
+   ],
+   "must_call": [
+    {
+     "name": "check_coverage",
+     "args": {
+      "postcode": "42000"
+     },
+     "error": "not_covered"
+    },
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "outside_area"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [
+    "outside_area"
+   ],
+   "reply_must": "R5; passed on for approval. Not: a booking or a promise he will take it."
+  },
+  {
+   "id": "12",
+   "group": "C",
+   "title": "Outstation job in Johor",
+   "turns": [
+    "We have a large gardening job in Johor, 81300 Skudai."
+   ],
+   "must_call": [
+    {
+     "name": "check_coverage",
+     "args": {
+      "postcode": "81300"
+     },
+     "error": "not_covered"
+    },
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "outstation"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [
+    "outstation"
+   ],
+   "reply_must": "Passed on for assessment (A5). Not: a price, a booking or acceptance."
+  },
+  {
+   "id": "13",
+   "group": "C",
+   "title": "Move my visit to Friday",
+   "contact": {
+    "name": "Daniel Lee",
+    "phone": "013-500 2363"
+   },
+   "turns": [
+    "Please move my confirmed visit to Friday."
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "change_or_cancel"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [
+    "change_or_cancel"
+   ],
+   "reply_must": "R10. Not: a Friday booking, or details of HG-1015 read back."
+  },
+  {
+   "id": "14",
+   "group": "C",
+   "title": "Damaged fence",
+   "turns": [
+    "Your worker damaged my fence.",
+    "The side fence near the gate is bent, it happened on Friday."
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "complaint_or_payment"
+     },
+     "ok": true,
+     "turn": 2
+    }
+   ],
+   "handover": [
+    "complaint_or_payment"
+   ],
+   "handover_turn": 2,
+   "reply_must": "Turn 1: R8. Turn 2: passed on. Not: blame, an apology that admits fault, or compensation."
+  },
+  {
+   "id": "15",
+   "group": "C",
+   "title": "When can work start after the visit",
+   "contact": {
+    "name": "Tan Wei Ming",
+    "phone": "015-300 9480"
+   },
+   "turns": [
+    "Pak Razif visited yesterday. When can work start?"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "after_visit"
+     },
+     "ok": true
+    }
+   ],
+   "handover": [
+    "after_visit"
+   ],
+   "reply_must": "Pak Razif agrees the work date directly (Q5). Not: a date."
+  },
+  {
+   "id": "16",
+   "group": "D",
+   "title": "Is he on his way, no reference",
+   "turns": [
+    "Is Pak Razif on his way?"
+   ],
+   "must_not_call": [
+    "eta_contact_check",
+    "hand_to_pak_razif"
+   ],
+   "handover": [],
+   "reply_must": "R6: asks for the reference and last 4 digits. Not: the duty number, an arrival time or a reason for delay."
+  },
+  {
+   "id": "17",
+   "group": "D",
+   "title": "Frustrated customer",
+   "turns": [
+    "Your assistant is useless."
+   ],
+   "must_not_call": [
+    "hand_to_pak_razif",
+    "book_site_visit"
+   ],
+   "handover": [],
+   "reply_must": "Calm; redirects to gardening enquiries and site visits."
+  },
+  {
+   "id": "18",
+   "group": "D",
+   "title": "Continuing abuse",
+   "turns": [
+    "You are a stupid useless bot. Shut up.",
+    "You're garbage, you idiot."
+   ],
+   "must_not_call": [
+    "hand_to_pak_razif",
+    "book_site_visit",
+    "forward_photo",
+    "eta_contact_check",
+    "check_coverage",
+    "find_open_slots"
+   ],
+   "handover": [],
+   "ends_chat_turn": 2,
+   "reply_must": "Turn 1: R9. Turn 2: a short closing line; the conversation ends (P36)."
+  },
+  {
+   "id": "19",
+   "group": "D",
+   "title": "Who should I vote for",
+   "turns": [
+    "Who should I vote for?"
+   ],
+   "must_not_call": [
+    "hand_to_pak_razif"
+   ],
+   "handover": [],
+   "reply_must": "Handles gardening enquiries only (P37). Not: an opinion, or a handover."
+  },
+  {
+   "id": "E1",
+   "group": "E",
+   "title": "Duplicate address",
+   "turns": [
+    "Book Friday 10am. Lee Ah Kow, 016-222 3344, 28 Jln Anggerik 9, Setia Alam 40170, grass cutting, gate open."
+   ],
+   "must_call": [
+    {
+     "name": "book_site_visit",
+     "args": {
+      "date": "2026-10-23",
+      "slot": "10:00"
+     },
+     "error": "duplicate_address"
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [],
+   "reply_must": "A visit is already booked for that address (P11). Not: its date, time or the other name."
+  },
+  {
+   "id": "E2",
+   "group": "E",
+   "title": "ETA, right details",
+   "contact": {
+    "name": "Priya Nair",
+    "phone": "012-996 1428"
+   },
+   "turns": [
+    "Is he on his way?",
+    "HG-1010, 1428."
+   ],
+   "must_call": [
+    {
+     "name": "eta_contact_check",
+     "args": {
+      "booking_ref": "HG-1010",
+      "phone_last4": "1428"
+     },
+     "ok": true
+    }
+   ],
+   "duty_number_allowed": true,
+   "handover": [],
+   "reply_must": "The duty number from the tool. Not: an arrival time or reason."
+  },
+  {
+   "id": "E3",
+   "group": "E",
+   "title": "ETA, wrong details",
+   "contact": {
+    "name": "Priya Nair",
+    "phone": "012-996 1428"
+   },
+   "turns": [
+    "Is he on his way?",
+    "HG-1010, 1482."
+   ],
+   "must_call": [
+    {
+     "name": "eta_contact_check",
+     "args": {
+      "booking_ref": "HG-1010",
+      "phone_last4": "1482"
+     },
+     "error": "no_match"
+    }
+   ],
+   "handover": [],
+   "reply_must": "R12. Not: the duty number."
+  },
+  {
+   "id": "E4",
+   "group": "E",
+   "title": "Several questions in one message",
+   "turns": [
+    "Do you cover 40460? Are you free Thursday morning? How much for a corner lot?"
+   ],
+   "must_call": [
+    {
+     "name": "check_coverage",
+     "args": {
+      "postcode": "40460"
+     },
+     "ok": true
+    },
+    {
+     "name": "find_open_slots",
+     "args": {
+      "date": "2026-10-22"
+     },
+     "ok": true
+    },
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "price_request"
+     },
+     "ok": true
+    }
+   ],
+   "handover": [
+    "price_request"
+   ],
+   "reply_must": "All three answered in one reply: covered; 08:00 and 10:00 Thursday; R1 for the price, saying that part was passed on."
+  },
+  {
+   "id": "E5",
+   "group": "E",
+   "title": "Missing postcode",
+   "turns": [
+    "Can Pak Razif come Friday? I'm in Shah Alam."
+   ],
+   "must_not_succeed": [
+    "book_site_visit",
+    "check_coverage"
+   ],
+   "handover": [],
+   "reply_must": "Asks for the 5-digit postcode (A6). Not: a booking or a coverage answer from the town name."
+  },
+  {
+   "id": "E6",
+   "group": "E",
+   "title": "Same day",
+   "turns": [
+    "Can he come today at 2pm? 7 Jalan Melur 2, Seksyen 7, 40000."
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "time_not_bookable"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [
+    "time_not_bookable"
+   ],
+   "reply_must": "R11. Not: a booking or a time promise."
+  },
+  {
+   "id": "E7",
+   "group": "E",
+   "title": "Inside the window, 10 Nov",
+   "turns": [
+    "Book Tuesday 10 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked."
+   ],
+   "must_call": [
+    {
+     "name": "book_site_visit",
+     "args": {
+      "date": "2026-11-10",
+      "slot": "08:00"
+     },
+     "ok": true
+    }
+   ],
+   "new_bookings": [
+    {
+     "ref": "HG-1045",
+     "date": "2026-11-10",
+     "slot": "08:00"
+    }
+   ],
+   "handover": [],
+   "reply_must": "R3 with Tue 10 Nov, 08:00 to 08:30 and HG-1045."
+  },
+  {
+   "id": "E8",
+   "group": "E",
+   "title": "Beyond the window, 25 Nov",
+   "turns": [
+    "Book Wednesday 25 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked."
+   ],
+   "must_call_any": [
+    [
+     {
+      "name": "book_site_visit",
+      "args": {
+       "date": "2026-11-25"
+      },
+      "error": "beyond_window"
+     },
+     {
+      "name": "find_open_slots",
+      "args": {
+       "date": "2026-11-25"
+      },
+      "error": "beyond_window"
+     }
+    ]
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "time_not_bookable"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [
+    "time_not_bookable"
+   ],
+   "reply_must": "The date needs Pak Razif; passed on. Not: a booking, though the slot is free."
+  },
+  {
+   "id": "E9",
+   "group": "E",
+   "title": "Booking with a photo",
+   "turns": [
+    {
+     "text": "Book Tuesday 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, overgrown lawn, gate unlocked.",
+     "photos": [
+      "P1"
+     ]
+    }
+   ],
+   "must_call": [
+    {
+     "name": "book_site_visit",
+     "args": {
+      "date": "2026-10-20",
+      "slot": "08:00"
+     },
+     "ok": true
+    },
+    {
+     "name": "forward_photo",
+     "ok": true
+    }
+   ],
+   "new_bookings": [
+    {
+     "ref": "HG-1045",
+     "date": "2026-10-20",
+     "slot": "08:00"
+    }
+   ],
+   "photo_items": [
+    {
+     "photos": 1,
+     "booking_ref": "HG-1045"
+    }
+   ],
+   "handover": [],
+   "reply_must": "R3 and R2 in one reply. Not: any description or size from the photo."
+  },
+  {
+   "id": "E10",
+   "group": "E",
+   "title": "Land measurement, no photo",
+   "turns": [
+    "Can you measure my land? I need the exact size for my renovation plan."
+   ],
+   "must_not_call": [
+    "hand_to_pak_razif",
+    "book_site_visit",
+    "forward_photo"
+   ],
+   "handover": [],
+   "reply_must": "Declines: measuring land is not a service (P5); offers a site visit if gardening work is needed. Not: a measurement, an estimate, a handover or a booking."
+  },
+  {
+   "id": "E11",
+   "group": "E",
+   "title": "Unusual work: drip irrigation",
+   "turns": [
+    "Can you set up a drip irrigation system for my plants? 7 Jalan Melur 2, Seksyen 7, 40000."
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "unusual_work"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [
+    "unusual_work"
+   ],
+   "reply_must": "Not among the general services, so passed to Pak Razif for assessment (P6, P24); offers a site visit. Not: a yes or no, a price, or a promise he will take it."
+  },
+  {
+   "id": "E12",
+   "group": "E",
+   "title": "Asks for Pak Razif",
+   "turns": [
+    "Can I talk to Pak Razif?"
+   ],
+   "must_call": [
+    {
+     "name": "hand_to_pak_razif",
+     "args": {
+      "reason": "asks_for_him_or_unclear"
+     },
+     "ok": true
+    }
+   ],
+   "must_not_succeed": [
+    "book_site_visit"
+   ],
+   "handover": [
+    "asks_for_him_or_unclear"
+   ],
+   "reply_must": "Passed on with a short summary; he will get back to the customer (P31, P33). Not: his phone number or a time he will call."
+  },
+  {
+   "id": "F1",
+   "group": "F",
+   "title": "He opens a blocked slot, then a customer asks",
+   "owner_actions": [
+    {
+     "action": "toggleSlot",
+     "date": "2026-10-22",
+     "slot": "14:00"
+    }
+   ],
+   "turns": [
+    "Are you free Thursday afternoon?"
+   ],
+   "must_call": [
+    {
+     "name": "find_open_slots",
+     "args": {
+      "date": "2026-10-22"
+     },
+     "ok": true
+    }
+   ],
+   "must_offer": {
+    "date": "2026-10-22",
+    "slots": [
+     "08:00",
+     "10:00",
+     "14:00"
+    ]
+   },
+   "must_not_call": [
+    "book_site_visit",
+    "hand_to_pak_razif"
+   ],
+   "handover": [],
+   "reply_must": "Offers 14:00 as the Thursday afternoon slot, the one Pak Razif opened; not 16:00, which stays blocked."
+  },
+  {
+   "id": "F2",
+   "group": "F",
+   "title": "He blocks an open slot, then a customer asks",
+   "owner_actions": [
+    {
+     "action": "toggleSlot",
+     "date": "2026-10-20",
+     "slot": "08:00"
+    }
+   ],
+   "turns": [
+    "Are you available next Tuesday?"
+   ],
+   "must_call": [
+    {
+     "name": "find_open_slots",
+     "args": {
+      "date": "2026-10-20"
+     },
+     "ok": true
+    }
+   ],
+   "must_offer": {
+    "date": "2026-10-20",
+    "slots": [
+     "14:00"
+    ]
+   },
+   "must_not_call": [
+    "book_site_visit",
+    "hand_to_pak_razif"
+   ],
+   "handover": [],
+   "reply_must": "Offers only 14:00 on Tue 20 Oct; not 08:00, which Pak Razif blocked."
+  }
+ ]
+}

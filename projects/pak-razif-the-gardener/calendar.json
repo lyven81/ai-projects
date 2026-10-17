@@ -1,0 +1,2194 @@
+{
+ "business": "Pak Razif Garden",
+ "months": [
+  "2026-10",
+  "2026-11"
+ ],
+ "now": "2026-10-17T10:00",
+ "first_contact": "2026-10-17",
+ "duty_number": "012-555 0188",
+ "window": {
+  "from": "2026-10-18",
+  "to": "2026-11-17"
+ },
+ "slots": [
+  "08:00",
+  "10:00",
+  "14:00",
+  "16:00"
+ ],
+ "visit_minutes": 30,
+ "buffer_minutes": 30,
+ "max_visits_per_day": 4,
+ "days": {
+  "2026-10-01": {
+   "date": "2026-10-01",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1001"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-02": {
+   "date": "2026-10-02",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting",
+     "area": "Bukit Tinggi, Klang"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1002"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-03": {
+   "date": "2026-10-03",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-04": {
+   "date": "2026-10-04",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-10-05": {
+   "date": "2026-10-05",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [
+    {
+     "start": "16:00",
+     "end": "18:00",
+     "work": "Garden waste removal",
+     "area": "Seksyen 7, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-06": {
+   "date": "2026-10-06",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [
+    {
+     "start": "10:00",
+     "end": "12:00",
+     "work": "Garden clean-up",
+     "area": "Bukit Tinggi, Klang"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-07": {
+   "date": "2026-10-07",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Garden clean-up",
+     "area": "Seksyen 13, Shah Alam"
+    },
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Garden clean-up",
+     "area": "SS15, Subang Jaya"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-08": {
+   "date": "2026-10-08",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [
+    {
+     "start": "16:00",
+     "end": "18:00",
+     "work": "Grass cutting and edge trimming",
+     "area": "Seksyen 7, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1003"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-09": {
+   "date": "2026-10-09",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Garden waste removal",
+     "area": "Seksyen 13, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-10": {
+   "date": "2026-10-10",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [
+    {
+     "start": "10:00",
+     "end": "12:00",
+     "work": "Grass cutting and edge trimming",
+     "area": "Seksyen 13, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1004"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-11": {
+   "date": "2026-10-11",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-10-12": {
+   "date": "2026-10-12",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting",
+     "area": "Seksyen 9, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1005"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-13": {
+   "date": "2026-10-13",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1006"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1007"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-14": {
+   "date": "2026-10-14",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting",
+     "area": "Seksyen 9, Shah Alam"
+    },
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Grass cutting",
+     "area": "Seksyen 9, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-15": {
+   "date": "2026-10-15",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Hedge and bush trimming",
+     "area": "Bukit Tinggi, Klang"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1008"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-16": {
+   "date": "2026-10-16",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [
+    {
+     "start": "14:00",
+     "end": "17:30",
+     "work": "Garden clean-up",
+     "area": "Kota Kemuning, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1009"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-17": {
+   "date": "2026-10-17",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Garden clean-up",
+     "area": "USJ 6, Subang Jaya"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1010"
+    }
+   },
+   "bookable": false
+  },
+  "2026-10-18": {
+   "date": "2026-10-18",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-10-19": {
+   "date": "2026-10-19",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1011"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1012"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1013"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1014"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-20": {
+   "date": "2026-10-20",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [
+    {
+     "start": "15:00",
+     "end": "18:00",
+     "work": "Hedge and bush trimming",
+     "area": "Kota Kemuning, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1015"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-21": {
+   "date": "2026-10-21",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Hedge and bush trimming",
+     "area": "Bukit Raja, Klang"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1016"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-22": {
+   "date": "2026-10-22",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Family commitment"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Family commitment"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-23": {
+   "date": "2026-10-23",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1017"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-24": {
+   "date": "2026-10-24",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1018"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1019"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1020"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-25": {
+   "date": "2026-10-25",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-10-26": {
+   "date": "2026-10-26",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Hedge and bush trimming",
+     "area": "Setia Alam, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-27": {
+   "date": "2026-10-27",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Hedge and bush trimming",
+     "area": "Alam Impian, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1021"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1022"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-28": {
+   "date": "2026-10-28",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1023"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-29": {
+   "date": "2026-10-29",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Garden waste removal",
+     "area": "Alam Impian, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1024"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-30": {
+   "date": "2026-10-30",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [
+    {
+     "start": "10:00",
+     "end": "12:00",
+     "work": "Garden clean-up",
+     "area": "Seksyen 7, Shah Alam"
+    },
+    {
+     "start": "16:00",
+     "end": "18:00",
+     "work": "Hedge and bush trimming",
+     "area": "Bandar Botanic, Klang"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-10-31": {
+   "date": "2026-10-31",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting",
+     "area": "Bukit Jelutong, Shah Alam"
+    },
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Garden clean-up",
+     "area": "SS15, Subang Jaya"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-01": {
+   "date": "2026-11-01",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-11-02": {
+   "date": "2026-11-02",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1025"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-03": {
+   "date": "2026-11-03",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [
+    {
+     "start": "10:00",
+     "end": "12:00",
+     "work": "Garden clean-up",
+     "area": "Bandar Botanic, Klang"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1026"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1027"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1028"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-04": {
+   "date": "2026-11-04",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Garden waste removal",
+     "area": "Seksyen 7, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1029"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1030"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-05": {
+   "date": "2026-11-05",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-06": {
+   "date": "2026-11-06",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1031"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-07": {
+   "date": "2026-11-07",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting",
+     "area": "Setia Alam, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-08": {
+   "date": "2026-11-08",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-11-09": {
+   "date": "2026-11-09",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting and edge trimming",
+     "area": "Bukit Raja, Klang"
+    },
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Grass cutting and edge trimming",
+     "area": "Setia Alam, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-10": {
+   "date": "2026-11-10",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Grass cutting and edge trimming",
+     "area": "Setia Alam, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1032"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-11": {
+   "date": "2026-11-11",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1033"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1034"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-12": {
+   "date": "2026-11-12",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Hedge and bush trimming",
+     "area": "Setia Alam, Shah Alam"
+    },
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Grass cutting and edge trimming",
+     "area": "USJ 6, Subang Jaya"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-13": {
+   "date": "2026-11-13",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1035"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-14": {
+   "date": "2026-11-14",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Garden waste removal",
+     "area": "Seksyen 7, Shah Alam"
+    },
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Hedge and bush trimming",
+     "area": "Bukit Jelutong, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-15": {
+   "date": "2026-11-15",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-11-16": {
+   "date": "2026-11-16",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Hedge and bush trimming",
+     "area": "Kota Kemuning, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1036"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1037"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-17": {
+   "date": "2026-11-17",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Garden clean-up",
+     "area": "Seksyen 13, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": true
+  },
+  "2026-11-18": {
+   "date": "2026-11-18",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Garden waste removal",
+     "area": "Bukit Raja, Klang"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1038"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-19": {
+   "date": "2026-11-19",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1039"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-20": {
+   "date": "2026-11-20",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Garden waste removal",
+     "area": "Bukit Raja, Klang"
+    },
+    {
+     "start": "14:00",
+     "end": "18:00",
+     "work": "Hedge and bush trimming",
+     "area": "Kota Kemuning, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-21": {
+   "date": "2026-11-21",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1040"
+    },
+    "14:00": {
+     "status": "booked",
+     "ref": "HG-1041"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-22": {
+   "date": "2026-11-22",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-11-23": {
+   "date": "2026-11-23",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting",
+     "area": "Seksyen 7, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-24": {
+   "date": "2026-11-24",
+   "weekday": "Tue",
+   "closed": null,
+   "field": [
+    {
+     "start": "16:00",
+     "end": "18:00",
+     "work": "Grass cutting and edge trimming",
+     "area": "Bukit Jelutong, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "booked",
+     "ref": "HG-1042"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-25": {
+   "date": "2026-11-25",
+   "weekday": "Wed",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-26": {
+   "date": "2026-11-26",
+   "weekday": "Thu",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Grass cutting",
+     "area": "Kota Kemuning, Shah Alam"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "blocked",
+     "reason": "Blocked by Pak Razif"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-27": {
+   "date": "2026-11-27",
+   "weekday": "Fri",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "open"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "booked",
+     "ref": "HG-1043"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-28": {
+   "date": "2026-11-28",
+   "weekday": "Sat",
+   "closed": null,
+   "field": [],
+   "slots": {
+    "08:00": {
+     "status": "booked",
+     "ref": "HG-1044"
+    },
+    "10:00": {
+     "status": "open"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "open"
+    }
+   },
+   "bookable": false
+  },
+  "2026-11-29": {
+   "date": "2026-11-29",
+   "weekday": "Sun",
+   "closed": "Sunday rest day",
+   "field": [],
+   "slots": {},
+   "bookable": false
+  },
+  "2026-11-30": {
+   "date": "2026-11-30",
+   "weekday": "Mon",
+   "closed": null,
+   "field": [
+    {
+     "start": "08:00",
+     "end": "12:00",
+     "work": "Garden clean-up",
+     "area": "Bukit Raja, Klang"
+    },
+    {
+     "start": "16:00",
+     "end": "18:00",
+     "work": "Grass cutting",
+     "area": "SS15, Subang Jaya"
+    }
+   ],
+   "slots": {
+    "08:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "10:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    },
+    "14:00": {
+     "status": "open"
+    },
+    "16:00": {
+     "status": "blocked",
+     "reason": "Field work"
+    }
+   },
+   "bookable": false
+  }
+ },
+ "bookings": [
+  {
+   "ref": "HG-1001",
+   "date": "2026-10-01",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Nurul Izzah Rahman",
+   "phone": "012-227 5078",
+   "address": "25, Jalan Kemboja 5, SS15, Subang Jaya",
+   "postcode": "47500",
+   "needs": "Bushes overgrown near the gate",
+   "access": "Side gate open, no pets",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1002",
+   "date": "2026-10-02",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Priya Nair",
+   "phone": "016-752 3023",
+   "address": "57, Jalan Cempaka 5, SS15, Subang Jaya",
+   "postcode": "47500",
+   "needs": "Monthly grass cutting, want to discuss",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1003",
+   "date": "2026-10-08",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Aminah Yusof",
+   "phone": "018-962 5464",
+   "address": "31, Jalan Kenari 12, Kota Kemuning, Shah Alam",
+   "postcode": "40460",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Park outside, gate code given on the day",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1004",
+   "date": "2026-10-10",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Tan Wei Ming",
+   "phone": "019-512 6169",
+   "address": "52, Jalan Seroja 1, Setia Alam, Shah Alam",
+   "postcode": "40170",
+   "needs": "Garden clean-up after renovation",
+   "access": "Side gate open, no pets",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1005",
+   "date": "2026-10-12",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Wong Kok Leong",
+   "phone": "014-745 5345",
+   "address": "37, Jalan Melur 5, SS15, Subang Jaya",
+   "postcode": "47500",
+   "needs": "Grass cutting for front and back lawn",
+   "access": "Side gate open, no pets",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1006",
+   "date": "2026-10-13",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Priya Nair",
+   "phone": "014-694 6214",
+   "address": "53, Jalan Teratai 6, Bandar Botanic, Klang",
+   "postcode": "41200",
+   "needs": "Grass cutting for front and back lawn",
+   "access": "Call on arrival",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1007",
+   "date": "2026-10-13",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Daniel Lee",
+   "phone": "017-254 6386",
+   "address": "38, Jalan Melur 9, Bukit Raja, Klang",
+   "postcode": "41050",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Call on arrival",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1008",
+   "date": "2026-10-15",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Rosnah Ali",
+   "phone": "018-663 1198",
+   "address": "19, Jalan Dahlia 3, Bukit Tinggi, Klang",
+   "postcode": "41200",
+   "needs": "Grass cutting for front and back lawn",
+   "access": "Side gate open, no pets",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1009",
+   "date": "2026-10-16",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Tan Wei Ming",
+   "phone": "015-300 9480",
+   "address": "43, Jalan Kenari 1, Setia Alam, Shah Alam",
+   "postcode": "40170",
+   "needs": "Hedge trimming along the fence",
+   "access": "Side gate open, no pets",
+   "status": "visited"
+  },
+  {
+   "ref": "HG-1010",
+   "date": "2026-10-17",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Priya Nair",
+   "phone": "012-996 1428",
+   "address": "30, Jalan Mawar 4, Bukit Raja, Klang",
+   "postcode": "41050",
+   "needs": "Grass cutting for front and back lawn",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1011",
+   "date": "2026-10-19",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Kavitha Raj",
+   "phone": "011-956 9833",
+   "address": "4, Jalan Teratai 9, Seksyen 9, Shah Alam",
+   "postcode": "40100",
+   "needs": "Grass cutting and garden waste removal",
+   "access": "Park outside, gate code given on the day",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1012",
+   "date": "2026-10-19",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Grace Teoh",
+   "phone": "019-795 7826",
+   "address": "26, Jalan Kenari 9, Kota Kemuning, Shah Alam",
+   "postcode": "40460",
+   "needs": "Bushes overgrown near the gate",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1013",
+   "date": "2026-10-19",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Tan Wei Ming",
+   "phone": "015-533 6269",
+   "address": "8, Jalan Seroja 3, USJ 6, Subang Jaya",
+   "postcode": "47610",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1014",
+   "date": "2026-10-19",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Ong Boon Hock",
+   "phone": "012-461 5095",
+   "address": "5, Jalan Kemboja 5, Bukit Jelutong, Shah Alam",
+   "postcode": "40150",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1015",
+   "date": "2026-10-20",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Daniel Lee",
+   "phone": "013-500 2363",
+   "address": "28, Jalan Anggerik 9, Setia Alam, Shah Alam",
+   "postcode": "40170",
+   "needs": "Monthly grass cutting, want to discuss",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1016",
+   "date": "2026-10-21",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Rosnah Ali",
+   "phone": "013-368 9762",
+   "address": "60, Jalan Seroja 8, SS15, Subang Jaya",
+   "postcode": "47500",
+   "needs": "Grass cutting and garden waste removal",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1017",
+   "date": "2026-10-23",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Yap Hui Min",
+   "phone": "014-372 3472",
+   "address": "50, Jalan Teratai 7, Seksyen 9, Shah Alam",
+   "postcode": "40100",
+   "needs": "Bushes overgrown near the gate",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1018",
+   "date": "2026-10-24",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Grace Teoh",
+   "phone": "011-850 3005",
+   "address": "22, Jalan Anggerik 2, Setia Alam, Shah Alam",
+   "postcode": "40170",
+   "needs": "Monthly grass cutting, want to discuss",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1019",
+   "date": "2026-10-24",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Zainal Abidin",
+   "phone": "014-374 2156",
+   "address": "60, Jalan Dahlia 2, Bukit Tinggi, Klang",
+   "postcode": "41200",
+   "needs": "Grass cutting and garden waste removal",
+   "access": "Park outside, gate code given on the day",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1020",
+   "date": "2026-10-24",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Hafiz Ismail",
+   "phone": "013-353 5358",
+   "address": "20, Jalan Kemboja 6, Bandar Botanic, Klang",
+   "postcode": "41200",
+   "needs": "Garden clean-up after renovation",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1021",
+   "date": "2026-10-27",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Aminah Yusof",
+   "phone": "011-782 1984",
+   "address": "23, Jalan Anggerik 7, Kota Kemuning, Shah Alam",
+   "postcode": "40460",
+   "needs": "Monthly grass cutting, want to discuss",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1022",
+   "date": "2026-10-27",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Khoo Chee Keong",
+   "phone": "015-660 3659",
+   "address": "49, Jalan Kemboja 4, Bukit Jelutong, Shah Alam",
+   "postcode": "40150",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Someone home, ring the bell",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1023",
+   "date": "2026-10-28",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Ong Boon Hock",
+   "phone": "014-563 9202",
+   "address": "51, Jalan Melur 10, Seksyen 9, Shah Alam",
+   "postcode": "40100",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1024",
+   "date": "2026-10-29",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Khoo Chee Keong",
+   "phone": "014-534 7322",
+   "address": "60, Jalan Teratai 3, Kota Kemuning, Shah Alam",
+   "postcode": "40460",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1025",
+   "date": "2026-11-02",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Rosnah Ali",
+   "phone": "015-747 2174",
+   "address": "46, Jalan Kenari 5, USJ 6, Subang Jaya",
+   "postcode": "47610",
+   "needs": "Grass cutting and garden waste removal",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1026",
+   "date": "2026-11-03",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Grace Teoh",
+   "phone": "014-208 2860",
+   "address": "23, Jalan Mawar 3, Bandar Botanic, Klang",
+   "postcode": "41200",
+   "needs": "Monthly grass cutting, want to discuss",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1027",
+   "date": "2026-11-03",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Rosnah Ali",
+   "phone": "012-241 7418",
+   "address": "8, Jalan Anggerik 3, Bukit Raja, Klang",
+   "postcode": "41050",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1028",
+   "date": "2026-11-03",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Tan Wei Ming",
+   "phone": "015-218 2740",
+   "address": "50, Jalan Cempaka 3, Bandar Botanic, Klang",
+   "postcode": "41200",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Someone home, ring the bell",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1029",
+   "date": "2026-11-04",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Hafiz Ismail",
+   "phone": "019-971 6298",
+   "address": "48, Jalan Anggerik 1, Seksyen 9, Shah Alam",
+   "postcode": "40100",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1030",
+   "date": "2026-11-04",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Azlan Shah Omar",
+   "phone": "018-504 3013",
+   "address": "47, Jalan Kekwa 11, Bukit Tinggi, Klang",
+   "postcode": "41200",
+   "needs": "Garden clean-up after renovation",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1031",
+   "date": "2026-11-06",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Daniel Lee",
+   "phone": "017-623 5315",
+   "address": "37, Jalan Teratai 10, Bandar Botanic, Klang",
+   "postcode": "41200",
+   "needs": "Monthly grass cutting, want to discuss",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1032",
+   "date": "2026-11-10",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Tan Wei Ming",
+   "phone": "015-929 6926",
+   "address": "54, Jalan Kemboja 7, Bukit Jelutong, Shah Alam",
+   "postcode": "40150",
+   "needs": "Grass cutting for front and back lawn",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1033",
+   "date": "2026-11-11",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Hafiz Ismail",
+   "phone": "013-566 6194",
+   "address": "39, Jalan Teratai 5, Bukit Raja, Klang",
+   "postcode": "41050",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1034",
+   "date": "2026-11-11",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Lim Mei Ling",
+   "phone": "011-340 8439",
+   "address": "33, Jalan Melur 12, Seksyen 9, Shah Alam",
+   "postcode": "40100",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1035",
+   "date": "2026-11-13",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Khoo Chee Keong",
+   "phone": "018-680 2468",
+   "address": "12, Jalan Cempaka 4, Bukit Jelutong, Shah Alam",
+   "postcode": "40150",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Someone home, ring the bell",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1036",
+   "date": "2026-11-16",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Daniel Lee",
+   "phone": "013-366 1156",
+   "address": "32, Jalan Kenari 12, Setia Alam, Shah Alam",
+   "postcode": "40170",
+   "needs": "Corner lot lawn and side garden",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1037",
+   "date": "2026-11-16",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Hafiz Ismail",
+   "phone": "019-754 8630",
+   "address": "38, Jalan Kenari 1, Alam Impian, Shah Alam",
+   "postcode": "40470",
+   "needs": "Hedge trimming along the fence",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1038",
+   "date": "2026-11-18",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Azlan Shah Omar",
+   "phone": "017-421 3767",
+   "address": "37, Jalan Kekwa 7, Bukit Jelutong, Shah Alam",
+   "postcode": "40150",
+   "needs": "Grass cutting and garden waste removal",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1039",
+   "date": "2026-11-19",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Tan Wei Ming",
+   "phone": "011-949 5976",
+   "address": "51, Jalan Cempaka 2, Kota Kemuning, Shah Alam",
+   "postcode": "40460",
+   "needs": "Bushes overgrown near the gate",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1040",
+   "date": "2026-11-21",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Wong Kok Leong",
+   "phone": "019-397 9596",
+   "address": "42, Jalan Cempaka 7, Seksyen 7, Shah Alam",
+   "postcode": "40000",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Side gate open, no pets",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1041",
+   "date": "2026-11-21",
+   "slot": "14:00",
+   "window": "14:00 to 14:30",
+   "name": "Suresh Pillai",
+   "phone": "015-744 3853",
+   "address": "22, Jalan Anggerik 3, Bukit Jelutong, Shah Alam",
+   "postcode": "40150",
+   "needs": "Bushes overgrown near the gate",
+   "access": "Park outside, gate code given on the day",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1042",
+   "date": "2026-11-24",
+   "slot": "10:00",
+   "window": "10:00 to 10:30",
+   "name": "Azlan Shah Omar",
+   "phone": "016-464 9369",
+   "address": "24, Jalan Dahlia 12, Bukit Raja, Klang",
+   "postcode": "41050",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Gate unlocked, dog kept indoors",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1043",
+   "date": "2026-11-27",
+   "slot": "16:00",
+   "window": "16:00 to 16:30",
+   "name": "Chong Siew Lan",
+   "phone": "019-261 1082",
+   "address": "17, Jalan Seroja 1, Bukit Tinggi, Klang",
+   "postcode": "41200",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  },
+  {
+   "ref": "HG-1044",
+   "date": "2026-11-28",
+   "slot": "08:00",
+   "window": "08:00 to 08:30",
+   "name": "Grace Teoh",
+   "phone": "011-404 5903",
+   "address": "33, Jalan Dahlia 9, Bukit Raja, Klang",
+   "postcode": "41050",
+   "needs": "Overgrown lawn, not cut for three months",
+   "access": "Call on arrival",
+   "status": "confirmed"
+  }
+ ],
+ "next_ref": 1045,
+ "inbox": [],
+ "uploads": [],
+ "demo_photos": {
+  "P1": "images/pak-razif-the-gardener/demo/P1 front lawn.jpeg",
+  "P2": "images/pak-razif-the-gardener/demo/P2 side garden.jpeg",
+  "P3": "images/pak-razif-the-gardener/demo/P3 back garden.jpeg",
+  "P4": "images/pak-razif-the-gardener/demo/P4 land plot.jpeg"
+ }
+}

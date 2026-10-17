@@ -4,18 +4,26 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 2**
+**Total published AI projects: 3**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 3 | 2026-10-17 | Pak Razif The Gardener | [page](https://lyven81.github.io/ai-projects/pak-razif-the-gardener.html) |
 | 2 | 2026-10-16 | Badminton Court Booking Agent | [page](https://lyven81.github.io/ai-projects/badminton-booking-agent.html) |
 | 1 | 2026-10-16 | Wee Auto Car Care | [page](https://lyven81.github.io/ai-projects/wee-auto-car-care.html) |
 
 ## Projects by Problem Type
 
 ### Customer service
+
+#### Pak Razif The Gardener
+- **What it does:** A gardener's own assistant that answers enquiries and books free site visits while he works, with prices and decisions kept for him.
+- **How it's built:** Claude with an MCP server (Node.js) offering six resources with 103 numbered rules and six tools; coverage, the booking window, open slots, photos and the duty number check are enforced in the tools' code; prices, changes and complaints go to his phone inbox, and he can open or block any slot himself.
+- **Problem solved:** A two-person gardening service misses enquiries while working in customers' gardens. The assistant answers routine questions, confirms free site visits into his open slots, and passes the rest to him with a summary he can act on.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/pak-razif-the-gardener.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/pak-razif-the-gardener/assistant.html)
+- **Rebuilt:** 2026-10-17
 
 #### Badminton Court Booking Agent
 - **What it does:** A court booking assistant that answers only from the centre's policies, with staff in control of payments.

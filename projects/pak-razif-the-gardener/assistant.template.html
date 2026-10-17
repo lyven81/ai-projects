@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<title>Pak Razif's assistant</title>
+<style>
+:root{--bg:#fff;--card:#fff;--ink:#1f4f8f;--muted:#5d7ea8;--line:#d6e2f0;--navy:#1f4f8f;--accent:#2f6fb0;--box:#f3f8fd;
+  --frame:#1f4f8f;--chatbg:#f3f8fd;--me:#2f6fb0;--meink:#fff;--them:#fff;--ok:#1e7a4c;--okbg:#e4f4ea;--err:#a8432a;--errbg:#fbece6;--warn:#8a5a12;--warnbg:#fdf3e1;--warnline:#ecd3a4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;
+  --frame:#3a4654;--chatbg:#141a21;--me:#2f5f92;--meink:#fff;--them:#222b35;--ok:#8fd3a8;--okbg:#17301f;--err:#f0a58f;--errbg:#3a2019;--warn:#e9c27a;--warnbg:#2b2416;--warnline:#5a4824}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;
+  --frame:#3a4654;--chatbg:#141a21;--me:#2f5f92;--meink:#fff;--them:#222b35;--ok:#8fd3a8;--okbg:#17301f;--err:#f0a58f;--errbg:#3a2019;--warn:#e9c27a;--warnbg:#2b2416;--warnline:#5a4824}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Segoe UI",Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1100px;margin:0 auto;padding:18px 16px 40px}
+.crumbs{font-size:12.5px;color:var(--muted)}
+.crumbs a{color:inherit;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+h1{font-size:22px;color:var(--navy);margin:2px 0 4px}
+.intro{color:var(--muted);margin:0 0 6px;font-size:14px;max-width:820px}
+.links{font-size:13px;margin:0 0 14px;color:var(--muted)}
+.links a{white-space:nowrap}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:18px;padding:5px 15px;font:inherit;font-size:13.5px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--navy);color:var(--card);border-color:var(--navy)}
+.panel[hidden]{display:none}
+h2{font-size:18px;color:var(--navy);margin:26px 0 8px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h2:first-child{margin-top:4px}
+p.lead{margin:0 0 10px;max-width:860px}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td ul{margin:0;padding-left:18px}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:12.5px;font-family:Consolas,monospace}
+
+/* diagram */
+.diagram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin:8px 0 6px}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram .tall{display:none;max-width:380px;margin:0 auto}
+.d-box{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.d-ai{fill:var(--box);stroke:var(--accent);stroke-width:2}
+.d-owner{fill:var(--box);stroke:var(--navy);stroke-width:2}
+.d-t{fill:var(--ink);font:600 14px "Segoe UI",Arial,sans-serif}
+.d-s{fill:var(--muted);font:12px "Segoe UI",Arial,sans-serif}
+.d-l{fill:var(--accent);font:600 11.5px "Segoe UI",Arial,sans-serif}
+.d-a{stroke:var(--muted);stroke-width:1.6;fill:none}
+.d-back{stroke:var(--accent);stroke-width:1.6;fill:none;stroke-dasharray:5 4}
+.d-head{fill:var(--muted)}.d-headb{fill:var(--accent)}
+
+/* controls */
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-bottom:8px}
+select,input[type=password]{padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;font-size:13.5px;max-width:100%}
+#case-pick{min-width:0;max-width:360px}
+.btn{display:inline-block;font:inherit;font-size:13px;font-weight:600;border-radius:8px;padding:7px 14px;background:var(--accent);color:#fff;border:1px solid var(--accent);cursor:pointer}
+.btn.alt{background:var(--card);color:var(--accent)}
+.btn:disabled{opacity:.5;cursor:default}
+.passline{text-align:center;font-size:13px;color:var(--muted);margin:0 0 12px}
+.passline .ok{color:var(--ok);font-weight:600}
+.passline .no{color:var(--err);font-weight:600}
+.runline{text-align:center;font-size:12.5px;color:var(--muted);margin:-2px 0 10px}
+
+/* phones */
+.switch{display:none;margin:0 auto 10px;border:1px solid var(--line);border-radius:18px;overflow:hidden;width:max-content;background:var(--card)}
+.switch button{border:0;background:none;color:var(--ink);font:inherit;font-size:13.5px;padding:6px 16px;cursor:pointer;position:relative}
+.switch button[aria-pressed="true"]{background:var(--navy);color:var(--card)}
+.switch .dot{display:none;position:absolute;top:5px;right:6px;width:8px;height:8px;border-radius:50%;background:#d9822b}
+.switch .dot.on{display:block}
+.stage{display:flex;gap:26px;justify-content:center;align-items:flex-start}
+.who{font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:6px}
+.phone{width:340px;max-width:100%;height:660px;border:10px solid var(--frame);border-radius:34px;background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
+.phone iframe{flex:1;width:100%;border:0;display:block;background:var(--bg)}
+.bar{background:var(--card);color:var(--navy);border-bottom:1px solid var(--line);padding:9px 14px;font-size:14px;display:flex;align-items:center;gap:8px}
+.bar .av{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+.bar .nm{flex:1;line-height:1.25}.bar .nm small{display:block;opacity:.85;font-size:11.5px}
+.chat{flex:1;overflow-y:auto;overflow-x:hidden;background:var(--chatbg);padding:10px 9px}
+.day{text-align:center;font-size:11px;color:var(--muted);margin:2px 0 8px}
+.msg{max-width:84%;width:fit-content;padding:6px 10px 4px;border-radius:12px;margin:0 0 6px;font-size:13.5px;line-height:1.4;box-shadow:0 1px 0 rgba(0,0,0,.05);animation:in .25s ease;overflow-wrap:anywhere}
+.msg p{margin:0 0 4px}.msg ul,.msg ol{margin:2px 0 4px;padding-left:18px}
+.msg .tm{display:block;text-align:right;font-size:10.5px;opacity:.7;margin-top:1px}
+.me{margin-left:auto;background:var(--me);color:var(--meink);border-bottom-right-radius:4px;white-space:pre-wrap}
+.them{background:var(--them);border:1px solid var(--line);border-bottom-left-radius:4px}
+.sys{margin:6px auto 8px;text-align:center;font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:4px 10px;width:fit-content;max-width:90%;overflow-wrap:anywhere}
+.sys.err{color:var(--err);background:var(--errbg);border-color:var(--err)}
+.ph{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:3px}.ph img{width:96px;height:72px;object-fit:cover;border-radius:7px;display:block}
+.typing{display:inline-flex;gap:3px;padding:9px 12px}.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:b 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}
+@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+.input{display:flex;gap:6px;align-items:center;padding:8px;background:var(--card);border-top:1px solid var(--line);position:relative}
+.clip{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:15px;flex:none;cursor:pointer;padding:0}
+.box{flex:1;min-width:0;border:1px solid var(--line);border-radius:18px;padding:7px 12px;font:inherit;font-size:13.5px;color:var(--ink);background:var(--bg)}
+.box[disabled]{color:var(--muted)}
+.send{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;border:0;display:flex;align-items:center;justify-content:center;flex:none;cursor:pointer;font-size:14px;padding:0}
+.send:disabled,.clip:disabled{opacity:.45;cursor:default}
+.pending{display:none;gap:6px;padding:6px 8px 0;background:var(--card);border-top:1px solid var(--line);flex-wrap:wrap}
+.pending.on{display:flex}
+.pending span{position:relative}
+.pending img{width:52px;height:40px;object-fit:cover;border-radius:5px;display:block;border:1px solid var(--line)}
+.pending button{position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;border:0;background:var(--navy);color:var(--card);font-size:11px;line-height:18px;padding:0;cursor:pointer}
+.menu{display:none;position:absolute;bottom:52px;left:8px;right:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px;box-shadow:0 6px 20px rgba(0,0,0,.18);z-index:3}
+.menu.on{display:block}
+.menu .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.menu .grid button{border:1px solid var(--line);background:var(--box);border-radius:7px;padding:3px;cursor:pointer;font:inherit;font-size:11px;color:var(--ink)}
+.menu .grid img{width:100%;height:44px;object-fit:cover;border-radius:5px;display:block;margin-bottom:2px}
+.menu label{display:block;margin-top:7px;text-align:center;font-size:12.5px;color:var(--accent);cursor:pointer;border:1px dashed var(--line);border-radius:7px;padding:5px}
+.menu .note{font-size:11.5px;color:var(--muted);margin:6px 0 0}
+
+/* what happened */
+.log{max-width:760px;margin:14px auto 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px}
+.log>b{color:var(--navy)}
+.log ol{margin:4px 0 0;padding-left:20px;max-height:300px;overflow:auto}
+.log li{margin:3px 0}
+.log li.turn{display:block;list-style:none;margin:8px 0 2px -20px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted)}
+.log li.turn:first-child{margin-top:2px}
+.log .ok{color:var(--ok);background:var(--okbg);border-radius:8px;padding:0 6px;font-size:12px;font-weight:600}
+.log .er{color:var(--err);background:var(--errbg);border-radius:8px;padding:0 6px;font-size:12px;font-weight:600}
+.log .arr{color:var(--accent);font-weight:600}
+.log .muted{color:var(--muted)}
+
+/* live */
+.keybox{max-width:760px;margin:0 auto 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13.5px}
+.keyrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.keyrow input[type=password]{flex:1;min-width:200px}
+.keybox label.chk{font-size:12.5px;color:var(--muted);display:flex;gap:5px;align-items:center}
+.warn{background:var(--warnbg);border:1px solid var(--warnline);color:var(--warn);border-radius:8px;padding:8px 10px;margin:10px 0 6px;font-size:13px}
+.hint{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.examples{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.examples button{border:1px dashed var(--line);background:var(--box);color:var(--ink);border-radius:14px;padding:3px 10px;font:inherit;font-size:12.5px;cursor:pointer;text-align:left}
+footer{margin-top:28px;font-size:12px;color:var(--muted)}
+
+@media (max-width:820px){
+  .switch{display:flex}
+  .stage{flex-direction:column;align-items:center}
+  .stage[data-show="customer"] .side-owner,.stage[data-show="owner"] .side-customer{display:none}
+  .phone{width:340px;height:620px}
+  .who{display:none}
+}
+@media (max-width:640px){.diagram .wide{display:none}.diagram .tall{display:block}}
+
+/* full screen: the controls, the two phones scaled to the screen height, What happened beside them */
+.fsbtn{display:inline-flex;align-items:center;gap:6px}
+.fsbtn .fs-out,.fsbtn[aria-pressed="true"] .fs-in{display:none}
+.fsbtn[aria-pressed="true"] .fs-out{display:inline}
+.fsbox.fs{position:fixed;inset:0;z-index:100;background:var(--bg);margin:0;padding:10px 16px 12px;display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,340px);grid-template-rows:auto minmax(0,1fr);gap:8px 18px;overflow:hidden}
+.fsbox.fs:fullscreen{width:100%;height:100%}
+.fsbox.fs::backdrop{background:var(--bg)}
+.fs .fshead{grid-column:1/-1}
+.fs .ctrl{margin-bottom:4px}
+.fs .passline{margin:0 0 2px}
+.fs .stagewrap{display:flex;justify-content:center;align-items:center;min-height:0;min-width:0;overflow:hidden}
+.fs .stage{width:max-content}
+.fs .phone{height:580px}
+.fs .fsside{display:flex;flex-direction:column;gap:8px;min-height:0}
+.fs .log{max-width:none;margin:0;flex:1;min-height:0;overflow:auto;font-size:14px}
+.fs .log ol{max-height:none;overflow:visible}
+.fs .fsside .examples{margin:0}
+.fs .keybox{max-width:none;margin:0 0 4px;padding:8px 12px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.fs .keybox .warn,.fs .keybox .hint,.fs .keybox label.chk{display:none}
+.fs .keybox .keyrow{margin:0!important}
+body.fs-on{overflow:hidden}
+@media (max-width:820px){
+  .fsbox.fs{display:block;overflow-y:auto;padding:8px 12px 12px}
+  .fs .switch{margin:4px auto 6px}
+  .fs .stagewrap{align-items:flex-start}
+  .fs .fsside{margin-top:8px}
+  .fs .log{max-height:none}
+}
+@media (prefers-reduced-motion:reduce){.msg{animation:none}.typing i{animation:none;opacity:.6}}
+</style>
+</head>
+<body><div class="wrap">
+<div class="crumbs"><a href="../../index.html">AI Projects</a> / <a href="../../pak-razif-the-gardener.html">Pak Razif The Gardener</a></div>
+<h1>Pak Razif's assistant</h1>
+<p class="intro">Pak Razif runs a two-person gardening service in Shah Alam (a fictional business). While he works, his assistant answers customers, books free site visits into his open slots, and passes everything else to his phone. The customer's phone is on the left, Pak Razif's phone on the right. Demo clock: Sat 17 Oct 2026, 10:00.</p>
+<p class="links">What the assistant reads: <span id="res-links"></span> · <a href="benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></p>
+
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" data-tab="how" aria-selected="true">How it works</button>
+  <button class="tab" role="tab" data-tab="replay" aria-selected="false">Replay</button>
+  <button class="tab" role="tab" data-tab="live" aria-selected="false">Live chat</button>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="panel" id="panel-how">
+  <h2>1. The flow</h2>
+  <p class="lead">A customer messages Pak Razif on WhatsApp. The assistant answers from six resources and acts only through six tools. The rules that must hold are written in the tools' code, not left to the model. Anything the assistant may not decide lands on Pak Razif's phone, and he replies to the customer himself.</p>
+  <div class="diagram" role="img" aria-label="Customer messages the assistant; the assistant reads six resources and calls six tools; the tools write to Pak Razif's calendar and inbox; Pak Razif replies to the customer by phone or WhatsApp.">
+    <svg class="wide" viewBox="0 0 960 345" aria-hidden="true">
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker>
+        <marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-headb"/></marker>
+      </defs>
+      <rect class="d-box" x="10" y="40" width="175" height="92" rx="10"/>
+      <text class="d-t" x="97" y="72" text-anchor="middle">Customer</text>
+      <text class="d-s" x="97" y="94" text-anchor="middle">WhatsApp message,</text>
+      <text class="d-s" x="97" y="111" text-anchor="middle">photos if any</text>
+
+      <rect class="d-ai" x="255" y="40" width="205" height="92" rx="10"/>
+      <text class="d-t" x="357" y="72" text-anchor="middle">Pak Razif's assistant</text>
+      <text class="d-s" x="357" y="94" text-anchor="middle">Claude Sonnet 5.5</text>
+      <text class="d-s" x="357" y="111" text-anchor="middle">writes every reply</text>
+
+      <rect class="d-box" x="530" y="40" width="185" height="92" rx="10"/>
+      <text class="d-t" x="622" y="72" text-anchor="middle">Six tools</text>
+      <text class="d-s" x="622" y="94" text-anchor="middle">the rules held in code</text>
+      <text class="d-s" x="622" y="111" text-anchor="middle">check, book, forward</text>
+
+      <rect class="d-owner" x="780" y="40" width="170" height="92" rx="10"/>
+      <text class="d-t" x="865" y="72" text-anchor="middle">Calendar and inbox</text>
+      <text class="d-s" x="865" y="94" text-anchor="middle">on Pak Razif's phone</text>
+      <text class="d-s" x="865" y="111" text-anchor="middle">visits, handovers, photos</text>
+
+      <rect class="d-box" x="255" y="200" width="205" height="86" rx="10"/>
+      <text class="d-t" x="357" y="230" text-anchor="middle">Six resources</text>
+      <text class="d-s" x="357" y="251" text-anchor="middle">policy, schedule, quotation,</text>
+      <text class="d-s" x="357" y="268" text-anchor="middle">area, site visit, FAQ</text>
+
+      <rect class="d-owner" x="780" y="200" width="170" height="86" rx="10"/>
+      <text class="d-t" x="865" y="230" text-anchor="middle">Pak Razif</text>
+      <text class="d-s" x="865" y="251" text-anchor="middle">decides scope, price,</text>
+      <text class="d-s" x="865" y="268" text-anchor="middle">changes and the rest</text>
+
+      <line class="d-a" x1="187" y1="74" x2="251" y2="74" marker-end="url(#ah)"/>
+      <line class="d-a" x1="253" y1="100" x2="189" y2="100" marker-end="url(#ah)"/>
+      <text class="d-l" x="220" y="66" text-anchor="middle">asks</text>
+      <text class="d-l" x="220" y="118" text-anchor="middle">reply</text>
+
+      <line class="d-a" x1="462" y1="74" x2="526" y2="74" marker-end="url(#ah)"/>
+      <line class="d-a" x1="528" y1="100" x2="464" y2="100" marker-end="url(#ah)"/>
+      <text class="d-l" x="495" y="66" text-anchor="middle">calls</text>
+      <text class="d-l" x="495" y="118" text-anchor="middle">result</text>
+
+      <line class="d-a" x1="717" y1="86" x2="776" y2="86" marker-end="url(#ah)"/>
+      <text class="d-l" x="747" y="78" text-anchor="middle">writes</text>
+
+      <line class="d-a" x1="357" y1="198" x2="357" y2="136" marker-end="url(#ah)"/>
+      <text class="d-l" x="367" y="172">reads</text>
+
+      <line class="d-a" x1="865" y1="134" x2="865" y2="196" marker-end="url(#ah)"/>
+      <text class="d-l" x="875" y="170">sees it</text>
+
+      <path class="d-back" d="M865,288 L865,322 L97,322 L97,136" marker-end="url(#ahb)"/>
+      <text class="d-l" x="480" y="314" text-anchor="middle">Pak Razif replies to the customer himself, by phone or WhatsApp</text>
+    </svg>
+    <svg class="tall" viewBox="0 0 360 640" aria-hidden="true">
+      <defs>
+        <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker>
+        <marker id="ahb2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-headb"/></marker>
+      </defs>
+      <rect class="d-box" x="10" y="10" width="290" height="68" rx="10"/>
+      <text class="d-t" x="155" y="38" text-anchor="middle">Customer</text>
+      <text class="d-s" x="155" y="58" text-anchor="middle">WhatsApp message, photos if any</text>
+
+      <line class="d-a" x1="135" y1="80" x2="135" y2="124" marker-end="url(#ah2)"/>
+      <line class="d-a" x1="175" y1="126" x2="175" y2="82" marker-end="url(#ah2)"/>
+      <text class="d-l" x="128" y="106" text-anchor="end">asks</text>
+      <text class="d-l" x="182" y="106">reply</text>
+
+      <rect class="d-ai" x="10" y="128" width="290" height="68" rx="10"/>
+      <text class="d-t" x="155" y="156" text-anchor="middle">Pak Razif's assistant</text>
+      <text class="d-s" x="155" y="176" text-anchor="middle">Claude Sonnet 5.5, writes every reply</text>
+
+      <line class="d-a" x1="78" y1="244" x2="78" y2="200" marker-end="url(#ah2)"/>
+      <text class="d-l" x="86" y="226">reads</text>
+      <line class="d-a" x1="220" y1="198" x2="220" y2="242" marker-end="url(#ah2)"/>
+      <text class="d-l" x="228" y="226">calls</text>
+
+      <rect class="d-box" x="10" y="246" width="137" height="80" rx="10"/>
+      <text class="d-t" x="78" y="274" text-anchor="middle">Six resources</text>
+      <text class="d-s" x="78" y="294" text-anchor="middle">policy, schedule,</text>
+      <text class="d-s" x="78" y="311" text-anchor="middle">area, FAQ and more</text>
+
+      <rect class="d-box" x="163" y="246" width="137" height="80" rx="10"/>
+      <text class="d-t" x="231" y="274" text-anchor="middle">Six tools</text>
+      <text class="d-s" x="231" y="294" text-anchor="middle">rules held in code</text>
+      <text class="d-s" x="231" y="311" text-anchor="middle">check, book, forward</text>
+
+      <line class="d-a" x1="231" y1="328" x2="231" y2="372" marker-end="url(#ah2)"/>
+      <text class="d-l" x="239" y="355">writes</text>
+
+      <rect class="d-owner" x="10" y="376" width="290" height="68" rx="10"/>
+      <text class="d-t" x="155" y="404" text-anchor="middle">Calendar and inbox</text>
+      <text class="d-s" x="155" y="424" text-anchor="middle">on Pak Razif's phone</text>
+
+      <line class="d-a" x1="155" y1="446" x2="155" y2="490" marker-end="url(#ah2)"/>
+      <text class="d-l" x="163" y="473">sees it</text>
+
+      <rect class="d-owner" x="10" y="494" width="290" height="68" rx="10"/>
+      <text class="d-t" x="155" y="522" text-anchor="middle">Pak Razif</text>
+      <text class="d-s" x="155" y="542" text-anchor="middle">decides scope, price, changes</text>
+
+      <path class="d-back" d="M155,564 L155,600 L335,600 L335,44 L304,44" marker-end="url(#ahb2)"/>
+      <text class="d-l" x="155" y="626" text-anchor="middle">He replies to the customer himself</text>
+    </svg>
+  </div>
+  <p class="lead">What has no tool cannot happen. No tool quotes a price, changes or cancels a visit, lists bookings, reads a location or takes a payment.</p>
+
+  <h2>2. The six tools</h2>
+  <p class="lead">Each tool checks its own rules before it acts. A refusal comes back as a named error the assistant must follow.</p>
+  <table id="tool-table"></table>
+
+  <h2>3. The nine handover reasons</h2>
+  <p class="lead">The assistant hands an enquiry to Pak Razif only on one of these reasons, never on its own confidence. Each handover carries a summary he can act on without reading the chat. Photos go through their own tool, and a visit it books arrives as a New visit.</p>
+  <table id="reason-table"></table>
+</section>
+
+<!-- REPLAY -->
+<section class="panel" id="panel-replay" hidden>
+  <p class="runline" id="runline"></p>
+  <div class="fsbox" id="r-fs">
+  <div class="fshead">
+  <div class="ctrl">
+    <select id="group-pick" aria-label="Group"></select>
+    <select id="case-pick" aria-label="Case"></select>
+    <button class="btn" id="play">Play</button>
+    <button class="btn alt" id="step">Step</button>
+    <button class="btn alt" id="restart">Restart</button>
+    <button class="btn alt fsbtn" data-fs aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fs-in" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="fs-out" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span>Full screen</span></button>
+  </div>
+  <p class="passline" id="passline"></p>
+  <div class="switch" role="group" aria-label="Show phone">
+    <button data-show="customer" aria-pressed="true">Customer</button><button data-show="owner" aria-pressed="false">Pak Razif<span class="dot"></span></button>
+  </div>
+  </div>
+  <div class="stagewrap">
+  <div class="stage" data-show="customer">
+    <div class="side-customer">
+      <div class="who">Customer's phone</div>
+      <div class="phone">
+        <div class="bar"><span class="av">PR</span><span class="nm"><b>Pak Razif's assistant</b><small>Pak Razif Garden</small></span></div>
+        <div class="chat" id="r-chat"></div>
+        <div class="input"><button class="clip" disabled aria-label="Attach a photo">&#128206;</button><input class="box" disabled value="" placeholder="Replay: press Play or Step"><button class="send" disabled aria-label="Send">&#10148;</button></div>
+      </div>
+    </div>
+    <div class="side-owner">
+      <div class="who">Pak Razif's phone</div>
+      <div class="phone"><iframe id="r-frame" title="Pak Razif's phone (replay)"></iframe></div>
+    </div>
+  </div>
+  </div>
+  <div class="fsside"><div class="log" id="r-log"></div></div>
+  </div>
+</section>
+
+<!-- LIVE CHAT -->
+<section class="panel" id="panel-live" hidden>
+  <div class="fsbox" id="l-fs">
+  <div class="fshead">
+  <div class="keybox">
+    <div class="keyrow">
+      <label for="api-key"><b>Your Anthropic API key</b></label>
+      <input type="password" id="api-key" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
+    </div>
+    <label class="chk" style="margin-top:6px"><input type="checkbox" id="keep-key"> Keep the key in this tab until it closes</label>
+    <div class="warn"><b>Before you paste a key:</b> Anthropic bills you for every message sent with your key. Use a limited key with a low spend limit, and delete it when you finish. The key stays in this tab and goes only to api.anthropic.com. A public service would keep its key on a server and never ask for yours.</div>
+    <p class="hint" id="model-line"></p>
+    <div class="examples" id="examples"></div>
+    <div class="keyrow" style="margin-top:10px">
+      <button class="btn alt" id="new-chat">New chat</button>
+      <button class="btn alt" id="reset-live">Reset Pak Razif's phone</button>
+      <button class="btn alt fsbtn" data-fs aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fs-in" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="fs-out" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span>Full screen</span></button>
+    </div>
+  </div>
+  <div class="switch" role="group" aria-label="Show phone">
+    <button data-show="customer" aria-pressed="true">Customer</button><button data-show="owner" aria-pressed="false">Pak Razif<span class="dot"></span></button>
+  </div>
+  </div>
+  <div class="stagewrap">
+  <div class="stage" data-show="customer">
+    <div class="side-customer">
+      <div class="who">Customer's phone (you)</div>
+      <div class="phone">
+        <div class="bar"><span class="av">PR</span><span class="nm"><b>Pak Razif's assistant</b><small>Pak Razif Garden</small></span></div>
+        <div class="chat" id="l-chat"></div>
+        <div class="pending" id="pending"></div>
+        <div class="input">
+          <div class="menu" id="menu">
+            <div class="grid" id="demo-photos"></div>
+            <label>Your own image<input type="file" id="file" accept="image/*" hidden></label>
+            <p class="note">The photo shows in the chat and goes to Pak Razif. The assistant gets only its ID, never the image.</p>
+          </div>
+          <button class="clip" id="clip" aria-label="Attach a photo" aria-expanded="false">&#128206;</button>
+          <input class="box" id="l-input" placeholder="Type a message" autocomplete="off">
+          <button class="send" id="l-send" aria-label="Send">&#10148;</button>
+        </div>
+      </div>
+    </div>
+    <div class="side-owner">
+      <div class="who">Pak Razif's phone</div>
+      <div class="phone"><iframe id="l-frame" title="Pak Razif's phone (live)"></iframe></div>
+    </div>
+  </div>
+  </div>
+  <div class="fsside"><div class="log" id="l-log"></div></div>
+  </div>
+</section>
+
+<footer>© 2026 Lee Yih Ven · Pak Razif's assistant</footer>
+</div>
+
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPT_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const CALENDAR = /*__CALENDAR_JSON__*/null;
+const DEMO_STATE = /*__DEMO_STATE_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+const CASES = /*__CASES_JSON__*/null;
+const SEED_VERSION = /*__SEED_VERSION__*/"";
+
+const T = GardenTools;
+const NOW = "2026-10-17T10:00", FIRST_CONTACT = "2026-10-17";
+const REPLAY_KEY = "pak-razif-the-gardener-replay-v1", LIVE_KEY = "pak-razif-the-gardener-live-v1";
+const LIVE_CONTACT = { channel: "Web chat", chat_id: "WEB-1", name: "Demo visitor", phone: "019-555 0100" };
+const MAX_MESSAGES = 20;
+const REDUCED = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = (id) => document.getElementById(id);
+const clone = (o) => JSON.parse(JSON.stringify(o));
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+let channel = null;
+try { channel = "BroadcastChannel" in window ? new BroadcastChannel("pak-razif-the-gardener") : null; } catch (e) {}
+
+// ---------- shared helpers ----------
+const imgSrc = (p) => (/^(data:|blob:|https?:)/.test(p) ? p : "../../" + p);
+function ruleLink(id) {
+  const c = CLAUSES && CLAUSES[id];
+  return c ? `<a href="resources/${encodeURI(c.page)}#${id}" target="_blank" rel="noopener" title="${esc(c.resource + ": " + (c.section || ""))}">${id}</a>` : esc(id);
+}
+const linkRules = (text) => esc(text).replace(/\b([PWQAVFR]\d{1,2})\b/g, (m) => (CLAUSES && CLAUSES[m] ? ruleLink(m) : m));
+function md(text) {
+  const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  const lines = String(text || "").split("\n");
+  let out = "", i = 0;
+  while (i < lines.length) {
+    const l = lines[i];
+    if (/^\s*[-*•]\s+/.test(l)) {
+      let items = ""; while (i < lines.length && /^\s*[-*•]\s+/.test(lines[i])) { items += `<li>${inline(lines[i].replace(/^\s*[-*•]\s+/, ""))}</li>`; i++; }
+      out += `<ul>${items}</ul>`;
+    } else if (/^\s*\d+[.)]\s+/.test(l)) {
+      let items = ""; while (i < lines.length && /^\s*\d+[.)]\s+/.test(lines[i])) { items += `<li>${inline(lines[i].replace(/^\s*\d+[.)]\s+/, ""))}</li>`; i++; }
+      out += `<ol>${items}</ol>`;
+    } else if (l.trim()) { out += `<p>${inline(l)}</p>`; i++; }
+    else i++;
+  }
+  return out;
+}
+function clock(n) { const m = n; return `10:${String(m).padStart(2, "0")}`; }
+
+// Write a state to the owner page's store, then tell the page (contract with owner.html).
+const memoryStore = {};
+function writeStore(key, state, frame) {
+  memoryStore[key] = clone(state);
+  try { localStorage.setItem(key, JSON.stringify(state)); } catch (e) {}
+  try { if (channel) channel.postMessage({ type: "state", store: key }); } catch (e) {}
+  try { const w = frame && frame.contentWindow; if (w && w.GardenOwner) w.GardenOwner.reload(); } catch (e) {}
+}
+function readStore(key) {
+  try { const t = localStorage.getItem(key); if (t) return JSON.parse(t); } catch (e) {}
+  return memoryStore[key] ? clone(memoryStore[key]) : null;
+}
+const frameUrl = (key) => `owner.html?embed=1&store=${encodeURIComponent(key)}`;
+function loadFrame(frame, key) { frame.src = frameUrl(key); }
+
+// Bubbles
+function scrollEnd(el) { el.scrollTop = el.scrollHeight; }
+function customerBubble(chat, text, images, n) {
+  const ph = images && images.length ? `<div class="ph">${images.map((p) => `<img src="${esc(imgSrc(p))}" alt="Photo sent by the customer">`).join("")}</div>` : "";
+  chat.insertAdjacentHTML("beforeend", `<div class="msg me">${ph}${esc(text)}<span class="tm">${clock(n)}</span></div>`);
+  scrollEnd(chat);
+}
+function assistantBubble(chat, text, n) {
+  chat.insertAdjacentHTML("beforeend", `<div class="msg them">${md(text)}<span class="tm">${clock(n)}</span></div>`);
+  scrollEnd(chat);
+}
+function typingOn(chat) { typingOff(chat); chat.insertAdjacentHTML("beforeend", `<div class="msg them typing" data-typing><i></i><i></i><i></i></div>`); scrollEnd(chat); }
+function typingOff(chat) { chat.querySelectorAll("[data-typing]").forEach((x) => x.remove()); }
+function sysLine(chat, text, err) { chat.insertAdjacentHTML("beforeend", `<div class="sys${err ? " err" : ""}">${esc(text)}</div>`); scrollEnd(chat); }
+
+// What happened
+const KEY_INPUT = {
+  check_coverage: (i) => `postcode ${i.postcode}`,
+  find_open_slots: (i) => (i.to_date && i.to_date !== i.date ? `${i.date} to ${i.to_date}` : `${i.date}`),
+  book_site_visit: (i) => `${i.date}, ${i.slot}`,
+  forward_photo: (i) => (Array.isArray(i.photo_ids) ? i.photo_ids : [i.photo_ids]).join(", "),
+  hand_to_pak_razif: (i) => `reason ${i.reason}`,
+  eta_contact_check: (i) => `${i.booking_ref}, last 4 digits ${i.phone_last4}`,
+};
+function resultBrief(name, r) {
+  if (!r || !r.ok) return "";
+  if (name === "check_coverage") return `covered, ${r.area}`;
+  if (name === "find_open_slots") {
+    if (r.open) return r.open.length ? "open " + r.open.map((o) => o.slot).join(", ") : "no open slot";
+    return (r.days || []).map((d) => `${d.day.slice(0, 10)}: ${d.open.length ? d.open.map((o) => o.slot).join(", ") : "none"}`).join("; ");
+  }
+  if (name === "book_site_visit") return `${r.booking_ref}, ${r.window}`;
+  if (name === "forward_photo") return `item ${r.inbox_item}`;
+  if (name === "hand_to_pak_razif") return `item ${r.inbox_item}`;
+  if (name === "eta_contact_check") return "match, duty number returned";
+  return "";
+}
+function toolLine(s, arrived) {
+  const r = s.result || {};
+  const key = KEY_INPUT[s.name] ? KEY_INPUT[s.name](s.input || {}) : "";
+  const status = r.ok ? `<span class="ok">ok</span>` : `<span class="er">${esc(r.error ? r.error.category : "error")}</span>`;
+  const brief = resultBrief(s.name, r);
+  const rules = r.rules && r.rules.length ? " · rules " + r.rules.map(ruleLink).join(", ") : "";
+  const arr = arrived ? ` · <span class="arr">arrives on Pak Razif's phone</span>` : "";
+  return `<li><code>${esc(s.name)}</code> ${esc(key)} · ${status}${brief ? " " + esc(brief) : ""}${rules}${arr}</li>`;
+}
+const checkLine = () => `<li class="muted">Code check: the draft reply claimed something no tool did in this turn, so it was sent back once to be corrected.</li>`;
+const turnLine = (n, label) => `<li class="turn">${esc(label || "Message " + n)}</li>`;
+const writesInbox = (s) => s.result && s.result.ok && ["hand_to_pak_razif", "forward_photo", "book_site_visit"].includes(s.name);
+
+// Phone-width switch
+function setupSwitch(panel) {
+  const stage = panel.querySelector(".stage");
+  panel.querySelectorAll(".switch button").forEach((b) => b.addEventListener("click", () => {
+    stage.dataset.show = b.dataset.show;
+    panel.querySelectorAll(".switch button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    if (b.dataset.show === "owner") panel.querySelector(".switch .dot").classList.remove("on");
+  }));
+}
+function flagOwner(panel) {
+  if (panel.querySelector(".stage").dataset.show !== "owner") panel.querySelector(".switch .dot").classList.add("on");
+}
+
+// ---------- page header and tabs ----------
+$("res-links").innerHTML = T.RESOURCE_LIST.map((r) => `<a href="resources/${encodeURI(r.name)}.html" target="_blank" rel="noopener">${esc(r.name)}</a>`).join(" · ");
+const loaded = { replay: false, live: false };
+function showTab(name) {
+  document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.tab === name)));
+  document.querySelectorAll(".panel").forEach((p) => (p.hidden = p.id !== "panel-" + name));
+  if (name === "replay" && !loaded.replay) { loaded.replay = true; loadFrame($("r-frame"), REPLAY_KEY); }
+  if (name === "live" && !loaded.live) { loaded.live = true; ensureLive(); loadFrame($("l-frame"), LIVE_KEY); }
+  try { history.replaceState(null, "", "#" + name); } catch (e) {}
+}
+document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => showTab(t.dataset.tab)));
+
+// ---------- how it works ----------
+const DESCRIBE = {
+  check_coverage: "Says whether a postcode is covered, with the area name.",
+  find_open_slots: "Lists open visit slots for a date or a range.",
+  book_site_visit: "Reserves the slot, then confirms the visit with a reference.",
+  forward_photo: "Sends the customer's photos to Pak Razif unchanged.",
+  hand_to_pak_razif: "Passes an enquiry to Pak Razif with a structured summary.",
+  eta_contact_check: "Gives the duty number to a customer with an upcoming visit.",
+};
+$("tool-table").innerHTML = `<tr><th>Tool</th><th>Does</th><th>What its code enforces</th></tr>` + T.TOOL_DEFINITIONS.map((t) =>
+  `<tr><td><code>${esc(t.name)}</code></td><td>${esc(DESCRIBE[t.name] || "")}</td><td><ul>${(T.TOOL_CHECKS[t.name] || []).map((c) => `<li>${linkRules(c)}</li>`).join("")}</ul></td></tr>`).join("");
+const WHEN = {
+  price_request: "A price, transport charge, tax or discount is asked.",
+  unusual_work: "Work outside the listed services, or unclear requirements.",
+  outside_area: "A nearby location that is not on the coverage list.",
+  outstation: "Melaka, Penang, Johor and other states.",
+  time_not_bookable: "Same day, beyond the booking window, or no open slot suits.",
+  change_or_cancel: "A change of date or time, a cancellation, an address correction.",
+  after_visit: "Work arrangements after the site visit.",
+  complaint_or_payment: "A complaint, damage, compensation or a payment issue.",
+  asks_for_him_or_unclear: "Asks to speak to Pak Razif, or a business question the resources do not cover.",
+};
+$("reason-table").innerHTML = `<tr><th>Reason</th><th>When</th><th>Rules</th></tr>` + T.REASON_IDS.map((k) =>
+  `<tr><td><b>${esc(T.HANDOVER_REASONS[k].label)}</b><br><code>${esc(k)}</code></td><td>${esc(WHEN[k] || "")}</td><td>${T.HANDOVER_REASONS[k].rules.map(ruleLink).join(", ")}</td></tr>`).join("");
+document.querySelectorAll("table").forEach((t) => { const d = document.createElement("div"); d.className = "tw"; t.parentNode.insertBefore(d, t); d.appendChild(t); });
+
+// ---------- replay ----------
+const R = { panel: $("panel-replay"), chat: $("r-chat"), log: $("r-log"), frame: $("r-frame") };
+const groupOf = (id) => RESULTS.results.find((x) => x.id === id).group;
+(function runLine() {
+  const total = RESULTS.results.length, pass = RESULTS.results.filter((r) => r.score.pass).length;
+  const d = RESULTS.ranAt ? new Date(RESULTS.ranAt) : null;
+  const when = d ? `${d.getUTCDate()} ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getUTCMonth()]} ${d.getUTCFullYear()}` : "";
+  $("runline").innerHTML = `Every conversation here is recorded from the benchmark run of ${esc(when)} on ${esc(RESULTS.model)}, in which ${pass} of ${total} cases passed all four checks. Nothing is written by hand. <a href="benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a>`;
+})();
+$("group-pick").innerHTML = Object.entries(CASES.groups).filter(([g]) => RESULTS.results.some((r) => r.group === g)).map(([g, label]) => `<option value="${g}">${esc(label)}</option>`).join("");
+function fillCases(g) {
+  $("case-pick").innerHTML = RESULTS.results.filter((r) => r.group === g).map((r) => `<option value="${esc(r.id)}">${esc(r.id)} · ${esc(r.title)}</option>`).join("");
+}
+$("group-pick").addEventListener("change", (e) => { fillCases(e.target.value); selectCase($("case-pick").value); });
+$("case-pick").addEventListener("change", (e) => selectCase(e.target.value));
+
+let rCase = null, rEvents = [], rPos = 0, rTimer = null, rPlaying = false, rState = null, rMsg = 0;
+// Pak Razif's own calendar taps (group F) play first: the phone opens on the slot, then it changes.
+// Each recorded result may carry owner_actions: [{ action: "toggleSlot", date, slot, before, after }].
+const ownerActs = (r) => (Array.isArray(r.owner_actions) ? r.owner_actions : []).filter((a) => a && a.action === "toggleSlot" && a.date && a.slot);
+function buildEvents(r) {
+  const ev = [];
+  ownerActs(r).forEach((a) => { ev.push({ k: "ownerShow", a }); ev.push({ k: "ownerApply", a }); });
+  r.transcript.forEach((t, ti) => {
+    ev.push({ k: "user", ti, text: t.user, photos: t.photos || [] });
+    ev.push({ k: "typing", ti });
+    t.trace.forEach((s) => { if (s.type === "tool") ev.push({ k: "tool", ti, s }); else if (s.type === "check") ev.push({ k: "check", ti }); });
+    ev.push({ k: "reply", ti, text: t.reply });
+    if (t.endsChat) ev.push({ k: "ended", ti });
+  });
+  return ev;
+}
+// The case's starting state: calendar.json, inbox empty, the case's photos registered as uploads.
+function startState(r) {
+  const s = clone(CALENDAR);
+  s.inbox = []; s.uploads = [];
+  r.transcript.forEach((t) => (t.uploads || []).forEach((id, i) =>
+    s.uploads.push({ id, image: CALENDAR.demo_photos[t.photos[i]], uploaded_at: NOW, forwarded: false })));
+  s.meta = { replay_case: r.id, seed_version: SEED_VERSION };
+  return s;
+}
+// Read the replay store fresh (Pak Razif may have pressed Done in the iframe), else the in-memory copy.
+function replayState() {
+  const s = readStore(REPLAY_KEY);
+  return s && s.meta && s.meta.replay_case === rCase.id ? s : rState;
+}
+// Apply one recorded tool result to Pak Razif's phone. Returns true when an item arrived.
+function applyTool(r, s) {
+  if (!writesInbox(s)) return false;
+  const st = replayState(), res = s.result, final = r.stateDiff.inbox;
+  let arrived = false;
+  if (s.name === "hand_to_pak_razif" || s.name === "forward_photo") {
+    const it = final.find((i) => i.id === res.inbox_item);
+    if (it && !st.inbox.some((i) => i.id === it.id)) {
+      const item = clone(it);
+      if (s.name === "forward_photo") {
+        item.booking_ref = res.booking_ref || "";
+        st.uploads.forEach((u) => { if (item.photos.includes(u.id)) u.forwarded = true; });
+        if (res.booking_ref) { const v = st.inbox.find((i) => i.kind === "new_visit" && i.ref === res.booking_ref); if (v) item.photos.forEach((p) => { if (!v.photos.includes(p)) v.photos.push(p); }); }
+      }
+      st.inbox.push(item); arrived = true;
+    }
+  } else if (s.name === "book_site_visit") {
+    const b = r.stateDiff.newBookings.find((x) => x.ref === res.booking_ref);
+    if (b && !st.bookings.some((x) => x.ref === b.ref)) {
+      st.bookings.push(clone(b));
+      if (st.days[b.date]) st.days[b.date].slots[b.slot] = { status: "booked", ref: b.ref };
+      st.next_ref = Math.max(st.next_ref || 0, Number(b.ref.replace(/\D/g, "")) + 1);
+      // Photos forwarded earlier in the chat are linked to the visit.
+      st.inbox.forEach((i) => { const f = final.find((x) => x.id === i.id); if (i.kind === "photos" && !i.booking_ref && f && f.booking_ref === b.ref) i.booking_ref = b.ref; });
+      const v = final.find((i) => i.kind === "new_visit" && i.ref === b.ref);
+      if (v) {
+        const item = clone(v);
+        const later = final.filter((f) => f.kind === "photos" && !st.inbox.some((i) => i.id === f.id)).flatMap((f) => f.photos);
+        item.photos = (item.photos || []).filter((p) => !later.includes(p));
+        st.inbox.push(item); arrived = true;
+      }
+    }
+  }
+  rState = st;
+  writeStore(REPLAY_KEY, st, R.frame);
+  return arrived;
+}
+// Call the right phone; when the frame is still loading, call it once it has loaded.
+function callOwner(fn) {
+  const go = () => { try { const w = R.frame.contentWindow; if (w && w.GardenOwner) { fn(w.GardenOwner); return true; } } catch (e) {} return false; };
+  if (!go()) R.frame.addEventListener("load", () => go(), { once: true });
+}
+const shortDate = (iso) => T.helpers.dateText(iso).replace(/ \d{4}$/, "");
+function applyOwnerAction(a) {
+  const st = replayState(), day = st.days[a.date];
+  if (!day) return "";
+  if (a.after && typeof a.after === "object") day.slots[a.slot] = clone(a.after);
+  else T.OWNER.toggleSlot(st, a.date, a.slot);
+  rState = st;
+  writeStore(REPLAY_KEY, st, R.frame);
+  const cell = day.slots[a.slot] || {};
+  return cell.status === "open" ? "opened" : "blocked";
+}
+function replayLogInit() { R.log.innerHTML = `<b>What happened:</b> <span class="muted" id="r-log-hint">press Play or Step.</span><ol id="r-log-list"></ol>`; }
+function selectCase(id) {
+  stopPlay();
+  rCase = RESULTS.results.find((x) => x.id === id);
+  if ($("group-pick").value !== rCase.group) { $("group-pick").value = rCase.group; fillCases(rCase.group); }
+  $("case-pick").value = id;
+  rEvents = buildEvents(rCase); rPos = 0; rMsg = 0;
+  R.chat.innerHTML = `<div class="day">Today, Sat 17 Oct</div>`;
+  replayLogInit();
+  const sc = rCase.score;
+  $("passline").innerHTML = sc.pass
+    ? `<span class="ok">Passed all four checks:</span> right tool, right record, right handover, hard limits held.`
+    : `<span class="no">Checks:</span> ` + [["tool", "right tool"], ["record", "right record"], ["handover", "right handover"], ["limits", "hard limits held"]].map(([k, l]) => `${l} ${sc[k] ? "passed" : "failed"}`).join(", ") + ".";
+  rState = startState(rCase);
+  writeStore(REPLAY_KEY, rState, null);
+  R.panel.querySelector(".switch .dot").classList.remove("on");
+  if (loaded.replay) loadFrame(R.frame, REPLAY_KEY);
+  updateButtons();
+}
+function doEvent(e) {
+  const list = $("r-log-list"); const hint = $("r-log-hint"); if (hint) hint.remove();
+  if (e.k === "ownerShow") {
+    if (e === rEvents[0]) list.insertAdjacentHTML("beforeend", turnLine(0, "Before the chat, on Pak Razif's phone"));
+    callOwner((o) => o.showSlot && o.showSlot(e.a.date, e.a.slot));
+    flagOwner(R.panel);
+  } else if (e.k === "ownerApply") {
+    const verb = applyOwnerAction(e.a);
+    if (verb) list.insertAdjacentHTML("beforeend", `<li>Pak Razif ${verb} ${esc(shortDate(e.a.date))}, ${esc(e.a.slot)} in his calendar (${ruleLink("W10")})</li>`);
+  } else if (e.k === "user") {
+    if (rCase.transcript.length > 1 || ownerActs(rCase).length) list.insertAdjacentHTML("beforeend", turnLine(e.ti + 1));
+    customerBubble(R.chat, e.text, e.photos.map((p) => CALENDAR.demo_photos[p]), rMsg++);
+  } else if (e.k === "typing") typingOn(R.chat);
+  else if (e.k === "tool") {
+    const arrived = applyTool(rCase, e.s);
+    list.insertAdjacentHTML("beforeend", toolLine(e.s, arrived));
+    if (arrived) flagOwner(R.panel);
+  } else if (e.k === "check") list.insertAdjacentHTML("beforeend", checkLine());
+  else if (e.k === "reply") {
+    typingOff(R.chat); assistantBubble(R.chat, e.text, rMsg++);
+    const t = rCase.transcript[e.ti];
+    if (!t.trace.some((s) => s.type === "tool")) list.insertAdjacentHTML("beforeend", `<li class="muted">No tool call: answered from the resources.</li>`);
+  } else if (e.k === "ended") sysLine(R.chat, "Chat ended");
+  list.scrollTop = list.scrollHeight;
+}
+const DELAY = { ownerShow: REDUCED ? 0 : 1000, ownerApply: 1600, user: 700, typing: 700, tool: 1000, check: 800, reply: 1300, ended: 400 };
+function stepOnce() { if (rPos < rEvents.length) doEvent(rEvents[rPos++]); updateButtons(); }
+function tick() {
+  if (!rPlaying) return;
+  if (rPos >= rEvents.length) { stopPlay(); return; }
+  const e = rEvents[rPos]; stepOnce();
+  rTimer = setTimeout(tick, DELAY[e.k] || 700);
+}
+function startPlay() {
+  if (rPos >= rEvents.length) selectCase(rCase.id);
+  if (REDUCED) { while (rPos < rEvents.length) stepOnce(); return; }
+  rPlaying = true; updateButtons(); tick();
+}
+function stopPlay() { rPlaying = false; clearTimeout(rTimer); updateButtons(); }
+function updateButtons() {
+  const done = rPos >= rEvents.length;
+  $("play").textContent = rPlaying ? "Pause" : done && rPos ? "Play again" : rPos ? "Continue" : "Play";
+  $("step").disabled = done;
+}
+$("play").addEventListener("click", () => (rPlaying ? stopPlay() : startPlay()));
+$("step").addEventListener("click", () => { stopPlay(); stepOnce(); });
+$("restart").addEventListener("click", () => selectCase(rCase.id));
+setupSwitch(R.panel);
+
+// ---------- live chat ----------
+const L = { panel: $("panel-live"), chat: $("l-chat"), log: $("l-log"), frame: $("l-frame") };
+function seedLive() {
+  const s = clone(DEMO_STATE);
+  s.meta = Object.assign({}, s.meta || {}, { seed_version: SEED_VERSION });
+  writeStore(LIVE_KEY, s, L.frame);
+  return s;
+}
+function ensureLive() { if (!readStore(LIVE_KEY)) seedLive(); }
+// Read fresh on every call, so Pak Razif's own actions in the iframe (block a slot, Done) count on the next turn.
+const liveStore = {
+  load: () => readStore(LIVE_KEY) || seedLive(),
+  save: (s) => writeStore(LIVE_KEY, s, L.frame),
+};
+const SYSTEM = GardenPrompt.buildSystem(RESOURCES, NOW);
+$("model-line").textContent = `Model: ${GardenAgent.MODEL}, the model of the recorded run. Limits: ${MAX_MESSAGES} messages per chat, ${GardenAgent.LIMITS.maxTokens} output tokens and ${GardenAgent.LIMITS.maxToolRounds} tool rounds per reply. The demo clock stays at Sat 17 Oct 2026, 10:00.`;
+
+let apiKey = "";
+try { const k = sessionStorage.getItem("pak-razif-the-gardener-key"); if (k) { apiKey = k; $("api-key").value = k; $("keep-key").checked = true; } } catch (e) {}
+function keepKey() {
+  try { if ($("keep-key").checked && apiKey) sessionStorage.setItem("pak-razif-the-gardener-key", apiKey); else sessionStorage.removeItem("pak-razif-the-gardener-key"); } catch (e) {}
+}
+$("api-key").addEventListener("input", (e) => { apiKey = e.target.value.trim(); keepKey(); });
+$("keep-key").addEventListener("change", keepKey);
+
+let assistant, messages, history, turn, busy = false, ended = false, lMsg = 0, pending = [];
+function newChat() {
+  assistant = T.createAssistant(liveStore, { now: NOW });
+  messages = []; history = []; turn = 0; ended = false; lMsg = 0; busy = false;
+  L.chat.innerHTML = `<div class="day">Today, Sat 17 Oct</div><div class="sys">Write as a customer. Ask about a site visit, send a photo, or ask for a price.</div>`;
+  L.log.innerHTML = `<b>What happened:</b> <span class="muted" id="l-log-hint">each tool call appears here as the assistant makes it.</span><ol id="l-log-list"></ol>`;
+  clearPending(); setInputEnabled(true);
+}
+function setInputEnabled(on) {
+  $("l-input").disabled = !on; $("l-send").disabled = !on; $("clip").disabled = !on;
+  $("l-input").placeholder = on ? "Type a message" : (ended ? "Chat ended" : "Waiting for the reply");
+  if (!on) closeMenu();
+}
+async function liveSend() {
+  if (busy || ended) return;
+  const text = $("l-input").value.trim();
+  if (!text && !pending.length) return;
+  if (!apiKey) { sysLine(L.chat, "Paste your Anthropic API key above first.", true); return; }
+  if (turn >= MAX_MESSAGES) { sysLine(L.chat, `This chat has reached ${MAX_MESSAGES} messages. Press New chat to start again.`, true); return; }
+  $("l-input").value = "";
+  const atts = pending.slice(); clearPending();
+  turn++;
+  // The host stores each photo and shows Claude only its ID; the image never reaches the model.
+  const uploads = atts.map((a) => T.registerUpload(liveStore, a.stored, NOW));
+  customerBubble(L.chat, text, atts.map((a) => a.stored), lMsg++);
+  const ctx = { turn, uploads, message: text, history: history.slice(), contact: LIVE_CONTACT, first_contact: FIRST_CONTACT };
+  assistant.begin(ctx);
+  const mark = messages.length;
+  messages.push({ role: "user", content: [GardenPrompt.photoNote(uploads), text].filter(Boolean).join("\n") });
+  const list = $("l-log-list"); const hint = $("l-log-hint"); if (hint) hint.remove();
+  list.insertAdjacentHTML("beforeend", turnLine(turn));
+  busy = true; setInputEnabled(false); typingOn(L.chat);
+  try {
+    const out = await GardenAgent.runTurn({
+      apiKey, model: GardenAgent.MODEL, system: SYSTEM, tools: assistant.tools, messages,
+      callTool: async (name, input) => {
+        const result = assistant.call(name, input, ctx);
+        const s = { name, input, result };
+        list.insertAdjacentHTML("beforeend", toolLine(s, writesInbox(s)));
+        if (writesInbox(s)) flagOwner(L.panel);
+        list.scrollTop = list.scrollHeight;
+        return result;
+      },
+    });
+    out.trace.filter((s) => s.type === "check").forEach(() => list.insertAdjacentHTML("beforeend", checkLine()));
+    if (!out.trace.some((s) => s.type === "tool")) list.insertAdjacentHTML("beforeend", `<li class="muted">No tool call: answered from the resources.</li>`);
+    typingOff(L.chat); assistantBubble(L.chat, out.reply, lMsg++);
+    history.push(text);
+    if (out.endsChat) { ended = true; sysLine(L.chat, "Chat ended"); }
+  } catch (e) {
+    messages.length = mark;
+    typingOff(L.chat);
+    sysLine(L.chat, "The assistant could not reply: " + (e && e.message ? e.message : String(e)), true);
+    list.insertAdjacentHTML("beforeend", `<li class="muted">API error, nothing sent to the customer.</li>`);
+  }
+  busy = false; setInputEnabled(!ended);
+  if (!ended) $("l-input").focus();
+}
+$("l-send").addEventListener("click", liveSend);
+$("l-input").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); liveSend(); } });
+$("new-chat").addEventListener("click", () => { if (!busy) newChat(); });
+$("reset-live").addEventListener("click", () => {
+  if (busy) return;
+  seedLive(); newChat();
+  if (loaded.live) loadFrame(L.frame, LIVE_KEY);
+});
+
+// Attachments: the four demo photos, or the visitor's own image downscaled to 800px JPEG.
+function closeMenu() { $("menu").classList.remove("on"); $("clip").setAttribute("aria-expanded", "false"); }
+$("clip").addEventListener("click", (e) => { e.stopPropagation(); const on = !$("menu").classList.contains("on"); $("menu").classList.toggle("on", on); $("clip").setAttribute("aria-expanded", String(on)); });
+document.addEventListener("click", (e) => { if (!e.target.closest || !e.target.closest("#menu")) closeMenu(); });
+$("demo-photos").innerHTML = Object.entries(CALENDAR.demo_photos).map(([k, p]) => {
+  const label = p.split("/").pop().replace(/\.\w+$/, "");
+  return `<button data-p="${esc(k)}" title="${esc(label)}"><img src="${esc(imgSrc(p))}" alt="">${esc(label)}</button>`;
+}).join("");
+$("demo-photos").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { addPending(CALENDAR.demo_photos[b.dataset.p]); closeMenu(); }));
+function shrink(file) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => {
+      const img = new Image();
+      img.onload = () => {
+        const s = Math.min(1, 800 / Math.max(img.width, img.height));
+        const c = document.createElement("canvas");
+        c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+        c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+        resolve(c.toDataURL("image/jpeg", 0.82));
+      };
+      img.onerror = () => reject(new Error("That file is not an image this browser can read."));
+      img.src = r.result;
+    };
+    r.onerror = () => reject(new Error("The file could not be read."));
+    r.readAsDataURL(file);
+  });
+}
+$("file").addEventListener("change", async (e) => {
+  const f = e.target.files[0]; e.target.value = ""; closeMenu();
+  if (!f) return;
+  try { addPending(await shrink(f)); } catch (err) { sysLine(L.chat, err.message, true); }
+});
+function addPending(stored) {
+  if (pending.length >= 4) { sysLine(L.chat, "Up to 4 photos per message.", true); return; }
+  pending.push({ stored }); renderPending();
+}
+function clearPending() { pending = []; renderPending(); }
+function renderPending() {
+  const el = $("pending");
+  el.classList.toggle("on", pending.length > 0);
+  el.innerHTML = pending.map((a, i) => `<span><img src="${esc(imgSrc(a.stored))}" alt="Photo to send"><button data-i="${i}" aria-label="Remove photo">&times;</button></span>`).join("");
+  el.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { pending.splice(+b.dataset.i, 1); renderPending(); }));
+}
+// Examples: the customers' own words from the Answer Key cases.
+const EXAMPLES = ["3", "6", "11", "13", "E12"].map((id) => CASES.cases.find((c) => c.id === id)).filter(Boolean)
+  .map((c) => (typeof c.turns[0] === "string" ? c.turns[0] : c.turns[0].text));
+$("examples").innerHTML = `<span class="hint" style="margin:0">Try:</span>` + EXAMPLES.map((q) => `<button data-q="${esc(q)}">${esc(q)}</button>`).join("");
+$("examples").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { if (!$("l-input").disabled) { $("l-input").value = b.dataset.q; $("l-input").focus(); } }));
+setupSwitch(L.panel);
+
+// ---------- full screen ----------
+// The Fullscreen API on the stage box when it works, else a fixed full-viewport overlay.
+// Either way the class .fs lays it out, and fitStage() zooms the phones to the space left.
+let fsBox = null, fsApi = false, examplesHome = null;
+const NARROW = () => window.matchMedia("(max-width:820px)").matches;
+function fitStage() {
+  if (!fsBox) return;
+  const wrap = fsBox.querySelector(".stagewrap"), stage = fsBox.querySelector(".stage"), head = fsBox.querySelector(".fshead");
+  stage.style.zoom = "1";
+  const sides = Array.from(stage.children).filter((c) => getComputedStyle(c).display !== "none");
+  if (!sides.length) return;
+  const narrow = NARROW();
+  const gap = narrow ? 0 : parseFloat(getComputedStyle(stage).columnGap) || 0;
+  const natW = sides.reduce((a, c) => a + c.offsetWidth, 0) + gap * (sides.length - 1);
+  const natH = Math.max(...sides.map((c) => c.offsetHeight));
+  if (narrow) {
+    // One phone fills the height left under the controls; What happened sits below it.
+    const cs = getComputedStyle(fsBox);
+    wrap.style.height = Math.max(240, fsBox.clientHeight - head.offsetHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom)) + "px";
+  } else wrap.style.height = "";
+  const z = Math.min(wrap.clientWidth / natW, wrap.clientHeight / natH);
+  stage.style.zoom = String(Math.max(0.4, Math.min(2.5, Math.floor(z * 100) / 100)));
+}
+function setFsButtons(on) {
+  document.querySelectorAll("[data-fs]").forEach((b) => {
+    b.setAttribute("aria-pressed", String(on));
+    b.querySelector("span").textContent = on ? "Exit full screen" : "Full screen";
+  });
+}
+function enterFs(box) {
+  if (fsBox) return;
+  fsBox = box;
+  box.classList.add("fs"); document.body.classList.add("fs-on");
+  if (box.id === "l-fs") { const ex = $("examples"); examplesHome = { parent: ex.parentNode, next: ex.nextSibling }; box.querySelector(".fsside").prepend(ex); }
+  setFsButtons(true);
+  fitStage();
+  fsApi = false;
+  try {
+    if (box.requestFullscreen) box.requestFullscreen().then(() => { fsApi = true; fitStage(); }).catch(() => { fsApi = false; });
+  } catch (e) { fsApi = false; }
+}
+function exitFs() {
+  if (!fsBox) return;
+  const box = fsBox; fsBox = null;
+  box.classList.remove("fs"); document.body.classList.remove("fs-on");
+  box.querySelector(".stage").style.zoom = ""; box.querySelector(".stagewrap").style.height = "";
+  if (examplesHome) { examplesHome.parent.insertBefore($("examples"), examplesHome.next); examplesHome = null; }
+  setFsButtons(false);
+  if (document.fullscreenElement) { try { document.exitFullscreen().catch(() => {}); } catch (e) {} }
+  fsApi = false;
+}
+document.querySelectorAll("[data-fs]").forEach((b) => b.addEventListener("click", () => (fsBox ? exitFs() : enterFs(b.closest(".fsbox")))));
+document.addEventListener("fullscreenchange", () => { if (!document.fullscreenElement && fsBox && fsApi) exitFs(); else fitStage(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && fsBox && !document.fullscreenElement) exitFs(); });
+window.addEventListener("resize", fitStage);
+if ("ResizeObserver" in window) { const ro = new ResizeObserver(() => fitStage()); document.querySelectorAll(".fshead").forEach((h) => ro.observe(h)); }
+document.querySelectorAll(".switch button").forEach((b) => b.addEventListener("click", () => setTimeout(fitStage, 0)));
+
+// ---------- start ----------
+fillCases("A");
+selectCase(RESULTS.results[0].id);
+newChat();
+const start = (location.hash || "").slice(1);
+showTab(["how", "replay", "live"].includes(start) ? start : "how");
+</script>
+</body>
+</html>

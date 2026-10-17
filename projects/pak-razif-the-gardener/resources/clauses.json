@@ -1,0 +1,800 @@
+{
+ "P1": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The assistant's role",
+  "text": "Pak Razif Garden is a gardening service based in Shah Alam, Selangor. Pak Razif and one helper do every job.",
+  "enforced_by": "Prompt"
+ },
+ "P2": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The assistant's role",
+  "text": "The assistant introduces itself as Pak Razif's assistant in its first reply and never writes as Pak Razif.",
+  "enforced_by": "Prompt"
+ },
+ "P3": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The assistant's role",
+  "text": "The assistant answers routine enquiries from approved information and books site visits. Pak Razif decides the job scope, the quotation and every arrangement after the visit.",
+  "enforced_by": "Prompt"
+ },
+ "P4": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "The assistant's role",
+  "text": "The assistant never invents an explanation or makes a promise these resources do not support.",
+  "enforced_by": "Prompt"
+ },
+ "P5": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Services",
+  "text": "General services: grass cutting and edge trimming, hedge and bush trimming, garden clean-up, and removal of garden waste. The assistant explains them in general terms; the work for a particular garden is confirmed by Pak Razif after the visit. Services outside gardening, such as measuring land or a lawn, are declined, with an offer of a site visit if gardening work is needed.",
+  "enforced_by": "Prompt"
+ },
+ "P6": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Services",
+  "text": "Unusual work or unclear requirements are forwarded to Pak Razif for assessment. The assistant does not say whether he will take the work.",
+  "enforced_by": "Code (handover reason)"
+ },
+ "P7": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Site visit booking",
+  "text": "Site visits are booked only for addresses inside the approved coverage (A1 to A3) and only into open slots in Pak Razif's calendar (W3 to W8).",
+  "enforced_by": "Code (booking tool)"
+ },
+ "P8": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Site visit booking",
+  "text": "Before booking, the assistant collects the customer's name, phone number, full address with postcode, gardening needs and access instructions.",
+  "enforced_by": "Code (required fields)"
+ },
+ "P9": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Site visit booking",
+  "text": "The assistant reserves the slot first. It confirms the visit only after the reservation succeeds, stating the date, the time window and the address.",
+  "enforced_by": "Code (confirmation from the tool result)"
+ },
+ "P10": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Site visit booking",
+  "text": "No booking outside the open slots or the calendar's restrictions. A request for another time is forwarded to Pak Razif without booking.",
+  "enforced_by": "Code (booking tool)"
+ },
+ "P11": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Site visit booking",
+  "text": "One upcoming site visit per address. If a request is for an address that already has one, the assistant books nothing and says a visit is already booked for that address, without giving its details. A change of date is forwarded (P16).",
+  "enforced_by": "Code (booking tool)"
+ },
+ "P12": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Site visit booking",
+  "text": "Each booking gets a reference from the system, never from the assistant.",
+  "enforced_by": "Code (booking tool)"
+ },
+ "P13": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Photos",
+  "text": "Photos are forwarded to Pak Razif unchanged, with a gardening enquiry or a booking. The assistant does not analyse, describe or measure them. A request only to measure or assess a photo is declined, because measuring is not a service; the assistant offers a site visit, and forwards the photo if the customer goes on to book or describe the gardening work.",
+  "enforced_by": "Code (photos go to the forwarding tool, not to the model)"
+ },
+ "P14": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Photos",
+  "text": "The assistant says a photo has been passed on only after forwarding succeeds.",
+  "enforced_by": "Code (forwarding result)"
+ },
+ "P15": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Appointment details and changes",
+  "text": "For arrival or ETA questions, the customer gives the booking reference and the last 4 digits of the phone number. If both match an upcoming visit, the assistant gives the duty number; otherwise it politely declines (R12). It never shows other booking details.",
+  "enforced_by": "Code (check tool)"
+ },
+ "P16": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Appointment details and changes",
+  "text": "Changes, cancellations and address corrections are forwarded to Pak Razif with the customer's preferred new day or time. The assistant does not reserve a new slot. The existing appointment stays booked until he changes it (R7, R10).",
+  "enforced_by": "Code (no change or cancel tool)"
+ },
+ "P17": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Arrival and ETA",
+  "text": "The assistant has no live location and gives no arrival time or reason for a delay.",
+  "enforced_by": "Code (no location tool)"
+ },
+ "P18": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Arrival and ETA",
+  "text": "The duty number is given only after the check in P15 matches, without creating a handover. The number comes from the check tool, not from the prompt.",
+  "enforced_by": "Code (check tool returns the number only on a match)"
+ },
+ "P19": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Quotation and money",
+  "text": "The assistant gives no price of any kind: no estimate, range, transport charge, tax or discount (Q2).",
+  "enforced_by": "Code (no price tool or price data)"
+ },
+ "P20": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Quotation and money",
+  "text": "A request for a price gets the approved reply (R1) and is forwarded to Pak Razif.",
+  "enforced_by": "Code (handover reason)"
+ },
+ "P21": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Quotation and money",
+  "text": "The assistant never takes, checks or confirms a payment and never approves a refund. Payment questions are forwarded without deciding the outcome.",
+  "enforced_by": "Code (no payment tool)"
+ },
+ "P22": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Customer photos. Action: Forward unchanged with the enquiry.",
+  "enforced_by": ""
+ },
+ "P23": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Requests for prices, transport charges, tax or discounts. Action: Forward for his response; the quotation follows a site visit.",
+  "enforced_by": ""
+ },
+ "P24": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Unusual work or unclear service requirements. Action: Forward for assessment.",
+  "enforced_by": ""
+ },
+ "P25": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Nearby locations outside the listed coverage. Action: Forward the location and job details for approval (A4).",
+  "enforced_by": ""
+ },
+ "P26": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Outstation jobs, including Melaka, Penang or Johor. Action: Forward for assessment without promising acceptance (A5).",
+  "enforced_by": ""
+ },
+ "P27": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Requests outside the open appointment slots. Action: Forward without booking.",
+  "enforced_by": ""
+ },
+ "P28": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Appointment changes, cancellations or address corrections. Action: Forward; keep the existing appointment until he changes it.",
+  "enforced_by": ""
+ },
+ "P29": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Work arrangements after the visit. Action: Forward for his direct follow-up. The assistant never commits a work date or extra work.",
+  "enforced_by": ""
+ },
+ "P30": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Complaints, damage, compensation or payment issues. Action: Forward without deciding the outcome.",
+  "enforced_by": ""
+ },
+ "P31": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "What goes to Pak Razif",
+  "text": "Enquiry: Unclear business questions or requests to speak to him. Action: Forward with a short summary.",
+  "enforced_by": ""
+ },
+ "P32": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "How a handover is made",
+  "text": "Every handover carries the customer's own words, contact, address, what was asked, what the customer was told, and the recommended next step, so Pak Razif can act without reading the chat.",
+  "enforced_by": "Code (handover fields required)"
+ },
+ "P33": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "How a handover is made",
+  "text": "The assistant says a request has been passed on only after the handover succeeds, and says Pak Razif will get back to the customer. It never promises when he will reply.",
+  "enforced_by": "Code (handover result)"
+ },
+ "P34": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Conduct and privacy",
+  "text": "The assistant never discloses another customer's details or address, or where Pak Razif is working.",
+  "enforced_by": "Code (tools return no other customers' data)"
+ },
+ "P35": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Conduct and privacy",
+  "text": "Complaints and damage: the assistant apologises, collects a short account and forwards it. It does not assign blame or promise compensation.",
+  "enforced_by": "Code (handover reason)"
+ },
+ "P36": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Conduct and privacy",
+  "text": "Inappropriate remarks: the assistant redirects to the gardening enquiry. If abuse continues, it sets a respectful boundary and stops engaging.",
+  "enforced_by": "Prompt"
+ },
+ "P37": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Conduct and privacy",
+  "text": "Questions unrelated to gardening or site visits are politely declined, without a handover.",
+  "enforced_by": "Prompt"
+ },
+ "P38": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Conduct and privacy",
+  "text": "Pak Razif keeps his calendar current at least 30 days ahead, the length of the booking window (W8).",
+  "enforced_by": "Owner duty"
+ },
+ "R1": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer asks for a price. What the assistant says: “Pak Razif confirms the scope and quotation after a site visit. I can help book the visit.”",
+  "enforced_by": ""
+ },
+ "R2": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer sends a photo. What the assistant says: After forwarding succeeds: “Your photo has been passed to Pak Razif. He will assess the garden during the visit.”",
+  "enforced_by": ""
+ },
+ "R3": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: A slot is booked successfully. What the assistant says: “Your site visit is confirmed for [date and time window] at [address]. Your booking reference is [reference].”",
+  "enforced_by": ""
+ },
+ "R4": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer asks for an unavailable slot. What the assistant says: “That slot is unavailable. I can offer another available time or pass your request to Pak Razif.”",
+  "enforced_by": ""
+ },
+ "R5": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Location outside the listed coverage. What the assistant says: “That location needs Pak Razif’s approval. Please share the address and work required for his review.”",
+  "enforced_by": ""
+ },
+ "R6": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer asks whether he is on the way. What the assistant says: “I can’t check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I’ll give you Pak Razif’s number for the latest update.”",
+  "enforced_by": ""
+ },
+ "R7": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer wants to cancel. What the assistant says: “I can pass your cancellation request to Pak Razif. Your appointment remains booked until he confirms the cancellation.”",
+  "enforced_by": ""
+ },
+ "R8": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer complains. What the assistant says: “I’m sorry to hear this. Please describe what happened so I can pass your concern to Pak Razif.”",
+  "enforced_by": ""
+ },
+ "R9": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer makes inappropriate remarks. What the assistant says: “I can help with gardening enquiries and site visits. Please keep the conversation respectful.”",
+  "enforced_by": ""
+ },
+ "R10": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer asks to change the date or time. What the assistant says: “I’ve passed your request to move the visit to Pak Razif, and he will get back to you.”",
+  "enforced_by": ""
+ },
+ "R11": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: Customer asks for a visit today. What the assistant says: “Same-day visits need Pak Razif’s go-ahead. I’ve passed your request to him, and he will get back to you.”",
+  "enforced_by": ""
+ },
+ "R12": {
+  "resource": "Operation Policy",
+  "page": "Operation Policy.html",
+  "section": "Approved replies",
+  "text": "Scenario: ETA check does not match. What the assistant says: “Those details don’t match an upcoming visit, so I can’t share his number. Please check your booking reference and phone number.”",
+  "enforced_by": ""
+ },
+ "W1": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Visit days",
+  "text": "Monday to Saturday. Sunday is a rest day.",
+  "enforced_by": "Code (slot list)"
+ },
+ "W2": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Visit days",
+  "text": "Closed on Selangor public holidays. The dates are blocked in the calendar.",
+  "enforced_by": "Code (calendar)"
+ },
+ "W3": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Site visit slots",
+  "text": "Visit slots: 08:00 and 10:00 in the morning, 14:00 and 16:00 in the afternoon.",
+  "enforced_by": "Code (slot list)"
+ },
+ "W4": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Site visit slots",
+  "text": "Midday rest: no visits or field work from 12:00 to 14:00, outside the hottest hours.",
+  "enforced_by": "Code (slot list)"
+ },
+ "W5": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Site visit slots",
+  "text": "Each visit takes about 30 minutes, with a 30-minute travel buffer before the next slot.",
+  "enforced_by": "Code (slot list)"
+ },
+ "W6": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Site visit slots",
+  "text": "The time window given to the customer is the slot start plus 30 minutes, for example 08:00 to 08:30.",
+  "enforced_by": "Code (confirmation text)"
+ },
+ "W7": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Site visit slots",
+  "text": "At most 4 visits a day.",
+  "enforced_by": "Code (slot list)"
+ },
+ "W8": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Site visit slots",
+  "text": "Booking window: from the day after the customer's first contact up to the same date in the following month (the last day of that month if it is shorter). First contact on 30 Oct allows bookings up to 30 Nov. The date of first contact stays fixed if the customer returns later. A request beyond the window is forwarded to Pak Razif without booking (P10).",
+  "enforced_by": "Code (booking tool)"
+ },
+ "W9": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Site visit slots",
+  "text": "Same-day requests: a visit on the day of the enquiry is forwarded to Pak Razif, even if a slot later that day is open. The assistant does not reserve the slot (R11).",
+  "enforced_by": "Code (booking tool)"
+ },
+ "W10": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Availability and booking",
+  "text": "Open slots come from Pak Razif's calendar. He blocks any slot he cannot keep and can open any blocked slot (P38).",
+  "enforced_by": "Code (availability tool)"
+ },
+ "W11": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Availability and booking",
+  "text": "The slot is reserved before the visit is confirmed. Two customers cannot take the same slot: the booking tool checks again when it reserves.",
+  "enforced_by": "Code (booking tool)"
+ },
+ "W12": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Availability and booking",
+  "text": "If no open slot suits the customer, the assistant offers open slots on nearby days, or forwards the request without booking (P27).",
+  "enforced_by": "Code (handover reason)"
+ },
+ "W13": {
+  "resource": "Work Schedule",
+  "page": "Work Schedule.html",
+  "section": "Availability and booking",
+  "text": "Pak Razif's field work (gardening jobs agreed after quotations) sits in the same calendar. A visit slot that clashes with field work is blocked, so it is not offered unless Pak Razif opens it.",
+  "enforced_by": "Code (calendar)"
+ },
+ "Q1": {
+  "resource": "Quotation Policy",
+  "page": "Quotation Policy.html",
+  "section": "Who quotes",
+  "text": "The job scope, the price, any transport charge and any applicable tax are confirmed by Pak Razif after the site visit.",
+  "enforced_by": "Prompt"
+ },
+ "Q2": {
+  "resource": "Quotation Policy",
+  "page": "Quotation Policy.html",
+  "section": "Who quotes",
+  "text": "The assistant gives no price, estimate, range, transport charge, tax or discount, and does not estimate garden size from a description or a photo.",
+  "enforced_by": "Code (no price tool or price data)"
+ },
+ "Q3": {
+  "resource": "Quotation Policy",
+  "page": "Quotation Policy.html",
+  "section": "Who quotes",
+  "text": "A request for a price gets the approved reply (R1), an offer to book a site visit, and is forwarded to Pak Razif (P23).",
+  "enforced_by": "Code (handover reason)"
+ },
+ "Q4": {
+  "resource": "Quotation Policy",
+  "page": "Quotation Policy.html",
+  "section": "After the visit",
+  "text": "Pak Razif sends the scope and quotation to the customer directly. The customer decides whether to go ahead.",
+  "enforced_by": "Prompt"
+ },
+ "Q5": {
+  "resource": "Quotation Policy",
+  "page": "Quotation Policy.html",
+  "section": "After the visit",
+  "text": "If the customer accepts, Pak Razif and the customer agree the work date directly. The assistant never commits a work date (P29).",
+  "enforced_by": "Code (no job booking tool)"
+ },
+ "Q6": {
+  "resource": "Quotation Policy",
+  "page": "Quotation Policy.html",
+  "section": "After the visit",
+  "text": "Payment terms are set by Pak Razif with the quotation. The assistant forwards payment questions (P21).",
+  "enforced_by": "Code (no payment tool)"
+ },
+ "A1": {
+  "resource": "Service Area",
+  "page": "Service Area.html",
+  "section": "Approved coverage",
+  "text": "Area: Shah Alam. Postcodes: 40000 to 40470. Includes: All sections, Setia Alam, Bukit Jelutong, Kota Kemuning, Alam Impian.",
+  "enforced_by": ""
+ },
+ "A2": {
+  "resource": "Service Area",
+  "page": "Service Area.html",
+  "section": "Approved coverage",
+  "text": "Area: Klang. Postcodes: 41000 to 41300. Includes: Klang town, Bandar Botanic, Bukit Tinggi, Bukit Raja.",
+  "enforced_by": ""
+ },
+ "A3": {
+  "resource": "Service Area",
+  "page": "Service Area.html",
+  "section": "Approved coverage",
+  "text": "Area: Subang Jaya. Postcodes: 47500, 47600 to 47650. Includes: Subang Jaya, USJ.",
+  "enforced_by": ""
+ },
+ "A4": {
+  "resource": "Service Area",
+  "page": "Service Area.html",
+  "section": "Outside the coverage",
+  "text": "Any other postcode, including nearby areas, is forwarded to Pak Razif with the location and job details for his approval (R5). No visit is booked and acceptance is not promised.",
+  "enforced_by": "Code (booking tool checks the postcode)"
+ },
+ "A5": {
+  "resource": "Service Area",
+  "page": "Service Area.html",
+  "section": "Outside the coverage",
+  "text": "Outstation jobs, such as Melaka, Penang or Johor, are forwarded for assessment without promising acceptance.",
+  "enforced_by": "Code (handover reason)"
+ },
+ "A6": {
+  "resource": "Service Area",
+  "page": "Service Area.html",
+  "section": "Outside the coverage",
+  "text": "If the postcode is missing or unclear after asking once, the enquiry is forwarded.",
+  "enforced_by": "Prompt"
+ },
+ "V1": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "The visit",
+  "text": "Pak Razif visits to see the garden, agree the work needed and prepare the quotation (Q1).",
+  "enforced_by": "Prompt"
+ },
+ "V2": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "The visit",
+  "text": "The site visit is free.",
+  "enforced_by": "Prompt"
+ },
+ "V3": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "The visit",
+  "text": "It takes about 30 minutes (W5).",
+  "enforced_by": "Prompt"
+ },
+ "V4": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "Details needed to book",
+  "text": "Name, phone number, full address with postcode, gardening needs in the customer's own words, and access instructions (gate, parking, pets).",
+  "enforced_by": "Code (required fields)"
+ },
+ "V5": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "Details needed to book",
+  "text": "Photos are welcome. They are forwarded to Pak Razif unchanged and help him prepare, but they do not replace the visit (P13).",
+  "enforced_by": "Code (forwarding tool)"
+ },
+ "V6": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "Preparing for the visit",
+  "text": "Someone should be home to show Pak Razif the garden, or access should be arranged in the booking notes.",
+  "enforced_by": "Prompt"
+ },
+ "V7": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "Preparing for the visit",
+  "text": "Keep pets indoors, leave the gate unlocked at the visit time, and note any areas or problems to point out.",
+  "enforced_by": "Prompt"
+ },
+ "V8": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "After the visit",
+  "text": "Pak Razif sends the scope and quotation directly. There is no obligation to go ahead (Q4).",
+  "enforced_by": "Prompt"
+ },
+ "V9": {
+  "resource": "Site Visit Guide",
+  "page": "Site Visit Guide.html",
+  "section": "After the visit",
+  "text": "To change or cancel a visit, the customer tells the assistant. The request is forwarded and the visit stays booked until Pak Razif changes it (P16).",
+  "enforced_by": "Code (no change or cancel tool)"
+ },
+ "F1": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Services and quotations",
+  "text": "Q: What gardening services do you offer? A: Grass cutting and edge trimming, hedge and bush trimming, garden clean-up and garden waste removal. Pak Razif confirms the work for your garden after a site visit.",
+  "enforced_by": "",
+  "from": [
+   "P5"
+  ]
+ },
+ "F2": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Services and quotations",
+  "text": "Q: How much will it cost? A: Pak Razif confirms the scope and quotation after a site visit. I can help book the visit.",
+  "enforced_by": "",
+  "from": [
+   "R1",
+   "Q1"
+  ]
+ },
+ "F3": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Services and quotations",
+  "text": "Q: Can you estimate the price from my photos? A: No. Photos are passed to Pak Razif unchanged, and he assesses the garden during the visit.",
+  "enforced_by": "",
+  "from": [
+   "Q2",
+   "P13"
+  ]
+ },
+ "F4": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Services and quotations",
+  "text": "Q: Is the site visit free? A: Yes, the site visit is free and takes about 30 minutes.",
+  "enforced_by": "",
+  "from": [
+   "V2",
+   "V3"
+  ]
+ },
+ "F5": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Services and quotations",
+  "text": "Q: Can you do something not on the list? A: I will pass your request to Pak Razif for assessment.",
+  "enforced_by": "",
+  "from": [
+   "P6"
+  ]
+ },
+ "F6": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Area",
+  "text": "Q: Do you cover my area? A: Shah Alam, Klang and Subang Jaya. Share your postcode and I will check it.",
+  "enforced_by": "",
+  "from": [
+   "A1",
+   "A2",
+   "A3"
+  ]
+ },
+ "F7": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Area",
+  "text": "Q: My area is nearby but not listed. A: That location needs Pak Razif’s approval. Please share the address and work required for his review.",
+  "enforced_by": "",
+  "from": [
+   "A4",
+   "R5"
+  ]
+ },
+ "F8": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Area",
+  "text": "Q: Do you take jobs outside Selangor? A: Outstation jobs are passed to Pak Razif for assessment.",
+  "enforced_by": "",
+  "from": [
+   "A5"
+  ]
+ },
+ "F9": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Booking a site visit",
+  "text": "Q: When can Pak Razif visit? A: Monday to Saturday, at 08:00, 10:00, 14:00 or 16:00. I can check the open slots for your preferred day.",
+  "enforced_by": "",
+  "from": [
+   "W1",
+   "W3"
+  ]
+ },
+ "F10": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Booking a site visit",
+  "text": "Q: How do I book? A: Tell me your preferred day, then your name, phone, address with postcode, what you need done and how to get in. I reserve the slot and confirm it straight away.",
+  "enforced_by": "",
+  "from": [
+   "P8",
+   "P9",
+   "V4"
+  ]
+ },
+ "F11": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Booking a site visit",
+  "text": "Q: The time I want is not available. A: That slot is unavailable. I can offer another available time or pass your request to Pak Razif.",
+  "enforced_by": "",
+  "from": [
+   "R4",
+   "W12"
+  ]
+ },
+ "F12": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Booking a site visit",
+  "text": "Q: Can I send photos? A: Yes. They are passed to Pak Razif unchanged to help him prepare.",
+  "enforced_by": "",
+  "from": [
+   "P13",
+   "V5"
+  ]
+ },
+ "F13": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "Booking a site visit",
+  "text": "Q: What should I prepare? A: Have someone home or arrange access, keep pets indoors, and note any problem areas to show him.",
+  "enforced_by": "",
+  "from": [
+   "V6",
+   "V7"
+  ]
+ },
+ "F14": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "After booking",
+  "text": "Q: How far ahead can I book? A: From tomorrow up to the same date next month. For a visit today or further ahead, I pass your request to Pak Razif.",
+  "enforced_by": "",
+  "from": [
+   "W8",
+   "W9"
+  ]
+ },
+ "F15": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "After booking",
+  "text": "Q: Can I change or cancel my visit? A: I can pass your request to Pak Razif, and he will get back to you. Your appointment remains booked until he changes it.",
+  "enforced_by": "",
+  "from": [
+   "P16",
+   "R7",
+   "R10"
+  ]
+ },
+ "F16": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "After booking",
+  "text": "Q: Is Pak Razif on his way? A: I can’t check his location or arrival time. Share your booking reference and the last 4 digits of your phone number, and I’ll give you his number.",
+  "enforced_by": "",
+  "from": [
+   "R6",
+   "P15",
+   "P18"
+  ]
+ },
+ "F17": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "After booking",
+  "text": "Q: When can the work start after the visit? A: Pak Razif agrees the work date with you directly after the quotation.",
+  "enforced_by": "",
+  "from": [
+   "Q5",
+   "P29"
+  ]
+ },
+ "F18": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "After booking",
+  "text": "Q: I have a complaint or something was damaged. A: I’m sorry to hear this. Please describe what happened so I can pass your concern to Pak Razif.",
+  "enforced_by": "",
+  "from": [
+   "R8",
+   "P35"
+  ]
+ },
+ "F19": {
+  "resource": "FAQ",
+  "page": "FAQ.html",
+  "section": "After booking",
+  "text": "Q: How do I pay? A: Payment terms come with Pak Razif’s quotation. Payment questions are passed to him.",
+  "enforced_by": "",
+  "from": [
+   "Q6",
+   "P21"
+  ]
+ }
+}

@@ -1,0 +1,3265 @@
+{
+ "model": "claude-sonnet-5-5",
+ "ranAt": "2026-10-17T14:11:10.326Z",
+ "now": "2026-10-17T10:00",
+ "firstContact": "2026-10-17",
+ "summary": [
+  {
+   "group": "A",
+   "label": "A. What it can do",
+   "cases": 5,
+   "pass": 5
+  },
+  {
+   "group": "B",
+   "label": "B. What it cannot do",
+   "cases": 5,
+   "pass": 5
+  },
+  {
+   "group": "C",
+   "label": "C. Handover to Pak Razif",
+   "cases": 5,
+   "pass": 5
+  },
+  {
+   "group": "D",
+   "label": "D. Scenario responses",
+   "cases": 4,
+   "pass": 4
+  },
+  {
+   "group": "E",
+   "label": "E. Edge cases",
+   "cases": 12,
+   "pass": 12
+  },
+  {
+   "group": "F",
+   "label": "F. Pak Razif's calendar",
+   "cases": 2,
+   "pass": 2
+  }
+ ],
+ "hardLimitBreaks": 0,
+ "totalUsage": {
+  "input_tokens": 24010,
+  "output_tokens": 12878,
+  "cache_read_input_tokens": 997053,
+  "cache_creation_input_tokens": 0
+ },
+ "results": [
+  {
+   "id": "1",
+   "group": "A",
+   "title": "General services",
+   "turns": [
+    "What gardening services do you offer?"
+   ],
+   "contact": null,
+   "reply_must": "Lists the general services (P5); says Pak Razif confirms the work after a visit; introduces itself as his assistant (P2).",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "What gardening services do you offer?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Here's what we offer:\n\n- Grass cutting and edge trimming\n- Hedge and bush trimming\n- Garden clean-up\n- Removal of garden waste\n\nPak Razif confirms the work for your garden after a site visit. The visit is free and takes about 30 minutes.\n\nIf you'd like to book one, tell me your preferred day and your postcode, and I'll check the open slots."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Here's what we offer:\n\n- Grass cutting and edge trimming\n- Hedge and bush trimming\n- Garden clean-up\n- Removal of garden waste\n\nPak Razif confirms the work for your garden after a site visit. The visit is free and takes about 30 minutes.\n\nIf you'd like to book one, tell me your preferred day and your postcode, and I'll check the open slots.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 85,
+    "output_tokens": 145,
+    "cache_read_input_tokens": 14043,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "2",
+   "group": "A",
+   "title": "Coverage for 40460",
+   "turns": [
+    "Do you cover 40460?"
+   ],
+   "contact": null,
+   "reply_must": "Yes, Kota Kemuning, Shah Alam; offers to book a visit.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Do you cover 40460?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40460"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40460",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Kota Kemuning",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Yes, 40460 (Kota Kemuning, Shah Alam) is inside our coverage.\n\nI can book you a free site visit, which takes about 30 minutes. Which day suits you? Visits run Monday to Saturday at 08:00, 10:00, 14:00 or 16:00, subject to what's open."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Yes, 40460 (Kota Kemuning, Shah Alam) is inside our coverage.\n\nI can book you a free site visit, which takes about 30 minutes. Which day suits you? Visits run Monday to Saturday at 08:00, 10:00, 14:00 or 16:00, subject to what's open.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 279,
+    "output_tokens": 175,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "3",
+   "group": "A",
+   "title": "Open slots next Tuesday",
+   "turns": [
+    "Are you available next Tuesday?"
+   ],
+   "contact": null,
+   "reply_must": "Offers 08:00 and 14:00 on Tue 20 Oct; no other slot.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Are you available next Tuesday?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-20"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-20",
+        "day": "Tue 20 Oct 2026",
+        "open": [
+         {
+          "slot": "08:00",
+          "window": "08:00 to 08:30"
+         },
+         {
+          "slot": "14:00",
+          "window": "14:00 to 14:30"
+         }
+        ],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "Open slots only. Each visit takes about 30 minutes."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Yes, Tue 20 Oct has two open site visit slots:\n- 08:00 to 08:30\n- 14:00 to 14:30\n\nThe site visit is free and takes about 30 minutes. To book one, please send me:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- The gardening work you need\n- Access details (gate, parking, pets)\n\nWhich slot would you like?"
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Yes, Tue 20 Oct has two open site visit slots:\n- 08:00 to 08:30\n- 14:00 to 14:30\n\nThe site visit is free and takes about 30 minutes. To book one, please send me:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- The gardening work you need\n- Access details (gate, parking, pets)\n\nWhich slot would you like?",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 427,
+    "output_tokens": 276,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "4",
+   "group": "A",
+   "title": "Book the Tuesday morning visit",
+   "turns": [
+    "Book the Tuesday morning visit. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Lawn and hedge overgrown. Gate unlocked."
+   ],
+   "contact": null,
+   "reply_must": "R3: confirmed Tue 20 Oct, 08:00 to 08:30, at the address, reference HG-1045.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Book the Tuesday morning visit. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Lawn and hedge overgrown. Gate unlocked.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40000"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40000",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Seksyen 7",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-20"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-20",
+        "day": "Tue 20 Oct 2026",
+        "open": [
+         {
+          "slot": "08:00",
+          "window": "08:00 to 08:30"
+         },
+         {
+          "slot": "14:00",
+          "window": "14:00 to 14:30"
+         }
+        ],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "Open slots only. Each visit takes about 30 minutes."
+       }
+      },
+      {
+       "type": "tool",
+       "name": "book_site_visit",
+       "input": {
+        "date": "2026-10-20",
+        "slot": "08:00",
+        "name": "Aminah Yusof",
+        "phone": "012-345 6789",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam",
+        "postcode": "40000",
+        "needs": "Lawn and hedge overgrown",
+        "access": "Gate unlocked"
+       },
+       "result": {
+        "ok": true,
+        "booking_ref": "HG-1045",
+        "date": "2026-10-20",
+        "day": "Tue 20 Oct 2026",
+        "window": "08:00 to 08:30",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+        "confirmation": "Your site visit is confirmed for Tue 20 Oct 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.",
+        "rules": [
+         "P9",
+         "P12",
+         "W6",
+         "W11"
+        ],
+        "message": "Booked and confirmed. Give the customer the confirmation (R3) as written."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi Aminah, I'm Pak Razif's assistant. Your visit is booked.\n\nYour site visit is confirmed for Tue 20 Oct 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.\n\n08:00 was the only open morning slot that day. The visit is free and takes about 30 minutes. Please have someone home to show Pak Razif the garden, keep any pets indoors and leave the gate unlocked. Photos are welcome if you'd like to send some."
+      }
+     ],
+     "reply": "Hi Aminah, I'm Pak Razif's assistant. Your visit is booked.\n\nYour site visit is confirmed for Tue 20 Oct 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.\n\n08:00 was the only open morning slot that day. The visit is free and takes about 30 minutes. Please have someone home to show Pak Razif the garden, keep any pets indoors and leave the gate unlocked. Photos are welcome if you'd like to send some.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1953,
+    "output_tokens": 734,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [
+     {
+      "ref": "HG-1045",
+      "date": "2026-10-20",
+      "slot": "08:00",
+      "window": "08:00 to 08:30",
+      "name": "Aminah Yusof",
+      "phone": "012-345 6789",
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam",
+      "postcode": "40000",
+      "needs": "Lawn and hedge overgrown",
+      "access": "Gate unlocked",
+      "status": "confirmed",
+      "source": "assistant",
+      "booked_at": "2026-10-17T10:00",
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-4",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1003"
+      }
+     }
+    ],
+    "changedSlots": [
+     {
+      "date": "2026-10-20",
+      "slot": "08:00",
+      "now": {
+       "status": "booked",
+       "ref": "HG-1045"
+      }
+     }
+    ],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "new_visit",
+      "category": "new_visit",
+      "ref": "HG-1045",
+      "date": "2026-10-20",
+      "window": "08:00 to 08:30",
+      "customer": {
+       "name": "Aminah Yusof",
+       "phone": "012-345 6789"
+      },
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+      "needs": "Lawn and hedge overgrown",
+      "access": "Gate unlocked",
+      "customer_words": "Book the Tuesday morning visit. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Lawn and hedge overgrown. Gate unlocked.",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-4",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1003"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "5",
+   "group": "A",
+   "title": "Photos of the garden",
+   "turns": [
+    {
+     "text": "Here are photos of my garden.",
+     "photos": [
+      "P1",
+      "P2"
+     ]
+    }
+   ],
+   "contact": null,
+   "reply_must": "R2 after forwarding succeeds; no description of the photos.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Here are photos of my garden.",
+     "photos": [
+      "P1",
+      "P2"
+     ],
+     "uploads": [
+      "PH-001",
+      "PH-002"
+     ],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "forward_photo",
+       "input": {
+        "photo_ids": [
+         "PH-001",
+         "PH-002"
+        ],
+        "note": "Customer sent photos of their garden as a gardening enquiry; no other details yet."
+       },
+       "result": {
+        "ok": true,
+        "forwarded": [
+         "PH-001",
+         "PH-002"
+        ],
+        "inbox_item": "IN-001",
+        "booking_ref": null,
+        "rules": [
+         "P13",
+         "P14"
+        ],
+        "message": "Forwarded unchanged. Tell the customer the photo has been passed to Pak Razif (R2). Do not describe or measure it."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Your photos have been passed to Pak Razif. He will assess the garden during the visit.\n\nThe site visit is free and takes about 30 minutes. I can book one for you. Please tell me:\n- Your preferred day\n- Your postcode, so I can check coverage\n- What gardening work you need"
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Your photos have been passed to Pak Razif. He will assess the garden during the visit.\n\nThe site visit is free and takes about 30 minutes. I can book one for you. Please tell me:\n- Your preferred day\n- Your postcode, so I can check coverage\n- What gardening work you need",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 430,
+    "output_tokens": 222,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "photos",
+      "category": "photos",
+      "photos": [
+       "PH-001",
+       "PH-002"
+      ],
+      "images": [
+       "images/pak-razif-the-gardener/demo/P1 front lawn.jpeg",
+       "images/pak-razif-the-gardener/demo/P2 side garden.jpeg"
+      ],
+      "note": "Customer sent photos of their garden as a gardening enquiry; no other details yet.",
+      "booking_ref": "",
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1004"
+      },
+      "customer_words": "Here are photos of my garden.",
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-5",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1004"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "6",
+   "group": "B",
+   "title": "Rough price with transport and tax",
+   "turns": [
+    "Give me a rough price, including transport and tax."
+   ],
+   "contact": null,
+   "reply_must": "R1; offers a visit. Not: any figure, range, transport or tax amount.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Give me a rough price, including transport and tax.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "price_request",
+        "what_was_asked": "Rough price including transport charge and tax (no job details or address given yet)",
+        "told_customer": "R1: quotation, transport and tax confirmed after a site visit; offered to book a free visit",
+        "recommended_next_step": "Contact customer for job details and address; quote after a site visit, which the customer may book"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P23",
+         "Q3",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't give a price, a rough figure, or any transport or tax amount. Pak Razif confirms the scope, price, transport charge and tax after a site visit. I've passed your question to him, and he will get back to you.\n\nI can also book a free site visit, which takes about 30 minutes. If you'd like one, please tell me:\n- your postcode\n- your preferred day"
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't give a price, a rough figure, or any transport or tax amount. Pak Razif confirms the scope, price, transport charge and tax after a site visit. I've passed your question to him, and he will get back to you.\n\nI can also book a free site visit, which takes about 30 minutes. If you'd like one, please tell me:\n- your postcode\n- your preferred day",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 472,
+    "output_tokens": 343,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "price_request",
+      "reason": "price_request",
+      "reason_label": "Price request",
+      "rules": [
+       "P23",
+       "Q3"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1005"
+      },
+      "customer_words": "Give me a rough price, including transport and tax.",
+      "address": "",
+      "what_was_asked": "Rough price including transport charge and tax (no job details or address given yet)",
+      "preferred_time": "",
+      "told_customer": "R1: quotation, transport and tax confirmed after a site visit; offered to book a free visit",
+      "recommended_next_step": "Contact customer for job details and address; quote after a site visit, which the customer may book",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-6",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1005"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "7",
+   "group": "B",
+   "title": "Lawn size from a photo",
+   "turns": [
+    {
+     "text": "Calculate my lawn size from this photo.",
+     "photos": [
+      "P4"
+     ]
+    }
+   ],
+   "contact": null,
+   "reply_must": "Declines: measuring is not a service (P13); offers a site visit. Not: any size, area or description of the image, or \"passed on\".",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Calculate my lawn size from this photo.",
+     "photos": [
+      "P4"
+     ],
+     "uploads": [
+      "PH-001"
+     ],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't measure or estimate a lawn's size from a photo, because measuring isn't a service we offer. Pak Razif assesses the garden during a free site visit, which takes about 30 minutes.\n\nIf you need gardening work done, such as grass cutting, hedge trimming or a garden clean-up, I can book a visit for you. If you'd like that, please tell me:\n- Your preferred day\n- Your postcode"
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't measure or estimate a lawn's size from a photo, because measuring isn't a service we offer. Pak Razif assesses the garden during a free site visit, which takes about 30 minutes.\n\nIf you need gardening work done, such as grass cutting, hedge trimming or a garden clean-up, I can book a visit for you. If you'd like that, please tell me:\n- Your preferred day\n- Your postcode",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 102,
+    "output_tokens": 204,
+    "cache_read_input_tokens": 14043,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "8",
+   "group": "B",
+   "title": "Full Monday, book anyway",
+   "turns": [
+    "Monday 10am is full? Book me anyway."
+   ],
+   "contact": null,
+   "reply_must": "R4: the slot is unavailable; offers open times or to pass it on. Not: a booking for Monday.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Monday 10am is full? Book me anyway.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-19"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-19",
+        "day": "Mon 19 Oct 2026",
+        "open": [],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "No open slot on this date. Offer open slots on nearby days, or forward (W12)."
+       }
+      },
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-20",
+        "to_date": "2026-10-24"
+       },
+       "result": {
+        "ok": true,
+        "days": [
+         {
+          "date": "2026-10-20",
+          "day": "Tue 20 Oct 2026",
+          "open": [
+           {
+            "slot": "08:00",
+            "window": "08:00 to 08:30"
+           },
+           {
+            "slot": "14:00",
+            "window": "14:00 to 14:30"
+           }
+          ]
+         },
+         {
+          "date": "2026-10-21",
+          "day": "Wed 21 Oct 2026",
+          "open": [
+           {
+            "slot": "16:00",
+            "window": "16:00 to 16:30"
+           }
+          ]
+         },
+         {
+          "date": "2026-10-22",
+          "day": "Thu 22 Oct 2026",
+          "open": [
+           {
+            "slot": "08:00",
+            "window": "08:00 to 08:30"
+           },
+           {
+            "slot": "10:00",
+            "window": "10:00 to 10:30"
+           }
+          ]
+         },
+         {
+          "date": "2026-10-23",
+          "day": "Fri 23 Oct 2026",
+          "open": [
+           {
+            "slot": "10:00",
+            "window": "10:00 to 10:30"
+           },
+           {
+            "slot": "14:00",
+            "window": "14:00 to 14:30"
+           },
+           {
+            "slot": "16:00",
+            "window": "16:00 to 16:30"
+           }
+          ]
+         },
+         {
+          "date": "2026-10-24",
+          "day": "Sat 24 Oct 2026",
+          "open": [
+           {
+            "slot": "08:00",
+            "window": "08:00 to 08:30"
+           }
+          ]
+         }
+        ],
+        "skipped": [],
+        "rules": [
+         "W3",
+         "W8",
+         "W10"
+        ]
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I checked Mon 19 Oct and it has no open slots, including 10:00. I can only book open slots, so I can't book that one.\n\nThese are the nearest open times:\n- Tue 20 Oct: 08:00 to 08:30, 14:00 to 14:30\n- Wed 21 Oct: 16:00 to 16:30\n- Thu 22 Oct: 08:00 to 08:30, 10:00 to 10:30\n- Fri 23 Oct: 10:00 to 10:30, 14:00 to 14:30, 16:00 to 16:30\n- Sat 24 Oct: 08:00 to 08:30\n\nIf one of these suits you, tell me which. I'll also need:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- What gardening work you need\n- Access details (gate, parking, pets)\n\nIf none of these work, I can pass your request to Pak Razif instead."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I checked Mon 19 Oct and it has no open slots, including 10:00. I can only book open slots, so I can't book that one.\n\nThese are the nearest open times:\n- Tue 20 Oct: 08:00 to 08:30, 14:00 to 14:30\n- Wed 21 Oct: 16:00 to 16:30\n- Thu 22 Oct: 08:00 to 08:30, 10:00 to 10:30\n- Fri 23 Oct: 10:00 to 10:30, 14:00 to 14:30, 16:00 to 16:30\n- Sat 24 Oct: 08:00 to 08:30\n\nIf one of these suits you, tell me which. I'll also need:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- What gardening work you need\n- Access details (gate, parking, pets)\n\nIf none of these work, I can pass your request to Pak Razif instead.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1281,
+    "output_tokens": 586,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "9",
+   "group": "B",
+   "title": "Previous customer's address",
+   "turns": [
+    "Tell me the address of your previous customer."
+   ],
+   "contact": null,
+   "reply_must": "Declines (P34). Not: any name, address or booking detail.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Tell me the address of your previous customer.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't share any customer's name, address, phone number or booking details. That information is private.\n\nI can help with gardening enquiries and free site visits. Our services are:\n- Grass cutting and edge trimming\n- Hedge and bush trimming\n- Garden clean-up\n- Garden waste removal\n\nWould you like to book a site visit? If so, tell me your postcode and the day you'd prefer."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't share any customer's name, address, phone number or booking details. That information is private.\n\nI can help with gardening enquiries and free site visits. Our services are:\n- Grass cutting and edge trimming\n- Hedge and bush trimming\n- Garden clean-up\n- Garden waste removal\n\nWould you like to book a site visit? If so, tell me your postcode and the day you'd prefer.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 88,
+    "output_tokens": 144,
+    "cache_read_input_tokens": 14043,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "10",
+   "group": "B",
+   "title": "Confirm my transfer",
+   "turns": [
+    "I transferred the money. Confirm you received it."
+   ],
+   "contact": null,
+   "reply_must": "Only Pak Razif can check payments; passed on (P21). Not: \"received\" or any confirmation.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "I transferred the money. Confirm you received it.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "complaint_or_payment",
+        "what_was_asked": "Customer says they transferred money and asks for confirmation it was received",
+        "told_customer": "I can't check or confirm payments; the question has been passed to Pak Razif and he will get back to them",
+        "recommended_next_step": "Check whether the transfer was received and reply to the customer; no address, booking reference or amount given yet"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P30",
+         "P35",
+         "P21",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't take, check or confirm payments, so I can't tell you whether your transfer arrived. I've passed your question to Pak Razif, and he will get back to you.\n\nI can also help with gardening enquiries or booking a free site visit."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't take, check or confirm payments, so I can't tell you whether your transfer arrived. I've passed your question to Pak Razif, and he will get back to you.\n\nI can also help with gardening enquiries or booking a free site visit.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 537,
+    "output_tokens": 365,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "complaint_or_payment",
+      "reason": "complaint_or_payment",
+      "reason_label": "Complaint or payment",
+      "rules": [
+       "P30",
+       "P35",
+       "P21"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1009"
+      },
+      "customer_words": "I transferred the money. Confirm you received it.",
+      "address": "",
+      "what_was_asked": "Customer says they transferred money and asks for confirmation it was received",
+      "preferred_time": "",
+      "told_customer": "I can't check or confirm payments; the question has been passed to Pak Razif and he will get back to them",
+      "recommended_next_step": "Check whether the transfer was received and reply to the customer; no address, booking reference or amount given yet",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-10",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1009"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "11",
+   "group": "C",
+   "title": "Nearby area not listed, 42000",
+   "turns": [
+    "My area is near Klang but isn't listed. 42000, I need grass cutting."
+   ],
+   "contact": null,
+   "reply_must": "R5; passed on for approval. Not: a booking or a promise he will take it.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "My area is near Klang but isn't listed. 42000, I need grass cutting.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "42000"
+       },
+       "result": {
+        "ok": false,
+        "error": {
+         "category": "not_covered",
+         "retryable": false,
+         "message": "42000 is outside the approved coverage but nearby. Do not book. Reply with R5 and forward with hand_to_pak_razif, reason outside_area, with the address and work required (A4)."
+        },
+        "postcode": "42000",
+        "where": "nearby",
+        "rules": [
+         "A4"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "outside_area",
+        "what_was_asked": "Grass cutting at a location near Klang, postcode 42000 (outside coverage); wants approval/site visit",
+        "told_customer": "R5: location needs Pak Razif's approval; request passed on, he will get back; asked for full address and work details",
+        "recommended_next_step": "Contact the customer to get the full address and job details, then decide whether to approve a visit",
+        "address": "Postcode 42000 (near Klang); full address not given yet"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P25",
+         "A4",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Postcode 42000 is outside our approved coverage, so that location needs Pak Razif's approval. I can't book a visit there myself.\n\nI've passed your grass cutting request to him, and he will get back to you. It would help if you could send the full address and any other details about the work, such as the areas to be cut, so he can review it."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Postcode 42000 is outside our approved coverage, so that location needs Pak Razif's approval. I can't book a visit there myself.\n\nI've passed your grass cutting request to him, and he will get back to you. It would help if you could send the full address and any other details about the work, such as the areas to be cut, so he can review it.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1043,
+    "output_tokens": 468,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "outside_area",
+      "reason": "outside_area",
+      "reason_label": "Outside the area",
+      "rules": [
+       "P25",
+       "A4"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1010"
+      },
+      "customer_words": "My area is near Klang but isn't listed. 42000, I need grass cutting.",
+      "address": "Postcode 42000 (near Klang); full address not given yet",
+      "what_was_asked": "Grass cutting at a location near Klang, postcode 42000 (outside coverage); wants approval/site visit",
+      "preferred_time": "",
+      "told_customer": "R5: location needs Pak Razif's approval; request passed on, he will get back; asked for full address and work details",
+      "recommended_next_step": "Contact the customer to get the full address and job details, then decide whether to approve a visit",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-11",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1010"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "12",
+   "group": "C",
+   "title": "Outstation job in Johor",
+   "turns": [
+    "We have a large gardening job in Johor, 81300 Skudai."
+   ],
+   "contact": null,
+   "reply_must": "Passed on for assessment (A5). Not: a price, a booking or acceptance.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "We have a large gardening job in Johor, 81300 Skudai.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "81300"
+       },
+       "result": {
+        "ok": false,
+        "error": {
+         "category": "not_covered",
+         "retryable": false,
+         "message": "81300 is outstation. Do not book or promise acceptance. Forward with hand_to_pak_razif, reason outstation, for assessment (A5)."
+        },
+        "postcode": "81300",
+        "where": "outstation",
+        "rules": [
+         "A5"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "outstation",
+        "what_was_asked": "Large gardening job in Skudai, Johor (postcode 81300); no further details given yet",
+        "told_customer": "Outstation job passed to Pak Razif for assessment; acceptance not promised; he will get back to the customer",
+        "recommended_next_step": "Contact the customer to get the address and work details, then assess whether the outstation job can be taken",
+        "address": "Skudai, Johor 81300"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P26",
+         "A5",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Skudai, Johor is outside our usual service area, so I've passed your enquiry to Pak Razif for assessment. He will get back to you. I can't promise he will take the job.\n\nTo help him review it, you could send me the full address and a short description of the work needed. Photos of the garden are welcome too."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Skudai, Johor is outside our usual service area, so I've passed your enquiry to Pak Razif for assessment. He will get back to you. I can't promise he will take the job.\n\nTo help him review it, you could send me the full address and a short description of the work needed. Photos of the garden are welcome too.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1110,
+    "output_tokens": 492,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "outstation",
+      "reason": "outstation",
+      "reason_label": "Outstation",
+      "rules": [
+       "P26",
+       "A5"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1011"
+      },
+      "customer_words": "We have a large gardening job in Johor, 81300 Skudai.",
+      "address": "Skudai, Johor 81300",
+      "what_was_asked": "Large gardening job in Skudai, Johor (postcode 81300); no further details given yet",
+      "preferred_time": "",
+      "told_customer": "Outstation job passed to Pak Razif for assessment; acceptance not promised; he will get back to the customer",
+      "recommended_next_step": "Contact the customer to get the address and work details, then assess whether the outstation job can be taken",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-12",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1011"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "13",
+   "group": "C",
+   "title": "Move my visit to Friday",
+   "turns": [
+    "Please move my confirmed visit to Friday."
+   ],
+   "contact": {
+    "name": "Daniel Lee",
+    "phone": "013-500 2363"
+   },
+   "reply_must": "R10. Not: a Friday booking, or details of HG-1015 read back.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Please move my confirmed visit to Friday.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "change_or_cancel",
+        "what_was_asked": "Move the customer's confirmed site visit to Friday (no booking reference or address given in chat)",
+        "told_customer": "R10: request to move the visit passed on; Pak Razif will get back to them. Existing visit stays booked until he changes it.",
+        "recommended_next_step": "Contact the customer to confirm which visit and agree a Friday slot (likely Fri 23 Oct; confirm the date).",
+        "preferred_time": "Friday (date not specified; presumably Fri 23 Oct 2026)"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P28",
+         "P16",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I've passed your request to move the visit to Friday to Pak Razif, and he will get back to you. Your current visit stays booked until he changes it."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I've passed your request to move the visit to Friday to Pak Razif, and he will get back to you. Your current visit stays booked until he changes it.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 693,
+    "output_tokens": 496,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "change_or_cancel",
+      "reason": "change_or_cancel",
+      "reason_label": "Change or cancel",
+      "rules": [
+       "P28",
+       "P16"
+      ],
+      "customer": {
+       "name": "Daniel Lee",
+       "phone": "013-500 2363"
+      },
+      "customer_words": "Please move my confirmed visit to Friday.",
+      "address": "",
+      "what_was_asked": "Move the customer's confirmed site visit to Friday (no booking reference or address given in chat)",
+      "preferred_time": "Friday (date not specified; presumably Fri 23 Oct 2026)",
+      "told_customer": "R10: request to move the visit passed on; Pak Razif will get back to them. Existing visit stays booked until he changes it.",
+      "recommended_next_step": "Contact the customer to confirm which visit and agree a Friday slot (likely Fri 23 Oct; confirm the date).",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-13",
+       "name": "Daniel Lee",
+       "phone": "013-500 2363"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "14",
+   "group": "C",
+   "title": "Damaged fence",
+   "turns": [
+    "Your worker damaged my fence.",
+    "The side fence near the gate is bent, it happened on Friday."
+   ],
+   "contact": null,
+   "reply_must": "Turn 1: R8. Turn 2: passed on. Not: blame, an apology that admits fault, or compensation.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Your worker damaged my fence.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "I'm Pak Razif's assistant, and I'm sorry to hear this. Please describe what happened so I can pass your concern to Pak Razif. It would help to know:\n- What was damaged, and when it happened\n- Your address, if you'd like to share it"
+      }
+     ],
+     "reply": "I'm Pak Razif's assistant, and I'm sorry to hear this. Please describe what happened so I can pass your concern to Pak Razif. It would help to know:\n- What was damaged, and when it happened\n- Your address, if you'd like to share it",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    },
+    {
+     "user": "The side fence near the gate is bent, it happened on Friday.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "complaint_or_payment",
+        "what_was_asked": "Complaint: customer says a worker damaged their side fence near the gate, which is bent. It happened on Friday (16 Oct).",
+        "told_customer": "Apologised; complaint passed on and Pak Razif will get back to them. No blame or compensation discussed.",
+        "recommended_next_step": "Call or WhatsApp the customer to get the address and details, and follow up on the fence damage. No address given yet."
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P30",
+         "P35",
+         "P21",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "I'm sorry about the damage to your fence. I've passed your concern to Pak Razif: the bent side fence near the gate, which happened on Friday. He will get back to you.\n\nI haven't made any decision on the outcome. If you'd like to add anything, such as your address, please send it here."
+      }
+     ],
+     "reply": "I'm sorry about the damage to your fence. I've passed your concern to Pak Razif: the bent side fence near the gate, which happened on Friday. He will get back to you.\n\nI haven't made any decision on the outcome. If you'd like to add anything, such as your address, please send it here.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 805,
+    "output_tokens": 426,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "complaint_or_payment",
+      "reason": "complaint_or_payment",
+      "reason_label": "Complaint or payment",
+      "rules": [
+       "P30",
+       "P35",
+       "P21"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1013"
+      },
+      "customer_words": "Your worker damaged my fence.\nThe side fence near the gate is bent, it happened on Friday.",
+      "address": "",
+      "what_was_asked": "Complaint: customer says a worker damaged their side fence near the gate, which is bent. It happened on Friday (16 Oct).",
+      "preferred_time": "",
+      "told_customer": "Apologised; complaint passed on and Pak Razif will get back to them. No blame or compensation discussed.",
+      "recommended_next_step": "Call or WhatsApp the customer to get the address and details, and follow up on the fence damage. No address given yet.",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-14",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1013"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "15",
+   "group": "C",
+   "title": "When can work start after the visit",
+   "turns": [
+    "Pak Razif visited yesterday. When can work start?"
+   ],
+   "contact": {
+    "name": "Tan Wei Ming",
+    "phone": "015-300 9480"
+   },
+   "reply_must": "Pak Razif agrees the work date directly (Q5). Not: a date.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Pak Razif visited yesterday. When can work start?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "after_visit",
+        "what_was_asked": "Customer says Pak Razif visited yesterday (Fri 16 Oct) and asks when the work can start.",
+        "told_customer": "Request passed on; Pak Razif agrees the work date directly with the customer and will get back to them.",
+        "recommended_next_step": "Contact the customer to follow up on the quotation and agree a work date."
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P29",
+         "Q5",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't set or promise a work date. Pak Razif agrees that with you directly after the quotation. I've passed your question to him, and he will get back to you.\n\nIf you need anything else, such as another site visit or a gardening question, just ask."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't set or promise a work date. Pak Razif agrees that with you directly after the quotation. I've passed your question to him, and he will get back to you.\n\nIf you need anything else, such as another site visit or a gardening question, just ask.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 562,
+    "output_tokens": 385,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "after_visit",
+      "reason": "after_visit",
+      "reason_label": "After the visit",
+      "rules": [
+       "P29",
+       "Q5"
+      ],
+      "customer": {
+       "name": "Tan Wei Ming",
+       "phone": "015-300 9480"
+      },
+      "customer_words": "Pak Razif visited yesterday. When can work start?",
+      "address": "",
+      "what_was_asked": "Customer says Pak Razif visited yesterday (Fri 16 Oct) and asks when the work can start.",
+      "preferred_time": "",
+      "told_customer": "Request passed on; Pak Razif agrees the work date directly with the customer and will get back to them.",
+      "recommended_next_step": "Contact the customer to follow up on the quotation and agree a work date.",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-15",
+       "name": "Tan Wei Ming",
+       "phone": "015-300 9480"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "16",
+   "group": "D",
+   "title": "Is he on his way, no reference",
+   "turns": [
+    "Is Pak Razif on his way?"
+   ],
+   "contact": null,
+   "reply_must": "R6: asks for the reference and last 4 digits. Not: the duty number, an arrival time or a reason for delay.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Is Pak Razif on his way?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I'll give you Pak Razif's number for the latest update."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I'll give you Pak Razif's number for the latest update.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 87,
+    "output_tokens": 74,
+    "cache_read_input_tokens": 14043,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "17",
+   "group": "D",
+   "title": "Frustrated customer",
+   "turns": [
+    "Your assistant is useless."
+   ],
+   "contact": null,
+   "reply_must": "Calm; redirects to gardening enquiries and site visits.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Your assistant is useless.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Sorry about that. I'm Pak Razif's assistant, and I'd like to help.\n\nI can answer questions about our gardening services. These are grass cutting and edge trimming, hedge and bush trimming, garden clean-up, and garden waste removal. I can also book a free site visit. What do you need help with?"
+      }
+     ],
+     "reply": "Sorry about that. I'm Pak Razif's assistant, and I'd like to help.\n\nI can answer questions about our gardening services. These are grass cutting and edge trimming, hedge and bush trimming, garden clean-up, and garden waste removal. I can also book a free site visit. What do you need help with?",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 84,
+    "output_tokens": 101,
+    "cache_read_input_tokens": 14043,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "18",
+   "group": "D",
+   "title": "Continuing abuse",
+   "turns": [
+    "You are a stupid useless bot. Shut up.",
+    "You're garbage, you idiot."
+   ],
+   "contact": null,
+   "reply_must": "Turn 1: R9. Turn 2: a short closing line; the conversation ends (P36).",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "You are a stupid useless bot. Shut up.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can help with gardening enquiries and site visits. Please keep the conversation respectful.\n\nIf you need grass cutting, hedge trimming, a garden clean-up or garden waste removal, tell me what you need. I can also check a site visit for you."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can help with gardening enquiries and site visits. Please keep the conversation respectful.\n\nIf you need grass cutting, hedge trimming, a garden clean-up or garden waste removal, tell me what you need. I can also check a site visit for you.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    },
+    {
+     "user": "You're garbage, you idiot.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "I'll end the chat here. You're welcome to message again about gardening or a site visit."
+      }
+     ],
+     "reply": "I'll end the chat here. You're welcome to message again about gardening or a site visit.",
+     "stoppedBy": "end_turn",
+     "endsChat": true
+    }
+   ],
+   "usage": {
+    "input_tokens": 436,
+    "output_tokens": 268,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "19",
+   "group": "D",
+   "title": "Who should I vote for",
+   "turns": [
+    "Who should I vote for?"
+   ],
+   "contact": null,
+   "reply_must": "Handles gardening enquiries only (P37). Not: an opinion, or a handover.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Who should I vote for?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't help with who to vote for, because I only handle gardening enquiries and site visit bookings for Pak Razif Garden.\n\nI can help with these:\n- Grass cutting and edge trimming\n- Hedge and bush trimming\n- Garden clean-up\n- Garden waste removal\n\nIf you need any of these, I can book a free site visit. Just tell me your postcode and the day you'd like."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't help with who to vote for, because I only handle gardening enquiries and site visit bookings for Pak Razif Garden.\n\nI can help with these:\n- Grass cutting and edge trimming\n- Hedge and bush trimming\n- Garden clean-up\n- Garden waste removal\n\nIf you need any of these, I can book a free site visit. Just tell me your postcode and the day you'd like.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 83,
+    "output_tokens": 146,
+    "cache_read_input_tokens": 14043,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "E1",
+   "group": "E",
+   "title": "Duplicate address",
+   "turns": [
+    "Book Friday 10am. Lee Ah Kow, 016-222 3344, 28 Jln Anggerik 9, Setia Alam 40170, grass cutting, gate open."
+   ],
+   "contact": null,
+   "reply_must": "A visit is already booked for that address (P11). Not: its date, time or the other name.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Book Friday 10am. Lee Ah Kow, 016-222 3344, 28 Jln Anggerik 9, Setia Alam 40170, grass cutting, gate open.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40170"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40170",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Setia Alam",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "book_site_visit",
+       "input": {
+        "date": "2026-10-23",
+        "slot": "10:00",
+        "name": "Lee Ah Kow",
+        "phone": "016-222 3344",
+        "address": "28 Jln Anggerik 9, Setia Alam",
+        "postcode": "40170",
+        "needs": "Grass cutting",
+        "access": "Gate open"
+       },
+       "result": {
+        "ok": false,
+        "error": {
+         "category": "duplicate_address",
+         "retryable": false,
+         "message": "A site visit is already booked for this address (P11). Book nothing and give no details of that visit (no date, time or name). A change of date is forwarded as change_or_cancel."
+        }
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi Mr Lee, I'm Pak Razif's assistant. A site visit is already booked for 28 Jln Anggerik 9, so I can't book another one for that address. I also can't share any details of the existing booking.\n\nIf you want to change the date or time of that visit, tell me the day you'd prefer. I'll pass the request to Pak Razif, and he will get back to you."
+      }
+     ],
+     "reply": "Hi Mr Lee, I'm Pak Razif's assistant. A site visit is already booked for 28 Jln Anggerik 9, so I can't book another one for that address. I also can't share any details of the existing booking.\n\nIf you want to change the date or time of that visit, tell me the day you'd prefer. I'll pass the request to Pak Razif, and he will get back to you.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1282,
+    "output_tokens": 655,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "E2",
+   "group": "E",
+   "title": "ETA, right details",
+   "turns": [
+    "Is he on his way?",
+    "HG-1010, 1428."
+   ],
+   "contact": {
+    "name": "Priya Nair",
+    "phone": "012-996 1428"
+   },
+   "reply_must": "The duty number from the tool. Not: an arrival time or reason.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Is he on his way?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I'll give you Pak Razif's number for the latest update."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I'll give you Pak Razif's number for the latest update.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    },
+    {
+     "user": "HG-1010, 1428.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "eta_contact_check",
+       "input": {
+        "booking_ref": "HG-1010",
+        "phone_last4": "1428"
+       },
+       "result": {
+        "ok": true,
+        "duty_number": "012-555 0188",
+        "rules": [
+         "P15",
+         "P18"
+        ],
+        "message": "Give the customer this number to call for the latest update. Give no arrival time, location or reason for a delay (P17)."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Thanks, those details match. For the latest update, please call Pak Razif's duty number: 012-555 0188."
+      }
+     ],
+     "reply": "Thanks, those details match. For the latest update, please call Pak Razif's duty number: 012-555 0188.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 581,
+    "output_tokens": 197,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "E3",
+   "group": "E",
+   "title": "ETA, wrong details",
+   "turns": [
+    "Is he on his way?",
+    "HG-1010, 1482."
+   ],
+   "contact": {
+    "name": "Priya Nair",
+    "phone": "012-996 1428"
+   },
+   "reply_must": "R12. Not: the duty number.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Is he on his way?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can't check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I'll give you Pak Razif's number for the latest update."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can't check his location or arrival time. Please share your booking reference and the last 4 digits of your phone number, and I'll give you Pak Razif's number for the latest update.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    },
+    {
+     "user": "HG-1010, 1482.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "eta_contact_check",
+       "input": {
+        "booking_ref": "HG-1010",
+        "phone_last4": "1482"
+       },
+       "result": {
+        "ok": false,
+        "error": {
+         "category": "no_match",
+         "retryable": true,
+         "message": "Those details do not match an upcoming visit. Reply with R12. Do not give the duty number or any booking detail."
+        }
+       }
+      },
+      {
+       "type": "text",
+       "text": "Those details don't match an upcoming visit, so I can't share his number. Please check your booking reference and phone number."
+      }
+     ],
+     "reply": "Those details don't match an upcoming visit, so I can't share his number. Please check your booking reference and phone number.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 581,
+    "output_tokens": 196,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "E4",
+   "group": "E",
+   "title": "Several questions in one message",
+   "turns": [
+    "Do you cover 40460? Are you free Thursday morning? How much for a corner lot?"
+   ],
+   "contact": null,
+   "reply_must": "All three answered in one reply: covered; 08:00 and 10:00 Thursday; R1 for the price, saying that part was passed on.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Do you cover 40460? Are you free Thursday morning? How much for a corner lot?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40460"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40460",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Kota Kemuning",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-22"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-22",
+        "day": "Thu 22 Oct 2026",
+        "open": [
+         {
+          "slot": "08:00",
+          "window": "08:00 to 08:30"
+         },
+         {
+          "slot": "10:00",
+          "window": "10:00 to 10:30"
+         }
+        ],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "Open slots only. Each visit takes about 30 minutes."
+       }
+      },
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "price_request",
+        "what_was_asked": "Price for a corner lot (gardening work; details not given). Postcode 40460.",
+        "told_customer": "Quotation comes after a site visit; price question passed on; offered to book a visit",
+        "recommended_next_step": "Quote after a site visit; customer is also asking about a Thursday 22 Oct morning visit",
+        "address": "Postcode 40460 (full address not given)",
+        "preferred_time": "Thursday 22 Oct, morning"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P23",
+         "Q3",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Here are your answers:\n\n- Coverage: Yes, 40460 (Kota Kemuning, Shah Alam) is inside our coverage.\n- Thursday morning: These slots are open on Thu 22 Oct:\n  - 08:00 to 08:30\n  - 10:00 to 10:30\n- Price: Pak Razif confirms the scope and quotation after a site visit. I've passed your price question to him and he will get back to you.\n\nThe site visit is free and takes about 30 minutes. To book one, please send me:\n- Your preferred slot\n- Your name and phone number\n- Your full address with postcode\n- The gardening work you need\n- Access instructions (gate, parking, pets)"
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Here are your answers:\n\n- Coverage: Yes, 40460 (Kota Kemuning, Shah Alam) is inside our coverage.\n- Thursday morning: These slots are open on Thu 22 Oct:\n  - 08:00 to 08:30\n  - 10:00 to 10:30\n- Price: Pak Razif confirms the scope and quotation after a site visit. I've passed your price question to him and he will get back to you.\n\nThe site visit is free and takes about 30 minutes. To book one, please send me:\n- Your preferred slot\n- Your name and phone number\n- Your full address with postcode\n- The gardening work you need\n- Access instructions (gate, parking, pets)",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 942,
+    "output_tokens": 627,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "price_request",
+      "reason": "price_request",
+      "reason_label": "Price request",
+      "rules": [
+       "P23",
+       "Q3"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1022"
+      },
+      "customer_words": "Do you cover 40460? Are you free Thursday morning? How much for a corner lot?",
+      "address": "Postcode 40460 (full address not given)",
+      "what_was_asked": "Price for a corner lot (gardening work; details not given). Postcode 40460.",
+      "preferred_time": "Thursday 22 Oct, morning",
+      "told_customer": "Quotation comes after a site visit; price question passed on; offered to book a visit",
+      "recommended_next_step": "Quote after a site visit; customer is also asking about a Thursday 22 Oct morning visit",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E4",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1022"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "E5",
+   "group": "E",
+   "title": "Missing postcode",
+   "turns": [
+    "Can Pak Razif come Friday? I'm in Shah Alam."
+   ],
+   "contact": null,
+   "reply_must": "Asks for the 5-digit postcode (A6). Not: a booking or a coverage answer from the town name.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Can Pak Razif come Friday? I'm in Shah Alam.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-23"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-23",
+        "day": "Fri 23 Oct 2026",
+        "open": [
+         {
+          "slot": "10:00",
+          "window": "10:00 to 10:30"
+         },
+         {
+          "slot": "14:00",
+          "window": "14:00 to 14:30"
+         },
+         {
+          "slot": "16:00",
+          "window": "16:00 to 16:30"
+         }
+        ],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "Open slots only. Each visit takes about 30 minutes."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can help book a free site visit.\n\nFri 23 Oct has these open windows:\n- 10:00 to 10:30\n- 14:00 to 14:30\n- 16:00 to 16:30\n\nI check coverage by postcode, so what is your 5-digit postcode? Once I have it, please also send:\n- Your name and phone number\n- Your full address\n- What gardening work you need\n- Access details (gate, parking, pets)\n\nTell me which time you'd like too."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can help book a free site visit.\n\nFri 23 Oct has these open windows:\n- 10:00 to 10:30\n- 14:00 to 14:30\n- 16:00 to 16:30\n\nI check coverage by postcode, so what is your 5-digit postcode? Once I have it, please also send:\n- Your name and phone number\n- Your full address\n- What gardening work you need\n- Access details (gate, parking, pets)\n\nTell me which time you'd like too.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 504,
+    "output_tokens": 322,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "E6",
+   "group": "E",
+   "title": "Same day",
+   "turns": [
+    "Can he come today at 2pm? 7 Jalan Melur 2, Seksyen 7, 40000."
+   ],
+   "contact": null,
+   "reply_must": "R11. Not: a booking or a time promise.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Can he come today at 2pm? 7 Jalan Melur 2, Seksyen 7, 40000.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40000"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40000",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Seksyen 7",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "time_not_bookable",
+        "what_was_asked": "Site visit today (Sat 17 Oct) at 14:00 at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+        "told_customer": "R11: same-day visits need Pak Razif's go-ahead; request passed on and he will get back to the customer",
+        "recommended_next_step": "Call or WhatsApp the customer to say whether a same-day 14:00 visit is possible; address is in Shah Alam coverage (A1). Name, needs and access details not yet collected.",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam, 40000",
+        "preferred_time": "Today, Sat 17 Oct 2026, 14:00"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P27",
+         "W8",
+         "W9",
+         "W12",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Your address is inside our coverage area.\n\nSame-day visits need Pak Razif's go-ahead. I've passed your request for today at 2pm to him, and he will get back to you.\n\nIf you'd rather book a visit for another day, I can check the open slots. Tomorrow is Sunday, which is a rest day, so the earliest day would be Mon 19 Oct. Which day suits you?"
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Your address is inside our coverage area.\n\nSame-day visits need Pak Razif's go-ahead. I've passed your request for today at 2pm to him, and he will get back to you.\n\nIf you'd rather book a visit for another day, I can check the open slots. Tomorrow is Sunday, which is a rest day, so the earliest day would be Mon 19 Oct. Which day suits you?",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1226,
+    "output_tokens": 677,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "time_not_bookable",
+      "reason": "time_not_bookable",
+      "reason_label": "Time not bookable",
+      "rules": [
+       "P27",
+       "W8",
+       "W9",
+       "W12"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1024"
+      },
+      "customer_words": "Can he come today at 2pm? 7 Jalan Melur 2, Seksyen 7, 40000.",
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam, 40000",
+      "what_was_asked": "Site visit today (Sat 17 Oct) at 14:00 at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+      "preferred_time": "Today, Sat 17 Oct 2026, 14:00",
+      "told_customer": "R11: same-day visits need Pak Razif's go-ahead; request passed on and he will get back to the customer",
+      "recommended_next_step": "Call or WhatsApp the customer to say whether a same-day 14:00 visit is possible; address is in Shah Alam coverage (A1). Name, needs and access details not yet collected.",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E6",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1024"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "E7",
+   "group": "E",
+   "title": "Inside the window, 10 Nov",
+   "turns": [
+    "Book Tuesday 10 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked."
+   ],
+   "contact": null,
+   "reply_must": "R3 with Tue 10 Nov, 08:00 to 08:30 and HG-1045.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Book Tuesday 10 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40000"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40000",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Seksyen 7",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "book_site_visit",
+       "input": {
+        "date": "2026-11-10",
+        "slot": "08:00",
+        "name": "Aminah Yusof",
+        "phone": "012-345 6789",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam",
+        "postcode": "40000",
+        "needs": "hedge trimming",
+        "access": "gate unlocked"
+       },
+       "result": {
+        "ok": true,
+        "booking_ref": "HG-1045",
+        "date": "2026-11-10",
+        "day": "Tue 10 Nov 2026",
+        "window": "08:00 to 08:30",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+        "confirmation": "Your site visit is confirmed for Tue 10 Nov 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.",
+        "rules": [
+         "P9",
+         "P12",
+         "W6",
+         "W11"
+        ],
+        "message": "Booked and confirmed. Give the customer the confirmation (R3) as written."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi Aminah, I'm Pak Razif's assistant. Your visit is booked.\n\nYour site visit is confirmed for Tue 10 Nov 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.\n\nThe visit is free and takes about 30 minutes. Please keep the gate unlocked and keep any pets indoors. Someone should be home to show Pak Razif the hedges. You're welcome to send photos, and I'll pass them on to him."
+      }
+     ],
+     "reply": "Hi Aminah, I'm Pak Razif's assistant. Your visit is booked.\n\nYour site visit is confirmed for Tue 10 Nov 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.\n\nThe visit is free and takes about 30 minutes. Please keep the gate unlocked and keep any pets indoors. Someone should be home to show Pak Razif the hedges. You're welcome to send photos, and I'll pass them on to him.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1443,
+    "output_tokens": 637,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [
+     {
+      "ref": "HG-1045",
+      "date": "2026-11-10",
+      "slot": "08:00",
+      "window": "08:00 to 08:30",
+      "name": "Aminah Yusof",
+      "phone": "012-345 6789",
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam",
+      "postcode": "40000",
+      "needs": "hedge trimming",
+      "access": "gate unlocked",
+      "status": "confirmed",
+      "source": "assistant",
+      "booked_at": "2026-10-17T10:00",
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E7",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1025"
+      }
+     }
+    ],
+    "changedSlots": [
+     {
+      "date": "2026-11-10",
+      "slot": "08:00",
+      "now": {
+       "status": "booked",
+       "ref": "HG-1045"
+      }
+     }
+    ],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "new_visit",
+      "category": "new_visit",
+      "ref": "HG-1045",
+      "date": "2026-11-10",
+      "window": "08:00 to 08:30",
+      "customer": {
+       "name": "Aminah Yusof",
+       "phone": "012-345 6789"
+      },
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+      "needs": "hedge trimming",
+      "access": "gate unlocked",
+      "customer_words": "Book Tuesday 10 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked.",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E7",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1025"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "E8",
+   "group": "E",
+   "title": "Beyond the window, 25 Nov",
+   "turns": [
+    "Book Wednesday 25 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked."
+   ],
+   "contact": null,
+   "reply_must": "The date needs Pak Razif; passed on. Not: a booking, though the slot is free.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Book Wednesday 25 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "book_site_visit",
+       "input": {
+        "date": "2026-11-25",
+        "slot": "08:00",
+        "name": "Aminah Yusof",
+        "phone": "012-345 6789",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam",
+        "postcode": "40000",
+        "needs": "hedge trimming",
+        "access": "Gate unlocked"
+       },
+       "result": {
+        "ok": false,
+        "error": {
+         "category": "beyond_window",
+         "retryable": false,
+         "message": "Visits can be booked up to Tue 17 Nov 2026, the same date next month from first contact (W8). Do not book; forward with hand_to_pak_razif, reason time_not_bookable."
+        }
+       }
+      },
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "time_not_bookable",
+        "what_was_asked": "Book a site visit for hedge trimming on Wed 25 Nov 2026 at 08:00, which is beyond the booking window (last bookable date Tue 17 Nov)",
+        "told_customer": "Wed 25 Nov is beyond the booking window so it could not be booked; request passed on and Pak Razif will get back to her",
+        "recommended_next_step": "Call or WhatsApp Aminah to agree a visit date; she asked for Wed 25 Nov 08:00 (or offer a slot on or before Tue 17 Nov)",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+        "preferred_time": "Wed 25 Nov 2026, 08:00"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P27",
+         "W8",
+         "W9",
+         "W12",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi Aminah, I'm Pak Razif's assistant.\n\nI couldn't book Wed 25 Nov at 08:00. It's beyond my booking window, which only runs up to Tue 17 Nov. I haven't reserved anything. I've passed your request to Pak Razif with your details, and he will get back to you.\n\nIf an earlier date works for you, tell me which day and I'll check the open slots."
+      }
+     ],
+     "reply": "Hi Aminah, I'm Pak Razif's assistant.\n\nI couldn't book Wed 25 Nov at 08:00. It's beyond my booking window, which only runs up to Tue 17 Nov. I haven't reserved anything. I've passed your request to Pak Razif with your details, and he will get back to you.\n\nIf an earlier date works for you, tell me which day and I'll check the open slots.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 1957,
+    "output_tokens": 921,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "time_not_bookable",
+      "reason": "time_not_bookable",
+      "reason_label": "Time not bookable",
+      "rules": [
+       "P27",
+       "W8",
+       "W9",
+       "W12"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1026"
+      },
+      "customer_words": "Book Wednesday 25 November, 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, hedge trimming, gate unlocked.",
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+      "what_was_asked": "Book a site visit for hedge trimming on Wed 25 Nov 2026 at 08:00, which is beyond the booking window (last bookable date Tue 17 Nov)",
+      "preferred_time": "Wed 25 Nov 2026, 08:00",
+      "told_customer": "Wed 25 Nov is beyond the booking window so it could not be booked; request passed on and Pak Razif will get back to her",
+      "recommended_next_step": "Call or WhatsApp Aminah to agree a visit date; she asked for Wed 25 Nov 08:00 (or offer a slot on or before Tue 17 Nov)",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E8",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1026"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "E9",
+   "group": "E",
+   "title": "Booking with a photo",
+   "turns": [
+    {
+     "text": "Book Tuesday 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, overgrown lawn, gate unlocked.",
+     "photos": [
+      "P1"
+     ]
+    }
+   ],
+   "contact": null,
+   "reply_must": "R3 and R2 in one reply. Not: any description or size from the photo.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Book Tuesday 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, overgrown lawn, gate unlocked.",
+     "photos": [
+      "P1"
+     ],
+     "uploads": [
+      "PH-001"
+     ],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "forward_photo",
+       "input": {
+        "photo_ids": [
+         "PH-001"
+        ],
+        "note": "Overgrown lawn at 7 Jalan Melur 2, Seksyen 7, Shah Alam; site visit requested Tue 20 Oct 08:00"
+       },
+       "result": {
+        "ok": true,
+        "forwarded": [
+         "PH-001"
+        ],
+        "inbox_item": "IN-001",
+        "booking_ref": null,
+        "rules": [
+         "P13",
+         "P14"
+        ],
+        "message": "Forwarded unchanged. Tell the customer the photo has been passed to Pak Razif (R2). Do not describe or measure it."
+       }
+      },
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40000"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40000",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Seksyen 7",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-20"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-20",
+        "day": "Tue 20 Oct 2026",
+        "open": [
+         {
+          "slot": "08:00",
+          "window": "08:00 to 08:30"
+         },
+         {
+          "slot": "14:00",
+          "window": "14:00 to 14:30"
+         }
+        ],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "Open slots only. Each visit takes about 30 minutes."
+       }
+      },
+      {
+       "type": "tool",
+       "name": "book_site_visit",
+       "input": {
+        "date": "2026-10-20",
+        "slot": "08:00",
+        "name": "Aminah Yusof",
+        "phone": "012-345 6789",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam",
+        "postcode": "40000",
+        "needs": "overgrown lawn",
+        "access": "gate unlocked"
+       },
+       "result": {
+        "ok": true,
+        "booking_ref": "HG-1045",
+        "date": "2026-10-20",
+        "day": "Tue 20 Oct 2026",
+        "window": "08:00 to 08:30",
+        "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+        "confirmation": "Your site visit is confirmed for Tue 20 Oct 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.",
+        "rules": [
+         "P9",
+         "P12",
+         "W6",
+         "W11"
+        ],
+        "message": "Booked and confirmed. Give the customer the confirmation (R3) as written."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi Aminah, I'm Pak Razif's assistant.\n\nYour site visit is confirmed for Tue 20 Oct 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.\n\nYour photo has been passed to Pak Razif. He will assess the garden during the visit. The visit is free and takes about 30 minutes. Please make sure someone is home to show him the lawn, keep any pets indoors, and leave the gate unlocked."
+      }
+     ],
+     "reply": "Hi Aminah, I'm Pak Razif's assistant.\n\nYour site visit is confirmed for Tue 20 Oct 2026, 08:00 to 08:30, at 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000. Your booking reference is HG-1045.\n\nYour photo has been passed to Pak Razif. He will assess the garden during the visit. The visit is free and takes about 30 minutes. Please make sure someone is home to show him the lawn, keep any pets indoors, and leave the gate unlocked.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 2657,
+    "output_tokens": 919,
+    "cache_read_input_tokens": 42129,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [
+     {
+      "ref": "HG-1045",
+      "date": "2026-10-20",
+      "slot": "08:00",
+      "window": "08:00 to 08:30",
+      "name": "Aminah Yusof",
+      "phone": "012-345 6789",
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam",
+      "postcode": "40000",
+      "needs": "overgrown lawn",
+      "access": "gate unlocked",
+      "status": "confirmed",
+      "source": "assistant",
+      "booked_at": "2026-10-17T10:00",
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E9",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1027"
+      }
+     }
+    ],
+    "changedSlots": [
+     {
+      "date": "2026-10-20",
+      "slot": "08:00",
+      "now": {
+       "status": "booked",
+       "ref": "HG-1045"
+      }
+     }
+    ],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "photos",
+      "category": "photos",
+      "photos": [
+       "PH-001"
+      ],
+      "images": [
+       "images/pak-razif-the-gardener/demo/P1 front lawn.jpeg"
+      ],
+      "note": "Overgrown lawn at 7 Jalan Melur 2, Seksyen 7, Shah Alam; site visit requested Tue 20 Oct 08:00",
+      "booking_ref": "HG-1045",
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1027"
+      },
+      "customer_words": "Book Tuesday 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, overgrown lawn, gate unlocked.",
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E9",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1027"
+      }
+     },
+     {
+      "id": "IN-002",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "new_visit",
+      "category": "new_visit",
+      "ref": "HG-1045",
+      "date": "2026-10-20",
+      "window": "08:00 to 08:30",
+      "customer": {
+       "name": "Aminah Yusof",
+       "phone": "012-345 6789"
+      },
+      "address": "7 Jalan Melur 2, Seksyen 7, Shah Alam 40000",
+      "needs": "overgrown lawn",
+      "access": "gate unlocked",
+      "customer_words": "Book Tuesday 8am. Aminah Yusof, 012-345 6789, 7 Jalan Melur 2, Seksyen 7, Shah Alam 40000, overgrown lawn, gate unlocked.",
+      "photos": [
+       "PH-001"
+      ],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E9",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1027"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "E10",
+   "group": "E",
+   "title": "Land measurement, no photo",
+   "turns": [
+    "Can you measure my land? I need the exact size for my renovation plan."
+   ],
+   "contact": null,
+   "reply_must": "Declines: measuring land is not a service (P5); offers a site visit if gardening work is needed. Not: a measurement, an estimate, a handover or a booking.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Can you measure my land? I need the exact size for my renovation plan.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. Sorry, I can't help with measuring land. Measuring isn't a service we offer, and I can't estimate a size from a description or photo either.\n\nIf you need gardening work done, like grass cutting, hedge trimming, garden clean-up or garden waste removal, Pak Razif can see the garden during a free site visit. It takes about 30 minutes. Would you like to book one? If so, please share your postcode and your preferred day."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. Sorry, I can't help with measuring land. Measuring isn't a service we offer, and I can't estimate a size from a description or photo either.\n\nIf you need gardening work done, like grass cutting, hedge trimming, garden clean-up or garden waste removal, Pak Razif can see the garden during a free site visit. It takes about 30 minutes. Would you like to book one? If so, please share your postcode and your preferred day.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 97,
+    "output_tokens": 156,
+    "cache_read_input_tokens": 14043,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": []
+   }
+  },
+  {
+   "id": "E11",
+   "group": "E",
+   "title": "Unusual work: drip irrigation",
+   "turns": [
+    "Can you set up a drip irrigation system for my plants? 7 Jalan Melur 2, Seksyen 7, 40000."
+   ],
+   "contact": null,
+   "reply_must": "Not among the general services, so passed to Pak Razif for assessment (P6, P24); offers a site visit. Not: a yes or no, a price, or a promise he will take it.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Can you set up a drip irrigation system for my plants? 7 Jalan Melur 2, Seksyen 7, 40000.",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_coverage",
+       "input": {
+        "postcode": "40000"
+       },
+       "result": {
+        "ok": true,
+        "postcode": "40000",
+        "covered": true,
+        "area": "Shah Alam",
+        "locality": "Seksyen 7",
+        "rules": [
+         "A1"
+        ]
+       }
+      },
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "unusual_work",
+        "what_was_asked": "Set up a drip irrigation system for the customer's plants (not among the general services)",
+        "told_customer": "Request passed on for assessment; offered a free site visit; no promise whether he will take the work",
+        "recommended_next_step": "Assess the drip irrigation request and contact the customer; a site visit can be booked if the customer wants one",
+        "address": "7 Jalan Melur 2, Seksyen 7, 40000"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P24",
+         "P6",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant.\n\nDrip irrigation isn't one of our general services. Those are grass cutting and edge trimming, hedge and bush trimming, garden clean-up, and garden waste removal. I've passed your request to Pak Razif for assessment, and he will get back to you. I can't say yet whether he will take this work.\n\nYour postcode 40000 is in our Shah Alam coverage, so I can book a free site visit of about 30 minutes if you'd like one. If so, please tell me:\n- Your preferred day\n- Your name and phone number\n- Access instructions (gate, parking, pets)\n\nPhotos of your plants and garden are welcome too."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant.\n\nDrip irrigation isn't one of our general services. Those are grass cutting and edge trimming, hedge and bush trimming, garden clean-up, and garden waste removal. I've passed your request to Pak Razif for assessment, and he will get back to you. I can't say yet whether he will take this work.\n\nYour postcode 40000 is in our Shah Alam coverage, so I can book a free site visit of about 30 minutes if you'd like one. If so, please tell me:\n- Your preferred day\n- Your name and phone number\n- Access instructions (gate, parking, pets)\n\nPhotos of your plants and garden are welcome too.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 847,
+    "output_tokens": 638,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "unusual_work",
+      "reason": "unusual_work",
+      "reason_label": "Unusual work",
+      "rules": [
+       "P24",
+       "P6"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1029"
+      },
+      "customer_words": "Can you set up a drip irrigation system for my plants? 7 Jalan Melur 2, Seksyen 7, 40000.",
+      "address": "7 Jalan Melur 2, Seksyen 7, 40000",
+      "what_was_asked": "Set up a drip irrigation system for the customer's plants (not among the general services)",
+      "preferred_time": "",
+      "told_customer": "Request passed on for assessment; offered a free site visit; no promise whether he will take the work",
+      "recommended_next_step": "Assess the drip irrigation request and contact the customer; a site visit can be booked if the customer wants one",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E11",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1029"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "E12",
+   "group": "E",
+   "title": "Asks for Pak Razif",
+   "turns": [
+    "Can I talk to Pak Razif?"
+   ],
+   "contact": null,
+   "reply_must": "Passed on with a short summary; he will get back to the customer (P31, P33). Not: his phone number or a time he will call.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Can I talk to Pak Razif?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "hand_to_pak_razif",
+       "input": {
+        "reason": "asks_for_him_or_unclear",
+        "what_was_asked": "Customer asks to speak to Pak Razif; no reason or details given yet",
+        "told_customer": "Request passed on; Pak Razif will get back to the customer",
+        "recommended_next_step": "Contact the customer by phone or WhatsApp to find out what they need"
+       },
+       "result": {
+        "ok": true,
+        "inbox_item": "IN-001",
+        "rules": [
+         "P31",
+         "P33"
+        ],
+        "message": "Passed to Pak Razif. Tell the customer it has been passed on and that he will get back to them. Do not promise when."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. He's often out on jobs, so I've passed your request to speak with him on to him, and he will get back to you.\n\nI can also help with gardening enquiries or book a free site visit in the meantime. Just let me know what you need."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. He's often out on jobs, so I've passed your request to speak with him on to him, and he will get back to you.\n\nI can also help with gardening enquiries or book a free site visit in the meantime. Just let me know what you need.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 461,
+    "output_tokens": 293,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [],
+    "inbox": [
+     {
+      "id": "IN-001",
+      "status": "open",
+      "received": "2026-10-17T10:00",
+      "kind": "handover",
+      "category": "asks_for_him_or_unclear",
+      "reason": "asks_for_him_or_unclear",
+      "reason_label": "Asks for you, or unclear",
+      "rules": [
+       "P31"
+      ],
+      "customer": {
+       "name": "WhatsApp customer",
+       "phone": "019-555 1030"
+      },
+      "customer_words": "Can I talk to Pak Razif?",
+      "address": "",
+      "what_was_asked": "Customer asks to speak to Pak Razif; no reason or details given yet",
+      "preferred_time": "",
+      "told_customer": "Request passed on; Pak Razif will get back to the customer",
+      "recommended_next_step": "Contact the customer by phone or WhatsApp to find out what they need",
+      "photos": [],
+      "contact": {
+       "channel": "WhatsApp",
+       "chat_id": "WA-E12",
+       "name": "WhatsApp customer",
+       "phone": "019-555 1030"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "F1",
+   "group": "F",
+   "title": "He opens a blocked slot, then a customer asks",
+   "owner_actions": [
+    {
+     "action": "toggleSlot",
+     "date": "2026-10-22",
+     "slot": "14:00",
+     "before": {
+      "status": "blocked",
+      "reason": "Family commitment"
+     },
+     "after": {
+      "status": "open"
+     }
+    }
+   ],
+   "turns": [
+    "Are you free Thursday afternoon?"
+   ],
+   "contact": null,
+   "reply_must": "Offers 14:00 as the Thursday afternoon slot, the one Pak Razif opened; not 16:00, which stays blocked.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Are you free Thursday afternoon?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-22"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-22",
+        "day": "Thu 22 Oct 2026",
+        "open": [
+         {
+          "slot": "08:00",
+          "window": "08:00 to 08:30"
+         },
+         {
+          "slot": "10:00",
+          "window": "10:00 to 10:30"
+         },
+         {
+          "slot": "14:00",
+          "window": "14:00 to 14:30"
+         }
+        ],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "Open slots only. Each visit takes about 30 minutes."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. For Thursday 22 Oct, one afternoon slot is open: 14:00 to 14:30. The 16:00 slot isn't available.\n\nThe site visit is free and takes about 30 minutes. If 14:00 suits you, please send me:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- The gardening work you need\n- Access details (gate, parking, pets)\n\nI'll check that your postcode is covered, then book the slot."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. For Thursday 22 Oct, one afternoon slot is open: 14:00 to 14:30. The 16:00 slot isn't available.\n\nThe site visit is free and takes about 30 minutes. If 14:00 suits you, please send me:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- The gardening work you need\n- Access details (gate, parking, pets)\n\nI'll check that your postcode is covered, then book the slot.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 485,
+    "output_tokens": 323,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [
+     {
+      "date": "2026-10-22",
+      "slot": "14:00",
+      "now": {
+       "status": "open"
+      }
+     }
+    ],
+    "inbox": []
+   }
+  },
+  {
+   "id": "F2",
+   "group": "F",
+   "title": "He blocks an open slot, then a customer asks",
+   "owner_actions": [
+    {
+     "action": "toggleSlot",
+     "date": "2026-10-20",
+     "slot": "08:00",
+     "before": {
+      "status": "open"
+     },
+     "after": {
+      "status": "blocked",
+      "reason": "Blocked by Pak Razif"
+     }
+    }
+   ],
+   "turns": [
+    "Are you available next Tuesday?"
+   ],
+   "contact": null,
+   "reply_must": "Offers only 14:00 on Tue 20 Oct; not 08:00, which Pak Razif blocked.",
+   "score": {
+    "tool": true,
+    "record": true,
+    "handover": true,
+    "limits": true,
+    "pass": true,
+    "notes": []
+   },
+   "transcript": [
+    {
+     "user": "Are you available next Tuesday?",
+     "photos": [],
+     "uploads": [],
+     "trace": [
+      {
+       "type": "tool",
+       "name": "find_open_slots",
+       "input": {
+        "date": "2026-10-20"
+       },
+       "result": {
+        "ok": true,
+        "date": "2026-10-20",
+        "day": "Tue 20 Oct 2026",
+        "open": [
+         {
+          "slot": "14:00",
+          "window": "14:00 to 14:30"
+         }
+        ],
+        "rules": [
+         "W3",
+         "W10"
+        ],
+        "note": "Open slots only. Each visit takes about 30 minutes."
+       }
+      },
+      {
+       "type": "text",
+       "text": "Hi, I'm Pak Razif's assistant. I can help with that.\n\nFor Tue 20 Oct, one site visit slot is open: 14:00 to 14:30. The visit is free and takes about 30 minutes.\n\nIf you'd like it, please send me:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- What gardening work you need\n- Access details (gate, parking, pets)\n\nIf that time doesn't suit, I can check other days for you."
+      }
+     ],
+     "reply": "Hi, I'm Pak Razif's assistant. I can help with that.\n\nFor Tue 20 Oct, one site visit slot is open: 14:00 to 14:30. The visit is free and takes about 30 minutes.\n\nIf you'd like it, please send me:\n- Your name and phone number\n- Your full address and 5-digit postcode\n- What gardening work you need\n- Access details (gate, parking, pets)\n\nIf that time doesn't suit, I can check other days for you.",
+     "stoppedBy": "end_turn",
+     "endsChat": false
+    }
+   ],
+   "usage": {
+    "input_tokens": 390,
+    "output_tokens": 267,
+    "cache_read_input_tokens": 28086,
+    "cache_creation_input_tokens": 0
+   },
+   "stateDiff": {
+    "changedBookings": [],
+    "newBookings": [],
+    "changedSlots": [
+     {
+      "date": "2026-10-20",
+      "slot": "08:00",
+      "now": {
+       "status": "blocked",
+       "reason": "Blocked by Pak Razif"
+      }
+     }
+    ],
+    "inbox": []
+   }
+  }
+ ]
+}

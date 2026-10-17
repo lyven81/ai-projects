@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pak Razif's page</title>
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#fff;--card:#fff;--ink:#1f4f8f;--muted:#5d7ea8;--line:#d6e2f0;--navy:#1f4f8f;--accent:#2f6fb0;--box:#f3f8fd;--field:#e3efe5;--fieldink:#2f5d3a;--warn:#b5651d;--warnbg:#fbf1e6;--flash:#fff3c4;--barbg:#fff;--barink:#1f4f8f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--field:#1e3324;--fieldink:#9fd3ab;--warn:#e0a060;--warnbg:#2b2117;--flash:#4a3f17;--barbg:#1d2f45;--barink:#e3e8ee}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--field:#1e3324;--fieldink:#9fd3ab;--warn:#e0a060;--warnbg:#2b2117;--flash:#4a3f17;--barbg:#1d2f45;--barink:#e3e8ee}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",Arial,sans-serif;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit}
+a{color:var(--accent)}
+.page{max-width:430px;margin:0 auto;padding:12px 16px 20px}
+.crumbs{font-size:12.5px;color:var(--muted);margin:0 2px 8px}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+footer{font-size:12px;color:var(--muted);margin:12px 2px 0}
+.app{display:flex;flex-direction:column;height:min(860px,calc(100vh - 90px));min-height:560px;background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative}
+@supports (height:100dvh){.app{height:min(860px,calc(100dvh - 90px))}}
+@media (max-width:500px){.page{padding:8px 0 12px}.crumbs,footer{margin-left:16px;margin-right:16px}.app{border-radius:0;border-left:0;border-right:0}}
+body.embed .page{max-width:none;padding:0}
+body.embed .app{height:100vh;min-height:0;border:0;border-radius:0}
+@supports (height:100dvh){body.embed .app{height:100dvh}}
+.bar{background:var(--barbg);color:var(--barink);border-bottom:1px solid var(--line);padding:11px 16px 10px;display:flex;justify-content:space-between;align-items:baseline;flex:none}
+.bar b{font-size:16px}
+.bar span{font-size:13px;opacity:.9}
+.scroll{flex:1;overflow:auto;padding:12px 12px 16px;-webkit-overflow-scrolling:touch}
+.pane{display:none}.pane.on{display:block}
+.tabs{display:flex;border-top:1px solid var(--line);background:var(--card);flex:none;padding-bottom:env(safe-area-inset-bottom)}
+.tabs button{flex:1;background:none;border:0;font-size:12px;padding:7px 0 8px;color:var(--muted);cursor:pointer;position:relative}
+.tabs button.on{color:var(--accent);font-weight:700}
+.tabs svg{display:block;margin:0 auto 1px;width:22px;height:22px}
+.badge{position:absolute;top:3px;left:calc(50% + 6px);background:var(--warn);color:#fff;font-size:10.5px;font-weight:700;border-radius:9px;padding:0 6px;line-height:17px;min-width:18px}
+.badge:empty{display:none}
+.bump{animation:bump .6s ease}
+@keyframes bump{0%{transform:scale(1)}30%{transform:scale(1.45)}60%{transform:scale(.9)}100%{transform:scale(1)}}
+.m{color:var(--muted);font-size:12.5px}
+.sum{margin:0 2px 8px}
+.sec{font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin:14px 2px 6px}
+.sec:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:4px 10px;font-size:12.5px;cursor:pointer;color:var(--ink)}
+.chip .n{display:inline-block;min-width:18px;margin-left:5px;font-size:11px;font-weight:700;padding:0 6px;border-radius:9px;background:var(--navy);color:var(--card);text-align:center}
+.chip.on{border-color:var(--accent);background:var(--box);color:var(--accent);font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
+.chip.closed .n{background:var(--line);color:var(--muted)}
+.list{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.list button{display:flex;width:100%;justify-content:space-between;gap:8px;align-items:baseline;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 11px;cursor:pointer;font-size:13px}
+.list button:last-child{border-bottom:0}
+.list button.on{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+.list b{color:var(--navy);font-weight:600}
+.list small{color:var(--muted);white-space:nowrap;font-size:11.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:10px}
+.card.flash{animation:flash 1.5s ease}
+@keyframes flash{0%,35%{background:var(--flash);box-shadow:0 0 0 3px var(--warn)}100%{background:var(--card);box-shadow:none}}
+.ch{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:9px 12px;background:var(--box);border-bottom:1px solid var(--line);font-weight:700;color:var(--navy);font-size:14px}
+.ch small{font-weight:400;color:var(--muted);font-size:12px;white-space:nowrap}
+.kv{padding:7px 12px;border-bottom:1px solid var(--line);font-size:13.5px}
+.kv>.k{display:block;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.kv .q{white-space:pre-line;font-style:italic;display:block}
+.kv.rec{background:var(--warnbg)}
+.kv.rec>.k{color:var(--warn)}
+.kv a.rule{display:inline-block;margin:0 6px 2px 0;padding:0 7px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;text-decoration:none;background:var(--box)}
+.thumbs{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.thumbs button{padding:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;width:76px;height:58px;cursor:zoom-in;background:var(--box)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.btns{display:flex;gap:7px;padding:10px 12px 12px}
+.btn{flex:1;text-align:center;font-size:13.5px;font-weight:600;border-radius:8px;padding:8px 0;background:var(--accent);color:#fff;border:1px solid var(--accent);text-decoration:none;cursor:pointer}
+.btn.alt{background:var(--card);color:var(--accent)}
+.btn.done{background:var(--navy);border-color:var(--navy);color:var(--card)}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--muted);font-size:13.5px}
+.line{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:7px 11px;border-bottom:1px solid var(--line)}
+.line:last-child{border-bottom:0}
+.line .h{width:44px;flex:none;font-weight:700;color:var(--navy)}
+.tag{border-radius:6px;padding:1px 7px;display:inline-block}
+.fw{background:var(--field);color:var(--fieldink)}
+.open{color:var(--accent);border:1px dashed var(--accent)}
+.vis{background:var(--navy);color:var(--card)}
+.blk{background:var(--box);color:var(--muted);border:1px solid var(--line)}
+.vcard{padding:10px 12px;font-size:13.5px}
+.vcard .t{font-weight:700;color:var(--navy)}
+.vcard .btns{padding:8px 0 0}
+.mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.mhead b{color:var(--navy);font-size:15px}
+.mhead button{width:40px;height:32px;border:1px solid var(--line);background:var(--card);border-radius:8px;cursor:pointer;color:var(--accent);font-size:16px}
+.mhead button:disabled{opacity:.35;cursor:default}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}
+.grid .wd{font-size:11px;font-weight:700;color:var(--muted);padding:2px 0}
+.grid button{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px 0 3px;cursor:pointer;min-height:42px;font-size:12.5px;font-weight:700;color:var(--navy)}
+.grid button.past{opacity:.55}
+.grid button.sun{background:var(--box);color:var(--muted);font-weight:400}
+.grid button.today{border-color:var(--warn);box-shadow:inset 0 0 0 1px var(--warn)}
+.grid button.sel{outline:2px solid var(--accent);outline-offset:-1px}
+.grid .pad{visibility:hidden}
+.dots{display:flex;justify-content:center;gap:2px;margin-top:3px;height:6px}
+.dots i{width:6px;height:6px;border-radius:50%;display:block}
+.d-open{border:1.5px solid var(--accent)}
+.d-booked{background:var(--navy)}
+.d-field{background:#5f9a6b}
+.d-blocked{background:var(--muted);opacity:.55}
+.grid .cl{font-size:9px;font-weight:400;display:block;margin-top:2px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11.5px;color:var(--muted);margin:7px 2px 4px}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:0}
+.slot{display:flex;width:100%;align-items:center;gap:10px;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:9px 11px;font-size:13.5px;cursor:pointer}
+.slot:last-child{border-bottom:0}
+.slot .h{width:44px;flex:none;font-weight:700;color:var(--navy)}
+.slot .s{flex:1}
+.slot .act{font-size:12px;font-weight:600;color:var(--accent)}
+.slot.flash{animation:flash 1.5s ease}
+.slot.fixed{cursor:default}
+.slot.fixed .act{color:var(--muted);font-weight:400}
+.note{font-size:12.5px;color:var(--warn);background:var(--warnbg);border-radius:8px;padding:6px 10px;margin:6px 0 0}
+.note:empty{display:none}
+.lb{position:fixed;inset:0;background:rgba(10,14,20,.88);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:50;padding:16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:78vh;border-radius:8px}
+.lb .cap{color:#e3e8ee;font-size:13px;margin-top:8px;text-align:center}
+.lb .x{position:absolute;top:10px;right:12px;width:40px;height:40px;border-radius:20px;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
+.lb .nav{display:flex;gap:10px;margin-top:10px}
+.lb .nav button{border:1px solid rgba(255,255,255,.4);background:none;color:#fff;border-radius:8px;padding:5px 14px;cursor:pointer}
+/* Phone home screen (embedded demo only): shown while nothing waits for Pak Razif */
+.home{position:absolute;inset:0;z-index:5;display:none;flex-direction:column;align-items:center;color:#fff;overflow:hidden}
+.home.on{display:flex}
+.home svg.wp{position:absolute;inset:0;width:100%;height:100%}
+.home .sb{position:relative;width:100%;display:flex;justify-content:space-between;padding:8px 18px 0;font-size:12.5px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.home .clock{position:relative;margin-top:56px;font-size:64px;font-weight:300;line-height:1;letter-spacing:1px;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.home .date{position:relative;margin-top:6px;font-size:15px;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.home .widget{position:relative;margin:26px 18px 0;align-self:stretch;background:rgba(255,255,255,.82);color:#1f4f8f;border-radius:16px;padding:12px 14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.home .widget b{display:block;font-size:13.5px}
+.home .widget span{display:block;font-size:12.5px;color:#3d6a9c;margin-top:2px}
+.home .dock{position:relative;margin-top:auto;margin-bottom:26px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.home .dock button{width:58px;height:58px;border-radius:16px;border:0;background:#fff;color:#2f6fb0;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center}
+.home .dock svg{width:30px;height:30px}
+.notif{position:absolute;left:10px;right:10px;top:10px;z-index:8;background:rgba(255,255,255,.97);color:#1f2a36;border-radius:16px;padding:10px 12px;box-shadow:0 8px 26px rgba(0,0,0,.22);transform:translateY(-140%);transition:transform .35s ease;border:1px solid #d6e2f0}
+.notif.on{transform:translateY(0)}
+.notif .nh{display:flex;justify-content:space-between;font-size:11.5px;color:#5d7ea8;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.notif .nt{font-size:14px;font-weight:700;color:#1f4f8f;margin-top:3px}
+.notif .nb{font-size:13px;color:#3d4f63;margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media (prefers-reduced-motion:reduce){.notif{transition:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="crumbs" id="crumbs"><a href="../../index.html">AI Projects</a> / <a href="../../pak-razif-the-gardener.html">Pak Razif The Gardener</a></div>
+  <div class="app">
+    <div class="home" id="home" aria-label="Pak Razif's phone home screen">
+      <svg class="wp" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8fd8"/><stop offset=".55" stop-color="#9fd0f2"/><stop offset="1" stop-color="#e9f6ff"/></linearGradient>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff7d6"/><stop offset=".55" stop-color="#ffe9a3" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a3" stop-opacity="0"/></radialGradient>
+          <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fcf8a"/><stop offset="1" stop-color="#5fae6a"/></linearGradient>
+          <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fb36a"/><stop offset="1" stop-color="#3f8f52"/></linearGradient>
+          <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f9a55"/><stop offset="1" stop-color="#2a6e3f"/></linearGradient>
+        </defs>
+        <rect width="400" height="800" fill="url(#sky)"/>
+        <circle cx="300" cy="300" r="120" fill="url(#sun)"/>
+        <circle cx="300" cy="300" r="34" fill="#fff6cf"/>
+        <g fill="#fff" opacity=".85"><ellipse cx="90" cy="250" rx="46" ry="14"/><ellipse cx="120" cy="240" rx="30" ry="16"/><ellipse cx="330" cy="190" rx="38" ry="11"/><ellipse cx="352" cy="182" rx="22" ry="12"/></g>
+        <path d="M0 520 C80 470 160 480 230 505 S350 470 400 480 V800 H0Z" fill="url(#h1)"/>
+        <path d="M0 590 C90 545 190 560 270 585 S370 560 400 565 V800 H0Z" fill="url(#h2)"/>
+        <g fill="#2f7a46"><circle cx="62" cy="548" r="22"/><circle cx="84" cy="540" r="18"/><rect x="70" y="556" width="6" height="26" fill="#6b4a2b"/><circle cx="338" cy="555" r="20"/><circle cx="356" cy="548" r="15"/><rect x="343" y="562" width="5" height="22" fill="#6b4a2b"/></g>
+        <path d="M0 660 C110 620 230 640 400 625 V800 H0Z" fill="url(#h3)"/>
+        <g stroke="#2a6e3f" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M40 740 l-6 -22 M48 742 l2 -24 M56 740 l8 -20"/><path d="M180 760 l-6 -22 M188 762 l2 -24 M196 760 l8 -20"/><path d="M320 748 l-6 -22 M328 750 l2 -24 M336 748 l8 -20"/></g>
+        <g><circle cx="120" cy="700" r="7" fill="#ffd166"/><circle cx="120" cy="700" r="3" fill="#e07a5f"/><circle cx="262" cy="716" r="6" fill="#f4a6c0"/><circle cx="262" cy="716" r="2.5" fill="#fff3b0"/><circle cx="372" cy="700" r="6" fill="#ffd166"/></g>
+      </svg>
+      <div class="sb"><span>10:00</span><span>4G &#9646;&#9646;&#9646;&#9646; 86%</span></div>
+      <div class="clock">10:00</div>
+      <div class="date">Saturday, 17 October</div>
+      <div class="widget"><b>Pak Razif Garden</b><span>Nothing needs you right now. Your assistant is answering customers.</span></div>
+      <div class="dock"><button id="home-open" aria-label="Open Pak Razif Garden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 11C12 7 9 5 5 5c0 4 3 6 7 6z"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></button>Pak Razif Garden</div>
+    </div>
+    <div class="notif" id="notif" role="status" aria-live="polite"><div class="nh"><span>Pak Razif Garden</span><span>now</span></div><div class="nt" id="notif-t"></div><div class="nb" id="notif-b"></div></div>
+    <div class="bar"><b>Pak Razif Garden</b><span id="today-text"></span></div>
+    <div class="scroll" id="scroll">
+      <section class="pane on" data-p="inbox" id="p-inbox"></section>
+      <section class="pane" data-p="today" id="p-today"></section>
+      <section class="pane" data-p="cal" id="p-cal"></section>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button data-t="inbox" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 13l2.5-7.5h13L21 13v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1.5 2.5h5L16 13h5"/></svg>Inbox<span class="badge" id="badge"></span></button>
+      <button data-t="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>Today</button>
+      <button data-t="cal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Calendar</button>
+    </nav>
+  </div>
+  <footer id="footer">© 2026 Lee Yih Ven · Pak Razif's page</footer>
+</div>
+<div class="lb" id="lb"><button class="x" data-lb="close" aria-label="Close">×</button><img id="lb-img" alt=""><div class="cap" id="lb-cap"></div><div class="nav" id="lb-nav"><button data-lb="prev">Previous</button><button data-lb="next">Next</button></div></div>
+
+<script>/*__TOOLS_JS__*/</script>
+<script>
+"use strict";
+const SEED = /*__SEED_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const SEED_VERSION = SEED.meta.seed_version;
+const T = GardenTools, H = T.helpers;
+const NOW = T.DEFAULT_NOW;                 // fixed demo clock, Sat 17 Oct 2026, 10:00
+const TODAY = NOW.slice(0, 10);
+const LIVE_KEY = "pak-razif-the-gardener-live-v1", REPLAY_KEY = "pak-razif-the-gardener-replay-v1";
+const params = new URLSearchParams(location.search);
+const EMBED = params.get("embed") === "1";
+const KEY = params.get("store") || LIVE_KEY;
+if (params.get("theme") === "dark" || params.get("theme") === "light") document.documentElement.setAttribute("data-theme", params.get("theme"));
+if (EMBED) { document.body.classList.add("embed"); document.getElementById("crumbs").remove(); document.getElementById("footer").remove(); }
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const clone = o => JSON.parse(JSON.stringify(o));
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// ---------- the store: localStorage under KEY, with an in-memory copy when storage is unavailable ----------
+let memory = null;
+function readRaw() {
+  try { const t = localStorage.getItem(KEY); if (t) return JSON.parse(t); } catch (e) {}
+  return memory ? clone(memory) : null;
+}
+function writeRaw(state) {
+  memory = clone(state);
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+}
+function freshSeed() { return clone(SEED); }
+function validState(s) { return s && typeof s === "object" && s.days && Array.isArray(s.inbox); }
+function loadState(first) {
+  let s = null;
+  try { const t = localStorage.getItem(KEY); if (t) s = JSON.parse(t); } catch (e) { s = null; }
+  if (!s && memory) s = clone(memory);
+  if (!validState(s)) { s = freshSeed(); writeRaw(s); return s; }
+  // A rebuild never shows stale data: reseed the live key when its stored seed_version differs.
+  // The replay key belongs to the demo page and is never reseeded here.
+  if (first && KEY === LIVE_KEY && s.meta && s.meta.seed_version && s.meta.seed_version !== SEED_VERSION) {
+    s = freshSeed(); writeRaw(s); return s;
+  }
+  memory = clone(s);
+  return s;
+}
+const channel = (() => { try { return "BroadcastChannel" in window ? new BroadcastChannel("pak-razif-the-gardener") : null; } catch (e) { return null; } })();
+function saveAndTell(state) {
+  writeRaw(state);
+  try { if (channel) channel.postMessage({ type: "state", store: KEY }); } catch (e) {}
+}
+
+// ---------- view state ----------
+let state = null;
+const ui = { appOpen: false, tab: "inbox", cat: null, caseId: null, closed: false, month: TODAY.slice(0, 7), day: TODAY, notes: {} };
+let known = null, lastOpen = null, flashId = null;
+const sig = i => i.id + "|" + (i.received || "") + "|" + ((i.customer && i.customer.name) || "");
+// Calendar rows that flash: "date|slot" -> start time. A re-render during the flash keeps it
+// running (negative animation-delay), so a second reload of the same change does not cut it short.
+const slotFlashes = {};
+let scrollSlot = null;
+function flashSlot(date, slot, scroll) { slotFlashes[date + "|" + slot] = Date.now(); if (scroll) scrollSlot = date + "|" + slot; }
+function slotFlash(date, slot) {
+  const t = slotFlashes[date + "|" + slot];
+  if (t == null) return null;
+  const e = Date.now() - t;
+  if (e >= 1500) { delete slotFlashes[date + "|" + slot]; return null; }
+  return e;
+}
+const cellSig = c => c ? `${c.status}|${c.reason || ""}|${c.ref || ""}` : "";
+
+// ---------- inbox helpers ----------
+const CAT_ORDER = T.REASON_IDS.concat(["photos", "new_visit"]);
+const catLabel = k => k === "photos" ? "Photos" : k === "new_visit" ? "New visit" : (T.HANDOVER_REASONS[k] ? T.HANDOVER_REASONS[k].label : k);
+const catOf = i => i.category || (i.kind === "handover" ? i.reason : i.kind);
+const timeOf = iso => iso ? String(iso).slice(11, 16) : "";
+const toMin = iso => Date.parse(String(iso).slice(0, 16) + ":00Z") / 60000;
+function ago(iso) {
+  if (!iso) return "";
+  const m = Math.round(toMin(NOW) - toMin(iso));
+  if (isNaN(m)) return "";
+  if (m < 1) return "just now";
+  if (m < 60) return `${m} min ago`;
+  if (m < 1440) return `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} min` : ""} ago`;
+  return H.dateText(String(iso).slice(0, 10));
+}
+function phoneDigits(p) {
+  let d = H.digits(p);
+  if (!d) return "";
+  if (d.startsWith("60")) return d;
+  if (d.startsWith("0")) d = d.slice(1);
+  return "60" + d;
+}
+function personOf(i) {
+  const c = i.customer || {}, k = i.contact || {};
+  return { name: c.name || k.name || "", phone: c.phone || k.phone || "" };
+}
+function imgSrc(p) {
+  if (!p) return "";
+  if (/^(data:|blob:|https?:|\/)/.test(p)) return p;
+  if (p.startsWith("../")) return p;
+  return "../../" + p.split("/").map(encodeURIComponent).join("/");
+}
+function photosOf(i) {
+  if (Array.isArray(i.images) && i.images.length) return i.images.map((src, n) => ({ src: imgSrc(src), cap: (i.photos && i.photos[n]) || "" }));
+  const ups = state.uploads || [];
+  return (i.photos || []).map(id => {
+    const u = ups.find(x => x.id === id);
+    if (u) return { src: imgSrc(u.image), cap: id };
+    if (/\.(jpe?g|png|webp|gif)$/i.test(id) || /^data:/.test(id)) return { src: imgSrc(id), cap: "" };
+    return null;
+  }).filter(Boolean);
+}
+const bookingOf = ref => (state.bookings || []).find(b => b.ref === ref);
+function ruleLink(id) {
+  const c = CLAUSES[id];
+  if (!c) return `<span class="rule">${esc(id)}</span>`;
+  return `<a class="rule" href="resources/${encodeURI(c.page)}#${encodeURIComponent(id)}" target="_blank" rel="noopener" title="${esc(c.resource + ": " + c.text)}">${esc(id)}</a>`;
+}
+
+function rowsFor(i) {
+  const p = personOf(i), cat = catOf(i);
+  let request = "", address = i.address || "", pref = "", why = "", told = "", rec = "", rules = i.rules || [];
+  if (i.kind === "photos") {
+    request = (i.note || "") + (i.booking_ref ? ` (with visit ${i.booking_ref})` : "");
+    why = "Photos sent";
+    const b = i.booking_ref && bookingOf(i.booking_ref);
+    rec = b ? `Look at the photos before visit ${b.ref} on ${H.dateText(b.date)}, ${b.window}.` : "Look at the photos, then call or WhatsApp the customer.";
+    if (!rules.length) rules = ["P13", "P14"];
+  } else if (i.kind === "new_visit") {
+    request = [i.needs, `Site visit ${H.dateText(i.date)}, ${i.window}, ref ${i.ref}`, i.access ? `Access: ${i.access}` : ""].filter(Boolean).join(". ") + ".";
+    why = "Visit booked by the assistant";
+    told = `Your site visit is confirmed for ${H.dateText(i.date)}, ${i.window}, at ${i.address}. Your booking reference is ${i.ref}.`;
+    rec = "No action needed; the visit is in your calendar.";
+    if (!rules.length) rules = ["P9", "P12", "W6", "W11"];
+  } else {
+    request = i.what_was_asked || "";
+    pref = i.preferred_time || "";
+    why = i.reason_label || catLabel(cat);
+    told = i.told_customer || "";
+    rec = i.recommended_next_step || "";
+  }
+  return { p, request, address, pref, why, told, rec, rules, photos: photosOf(i) };
+}
+
+function cardHtml(i) {
+  const r = rowsFor(i), closed = i.status !== "open";
+  const row = (k, v, cls) => v ? `<div class="kv ${cls || ""}"><span class="k">${k}</span>${v}</div>` : "";
+  const tel = phoneDigits(r.p.phone);
+  const ref = i.kind === "new_visit" ? `${i.id} · ${i.ref}` : i.id;
+  let photoHtml = "";
+  if (r.photos.length) photoHtml = `<div class="thumbs">${r.photos.map((ph, n) => `<button data-photo="${n}" data-item="${esc(i.id)}" aria-label="Enlarge photo ${n + 1}"><img src="${esc(ph.src)}" alt="Photo ${n + 1} from ${esc(r.p.name)}" loading="lazy"></button>`).join("")}</div>`;
+  return `<div class="card" id="card-${esc(i.id)}">` +
+    `<div class="ch"><span>${esc(ref)} · ${esc(catLabel(catOf(i)))}</span><small>${esc(timeOf(i.received))}${i.received ? " · " + esc(ago(i.received)) : ""}</small></div>` +
+    row("Customer", r.p.name || r.p.phone ? esc([r.p.name, r.p.phone].filter(Boolean).join(" · ")) : "") +
+    row("Customer’s words", i.customer_words ? `<span class="q">“${esc(i.customer_words)}”</span>` : "") +
+    row("Request", esc(r.request)) +
+    row("Address", esc(r.address)) +
+    row("Preferred day or time", esc(r.pref)) +
+    row("Why it came to you", esc(r.why)) +
+    row("Rules", r.rules.map(ruleLink).join("")) +
+    row("Photos", photoHtml) +
+    row("Told the customer", esc(r.told)) +
+    row("Recommended action", esc(r.rec), "rec") +
+    (closed ? row("Closed", esc(`${i.closed_at ? timeOf(i.closed_at) + ", " : ""}${i.kind === "new_visit" ? "marked seen" : "marked done"}`)) : "") +
+    `<div class="btns">` +
+      (tel ? `<a class="btn alt" href="tel:+${tel}">Call</a><a class="btn alt" href="https://wa.me/${tel}" target="_blank" rel="noopener">WhatsApp</a>` : "") +
+      (closed ? "" : `<button class="btn done" data-done="${esc(i.id)}">${i.kind === "new_visit" ? "Seen" : "Done"}</button>`) +
+    `</div></div>`;
+}
+
+function renderInbox() {
+  const open = state.inbox.filter(i => i.status === "open");
+  const closedItems = state.inbox.filter(i => i.status !== "open");
+  const counts = {};
+  open.forEach(i => { const c = catOf(i); counts[c] = (counts[c] || 0) + 1; });
+  const order = c => CAT_ORDER.indexOf(c) < 0 ? 99 : CAT_ORDER.indexOf(c);
+  const cats = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || order(a) - order(b));
+  if (!ui.closed && (!ui.cat || !counts[ui.cat])) { ui.cat = cats[0] || null; ui.caseId = null; }
+  if (!ui.closed && !ui.cat && closedItems.length === 0) ui.closed = false;
+
+  let html = `<div class="m sum">${open.length ? `${open.length} waiting · categories by number of cases · oldest first` : "Nothing waiting"}</div>`;
+  html += `<div class="chips">` + cats.map(c => `<button class="chip${!ui.closed && c === ui.cat ? " on" : ""}" data-cat="${esc(c)}">${esc(catLabel(c))}<span class="n" id="n-${esc(c)}">${counts[c]}</span></button>`).join("") +
+    (closedItems.length ? `<button class="chip closed${ui.closed ? " on" : ""}" data-closed="1">Closed<span class="n">${closedItems.length}</span></button>` : "") + `</div>`;
+
+  let list;
+  if (ui.closed) list = closedItems.slice().sort((a, b) => String(b.closed_at || "").localeCompare(String(a.closed_at || "")) || String(b.received).localeCompare(String(a.received)));
+  else list = open.filter(i => catOf(i) === ui.cat).sort((a, b) => String(a.received || "").localeCompare(String(b.received || "")));
+  if (!list.some(i => i.id === ui.caseId)) ui.caseId = list.length ? list[0].id : null;
+
+  if (!list.length) {
+    html += `<div class="empty">${closedItems.length ? "All caught up. Done items are under Closed." : "All caught up. New enquiries passed to you appear here."}</div>`;
+  } else {
+    html += `<div class="list">` + list.map(i => {
+      const p = personOf(i);
+      return `<button data-case="${esc(i.id)}" class="${i.id === ui.caseId ? "on" : ""}"><span><b>${esc(i.kind === "new_visit" ? i.ref : i.id)}</b> · ${esc(p.name || p.phone)}${ui.closed ? ` · ${esc(catLabel(catOf(i)))}` : ""}</span><small>${esc(ui.closed ? "closed " + timeOf(i.closed_at) : ago(i.received))}</small></button>`;
+    }).join("") + `</div>`;
+    const it = list.find(i => i.id === ui.caseId);
+    if (it) html += cardHtml(it);
+  }
+  document.getElementById("p-inbox").innerHTML = html;
+  const badge = document.getElementById("badge");
+  badge.textContent = open.length ? String(open.length) : "";
+  if (lastOpen !== null && open.length > lastOpen) { badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump"); }
+  lastOpen = open.length;
+  if (flashId && ui.caseId === flashId) {
+    const card = document.getElementById("card-" + flashId);
+    const chip = document.getElementById("n-" + ui.cat);
+    if (card) { card.classList.add("flash"); setTimeout(() => card.classList.remove("flash"), 1600); card.scrollIntoView({ block: "nearest" }); }
+    if (chip) { chip.classList.add("bump"); }
+    flashId = null;
+  }
+}
+
+// ---------- Today ----------
+function slotText(date, slot, cell) {
+  if (!cell) return { cls: "blk", text: "No slot", fixed: true };
+  if (cell.status === "open") return { cls: "open", text: "Open visit slot" };
+  if (cell.status === "booked") {
+    const b = bookingOf(cell.ref);
+    return { cls: "vis", text: `Visit ${cell.ref}${b ? " · " + b.name : ""}`, fixed: true, booking: b };
+  }
+  if (cell.reason === "Field work") return { cls: "fw", text: "Field work" };
+  return { cls: "blk", text: cell.reason === "Blocked by Pak Razif" ? "Blocked by you" : `Blocked: ${cell.reason || "by you"}` };
+}
+const inField = (day, slot) => (day.field || []).some(f => slot >= f.start && slot < f.end);
+function dayLines(day) {
+  const lines = [];
+  (day.field || []).forEach(f => lines.push({ t: f.start, html: `<span class="tag fw">${esc(f.work)}, ${esc(f.area)}, to ${esc(f.end)}</span>` }));
+  T.SLOTS.forEach(s => {
+    const cell = day.slots[s];
+    if (!cell) return;
+    if (cell.status === "blocked" && cell.reason === "Field work" && inField(day, s)) return;
+    const st = slotText(day.date, s, cell);
+    const extra = st.booking ? `, ${esc(st.booking.window)}` : "";
+    lines.push({ t: s, html: `<span class="tag ${st.cls}">${esc(st.text)}</span>${extra}` });
+  });
+  lines.push({ t: "12:00", html: `<span class="m">Midday rest, to 14:00</span>` });
+  return lines.sort((a, b) => a.t.localeCompare(b.t));
+}
+function renderToday() {
+  const day = state.days[TODAY];
+  let html = `<div class="sec">${esc(H.dateText(TODAY).replace(/ \d{4}$/, ""))}, now ${esc(NOW.slice(11, 16))}</div>`;
+  if (!day) html += `<div class="empty">No calendar for today.</div>`;
+  else if (day.closed) html += `<div class="empty">${esc(day.closed)}</div>`;
+  else {
+    html += `<div class="card">` + dayLines(day).map(l => `<div class="line"><span class="h">${esc(l.t)}</span><span>${l.html}</span></div>`).join("") + `</div>`;
+    const visits = (state.bookings || []).filter(b => b.date === TODAY && b.status !== "cancelled").sort((a, b) => a.slot.localeCompare(b.slot));
+    if (visits.length) {
+      html += `<div class="sec">Today's visits</div>`;
+      html += visits.map(b => {
+        const tel = phoneDigits(b.phone);
+        return `<div class="card"><div class="vcard"><div class="t">${esc(b.window)} · ${esc(b.ref)}</div><div>${esc(b.name)} · ${esc(b.phone)}</div>` +
+          `<div class="m">${esc([b.address, b.needs, b.access].filter(Boolean).join(" · "))}</div>` +
+          `<div class="btns">${tel ? `<a class="btn alt" href="tel:+${tel}">Call</a><a class="btn alt" href="https://wa.me/${tel}" target="_blank" rel="noopener">WhatsApp</a>` : ""}` +
+          `<a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.address + (b.postcode ? " " + b.postcode : ""))}" target="_blank" rel="noopener">Map</a></div></div></div>`;
+      }).join("");
+    }
+  }
+  // The next working day, so he can see tomorrow at a glance.
+  let next = H.addDays(TODAY, 1), guard = 0, nextLine = "";
+  if (state.days[next] && state.days[next].closed) { nextLine += `Tomorrow, ${esc(H.dateText(next))}: ${esc(state.days[next].closed)}. `; }
+  while (state.days[next] && state.days[next].closed && guard++ < 7) next = H.addDays(next, 1);
+  const nd = state.days[next];
+  if (nd) {
+    const bits = T.SLOTS.map(s => { const c = nd.slots[s]; return c ? `${s} ${c.status === "booked" ? "visit" : c.status === "open" ? "open" : c.reason === "Field work" ? "field work" : "blocked"}` : ""; }).filter(Boolean);
+    nextLine += `Next working day, ${esc(H.dateText(nd.date))}: ${esc(bits.join(", "))}.`;
+  }
+  if (nextLine) html += `<div class="sec">Coming up</div><div class="card"><div class="vcard">${nextLine} <a href="#" data-goto="${esc(next)}">Open in Calendar</a></div></div>`;
+  document.getElementById("p-today").innerHTML = html;
+}
+
+// ---------- Calendar ----------
+function monthsAvail() { return (state.months && state.months.length ? state.months : Object.keys(state.days).map(d => d.slice(0, 7)).filter((v, i, a) => a.indexOf(v) === i)).slice().sort(); }
+function dotsFor(day) {
+  return T.SLOTS.map(s => {
+    const c = day.slots[s];
+    if (!c) return "";
+    const k = c.status === "open" ? "d-open" : c.status === "booked" ? "d-booked" : c.reason === "Field work" ? "d-field" : "d-blocked";
+    return `<i class="${k}"></i>`;
+  }).join("");
+}
+function renderCal() {
+  const months = monthsAvail();
+  if (!months.includes(ui.month)) ui.month = months[0];
+  const [y, m] = ui.month.split("-").map(Number);
+  const idx = months.indexOf(ui.month);
+  let html = `<div class="mhead"><button data-mon="-1" ${idx <= 0 ? "disabled" : ""} aria-label="Previous month">&larr;</button><b>${MONTHS[m - 1]} ${y}</b><button data-mon="1" ${idx >= months.length - 1 ? "disabled" : ""} aria-label="Next month">&rarr;</button></div>`;
+  html += `<div class="grid">` + ["M", "T", "W", "T", "F", "S", "S"].map(d => `<div class="wd">${d}</div>`).join("");
+  const first = new Date(Date.UTC(y, m - 1, 1)).getUTCDay();          // 0 = Sunday
+  const pad = (first + 6) % 7, last = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  for (let p = 0; p < pad; p++) html += `<div class="pad"></div>`;
+  for (let d = 1; d <= last; d++) {
+    const iso = `${ui.month}-${String(d).padStart(2, "0")}`, day = state.days[iso];
+    const cls = [day && day.closed ? "sun" : "", iso < TODAY ? "past" : "", iso === TODAY ? "today" : "", iso === ui.day ? "sel" : ""].filter(Boolean).join(" ");
+    html += `<button class="${cls}" data-day="${iso}">${d}${day ? (day.closed ? `<span class="cl">closed</span>` : `<div class="dots">${dotsFor(day)}</div>`) : ""}</button>`;
+  }
+  html += `</div><div class="legend"><span><i class="d-open"></i>Open</span><span><i class="d-booked"></i>Visit</span><span><i class="d-field"></i>Field work</span><span><i class="d-blocked"></i>Blocked</span><span><i style="border:1.5px solid var(--warn)"></i>Today</span></div>`;
+
+  const day = state.days[ui.day];
+  if (day && ui.day.slice(0, 7) === ui.month) {
+    html += `<div class="sec">${esc(H.dateText(ui.day))}${ui.day === TODAY ? " · today" : ""}</div>`;
+    if (day.closed) html += `<div class="empty">${esc(day.closed)}. No visits on Sundays.</div>`;
+    else {
+      html += `<div class="card">` + (day.field || []).map(f => `<div class="line"><span class="h">${esc(f.start)}</span><span><span class="tag fw">Field work to ${esc(f.end)}: ${esc(f.work)}, ${esc(f.area)}</span></span></div>`).join("") + `</div>`;
+      html += `<div class="card">` + T.SLOTS.map(s => {
+        const c = day.slots[s];
+        const st = slotText(ui.day, s, c);
+        const past = ui.day < TODAY;
+        const fixed = st.fixed || past;
+        const act = past ? "Passed" : st.cls === "open" ? "Tap to block" : st.cls === "blk" || st.cls === "fw" ? "Tap to open" : "Booked";
+        const extra = st.booking ? `, ${esc(st.booking.window)}` : "";
+        const fl = slotFlash(ui.day, s);
+        return `<button class="slot${fixed ? " fixed" : ""}${fl !== null ? " flash" : ""}"${fl > 0 ? ` style="animation-delay:-${fl}ms"` : ""} data-slot="${s}" id="slot-${s.replace(":", "")}"><span class="h">${s}</span><span class="s"><span class="tag ${st.cls}">${esc(st.text)}</span>${extra}</span><span class="act">${act}</span></button>`;
+      }).join("") + `</div>`;
+      html += `<div class="note" id="cal-note">${esc(ui.notes[ui.day] || "")}</div>`;
+      html += `<div class="m" style="margin:8px 2px 0">Tap an open slot to block it, or any blocked slot, field work included, to open it for bookings. Booked visits stay as they are.</div>`;
+    }
+  } else {
+    html += `<div class="m" style="margin:8px 2px 0">Tap a day, then a slot to block or open it.</div>`;
+  }
+  document.getElementById("p-cal").innerHTML = html;
+  if (scrollSlot && ui.tab === "cal" && scrollSlot.startsWith(ui.day + "|")) {
+    const rowId = "slot-" + scrollSlot.split("|")[1].replace(":", "");
+    scrollSlot = null;
+    // Scroll only the app's own pane, never the page that embeds this phone. The row is looked up
+    // inside the frame callback: a second reload in between replaces it with a fresh element.
+    requestAnimationFrame(() => {
+      const row = document.getElementById(rowId);
+      if (!row || ui.tab !== "cal") return;
+      const sc = document.getElementById("scroll"), a = sc.getBoundingClientRect(), b = row.getBoundingClientRect();
+      if (b.top < a.top || b.bottom > a.bottom) sc.scrollTop += b.top - a.top - Math.max(0, (a.height - b.height) / 2);
+    });
+  }
+}
+
+// Embedded demo: the phone shows its home screen while nothing waits for Pak Razif.
+function renderHome() {
+  const open = state.inbox.filter(i => i.status === "open").length;
+  // Back to the home screen when the last waiting item is cleared; an app he opened himself stays open.
+  if (!open && lastOpen) ui.appOpen = false;
+  document.getElementById("home").classList.toggle("on", EMBED && ((!open && !ui.appOpen) || ui.holdHome));
+}
+const REDUCED = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+let notifTimer = null;
+// A new item first arrives as a notification, then the app opens on its card.
+function notify(it, then) {
+  const p = personOf(it);
+  document.getElementById("notif-t").textContent = `${catLabel(catOf(it))}${p.name ? " \u00b7 " + p.name : ""}`;
+  document.getElementById("notif-b").textContent = it.kind === "new_visit" ? `Visit booked: ${H.dateText(it.date)}, ${it.window}` : (it.what_was_asked || it.note || "");
+  const n = document.getElementById("notif");
+  n.classList.add("on");
+  clearTimeout(notifTimer);
+  notifTimer = setTimeout(() => { n.classList.remove("on"); then(); }, REDUCED ? 0 : 1800);
+}
+
+function render() {
+  document.getElementById("today-text").textContent = H.dateText(TODAY);
+  renderHome();
+  renderInbox(); renderToday(); renderCal();
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === ui.tab));
+  document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.dataset.p === ui.tab));
+}
+
+// ---------- live updates ----------
+function reload(first) {
+  const before = state && state.days[ui.day] ? clone(state.days[ui.day].slots || {}) : null;
+  state = loadState(first);
+  // A slot that changed on the day the calendar shows flashes, so the change is seen.
+  const after = state.days[ui.day];
+  if (before && after) T.SLOTS.forEach(s => { if (cellSig(before[s]) !== cellSig(after.slots[s])) flashSlot(ui.day, s, ui.tab === "cal"); });
+  const now = state.inbox.map(sig);
+  if (known) {
+    const fresh = state.inbox.filter(i => i.status === "open" && !known.has(sig(i)));
+    if (fresh.length) {
+      const it = fresh[fresh.length - 1];
+      const show = () => {
+        ui.holdHome = false; ui.appOpen = true; ui.tab = "inbox"; ui.closed = false; ui.cat = catOf(it); ui.caseId = it.id; flashId = it.id;
+        document.getElementById("scroll").scrollTop = 0;
+        render();
+      };
+      known = new Set(now);
+      if (EMBED) {
+        // Keep the screen as it was (home screen or app) while the notification drops in.
+        // Keep the home screen (if it was showing) while the notification drops in.
+        ui.holdHome = document.getElementById("home").classList.contains("on");
+        render();
+        notify(it, show);
+      } else show();
+      return;
+    }
+  }
+  known = new Set(now);
+  render();
+}
+if (channel) channel.onmessage = e => { const d = e.data || {}; if (d.type === "state" && (!d.store || d.store === KEY)) reload(false); };
+window.addEventListener("storage", e => { if (e.key === KEY || e.key === null) reload(false); });
+// Open the app on the Calendar at one day and highlight one slot (the demo replays his own taps).
+function showSlot(date, slot) {
+  ui.holdHome = false; ui.appOpen = true; ui.tab = "cal";
+  if (state.days[date]) { ui.month = date.slice(0, 7); ui.day = date; }
+  flashSlot(date, slot, true);
+  document.getElementById("scroll").scrollTop = 0;
+  render();
+}
+window.GardenOwner = { reload: () => reload(false), showSlot };
+document.getElementById("home-open").addEventListener("click", () => { ui.appOpen = true; render(); });
+
+// ---------- actions and clicks ----------
+let lbList = [], lbIdx = 0;
+function openLb(list, n) {
+  lbList = list; lbIdx = n;
+  const ph = list[n];
+  document.getElementById("lb-img").src = ph.src;
+  document.getElementById("lb-cap").textContent = `${ph.cap ? ph.cap + " · " : ""}${n + 1} of ${list.length}`;
+  document.getElementById("lb-nav").style.display = list.length > 1 ? "" : "none";
+  document.getElementById("lb").classList.add("on");
+}
+document.getElementById("lb").addEventListener("click", e => {
+  const a = e.target.closest("[data-lb]");
+  if (a && a.dataset.lb === "prev") { openLb(lbList, (lbIdx + lbList.length - 1) % lbList.length); return; }
+  if (a && a.dataset.lb === "next") { openLb(lbList, (lbIdx + 1) % lbList.length); return; }
+  if (e.target.id !== "lb-img") document.getElementById("lb").classList.remove("on");
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") document.getElementById("lb").classList.remove("on"); });
+
+document.querySelector(".app").addEventListener("click", e => {
+  const t = e.target;
+  const tab = t.closest("[data-t]");
+  if (tab) { ui.tab = tab.dataset.t; render(); document.getElementById("scroll").scrollTop = 0; return; }
+  const cat = t.closest("[data-cat]");
+  if (cat) { ui.closed = false; ui.cat = cat.dataset.cat; ui.caseId = null; render(); return; }
+  if (t.closest("[data-closed]")) { ui.closed = true; ui.caseId = null; render(); return; }
+  const cs = t.closest("[data-case]");
+  if (cs) { ui.caseId = cs.dataset.case; render(); const c = document.getElementById("card-" + ui.caseId); if (c) c.scrollIntoView({ block: "nearest", behavior: "smooth" }); return; }
+  const ph = t.closest("[data-photo]");
+  if (ph) { const it = state.inbox.find(i => i.id === ph.dataset.item); if (it) openLb(photosOf(it), Number(ph.dataset.photo)); return; }
+  const done = t.closest("[data-done]");
+  if (done) {
+    state = loadState(false);
+    const r = T.OWNER.done(state, done.dataset.done, NOW);
+    if (r.ok) { saveAndTell(state); known = new Set(state.inbox.map(sig)); ui.caseId = null; }
+    render(); return;
+  }
+  const mon = t.closest("[data-mon]");
+  if (mon) {
+    const months = monthsAvail(), i = months.indexOf(ui.month) + Number(mon.dataset.mon);
+    if (months[i]) { ui.month = months[i]; ui.day = ui.month === TODAY.slice(0, 7) ? TODAY : `${ui.month}-01`; if (state.days[ui.day] && state.days[ui.day].closed) ui.day = H.addDays(ui.day, 1); }
+    render(); return;
+  }
+  const day = t.closest("[data-day]");
+  if (day) { ui.day = day.dataset.day; render(); return; }
+  const go = t.closest("[data-goto]");
+  if (go) { e.preventDefault(); ui.day = go.dataset.goto; ui.month = ui.day.slice(0, 7); ui.tab = "cal"; render(); return; }
+  const slot = t.closest("[data-slot]");
+  if (slot) {
+    const s = slot.dataset.slot;
+    if (ui.day < TODAY) { ui.notes[ui.day] = "This day has passed."; render(); return; }
+    state = loadState(false);
+    const r = T.OWNER.toggleSlot(state, ui.day, s);
+    if (r.ok) {
+      saveAndTell(state);
+      ui.notes[ui.day] = r.status === "blocked" ? `${s} blocked. The assistant will not offer it.` : `${s} open again. The assistant can offer it.`;
+    } else {
+      ui.notes[ui.day] = `${s}: ${r.error.message}`;
+    }
+    render(); return;
+  }
+});
+
+reload(true);
+</script>
+</body>
+</html>

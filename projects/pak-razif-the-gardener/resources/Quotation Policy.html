@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quotation Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+.lead{background:var(--card);border-left:3px solid var(--accent);padding:8px 14px;margin:6px 0}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../pak-razif-the-gardener.html" style="color:inherit;text-decoration:none">Pak Razif The Gardener</a></div><h1>Quotation Policy</h1><nav id="toc"></nav></div>
+<p class="lead">How a price is reached. The assistant quotes nothing; Pak Razif quotes after seeing the garden.</p>
+<h2>1. Who quotes</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="Q1"><td>Q1</td><td>The job scope, the price, any transport charge and any applicable tax are confirmed by Pak Razif after the site visit.</td><td>Prompt</td></tr>
+<tr id="Q2"><td>Q2</td><td>The assistant gives no price, estimate, range, transport charge, tax or discount, and does not estimate garden size from a description or a photo.</td><td>Code (no price tool or price data)</td></tr>
+<tr id="Q3"><td>Q3</td><td>A request for a price gets the approved reply (<a href="Operation Policy.html#R1">R1</a>), an offer to book a site visit, and is forwarded to Pak Razif (<a href="Operation Policy.html#P23">P23</a>).</td><td>Code (handover reason)</td></tr>
+</table>
+<h2>2. After the visit</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="Q4"><td>Q4</td><td>Pak Razif sends the scope and quotation to the customer directly. The customer decides whether to go ahead.</td><td>Prompt</td></tr>
+<tr id="Q5"><td>Q5</td><td>If the customer accepts, Pak Razif and the customer agree the work date directly. The assistant never commits a work date (<a href="Operation Policy.html#P29">P29</a>).</td><td>Code (no job booking tool)</td></tr>
+<tr id="Q6"><td>Q6</td><td>Payment terms are set by Pak Razif with the quotation. The assistant forwards payment questions (<a href="Operation Policy.html#P21">P21</a>).</td><td>Code (no payment tool)</td></tr>
+</table>
+<footer>&copy; 2026 Lee Yih Ven &middot; Quotation Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>
