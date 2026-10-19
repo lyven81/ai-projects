@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 4**
+**Total published AI projects: 5**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 5 | 2026-10-19 | Kereta Sewa Jalan-jalan Car Rental Agent | [page](https://lyven81.github.io/ai-projects/car-rental-booking-agent.html) |
 | 4 | 2026-10-19 | Chinese Translation Quality Check | [page](https://lyven81.github.io/ai-projects/chinese-translation-quality-check.html) |
 | 3 | 2026-10-17 | Pak Razif The Gardener | [page](https://lyven81.github.io/ai-projects/pak-razif-the-gardener.html) |
 | 2 | 2026-10-16 | Badminton Court Booking Agent | [page](https://lyven81.github.io/ai-projects/badminton-booking-agent.html) |
@@ -27,6 +28,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-19
 
 ### Customer service
+
+#### Kereta Sewa Jalan-jalan Car Rental Agent
+- **What it does:** A car rental agent that prices, books and records deposits from the written policy, with confirmations, delivery charges and refunds kept for staff.
+- **How it's built:** Claude with an MCP server (Node.js) offering the Rental Policy (48 numbered clauses), the car inventory and nine tools; hours, the 2-hour minimum, pricing, the identity check, receipts and cancellation refunds are enforced in the tools' code; confirmations, delivery charges and 25 kinds of handover wait for staff on their phone.
+- **Problem solved:** A car rental company at KLIA answers the same price and policy questions all day, in three languages, and checks every payment by hand. The assistant quotes from the policy, prepares bookings and records receipts, and passes the rest to staff with a summary they can act on.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/car-rental-booking-agent.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/assistant.html)
+- **Rebuilt:** 2026-10-19
 
 #### Pak Razif The Gardener
 - **What it does:** A gardener's own assistant that answers enquiries and books free site visits while he works, with prices and decisions kept for him.

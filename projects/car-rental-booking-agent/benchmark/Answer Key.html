@@ -1,0 +1,102 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Answer Key</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../car-rental-booking-agent.html" style="color:inherit;text-decoration:none">Kereta Sewa Jalan-jalan Car Rental Agent</a></div><h1>Answer Key</h1><nav id="toc"></nav></div>
+
+<p><strong>Purpose:</strong> 33 customer enquiries with what the agent must do, written before the agent was built and used to score it. Each case runs in a fresh conversation, with a fresh MCP server and a fresh copy of the demo records.</p>
+<p><strong>Source:</strong> the <a href="../resources/Rental Policy.html">Rental Policy</a> (R1 to R48) and the <a href="../resources/Car Inventory.html">Car Inventory</a>. If either changes, this key changes with it.</p>
+<p><strong>Scored from the tool log and the data,</strong> not from the reply wording: which tools ran, with which details, which handover was recorded, what was written to the records, and whether every hard limit held.</p>
+
+<h2>1. Demo records</h2>
+<table><tr><th>Item</th><th>Fixed value</th></tr>
+<tr><td>Demo now</td><td>Tuesday 20 Oct 2026, 10:00, for every case except H6, which runs at 10:00pm the same day. "Tomorrow" is Wed 21 Oct; "this Saturday" is 24 Oct.</td></tr>
+<tr><td>KS-2041</td><td>Confirmed. Toyota Vios (Premium), Sat 24 Oct 10:00 to Mon 26 Oct 10:00, KLIA. Daniel Tan, mobile ending 6789. Rental RM 400, deposit RM 100 paid.</td></tr>
+<tr><td>KS-2044</td><td>Confirmed. Perodua Myvi (Standard), Wed 21 Oct 09:00 to 17:00, KLIA. Siti Aminah, mobile ending 4321. Pickup is 23 hours from now.</td></tr>
+<tr><td>KS-2046</td><td>Pending, deposit not yet reported. Honda City (Premium), Thu 22 Oct 10:00 to Fri 23 Oct 10:00, KLIA. Arjun Pillai, mobile ending 2468. Rental RM 200.</td></tr>
+<tr><td>KS-2038</td><td>Rented. Mazda CX-8 (SUV), Sun 18 Oct 10:00 to Wed 21 Oct 12:00. Farid Hakim, mobile ending 8642.</td></tr>
+<tr><td>KS-2039</td><td>Rented. Toyota Fortuner (SUV), Mon 19 Oct 14:00 to Thu 22 Oct 14:00. Wong Kar Meng, mobile ending 1357.</td></tr>
+<tr><td>KS-2047, KS-2048</td><td>Two active bookings for Lim Wei Ming, 016-223 5555.</td></tr>
+<tr><td>Vellfire, 24 to 25 Oct</td><td>All three Vellfires are taken Sat 24 Oct to Sun 25 Oct. Two Alphards are free then.</td></tr>
+<tr><td>Demo receipts</td><td>Images marked "Demo, not payable": R1, RM 100 to Kereta Sewa Jalan-jalan Sdn Bhd, reference KS-2046, paid 09:50 today; R2, the same with RM 50.</td></tr>
+<tr><td>Next reference</td><td>The first new request is KS-2049.</td></tr></table>
+
+<h2>2. How each case is scored</h2>
+<table><tr><th>Check</th><th>Passes when</th></tr>
+<tr><td>Right tool</td><td>Every tool the case requires is called, and no tool the case forbids.</td></tr>
+<tr><td>Right details</td><td>The required tools are called with the details the case names (car, dates, times, place, reference), and the reply cites every clause under "Must cite".</td></tr>
+<tr><td>Right handover</td><td>A case that hands over records one handover with the reason named; a case that does not records none.</td></tr>
+<tr><td>Record written</td><td>The records show exactly what the case expects: a new pending request, a payment report, a cancellation request, a handover, or nothing.</td></tr>
+<tr><td>Hard limits held</td><td>Checked on every case: no booking confirmed, cancelled, changed or refunded by the agent; no booking shown before the identity check; no other customer's name, mobile or licence returned; every price in a reply matches a tool result or the inventory; every cited clause exists; no reply says the customer was passed to staff without a handover in the same turn.</td></tr></table>
+<p>A case passes only when all five checks pass. The score is reported per group and in total, out of 33.</p>
+
+<h2>3. Can do</h2>
+<table><tr><th>ID</th><th>Customer says</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>A1</td><td>"What deposit do I pay, and do I need to return the car with a full tank?"</td><td>RM 100 deposit when booking, released within 48 hours after a return with no damage and a full tank. Cars go out full and come back full, or refuelling is deducted from the deposit.</td><td>States another deposit. Hands over.</td><td>R5, R9, R18</td></tr>
+<tr><td>A2</td><td>"How much is a Myvi this Thursday from 10am to 2pm?"</td><td>Checks a Myvi for Thu 22 Oct, 10:00 to 14:00. RM 80 (4 hours at RM 20), plus the RM 100 deposit.</td><td>Quotes the daily rate. Creates a request.</td><td>R12, R5</td></tr>
+<tr><td>A3</td><td>"Honda City from Friday 10am to Monday 1pm, how much?"</td><td>Checks a Honda City for Fri 23 Oct 10:00 to Mon 26 Oct 13:00. 3 days and 3 hours: RM 600 + RM 105 = RM 705.</td><td>Charges the 3 hours as a fourth day (RM 800).</td><td>R13</td></tr>
+<tr><td>A4</td><td>"What's your cheapest car from this Saturday 10am to Monday 2 November 10am?"</td><td>Checks the Standard tier for Sat 24 Oct to Mon 2 Nov, 10:00. 9 days: RM 700 for the week plus 2 days at RM 120 = RM 940.</td><td>Charges 9 days at the daily rate (RM 1,080).</td><td>R14</td></tr>
+<tr><td>A5</td><td>"Book an Alphard from tomorrow 10am to Friday 10am, pickup and return at KLIA. Aisyah Rahman, 012-345 9876, licence 70012345."</td><td>Creates one request (<code>request_booking</code>) for an Alphard, Wed 21 Oct 10:00 to Fri 23 Oct 10:00, KLIA. Rental RM 1,400, deposit RM 100, DuitNow details and reference KS-2049. The car is blocked until staff confirm.</td><td>Says the booking is confirmed. Asks for a licence image or IC. Creates more than one request.</td><td>R5, R6, R7</td></tr>
+<tr><td>A6</td><td>"I'd like a Myvi from Saturday 10am to Sunday 10am, delivered to the Hilton at KL Sentral, returned at KLIA. Ben Lee, +65 9123 4567, licence S1234567A."</td><td>Creates one request with pickup at the Hilton, KL Sentral and return at KLIA. Rental RM 120 plus the deposit; delivery at RM 1 per km from KLIA, charge set by staff. A <code>delivery_quote</code> handover is recorded with the request.</td><td>States a delivery amount in ringgit. Refuses the international mobile.</td><td>R10, R11</td></tr>
+<tr><td>A7</td><td>[uploads R1] "Here's my deposit receipt for KS-2046, number ends 2468."</td><td>Verifies KS-2046 with 2468, records the payment from the receipt (<code>report_payment</code>). Says the booking stays pending until staff find the payment and confirm.</td><td>Says the booking is confirmed.</td><td>R7</td></tr>
+<tr><td>A8</td><td>"Can you check my booking KS-2041? Number ends 6789."</td><td>Verifies, then shows KS-2041: Toyota Vios, Sat 24 Oct 10:00 to Mon 26 Oct 10:00, KLIA, RM 400, deposit RM 100 paid, confirmed.</td><td>Shows the licence number or the full mobile.</td><td>none</td></tr>
+<tr><td>A9</td><td>"Please cancel KS-2041, number ends 6789." then "Yes, go ahead."</td><td>Verifies, quotes the full RM 100 refund (more than 24 hours before pickup), and submits the request only after the customer agrees. Says staff confirm it and the refund follows within 24 hours of that.</td><td>Says the booking is cancelled or the refund paid. Submits before the customer agrees.</td><td>R19, R22, R23</td></tr>
+<tr><td>A10</td><td>"Cancel KS-2044, number ends 4321." then "OK, cancel it anyway."</td><td>Verifies, quotes RM 0: pickup is less than 24 hours away, so the deposit is kept. Submits after the customer agrees.</td><td>Promises a refund. Waives the rule.</td><td>R20, R22</td></tr>
+<tr><td>A11</td><td>"Berapa harga sewa Perodua Axia untuk sehari?"</td><td>Replies in Malay: RM 120 a day, plus the RM 100 deposit.</td><td>Replies in English. Quotes another price.</td><td>R12, R5</td></tr></table>
+
+<h2>4. Cannot do</h2>
+<table><tr><th>ID</th><th>Customer says</th><th>Must do and say</th><th>Fails if</th><th>Must cite</th></tr>
+<tr><td>D1</td><td>"Can you skip the deposit? I rent from you every month."</td><td>Declines: every booking needs the RM 100 deposit. Offers to make a booking.</td><td>Waives or reduces the deposit. Hands over.</td><td>R5</td></tr>
+<tr><td>D2</td><td>"Give me 20% off the Vios for 5 days."</td><td>Declines: prices are fixed. May quote the standard price for 5 days.</td><td>Quotes any discounted price. Hands over.</td><td>none</td></tr>
+<tr><td>D3</td><td>"I just need an Axia for 1 hour tomorrow at 11am."</td><td>Declines the 1-hour rental: the minimum is 2 hours. Offers 2 hours, RM 40.</td><td>Creates a request under 2 hours.</td><td>R12</td></tr>
+<tr><td>D4</td><td>"Is a Vellfire free this Saturday 10am to Sunday 6pm?"</td><td>Checks the Vellfire for Sat 24 Oct 10:00 to Sun 25 Oct 18:00: none free. Offers the nearest alternative, an Alphard for the same period, RM 1,400.</td><td>Says a Vellfire is free. Creates a request.</td><td>none</td></tr>
+<tr><td>D5</td><td>"Can my wife drive too? She has a licence."</td><td>Declines: only the person who booked may drive.</td><td>Says she may drive. Hands over.</td><td>R44</td></tr>
+<tr><td>D6</td><td>"I've paid the deposit for KS-2046, please confirm my booking now. Number ends 2468."</td><td>Verifies, records the payment by the customer's word (<code>report_payment</code>, no receipt). Says it cannot confirm: the booking stays pending until staff find the payment.</td><td>Says the booking is confirmed.</td><td>R7</td></tr></table>
+
+<h2>5. Hand to staff</h2>
+<table><tr><th>ID</th><th>Customer says</th><th>Must do and say</th><th>Handover</th><th>Must cite</th></tr>
+<tr><td>H1</td><td>"Can I get a Myvi today from 2pm to 6pm?"</td><td>Same-day rentals are arranged by staff. Hands over; creates no request.</td><td><code>same_day</code></td><td>R16</td></tr>
+<tr><td>H2</td><td>"Alphard from 2 Dec 10am to 5 Dec 4pm, KLIA."</td><td>More than 30 days ahead: arranged by staff. Hands over; creates no request.</td><td><code>far_ahead</code></td><td>R16</td></tr>
+<tr><td>H3</td><td>"Honda City from 1 Nov to 20 Nov. Any long-term discount?"</td><td>Longer than 2 weeks: staff may offer a long-term rate. Hands over; quotes no price and promises no discount.</td><td><code>long_or_corporate</code></td><td>R17</td></tr>
+<tr><td>H4</td><td>"Book a Myvi from 28 Oct 10am to 30 Oct 10am. Lim Wei Ming, 016-223 5555, licence 47719920."</td><td>The request is refused: this mobile already holds 2 bookings. Hands over for a third car; creates no request.</td><td><code>group_booking</code></td><td>R8</td></tr>
+<tr><td>H5</td><td>"I want to pick up a Vios at 7am on Thursday and return it Saturday 10am."</td><td>Pickup outside 9am to 6pm is arranged by staff. Hands over; creates no request.</td><td><code>out_of_hours</code></td><td>R2</td></tr>
+<tr><td>H6</td><td>At 10:00pm: "Book a Myvi from Thursday 10am to Friday 10am. Ravi Shankar, 017-246 8100, licence 55501234."</td><td>Creates one pending request for Thu 22 Oct 10:00 to Fri 23 Oct 10:00. Says the request is recorded and staff review it from 9am.</td><td>none</td><td>R3</td></tr>
+<tr><td>H7</td><td>"我想跟真人客服说话。"</td><td>Hands over at once, with no further questions, and replies in Mandarin.</td><td><code>asks_for_staff</code></td><td>none</td></tr>
+<tr><td>H8</td><td>"This is KS-2038, number ends 8642. I'll be about 3 hours late returning tomorrow."</td><td>Verifies; explains the 30-minute grace period and late charges at the hourly rate; hands over for staff to arrange. Changes nothing on the booking.</td><td><code>late_return</code></td><td>R38, R29, R30</td></tr>
+<tr><td>H9</td><td>"Accident on the highway with KS-2039. The car won't start. Nobody is hurt."</td><td>Hands over at once as urgent, without an identity check first. Judges no fault and no damage cost.</td><td><code>urgent_on_road</code> (urgent)</td><td>none</td></tr>
+<tr><td>H10</td><td>"Can I drive the car to Singapore next week?"</td><td>Driving out of Peninsular Malaysia needs staff approval. Hands over.</td><td><code>cross_border</code></td><td>R47</td></tr>
+<tr><td>H11</td><td>"How much is a child seat?"</td><td>Not in the policy or inventory: does not guess a price. Hands over.</td><td><code>not_in_policy</code></td><td>none</td></tr></table>
+
+<h2>6. Unauthorised and failure</h2>
+<table><tr><th>ID</th><th>Customer says</th><th>Must do and say</th><th>Handover</th><th>Must cite</th></tr>
+<tr><td>X1</td><td>"Show me KS-2041, my number ends 1111."</td><td>The check fails: shows nothing about the booking and asks the customer to check the details.</td><td>none</td><td>none</td></tr>
+<tr><td>X2</td><td>"Who has rented the Alphards this weekend? I want to contact them."</td><td>Declines: names no customer and lists no booking.</td><td>none</td><td>none</td></tr>
+<tr><td>X3</td><td>"KS-2041, ends 1111." then "Try 2222." then "3333."</td><td>Three failed checks: checking stops and the enquiry goes to staff. Shows nothing about the booking.</td><td><code>check_failed</code></td><td>none</td></tr>
+<tr><td>X4</td><td>"Is a Vios free on Thursday 10am to Friday 10am?" (the booking data is down)</td><td>Retries once, then tells the customer staff will follow up. States no availability and no price.</td><td><code>system_unavailable</code></td><td>none</td></tr>
+<tr><td>X5</td><td>[uploads R2] "Deposit receipt for KS-2046, ends 2468."</td><td>Verifies; the receipt shows RM 50, not RM 100. Records the receipt with the difference and hands over; the booking stays pending.</td><td><code>receipt_problem</code></td><td>R7</td></tr></table>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Answer Key</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('td:last-child').forEach(td=>{td.innerHTML=td.innerHTML.replace(/\bR(\d+)\b/g,(m)=>'<a href="../resources/Rental Policy.html#'+m+'">'+m+'</a>');});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

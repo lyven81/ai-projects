@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kereta Sewa Jalan-jalan Car Rental Agent</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:none;stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12.5px;font-family:Consolas,monospace}
+.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Customer Experience",
+    "problemType": "customer service",
+    "problem": "A car rental company at KLIA takes bookings, deposits and cancellations by chat, and staff check every payment by hand. Customers ask the same price and policy questions all day, in three languages. Confirmations, refunds and delivery charges must stay with staff.",
+    "built": "A Claude agent answers from a 48-clause Rental Policy and the car inventory, and cites the clause behind each answer. Nine MCP tools hold the rules in code: hours, the 2-hour minimum, pricing, the identity check, receipts and cancellation refunds. Staff confirm bookings, set delivery charges and act on 25 kinds of handover from their phone.",
+    "evidence": "Tested on 33 scenarios written before the build: bookings, refusals, handovers, other customers' bookings and a system failure. It passed all 33 with the first tool right in every case, and each conversation can be replayed with the staff phone beside it. Before real users it still needs a security review, a monitoring owner and a rollback plan."
+  }
+}</script>
+<div class="wrap">
+<div class="top"><h1>Kereta Sewa Jalan-jalan Car Rental Agent</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/assistant.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/car-rental-booking-agent" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<img class="cover" src="images/car-rental-booking-agent/cover.jpeg" alt="Kereta Sewa Jalan-jalan Car Rental Agent cover">
+<p>Kereta Sewa Jalan-jalan rents 56 cars at KLIA. Customers message about prices, free cars, deposits and cancellations, in English, Malay or Mandarin, and staff check every payment by hand. Confirmations, refunds and delivery charges are for staff to decide.</p>
+<p>I built an agent that prices and requests rentals from the written policy, records deposit payments, and quotes and requests cancellations. Whatever needs a person, from a same-day rental to an accident on the road, reaches the staff phone as a summary they can act on. Each staff click sends a fixed message back into the customer's chat.</p>
+<p>The rules sit in the tool code, and staff keep every decision about money. The agent was tested on 33 scenarios written before the build. Try the <a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/assistant.html" target="_blank" rel="noopener">two-phone demo</a> and the <a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/demo.html" target="_blank" rel="noopener">staff phone</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Problem</th><td>A car rental company at KLIA takes bookings, deposits and cancellations by chat, and staff check every payment by hand. Customers ask the same price and policy questions all day, in three languages. Confirmations, refunds and delivery charges must stay with staff.</td></tr><tr><th>Built</th><td>A Claude agent answers from a 48-clause Rental Policy and the car inventory, and cites the clause behind each answer. Nine MCP tools hold the rules in code: hours, the 2-hour minimum, pricing, the identity check, receipts and cancellation refunds. Staff confirm bookings, set delivery charges and act on 25 kinds of handover from their phone.</td></tr><tr><th>Evidence</th><td>Tested on 33 scenarios written before the build: bookings, refusals, handovers, other customers' bookings and a system failure. It passed all 33 with the first tool right in every case, and each conversation can be replayed with the staff phone beside it. Before real users it still needs a security review, a monitoring owner and a rollback plan.</td></tr></table>
+<h2>How It Works</h2>
+<svg viewBox="0 0 860 520" role="img" aria-label="How the agent works with the three resources, the nine MCP tools and staff" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="170" width="135" height="84" rx="10" class="bx person"/><text x="36" y="200" class="h">Customer</text><text x="36" y="222" class="t">Asks, books,</text><text x="36" y="240" class="t">sends receipts</text>
+<rect x="195" y="142" width="190" height="140" rx="10" class="bx ai"/><text x="211" y="170" class="h">Claude agent</text><text x="211" y="194" class="t">Reads the resources</text><text x="211" y="212" class="t">Asks the tools</text><text x="211" y="230" class="t">Requests or hands over</text><text x="211" y="248" class="t">Reply checked by code</text>
+<rect x="425" y="18" width="245" height="444" rx="10" class="bx mcp"/><text x="441" y="42" class="h">MCP server</text>
+<rect x="440" y="56" width="215" height="100" rx="10" class="bx inner"/><text x="454" y="80" class="h2">Resources (read)</text><text x="454" y="102" class="t">Rental Policy</text><text x="454" y="120" class="t">Car Inventory</text><text x="454" y="138" class="t">Fleet schedule</text>
+<rect x="440" y="170" width="215" height="282" rx="10" class="bx inner"/><text x="454" y="194" class="h2">Tools (act)</text><text x="454" y="216" class="mono">check_availability</text><text x="454" y="239" class="mono">request_booking</text><text x="454" y="262" class="mono">verify_booking</text><text x="454" y="285" class="mono">get_booking</text><text x="454" y="308" class="mono">report_payment</text><text x="454" y="331" class="mono">quote_cancellation</text><text x="454" y="354" class="mono">request_cancellation</text><text x="454" y="377" class="mono">hand_to_staff</text><text x="454" y="400" class="mono">reply_to_customer</text><text x="454" y="440" class="note">Rules checked in code</text>
+<rect x="710" y="200" width="130" height="102" rx="10" class="bx data"/><text x="724" y="226" class="h">Records</text><text x="724" y="248" class="t">Requests,</text><text x="724" y="266" class="t">payments and</text><text x="724" y="284" class="t">handovers</text>
+<rect x="710" y="332" width="130" height="110" rx="10" class="bx person"/><text x="724" y="358" class="h">Staff phone</text><text x="724" y="380" class="t">Confirm, reject</text><text x="724" y="398" class="t">Set the charge</text><text x="724" y="416" class="t">Act on handovers</text>
+<line x1="155" y1="202" x2="193" y2="202" class="ar" marker-end="url(#ah)"/><line x1="195" y1="224" x2="157" y2="224" class="ar" marker-end="url(#ah)"/>
+<path d="M385,188 L438,110" class="ar" marker-end="url(#ah)"/><text x="392" y="140" class="lab">reads</text>
+<path d="M385,246 L438,310" class="ar" marker-end="url(#ah)"/><text x="392" y="300" class="lab">calls</text>
+<line x1="655" y1="252" x2="708" y2="252" class="ar" marker-end="url(#ah)"/><text x="662" y="244" class="lab">saves</text>
+<line x1="775" y1="330" x2="775" y2="304" class="ar" marker-end="url(#ah)"/>
+<path d="M775,442 L775,490 L88,490 L88,256" class="ar dash" marker-end="url(#ah)"/><text x="200" y="510" class="lab">A staff click sends a fixed message into the customer's chat</text>
+</svg>
+<ol><li>The customer asks a question. Claude answers from the Rental Policy and the Car Inventory, and asks the tools for free cars and prices.</li><li>To act, Claude calls a tool. The tool checks the rules in code before it writes a request, a payment, a cancellation or a handover.</li><li>Staff see each item on their phone and decide: confirm, reject, set the delivery charge or confirm a cancellation. Each click sends a fixed message into the customer's chat.</li></ol>
+<h2>What It Does</h2>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Answers from the written policy</b></td><td>Answers hours, deposits, fuel, cancellation and driver rules from the 48 clauses, citing the clause. Replies in English, Malay or Mandarin.</td></tr><tr><td><b>Prices any rental</b></td><td>Quotes hourly, daily and weekly prices from the rates, with the caps worked out in code. Offers the nearest free car when the one asked for is taken.</td></tr><tr><td><b>Takes booking requests</b></td><td>Creates a pending request that blocks the car, with the RM 100 deposit, the DuitNow details and a reference. The booking is confirmed only when staff find the payment.</td></tr><tr><td><b>Records deposit payments</b></td><td>Reads an uploaded receipt and compares it with the booking, or records a payment by the customer's word. Staff see every difference before they confirm.</td></tr><tr><td><b>Protects other customers</b></td><td>Shows a booking only after the reference and mobile digits match. Never lists bookings or names who rented a car.</td></tr><tr><td><b>Quotes and requests cancellations</b></td><td>Works out the refund from the clock: RM 100 at 24 hours or more before pickup, the deposit kept inside 24 hours. Submits only after the customer agrees.</td></tr><tr><td><b>Hands over what needs staff</b></td><td>Same-day, far-ahead and long rentals, delivery charges, late returns, accidents and complaints go to staff in eight fields. Urgent items open first on the staff phone.</td></tr></table>
+<h2>Try It</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/assistant.html" target="_blank" rel="noopener">Two-phone demo</a></b></td><td>See the customer's phone and the staff phone side by side. Replay all 33 test conversations without a key and press the staff buttons, or chat live with your own API key; use Full screen for larger text.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/demo.html" target="_blank" rel="noopener">Staff phone</a></b></td><td>Open the inbox one card at a time, see today's pickups and returns, and the fleet by day.</td></tr>
+<tr><td><b>The resources</b></td><td><a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/resources/Rental%20Policy.html" target="_blank" rel="noopener">Rental Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/resources/Car%20Inventory.html" target="_blank" rel="noopener">Car Inventory</a>: every clause and rate the agent answers from.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat uses your own Anthropic API key, and usage is billed to your account. Use a key with a spending limit; it stays in your browser tab and goes only to Anthropic. A public service would send requests through a server instead.</p>
+<h2>Test Results</h2>
+<p>The agent was tested on 33 scenarios in four groups, written before the build in an <a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a>. Each one was scored from the tool log and the records on the right tool, the right details, the right handover and the record written, with the hard limits held. It passed all 33, and the first tool it called was right in 33 of 33.</p>
+<table><tr><th>Group</th><th>Example</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><b>Can do</b></td><td>Book an Alphard from tomorrow 10am to Friday 10am at KLIA.</td><td>Creates request KS-2049 at RM 1,400 with the RM 100 deposit, pending until staff confirm.</td><td><b>Tool:</b> <code>request_booking</code>. <b>Rule in code:</b> the car is checked free again at writing; the price comes from the rates; the reference comes from code.</td></tr><tr><td><b>Cannot do</b></td><td>I just need an Axia for 1 hour tomorrow at 11am.</td><td>Declines the 1 hour and offers 2 hours at RM 40.</td><td><b>Policy:</b> R12. <b>Rule in code:</b> <code>check_availability</code> enforces the 2-hour minimum (<code>too_short</code>); here Claude priced the 2-hour option, and the reply may state RM 40 only after a tool returned it.</td></tr><tr><td><b>Hand to staff</b></td><td>Can I get a Myvi today from 2pm to 6pm?</td><td>Passes it to staff as a same-day rental; creates no request.</td><td><b>Tool:</b> <code>hand_to_staff</code>, reason <code>same_day</code>, in eight fields (R16). <b>Rule in code:</b> if a booking is tried, <code>check_availability</code> and <code>request_booking</code> refuse it as <code>same_day</code>.</td></tr><tr><td><b>Hand to staff</b></td><td>Accident on the highway with KS-2039. The car won't start.</td><td>Hands over at once as urgent, with no identity check first.</td><td><b>Tool:</b> <code>hand_to_staff</code>, reason <code>urgent_on_road</code>. <b>Rule in code:</b> urgent is set from the reason, so it opens first on the staff phone.</td></tr><tr><td><b>Unauthorised and failure</b></td><td>KS-2041, ends 1111. Try 2222. 3333.</td><td>Shares nothing; after three failures the check locks and staff take over.</td><td><b>Tool:</b> <code>verify_booking</code>. <b>Rule in code:</b> the same error for any wrong part; <code>check_failed</code> is accepted only after the lock.</td></tr></table>
+<p>See for yourself: <a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/assistant.html" target="_blank" rel="noopener">replay every test conversation or try these questions live</a>. Before real users it still needs a security review, a monitoring owner and a rollback plan.</p>
+<h2>Next Step</h2>
+<p>Evaluating the work, or thinking about an agent for your own business?</p>
+<p class="cta"><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/assistant.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Sonnet 5.5 (benchmarked) · Anthropic Messages API · Tool use, tool_choice auto · Prompt caching</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Shared tools.js</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · localStorage and BroadcastChannel · Python 3 build scripts · GitHub Pages</td></tr></table>
+<ul><li><b>One rule file:</b> <code>tools.js</code> holds the nine tools, every rule, the pricing and the staff actions with their fixed messages. The server, the tests, the benchmark and both pages use it.</li><li><b>Resources:</b> <code>build_policies.py</code> writes the Rental Policy as a page, a Markdown copy for Claude and the clause list; <code>generate_seed.py</code> writes the fleet, the bookings, the inventory and the schedule.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers three resources and nine tools. The host passes the turn, the uploaded images, the customer's words and the chat contact.</li><li><b>Agent:</b> <code>agent.js</code> runs the tool loop on <code>tool_choice</code> "auto", because Sonnet 5.5 does not accept "any". A reply that skips <code>reply_to_customer</code> is sent back once; in the recorded run that happened 0 times.</li><li><b>Pages:</b> <code>assistant.html</code> shows the customer's phone and the staff phone side by side; <code>demo.html</code> is the staff phone page on its own.</li></ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How Claude works</h3>
+<p>Claude reads the Rental Policy and the Car Inventory at the start of each conversation, cached. It calls tools while it needs them and ends every turn through <code>reply_to_customer</code>, which checks the reply in code. Limits of 900 output tokens and 8 tool rounds stop a reply from looping.</p>
+<h3>Tool choice</h3>
+<p>The loop asks for <code>tool_choice</code> "any", and Sonnet 5.5 does not accept it, so the loop runs on "auto" for that model. Under "auto" Claude could answer in plain text and skip the reply checks, so a plain-text ending is sent back once to go through <code>reply_to_customer</code>. In the recorded run of 33 cases that happened 0 times.</p>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr>
+<tr><td><code>policy://rental-policy</code></td><td>R1 to R48: hours, booking and deposit, pickup and delivery, rental period and price, bookings passed to staff, fuel, cancellation and refund, late return, driver and vehicle use.</td></tr>
+<tr><td><code>inventory://cars</code></td><td>4 tiers, 10 models, 56 cars; hourly, daily and weekly rates and how a rental is priced.</td></tr>
+<tr><td><code>schedule://availability</code></td><td>Free or taken per car per day for two months, with no customer details; <code>check_availability</code> decides.</td></tr></table>
+<table><tr><th>Tool (act)</th><th>Checked in code</th></tr><tr><td><code>check_availability</code></td><td>Pickup and return 9am to 6pm (R1, R2); at least 2 hours (R12); at most 14 days (R17). Not today and not more than 30 days ahead (R16); maintenance and any overlap excluded (R6). Price from the rates with the caps (R12 to R14); never shows who booked.</td></tr><tr><td><code>request_booking</code></td><td>Every availability check again at the moment of writing. Name, mobile and licence number present (R4); at most 2 active bookings per mobile (R8). Reference from code; a place away from KLIA records a delivery_quote handover (R11).</td></tr><tr><td><code>verify_booking</code></td><td>Reference and last 4 digits both match, compared as text. Same error whether the booking is missing or the digits are wrong. Locked after 3 failures; then only check_failed.</td></tr><tr><td><code>get_booking</code></td><td>Only a booking verified or made in this conversation. One booking, never a list. No mobile or licence number returned.</td></tr><tr><td><code>report_payment</code></td><td>Pending bookings only; the booking stays pending (R7). A receipt needs an image uploaded in this message. Amount, reference and recipient compared in code; a difference requires a receipt_problem handover.</td></tr><tr><td><code>quote_cancellation</code></td><td>Verified first. 24 hours or more before pickup: deposit refunded; less: deposit kept (R19, R20). From the fixed clock.</td></tr><tr><td><code>request_cancellation</code></td><td>Only after a quote, in a later message. Cancellation requested, not cancelled (R22).</td></tr><tr><td><code>hand_to_staff</code></td><td>One of 25 fixed reasons; check_failed only after the lock. Eight fields for staff who cannot see the chat. Urgent set by code from the reason.</td></tr><tr><td><code>reply_to_customer</code></td><td>Clause IDs must exist. A handover claim needs a handover this turn (N23). Every price must come from a tool result or the inventory (N16).</td></tr></table>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Principle</th><th>How it is applied here</th></tr><tr><td><b>The written policy as the only source</b></td><td>The Rental Policy (48 numbered clauses) and the Car Inventory are MCP resources. Every answer cites its clauses, and code refuses a clause that does not exist.</td></tr><tr><td><b>Rules in code, not in the prompt</b></td><td>Hours, the 2-hour minimum, the 14-day limit, same day and 30 days ahead, overlaps and maintenance are checked in the tools. Availability is checked again at the moment a request is written.</td></tr><tr><td><b>Prices from code</b></td><td>Every price comes from the rates, with the caps set in clauses R12 to R14. A reply stating an amount that no tool result or inventory rate gave is refused.</td></tr><tr><td><b>Actions the agent cannot take</b></td><td>No tool confirms, cancels, changes, extends or refunds a booking, or lists bookings. Those are staff buttons, each sending a fixed message.</td></tr><tr><td><b>Identity before any detail</b></td><td>The booking reference and the last 4 mobile digits must match, compared as text. Three wrong tries lock the check and hand the enquiry to staff.</td></tr><tr><td><b>Payment recorded, never confirmed</b></td><td>A receipt is read and compared with the booking in code; a payment by the customer's word is recorded as such. Either way the booking stays pending until staff find the money.</td></tr><tr><td><b>Delivery charges set by staff</b></td><td>A pickup away from KLIA is recorded with a handover for the charge. The agent quotes RM 1 per km from KLIA and no figure; staff set it with a button.</td></tr><tr><td><b>Handovers staff can act on</b></td><td>25 fixed reasons in five groups, each in eight fields: reason, urgent, customer, booking, what was asked, what was told, clauses, time. Urgent ones open first on the staff phone.</td></tr><tr><td><b>A reply cannot claim what no tool did</b></td><td>A reply saying the customer was passed to staff is refused unless a handover was recorded in that turn. Unknown clauses and unsupported prices are refused the same way.</td></tr><tr><td><b>Tested before trusted</b></td><td>33 cases were written before the build and rerun after every change. Each is scored from the tool log and the records, and tool selection is measured beside the score.</td></tr></table>
+<h3>Prototype safeguards</h3>
+<p>The reference and mobile digits check shows how access is controlled in a prototype. A public service would limit repeated attempts, call the model through a server, and store contacts, licence numbers and receipts under a privacy review.</p>
+<h2>Code Walkthrough</h2><h3>Every Rental Passes the Same Rules</h3>
+<p>Same day, more than 30 days ahead and over 2 weeks are refused with the handover they need. Hours, the 2-hour minimum and the times are checked next. The order follows what a customer would want to hear first.</p>
+<pre><code>// tools.js: checkRental
+    // The rules every rental must pass, in the order a customer would want to hear them.
+    function checkRental(input) {
+      const today = nowIso().slice(0, 10);
+      const { pickup_date: pd, return_date: rd } = input;
+      if (!isIsoDate(pd) || !isIsoDate(rd)) return { error: fail("invalid_input", "pickup_date and return_date must be YYYY-MM-DD.", true) };
+      if (pd &lt; today) return { error: fail("invalid_input", `That pickup date has passed. Today is ${today}.`, true) };
+      if (rd &lt; pd) return { error: fail("invalid_input", "The return date is before the pickup date.", true) };
+      if (pd === today) return { error: fail("same_day", "A rental starting today is arranged by staff (R16). Do not book it. Hand to staff with reason same_day.", false, "same_day") };
+      if (daysBetween(today, pd) &gt; MAX_DAYS_AHEAD)
+        return { error: fail("too_far_ahead", `A rental starting more than 30 days from today (after ${addDays(today, MAX_DAYS_AHEAD)}) is arranged by staff (R16). Do not book it. Hand to staff with reason far_ahead.`, false, "far_ahead") };
+      if (daysBetween(pd, rd) &gt; 14)
+        return { error: fail("too_long", "A rental longer than 2 weeks is passed to staff, who may offer a long-term rate (R17). Quote no price and promise no discount. Hand to staff with reason long_or_corporate.", false, "long_or_corporate") };
+      if (input.pickup_time == null || input.pickup_time === "" || input.return_time == null || input.return_time === "")
+        return { error: fail("missing_times", "Ask the customer for the pickup and return times (9am to 6pm).", true) };
+      const pt = parseTime(input.pickup_time), rt = parseTime(input.return_time);
+      if (!pt || !rt) return { error: fail("invalid_input", "Times must be HH:MM in 24-hour time, on the hour or half hour.", true) };
+      if (!inHours(pt) || !inHours(rt))
+        return { error: fail("out_of_hours", "Pickup and return are handled from 9am to 6pm (R1). A pickup or return outside those hours is arranged by staff (R2): hand to staff with reason out_of_hours, or offer a time inside the hours.", false, "out_of_hours") };
+      const p0 = toMin(`${pd}T${pt}`), p1 = toMin(`${rd}T${rt}`);
+      if (p1 &lt;= p0) return { error: fail("invalid_input", "The return time is before the pickup time.", true) };
+      const hours = Math.ceil((p1 - p0) / 60);
+      if (hours &lt; MIN_HOURS) return { error: fail("too_short", "The minimum rental is 2 hours (R12). Offer at least 2 hours.", true) };
+      if (hours &gt; MAX_HOURS)
+        return { error: fail("too_long", "A rental longer than 2 weeks is passed to staff, who may offer a long-term rate (R17). Quote no price and promise no discount. Hand to staff with reason long_or_corporate.", false, "long_or_corporate") };
+      return { p0, p1, hours, pickup_at: `${pd}T${pt}`, return_at: `${rd}T${rt}` };
+    }</code></pre>
+<h3>A Request Blocks the Car, Never Confirms It</h3>
+<p>The limit of 2 bookings per mobile and the free car are checked when the request is written. A place away from KLIA records the delivery handover itself. The reference comes from code.</p>
+<pre><code>// tools.js: request_booking, the checks before saving
+        const held = state.bookings.filter((b) =&gt; isActive(b) &amp;&amp; digits(b.mobile) === mob.digits);
+        if (held.length &gt;= MAX_ACTIVE_PER_MOBILE)
+          return fail("booking_limit", "This mobile number already holds 2 bookings. One mobile number may hold up to 2 bookings at the same time; more cars are passed to staff (R8). Hand to staff with reason group_booking.", false, "group_booking");
+        const free = freeCars(state, c.list, r.p0, r.p1);
+        if (!free.length)
+          return remember(Object.assign(fail("not_available", `No ${input.model || input.tier} is free for that period any more (R6). Offer the nearest alternatives below.`, true), { alternatives: alternatives(state, c.list, r) }));
+        const car = free[0];
+        const ref = "KS-" + state.meta.next_ref++;
+        const now = nowIso();
+        const away = (p) =&gt; !/^\s*klia\b/i.test(p);
+        const delivery = away(pickupPlace) || away(returnPlace) ? { pickup: away(pickupPlace), return: away(returnPlace), charge_rm: null } : null;
+        const hourNow = +now.slice(11, 13);
+        const afterHours = hourNow &lt; OPEN_HOUR || hourNow &gt;= CLOSE_HOUR;
+        const price = priceOf(car.tier, r.hours);
+        const b = {
+          booking_ref: ref, car_id: car.car_id, tier: car.tier, model: car.model, pickup_at: r.pickup_at, return_at: r.return_at, hours: r.hours,
+          pickup_place: away(pickupPlace) ? pickupPlace : HOME, return_place: away(returnPlace) ? returnPlace : HOME, delivery,
+          customer_name: name, mobile: mob.pretty, licence_no: lic, price_rm: price.total_rm, deposit_rm: DEPOSIT,
+          status: "pending", requested_at: now, confirmed_at: null, after_hours: afterHours,
+          payment: { reported: null, reported_at: null, deposit_paid_rm: 0 }, source: "agent", contact: (ctx &amp;&amp; ctx.contact) || null, question: msgOf(ctx),
+        };
+        state.bookings.push(b);
+        let handoverId = null;
+        if (delivery) {
+          handoverId = nextId(state.handovers, "HO-");
+          state.handovers.push({
+            handover_id: handoverId, reason: "delivery_quote", urgent: false, customer: { name, mobile: mob.pretty }, booking: ref,
+            customer_asked: `${car.model} from ${whenText(r.pickup_at)} to ${whenText(r.return_at)}; pickup ${b.pickup_place}, return ${b.return_place}.`,
+            agent_told: "", clauses: ["R6", "R11"], time: now, status: "open", customer_words: msgOf(ctx), contact: (ctx &amp;&amp; ctx.contact) || null,
+          });
+          (session.handoversByTurn[ctx.turn] = session.handoversByTurn[ctx.turn] || []).push("delivery_quote");
+          made(ctx, "handover", handoverId);
+        }
+        store.save(state);</code></pre>
+<h3>Identity Before Any Detail</h3>
+<p>The reference and the last 4 digits must both match. The same error comes back whichever part is wrong, and the check locks after three failures.</p>
+<pre><code>// tools.js: verify_booking
+      verify_booking({ booking_ref, mobile_last4 }, ctx) {
+        if (session.failedChecks &gt;= MAX_CHECKS)
+          return fail("check_locked", "The identity check is locked after 3 failures. Do not check again. Hand to staff with reason check_failed.", false, "check_failed");
+        const last4 = String(mobile_last4 == null ? "" : mobile_last4).trim();
+        if (!/^\d{4}$/.test(last4)) return fail("invalid_input", "mobile_last4 must be exactly 4 digits. Ask the customer.", true);
+        const ref = normRef(booking_ref);
+        const b = find(store.load(), ref);
+        if (!b || digits(b.mobile).slice(-4) !== last4) {
+          session.failedChecks += 1;
+          session.attempts.push({ booking_ref: ref, mobile_last4: last4, at: nowIso(), message: msgOf(ctx) });
+          const left = MAX_CHECKS - session.failedChecks;
+          return left &gt; 0
+            ? fail("no_match", `The reference and mobile digits do not match. Share nothing about the booking. ${left} attempt(s) left.`, true)
+            : fail("check_locked", "The reference and mobile digits do not match. No attempts left: hand to staff with reason check_failed.", false, "check_failed");
+        }
+        if (!session.verified.includes(ref)) session.verified.push(ref);
+        return { ok: true, verified: true, booking_ref: ref };
+      },</code></pre>
+<h3>Receipts Compared in Code</h3>
+<p>Amount, reference, time and recipient are compared with the booking. A difference is recorded for staff and names the receipt_problem handover.</p>
+<pre><code>// tools.js: report_payment, the comparison
+        const differences = [];
+        if (Math.abs(amount - DEPOSIT) &gt; 0.005) differences.push(`The receipt shows ${rm(amount)}; the deposit is ${rm(DEPOSIT)}.`);
+        if (normRef(reference) !== ref) differences.push(`The receipt reference is ${reference}, not ${ref}.`);
+        if (toMin(paidAt) &lt; toMin(b.requested_at)) differences.push("The receipt is dated before the request was made.");
+        if (!/kereta\s*sewa\s*jalan/i.test(recipient)) differences.push(`The recipient is ${recipient}, not ${PAYEE}.`);</code></pre>
+<h3>A Reply Is Checked Before It Leaves</h3>
+<p>Clause IDs must exist. A claim that staff have it needs a handover in the same turn, and every RM amount must come from a tool result or the inventory.</p>
+<pre><code>// tools.js: reply_to_customer, the checks
+        if (unknown.length) return fail("uncited_clause", `No clause ${unknown.join(", ")} in the Rental Policy. Cite only R1 to R48, or none.`, true);
+        const turnHandovers = session.handoversByTurn[ctx.turn] || [];
+        if (HANDOVER_CLAIM.test(message) &amp;&amp; !turnHandovers.length)
+          return fail("unrecorded_handover", "The reply says the customer was passed to staff, but no handover was recorded this turn (N23). Call hand_to_staff with the matching reason first, or reword the reply.", true);
+        const bad = [];
+        message.replace(PRICE, (m, whole, cents) =&gt; {
+          const v = parseInt(whole.replace(/,/g, ""), 10) * 100 + (cents ? parseInt(cents.padEnd(2, "0"), 10) : 0);
+          if (!session.amounts.has(v)) bad.push(m);
+          return m;
+        });
+        if (bad.length)
+          return fail("price_mismatch", `${bad.join(", ")} did not come from a tool result in this conversation or the inventory rates (N16). Call check_availability for the price, or remove the amount.`, true);</code></pre>
+<h3>Staff Buttons Send Fixed Messages</h3>
+<p>Confirm, Reject, Set delivery charge and Confirm cancellation change the records and write the customer's message in code. The agent never writes these.</p>
+<pre><code>// tools.js: STAFF
+  const STAFF = {
+    confirm(state, ref, now) {
+      const b = state.bookings.find((x) =&gt; x.booking_ref === ref);
+      if (!b || b.status !== "pending") return fail("not_pending", "Only a pending request can be confirmed.", false);
+      b.status = "confirmed"; b.confirmed_at = now; b.payment.deposit_paid_rm = DEPOSIT;
+      (state.payments || []).filter((p) =&gt; p.booking_ref === ref &amp;&amp; p.status === "to_check").forEach((p) =&gt; (p.status = "confirmed"));
+      return { ok: true, message: pushMessage(state, ref, "confirmed",
+        `Booking confirmed: ${ref}, ${rentalText(b)}. Deposit ${rm(DEPOSIT)} received. Please bring your driving licence and IC or passport to pickup.`, now) };
+    },
+    reject(state, ref, now) {
+      const b = state.bookings.find((x) =&gt; x.booking_ref === ref);
+      if (!b || b.status !== "pending") return fail("not_pending", "Only a pending request can be rejected.", false);
+      b.status = "rejected";
+      (state.payments || []).filter((p) =&gt; p.booking_ref === ref &amp;&amp; p.status === "to_check").forEach((p) =&gt; (p.status = "not_found"));
+      return { ok: true, message: pushMessage(state, ref, "rejected",
+        `No deposit payment was found for ${ref} (${rentalText(b)}), so the request is cancelled and the car released. Nothing has been charged.`, now) };
+    },
+    setDeliveryCharge(state, ref, now, amount) {
+      const b = state.bookings.find((x) =&gt; x.booking_ref === ref);
+      const n = Number(amount);
+      if (!b || !b.delivery) return fail("no_delivery", "This booking has no pickup or return away from KLIA.", false);
+      if (!(n &gt;= 0)) return fail("invalid_input", "Enter the charge in ringgit.", false);
+      b.delivery.charge_rm = n;
+      state.handovers.filter((h) =&gt; h.booking === ref &amp;&amp; h.reason === "delivery_quote" &amp;&amp; h.status === "open").forEach((h) =&gt; { h.status = "done"; h.closed_at = now; });
+      const where = [b.delivery.pickup &amp;&amp; `pickup at ${b.pickup_place}`, b.delivery.return &amp;&amp; `return at ${b.return_place}`].filter(Boolean).join(" and ");
+      return { ok: true, message: pushMessage(state, ref, "delivery_charge",
+        `Delivery or collection charge for ${ref} (${where}): ${rm(n)}, at RM 1 per km from KLIA.`, now) };
+    },
+    confirmCancellation(state, id, now) {
+      const c = state.cancellations.find((x) =&gt; x.cancellation_id === id);
+      if (!c || c.status !== "pending") return fail("not_pending", "No pending cancellation with that ID.", false);
+      const b = state.bookings.find((x) =&gt; x.booking_ref === c.booking_ref);
+      c.status = "confirmed"; c.confirmed_at = now; b.status = "cancelled";
+      return { ok: true, message: pushMessage(state, b.booking_ref, "cancelled", c.refund_rm &gt; 0
+        ? `Cancellation confirmed: ${b.booking_ref} (${rentalText(b)}) is cancelled. Your ${rm(c.refund_rm)} deposit will be refunded to the original payment method within 24 hours.`
+        : `Cancellation confirmed: ${b.booking_ref} (${rentalText(b)}) is cancelled. As it was cancelled less than 24 hours before pickup, the deposit is kept.`, now) };
+    },
+    done(state, id, now) {
+      const h = state.handovers.find((x) =&gt; x.handover_id === id);
+      if (!h || h.status !== "open") return fail("not_open", "No open handover with that ID.", false);
+      h.status = "done"; h.closed_at = now;
+      return { ok: true, message: null };
+    },
+  };</code></pre>
+<h3>Tool Choice: Auto, With a Way Back</h3>
+<p>Sonnet 5.5 does not accept tool_choice "any", so the loop runs on "auto". A plain-text ending is sent back once to go through reply_to_customer, then a safe fallback is used.</p>
+<pre><code>// agent.js: the turn loop
+    let nudged = false;
+    for (let round = 0; round &lt; limits.maxToolRounds; round++) {
+      const choice = AUTO_ONLY.has(args.model) ? "auto" : "any";
+      let res = await call(choice);
+      if (!res.ok) {
+        const body = await res.text();
+        // Checked against the choice this call used, so turns running in parallel each fall back.
+        if (res.status === 400 &amp;&amp; /tool_choice/.test(body) &amp;&amp; choice === "any") {
+          AUTO_ONLY.add(args.model);
+          res = await call("auto");
+          if (!res.ok) throw new Error(`Anthropic API ${res.status}: ${(await res.text()).slice(0, 300)}`);
+        } else throw new Error(`Anthropic API ${res.status}: ${body.slice(0, 300)}`);
+      }
+      const data = await res.json();
+      Object.keys(usage).forEach((k) =&gt; (usage[k] += (data.usage &amp;&amp; data.usage[k]) || 0));
+      args.messages.push({ role: "assistant", content: data.content });
+
+      const calls = data.content.filter((b) =&gt; b.type === "tool_use");
+      if (!calls.length) {
+        // A plain-text ending (possible on "auto"): send it back once to go through reply_to_customer.
+        if (!nudged) {
+          nudged = true;
+          trace.push({ type: "note", text: "Plain-text ending sent back: replies go through reply_to_customer." });
+          args.messages.push({ role: "user", content: USE_REPLY_TOOL });
+          continue;
+        }
+        args.messages.push({ role: "user", content: "Continue." });
+        args.messages.push({ role: "assistant", content: [{ type: "text", text: FALLBACK }] });
+        trace.push({ type: "reply", text: FALLBACK, citationLine: "", citations: [] });
+        return { reply: FALLBACK, citationLine: "", citations: [], trace, usage, stoppedBy: data.stop_reason };
+      }</code></pre>
+<h3>When It Passes an Enquiry On</h3>
+<p>The prompt sends some enquiries to staff at once and follows any handover a tool error names. The tool then holds the reason to the fixed list of 25.</p>
+<pre><code>// prompt.js: hand to staff
+HAND TO STAFF (hand_to_staff)
+Staff cannot see this chat. Give customer_asked as one sentence of facts, the clauses involved, and the booking reference and name if the customer gave them. Code adds urgency, the time, the customer's words and what you told them.
+- At once, before any other tool or question: asks_for_staff (the customer asks for a person), urgent_on_road (accident or breakdown on the road), pickup_problem, urgent_safety (also tell them to call 999). Do not verify identity first for these.
+- When a tool error names a handover (same_day, far_ahead, long_or_corporate, group_booking, out_of_hours, check_failed, receipt_problem, system_unavailable), hand over with that reason.
+- late_return (R38), extend (R32), change_request (R28), cross_border (R47), lost_item, fine, documents, refund_issue, complaint, damage (set car_cannot_be_driven when it cannot be driven), driver_eligibility (only what R39 to R42 do not settle).
+- not_in_policy: nothing written settles it (an item, service or price not in the policy or inventory). Say you have passed it on; never guess.
+Then say staff will follow up here. Do not promise a time. Never offer to pass something on: either hand it over or answer.</code></pre>
+<h3>Host Context Stays Outside the Model</h3>
+<p>The page or chat host sends the turn, the uploaded images, the customer's words and the contact with each call. The model cannot change them.</p>
+<pre><code>// mcp_server.mjs: tool calls
+server.setRequestHandler(CallToolRequestSchema, async (req) =&gt; {
+  const meta = req.params._meta || {};
+  const ctx = { turn: Number(meta.turn) || 0, uploads: Array.isArray(meta.uploads) ? meta.uploads : [],
+                message: typeof meta.message === "string" ? meta.message : "", contact: meta.contact || null };
+  const result = agency.call(req.params.name, req.params.arguments || {}, ctx);
+  return {
+    content: [{ type: "text", text: JSON.stringify(result) }],
+    isError: result.ok === false,
+  };
+});</code></pre>
+<h3>Benchmark: Tool Selection Measured</h3>
+<p>Beside the five checks, every case records the first tool, any tool outside its set, calls refused for coming out of order, and calls beyond the minimum. Nine tools were kept because the measure showed no wrong picks.</p>
+<pre><code>// benchmark/run_benchmark.mjs: tool selection
+  // tool selection
+  const allowed = new Set([...(c.must_call || []).map((x) =&gt; x.name), ...(c.optional_tools || []), "reply_to_customer",
+    ...(want.length &amp;&amp; !c.handover_by_code ? ["hand_to_staff"] : [])]);
+  const first = calls[0];
+  const selection = {
+    first_pick: !!first &amp;&amp; (c.first_ok || []).includes(first.name), first_tool: first ? first.name : null,
+    wrong_picks: calls.filter((x) =&gt; !allowed.has(x.name)).map((x) =&gt; x.name),
+    order_refusals: calls.filter((x) =&gt; ORDER_ERRORS.includes(x.result.error)).map((x) =&gt; `${x.name}:${x.result.error}`),
+    input_errors: calls.filter((x) =&gt; INPUT_ERRORS.includes(x.result.error)).map((x) =&gt; `${x.name}:${x.result.error}`),
+    calls: calls.length, extra_calls: Math.max(0, calls.length - (c.min_calls || 0)),
+  };</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Group</th><th>Cases</th><th>What it tests</th></tr>
+<tr><td><b>Can do</b></td><td>11</td><td>Policy answers, hourly, multi-day and weekly prices, a booking at KLIA and one delivered, a receipt, viewing and cancelling a booking, a reply in Malay.</td></tr><tr><td><b>Cannot do</b></td><td>6</td><td>Skipping the deposit, a discount, a 1-hour rental, a model that is taken, a second driver, a request to confirm now.</td></tr><tr><td><b>Hand to staff</b></td><td>11</td><td>Same day, far ahead, over 2 weeks, a third car, outside hours, a request at 10pm, a person asked for in Mandarin, a late return, an accident, Singapore, a child seat.</td></tr><tr><td><b>Unauthorised and failure</b></td><td>5</td><td>Wrong digits, another customer's booking, three failed checks, the booking data down, a receipt for the wrong amount.</td></tr></table>
+<ul><li><b>Written first:</b> the expected outcome of each case was set in an <a href="https://lyven81.github.io/ai-projects/projects/car-rental-booking-agent/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> before the agent existed.</li><li><b>Fresh start:</b> each case runs on a new MCP server with a fresh copy of the records, on a fixed clock, about five at a time.</li><li><b>Same path as a client:</b> the resources and tools are read through MCP.</li><li><b>Five checks, from the record:</b> right tool, right details, right handover, record written, hard limits held. Reply wording is read by eye.</li><li><b>Tool selection measured:</b> first tool right in 33 of 33 cases, 0 calls to a tool outside the case's set, 0 calls refused for coming out of order.</li><li><b>Tool tests:</b> 93 tests call every tool, every refusal, the staff actions and the reply checks, with no API key.</li></ul>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the agent behaves, cut directly from the project files. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/car-rental-booking-agent" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/car-rental-booking-agent/
+├── build_policies.py         # Rental Policy: page, Markdown copy, clause list
+├── generate_seed.py          # 56 cars, Oct and Nov bookings, inventory, schedule
+├── resources/                # Rental Policy, Car Inventory, schedule.json, clauses.json
+├── car_rental_bookings.json  # The records only the tools reach
+├── tools.js                  # The nine tools, every rule, staff actions
+├── mcp_server.mjs            # MCP server: 3 resources, 9 tools
+├── agent.js                  # Tool-use loop with limits
+├── prompt.js                 # Written policy only, handovers, examples
+├── benchmark/
+│   ├── Answer Key.html       # Expected answers, written before the build
+│   ├── cases.json            # 33 cases in 4 groups
+│   ├── test_tools.mjs        # Every tool and refusal, no API key
+│   ├── run_benchmark.mjs     # Runs, scores and measures tool selection
+│   └── results.json          # Recorded run for the replay
+├── make_demo_images.py       # Demo receipts and DuitNow QR, marked Demo
+├── build_dashboard.py        # -&gt; demo.html (the staff phone)
+├── build_assistant.mjs       # -&gt; assistant.html (two-phone demo)
+├── .mcp.json                 # Registers the server for Claude Code
+└── CLAUDE.md                 # Rules and build steps</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Kereta Sewa Jalan-jalan Car Rental Agent</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body>
+</html>

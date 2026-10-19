@@ -1,0 +1,338 @@
+{
+ "R1": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Hours",
+  "text": "Bookings, pickup and return are handled from 9am to 6pm, seven days a week.",
+  "enforced_by": "Code"
+ },
+ "R2": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Hours",
+  "text": "A pickup or return outside 9am to 6pm is passed to staff to arrange.",
+  "enforced_by": "Code (handover)"
+ },
+ "R3": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Hours",
+  "text": "A booking request made outside 9am to 6pm is recorded as pending; staff review it from 9am.",
+  "enforced_by": "Code"
+ },
+ "R4": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Booking and deposit",
+  "text": "A booking needs the customer's name, a mobile number (Malaysian or international) and a driving licence number. The licence itself is checked by staff at pickup (R43).",
+  "enforced_by": "Code (details present)"
+ },
+ "R5": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Booking and deposit",
+  "text": "Every booking needs a deposit of RM 100, paid when booking.",
+  "enforced_by": "Code"
+ },
+ "R6": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Booking and deposit",
+  "text": "A booking request blocks the car until staff confirm or reject it. A car blocked or rented for any part of the requested period cannot be booked.",
+  "enforced_by": "Code"
+ },
+ "R7": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Booking and deposit",
+  "text": "The customer reports the deposit payment by uploading the receipt or by saying it was paid. Staff check the bank record; the booking stays pending until staff confirm it.",
+  "enforced_by": "Code (no confirm tool)"
+ },
+ "R8": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Booking and deposit",
+  "text": "One mobile number may hold up to 2 car bookings at the same time. More cars are passed to staff.",
+  "enforced_by": "Code"
+ },
+ "R9": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Booking and deposit",
+  "text": "The deposit is released within 48 hours after the car is returned with no damage and a full tank (R18).",
+  "enforced_by": "Staff"
+ },
+ "R10": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Pickup, return and delivery",
+  "text": "Pickup and return at KLIA are free.",
+  "enforced_by": "Code"
+ },
+ "R11": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Pickup, return and delivery",
+  "text": "Pickup or return at any other place costs RM 1 per km from KLIA. The staff member who delivers or collects the car works out the distance.",
+  "enforced_by": "Staff"
+ },
+ "R12": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Rental period and price",
+  "text": "The minimum rental is 2 hours. Up to 5 hours is charged by the hour; 6 hours or more counts as one day at the daily rate.",
+  "enforced_by": "Code"
+ },
+ "R13": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Rental period and price",
+  "text": "Beyond whole days, extra hours are charged at the hourly rate, capped at one more day.",
+  "enforced_by": "Code"
+ },
+ "R14": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Rental period and price",
+  "text": "Whole weeks are charged at the weekly rate and remaining days at the daily rate, capped at the two-week rate.",
+  "enforced_by": "Code"
+ },
+ "R15": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Rental period and price",
+  "text": "A rented car can be driven at any hour, every day of the week, for the whole rental period.",
+  "enforced_by": "Prompt"
+ },
+ "R16": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Bookings passed to staff",
+  "text": "A rental that starts more than 30 days from today, or on the day of the request, is passed to staff. The agent does not block the car.",
+  "enforced_by": "Code (handover)"
+ },
+ "R17": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Bookings passed to staff",
+  "text": "A rental longer than 2 weeks is passed to staff, who may offer a long-term rate. The agent does not quote or promise a discount.",
+  "enforced_by": "Code (handover)"
+ },
+ "R18": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Fuel",
+  "text": "Every car is released with a full tank and must be returned with a full tank. Otherwise the cost of refuelling is deducted from the deposit.",
+  "enforced_by": "Staff"
+ },
+ "R19": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "A cancellation 24 hours or more before pickup: the RM 100 deposit is refunded in full.",
+  "enforced_by": "Code (quote)"
+ },
+ "R20": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "A cancellation less than 24 hours before pickup: the deposit is kept.",
+  "enforced_by": "Code (quote)"
+ },
+ "R21": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "No-show: the car is not picked up within 2 hours of the pickup time without notice. The booking is cancelled and the deposit kept.",
+  "enforced_by": "Staff"
+ },
+ "R22": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "A cancellation is a request until staff confirm it. The agent records it; staff process the refund.",
+  "enforced_by": "Code (no cancel tool)"
+ },
+ "R23": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "Refunds go back to the original payment method within 24 hours of staff confirming the cancellation.",
+  "enforced_by": "Staff"
+ },
+ "R24": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "If the company cancels (car unavailable), the customer chooses a full deposit refund or a car of the same or higher tier at the same price.",
+  "enforced_by": "Staff"
+ },
+ "R25": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "Returning early: no refund for unused hours or days.",
+  "enforced_by": "Prompt"
+ },
+ "R26": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "A booking request that staff reject because no payment was found is cancelled; nothing is charged or refunded.",
+  "enforced_by": "Staff"
+ },
+ "R27": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "A cancellation for an emergency (flight cancelled, medical) less than 24 hours before pickup is decided by staff, with proof.",
+  "enforced_by": "Staff"
+ },
+ "R28": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Cancellation and refund",
+  "text": "Changing the dates, time or car of a booking is handled by staff.",
+  "enforced_by": "Code (no change tool)"
+ },
+ "R29": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "A grace period of 30 minutes after the return time, with no charge.",
+  "enforced_by": "Staff"
+ },
+ "R30": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "Beyond the grace period, each hour or part hour is charged at the tier's hourly rate.",
+  "enforced_by": "Staff"
+ },
+ "R31": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "Late charges for one day are capped at the daily rate; 6 hours or more late is charged as one extra day.",
+  "enforced_by": "Staff"
+ },
+ "R32": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "To extend, the customer asks at least 2 hours before the return time; staff confirm, subject to availability.",
+  "enforced_by": "Code (handover)"
+ },
+ "R33": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "Late charges are deducted from the deposit; any balance is paid at return.",
+  "enforced_by": "Staff"
+ },
+ "R34": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "A late return that ends after 6pm needs staff to arrange the return.",
+  "enforced_by": "Code (handover)"
+ },
+ "R35": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "A car not returned and not contactable 24 hours after the return time is treated as unauthorised use and may be reported to the police.",
+  "enforced_by": "Staff"
+ },
+ "R36": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "The car is returned to KLIA. Collection from elsewhere is arranged by staff at RM 1 per km, worked out by the staff member who collects it.",
+  "enforced_by": "Staff"
+ },
+ "R37": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "If a late return stops the next customer's booking, the company offers the next customer another car; the late customer pays the late charges only.",
+  "enforced_by": "Staff"
+ },
+ "R38": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Late return",
+  "text": "The customer tells the company as soon as they know they will be late.",
+  "enforced_by": "Code (handover)"
+ },
+ "R39": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "The driver is 20 to 70 years old.",
+  "enforced_by": "Staff (at pickup)"
+ },
+ "R40": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "The driver has held a full licence for at least 2 years. Probationary (P) licences are not accepted.",
+  "enforced_by": "Staff (at pickup)"
+ },
+ "R41": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "A Malaysian class D licence is accepted.",
+  "enforced_by": "Staff (at pickup)"
+ },
+ "R42": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "A foreign driver needs a valid national licence plus an International Driving Permit, unless the licence is in English.",
+  "enforced_by": "Staff (at pickup)"
+ },
+ "R43": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "At pickup, the driver shows the licence and IC or passport; the name must match the booking.",
+  "enforced_by": "Staff (at pickup)"
+ },
+ "R44": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "Only the person who booked may drive. Damage while anyone else drives is charged to the renter in full.",
+  "enforced_by": "Staff"
+ },
+ "R45": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "No smoking in the car. A cleaning fee is deducted from the deposit if the car smells of smoke.",
+  "enforced_by": "Staff"
+ },
+ "R46": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "No pets, unless agreed with staff in advance.",
+  "enforced_by": "Staff"
+ },
+ "R47": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "The car may not be driven out of Peninsular Malaysia (no Singapore or Thailand) without staff approval.",
+  "enforced_by": "Code (handover)"
+ },
+ "R48": {
+  "policy": "Rental Policy",
+  "page": "Rental Policy.html",
+  "section": "Driver and vehicle use",
+  "text": "Traffic summonses and tolls during the rental are paid by the renter.",
+  "enforced_by": "Prompt"
+ }
+}

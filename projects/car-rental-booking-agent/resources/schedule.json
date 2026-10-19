@@ -1,0 +1,287 @@
+{
+ "about": "Kereta Sewa Jalan-jalan, 1 Oct to 30 Nov 2026. One letter per day from 1 Oct: F free, T taken (booked or in maintenance). For a quick view only; check_availability decides.",
+ "first_day": "2026-10-01",
+ "days": 61,
+ "cars": {
+  "VHC001": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "FTTTTTFTTTFFFTTFFFTTTTTTTTFFFFFFFFFFFFTTTTFFTTTTTTFFFFFFFFFFF"
+  },
+  "VHC002": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "TFTTFFFFTFFFTTTFFFFFFFFFFFFFTTTTTTFFTTTTFFFFFFFFFFFFFFFTTTTTT"
+  },
+  "VHC003": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "FTTTTTTTTFFFFTTTTTTTTFTTTFTTTFTTTTTFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC004": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "FFFFFTTTTFFFFFFFTTFFTTFFFFFFFFTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC005": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "TTFFFTTTFFFFFFFTTTTFFFFFFFFFFFFFFFFFFFFFTTTTTTTTTTTFFFFFFFFFF"
+  },
+  "VHC006": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "TTFTTFFFFFTFFFFTTTFFFFFTTTFFFFTTFFFFFFTTTTTTTTTTTFFFFFFFFFTTF"
+  },
+  "VHC007": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "FFFFFFFTTFFTTFFFFFFTTTTFTTTFFTTTFTTTTTFFFFFFFFTTFFFFFFFFFFFFF"
+  },
+  "VHC008": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "FFFFFTTTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+  },
+  "VHC009": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "FFFFTTTTTFFFTTFTTFFFTTTTTFFFFFFFFFFFFFFFFFFTTTFFFFTTTFFFFFFTF"
+  },
+  "VHC010": {
+   "tier": "Standard",
+   "model": "Perodua Axia",
+   "days": "FFFFFTTTTFFTFFFTTFFTTFFFFTTFTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC011": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FFFFFFTTFFFFFTTTTFFTTTTTTTTFFFTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC012": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FFTFTTTFFFFTTFFFFTFFFFFFTFFFFFFFFFFFFFFFFFFFFFFFFTTTTFFFFFFFF"
+  },
+  "VHC013": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FFTTTTFFTTTFFFFTFTTFFFFFFTTTTTTFFFFFFFFFFFFFFFTTTFFFFFFFFFFFF"
+  },
+  "VHC014": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FFFFFTTFTTTTFFFFFFFFTFTTFFFTTFFFFFFFFFFFFFFFFFTTTTTTFFFFFFFFF"
+  },
+  "VHC015": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FFFTTTTFTTTFFFFFTTFFFFFFFFFFFFFFFFFFFTTTFFFFFTTTFTTTTTTFFFFFF"
+  },
+  "VHC016": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FFFFFFTTFFFFFTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFTTTF"
+  },
+  "VHC017": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FTTTTFFFFTTTTTTFTFFFTFFTTTTTTFFFFFFFFFFFFFTTTTFFTTFFFFFFFFFFF"
+  },
+  "VHC018": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FTTTTFFTFTTFFTTTFFTTTFFFFTTTTTTTTTTTFFFFFFFFFFFTTTTFFFFFFFFFF"
+  },
+  "VHC019": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "FTTFFFFFFTTFFTFFFFTTFFFFTTTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC020": {
+   "tier": "Standard",
+   "model": "Perodua Myvi",
+   "days": "TTTFFFTTTFTFTFTTTFTTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFTFFF"
+  },
+  "VHC021": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFTTTTFFFFTTTTTTFTTTTTTTTFFTTTFFFFFFFFFFFFFFFFFFTTFFFFFTTTTFF"
+  },
+  "VHC022": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFFFFFFTTTTTTTTFFTTTFFFTTFFTFTFFFFTTTTFFFTTTFFFFFFTTTTTTTTTTT"
+  },
+  "VHC023": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FTTTTTTFFFFFFTTTTFFFFFFFFFFFFFTTTTTTTTTTTFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC024": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFFTTTTTFFFFFTTTTTFFFTTFFFTTTTFFFFFFFFFFFFFTTTTFFFFFFFFFFFFFF"
+  },
+  "VHC025": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFFFFFFFTTTTFTTFTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFTTTTF"
+  },
+  "VHC026": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFFTTFFFFFFFTTTFTTFTTFTTTFTTTFFTTTTTTTTFFFFFTTTFFFFFFFFFFFFFF"
+  },
+  "VHC027": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFFTTFTTTTFFFFFFTTTTTTFFFFFTTTTFFFFFFFFFFFFFFFFFFFFFFTFFFFFFF"
+  },
+  "VHC028": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFTTTFTTTFFFFFTTTFFFTTTTTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC029": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "TTTTFTTTTFFTFFFFTTTFFTTTTTTFTFTTTTTTFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC030": {
+   "tier": "Premium",
+   "model": "Honda City",
+   "days": "FFFFFFFTTTTTFFFFFFFFFFTTTFFFFFTTTTFFFFFFFFFFFFTTTTTTTTFFFTTTF"
+  },
+  "VHC031": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "TTTTTFFFTFFFTFFFFFTTFTTFTTTTFFFFFFFTTTTTTTTFFFFFFFFFFFFTTTTTF"
+  },
+  "VHC032": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "TTTFFFTTFTTFTTTFFFFFFFFTTTFFFTTTTTTFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC033": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FFTTTTTFTFFFTTFFTFTTTFFTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFTTTTTTTT"
+  },
+  "VHC034": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FFFFFFTTFFFFFTTFFFTTTTTTTTFFFTTTTFFFFFFFFFFFFFFFTTTFFFFFFFFFF"
+  },
+  "VHC035": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FTFTTTTTTFTTFFFFFFFFFTTTFFFTFTTTFFFFFFFTTTFFFFFFTTTTFFFFFFFFF"
+  },
+  "VHC036": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FFFFFTTTTTTFFTTTTTFFFFFTTTTFFTTFFFFFFFFFFFFFFFFFFFFFFFFTTTFFF"
+  },
+  "VHC037": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FFFTTTTFFFFTFFFFFTTTFFFTTTFFTTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC038": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FFTTTTFFTTTTTFFFFTTTTTFFFFTTTTTTTTFFFFFFFTTTTFFFFFFFFFFFFTTTF"
+  },
+  "VHC039": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FFFFFFTTFTFFFFFFFTTTTFFFFTTFFFTTTTFFFFFTTTTTTTTFFFFFFFFFFFFFF"
+  },
+  "VHC040": {
+   "tier": "Premium",
+   "model": "Toyota Vios",
+   "days": "FTFFFFFFFTTTFFFTFTTFFTTTTFFTTTFFFFFTTTTTTTTFFTTTTTTFFFFFFFTTF"
+  },
+  "VHC041": {
+   "tier": "SUV",
+   "model": "Toyota Fortuner",
+   "days": "FTTTTTTFFTTTFFFTTTFFFFTTTFFFFFTTFFTTTTTFFFFFFTTFFFFFFFTTTTTFF"
+  },
+  "VHC042": {
+   "tier": "SUV",
+   "model": "Toyota Fortuner",
+   "days": "FFTTTTTTTTFFFTFFFFTTTTFFTTFTFTTTTTFFFFFTTTFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC043": {
+   "tier": "SUV",
+   "model": "Toyota Fortuner",
+   "days": "FFFFTTTTTTFTTTFFFFFFFTTTFFFTTTFFFFFFFFFFFFFFTTFFFFFFFFTTTTFFF"
+  },
+  "VHC044": {
+   "tier": "SUV",
+   "model": "Mazda CX-8",
+   "days": "TTTTTTTTTTTFFFTTTTTFFFTTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC045": {
+   "tier": "SUV",
+   "model": "Mazda CX-8",
+   "days": "FFFFFFTTFFFFFFFFFTTTTFFFTFTFFTTFTTFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC046": {
+   "tier": "SUV",
+   "model": "Mazda CX-8",
+   "days": "FFFFTTTTFFFFFTFFFTTTTFFFTFFFTTTTTTFFFFFFFFFFFFFFFFFFFFFFFTTTT"
+  },
+  "VHC047": {
+   "tier": "MPV",
+   "model": "Toyota Alphard",
+   "days": "FFTTFFTTFFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+  },
+  "VHC048": {
+   "tier": "MPV",
+   "model": "Toyota Alphard",
+   "days": "FFFTTTFFFFFFTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC049": {
+   "tier": "MPV",
+   "model": "Toyota Alphard",
+   "days": "FFTTTTFFTTTTFTTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC050": {
+   "tier": "MPV",
+   "model": "Toyota Vellfire",
+   "days": "FFFFFFTTTTFFFFFFFFFFFFFTTFTTFFFFFFFFFFFFFFFFFTTFFFFFFFFFFFFFF"
+  },
+  "VHC051": {
+   "tier": "MPV",
+   "model": "Toyota Vellfire",
+   "days": "FTTFFFFTTFTTTTTTFTTTTTFTTFFFTTTTTTFFFFFFFFTTTFFFFFFFTTFFTTFFF"
+  },
+  "VHC052": {
+   "tier": "MPV",
+   "model": "Toyota Vellfire",
+   "days": "FFTTFFFFFFFFFFFFFFTFFFFTTFFTTTTTFFFFFFFTTTFFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC053": {
+   "tier": "Premium",
+   "model": "Toyota Camry",
+   "days": "TFTTTTTFFFFFTTTTTTTTFTTTTFFFTTFFFFFFFFFFFFTTTFFFFFTTFFFFFFFFF"
+  },
+  "VHC054": {
+   "tier": "Premium",
+   "model": "Toyota Camry",
+   "days": "TTTTFTTTTTFFFFTTFTTTTTFTTTFTTTFFFFFFFFFFFFFTTTFFTTTFFFFFFFFFF"
+  },
+  "VHC055": {
+   "tier": "Premium",
+   "model": "Honda Accord",
+   "days": "TTTTTFFTTFFTTFFTTTFFFFFTTFFTTTTFFFFFFFFFFTTFFFFFFFFFFFFFFFFFF"
+  },
+  "VHC056": {
+   "tier": "Premium",
+   "model": "Honda Accord",
+   "days": "FFFTFFFFFFTTTTTTTTFFFFFTTTTTFFTTTTFFFFFTTFFFFFFFFFFFFFFFFFFFF"
+  }
+ }
+}

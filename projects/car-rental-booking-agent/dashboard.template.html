@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kereta Sewa staff phone</title>
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#fff;--card:#fff;--ink:#103f45;--muted:#5b7f84;--line:#d3e5e6;--navy:#0e4f57;--accent:#13808a;--box:#f1f8f8;--warn:#b8641c;--warnbg:#fbf1e6;--flash:#fff3c4;--urg:#b4462f;--urgbg:#fbece8;--barbg:#fff;--barink:#0e4f57}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11181a;--card:#182225;--ink:#e2eeee;--muted:#9ab3b5;--line:#2a3a3d;--navy:#8fd0d5;--accent:#5cc0c8;--box:#141d1f;--warn:#e0a060;--warnbg:#2b2117;--flash:#4a3f17;--urg:#f0927c;--urgbg:#3a2019;--barbg:#173033;--barink:#e2eeee}}
+:root[data-theme="dark"]{--bg:#11181a;--card:#182225;--ink:#e2eeee;--muted:#9ab3b5;--line:#2a3a3d;--navy:#8fd0d5;--accent:#5cc0c8;--box:#141d1f;--warn:#e0a060;--warnbg:#2b2117;--flash:#4a3f17;--urg:#f0927c;--urgbg:#3a2019;--barbg:#173033;--barink:#e2eeee}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",Arial,sans-serif;-webkit-text-size-adjust:100%}
+button,input{font:inherit;color:inherit}
+a{color:var(--accent)}
+.page{max-width:430px;margin:0 auto;padding:12px 16px 20px}
+.crumbs{font-size:12.5px;color:var(--muted);margin:0 2px 8px}
+.crumbs a{color:var(--muted);text-decoration:none}.crumbs a:hover{text-decoration:underline}
+footer{font-size:12px;color:var(--muted);margin:12px 2px 0}
+.app{display:flex;flex-direction:column;height:min(860px,calc(100vh - 90px));min-height:560px;background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative}
+@supports (height:100dvh){.app{height:min(860px,calc(100dvh - 90px))}}
+@media (max-width:500px){.page{padding:8px 0 12px}.crumbs,footer{margin-left:16px;margin-right:16px}.app{border-radius:0;border-left:0;border-right:0}}
+body.embed .page{max-width:none;padding:0}
+body.embed .app{height:100vh;min-height:0;border:0;border-radius:0}
+@supports (height:100dvh){body.embed .app{height:100dvh}}
+.bar{background:var(--barbg);color:var(--barink);border-bottom:1px solid var(--line);padding:11px 16px 10px;display:flex;justify-content:space-between;align-items:baseline;flex:none}
+.bar b{font-size:16px}.bar span{font-size:13px;opacity:.9}
+.toast{flex:none;background:var(--warnbg);color:var(--warn);font-size:12.5px;padding:6px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+.toast:empty{display:none}
+.toast button{border:0;background:none;color:var(--warn);font-weight:700;cursor:pointer;padding:0}
+.scroll{flex:1;overflow:auto;padding:12px 12px 16px;-webkit-overflow-scrolling:touch}
+.pane{display:none}.pane.on{display:block}
+.tabs{display:flex;border-top:1px solid var(--line);background:var(--card);flex:none;padding-bottom:env(safe-area-inset-bottom)}
+.tabs button{flex:1;background:none;border:0;font-size:12px;padding:7px 0 8px;color:var(--muted);cursor:pointer;position:relative}
+.tabs button.on{color:var(--accent);font-weight:700}
+.tabs svg{display:block;margin:0 auto 1px;width:22px;height:22px}
+.badge{position:absolute;top:3px;left:calc(50% + 6px);background:var(--warn);color:#fff;font-size:10.5px;font-weight:700;border-radius:9px;padding:0 6px;line-height:17px;min-width:18px}
+.badge:empty{display:none}
+.bump{animation:bump .6s ease}
+@keyframes bump{0%{transform:scale(1)}30%{transform:scale(1.45)}60%{transform:scale(.9)}100%{transform:scale(1)}}
+.m{color:var(--muted);font-size:12.5px}
+.sum{margin:0 2px 8px}
+.sec{font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin:14px 2px 6px}
+.sec:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:4px 10px;font-size:12.5px;cursor:pointer;color:var(--ink)}
+.chip .n{display:inline-block;min-width:18px;margin-left:5px;font-size:11px;font-weight:700;padding:0 6px;border-radius:9px;background:var(--navy);color:var(--card);text-align:center}
+.chip.urgent .n{background:var(--urg)}
+.chip.on{border-color:var(--accent);background:var(--box);color:var(--accent);font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
+.list{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.list button{display:flex;width:100%;justify-content:space-between;gap:8px;align-items:baseline;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 11px;cursor:pointer;font-size:13px}
+.list button:last-child{border-bottom:0}
+.list button.on{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+.list b{color:var(--navy);font-weight:600}
+.list small{color:var(--muted);white-space:nowrap;font-size:11.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:10px}
+.card.urgent{border:2px solid var(--urg)}
+.card.flash{animation:flash 1.5s ease}
+@keyframes flash{0%,35%{background:var(--flash);box-shadow:0 0 0 3px var(--warn)}100%{background:var(--card);box-shadow:none}}
+.ch{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:9px 12px;background:var(--box);border-bottom:1px solid var(--line);font-weight:700;color:var(--navy);font-size:14px}
+.card.urgent .ch{background:var(--urgbg);color:var(--urg)}
+.ch small{font-weight:400;color:var(--muted);font-size:12px;white-space:nowrap}
+.kv{padding:7px 12px;border-bottom:1px solid var(--line);font-size:13.5px}
+.kv>.k{display:block;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.kv .q{white-space:pre-line;font-style:italic;display:block}
+.kv .pre{white-space:pre-line}
+.kv.rec{background:var(--warnbg)}
+.kv.rec>.k{color:var(--warn)}
+.kv .diff{color:var(--urg);font-weight:600;display:block}
+.kv a.rule{display:inline-block;margin:0 6px 2px 0;padding:0 7px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;text-decoration:none;background:var(--box)}
+.thumbs{display:flex;gap:6px;margin-top:4px}
+.thumbs button{padding:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;width:64px;height:90px;cursor:zoom-in;background:var(--box)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.charge{display:flex;gap:8px;align-items:center;padding:8px 12px;background:var(--warnbg);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--warn);flex-wrap:wrap}
+.charge input{width:80px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);font-size:14px}
+.btns{display:flex;gap:7px;padding:10px 12px 12px}
+.btn{flex:1;text-align:center;font-size:13.5px;font-weight:600;border-radius:8px;padding:8px 0;background:var(--accent);color:#fff;border:1px solid var(--accent);text-decoration:none;cursor:pointer}
+.btn.alt{background:var(--card);color:var(--accent)}
+.btn.done{background:var(--navy);border-color:var(--navy);color:var(--card)}
+.btn.warn{background:var(--card);color:var(--urg);border-color:var(--urg)}
+.btn.small{flex:none;padding:6px 12px}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--muted);font-size:13.5px}
+.line{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:7px 11px;border-bottom:1px solid var(--line)}
+.line:last-child{border-bottom:0}
+.line .h{width:48px;flex:none;font-weight:700;color:var(--navy)}
+.tag{border-radius:6px;padding:1px 7px;display:inline-block;font-size:12.5px}
+.t-pick{background:var(--box);color:var(--accent);border:1px dashed var(--accent)}
+.t-ret{background:var(--navy);color:var(--card)}
+.t-pend{background:#efb24a;color:#3b2500}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:6px}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:12px;color:var(--muted)}
+.stats b{display:block;font-size:18px;color:var(--navy)}
+.mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.mhead b{color:var(--navy);font-size:15px}
+.mhead button{width:40px;height:32px;border:1px solid var(--line);background:var(--card);border-radius:8px;cursor:pointer;color:var(--accent);font-size:16px}
+.mhead button:disabled{opacity:.35;cursor:default}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}
+.grid .wd{font-size:11px;font-weight:700;color:var(--muted);padding:2px 0}
+.grid button{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px 0 3px;cursor:pointer;min-height:44px;font-size:12.5px;font-weight:700;color:var(--navy)}
+.grid button.past{opacity:.55}
+.grid button.today{border-color:var(--warn);box-shadow:inset 0 0 0 1px var(--warn)}
+.grid button.sel{outline:2px solid var(--accent);outline-offset:-1px}
+.grid .pad{visibility:hidden}
+.grid .occ{display:block;margin:3px auto 0;height:5px;width:80%;border-radius:3px;background:var(--line);overflow:hidden}
+.grid .occ i{display:block;height:100%;background:var(--accent)}
+.grid .cnt{display:block;font-size:9.5px;font-weight:400;color:var(--muted)}
+.tier{display:flex;justify-content:space-between;font-size:13px;padding:6px 11px;border-bottom:1px solid var(--line)}
+.tier:last-child{border-bottom:0}
+.tier .bar2{flex:1;margin:7px 10px 0;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.tier .bar2 i{display:block;height:100%;background:var(--accent)}
+.lb{position:fixed;inset:0;background:rgba(10,14,20,.88);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:50;padding:16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:82vh;border-radius:8px}
+.lb .x{position:absolute;top:10px;right:12px;width:40px;height:40px;border-radius:20px;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
+/* Phone home screen (embedded demo only) */
+.home{position:absolute;inset:0;z-index:5;display:none;flex-direction:column;align-items:center;color:#fff;overflow:hidden}
+.home.on{display:flex}
+.home svg.wp{position:absolute;inset:0;width:100%;height:100%}
+.home .sb{position:relative;width:100%;display:flex;justify-content:space-between;padding:8px 18px 0;font-size:12.5px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.home .clock{position:relative;margin-top:56px;font-size:64px;font-weight:300;line-height:1;letter-spacing:1px;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.home .date{position:relative;margin-top:6px;font-size:15px;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.home .widget{position:relative;margin:26px 18px 0;align-self:stretch;background:rgba(255,255,255,.84);color:#0e4f57;border-radius:16px;padding:12px 14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.home .widget b{display:block;font-size:13.5px}
+.home .widget span{display:block;font-size:12.5px;color:#2f6a70;margin-top:2px}
+.home .dock{position:relative;margin-top:auto;margin-bottom:26px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.home .dock button{width:58px;height:58px;border-radius:16px;border:0;background:#fff;color:#13808a;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center}
+.home .dock svg{width:30px;height:30px}
+.notif{position:absolute;left:10px;right:10px;top:10px;z-index:8;background:rgba(255,255,255,.97);color:#1f2a36;border-radius:16px;padding:10px 12px;box-shadow:0 8px 26px rgba(0,0,0,.22);transform:translateY(-140%);transition:transform .35s ease;border:1px solid #d3e5e6}
+.notif.on{transform:translateY(0)}
+.notif .nh{display:flex;justify-content:space-between;font-size:11.5px;color:#5b7f84;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.notif .nt{font-size:14px;font-weight:700;color:#0e4f57;margin-top:3px}
+.notif.urgent .nt{color:#b4462f}
+.notif .nb{font-size:13px;color:#3d4f53;margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media (prefers-reduced-motion:reduce){.notif{transition:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="crumbs" id="crumbs"><a href="../../index.html">AI Projects</a> / <a href="../../car-rental-booking-agent.html">Kereta Sewa Jalan-jalan Car Rental Agent</a></div>
+  <div class="app">
+    <div class="home" id="home" aria-label="Staff phone home screen">
+      <svg class="wp" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14525a"/><stop offset=".5" stop-color="#3f8f8f"/><stop offset=".8" stop-color="#f2b46b"/><stop offset="1" stop-color="#f6d6a2"/></linearGradient>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff2cf"/><stop offset=".5" stop-color="#ffd38a" stop-opacity=".8"/><stop offset="1" stop-color="#ffd38a" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="400" height="800" fill="url(#sky)"/>
+        <circle cx="290" cy="560" r="130" fill="url(#sun)"/>
+        <g fill="#0f3d43" opacity=".9"><rect x="40" y="470" width="14" height="120"/><rect x="28" y="452" width="38" height="22" rx="4"/><rect x="34" y="444" width="26" height="10" rx="3" fill="#bfe3e6"/></g>
+        <path d="M0 600 H400 V800 H0Z" fill="#244a4f"/>
+        <path d="M0 600 C120 590 260 592 400 600 V620 H0Z" fill="#1d3f44"/>
+        <g fill="#f6e7c4" opacity=".9"><rect x="20" y="700" width="40" height="5" rx="2"/><rect x="100" y="700" width="40" height="5" rx="2"/><rect x="180" y="700" width="40" height="5" rx="2"/><rect x="260" y="700" width="40" height="5" rx="2"/><rect x="340" y="700" width="40" height="5" rx="2"/></g>
+        <g fill="#ffffff" opacity=".92" transform="translate(150 250) rotate(-12)"><path d="M0 18 L120 12 L150 0 L162 4 L140 20 L120 24 L0 26 Z"/><path d="M70 14 L40 -18 L56 -18 L96 14 Z"/><path d="M70 22 L44 50 L60 50 L96 22 Z"/><path d="M8 16 L0 0 L10 0 L22 16 Z"/></g>
+        <g fill="#0f3d43"><rect x="230" y="640" width="72" height="22" rx="8"/><rect x="246" y="628" width="40" height="16" rx="6"/><circle cx="246" cy="664" r="8"/><circle cx="288" cy="664" r="8"/></g>
+      </svg>
+      <div class="sb"><span id="sb-time">10:00</span><span>4G &#9646;&#9646;&#9646;&#9646; 86%</span></div>
+      <div class="clock" id="home-clock">10:00</div>
+      <div class="date" id="home-date"></div>
+      <div class="widget"><b>Kereta Sewa staff</b><span id="home-widget"></span></div>
+      <div class="dock"><button id="home-open" aria-label="Open Kereta Sewa staff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><circle cx="7.5" cy="13" r="1"/><circle cx="16.5" cy="13" r="1"/></svg></button>Kereta Sewa staff</div>
+    </div>
+    <div class="notif" id="notif" role="status" aria-live="polite"><div class="nh"><span>Kereta Sewa staff</span><span>now</span></div><div class="nt" id="notif-t"></div><div class="nb" id="notif-b"></div></div>
+    <div class="bar"><b>Kereta Sewa staff</b><span id="today-text"></span></div>
+    <div class="toast" id="toast"></div>
+    <div class="scroll" id="scroll">
+      <section class="pane on" data-p="inbox" id="p-inbox"></section>
+      <section class="pane" data-p="today" id="p-today"></section>
+      <section class="pane" data-p="fleet" id="p-fleet"></section>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button data-t="inbox" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 13l2.5-7.5h13L21 13v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1.5 2.5h5L16 13h5"/></svg>Inbox<span class="badge" id="badge"></span></button>
+      <button data-t="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>Today</button>
+      <button data-t="fleet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Fleet</button>
+    </nav>
+  </div>
+  <footer id="footer">© 2026 Lee Yih Ven · Kereta Sewa staff phone · fictional company, names and numbers made up</footer>
+</div>
+<div class="lb" id="lb"><button class="x" aria-label="Close">×</button><img id="lb-img" alt="Receipt"></div>
+
+<script>/*__TOOLS_JS__*/</script>
+<script>
+"use strict";
+const SEED = /*__SEED_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const T = CarRentalTools, H = T.helpers;
+const LIVE_KEY = "kereta-sewa-v1", REPLAY_KEY = "kereta-sewa-replay-v1";   // the live key is shared with every version of the pages
+const params = new URLSearchParams(location.search);
+const EMBED = params.get("embed") === "1";
+const KEY = params.get("store") || LIVE_KEY;
+const REPLAY = KEY === REPLAY_KEY;
+if (params.get("theme") === "dark" || params.get("theme") === "light") document.documentElement.setAttribute("data-theme", params.get("theme"));
+if (EMBED) { document.body.classList.add("embed"); document.getElementById("crumbs").remove(); document.getElementById("footer").remove(); }
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const clone = o => JSON.parse(JSON.stringify(o));
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const LONGDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// ---------- the store ----------
+// Live: the shared demo data, moved to today (stateForNow), clock = now.
+// Replay: the copy the replay page writes, on the benchmark's fixed clock.
+let memory = null;
+function loadState() {
+  let raw = null;
+  try { const t = localStorage.getItem(KEY); if (t) raw = JSON.parse(t); } catch (e) {}
+  if (!raw && memory) raw = clone(memory);
+  if (REPLAY) { const s = raw && raw.bookings ? raw : clone(SEED); memory = clone(s); return s; }
+  if (raw && (!raw.meta || raw.meta.seed_version !== SEED.meta.seed_version)) raw = null;
+  const s = T.stateForNow(raw, clone(SEED), new Date());
+  if (!raw || s !== raw) writeRaw(s);
+  memory = clone(s);
+  return s;
+}
+function writeRaw(state) { memory = clone(state); try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+const channel = (() => { try { return "BroadcastChannel" in window ? new BroadcastChannel("kereta-sewa") : null; } catch (e) { return null; } })();
+function saveAndTell(state) { writeRaw(state); try { if (channel) channel.postMessage({ type: "changed", store: KEY }); } catch (e) {} }
+const nowIso = () => REPLAY ? ((state && state.meta && state.meta.replay_now) || T.SEED_NOW) : T.localIso(new Date());
+
+// ---------- view state ----------
+let state = null;
+const ui = { appOpen: false, tab: "inbox", cat: null, caseId: null, month: null, day: null, toast: "", charges: {} };
+let known = null, lastOpen = null, flashId = null;
+
+// ---------- inbox ----------
+const GROUP_LABEL = { urgent: "Urgent", requests: "Booking requests", cancels: "Cancellation requests", booking_rules: "Booking rules", existing_booking: "Existing booking", money_and_disputes: "Money and disputes", process: "Asks for a person and other" };
+const CAT_ORDER = ["urgent", "requests", "cancels", "booking_rules", "existing_booking", "money_and_disputes", "process"];
+const groupOf = r => Object.keys(T.HANDOVER_GROUPS).find(g => T.HANDOVER_GROUPS[g].includes(r)) || "process";
+const when = iso => iso ? `${H.dateText(iso)}, ${H.timeText(iso)}` : "";
+function ago(iso) {
+  if (!iso) return "";
+  const m = Math.round(H.toMin(nowIso()) - H.toMin(iso));
+  if (isNaN(m)) return "";
+  if (m < 1) return "just now";
+  if (m < 60) return `${m} min ago`;
+  if (m < 1440) return `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} min` : ""} ago`;
+  return H.dateText(iso);
+}
+function ruleLink(id) {
+  const c = CLAUSES[id];
+  return c ? `<a class="rule" href="resources/${encodeURI(c.page)}#${encodeURIComponent(id)}" target="_blank" rel="noopener" title="${esc(c.text)}">${esc(id)}</a>` : `<span class="rule">${esc(id)}</span>`;
+}
+const imgSrc = p => (/^(data:|blob:|https?:)/.test(p) ? p : p);
+function items() {
+  const out = [];
+  for (const h of state.handovers.filter(x => x.status === "open"))
+    out.push({ id: "ho:" + h.handover_id, cat: h.urgent ? "urgent" : groupOf(h.reason), at: h.time, ref: h.handover_id, who: (h.customer && (h.customer.name || h.customer.mobile)) || "customer not named", title: h.reason, h });
+  for (const b of state.bookings.filter(x => x.status === "pending"))
+    out.push({ id: "rq:" + b.booking_ref, cat: "requests", at: b.requested_at, ref: b.booking_ref, who: b.customer_name, title: b.payment.reported ? "payment reported" : "no payment reported", b, unpaid: !b.payment.reported });
+  for (const c of state.cancellations.filter(x => x.status === "pending")) {
+    const b = state.bookings.find(x => x.booking_ref === c.booking_ref);
+    out.push({ id: "cx:" + c.cancellation_id, cat: "cancels", at: c.requested_at, ref: c.booking_ref, who: b ? b.customer_name : "", title: "refund " + H.rm(c.refund_rm), c, b });
+  }
+  return out;
+}
+const sig = i => i.id;
+const row = (k, v, cls) => v ? `<div class="kv ${cls || ""}"><span class="k">${k}</span>${v}</div>` : "";
+function contactBtns(mobile) {
+  return mobile ? `<button class="btn alt" data-contact="call" data-to="${esc(mobile)}">Call</button><button class="btn alt" data-contact="WhatsApp" data-to="${esc(mobile)}">WhatsApp</button>` : "";
+}
+function cardHtml(it) {
+  if (it.h) {
+    const h = it.h, mob = (h.customer && h.customer.mobile) || (h.contact && h.contact.mobile) || "";
+    const tried = (h.checks_tried || []).map(a => `${a.mobile_last4} at ${H.timeText(a.at)}`).join(", ");
+    const rec = h.reason === "delivery_quote" ? `Set the delivery charge on ${h.booking} under Booking requests; this item closes then.` : h.urgent ? "Call the customer now." : "Contact the customer, then press Done.";
+    return `<div class="card${h.urgent ? " urgent" : ""}" id="card-${esc(it.id)}"><div class="ch"><span>${esc(h.handover_id)} · ${esc(h.reason)}</span><small>${esc(H.timeText(h.time))} · ${esc(ago(h.time))}</small></div>` +
+      row("Customer", esc([h.customer && h.customer.name, mob].filter(Boolean).join(" · ") || "not given") + (h.contact && h.contact.chat_id ? `<span class="m"> · chat ${esc(h.contact.channel || "")} ${esc(h.contact.chat_id)}</span>` : "")) +
+      row("Booking", esc(h.booking || "none")) +
+      row("What the customer asked", esc(h.customer_asked)) +
+      row("Customer’s words", h.customer_words ? `<span class="q">“${esc(h.customer_words)}”</span>` : "") +
+      row("Checks tried", tried ? esc(`Mobile endings ${tried}; nothing shared`) : "") +
+      row("Rules", (h.clauses || []).map(ruleLink).join("") || `<span class="m">none named</span>`) +
+      row("Told the customer", h.agent_told ? `<span class="pre">${esc(h.agent_told)}</span>` : "") +
+      row("Recommended action", esc(rec), "rec") +
+      `<div class="btns">${contactBtns(mob)}<button class="btn done" data-act="done" data-id="${esc(h.handover_id)}">Done</button></div></div>`;
+  }
+  if (it.b && !it.c) {
+    const b = it.b, pays = (state.payments || []).filter(p => p.booking_ref === b.booking_ref), p = pays[pays.length - 1];
+    const kind = p ? p.method : b.payment.reported;
+    let pay = !kind ? "The customer has not reported paying the deposit." : kind === "word" ? "The customer says paid, no receipt. Check the bank." : "Receipt reported. Check the bank.";
+    if (p && p.method === "receipt" && p.fields) pay = `Receipt ${H.rm(p.fields.amount_rm)}, reference ${esc(p.fields.reference)}. ` + (p.differences.length ? p.differences.map(d => `<span class="diff">${esc(d)}</span>`).join("") : "Matches the booking. Check the bank.") +
+      `<div class="thumbs"><button data-img="${esc(imgSrc(p.image))}" aria-label="Enlarge receipt"><img src="${esc(imgSrc(p.image))}" alt="Receipt for ${esc(b.booking_ref)}"></button></div>`;
+    const away = !!b.delivery, set = away && b.delivery.charge_rm != null;
+    const place = b.pickup_place === b.return_place ? b.pickup_place : `Pickup ${b.pickup_place}\nReturn ${b.return_place}`;
+    return `<div class="card" id="card-${esc(it.id)}"><div class="ch"><span>${esc(b.booking_ref)} · ${esc(kind ? "payment reported" : "booking request")}</span><small>${esc(H.timeText(b.requested_at))} · ${esc(ago(b.requested_at))}</small></div>` +
+      row("Customer", esc(`${b.customer_name} · ${b.mobile}`) + `<span class="m"> · licence ${esc(b.licence_no)}</span>`) +
+      row("Car", esc(`${b.model} · ${b.tier} · ${b.car_id}`)) +
+      row("Pickup and return", esc(`${when(b.pickup_at)} to ${when(b.return_at)}`)) +
+      row("Place", `<span class="pre">${esc(place)}</span>`) +
+      row("Amount", esc(`Rental ${H.rm(b.price_rm)} · deposit ${H.rm(b.deposit_rm)}` + (away ? (set ? ` · delivery ${H.rm(b.delivery.charge_rm)}` : " · delivery charge not set") : ""))) +
+      row("Payment", pay) +
+      (b.after_hours ? row("Made", "Outside 9am to 6pm: review from 9am (" + ruleLink("R3") + ")") : "") +
+      row("Told the customer", b.told_customer ? `<span class="pre">${esc(b.told_customer)}</span>` : "") +
+      (away && !set ? `<div class="charge"><label for="ch-${esc(b.booking_ref)}">Delivery charge (RM)</label><input id="ch-${esc(b.booking_ref)}" inputmode="numeric" data-charge="${esc(b.booking_ref)}" value="${esc(ui.charges[b.booking_ref] || "")}" placeholder="0"><button class="btn small" data-act="setDeliveryCharge" data-id="${esc(b.booking_ref)}">Set</button><span>RM 1 per km from KLIA (${ruleLink("R11")}). The agent quoted no figure.</span></div>` : "") +
+      row("Recommended action", esc(`Find ${H.rm(b.deposit_rm)} with reference ${b.booking_ref} in the bank, then Confirm; if it is not there, Reject.`), "rec") +
+      `<div class="btns"><button class="btn" data-act="confirm" data-id="${esc(b.booking_ref)}">Confirm</button><button class="btn warn" data-act="reject" data-id="${esc(b.booking_ref)}">Reject</button></div></div>`;
+  }
+  const c = it.c, b = it.b;
+  return `<div class="card" id="card-${esc(it.id)}"><div class="ch"><span>${esc(c.cancellation_id)} · ${esc(c.booking_ref)}</span><small>${esc(H.timeText(c.requested_at))} · ${esc(ago(c.requested_at))}</small></div>` +
+    row("Customer", b ? esc(`${b.customer_name} · ${b.mobile} · verified`) : "") +
+    row("Booking", b ? esc(`${b.model} · ${when(b.pickup_at)} to ${when(b.return_at)}`) : "") +
+    row("Quoted refund", `${esc(H.rm(c.refund_rm))} under ${ruleLink(c.clause)}: ${esc(c.clause === "R19" ? "24 hours or more before pickup" : "less than 24 hours before pickup, deposit kept")}`) +
+    row("Told the customer", c.told_customer ? `<span class="pre">${esc(c.told_customer)}</span>` : "") +
+    row("Recommended action", esc(c.refund_rm ? `Confirm, then refund ${H.rm(c.refund_rm)} to the original payment method within 24 hours.` : "Confirm; the deposit is kept."), "rec") +
+    `<div class="btns">${contactBtns(b && b.mobile)}<button class="btn done" data-act="confirmCancellation" data-id="${esc(c.cancellation_id)}">Confirm cancellation</button></div></div>`;
+}
+function renderInbox() {
+  const all = items(), counts = {};
+  all.forEach(i => (counts[i.cat] = (counts[i.cat] || 0) + 1));
+  const cats = Object.keys(counts).sort((a, b) => (a === "urgent" ? -1 : b === "urgent" ? 1 : 0) || counts[b] - counts[a] || CAT_ORDER.indexOf(a) - CAT_ORDER.indexOf(b));
+  if (!ui.cat || !counts[ui.cat]) { ui.cat = cats[0] || null; ui.caseId = null; }
+  let html = `<div class="m sum">${all.length ? `${all.length} waiting · urgent first, then by number of cases` : "Nothing waiting"}</div>`;
+  html += `<div class="chips">` + cats.map(c => `<button class="chip${c === "urgent" ? " urgent" : ""}${c === ui.cat ? " on" : ""}" data-cat="${c}">${esc(GROUP_LABEL[c])}<span class="n" id="n-${c}">${counts[c]}</span></button>`).join("") + `</div>`;
+  const list = all.filter(i => i.cat === ui.cat).sort((a, b) => ui.cat === "requests" ? ((a.unpaid ? 0 : 1) - (b.unpaid ? 0 : 1)) || String(a.at).localeCompare(String(b.at)) : String(a.at).localeCompare(String(b.at)));
+  if (!list.some(i => i.id === ui.caseId)) ui.caseId = list.length ? list[0].id : null;
+  if (!list.length) html += `<div class="empty">All caught up. Requests and handovers from the agent appear here.</div>`;
+  else {
+    html += `<div class="list">` + list.map(i => `<button data-case="${esc(i.id)}" class="${i.id === ui.caseId ? "on" : ""}"><span><b>${esc(i.ref)}</b> · ${esc(i.who)}</span><small>${esc(ago(i.at))}</small></button>`).join("") + `</div>`;
+    const it = list.find(i => i.id === ui.caseId);
+    if (it) html += cardHtml(it);
+  }
+  document.getElementById("p-inbox").innerHTML = html;
+  const badge = document.getElementById("badge");
+  badge.textContent = all.length ? String(all.length) : "";
+  if (lastOpen !== null && all.length > lastOpen) { badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump"); }
+  if (flashId && ui.caseId === flashId) {
+    const card = document.getElementById("card-" + flashId);
+    if (card) { card.classList.add("flash"); setTimeout(() => card.classList.remove("flash"), 1600); }
+    flashId = null;
+  }
+  return all.length;
+}
+
+// ---------- Today ----------
+const ACTIVE = ["pending", "confirmed", "rented", "cancellation_requested"];
+function renderToday() {
+  const now = nowIso(), today = now.slice(0, 10);
+  const picks = state.bookings.filter(b => b.pickup_at.slice(0, 10) === today && ["pending", "confirmed", "cancellation_requested"].includes(b.status));
+  const rets = state.bookings.filter(b => b.return_at.slice(0, 10) === today && b.status === "rented");
+  const lines = picks.map(b => ({ t: b.pickup_at.slice(11, 16), html: `<span class="tag ${b.status === "pending" ? "t-pend" : "t-pick"}">Pickup${b.status === "pending" ? ", pending" : ""}</span> ${esc(b.booking_ref)} · ${esc(b.model)} · ${esc(b.customer_name)}<br><span class="m">${esc(b.pickup_place)}</span>` }))
+    .concat(rets.map(b => ({ t: b.return_at.slice(11, 16), html: `<span class="tag t-ret">Return</span> ${esc(b.booking_ref)} · ${esc(b.model)} · ${esc(b.customer_name)}<br><span class="m">${esc(b.return_place)}</span>` })))
+    .sort((a, b) => a.t.localeCompare(b.t));
+  const out = state.bookings.filter(b => b.status === "rented").length;
+  const busy = new Set(state.bookings.filter(b => ACTIVE.includes(b.status) && b.pickup_at.slice(0, 10) <= today && b.return_at.slice(0, 10) >= today).map(b => b.car_id));
+  const maint = state.cars.filter(c => c.status === "maintenance").length;
+  let html = `<div class="sec">${esc(LONGDAYS[new Date(today + "T00:00:00Z").getUTCDay()])}, ${esc(H.dateText(today))}, now ${esc(H.timeText(now))}</div>`;
+  html += `<div class="stats"><div><b>${out}</b>cars out on rental</div><div><b>${state.cars.length - busy.size - maint}</b>cars free today</div><div><b>${picks.length}</b>pickups today</div><div><b>${rets.length}</b>returns due today</div></div>`;
+  html += `<div class="sec">Pickups and returns, 9am to 6pm</div>`;
+  html += lines.length ? `<div class="card">${lines.map(l => `<div class="line"><span class="h">${esc(H.timeText(today + "T" + l.t))}</span><span>${l.html}</span></div>`).join("")}</div>` : `<div class="empty">No pickups or returns today.</div>`;
+  const tom = H.addDays(today, 1);
+  const tp = state.bookings.filter(b => b.pickup_at.slice(0, 10) === tom && ["pending", "confirmed"].includes(b.status));
+  html += `<div class="sec">Coming up</div><div class="card"><div class="line"><span>Tomorrow, ${esc(H.dateText(tom))}: ${tp.length} pickup${tp.length === 1 ? "" : "s"}${tp.length ? ", first at " + esc(H.timeText(tp.map(b => b.pickup_at).sort()[0])) : ""}. <a href="#" data-goto="${esc(tom)}">Open in Fleet</a></span></div></div>`;
+  document.getElementById("p-today").innerHTML = html;
+}
+
+// ---------- Fleet: a month of days, then the chosen day by tier ----------
+function dayInfo(d) {
+  const on = state.bookings.filter(b => ACTIVE.concat(["returned"]).includes(b.status) && b.pickup_at.slice(0, 10) <= d && b.return_at.slice(0, 10) >= d);
+  return { on, cars: new Set(on.map(b => b.car_id)) };
+}
+function renderFleet() {
+  const today = nowIso().slice(0, 10);
+  const days = []; for (let d = state.meta.seed_start; d <= state.meta.seed_end; d = H.addDays(d, 1)) days.push(d);
+  const months = [...new Set(days.map(d => d.slice(0, 7)))];
+  if (!ui.month || !months.includes(ui.month)) ui.month = months.includes(today.slice(0, 7)) ? today.slice(0, 7) : months[0];
+  if (!ui.day || !days.includes(ui.day)) ui.day = days.includes(today) ? today : days[0];
+  const [y, m] = ui.month.split("-").map(Number), idx = months.indexOf(ui.month);
+  let html = `<div class="mhead"><button data-mon="-1" ${idx <= 0 ? "disabled" : ""} aria-label="Previous month">&larr;</button><b>${MONTHS[m - 1]} ${y}</b><button data-mon="1" ${idx >= months.length - 1 ? "disabled" : ""} aria-label="Next month">&rarr;</button></div>`;
+  html += `<div class="grid">` + ["M", "T", "W", "T", "F", "S", "S"].map(d => `<div class="wd">${d}</div>`).join("");
+  const first = new Date(Date.UTC(y, m - 1, 1)).getUTCDay(), pad = (first + 6) % 7, last = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  for (let p = 0; p < pad; p++) html += `<div class="pad"></div>`;
+  for (let d = 1; d <= last; d++) {
+    const iso = `${ui.month}-${String(d).padStart(2, "0")}`;
+    if (!days.includes(iso)) { html += `<div class="pad"></div>`; continue; }
+    const n = dayInfo(iso).cars.size, pct = Math.round(100 * n / state.cars.length);
+    html += `<button class="${[iso < today ? "past" : "", iso === today ? "today" : "", iso === ui.day ? "sel" : ""].filter(Boolean).join(" ")}" data-day="${iso}" title="${n} of ${state.cars.length} cars booked">${d}<span class="occ"><i style="width:${pct}%"></i></span><span class="cnt">${n}/${state.cars.length}</span></button>`;
+  }
+  html += `</div>`;
+  const info = dayInfo(ui.day);
+  html += `<div class="sec">${esc(H.dateText(ui.day))}${ui.day === today ? " · today" : ""} · ${info.cars.size} of ${state.cars.length} cars booked</div><div class="card">`;
+  html += Object.keys(T.TIERS).map(t => {
+    const cs = state.cars.filter(c => c.tier === t), n = cs.filter(c => info.cars.has(c.car_id)).length, mt = cs.filter(c => c.status === "maintenance").length;
+    return `<div class="tier"><span>${esc(t)}</span><span class="bar2"><i style="width:${Math.round(100 * n / cs.length)}%"></i></span><span class="m">${n} of ${cs.length}${mt ? `, ${mt} in maintenance` : ""}</span></div>`;
+  }).join("") + `</div>`;
+  const moves = info.on.filter(b => b.pickup_at.slice(0, 10) === ui.day || b.return_at.slice(0, 10) === ui.day).sort((a, b) => a.pickup_at.localeCompare(b.pickup_at));
+  html += `<div class="sec">Pickups and returns this day (${moves.length})</div>`;
+  html += moves.length ? `<div class="card">${moves.slice(0, 20).map(b => {
+    const p = b.pickup_at.slice(0, 10) === ui.day;
+    return `<div class="line"><span class="h">${esc(H.timeText(p ? b.pickup_at : b.return_at))}</span><span><span class="tag ${b.status === "pending" ? "t-pend" : p ? "t-pick" : "t-ret"}">${p ? "Pickup" : "Return"}</span> ${esc(b.booking_ref)} · ${esc(b.model)} · ${esc(b.status.replace("_", " "))}</span></div>`;
+  }).join("")}${moves.length > 20 ? `<div class="line m">and ${moves.length - 20} more</div>` : ""}</div>` : `<div class="empty">None.</div>`;
+  document.getElementById("p-fleet").innerHTML = html;
+}
+
+// ---------- home screen and notifications (embedded demo) ----------
+function renderHome(open) {
+  const now = nowIso();
+  document.getElementById("home-clock").textContent = now.slice(11, 16);
+  document.getElementById("sb-time").textContent = now.slice(11, 16);
+  document.getElementById("home-date").textContent = `${LONGDAYS[new Date(now.slice(0, 10) + "T00:00:00Z").getUTCDay()]}, ${+now.slice(8, 10)} ${MONTHS[+now.slice(5, 7) - 1]}`;
+  document.getElementById("home-widget").textContent = open ? `${open} item${open === 1 ? "" : "s"} waiting in the inbox. The agent is answering customers.` : "Nothing needs you right now. The agent is answering customers.";
+  document.getElementById("home").classList.toggle("on", EMBED && (!ui.appOpen || ui.holdHome));
+}
+const REDUCED = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+let notifTimer = null;
+function notify(it, then) {
+  const n = document.getElementById("notif");
+  n.classList.toggle("urgent", it.cat === "urgent");
+  document.getElementById("notif-t").textContent = `${GROUP_LABEL[it.cat]} · ${it.ref}`;
+  document.getElementById("notif-b").textContent = it.h ? it.h.customer_asked : it.c ? `Cancellation, refund ${H.rm(it.c.refund_rm)}` : `${it.b.model}, ${when(it.b.pickup_at)}${it.b.payment.reported ? ", payment reported" : ""}`;
+  n.classList.add("on");
+  clearTimeout(notifTimer);
+  notifTimer = setTimeout(() => { n.classList.remove("on"); then(); }, REDUCED ? 0 : 1800);
+}
+function render() {
+  const now = nowIso();
+  document.getElementById("today-text").textContent = `${H.dateText(now)}, ${H.timeText(now)}`;
+  document.getElementById("toast").innerHTML = ui.toast ? `<span>${esc(ui.toast)}</span><button data-toast-x aria-label="Dismiss">×</button>` : "";
+  const open = renderInbox(); renderToday(); renderFleet(); renderHome(open);
+  lastOpen = open;
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === ui.tab));
+  document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.dataset.p === ui.tab));
+}
+
+// ---------- live updates: a new item arrives as a notification, then the app opens on its card ----------
+function reload() {
+  state = loadState();
+  const all = items(), now = all.map(sig);
+  if (known) {
+    const fresh = all.filter(i => !known.has(sig(i)));
+    known = new Set(now);
+    if (fresh.length) {
+      const it = fresh.find(i => i.cat === "urgent") || fresh[fresh.length - 1];
+      const show = () => { ui.holdHome = false; ui.appOpen = true; ui.tab = "inbox"; ui.cat = it.cat; ui.caseId = it.id; flashId = it.id; document.getElementById("scroll").scrollTop = 0; render(); };
+      if (EMBED) { ui.holdHome = document.getElementById("home").classList.contains("on"); render(); notify(it, show); }
+      else show();
+      return;
+    }
+  }
+  known = new Set(now);
+  render();
+}
+if (channel) channel.onmessage = e => { const d = e.data || {}; if (!d.store || d.store === KEY || (d.type === "reset" && !REPLAY)) { if (d.type === "reset") ui.appOpen = false; reload(); } };
+window.addEventListener("storage", e => { if (e.key === KEY || e.key === null) reload(); });
+window.KeretaStaff = { reload, home: () => { ui.appOpen = false; known = null; reload(); } };
+document.getElementById("home-open").addEventListener("click", () => { ui.appOpen = true; render(); });
+
+// ---------- actions ----------
+function act(fn, id, extra) {
+  state = loadState();
+  const r = fn(state, id, nowIso(), extra);
+  if (!r.ok) { ui.toast = r.message; render(); return; }
+  saveAndTell(state);
+  known = new Set(items().map(sig));
+  ui.toast = r.message ? "Sent to the customer: " + r.message : `${id} closed.`;
+  ui.caseId = null;
+  render();
+}
+document.getElementById("lb").addEventListener("click", () => document.getElementById("lb").classList.remove("on"));
+document.addEventListener("keydown", e => { if (e.key === "Escape") document.getElementById("lb").classList.remove("on"); });
+document.addEventListener("input", e => { if (e.target.dataset && e.target.dataset.charge) ui.charges[e.target.dataset.charge] = e.target.value; });
+document.querySelector(".app").addEventListener("click", e => {
+  const t = e.target;
+  if (t.closest("[data-toast-x]")) { ui.toast = ""; render(); return; }
+  const tab = t.closest("[data-t]");
+  if (tab) { ui.tab = tab.dataset.t; render(); document.getElementById("scroll").scrollTop = 0; return; }
+  const cat = t.closest("[data-cat]");
+  if (cat) { ui.cat = cat.dataset.cat; ui.caseId = null; render(); return; }
+  const cs = t.closest("[data-case]");
+  if (cs) { ui.caseId = cs.dataset.case; render(); const c = document.getElementById("card-" + ui.caseId); if (c) c.scrollIntoView({ block: "nearest", behavior: "smooth" }); return; }
+  const img = t.closest("[data-img]");
+  if (img) { document.getElementById("lb-img").src = img.dataset.img; document.getElementById("lb").classList.add("on"); return; }
+  const a = t.closest("[data-act]");
+  if (a) {
+    if (a.dataset.act === "setDeliveryCharge") act(T.STAFF.setDeliveryCharge, a.dataset.id, String(ui.charges[a.dataset.id] || "").replace(/[^0-9.]/g, "") || "x");
+    else act(T.STAFF[a.dataset.act], a.dataset.id);
+    return;
+  }
+  const ct = t.closest("[data-contact]");
+  if (ct) { ui.toast = `Demo: this would open ${ct.dataset.contact === "call" ? "a call" : "WhatsApp"} to ${ct.dataset.to}. The numbers are made up.`; render(); return; }
+  const mon = t.closest("[data-mon]");
+  if (mon) {
+    const days = []; for (let d = state.meta.seed_start; d <= state.meta.seed_end; d = H.addDays(d, 1)) days.push(d);
+    const months = [...new Set(days.map(d => d.slice(0, 7)))], i = months.indexOf(ui.month) + Number(mon.dataset.mon);
+    if (months[i]) { ui.month = months[i]; ui.day = days.find(d => d.startsWith(ui.month)); }
+    render(); return;
+  }
+  const day = t.closest("[data-day]");
+  if (day) { ui.day = day.dataset.day; render(); return; }
+  const go = t.closest("[data-goto]");
+  if (go) { e.preventDefault(); ui.day = go.dataset.goto; ui.month = ui.day.slice(0, 7); ui.tab = "fleet"; render(); return; }
+});
+if (!EMBED) ui.appOpen = true;
+reload();
+</script>
+</body>
+</html>

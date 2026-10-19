@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "car-rental": {
+      "command": "node",
+      "args": ["mcp_server.mjs"]
+    }
+  }
+}

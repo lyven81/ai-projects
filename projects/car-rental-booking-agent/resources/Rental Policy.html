@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Rental Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../car-rental-booking-agent.html" style="color:inherit;text-decoration:none">Kereta Sewa Jalan-jalan Car Rental Agent</a></div><h1>Rental Policy</h1><nav id="toc"></nav></div>
+<p><strong>Kereta Sewa Jalan-jalan</strong> is a fictional car rental company at KLIA used for demonstration. This policy is an MCP resource: the AI agent reads it to answer customers, and the booking tools enforce the rules marked Code. Rates are in the <a href="Car Inventory.html">Car Inventory</a>.</p>
+<p><strong>Enforced by:</strong> <b>Code</b> means a tool refuses or calculates it; <b>Staff</b> means a person decides; <b>Prompt</b> means the agent states it. Anything not written here goes to staff.</p>
+<h2>1. Hours</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R1"><td>R1</td><td>Bookings, pickup and return are handled from 9am to 6pm, seven days a week.</td><td>Code</td></tr>
+<tr id="R2"><td>R2</td><td>A pickup or return outside 9am to 6pm is passed to staff to arrange.</td><td>Code (handover)</td></tr>
+<tr id="R3"><td>R3</td><td>A booking request made outside 9am to 6pm is recorded as pending; staff review it from 9am.</td><td>Code</td></tr>
+</table>
+<h2>2. Booking and deposit</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R4"><td>R4</td><td>A booking needs the customer's name, a mobile number (Malaysian or international) and a driving licence number. The licence itself is checked by staff at pickup (R43).</td><td>Code (details present)</td></tr>
+<tr id="R5"><td>R5</td><td>Every booking needs a deposit of RM 100, paid when booking.</td><td>Code</td></tr>
+<tr id="R6"><td>R6</td><td>A booking request blocks the car until staff confirm or reject it. A car blocked or rented for any part of the requested period cannot be booked.</td><td>Code</td></tr>
+<tr id="R7"><td>R7</td><td>The customer reports the deposit payment by uploading the receipt or by saying it was paid. Staff check the bank record; the booking stays pending until staff confirm it.</td><td>Code (no confirm tool)</td></tr>
+<tr id="R8"><td>R8</td><td>One mobile number may hold up to 2 car bookings at the same time. More cars are passed to staff.</td><td>Code</td></tr>
+<tr id="R9"><td>R9</td><td>The deposit is released within 48 hours after the car is returned with no damage and a full tank (R18).</td><td>Staff</td></tr>
+</table>
+<h2>3. Pickup, return and delivery</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R10"><td>R10</td><td>Pickup and return at KLIA are free.</td><td>Code</td></tr>
+<tr id="R11"><td>R11</td><td>Pickup or return at any other place costs RM 1 per km from KLIA. The staff member who delivers or collects the car works out the distance.</td><td>Staff</td></tr>
+</table>
+<h2>4. Rental period and price</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R12"><td>R12</td><td>The minimum rental is 2 hours. Up to 5 hours is charged by the hour; 6 hours or more counts as one day at the daily rate.</td><td>Code</td></tr>
+<tr id="R13"><td>R13</td><td>Beyond whole days, extra hours are charged at the hourly rate, capped at one more day.</td><td>Code</td></tr>
+<tr id="R14"><td>R14</td><td>Whole weeks are charged at the weekly rate and remaining days at the daily rate, capped at the two-week rate.</td><td>Code</td></tr>
+<tr id="R15"><td>R15</td><td>A rented car can be driven at any hour, every day of the week, for the whole rental period.</td><td>Prompt</td></tr>
+</table>
+<h2>5. Bookings passed to staff</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R16"><td>R16</td><td>A rental that starts more than 30 days from today, or on the day of the request, is passed to staff. The agent does not block the car.</td><td>Code (handover)</td></tr>
+<tr id="R17"><td>R17</td><td>A rental longer than 2 weeks is passed to staff, who may offer a long-term rate. The agent does not quote or promise a discount.</td><td>Code (handover)</td></tr>
+</table>
+<h2>6. Fuel</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R18"><td>R18</td><td>Every car is released with a full tank and must be returned with a full tank. Otherwise the cost of refuelling is deducted from the deposit.</td><td>Staff</td></tr>
+</table>
+<h2>7. Cancellation and refund</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R19"><td>R19</td><td>A cancellation 24 hours or more before pickup: the RM 100 deposit is refunded in full.</td><td>Code (quote)</td></tr>
+<tr id="R20"><td>R20</td><td>A cancellation less than 24 hours before pickup: the deposit is kept.</td><td>Code (quote)</td></tr>
+<tr id="R21"><td>R21</td><td>No-show: the car is not picked up within 2 hours of the pickup time without notice. The booking is cancelled and the deposit kept.</td><td>Staff</td></tr>
+<tr id="R22"><td>R22</td><td>A cancellation is a request until staff confirm it. The agent records it; staff process the refund.</td><td>Code (no cancel tool)</td></tr>
+<tr id="R23"><td>R23</td><td>Refunds go back to the original payment method within 24 hours of staff confirming the cancellation.</td><td>Staff</td></tr>
+<tr id="R24"><td>R24</td><td>If the company cancels (car unavailable), the customer chooses a full deposit refund or a car of the same or higher tier at the same price.</td><td>Staff</td></tr>
+<tr id="R25"><td>R25</td><td>Returning early: no refund for unused hours or days.</td><td>Prompt</td></tr>
+<tr id="R26"><td>R26</td><td>A booking request that staff reject because no payment was found is cancelled; nothing is charged or refunded.</td><td>Staff</td></tr>
+<tr id="R27"><td>R27</td><td>A cancellation for an emergency (flight cancelled, medical) less than 24 hours before pickup is decided by staff, with proof.</td><td>Staff</td></tr>
+<tr id="R28"><td>R28</td><td>Changing the dates, time or car of a booking is handled by staff.</td><td>Code (no change tool)</td></tr>
+</table>
+<h2>8. Late return</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R29"><td>R29</td><td>A grace period of 30 minutes after the return time, with no charge.</td><td>Staff</td></tr>
+<tr id="R30"><td>R30</td><td>Beyond the grace period, each hour or part hour is charged at the tier's hourly rate.</td><td>Staff</td></tr>
+<tr id="R31"><td>R31</td><td>Late charges for one day are capped at the daily rate; 6 hours or more late is charged as one extra day.</td><td>Staff</td></tr>
+<tr id="R32"><td>R32</td><td>To extend, the customer asks at least 2 hours before the return time; staff confirm, subject to availability.</td><td>Code (handover)</td></tr>
+<tr id="R33"><td>R33</td><td>Late charges are deducted from the deposit; any balance is paid at return.</td><td>Staff</td></tr>
+<tr id="R34"><td>R34</td><td>A late return that ends after 6pm needs staff to arrange the return.</td><td>Code (handover)</td></tr>
+<tr id="R35"><td>R35</td><td>A car not returned and not contactable 24 hours after the return time is treated as unauthorised use and may be reported to the police.</td><td>Staff</td></tr>
+<tr id="R36"><td>R36</td><td>The car is returned to KLIA. Collection from elsewhere is arranged by staff at RM 1 per km, worked out by the staff member who collects it.</td><td>Staff</td></tr>
+<tr id="R37"><td>R37</td><td>If a late return stops the next customer's booking, the company offers the next customer another car; the late customer pays the late charges only.</td><td>Staff</td></tr>
+<tr id="R38"><td>R38</td><td>The customer tells the company as soon as they know they will be late.</td><td>Code (handover)</td></tr>
+</table>
+<h2>9. Driver and vehicle use</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr>
+<tr id="R39"><td>R39</td><td>The driver is 20 to 70 years old.</td><td>Staff (at pickup)</td></tr>
+<tr id="R40"><td>R40</td><td>The driver has held a full licence for at least 2 years. Probationary (P) licences are not accepted.</td><td>Staff (at pickup)</td></tr>
+<tr id="R41"><td>R41</td><td>A Malaysian class D licence is accepted.</td><td>Staff (at pickup)</td></tr>
+<tr id="R42"><td>R42</td><td>A foreign driver needs a valid national licence plus an International Driving Permit, unless the licence is in English.</td><td>Staff (at pickup)</td></tr>
+<tr id="R43"><td>R43</td><td>At pickup, the driver shows the licence and IC or passport; the name must match the booking.</td><td>Staff (at pickup)</td></tr>
+<tr id="R44"><td>R44</td><td>Only the person who booked may drive. Damage while anyone else drives is charged to the renter in full.</td><td>Staff</td></tr>
+<tr id="R45"><td>R45</td><td>No smoking in the car. A cleaning fee is deducted from the deposit if the car smells of smoke.</td><td>Staff</td></tr>
+<tr id="R46"><td>R46</td><td>No pets, unless agreed with staff in advance.</td><td>Staff</td></tr>
+<tr id="R47"><td>R47</td><td>The car may not be driven out of Peninsular Malaysia (no Singapore or Thailand) without staff approval.</td><td>Code (handover)</td></tr>
+<tr id="R48"><td>R48</td><td>Traffic summonses and tolls during the rental are paid by the renter.</td><td>Prompt</td></tr>
+</table>
+<h2>10. How the agent uses this policy</h2>
+<table><tr><th>Enquiry</th><th>What the agent does</th></tr>
+<tr><td>Covered by policy</td><td>Answers from this policy and names the rule (e.g. R12).</td></tr>
+<tr><td>Contradicts policy</td><td>Declines, states the rule that applies, and offers what the rule does allow. No exceptions are made in chat.</td></tr>
+<tr><td>Not covered by policy</td><td>Does not guess. Hands the enquiry to staff with the structured handover.</td></tr>
+<tr><td>Policy neither says yes nor no</td><td>Does not choose a reading. Hands the enquiry to staff, naming the rule that seemed to apply and why it is unclear.</td></tr></table>
+<footer>&copy; 2026 Lee Yih Ven &middot; Rental Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

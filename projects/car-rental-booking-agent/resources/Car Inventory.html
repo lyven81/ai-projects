@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Car Inventory</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../car-rental-booking-agent.html" style="color:inherit;text-decoration:none">Kereta Sewa Jalan-jalan Car Rental Agent</a></div><h1>Car Inventory</h1><nav id="toc"></nav></div>
+<p><strong>Kereta Sewa Jalan-jalan</strong> is a fictional car rental company at KLIA used for demonstration. This inventory is an MCP resource: the AI agent reads it to explain the tiers and rates, and the booking tools price every rental from it. The rules are in the <a href="Rental Policy.html">Rental Policy</a>.</p>
+<h2>1. Tiers and rates</h2>
+<table><tr><th>Tier</th><th>Seats</th><th>Cars</th><th>Hourly</th><th>Daily</th><th>Weekly</th></tr>
+<tr><td>Standard</td><td>4</td><td>20</td><td>RM 20</td><td>RM 120</td><td>RM 700</td></tr>
+<tr><td>Premium</td><td>4</td><td>24</td><td>RM 35</td><td>RM 200</td><td>RM 1,200</td></tr>
+<tr><td>SUV</td><td>7</td><td>6</td><td>RM 65</td><td>RM 380</td><td>RM 2,300</td></tr>
+<tr><td>MPV</td><td>7</td><td>6</td><td>RM 120</td><td>RM 700</td><td>RM 4,200</td></tr>
+</table>
+<h2>2. Models</h2>
+<table><tr><th>Tier</th><th>Model</th><th>Seats</th><th>Cars</th></tr>
+<tr><td>Standard</td><td>Perodua Axia</td><td>4</td><td>10</td></tr>
+<tr><td>Standard</td><td>Perodua Myvi</td><td>4</td><td>10</td></tr>
+<tr><td>Premium</td><td>Honda City</td><td>4</td><td>10</td></tr>
+<tr><td>Premium</td><td>Toyota Vios</td><td>4</td><td>10</td></tr>
+<tr><td>SUV</td><td>Toyota Fortuner</td><td>7</td><td>3</td></tr>
+<tr><td>SUV</td><td>Mazda CX-8</td><td>7</td><td>3</td></tr>
+<tr><td>MPV</td><td>Toyota Alphard</td><td>7</td><td>3</td></tr>
+<tr><td>MPV</td><td>Toyota Vellfire</td><td>7</td><td>3</td></tr>
+<tr><td>Premium</td><td>Toyota Camry</td><td>4</td><td>2</td></tr>
+<tr><td>Premium</td><td>Honda Accord</td><td>4</td><td>2</td></tr>
+</table>
+<h2>3. How a rental is priced</h2>
+<table><tr><th>Rule</th><th>How</th></tr>
+<tr><td><a href="Rental Policy.html#R12">R12</a></td><td>Minimum 2 hours. Up to 5 hours, hours times the hourly rate. 6 hours or more counts as one day.</td></tr>
+<tr><td><a href="Rental Policy.html#R13">R13</a></td><td>Beyond whole days, extra hours at the hourly rate, capped at one more day. Standard, 1 day and 3 hours: RM 120 + RM 60 = RM 180.</td></tr>
+<tr><td><a href="Rental Policy.html#R14">R14</a></td><td>Whole weeks at the weekly rate, remaining days at the daily rate, capped at the two-week rate. Standard, 9 days: RM 700 + 2 x RM 120 = RM 940.</td></tr>
+<tr><td><a href="Rental Policy.html#R5">R5</a></td><td>Every booking also needs the RM 100 deposit.</td></tr></table>
+<footer>&copy; 2026 Lee Yih Ven &middot; Car Inventory</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>
