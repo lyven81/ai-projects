@@ -47,62 +47,47 @@ footer{margin-top:36px;font-size:12px;color:var(--muted)}
 .pitem b{font-size:15.5px}.pitem b a{color:var(--navy);text-decoration:none}
 .pitem p{margin:2px 0 4px;font-size:14px;color:var(--muted)}
 .pitem .lk{font-size:13.5px}
+
+.me{display:grid;grid-template-columns:120px 1fr;gap:16px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;align-items:center}
+.me img{width:120px;height:120px;object-fit:cover;border-radius:8px;display:block}
+.me p{margin:0 0 8px;font-size:14.5px}
+.more{margin:10px 0 0;font-size:14px}
+@media (max-width:700px){.me{grid-template-columns:1fr}.me img{width:110px;height:110px}}
 </style>
 </head>
 <body><div class="wrap">
-<div class="top"><div class="bar" style="margin-top:0"><h1>AI Projects · Lee Yih Ven</h1><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn" href="about.html">About me</a><a class="linkbtn primary" id="wa-link" target="_blank" rel="noopener">Discuss a project</a></div>
-<nav id="toc"></nav></div>
-
-<p>I build practical AI applications that help businesses answer customers, process documents, research and route work. Each project starts from an operational problem and decides what the AI should and should not do. Each one is tested before it is shown, and you can try it yourself.</p>
+<div id="sitenav" data-active="home" data-root=""></div>
+<div style="height:14px"></div>
 
 <h2>Latest Project</h2>
 <div id="latest"></div>
 
-<!-- Project Categories (was Browse by Problem): restored 19 Oct (founder: live once a second problem type has a project; hidden 17 Oct). -->
-<h2>Project Categories</h2>
-<div class="types" id="types"></div>
-
-<h2>All Projects</h2>
-<div class="plist" id="all"></div>
-
-<h2>How Each Project Is Built</h2>
-<ol>
-<li><b>Understand the problem:</b> who does the work today, and what makes it hard.</li>
-<li><b>Decide the split:</b> what the AI does, what fixed rules do, and when a person takes over.</li>
-<li><b>Build it:</b> rules that must always hold are written in code, not left to the prompt.</li>
-<li><b>Test it:</b> valid requests, unauthorised access, handovers and failures, before it is shown.</li>
-</ol>
+<h2>About Me</h2>
+<div class="me"><a href="about.html"><img src="profile.jpg" alt="Lee Yih Ven"></a>
+<div><p><b>Hello, I'm Lee.</b> I worked in insurance claims and e-commerce before I started building AI applications, so I know the daily work these projects are meant to support.</p>
+<p>I build practical AI applications that help businesses answer customers and process documents. Each project starts from an operational problem and decides what the AI should and should not do. Each one is tested before it is shown, and you can try it yourself.</p>
+</div></div>
 
 <h2>Contact</h2>
 <p>Thinking about an assistant for your own business, or reviewing my work for a role? <a id="wa2" target="_blank" rel="noopener">Message me on WhatsApp</a>, see <a id="li" target="_blank" rel="noopener">LinkedIn</a>, or read more on <a id="site2" target="_blank" rel="noopener">my website</a>.</p>
 
-<footer>© 2026 Lee Yih Ven · AI Projects</footer></div>
+<footer>© 2026 Lee Yih Ven</footer>
+</div>
 <script src="site-data.js"></script>
+<script src="nav.js"></script>
 <script>
-const S = window.SITE;
+const S = window.SITE, R = window.SITE_ROOT || "";
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const typeOf = id => S.types.find(t => t.id === id);
 document.getElementById("site2").href = S.website;
-["wa-link","wa2"].forEach(id => document.getElementById(id).href = S.whatsapp);
+document.getElementById("wa2").href = S.whatsapp;
 document.getElementById("li").href = S.linkedin;
-
 const latest = S.projects.slice().sort((a,b) => b.added.localeCompare(a.added))[0];
 document.getElementById("latest").innerHTML = `<div class="feature">
-  <a href="${encodeURI(latest.page)}"><img src="${encodeURI(latest.cover)}" alt="${esc(latest.title)} cover"></a>
+  <a href="${encodeURI(latest.page)}"><img src="${encodeURI(R + latest.cover)}" alt="${esc(latest.title)} cover"></a>
   <div class="fb"><div class="kick">${esc(typeOf(latest.type).name)} · ${esc(latest.valueProposition)}</div>
   <h3><a href="${encodeURI(latest.page)}">${esc(latest.title)}</a></h3><p>${esc(latest.hero || latest.tagline)}</p>
   <div class="acts"><a class="linkbtn primary" href="${encodeURI(latest.page)}">View project</a><a class="linkbtn" href="${latest.demo}" target="_blank" rel="noopener">Live demo</a></div></div></div>`;
-
-// Project Categories: one card per problem type that has a project, linking its category page.
-if (document.getElementById("types")) document.getElementById("types").innerHTML = S.types.map(t => {
-  const n = S.projects.filter(p => p.type === t.id).length;
-  return n ? `<a class="type" href="category-${t.id}.html"><span class="n">${n} project${n > 1 ? "s" : ""}</span><b>${esc(t.name)}</b><p>${esc(t.intro.split(". ")[0])}.</p></a>` : "";
-}).join("");
-
-document.getElementById("all").innerHTML = S.projects.map(p => `<div class="pitem"><b><a href="${encodeURI(p.page)}">${esc(p.title)}</a></b><p>${esc(p.short || p.tagline)}</p><div class="lk"><a href="${encodeURI(p.page)}">Page</a> · <a href="${p.demo}" target="_blank" rel="noopener">Demo</a></div></div>`).join("");
-
-const toc = document.getElementById("toc");
-document.querySelectorAll("h2").forEach((h,i) => { h.id = "s" + (i+1); h.textContent = (i+1) + ". " + h.textContent; const a = document.createElement("a"); a.href = "#" + h.id; a.textContent = h.textContent; toc.appendChild(a); });
 document.querySelectorAll("table").forEach(t => { const d = document.createElement("div"); d.className = "tw"; t.parentNode.insertBefore(d, t); d.appendChild(t); });
 </script></body>
 </html>

@@ -61,8 +61,9 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
   }
 }</script>
 <div class="wrap">
+<div id="sitenav" data-active="project:badminton-booking-agent"></div>
 <div class="top"><h1>Badminton Court Booking Agent</h1>
-<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/badminton-booking-agent" target="_blank" rel="noopener">GitHub</a></div>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/badminton-booking-agent/assistant.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/badminton-booking-agent" target="_blank" rel="noopener">GitHub</a></div>
 <nav id="toc"></nav></div>
 <div class="panel on" id="overview">
 <img class="cover" src="images/badminton-booking-agent/cover.jpeg" alt="Badminton Court Booking Agent cover">
@@ -429,5 +430,7 @@ document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{
 const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
 fromHash();window.addEventListener('hashchange',fromHash);
 document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
-</script></body>
+</script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
 </html>

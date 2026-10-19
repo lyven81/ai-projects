@@ -37,39 +37,37 @@ footer{margin-top:36px;font-size:12px;color:var(--muted)}
 </style>
 </head>
 <body><div class="wrap">
-<div class="top"><div class="crumb"><a href="index.html">AI Projects</a> › Problem type</div><h1 id="title"></h1>
-<div class="bar"><nav id="toc"></nav><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn primary" id="wa-link" target="_blank" rel="noopener">Discuss a project</a></div></div>
+<div id="sitenav" data-active="category:document-processing" data-root=""></div>
+<div class="top"><h1 id="title"></h1>
+</div>
 
 <p id="intro"></p>
 
 <h2>Projects</h2>
 <div id="cards"></div>
 
-<h2>What These Projects Share</h2>
-<ul id="common"></ul>
-
-<h2 id="others-h">Other Problem Types</h2>
+<h2 id="others-h">Other Categories</h2>
 <div class="others" id="others"></div>
 
 <footer id="foot"></footer></div>
 <script src="site-data.js"></script>
+<script src="nav.js"></script>
 <script>
+const R = window.SITE_ROOT || "";
 // One template for every problem type: set TYPE and save as category-{type}.html.
 const TYPE = "document-processing";
 const S = window.SITE;
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const t = S.types.find(x => x.id === TYPE);
 const list = S.projects.filter(p => p.type === TYPE).sort((a,b) => b.added.localeCompare(a.added));
-document.title = t.name + " Projects";
+document.title = t.name;
 document.getElementById("title").textContent = t.name;
-document.getElementById("intro").textContent = t.intro + " " + list.length + " project" + (list.length === 1 ? "" : "s") + " so far.";
-document.getElementById("wa-link").href = S.whatsapp;
+document.getElementById("intro").textContent = t.intro;
 document.getElementById("cards").innerHTML = list.map(p => `<div class="card">
-  <a href="${encodeURI(p.page)}"><img src="${encodeURI(p.cover)}" alt="${esc(p.title)} cover"></a>
+  <a href="${encodeURI(p.page)}"><img src="${encodeURI(R + p.cover)}" alt="${esc(p.title)} cover"></a>
   <div class="cb"><div class="kick">${esc(p.valueProposition)}</div><h3><a href="${encodeURI(p.page)}">${esc(p.title)}</a></h3>
   ${p.hero ? `<p>${esc(p.hero)}</p>` : `<p>${esc(p.tagline)}</p><p>${esc(p.problem)}</p>`}
   <div class="acts"><a class="linkbtn primary" href="${encodeURI(p.page)}">View project</a><a class="linkbtn" href="${p.demo}" target="_blank" rel="noopener">Live demo</a></div></div></div>`).join("");
-document.getElementById("common").innerHTML = t.common.map(c => `<li>${esc(c)}</li>`).join("");
 // Only problem types that have projects are listed (founder, 16 Oct); the section hides when there are none.
 const others = S.types.filter(x => x.id !== TYPE && S.projects.some(p => p.type === x.id));
 document.getElementById("others").innerHTML = others.map(x => {
@@ -77,8 +75,6 @@ document.getElementById("others").innerHTML = others.map(x => {
   return `<a class="linkbtn" href="category-${x.id}.html">${esc(x.name)} (${n})</a>`;
 }).join("");
 if (!others.length) { document.getElementById("others-h").remove(); document.getElementById("others").remove(); }
-document.getElementById("foot").textContent = "© 2026 Lee Yih Ven · " + t.name + " Projects";
-const toc = document.getElementById("toc");
-document.querySelectorAll("h2").forEach((h,i) => { h.id = "s" + (i+1); h.textContent = (i+1) + ". " + h.textContent; const a = document.createElement("a"); a.href = "#" + h.id; a.textContent = h.textContent; toc.appendChild(a); });
+document.getElementById("foot").textContent = "© 2026 Lee Yih Ven";
 </script></body>
 </html>

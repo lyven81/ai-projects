@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Projects</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.bar .gap{flex:1}
+.linkbtn{display:inline-block;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.feature img{width:100%;height:100%;object-fit:cover;display:block}
+.feature .fb{padding:14px 18px}
+.feature .kick{font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent)}
+.feature h3{margin:4px 0 6px;font-size:19px}
+.feature p{margin:0 0 10px;font-size:14.5px}
+.feature .acts{display:flex;flex-wrap:wrap;gap:8px}
+.types{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.type{display:block;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 14px;text-decoration:none;color:var(--ink)}
+.type b{color:var(--navy);font-size:15.5px}
+.type .n{float:right;font-size:12.5px;font-weight:600;color:var(--accent)}
+.type p{margin:4px 0 0;font-size:13.5px;color:var(--muted)}
+.type.empty{border-left-color:var(--line);opacity:.7}
+.type.empty .n{color:var(--muted)}
+@media (max-width:700px){.feature{grid-template-columns:1fr}.feature img{height:200px}.types{grid-template-columns:1fr}}
+.plist{display:grid;gap:10px}
+.pitem{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 14px}
+.pitem b{font-size:15.5px}.pitem b a{color:var(--navy);text-decoration:none}
+.pitem p{margin:2px 0 4px;font-size:14px;color:var(--muted)}
+.pitem .lk{font-size:13.5px}
+
+.prow{display:grid;grid-template-columns:200px 1fr;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:10px}
+.prow img{width:100%;height:100%;min-height:120px;object-fit:cover;display:block}
+.prow .pb{padding:10px 16px}
+.prow .kick{font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent)}
+.prow .kick a{color:var(--accent);text-decoration:none}
+.prow h3{margin:2px 0 4px}.prow h3 a{color:var(--navy);text-decoration:none}
+.prow p{margin:0 0 6px;font-size:14px}
+.prow .lk{font-size:13.5px}
+.prow .date{color:var(--muted)}
+@media (max-width:700px){.prow{grid-template-columns:1fr}.prow img{height:170px}}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 16px;margin:0 0 16px;text-wrap:balance}
+</style>
+</head>
+<body><div class="wrap">
+<div id="sitenav" data-active="projects" data-root=""></div>
+<div class="top"><h1>All Projects</h1></div>
+
+<p class="lede">These practical AI applications address everyday business problems, from answering customer questions to checking documents. Explore the project pages or try the live demos yourself.</p>
+
+<div id="list"></div>
+
+<footer>© 2026 Lee Yih Ven</footer>
+</div>
+<script src="site-data.js"></script>
+<script src="nav.js"></script>
+<script>
+const S = window.SITE, R = window.SITE_ROOT || "";
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const typeOf = id => S.types.find(t => t.id === id);
+const list = S.projects.slice().sort((a,b) => b.added.localeCompare(a.added));
+const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+document.getElementById("list").innerHTML = list.map(p => `<div class="prow">
+  <a href="${encodeURI(p.page)}"><img src="${encodeURI(R + p.cover)}" alt="${esc(p.title)} cover"></a>
+  <div class="pb"><div class="kick"><a href="category-${p.type}.html">${esc(typeOf(p.type).name)}</a> · ${esc(p.valueProposition)}</div>
+  <h3><a href="${encodeURI(p.page)}">${esc(p.title)}</a></h3><p>${esc(p.short || p.tagline)}</p>
+  <div class="lk"><a href="${encodeURI(p.page)}">Project page</a> · <a href="${p.demo}" target="_blank" rel="noopener">Live demo</a> · <span class="date">Added ${fmt(p.added)}</span></div></div></div>`).join("");
+document.querySelectorAll("table").forEach(t => { const d = document.createElement("div"); d.className = "tw"; t.parentNode.insertBefore(d, t); d.appendChild(t); });
+</script></body>
+</html>

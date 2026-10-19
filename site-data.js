@@ -7,10 +7,10 @@ window.SITE = {
   linkedin: "https://www.linkedin.com/in/lee-yih-ven/",
   types: [
     { id: "customer-service", name: "Customer service",
-      intro: "Assistants that answer customers from a business's own information. They take requests for staff to confirm and hand over what only a person should answer.",
+      intro: "These assistants answer customer questions using approved business information and hand over enquiries that need a person's decision to staff with a clear reason and summary. Requests stay pending until staff confirm them.",
       common: ["Answers only from approved information.", "Requests wait for staff before they count.", "Clear handover with a reason and a summary."] },
     { id: "document-processing", name: "Document processing",
-      intro: "Systems that read business documents, such as reports, invoices, claims and forms, and check or extract what a team needs. Every result is checked in code, and a person decides what the checks cannot settle.",
+      intro: "These systems extract information from business documents, such as reports, invoices, claims and forms, into a fixed format. Results pass code checks before use, with missing or unclear information flagged for human review rather than guessed.",
       common: ["Structured output checked against a schema.", "Missing or unclear points flagged, never guessed.", "A person reviews what the checks cannot settle."] },
     { id: "research-and-reporting", name: "Research and reporting",
       intro: "Systems that gather information from several sources and turn it into a report. Every finding keeps a link to where it came from.",
