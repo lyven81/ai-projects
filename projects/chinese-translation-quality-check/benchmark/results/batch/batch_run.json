@@ -1,0 +1,108 @@
+{
+ "batches": [
+  {
+   "section": "S01",
+   "id": "msgbatch_013RLLxPQyKcnNUnPfuE7rMR",
+   "submitted": "2026-10-19T03:06:40.628Z",
+   "requests": [
+    {
+     "custom_id": "S01-acc-p001-010",
+     "specialist": "accuracy",
+     "from": 1,
+     "to": 10,
+     "front": true
+    },
+    {
+     "custom_id": "S01-acc-p011-020",
+     "specialist": "accuracy",
+     "from": 11,
+     "to": 20,
+     "front": false
+    },
+    {
+     "custom_id": "S01-sec-p001-020",
+     "specialist": "section",
+     "from": 1,
+     "to": 20,
+     "front": true
+    },
+    {
+     "custom_id": "S01-reg-p001-020",
+     "specialist": "register",
+     "from": 1,
+     "to": 20,
+     "front": true
+    }
+   ],
+   "collected": true,
+   "collected_at": "2026-10-19T03:12:34.431Z"
+  },
+  {
+   "section": "S02",
+   "id": "msgbatch_01P8W24uKkjpiAhHGHvRFRev",
+   "submitted": "2026-10-19T03:06:41.221Z",
+   "requests": [
+    {
+     "custom_id": "S02-acc-p021-030",
+     "specialist": "accuracy",
+     "from": 21,
+     "to": 30,
+     "front": false
+    },
+    {
+     "custom_id": "S02-acc-p031-040",
+     "specialist": "accuracy",
+     "from": 31,
+     "to": 40,
+     "front": false
+    },
+    {
+     "custom_id": "S02-sec-p021-040",
+     "specialist": "section",
+     "from": 21,
+     "to": 40,
+     "front": false
+    },
+    {
+     "custom_id": "S02-reg-p021-040",
+     "specialist": "register",
+     "from": 21,
+     "to": 40,
+     "front": false
+    }
+   ],
+   "collected": true,
+   "collected_at": "2026-10-19T03:13:53.968Z"
+  },
+  {
+   "section": "S03",
+   "id": "msgbatch_01TRLTHppon77Zsg9DcyEMzP",
+   "submitted": "2026-10-19T03:06:45.227Z",
+   "requests": [
+    {
+     "custom_id": "S03-acc-p041-044",
+     "specialist": "accuracy",
+     "from": 41,
+     "to": 44,
+     "front": false
+    },
+    {
+     "custom_id": "S03-sec-p041-044",
+     "specialist": "section",
+     "from": 41,
+     "to": 44,
+     "front": false
+    },
+    {
+     "custom_id": "S03-reg-p041-044",
+     "specialist": "register",
+     "from": 41,
+     "to": 44,
+     "front": false
+    }
+   ],
+   "collected": true,
+   "collected_at": "2026-10-19T03:12:35.991Z"
+  }
+ ]
+}

@@ -1,0 +1,351 @@
+{
+ "findings": [
+  {
+   "target": "P23",
+   "n": 23,
+   "kind": "paragraph",
+   "specialist": "accuracy",
+   "category": "mistranslation",
+   "severity": "must",
+   "en_span": "Compared with the immediate preceding quarter ended 31 December 2025",
+   "zh_span": "与去年同期相比",
+   "zh_start": 0,
+   "issue": "The comparison period is given as the corresponding quarter of the previous year instead of the immediate preceding quarter.",
+   "suggestion": "与截至2025年12月31日的上一季度相比",
+   "reason": "The English compares with the immediate preceding quarter ended 31 December 2025, not the preceding year corresponding quarter.",
+   "source": "B1",
+   "comment_only": false,
+   "id": "S02-F001",
+   "section": "S02",
+   "grader": {
+    "verdict": "sound",
+    "note": "The English compares with the immediate preceding quarter ended 31 December 2025, but 去年同期 means the same quarter last year. The suggested phrase restores the correct period and follows H8 date style."
+   }
+  },
+  {
+   "target": "P24",
+   "n": 24,
+   "kind": "paragraph",
+   "specialist": "accuracy",
+   "category": "mistranslation",
+   "severity": "must",
+   "en_span": "The decrease was mainly due to lower parcel and freight volumes after the fourth-quarter peak of year-end online sales, and fewer working days",
+   "zh_span": "包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。",
+   "zh_start": 0,
+   "issue": "The cause and effect are reversed, so the Chinese says lower revenue caused the lower volumes and fewer working days.",
+   "suggestion": "收入减少主要由于第四季度年终网购高峰过后包裹及货运量下降，以及本季度因农历新年和开斋节假期而工作日减少。",
+   "reason": "The English says the decrease in revenue was mainly due to lower parcel and freight volumes and fewer working days, not the other way round.",
+   "source": "B1",
+   "comment_only": false,
+   "id": "S02-F002",
+   "section": "S02",
+   "flags": [
+    {
+     "specialist": "accuracy",
+     "category": "mistranslation",
+     "severity": "must",
+     "en_span": "The decrease was mainly due to lower parcel and freight volumes after the fourth-quarter peak of year-end online sales, and fewer working days",
+     "zh_span": "包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期",
+     "issue": "Cause and effect are reversed: the Chinese says lower volumes and fewer working days were due to lower revenue.",
+     "reason": "The English says the revenue decrease was caused by lower volumes after the year-end peak and fewer working days from the holidays.",
+     "source": "B1",
+     "suggestion": "收入减少主要由于第四季度年终网购高峰过后包裹及货运量下降，以及本季度因农历新年和开斋节假期而工作日减少"
+    },
+    {
+     "specialist": "section",
+     "category": "structure",
+     "severity": "must",
+     "en_span": "The decrease was mainly due to lower parcel and freight volumes after the fourth-quarter peak of year-end online sales, and fewer working days during the quarter",
+     "zh_span": "包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。",
+     "issue": "The cause and effect are reversed, so the Chinese says lower revenue caused the lower volumes and fewer working days.",
+     "reason": "The English says the decrease in revenue was mainly due to lower parcel and freight volumes and fewer working days, not the other way round.",
+     "source": "B2",
+     "suggestion": "收入减少主要由于第四季度年终网购高峰过后包裹及货运量下降，以及本季度因农历新年和开斋节假期而工作日减少。"
+    }
+   ],
+   "change_by": "same",
+   "grader": {
+    "verdict": "sound",
+    "note": "The Chinese reverses cause and effect, presenting lower revenue as the cause of the lower volumes and fewer working days. The suggested rewrite puts the causation back as in the English and keeps every element."
+   }
+  },
+  {
+   "target": "P30",
+   "n": 30,
+   "kind": "paragraph",
+   "specialist": "accuracy",
+   "category": "omission",
+   "severity": "must",
+   "en_span": "The rationalisation of diesel subsidies may increase transport costs.",
+   "zh_span": "合格司机供应仍然紧张",
+   "zh_start": 16,
+   "issue": "The sentence about diesel subsidy rationalisation possibly increasing transport costs is missing.",
+   "suggestion": "柴油补贴合理化可能增加运输成本。合格司机供应仍然紧张",
+   "reason": "The English lists the rationalisation of diesel subsidies, which may increase transport costs, as a risk.",
+   "source": "B1",
+   "comment_only": false,
+   "id": "S02-F003",
+   "section": "S02",
+   "grader": {
+    "verdict": "sound",
+    "note": "The diesel subsidy sentence is missing from the Chinese. The suggested insertion renders it accurately and keeps the 可能 hedge."
+   }
+  },
+  {
+   "target": "P31",
+   "n": 31,
+   "kind": "paragraph",
+   "specialist": "accuracy",
+   "category": "mistranslation",
+   "severity": "must",
+   "en_span": "to remain satisfactory",
+   "zh_span": "表现必将再创新高",
+   "zh_start": 38,
+   "issue": "The Chinese mistranslates the Board's measured expectation that performance will remain satisfactory as a certain record-high result, using promotional and exaggerated wording unsuited to an outlook statement.",
+   "suggestion": "表现将保持令人满意",
+   "reason": "Replacing the phrase with a rendering of 'remain satisfactory' restores the English meaning and the cautious tone of a regulatory disclosure.",
+   "source": "B1",
+   "comment_only": false,
+   "id": "S02-F004",
+   "section": "S02",
+   "flags": [
+    {
+     "specialist": "accuracy",
+     "category": "mistranslation",
+     "severity": "must",
+     "en_span": "to remain satisfactory",
+     "zh_span": "表现必将再创新高",
+     "issue": "The Chinese asserts a certain record-high performance, whereas the English only expects performance to remain satisfactory.",
+     "reason": "The English says the Board expects performance 'to remain satisfactory', which is a measured expectation and not a guaranteed new high.",
+     "source": "B1",
+     "suggestion": "表现将保持理想"
+    },
+    {
+     "specialist": "section",
+     "category": "wording",
+     "severity": "must",
+     "en_span": "to remain satisfactory",
+     "zh_span": "必将再创新高",
+     "issue": "The wording is promotional and exaggerated for an outlook statement.",
+     "reason": "The English only expects performance to remain satisfactory, with no certainty or record results implied.",
+     "source": "H7",
+     "suggestion": "将保持理想"
+    },
+    {
+     "specialist": "register",
+     "category": "register",
+     "severity": "must",
+     "en_span": "to remain satisfactory",
+     "zh_span": "必将再创新高",
+     "issue": "The Chinese turns the Board's measured expectation into a promotional claim of certain record performance.",
+     "reason": "The English says only that performance is expected to remain satisfactory, with no certainty and no record high, and the outlook must keep a measured tone.",
+     "source": "H7",
+     "suggestion": "保持令人满意"
+    }
+   ],
+   "change_by": "consolidator",
+   "grader": {
+    "verdict": "sound",
+    "note": "必将再创新高 turns 'remain satisfactory' into a certain record result, which is both a mistranslation and promotional wording against H7. The suggestion restores the measured meaning."
+   }
+  },
+  {
+   "target": "P31",
+   "n": 31,
+   "kind": "paragraph",
+   "specialist": "accuracy",
+   "category": "addition",
+   "severity": "must",
+   "en_span": "the Board expects the performance of the Group for the financial year ending 31 December 2026 to remain satisfactory.",
+   "zh_span": "预计全年盈利将增长三成。",
+   "zh_start": 47,
+   "issue": "The Chinese adds a sentence forecasting a 30% profit increase that is not in the English.",
+   "suggestion": "",
+   "reason": "The English contains no profit growth figure or forecast.",
+   "source": "B1",
+   "comment_only": false,
+   "id": "S02-F005",
+   "section": "S02",
+   "grader": {
+    "verdict": "sound",
+    "note": "The 30% profit growth sentence has no counterpart in the English and introduces an unsupported forecast. Deleting it is the correct fix."
+   }
+  },
+  {
+   "target": "P33",
+   "n": 33,
+   "kind": "paragraph",
+   "specialist": "accuracy",
+   "category": "omission",
+   "severity": "must",
+   "en_span": "mainly because",
+   "zh_span": "本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率",
+   "zh_start": 0,
+   "issue": "The sentence is an unpunctuated run-on with jumbled clauses that does not clearly tie the cause to the slightly higher rate, and it omits 'mainly', presenting non-deductible expenses as the only cause.",
+   "suggestion": "本季度税项支出为311万令吉，实际税率为24.01%。该税率略高于24%的法定税率，主要由于部分开支不可扣税",
+   "reason": "Splitting the sentence with proper punctuation, placing the cause after the comparison with the statutory rate, and adding 「主要」 restores the English meaning and its qualified causation.",
+   "source": "B1",
+   "comment_only": false,
+   "id": "S02-F006",
+   "section": "S02",
+   "flags": [
+    {
+     "specialist": "accuracy",
+     "category": "omission",
+     "severity": "should",
+     "en_span": "mainly because",
+     "zh_span": "由于部分开支不可扣税所以",
+     "issue": "The word 'mainly' is left out, so the cause is stated as the only one.",
+     "reason": "The English says the rate is higher than the statutory rate 'mainly because' certain expenses were not deductible.",
+     "source": "B1",
+     "suggestion": "主要由于部分开支不可扣税所以"
+    },
+    {
+     "specialist": "section",
+     "category": "fluency",
+     "severity": "must",
+     "en_span": "The tax expense for the current quarter was RM3.11 million, representing an effective tax rate of 24.01%. This is slightly higher than the statutory tax rate of 24%, mainly because certain expenses were not deductible for tax purposes.",
+     "zh_span": "本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率",
+     "issue": "The sentence is an unpunctuated run-on with the clauses jumbled, and the cause is not clearly tied to the higher rate.",
+     "reason": "The English gives the tax expense and the effective rate, then explains that the rate is slightly above the statutory rate mainly because certain expenses were not tax deductible.",
+     "source": "B2",
+     "suggestion": "本季度税项支出为311万令吉，实际税率为24.01%。该税率略高于24%的法定税率，主要由于部分开支不可扣税"
+    }
+   ],
+   "change_by": "consolidator",
+   "grader": {
+    "verdict": "sound",
+    "note": "The Chinese is an unpunctuated run-on and drops 'mainly'. The suggestion splits the sentence with full-width punctuation and restores 主要, matching the English."
+   }
+  },
+  {
+   "target": "P36",
+   "n": 36,
+   "kind": "paragraph",
+   "specialist": "accuracy",
+   "category": "mistranslation",
+   "severity": "must",
+   "en_span": "RM48.00 million",
+   "zh_span": "4.8亿令吉",
+   "zh_start": 34,
+   "issue": "The amount is converted wrongly, as 4.8亿令吉 is RM480 million.",
+   "suggestion": "4,800万令吉",
+   "reason": "RM48.00 million equals 4,800万令吉 under the conversion rule.",
+   "source": "H2",
+   "comment_only": false,
+   "id": "S02-F007",
+   "section": "S02",
+   "grader": {
+    "verdict": "sound",
+    "note": "RM48.00 million is 4,800万令吉 under H2, whereas 4.8亿令吉 would be RM480 million. The fix corrects the figure."
+   }
+  },
+  {
+   "target": "P32",
+   "n": 32,
+   "kind": "paragraph",
+   "specialist": "section",
+   "category": "punctuation",
+   "severity": "must",
+   "en_span": "accordingly, no variance between actual and forecast results is presented",
+   "zh_span": "盈利保证,因此,不列示",
+   "zh_start": 18,
+   "issue": "Two half-width commas are used in the Chinese sentence.",
+   "suggestion": "盈利保证，因此，不列示",
+   "reason": "The house style requires full-width Chinese punctuation outside figures, so both commas must be full-width.",
+   "source": "H1",
+   "comment_only": false,
+   "id": "S02-F008",
+   "section": "S02",
+   "grader": {
+    "verdict": "sound",
+    "note": "Both commas are half-width, which breaks H1. The suggested full-width commas fix this without changing the content."
+   }
+  }
+ ],
+ "failed": [],
+ "failedRequests": [],
+ "coverage": {
+  "accuracy": [
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ],
+  "section": [
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ],
+  "register": [
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ]
+ },
+ "conflicts": [],
+ "usd": 0.09732720000000003,
+ "consolidated": {
+  "boxes": 8,
+  "same": 1,
+  "combined": 2,
+  "failed": 0,
+  "usd": 0.008852500000000001
+ },
+ "grader": {
+  "graded": 8,
+  "eligible": 8,
+  "usd": 0.0269992
+ },
+ "collected": "2026-10-19T02:58:21.638Z"
+}

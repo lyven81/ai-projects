@@ -1,0 +1,83 @@
+{
+ "$comment": "One findings schema for the live tool and the batch validator. A specialist answers once with {findings, done}; its category enum is narrowed to tools.js ALLOWED[specialist]. Checked again in code by tools.js validateFinding.",
+ "finding": {
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+   "target",
+   "category",
+   "en_span",
+   "zh_span",
+   "issue",
+   "suggestion",
+   "reason",
+   "source",
+   "severity"
+  ],
+  "properties": {
+   "target": {
+    "type": "string"
+   },
+   "category": {
+    "type": "string",
+    "enum": [
+     "omission",
+     "mistranslation",
+     "addition",
+     "wording",
+     "fluency",
+     "structure",
+     "register",
+     "punctuation",
+     "quotation"
+    ]
+   },
+   "en_span": {
+    "type": "string"
+   },
+   "zh_span": {
+    "type": "string"
+   },
+   "issue": {
+    "type": "string"
+   },
+   "suggestion": {
+    "type": "string"
+   },
+   "reason": {
+    "type": "string"
+   },
+   "source": {
+    "type": "string"
+   },
+   "severity": {
+    "type": "string",
+    "enum": [
+     "must",
+     "should"
+    ]
+   }
+  }
+ },
+ "answer": {
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+   "findings",
+   "done"
+  ],
+  "properties": {
+   "findings": {
+    "type": "array",
+    "items": "#finding (category narrowed per specialist)"
+   },
+   "done": {
+    "type": "array",
+    "items": {
+     "type": "integer"
+    },
+    "description": "paragraph numbers fully read"
+   }
+  }
+ }
+}

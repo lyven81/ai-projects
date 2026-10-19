@@ -1,0 +1,912 @@
+[
+ {
+  "at": "2026-10-19T02:19:48.475Z",
+  "mode": "live",
+  "usd": 0.3251,
+  "by": {
+   "S01:register": {
+    "calls": 1,
+    "usd": 0.041418,
+    "input": 3562,
+    "output": 669,
+    "cacheRead": 0
+   },
+   "S01:accuracy": {
+    "calls": 2,
+    "usd": 0.048634,
+    "input": 3907,
+    "output": 2657,
+    "cacheRead": 0
+   },
+   "S01:section": {
+    "calls": 1,
+    "usd": 0.031514,
+    "input": 3562,
+    "output": 1718,
+    "cacheRead": 0
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.043378,
+    "input": 2942,
+    "output": 1260,
+    "cacheRead": 0
+   },
+   "S02:register": {
+    "calls": 1,
+    "usd": 0.021419599999999997,
+    "input": 2982,
+    "output": 447,
+    "cacheRead": 2758
+   },
+   "S02:accuracy": {
+    "calls": 2,
+    "usd": 0.039508,
+    "input": 3284,
+    "output": 3180,
+    "cacheRead": 5700
+   },
+   "S02:section": {
+    "calls": 1,
+    "usd": 0.0280008,
+    "input": 2982,
+    "output": 2146,
+    "cacheRead": 2884
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.053868400000000004,
+    "input": 2863,
+    "output": 2108,
+    "cacheRead": 1282
+   },
+   "S03:register": {
+    "calls": 1,
+    "usd": 0.0035236,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2758
+   },
+   "S03:accuracy": {
+    "calls": 1,
+    "usd": 0.005486,
+    "input": 633,
+    "output": 365,
+    "cacheRead": 2850
+   },
+   "S03:section": {
+    "calls": 1,
+    "usd": 0.008302799999999999,
+    "input": 633,
+    "output": 646,
+    "cacheRead": 2884
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T02:21:45.781Z",
+  "mode": "live",
+  "usd": 0.2831,
+  "by": {
+   "S01:accuracy": {
+    "calls": 2,
+    "usd": 0.033094,
+    "input": 3907,
+    "output": 2414,
+    "cacheRead": 5700
+   },
+   "S01:register": {
+    "calls": 1,
+    "usd": 0.028319599999999997,
+    "input": 3562,
+    "output": 676,
+    "cacheRead": 2758
+   },
+   "S01:section": {
+    "calls": 1,
+    "usd": 0.0253708,
+    "input": 3562,
+    "output": 1767,
+    "cacheRead": 2884
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.0358884,
+    "input": 2848,
+    "output": 1212,
+    "cacheRead": 1282
+   },
+   "S02:register": {
+    "calls": 1,
+    "usd": 0.0202796,
+    "input": 2982,
+    "output": 390,
+    "cacheRead": 2758
+   },
+   "S02:accuracy": {
+    "calls": 2,
+    "usd": 0.043338,
+    "input": 3284,
+    "output": 3563,
+    "cacheRead": 5700
+   },
+   "S02:section": {
+    "calls": 1,
+    "usd": 0.029220799999999998,
+    "input": 2982,
+    "output": 2268,
+    "cacheRead": 2884
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0424924,
+    "input": 2659,
+    "output": 1580,
+    "cacheRead": 1282
+   },
+   "S03:register": {
+    "calls": 1,
+    "usd": 0.0035236,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2758
+   },
+   "S03:accuracy": {
+    "calls": 1,
+    "usd": 0.004496,
+    "input": 633,
+    "output": 266,
+    "cacheRead": 2850
+   },
+   "S03:section": {
+    "calls": 1,
+    "usd": 0.011882799999999999,
+    "input": 633,
+    "output": 1004,
+    "cacheRead": 2884
+   },
+   "S03:grader": {
+    "calls": 1,
+    "usd": 0.0051443999999999995,
+    "input": 232,
+    "output": 198,
+    "cacheRead": 1282
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T02:28:45.374Z",
+  "mode": "batch",
+  "usd": 0.1979,
+  "by": {
+   "S01:register:batch": {
+    "calls": 1,
+    "usd": 0.0132698,
+    "input": 3562,
+    "output": 587,
+    "cacheRead": 2758
+   },
+   "S01:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.0202445,
+    "input": 3907,
+    "output": 2498,
+    "cacheRead": 2850
+   },
+   "S01:section:batch": {
+    "calls": 1,
+    "usd": 0.015687,
+    "input": 3562,
+    "output": 1704,
+    "cacheRead": 0
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.043326,
+    "input": 2859,
+    "output": 1274,
+    "cacheRead": 0
+   },
+   "S02:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.023476499999999997,
+    "input": 3284,
+    "output": 3269,
+    "cacheRead": 2850
+   },
+   "S02:register:batch": {
+    "calls": 1,
+    "usd": 0.017789,
+    "input": 2982,
+    "output": 493,
+    "cacheRead": 0
+   },
+   "S02:section:batch": {
+    "calls": 1,
+    "usd": 0.017777,
+    "input": 2982,
+    "output": 2238,
+    "cacheRead": 0
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0386284,
+    "input": 2983,
+    "output": 1322,
+    "cacheRead": 1282
+   },
+   "S03:accuracy:batch": {
+    "calls": 1,
+    "usd": 0.002173,
+    "input": 633,
+    "output": 251,
+    "cacheRead": 2850
+   },
+   "S03:section:batch": {
+    "calls": 1,
+    "usd": 0.0037764,
+    "input": 633,
+    "output": 571,
+    "cacheRead": 2884
+   },
+   "S03:register:batch": {
+    "calls": 1,
+    "usd": 0.0017618,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2758
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T02:32:42.221Z",
+  "mode": "live",
+  "usd": 0.3086,
+  "by": {
+   "S01:register": {
+    "calls": 1,
+    "usd": 0.038018,
+    "input": 3562,
+    "output": 492,
+    "cacheRead": 0
+   },
+   "S01:accuracy": {
+    "calls": 2,
+    "usd": 0.047974,
+    "input": 3907,
+    "output": 2577,
+    "cacheRead": 0
+   },
+   "S01:section": {
+    "calls": 1,
+    "usd": 0.031484,
+    "input": 3562,
+    "output": 1708,
+    "cacheRead": 0
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.0342204,
+    "input": 2806,
+    "output": 1137,
+    "cacheRead": 1282
+   },
+   "S02:register": {
+    "calls": 1,
+    "usd": 0.020745200000000002,
+    "input": 2982,
+    "output": 413,
+    "cacheRead": 2786
+   },
+   "S02:accuracy": {
+    "calls": 2,
+    "usd": 0.0390992,
+    "input": 3284,
+    "output": 3138,
+    "cacheRead": 5756
+   },
+   "S02:section": {
+    "calls": 1,
+    "usd": 0.029226400000000003,
+    "input": 2982,
+    "output": 2268,
+    "cacheRead": 2912
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0396284,
+    "input": 2773,
+    "output": 1414,
+    "cacheRead": 1282
+   },
+   "S03:register": {
+    "calls": 1,
+    "usd": 0.0035291999999999997,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2786
+   },
+   "S03:accuracy": {
+    "calls": 1,
+    "usd": 0.0043816,
+    "input": 633,
+    "output": 254,
+    "cacheRead": 2878
+   },
+   "S03:section": {
+    "calls": 1,
+    "usd": 0.005908399999999999,
+    "input": 633,
+    "output": 406,
+    "cacheRead": 2912
+   },
+   "S03:grader": {
+    "calls": 1,
+    "usd": 0.0143924,
+    "input": 684,
+    "output": 570,
+    "cacheRead": 1282
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T02:42:46.082Z",
+  "mode": "live",
+  "usd": 0.2924,
+  "by": {
+   "S01:register": {
+    "calls": 1,
+    "usd": 0.039912,
+    "input": 3563,
+    "output": 560,
+    "cacheRead": 0
+   },
+   "S01:accuracy": {
+    "calls": 2,
+    "usd": 0.048546,
+    "input": 3908,
+    "output": 2581,
+    "cacheRead": 0
+   },
+   "S01:section": {
+    "calls": 1,
+    "usd": 0.030111,
+    "input": 3563,
+    "output": 1544,
+    "cacheRead": 0
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.034448,
+    "input": 2857,
+    "output": 827,
+    "cacheRead": 0
+   },
+   "S02:register": {
+    "calls": 1,
+    "usd": 0.0195864,
+    "input": 2982,
+    "output": 354,
+    "cacheRead": 2892
+   },
+   "S02:accuracy": {
+    "calls": 2,
+    "usd": 0.036861599999999994,
+    "input": 3284,
+    "output": 2910,
+    "cacheRead": 5968
+   },
+   "S02:section": {
+    "calls": 1,
+    "usd": 0.0245376,
+    "input": 2982,
+    "output": 1797,
+    "cacheRead": 3018
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0344192,
+    "input": 2670,
+    "output": 1174,
+    "cacheRead": 1296
+   },
+   "S03:register": {
+    "calls": 1,
+    "usd": 0.0035504,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2892
+   },
+   "S03:accuracy": {
+    "calls": 1,
+    "usd": 0.0038428000000000004,
+    "input": 633,
+    "output": 198,
+    "cacheRead": 2984
+   },
+   "S03:section": {
+    "calls": 1,
+    "usd": 0.0114696,
+    "input": 633,
+    "output": 960,
+    "cacheRead": 3018
+   },
+   "S03:grader": {
+    "calls": 1,
+    "usd": 0.0051112,
+    "input": 228,
+    "output": 197,
+    "cacheRead": 1296
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T02:44:27.192Z",
+  "mode": "live",
+  "usd": 0.2635,
+  "by": {
+   "S01:accuracy": {
+    "calls": 2,
+    "usd": 0.0335796,
+    "input": 3908,
+    "output": 2457,
+    "cacheRead": 5968
+   },
+   "S01:register": {
+    "calls": 1,
+    "usd": 0.029010400000000002,
+    "input": 3563,
+    "output": 709,
+    "cacheRead": 2892
+   },
+   "S01:section": {
+    "calls": 1,
+    "usd": 0.024199599999999998,
+    "input": 3563,
+    "output": 1647,
+    "cacheRead": 3018
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.036715199999999996,
+    "input": 2879,
+    "output": 1247,
+    "cacheRead": 1296
+   },
+   "S02:register": {
+    "calls": 1,
+    "usd": 0.0208464,
+    "input": 2982,
+    "output": 417,
+    "cacheRead": 2892
+   },
+   "S02:accuracy": {
+    "calls": 2,
+    "usd": 0.0336416,
+    "input": 3284,
+    "output": 2588,
+    "cacheRead": 5968
+   },
+   "S02:section": {
+    "calls": 1,
+    "usd": 0.0259276,
+    "input": 2982,
+    "output": 1936,
+    "cacheRead": 3018
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0342552,
+    "input": 2804,
+    "output": 1139,
+    "cacheRead": 1296
+   },
+   "S03:register": {
+    "calls": 1,
+    "usd": 0.0035504,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2892
+   },
+   "S03:accuracy": {
+    "calls": 1,
+    "usd": 0.0052928,
+    "input": 633,
+    "output": 343,
+    "cacheRead": 2984
+   },
+   "S03:section": {
+    "calls": 1,
+    "usd": 0.0107796,
+    "input": 633,
+    "output": 891,
+    "cacheRead": 3018
+   },
+   "S03:grader": {
+    "calls": 1,
+    "usd": 0.0057272,
+    "input": 222,
+    "output": 229,
+    "cacheRead": 1296
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T02:50:47.630Z",
+  "mode": "batch",
+  "usd": 0.1838,
+  "by": {
+   "S01:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.020066399999999998,
+    "input": 3908,
+    "output": 2426,
+    "cacheRead": 2984
+   },
+   "S01:register:batch": {
+    "calls": 1,
+    "usd": 0.020896,
+    "input": 3563,
+    "output": 654,
+    "cacheRead": 0
+   },
+   "S01:section:batch": {
+    "calls": 1,
+    "usd": 0.0156205,
+    "input": 3563,
+    "output": 1657,
+    "cacheRead": 0
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.04404,
+    "input": 2915,
+    "output": 1295,
+    "cacheRead": 0
+   },
+   "S02:section:batch": {
+    "calls": 1,
+    "usd": 0.0145188,
+    "input": 2982,
+    "output": 2247,
+    "cacheRead": 3018
+   },
+   "S02:register:batch": {
+    "calls": 1,
+    "usd": 0.010703200000000001,
+    "input": 2982,
+    "output": 445,
+    "cacheRead": 2892
+   },
+   "S02:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.013190799999999999,
+    "input": 3284,
+    "output": 1862,
+    "cacheRead": 5968
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0330832,
+    "input": 2701,
+    "output": 1101,
+    "cacheRead": 1296
+   },
+   "S03:section:batch": {
+    "calls": 1,
+    "usd": 0.004399800000000001,
+    "input": 633,
+    "output": 693,
+    "cacheRead": 3018
+   },
+   "S03:register:batch": {
+    "calls": 1,
+    "usd": 0.0017752,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2892
+   },
+   "S03:accuracy:batch": {
+    "calls": 1,
+    "usd": 0.005523,
+    "input": 633,
+    "output": 232,
+    "cacheRead": 0
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T02:58:33.722Z",
+  "mode": "live",
+  "usd": 0.3058,
+  "by": {
+   "S01:register": {
+    "calls": 1,
+    "usd": 0.041552,
+    "input": 3563,
+    "output": 642,
+    "cacheRead": 0
+   },
+   "S01:accuracy": {
+    "calls": 2,
+    "usd": 0.047766,
+    "input": 3908,
+    "output": 2503,
+    "cacheRead": 0
+   },
+   "S01:section": {
+    "calls": 1,
+    "usd": 0.030551,
+    "input": 3563,
+    "output": 1588,
+    "cacheRead": 0
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.02814,
+    "input": 2310,
+    "output": 621,
+    "cacheRead": 0
+   },
+   "S02:register": {
+    "calls": 1,
+    "usd": 0.019706400000000002,
+    "input": 2982,
+    "output": 360,
+    "cacheRead": 2892
+   },
+   "S02:accuracy": {
+    "calls": 2,
+    "usd": 0.0390016,
+    "input": 3284,
+    "output": 3124,
+    "cacheRead": 5968
+   },
+   "S02:section": {
+    "calls": 1,
+    "usd": 0.027077599999999997,
+    "input": 2982,
+    "output": 2051,
+    "cacheRead": 3018
+   },
+   "S02:section:retry": {
+    "calls": 1,
+    "usd": 0.0115416,
+    "input": 3234,
+    "output": 447,
+    "cacheRead": 3018
+   },
+   "S02:consolidator": {
+    "calls": 2,
+    "usd": 0.008852500000000001,
+    "input": 691,
+    "output": 608,
+    "cacheRead": 515
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0269992,
+    "input": 2250,
+    "output": 887,
+    "cacheRead": 1296
+   },
+   "S03:register": {
+    "calls": 1,
+    "usd": 0.0035504,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2892
+   },
+   "S03:accuracy": {
+    "calls": 1,
+    "usd": 0.0043328,
+    "input": 633,
+    "output": 247,
+    "cacheRead": 2984
+   },
+   "S03:section": {
+    "calls": 1,
+    "usd": 0.011779600000000001,
+    "input": 633,
+    "output": 991,
+    "cacheRead": 3018
+   },
+   "S03:grader": {
+    "calls": 1,
+    "usd": 0.0049672,
+    "input": 242,
+    "output": 187,
+    "cacheRead": 1296
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T03:05:34.647Z",
+  "mode": "batch",
+  "usd": 0.1901,
+  "by": {
+   "S03:section:batch": {
+    "calls": 1,
+    "usd": 0.0077555,
+    "input": 633,
+    "output": 670,
+    "cacheRead": 0
+   },
+   "S03:register:batch": {
+    "calls": 1,
+    "usd": 0.0017752,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 2892
+   },
+   "S03:accuracy:batch": {
+    "calls": 1,
+    "usd": 0.0021514,
+    "input": 633,
+    "output": 244,
+    "cacheRead": 2984
+   },
+   "S01:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.0209714,
+    "input": 3908,
+    "output": 2607,
+    "cacheRead": 2984
+   },
+   "S01:register:batch": {
+    "calls": 1,
+    "usd": 0.019896,
+    "input": 3563,
+    "output": 554,
+    "cacheRead": 0
+   },
+   "S01:section:batch": {
+    "calls": 1,
+    "usd": 0.0122498,
+    "input": 3563,
+    "output": 1677,
+    "cacheRead": 3018
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.028232,
+    "input": 2373,
+    "output": 613,
+    "cacheRead": 0
+   },
+   "S02:section:batch": {
+    "calls": 1,
+    "usd": 0.0138838,
+    "input": 2982,
+    "output": 2120,
+    "cacheRead": 3018
+   },
+   "S02:section:retry": {
+    "calls": 1,
+    "usd": 0.018963,
+    "input": 3234,
+    "output": 495,
+    "cacheRead": 0
+   },
+   "S02:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.0183158,
+    "input": 3284,
+    "output": 2887,
+    "cacheRead": 5968
+   },
+   "S02:register:batch": {
+    "calls": 1,
+    "usd": 0.010663200000000001,
+    "input": 2982,
+    "output": 441,
+    "cacheRead": 2892
+   },
+   "S02:consolidator": {
+    "calls": 2,
+    "usd": 0.0093905,
+    "input": 685,
+    "output": 663,
+    "cacheRead": 515
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.0258792,
+    "input": 2275,
+    "output": 826,
+    "cacheRead": 1296
+   }
+  }
+ },
+ {
+  "at": "2026-10-19T03:13:53.970Z",
+  "mode": "batch",
+  "usd": 0.186,
+  "by": {
+   "S01:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.0173748,
+    "input": 3908,
+    "output": 2574,
+    "cacheRead": 5968
+   },
+   "S01:section:batch": {
+    "calls": 1,
+    "usd": 0.0153955,
+    "input": 3563,
+    "output": 1612,
+    "cacheRead": 0
+   },
+   "S01:register:batch": {
+    "calls": 1,
+    "usd": 0.020376,
+    "input": 3563,
+    "output": 602,
+    "cacheRead": 0
+   },
+   "S01:grader": {
+    "calls": 1,
+    "usd": 0.036764,
+    "input": 2586,
+    "output": 997,
+    "cacheRead": 0
+   },
+   "S03:register:batch": {
+    "calls": 1,
+    "usd": 0.008716,
+    "input": 633,
+    "output": 22,
+    "cacheRead": 0
+   },
+   "S03:section:batch": {
+    "calls": 1,
+    "usd": 0.0064705,
+    "input": 633,
+    "output": 413,
+    "cacheRead": 0
+   },
+   "S03:accuracy:batch": {
+    "calls": 1,
+    "usd": 0.0017914,
+    "input": 633,
+    "output": 172,
+    "cacheRead": 2984
+   },
+   "S02:accuracy:batch": {
+    "calls": 2,
+    "usd": 0.0173258,
+    "input": 3284,
+    "output": 2689,
+    "cacheRead": 5968
+   },
+   "S02:section:batch": {
+    "calls": 1,
+    "usd": 0.012893799999999999,
+    "input": 2982,
+    "output": 1922,
+    "cacheRead": 3018
+   },
+   "S02:register:batch": {
+    "calls": 1,
+    "usd": 0.017064,
+    "input": 2982,
+    "output": 387,
+    "cacheRead": 0
+   },
+   "S02:consolidator": {
+    "calls": 1,
+    "usd": 0.0054195,
+    "input": 261,
+    "output": 361,
+    "cacheRead": 0
+   },
+   "S02:grader": {
+    "calls": 1,
+    "usd": 0.026431200000000002,
+    "input": 2248,
+    "output": 859,
+    "cacheRead": 1296
+   }
+  }
+ }
+]

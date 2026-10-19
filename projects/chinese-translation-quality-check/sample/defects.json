@@ -1,0 +1,28 @@
+{
+  "note": "The 20 planted defects. Each one replaces `find` with `replace` inside one target of the correct Chinese, in this order; `span` is the defect text the review should point at. `stage` is the stage expected to catch it; `categories` the categories a finding may use to count as a catch.",
+  "defects": [
+    { "id": "D1",  "target": "17", "find": "8,642万令吉，较", "replace": "8,462万令吉，较", "span": "8,462万令吉", "stage": "accuracy", "categories": ["mistranslation"], "what": "Revenue RM86.42 million written with two digits swapped" },
+    { "id": "D2",  "target": "36", "find": "4,800万令吉", "replace": "4.8亿令吉", "span": "4.8亿令吉", "stage": "accuracy", "categories": ["mistranslation"], "what": "IPO proceeds RM48.00 million converted to 亿 wrongly (correct 4,800万)" },
+    { "id": "D3",  "target": "5",  "find": "并无任何影响", "replace": "出现影响", "span": "出现影响", "stage": "accuracy", "categories": ["mistranslation", "omission"], "what": "\"There were no unusual items\" with the negation dropped" },
+    { "id": "D4",  "target": "30", "find": "柴油补贴合理化可能增加运输成本。", "replace": "", "span": "", "stage": "accuracy", "categories": ["omission"], "what": "The diesel subsidy risk sentence left out" },
+    { "id": "D5",  "target": "23", "find": "截至2025年12月31日的上一季度", "replace": "去年同期", "span": "去年同期", "stage": "accuracy", "categories": ["mistranslation"], "what": "\"Immediate preceding quarter\" rendered as the same quarter last year" },
+    { "id": "D6",  "target": "19", "find": "下降至25.00%", "replace": "上升至25.00%", "span": "上升至25.00%", "stage": "accuracy", "categories": ["mistranslation"], "what": "Gross profit margin \"decreased\" rendered as rose" },
+    { "id": "D8",  "target": "31", "find": "的表现将保持良好。", "replace": "的表现必将再创新高。", "span": "必将再创新高", "stage": "register", "categories": ["register", "mistranslation"], "what": "\"Expects ... to remain satisfactory\" rendered as certain to hit a new record" },
+    { "id": "D7",  "target": "31", "find": "必将再创新高。", "replace": "必将再创新高。预计全年盈利将增长三成。", "span": "预计全年盈利将增长三成。", "stage": "accuracy", "categories": ["addition"], "what": "A profit growth forecast added that is not in the English" },
+    { "id": "D9",  "target": "17", "find": "增加1,507万令吉", "replace": "大幅飙升1,507万令吉", "span": "大幅飙升", "stage": "register", "categories": ["register"], "what": "\"Increased\" rendered as soared" },
+    { "id": "D10", "target": "10", "find": "货运代理仍是最大分部", "replace": "货运代理生意很火，仍是最大分部", "span": "生意很火", "stage": "register", "categories": ["register", "addition"], "what": "Colloquial \"business is hot\" in the segment note" },
+    { "id": "D11", "target": "18", "find": "均为收入增长作出贡献", "replace": "均做出了贡献到收入增长", "span": "做出了贡献到收入增长", "stage": "section", "categories": ["wording", "fluency"], "what": "Literal, ungrammatical word order" },
+    { "id": "D12", "target": "33", "find": "本季度税项支出为311万令吉，实际税率为24.01%。实际税率略高于24%的法定税率，主要原因是部分开支不可扣税。", "replace": "本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率。", "span": "本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率。", "stage": "section", "categories": ["fluency", "structure", "punctuation"], "what": "The taxation note as one run-on sentence with the reason buried" },
+    { "id": "D13", "target": "24", "find": "收入减少主要由于第四季度年终网购高峰过后，包裹及货运量下降，以及本季度因农历新年和开斋节假期而工作日减少。", "replace": "包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。", "span": "包裹及货运量下降以及工作日减少，主要由于收入减少", "stage": "section", "categories": ["structure", "mistranslation"], "what": "Cause and effect reversed: the reason reads as the result" },
+    { "id": "D14", "target": "32", "find": "盈利保证，因此，不列示", "replace": "盈利保证,因此,不列示", "span": ",因此,", "stage": "section", "categories": ["punctuation"], "what": "Half-width commas" },
+    { "id": "D15", "target": "17", "find": "（“2026财年第一季度”）", "replace": "(“2026财年第一季度”)", "span": "(“2026财年第一季度”)", "stage": "section", "categories": ["punctuation"], "what": "Half-width brackets around the defined term" },
+    { "id": "D16", "target": "1",  "find": "（“本集团”）", "replace": "（“本集团“）", "span": "“本集团“", "stage": "section", "categories": ["quotation", "punctuation"], "what": "Mismatched quotation marks around the defined term" },
+    { "id": "D17", "target": "F4", "find": "保荐人未审阅本报告内容，对其准确性或完整性不承担任何责任。", "replace": "保荐人未审阅本报告内容。", "span": "", "stage": "accuracy", "categories": ["omission"], "protected": true, "restore": ["准确性", "完整性", "责任"], "what": "Inside the protected sponsor statement: \"assumes no responsibility\" left out. An accuracy correction only" },
+    { "id": "D18", "target": "9",  "find": "本季度各分部收入如下", "replace": "本季度各分部营业额如下", "span": "营业额", "stage": "glossary", "categories": ["terminology"], "also": ["D18b"], "what": "Revenue as 营业额 against the glossary's 收入" },
+    { "id": "D18b","target": "17", "find": "录得收入", "replace": "录得营业额", "span": "营业额", "stage": "glossary", "categories": ["terminology"], "partOf": "D18", "what": "Second occurrence of D18" },
+    { "id": "D19", "target": "11", "find": "末端配送占", "replace": "最后一公里配送占", "span": "最后一公里配送", "stage": "glossary", "categories": ["terminology"], "also": ["D19b"], "what": "Last-mile delivery as 最后一公里配送 against the glossary's 末端配送" },
+    { "id": "D19b","target": "20", "find": "其末端配送网络", "replace": "其最后一公里配送网络", "span": "最后一公里配送", "stage": "glossary", "categories": ["terminology"], "partOf": "D19", "what": "Second occurrence of D19" },
+    { "id": "D20", "target": "27", "find": "德拉斯预期", "replace": "特拉斯预期", "span": "特拉斯", "stage": "glossary", "categories": ["consistency"], "also": ["D20b"], "what": "Company short name written a second way" },
+    { "id": "D20b","target": "41", "find": "德拉斯2026财年", "replace": "特拉斯2026财年", "span": "特拉斯", "stage": "glossary", "categories": ["consistency"], "partOf": "D20", "what": "Second occurrence of D20" }
+  ]
+}

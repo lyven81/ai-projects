@@ -1,0 +1,63 @@
+{
+ "findings": [
+  {
+   "target": "P43",
+   "n": 43,
+   "kind": "paragraph",
+   "specialist": "section",
+   "category": "wording",
+   "severity": "should",
+   "en_span": "By order of the Board",
+   "zh_span": "承董事部命",
+   "zh_start": 0,
+   "issue": "The phrase 承董事部命 is not the standard formal Chinese for the authorising formula and reads as stiff and unidiomatic.",
+   "suggestion": "奉董事部命令",
+   "reason": "The English 'By order of the Board' is a formal authorisation formula, which Chinese disclosures render as 奉……命令.",
+   "source": "B2",
+   "comment_only": false,
+   "id": "S03-F001",
+   "section": "S03",
+   "grader": {
+    "verdict": "wrong",
+    "note": "承董事部命 is the established formal rendering of 'By order of the Board' in Malaysian Chinese corporate filings and is neither stiff nor unidiomatic. The proposed 奉董事部命令 is no more standard and would replace correct wording without cause."
+   }
+  }
+ ],
+ "failed": [],
+ "failedRequests": [],
+ "coverage": {
+  "accuracy": [
+   41,
+   42,
+   43,
+   44
+  ],
+  "section": [
+   41,
+   42,
+   43,
+   44
+  ],
+  "register": [
+   41,
+   42,
+   43,
+   44
+  ]
+ },
+ "conflicts": [],
+ "usd": 0.019662800000000036,
+ "consolidated": {
+  "boxes": 1,
+  "same": 0,
+  "combined": 0,
+  "failed": 0,
+  "usd": 0
+ },
+ "grader": {
+  "graded": 1,
+  "eligible": 1,
+  "usd": 0.0049672
+ },
+ "collected": "2026-10-19T02:58:33.668Z"
+}

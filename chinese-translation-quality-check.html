@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chinese Translation Quality Check</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .code{stroke:var(--navy);stroke-width:1.5;stroke-dasharray:6 4}
+.dg .data{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2.5}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}
+.dg .t{font-size:13px}
+.dg .note{font-size:13px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+.legend{font-size:13px;color:var(--muted);margin:-2px 0 10px}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Operational Efficiency",
+    "problemType": "document processing",
+    "problem": "A listed company releases its quarterly report in English and Chinese, and the Chinese must say exactly what the English says. Checking every figure, negation, term, tone and punctuation mark by eye is slow, and a missed figure reaches investors. The sponsor's statement must keep its own wording, and every change needs an editor's sign-off.",
+    "built": "A glossary stage corrects settled terms in code, then three Claude specialists check accuracy, wording and tone, each within its own categories. Rules in code, also served as six MCP tools, check every finding, overlapping flags become one correction, and a fresh grader marks each sound, doubtful or wrong. Only the editor's accept, edit or reject decisions reach the Word file, as tracked changes and comments.",
+    "evidence": "Tested on a sample report with 20 planted defects: wrong figures, a dropped negation, a missing risk sentence, an added forecast, promotional tone and broken punctuation. The live run and the Message Batches run each caught all 20 with no must finding on a clean paragraph, and Word's accept-all and reject-all copies matched on all 48 passages. Before real users it still needs a security review, a monitoring owner and the team's approval."
+  }
+}</script>
+<div class="wrap">
+<div class="top"><h1>Chinese Translation Quality Check</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/chinese-translation-quality-check/demo.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/chinese-translation-quality-check" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<img class="cover" src="images/chinese-translation-quality-check/cover.jpeg" alt="Chinese Translation Quality Check cover">
+<p>Before a listed company releases the Chinese version of its quarterly report, someone has to check it against the English line by line. Figures, negations, periods, terms, tone and punctuation all have to match, and the sponsor's statement must keep its own wording.</p>
+<p>I built a review that does that checking with a team of Claude specialists, each with one narrow job, and rules held in code. Every finding cites its source and is checked before anyone sees it. The editor decides every change, and only those decisions reach the Word file.</p>
+<p>It runs live or as one batch on the Message Batches API. It was tested on a fictional report with 20 planted defects. Try the <a href="https://lyven81.github.io/ai-projects/projects/chinese-translation-quality-check/demo.html" target="_blank" rel="noopener">review demo</a> as the editor.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Problem</th><td>A listed company releases its quarterly report in English and Chinese, and the Chinese must say exactly what the English says. Checking every figure, negation, term, tone and punctuation mark by eye is slow, and a missed figure reaches investors. The sponsor's statement must keep its own wording, and every change needs an editor's sign-off.</td></tr><tr><th>Built</th><td>A glossary stage corrects settled terms in code, then three Claude specialists check accuracy, wording and tone, each within its own categories. Rules in code, also served as six MCP tools, check every finding, overlapping flags become one correction, and a fresh grader marks each sound, doubtful or wrong. Only the editor's accept, edit or reject decisions reach the Word file, as tracked changes and comments.</td></tr><tr><th>Evidence</th><td>Tested on a sample report with 20 planted defects: wrong figures, a dropped negation, a missing risk sentence, an added forecast, promotional tone and broken punctuation. The live run and the Message Batches run each caught all 20 with no must finding on a clean paragraph, and Word's accept-all and reject-all copies matched on all 48 passages. Before real users it still needs a security review, a monitoring owner and the team's approval.</td></tr></table>
+<h2>How It Works</h2>
+<svg viewBox="0 0 860 540" role="img" aria-label="The multi-agent review: glossary stage, coordinator, three specialists, checks in code, one box per fault, grader, editor, Word file" class="dg"><defs><marker id="ah-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="30" width="170" height="120" rx="10" class="bx data"/><text x="34" y="56" class="h">Translator's file</text><text x="34" y="78" class="t">Chinese Word file</text><text x="34" y="96" class="t">and the English</text><text x="34" y="114" class="t">original</text>
+<rect x="235" y="30" width="170" height="120" rx="10" class="bx code"/><text x="249" y="56" class="h">Glossary stage</text><text x="249" y="78" class="t">Settled terms</text><text x="249" y="96" class="t">corrected in code</text><text x="249" y="114" class="t">No model asked</text>
+<rect x="450" y="30" width="170" height="120" rx="10" class="bx code"/><text x="464" y="56" class="h">Coordinator</text><text x="464" y="78" class="t">Splits each section</text><text x="464" y="96" class="t">Routes paragraphs</text><text x="464" y="114" class="t">Redoes gaps once</text>
+<rect x="665" y="30" width="170" height="120" rx="10" class="bx ai"/><text x="679" y="56" class="h">Three specialists</text><text x="679" y="78" class="t">Accuracy (1 or 2 requests)</text><text x="679" y="96" class="t">Section</text><text x="679" y="114" class="t">Register</text>
+<rect x="450" y="420" width="385" height="90" rx="10" class="bx data"/><text x="464" y="446" class="h">Brief, glossary, house style</text><text x="464" y="468" class="t">Read by every specialist; every finding</text><text x="464" y="486" class="t">must cite one of them</text>
+<path d="M835,465 L852,465 L852,110 L837,110" class="ar" marker-end="url(#ah-flow)"/><text x="806" y="400" class="lab">reads</text>
+<rect x="665" y="230" width="170" height="120" rx="10" class="bx code"/><text x="679" y="256" class="h">Checks in code</text><text x="679" y="278" class="t">tools.js rules</text><text x="679" y="296" class="t">Source, spans,</text><text x="679" y="314" class="t">protected passage</text>
+<rect x="450" y="230" width="170" height="120" rx="10" class="bx ai"/><text x="464" y="256" class="h">One box per fault</text><text x="464" y="278" class="t">Overlapping flags</text><text x="464" y="296" class="t">merged, every flag</text><text x="464" y="314" class="t">kept, one correction</text>
+<rect x="235" y="230" width="170" height="120" rx="10" class="bx ai"/><text x="249" y="256" class="h">Grader</text><text x="249" y="278" class="t">Fresh context</text><text x="249" y="296" class="t">Sound, doubtful</text><text x="249" y="314" class="t">or wrong; drops none</text>
+<rect x="20" y="230" width="170" height="120" rx="10" class="bx person"/><text x="34" y="256" class="h">Editor</text><text x="34" y="278" class="t">Accepts, edits or</text><text x="34" y="296" class="t">rejects every box</text>
+<rect x="20" y="420" width="385" height="90" rx="10" class="bx data"/><text x="34" y="446" class="h">Word file and review summary</text><text x="34" y="468" class="t">Tracked changes and comments,</text><text x="34" y="486" class="t">only for decided findings</text>
+<path d="M190,90 L233,90" class="ar" marker-end="url(#ah-flow)"/><path d="M405,90 L448,90" class="ar" marker-end="url(#ah-flow)"/><path d="M620,90 L663,90" class="ar" marker-end="url(#ah-flow)"/>
+<path d="M735,150 L735,228" class="ar" marker-end="url(#ah-flow)"/><text x="648" y="194" class="lab">every finding</text>
+<path d="M795,228 L795,152" class="ar" marker-end="url(#ah-flow)"/><text x="801" y="194" class="lab">refused</text>
+<path d="M665,290 L622,290" class="ar" marker-end="url(#ah-flow)"/><path d="M450,290 L407,290" class="ar" marker-end="url(#ah-flow)"/><path d="M235,290 L192,290" class="ar" marker-end="url(#ah-flow)"/>
+<path d="M105,350 L105,418" class="ar" marker-end="url(#ah-flow)"/><text x="112" y="392" class="lab">decisions</text>
+<text x="20" y="532" class="note">AI proposes; code checks; a person decides.</text>
+</svg><p class="legend">Solid blue: Claude. Dashed: code. Bold: a person. Light: documents.</p>
+<ol><li>The glossary stage corrects settled terms in code. A coordinator then sends each section to three Claude specialists, each with one narrow job.</li><li>Code checks every finding and sends refused ones back with the exact error. Flags on the same words become one box, and a fresh grader annotates each box.</li><li>The editor accepts, edits or rejects every box. Only those decisions reach the Word file, as tracked changes and comments.</li></ol>
+<h2>The Review Team</h2>
+<p>Each specialist has one job and its own categories, so a finding is easy to judge and easy to check. The specialists work independently, which is why the same fault can be flagged twice and is then merged into one box. Nothing an agent proposes changes the text on its own.</p>
+<table><tr><th>Role</th><th>Who</th><th>What it does</th></tr><tr><td><b>Coordinator</b></td><td>Code</td><td>Splits each section into requests and gives each specialist only its paragraphs. Sends back paragraphs left undone and links findings that disagree.</td></tr><tr><td><b>Accuracy specialist</b></td><td>Claude Sonnet 5.5</td><td>Finds omissions, mistranslations and additions: figures, periods, direction of change, negations. Works in two smaller requests on a full section.</td></tr><tr><td><b>Section specialist</b></td><td>Claude Sonnet 5.5</td><td>Finds wording, fluency, structure, punctuation and quotation-mark faults against the house style.</td></tr><tr><td><b>Register specialist</b></td><td>Claude Opus 5.5</td><td>Finds promotional, exaggerated or casual tone in a regulatory filing.</td></tr><tr><td><b>Consolidator</b></td><td>Code, Claude Sonnet 5.5 when fixes differ</td><td>Turns overlapping flags into one box with one correction. Every flag stays in the box.</td></tr><tr><td><b>Grader</b></td><td>Claude Opus 5.5, fresh context</td><td>Marks every box sound, doubtful or wrong with a reason. It did not write the findings and removes none.</td></tr><tr><td><b>Editor</b></td><td>A person</td><td>Accepts, edits or rejects every box. Nothing reaches the Word file without that decision.</td></tr></table>
+<h2>What It Does</h2>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Checks the Chinese against the English</b></td><td>Compares every paragraph for figures, conversions, periods, negations, omissions and additions. Designed to catch the faults that would mislead an investor.</td></tr><tr><td><b>Applies the glossary without asking</b></td><td>Replaces renderings the glossary rules out with the approved term, as tracked changes. Settled terms never wait on the editor.</td></tr><tr><td><b>Keeps the house style and tone</b></td><td>Flags half-width punctuation, quotation marks, stiff wording and promotional tone. Each finding cites the rule it rests on.</td></tr><tr><td><b>Protects the sponsor's statement</b></td><td>Allows only accuracy corrections in the protected passage. Its wording and tone are never changed.</td></tr><tr><td><b>Shows one box per fault</b></td><td>Merges flags from several specialists on the same words into one correction. The editor decides once, with every flag in view.</td></tr><tr><td><b>Gives a second opinion</b></td><td>A separate grader marks each correction sound, doubtful or wrong. The editor sees the verdict beside the box.</td></tr><tr><td><b>Writes the editor's decisions to Word</b></td><td>Accepted and edited findings become tracked changes and comments in the translator's file. A review summary counts what was found and decided.</td></tr><tr><td><b>Runs the full report as a batch</b></td><td>The whole report can run on the Message Batches API. Failed requests are redone live, and the same checks follow.</td></tr></table>
+<h2>Try It</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/chinese-translation-quality-check/demo.html" target="_blank" rel="noopener">Review demo</a></b></td><td>Be the editor: accept, edit or reject each box from the recorded batch run. The Reviewed report and the Review summary follow your decisions, and Reset starts again. No key and no server are needed.</td></tr>
+<tr><td><b>The sample</b></td><td><a href="https://github.com/lyven81/ai-projects/blob/main/projects/chinese-translation-quality-check/sample/report_en.md" target="_blank" rel="noopener">English report</a> · <a href="https://github.com/lyven81/ai-projects/blob/main/projects/chinese-translation-quality-check/sample/defects.json" target="_blank" rel="noopener">the 20 planted defects</a> · <a href="https://github.com/lyven81/ai-projects/blob/main/projects/chinese-translation-quality-check/benchmark/Answer%20Key.md" target="_blank" rel="noopener">answer key</a>: the fictional report the review was tested on.</td></tr>
+<tr><td><b>The resources</b></td><td><a href="https://github.com/lyven81/ai-projects/blob/main/projects/chinese-translation-quality-check/resources/brief.md" target="_blank" rel="noopener">Brief</a> · <a href="https://github.com/lyven81/ai-projects/blob/main/projects/chinese-translation-quality-check/resources/glossary.json" target="_blank" rel="noopener">Glossary</a> · <a href="https://github.com/lyven81/ai-projects/blob/main/projects/chinese-translation-quality-check/resources/house_style.json" target="_blank" rel="noopener">House style</a>: everything a finding may cite.</td></tr></table>
+<h3>Running it on your own document</h3>
+<p>The full review runs locally with your own Anthropic API key, and usage is billed to your account. Use a key with a spending limit; the benchmark stops itself at USD 5. A team service would hold the key on a server.</p>
+<h2>Test Results</h2>
+<p>The review was tested on a sample report with 20 planted defects, scored against an <a href="https://github.com/lyven81/ai-projects/blob/main/projects/chinese-translation-quality-check/benchmark/Answer%20Key.md" target="_blank" rel="noopener">answer key</a> written before any run. The live run and the Message Batches run each caught all 20, with no must finding on a clean paragraph. Word's accept-all and reject-all copies matched on all 48 passages.</p>
+<table><tr><th>Group</th><th>Example</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><b>Accuracy (8)</b></td><td>Revenue RM86.42 million written as 8,462万令吉.</td><td>Flag it and correct it to 8,642万令吉, keeping the thousands separator.</td><td><b>Specialist:</b> accuracy. <b>Rule in code:</b> the punctuation hook keeps a comma between digits.</td></tr><tr><td><b>Protected passage</b></td><td>The sponsor's statement leaves out "assumes no responsibility".</td><td>Restore the missing meaning with no other change to the wording.</td><td><b>Rule in code:</b> only accuracy findings pass inside the protected passage (<code>protected_passage</code>).</td></tr><tr><td><b>Register (3)</b></td><td>"Expects performance to remain satisfactory" rendered as certain to hit a new record.</td><td>Restore the measured wording of the English.</td><td><b>Specialists:</b> register and accuracy; their flags on the same words share one box.</td></tr><tr><td><b>Section (6)</b></td><td>Two half-width commas in one sentence.</td><td>Fix every wrong mark in the sentence, not only the first.</td><td><b>Rule in code:</b> a half fix is refused (<code>half_width_left</code>) and sent back.</td></tr><tr><td><b>Glossary stage (3)</b></td><td>Revenue written as 营业额 against the glossary's 收入.</td><td>Change every planted occurrence and nothing else.</td><td><b>Code:</b> <code>glossary_stage.js</code>, no model.</td></tr><tr><td><b>Clean paragraphs</b></td><td>The paragraphs with no planted defect.</td><td>No must finding.</td><td><b>Brief:</b> must or should only, with a cited source; the grader's verdict sits beside each box.</td></tr><tr><td><b>Word file</b></td><td>Word's own accept-all and reject-all copies.</td><td>Equal the decided text and the translator's original.</td><td><b>Code:</b> one decision gate shared by the Word writer, the summary and the demo.</td></tr></table>
+<p>See for yourself: <a href="https://lyven81.github.io/ai-projects/projects/chinese-translation-quality-check/demo.html" target="_blank" rel="noopener">decide the findings in the demo</a> and watch the reviewed report change.</p>
+<h2>Next Step</h2>
+<p>Evaluating the work, or thinking about a document review for your own team?</p>
+<p class="cta"><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/chinese-translation-quality-check/demo.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Review</b></td><td>Claude Sonnet 5.5 (accuracy, section, consolidator) · Claude Opus 5.5 (register, grader) · Structured outputs · Prompt caching · Message Batches API</td></tr><tr><td><b>Rules and tools</b></td><td>Node.js · One shared tools.js · Model Context Protocol SDK · stdio transport</td></tr><tr><td><b>Documents and pages</b></td><td>Word OOXML (tracked changes, comments) · @xmldom/xmldom, JSZip · Vanilla HTML and JavaScript · GitHub Pages</td></tr></table>
+<ul><li><b>One rule file:</b> <code>tools.js</code> holds the six tools and every rule. The MCP server, the live and batch paths, the tests and the demo page all load it.</li><li><b>Settings:</b> <code>config/document.json</code> holds everything that changes per document: front-matter names, the protected passage, sections and banned wording. The code itself carries no domain wording.</li><li><b>Review:</b> <code>coordinator.js</code> runs a section live; <code>lib/batch.js</code> runs it on the Message Batches API. Both hand results to the same checks, <code>consolidator.js</code> and <code>grader.js</code>.</li><li><b>Decisions:</b> <code>lib/apply_decisions.js</code> turns the editor's decisions into the reviewed text. The Word writer, the review summary and the demo all use it, so they cannot disagree.</li></ul>
+<h2>Multi-Agent Workflow</h2>
+<h3>Routing and context</h3>
+<p>The coordinator is code. Each section of up to 20 paragraphs becomes up to four requests: accuracy in two halves (one for a short section), section and register in one each. Every specialist gets a fixed, cached prompt and only its own paragraphs, placed last, with one paragraph of context before and after.</p>
+<h3>Local passes, then an integration pass</h3>
+<p>Each specialist answers in structured output, and every finding is checked by the same rules the MCP tools enforce. The coordinator then checks coverage, redoes paragraphs left undone once and links findings that disagree. The consolidator merges overlapping flags and the grader annotates every box.</p>
+<table><tr><th>Tool</th><th>Who may call (MCP server)</th><th>Checked in code</th></tr><tr><td><code>get_pairs</code></td><td>Specialists</td><td>The range is inside the document; the protected passage is marked.</td></tr><tr><td><code>record_finding</code></td><td>Specialists</td><td>Target exists; both spans are in that target; category allowed for the caller; must or should; cited source exists; full-width punctuation, a figure's comma excepted; every wrong mark in a punctuation finding's sentence; no two marks side by side; accuracy only in the protected passage; no duplicate.</td></tr><tr><td><code>mark_done</code></td><td>Specialists</td><td>The paragraph is assigned to this caller in this request.</td></tr><tr><td><code>get_coverage</code></td><td>Coordinator only</td><td>Refused to a specialist.</td></tr><tr><td><code>request_recheck</code></td><td>Coordinator only</td><td>One recheck per paragraph and specialist.</td></tr><tr><td><code>flag_conflict</code></td><td>Coordinator only</td><td>Both findings exist and overlap; it links them and never settles them.</td></tr></table>
+<p>In a review run the specialists answer in structured output, and code applies these same checks.</p>
+<table><tr><th>Specialist</th><th>Categories</th><th>Model and effort</th></tr>
+<tr><td><b>Accuracy</b></td><td>omission, mistranslation, addition</td><td>Sonnet 5.5, high</td></tr>
+<tr><td><b>Section</b></td><td>wording, fluency, structure, punctuation, quotation</td><td>Sonnet 5.5, high</td></tr>
+<tr><td><b>Register</b></td><td>register</td><td>Opus 5.5, medium</td></tr>
+<tr><td><b>Consolidator</b></td><td>one change per box</td><td>Sonnet 5.5, high</td></tr>
+<tr><td><b>Grader</b></td><td>sound, doubtful or wrong</td><td>Opus 5.5, medium</td></tr></table>
+<h2>Batch Run</h2>
+<svg viewBox="0 0 860 400" role="img" data-fig="batch" aria-label="The batch run: requests by section, Message Batches API, collect by custom_id, failures redone live, then the same boxes and grader" class="dg"><defs><marker id="ah-batch" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="30" width="170" height="120" rx="10" class="bx data"/><text x="34" y="56" class="h">The report</text><text x="34" y="78" class="t">3 sections</text><text x="34" y="96" class="t">48 targets</text><text x="34" y="114" class="t">One cached prompt</text><text x="34" y="132" class="t">per specialist</text>
+<rect x="235" y="30" width="170" height="120" rx="10" class="bx code"/><text x="249" y="56" class="h">11 requests</text><text x="249" y="78" class="t">3 or 4 per section</text><text x="249" y="96" class="t">custom_id names</text><text x="249" y="114" class="t">section, specialist,</text><text x="249" y="132" class="t">paragraphs</text>
+<rect x="450" y="30" width="170" height="120" rx="10" class="bx ai"/><text x="464" y="56" class="h">Message Batches</text><text x="464" y="78" class="t">One batch</text><text x="464" y="96" class="t">per section</text><text x="464" y="114" class="t">Collected once</text><text x="464" y="132" class="t">each has ended</text>
+<rect x="665" y="30" width="170" height="120" rx="10" class="bx code"/><text x="679" y="56" class="h">Collect</text><text x="679" y="78" class="t">Matched by</text><text x="679" y="96" class="t">custom_id</text><text x="679" y="114" class="t">Checked in code</text>
+<rect x="665" y="230" width="170" height="130" rx="10" class="bx code"/><text x="679" y="256" class="h">Succeeded</text><text x="679" y="278" class="t">Findings checked</text><text x="679" y="296" class="t">Refused ones sent</text><text x="679" y="314" class="t">back with the error</text>
+<rect x="450" y="230" width="170" height="130" rx="10" class="bx ai"/><text x="464" y="256" class="h">Redone live</text><text x="464" y="278" class="t">Errored, expired,</text><text x="464" y="296" class="t">cut off, or</text><text x="464" y="314" class="t">paragraphs undone</text>
+<rect x="235" y="230" width="170" height="130" rx="10" class="bx ai"/><text x="249" y="256" class="h">Same as live</text><text x="249" y="278" class="t">One box per fault</text><text x="249" y="296" class="t">Fresh grader</text><text x="249" y="314" class="t">Coverage, conflicts</text>
+<rect x="20" y="230" width="170" height="130" rx="10" class="bx person"/><text x="34" y="256" class="h">Editor</text><text x="34" y="278" class="t">Review page</text><text x="34" y="296" class="t">Decides every box</text>
+<path d="M190,90 L233,90" class="ar" marker-end="url(#ah-batch)"/><path d="M405,90 L448,90" class="ar" marker-end="url(#ah-batch)"/><path d="M620,90 L663,90" class="ar" marker-end="url(#ah-batch)"/>
+<path d="M735,150 L735,228" class="ar" marker-end="url(#ah-batch)"/>
+<path d="M690,150 L560,228" class="ar dash" marker-end="url(#ah-batch)"/><text x="580" y="196" class="lab">failed</text>
+<path d="M735,360 L735,385 L320,385 L320,362" class="ar" marker-end="url(#ah-batch)"/>
+<path d="M450,295 L407,295" class="ar" marker-end="url(#ah-batch)"/><path d="M235,295 L192,295" class="ar" marker-end="url(#ah-batch)"/>
+<path d="M665,300 L622,300" class="ar dash" marker-end="url(#ah-batch)"/><text x="628" y="290" class="lab">gaps</text>
+</svg><p class="legend">Solid blue: Claude. Dashed: code. Bold: a person. Light: documents.</p>
+<ol><li>The report's 11 requests go to the Message Batches API, one batch per section, each with a custom_id naming its section, specialist and paragraphs.</li><li>When a batch ends, results are matched by custom_id and checked in code. Errored, expired or cut-off requests, and paragraphs left undone, are redone live.</li><li>Then the same consolidator and grader run as in a live run. A parity check compares the batch run with the live run, defect by defect.</li></ol>
+<table><tr><th>Run</th><th>Defects caught</th><th>Boxes</th><th>Must findings on clean paragraphs</th></tr>
+<tr><td><b>Live</b></td><td>20 of 20</td><td>18</td><td>0</td></tr>
+<tr><td><b>Message Batches</b></td><td>20 of 20</td><td>18</td><td>0</td></tr></table>
+<p>Parity held: no defect was caught by one run only. The demo replays the batch run.</p>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Principle</th><th>How it is applied here</th></tr><tr><td><b>The English is the authority</b></td><td>Every finding names the English words it rests on, and code checks they are really there. The review finds departures and proposes the smallest fix; it never retranslates.</td></tr><tr><td><b>Settled terms need no model</b></td><td>The glossary lists the approved term and the renderings to avoid. Code applies those changes as tracked changes, so no model is asked and nothing waits on the editor.</td></tr><tr><td><b>One narrow job per specialist</b></td><td>Accuracy, section and register each have their own categories. A finding outside its specialist's categories is refused in code.</td></tr><tr><td><b>Every finding cites its source</b></td><td>A finding must cite a glossary entry, a house style rule or a brief point. A source that does not exist is refused.</td></tr><tr><td><b>Punctuation fixed in code</b></td><td>Half-width marks in a suggestion become full-width before the checks run, except a comma inside a figure. A punctuation fix must cover every wrong mark in its sentence.</td></tr><tr><td><b>The protected passage keeps its wording</b></td><td>Inside the sponsor's statement only an accuracy correction is allowed. A change of wording or tone there is refused, whoever proposes it.</td></tr><tr><td><b>One box per fault</b></td><td>When several specialists flag the same words, their flags share one box with one correction. Every flag stays visible to the editor.</td></tr><tr><td><b>A second opinion, never a filter</b></td><td>A fresh grader marks every box sound, doubtful or wrong with a reason. It removes nothing; the editor decides.</td></tr><tr><td><b>Nothing changes without the editor</b></td><td>Only accepted or edited findings reach the Word file. An edit is checked by the same rules as a finding.</td></tr><tr><td><b>Tested before trusted</b></td><td>20 defects were planted and the answer key written before any run. Findings were read after every run, even after a full score.</td></tr></table>
+<h3>Prototype safeguards</h3>
+<p>The review page runs on a local server bound to the laptop, and the key stays in a local file. A team service would add access control, hold the key on a server and review how unreleased reports are handled.</p>
+<h2>Code Walkthrough</h2><h3>Settled Terms Are Corrected in Code</h3>
+<p>Every rendering the glossary lists as one to avoid is found and replaced by the approved term. Longer matches win at the same place, and matches never overlap. The changes are written as tracked changes before any specialist reads the text.</p>
+<pre><code>// glossary_stage.js: glossaryMatches
+/** Every avoided rendering in a text: [{ start, end, from, to, entry }], longest first at a place, no overlaps. */
+function glossaryMatches(text, entries) {
+  const hits = [];
+  for (const e of entries) for (const bad of e.avoid) {
+    for (let i = text.indexOf(bad); i &gt;= 0; i = text.indexOf(bad, i + 1)) hits.push({ start: i, end: i + bad.length, from: bad, to: e.zh, entry: e.id });
+  }
+  hits.sort((a, b) =&gt; a.start - b.start || (b.end - b.start) - (a.end - a.start));
+  const kept = [];
+  for (const h of hits) if (!kept.some((k) =&gt; h.start &lt; k.end &amp;&amp; k.start &lt; h.end)) kept.push(h);
+  return kept;
+}</code></pre>
+<h3>Each Section Is Split Between Specialists</h3>
+<p>The coordinator gives each specialist only its own paragraphs and categories. Accuracy gets two smaller requests on a full section, so it reads closely. Every request carries a custom_id, which the batch path uses to match results.</p>
+<pre><code>// prompt.js: sectionRequests
+function sectionRequests(doc, section, specialists = ["accuracy", "section", "register"]) {
+  const reqs = [];
+  const mid = Math.min(section.to, section.from + 9);
+  const id = (sp, a, b) =&gt; `${section.id}-${sp.slice(0, 3)}-p${String(a).padStart(3, "0")}-${String(b).padStart(3, "0")}`;
+  if (specialists.includes("accuracy")) {
+    reqs.push({ custom_id: id("accuracy", section.from, mid), specialist: "accuracy", from: section.from, to: mid, front: section.front_matter });
+    if (mid &lt; section.to) reqs.push({ custom_id: id("accuracy", mid + 1, section.to), specialist: "accuracy", from: mid + 1, to: section.to, front: false });
+  }
+  if (specialists.includes("section")) reqs.push({ custom_id: id("section", section.from, section.to), specialist: "section", from: section.from, to: section.to, front: section.front_matter });
+  if (specialists.includes("register")) reqs.push({ custom_id: id("register", section.from, section.to), specialist: "register", from: section.from, to: section.to, front: section.front_matter });
+  return reqs;
+}</code></pre>
+<h3>Every Finding Is Checked in Code</h3>
+<p>A finding must cite a real source, use full-width punctuation and fix every wrong mark in its sentence. Inside the protected passage only an accuracy correction passes. Each refusal names exactly what to fix.</p>
+<pre><code>// tools.js: validateFinding, the main checks
+    if (!sourceExists(sources, f.source))
+      return err("unknown_source", `source ${f.source} does not exist; cite a glossary entry (G01), a house style rule (H1) or a brief point (B1)`);
+    const suggestion = String(f.suggestion || "");
+    if (HALF_WIDTH.test(suggestion)) return err("half_width_punctuation", "suggested Chinese uses half-width punctuation; use full-width marks");
+    if (!String(f.issue || "").trim() || !String(f.reason || "").trim()) return err("missing_field", "issue and reason are required");
+    const span = { start: at, end: at + zhSpan.length };
+    const dbl = (suggestion || f.category === "addition") &amp;&amp; doubledMark(tgt.zh, span.start, span.end, suggestion);
+    if (dbl) return err("doubled_punctuation", `the change would leave "${dbl}" in ${tgt.key}: the text around zh_span already has its own mark; drop the mark from the suggestion or take it into zh_span`);
+    // A punctuation finding fixes the whole sentence: no half-width mark may be left outside its span.
+    if (f.category === "punctuation") {
+      const a = Math.max(tgt.zh.lastIndexOf("。", at - 1), tgt.zh.lastIndexOf("！", at - 1), tgt.zh.lastIndexOf("？", at - 1)) + 1;
+      const ends = ["。", "！", "？"].map((c) =&gt; tgt.zh.indexOf(c, span.end)).filter((i) =&gt; i &gt;= 0);
+      const b = ends.length ? Math.min(...ends) + 1 : tgt.zh.length;
+      const sentence = tgt.zh.slice(a, b), re = new RegExp(HALF_WIDTH.source, "g"); let m;
+      while ((m = re.exec(sentence))) {
+        const i = a + m.index;
+        if (i &lt; span.start || i &gt;= span.end) return err("half_width_left", `another half-width mark "${m[0]}" is left in the same sentence at ${tgt.zh.slice(Math.max(a, i - 4), i + 5)}; widen zh_span to cover every wrong mark and correct them all`);
+      }
+    }
+    const inProtected = tgt.protected.some((s) =&gt; overlap(s, span));
+    if (inProtected &amp;&amp; !ACCURACY.includes(f.category))
+      return err("protected_passage", `${tgt.key}: the span is inside a protected passage; no ${f.category} edit there (only an accuracy correction)`, false);</code></pre>
+<h3>Refused Findings Go Back With the Error</h3>
+<p>A refused finding is sent back to its specialist with the exact error, up to two rounds. What still fails is listed for the editor, never dropped quietly.</p>
+<pre><code>// lib/review.js: retryRefused
+/** Send refused findings back with their exact errors, up to 2 rounds; what still fails is reported. */
+async function retryRefused(doc, sources, req, result, opts = {}) {
+  const s = SETTINGS[req.specialist];
+  const user = userMessage(doc, req.specialist, req.from, req.to, req.front);
+  let refused = result.refused, usd = 0;
+  for (let round = 1; round &lt;= MAX_RETRY_ROUNDS &amp;&amp; refused.length; round++) {
+    const rr = await callJSON({ label: `${opts.labelPrefix || ""}${req.specialist}:retry`, model: s.model, effort: s.effort, maxTokens: s.maxTokens,
+                                system: systemPrompt(req.specialist), schema: answerSchema(req.specialist), user: `${user}\n\n${retryMessage(refused)}` });
+    usd += rr.usd || 0;
+    if (!rr.ok) break;
+    const again = checkAnswer(doc, sources, req, rr.data);
+    result.accepted.push(...again.accepted.filter((a) =&gt; !result.accepted.some((b) =&gt; b.target === a.target &amp;&amp; b.zh_span === a.zh_span &amp;&amp; b.category === a.category)));
+    refused = again.refused;
+  }
+  return { failed: refused, usd };
+}</code></pre>
+<h3>One Box per Fault</h3>
+<p>Overlapping flags on the same words become one group. If every fix leaves the same text, that fix is used; if they differ, one combined change is written and checked in code.</p>
+<pre><code>// consolidator.js: consolidate
+async function consolidate(doc, section, rec, opts = {}) {
+  indexDocument(doc);
+  const out = [], failed = []; let usd = 0, combined = 0, same = 0;
+  for (const g of groupOverlapping(rec.findings)) {
+    if (g.length === 1) { out.push(g[0]); continue; }
+    const results = new Set(g.map((f) =&gt; resultText(doc, f)));
+    if (results.size === 1) {
+      // Every flag leaves the same text: the widest span carries the change.
+      const widest = g.reduce((a, b) =&gt; (b.zh_span.length &gt; a.zh_span.length ? b : a));
+      const c = checkCombined(doc, g, widest, config.banned_in_output);
+      if (c.ok) { out.push({ ...c.box, change_by: "same" }); same++; continue; }
+    }
+    const r = await combine(doc, g, opts);
+    usd += r.usd;
+    if (r.box) { out.push(r.box); combined++; }
+    else {
+      const c = checkCombined(doc, g, g[0], config.banned_in_output);
+      out.push(c.ok ? { ...c.box, change_by: "first flag" } : g[0]);
+      failed.push({ target: g[0].target, flags: g.map((f) =&gt; f.id), error: r.failed });
+    }
+  }</code></pre>
+<h3>A Fresh Grader Annotates, Never Drops</h3>
+<p>The grader did not write the findings and reads them in a separate request. Code attaches its verdict to each box and keeps every box, whatever the verdict.</p>
+<pre><code>// grader.js: attaching the verdicts
+  const byId = Object.fromEntries(findings.map((f) =&gt; [f.id, f]));
+  let graded = 0;
+  for (const n of r.data.notes) if (byId[n.id] &amp;&amp; targets.includes(byId[n.id])) { byId[n.id].grader = { verdict: n.verdict, note: n.note }; graded++; }</code></pre>
+<h3>What an Accepted Finding Does</h3>
+<p>One function decides whether an accepted finding is a change, a deletion or a comment. An addition with no suggestion deletes the added words, except inside the protected passage.</p>
+<pre><code>// tools.js: findingMode
+  function findingMode(doc, f) {
+    const t = doc.byKey[f.target];
+    const span = { start: f.zh_start, end: f.zh_start + String(f.zh_span || "").length };
+    if (f.suggestion) return "change";
+    if (t &amp;&amp; t.protected.some((s) =&gt; overlap(s, span))) return "comment";
+    return f.category === "addition" || (f.flags || []).some((x) =&gt; x.category === "addition") ? "delete" : "comment";
+  }</code></pre>
+<h3>Nothing Reaches Word Without a Decision</h3>
+<p>Only accepted or edited findings go further, and an edit is checked again. The Word writer, the summary and the demo's reviewed report all take their text from this gate.</p>
+<pre><code>// lib/apply_decisions.js: gate
+  function gate(doc, findings, decisions, banned) {
+    tools.indexDocument(doc);
+    const changes = [], comments = [], refused = [], undecided = [], rejected = [];
+    for (const f of findings) {
+      const d = decisions[f.id];
+      if (!d) { undecided.push(f.id); continue; }
+      if (d.decision === "reject") { rejected.push(f.id); continue; }
+      if (!["accept", "edit"].includes(d.decision)) { refused.push({ id: f.id, why: `unknown decision ${d.decision}` }); continue; }
+      let text = f.suggestion;
+      if (d.decision === "edit") {
+        const c = tools.checkEdit(doc, f, d.text, banned);
+        if (!c.ok) { refused.push({ id: f.id, why: c.error }); continue; }
+        text = c.text;
+      }
+      const t = doc.byKey[f.target];
+      if (!t || t.zh.slice(f.zh_start, f.zh_start + f.zh_span.length) !== f.zh_span) { refused.push({ id: f.id, why: "span no longer in the text" }); continue; }
+      const w = tools.bannedWording(text, banned) || tools.bannedWording(f.issue, banned) || tools.bannedWording(f.reason, banned);
+      if (w) { refused.push({ id: f.id, why: `banned wording: ${w}` }); continue; }
+      const mode = tools.findingMode(doc, { ...f, suggestion: text });
+      if (mode === "comment") comments.push({ ...f, decided: d });
+      else changes.push({ ...f, text: mode === "delete" ? "" : text, decided: d });
+    }
+    return { changes, comments, refused, undecided, rejected };
+  }</code></pre>
+<h3>Batch Run: Failures Are Redone Live</h3>
+<p>Results come back matched by custom_id. Errored, expired or cut-off requests and any paragraphs left undone are redone live. Then the same checks, boxes and grader run as in a live run.</p>
+<pre><code>// lib/batch.js: collect
+    for await (const res of await c.messages.batches.results(b.id)) {
+      const req = byId[res.custom_id]; if (!req) continue;
+      const t = res.result.type;
+      if (t !== "succeeded") { redo.push({ req, why: t }); continue; }   // errored, expired, canceled
+      const msg = res.result.message;
+      record(`${b.section}:${req.specialist}:batch`, msg.model, msg.usage, true);
+      const a = parseAnswer(msg);
+      if (!a.ok &amp;&amp; a.error.category === "max_tokens" &amp;&amp; req.to &gt; req.from) {   // split the range and redo live
+        const mid = Math.floor((req.from + req.to) / 2);
+        redo.push({ req: { ...req, custom_id: req.custom_id + "-a", to: mid }, why: "max_tokens" }, { req: { ...req, custom_id: req.custom_id + "-b", from: mid + 1, front: false }, why: "max_tokens" });
+        continue;
+      }
+      if (!a.ok) { redo.push({ req, why: a.error.category }); continue; }   // refusal (live call uses the fallback) or invalid JSON
+      const checked = checkAnswer(doc, sources, req, a.data);
+      const retry = await retryRefused(doc, sources, req, checked, { labelPrefix: `${b.section}:` });
+      ok.push({ req, ok: true, accepted: checked.accepted, failed: retry.failed, done: checked.done, gaps: checked.gaps });
+    }
+    for (const r of ok) if (r.gaps.length) redo.push({ req: { ...r.req, custom_id: r.req.custom_id + "-gap", from: Math.min(...r.gaps), to: Math.max(...r.gaps), front: false }, why: "gap" });
+    const live = await pool(redo, 4, (x) =&gt; runRequest(doc, sources, x.req, { labelPrefix: `${b.section}:retry:` }));
+    const all = ok.concat(live.filter((r) =&gt; r.ok));
+    const failedRequests = live.filter((r) =&gt; !r.ok).map((r) =&gt; ({ custom_id: r.req.custom_id, error: r.error }));
+    const section = doc.sections.find((s) =&gt; s.id === b.section);
+    const rec = assemble(doc, section, all, failedRequests);
+    rec.consolidated = await consolidate(doc, section, rec, { labelPrefix: `${b.section}:` });
+    if (!opts.noGrader) { const g = await gradeSection(doc, section, rec.findings, { labelPrefix: `${b.section}:` }); rec.grader = g; }</code></pre>
+<h3>Benchmark: Scored Against the Answer Key</h3>
+<p>A defect is caught by a finding on its paragraph, in one of its categories, whose span overlaps the planted span. A finding on a clean paragraph counts against the run.</p>
+<pre><code>// benchmark/score.js: score
+  for (const c of key.review) {
+    const hits = findings.filter((f) =&gt; f.target === c.target &amp;&amp; [f.category, ...(f.flags || []).map((a) =&gt; a.category)].some((x) =&gt; c.categories.includes(x)) &amp;&amp;
+      (!c.span || (f.zh_start &lt; c.span[1] + 2 &amp;&amp; c.span[0] - 2 &lt; f.zh_start + f.zh_span.length)) &amp;&amp; (!c.suggestion_contains || c.suggestion_contains.every((w) =&gt; (f.suggestion || "").includes(w))));
+    hits.forEach((f) =&gt; used.add(f.id));
+    cases.push({ id: c.id, target: c.target, stage: c.stage, pass: hits.length &gt; 0, by: hits.map((f) =&gt; `${f.id} ${f.specialist}/${f.category}`), what: c.what });
+  }
+  const changes = (glossaryReport.changes || []).map((x) =&gt; `${x.target}|${x.from}`);
+  const planted = new Set(key.glossary.flatMap((g) =&gt; g.occurrences.map((o) =&gt; `${o.target}|${o.from}`)));
+  for (const g of key.glossary) {
+    const missing = g.occurrences.filter((o) =&gt; !changes.includes(`${o.target}|${o.from}`));
+    cases.push({ id: g.id, target: g.occurrences.map((o) =&gt; o.target).join(" "), stage: "glossary", pass: missing.length === 0, by: missing.length ? [`missed ${missing.map((o) =&gt; o.target).join(", ")}`] : ["glossary stage"], what: g.what });
+  }</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Group</th><th>Cases</th><th>Pass when</th></tr>
+<tr><td><b>Accuracy</b></td><td>8</td><td>A finding on the right paragraph, its Chinese span overlapping the planted span, in an accuracy category; for the protected passage, the suggestion restores the missing meaning.</td></tr>
+<tr><td><b>Register</b></td><td>3</td><td>The same, in the register category or a neighbouring one.</td></tr>
+<tr><td><b>Section</b></td><td>6</td><td>The same, in the planted category or a neighbouring section category.</td></tr>
+<tr><td><b>Glossary stage</b></td><td>3</td><td>Every planted occurrence changed to the approved term, and no other change.</td></tr>
+<tr><td><b>Clean paragraphs</b></td><td>all others</td><td>No must finding; each should finding there is counted and read.</td></tr></table>
+<ul><li><b>Written first:</b> the answer key was built from the defects before any run, and the prompts never name a planted defect.</li><li><b>Read, not only scored:</b> findings were read after every run, even after a full score. No case was loosened to pass a wrong finding.</li><li><b>Two paths:</b> one live run and one Message Batches run of the same report, then a parity check.</li><li><b>The Word file:</b> Word saves accept-all and reject-all copies, which must equal the decided text and the original.</li><li><b>Tool tests:</b> 64 tests call every rule and refusal with no API key.</li></ul>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the review behaves, cut directly from the project files. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/chinese-translation-quality-check" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/chinese-translation-quality-check/
+├── config/document.json      # Every rule that changes per document
+├── resources/                # Brief B1 to B4, glossary G01 to G30, house style H1 to H8
+├── sample/                   # English report, correct Chinese, 20 planted defects
+├── glossary_stage.js         # Settled terms as tracked changes, no model
+├── build_document.js         # English and Chinese paired, target by target
+├── tools.js                  # The six tools and every rule
+├── mcp_server.mjs            # MCP server for the six tools
+├── prompt.js                 # One fixed prompt per specialist; the request split
+├── coordinator.js            # Live section run, gaps re-delegated, conflicts linked
+├── consolidator.js           # One box per fault, one correction
+├── grader.js                 # Fresh reviewer: sound, doubtful or wrong
+├── lib/                      # Claude calls, retries, batch path, decisions, Word writer
+├── batch/                    # Estimate, submit and collect the Message Batches run
+├── write_docx.mjs            # Decided findings into the Word file
+├── write_summary.mjs         # The review summary
+├── review.html               # The editor's page (local server or demo)
+├── build_demo.mjs            # -&gt; demo.html with the recorded batch run
+├── benchmark/
+│   ├── Answer Key.md         # Written from the defects before any run
+│   ├── test_tools.mjs        # Every rule and refusal, no API key
+│   ├── run_benchmark.mjs     # Live, batch, parity; USD 5 cap
+│   └── results/              # Recorded live and batch runs
+├── spike/                    # Word accept-all and reject-all check
+└── CLAUDE.md                 # Layout, rules, steps after a change</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Chinese Translation Quality Check</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  const hs=document.querySelectorAll('#'+tab+' h2'),half=Math.ceil(hs.length/2);
+  hs.forEach((h,i)=>{if(hs.length>5&&i===half){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Translation Review: Chinese Translation Quality Check</title>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc;--old:#fbd0d0;--oldink:#8a1c1c;--new:#c9ecd3;--newink:#0f4a24;--hit:#fde68a;--prot:#e3e8ee;--gl:#dbe8f7;--glink:#1d4f8a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--old:#5a2323;--oldink:#ffd9d9;--new:#1f4a2c;--newink:#d4f5de;--hit:#5c4b14;--prot:#2c3743;--gl:#1e3550;--glink:#bcd7f5}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--old:#5a2323;--oldink:#ffd9d9;--new:#1f4a2c;--newink:#d4f5de;--hit:#5c4b14;--prot:#2c3743;--gl:#1e3550;--glink:#bcd7f5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.7 "Segoe UI","Microsoft YaHei",Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;z-index:3}
+.bar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.crumbs{font-size:12.5px;color:var(--muted)}.crumbs a{color:inherit;text-decoration:none}
+.top h1{font-size:20px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:4px 6px}
+nav button{border:1px solid var(--line);background:var(--card);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13.5px}
+nav button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+select,button,textarea{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+button{cursor:pointer}button.pri{background:var(--accent);color:#fff;border-color:var(--accent)}
+.muted{color:var(--muted);font-size:13.5px}
+.intro{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 14px;margin:14px 0;font-size:14.5px}
+.intro p{margin:4px 0}
+.para{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin:14px 0}
+.para h2{grid-column:1/-1;font-size:17px;color:var(--navy);margin:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.hd{grid-column:1/-1;font-size:13px;color:var(--muted);margin-top:-6px}
+.en{font-size:14.5px;line-height:1.65}.zh{font-size:16px;line-height:1.9}
+mark.f{background:var(--hit);color:inherit;border-radius:2px}mark.f.sel{outline:2px solid var(--accent)}
+span.p{background:var(--prot);border-bottom:1px dashed var(--muted)}
+.note{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.find{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px;margin:10px 0;cursor:pointer}
+.find.sel{box-shadow:0 0 0 2px var(--accent)}
+.find.accept{border-left-color:#3a8f5c}.find.edit{border-left-color:#c0841a}.find.reject{border-left-color:#9aa7b5;opacity:.75}
+.find .meta{font-size:13px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.flags{margin:6px 0;border-left:2px solid var(--line);padding-left:10px}.flag{font-size:14px;margin:2px 0}
+.lbl{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;margin-right:4px}
+.chg{margin:6px 0;font-size:16px}.old{background:var(--old);color:var(--oldink);padding:0 3px}.new{background:var(--new);color:var(--newink);padding:0 3px}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:10px;padding:0 7px}
+.g-sound{color:#3a8f5c}.g-doubtful{color:#c0841a}.g-wrong{color:#c04040}
+.acts{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;align-items:center}
+textarea{width:100%;min-height:54px;font-size:15px}
+.err{color:#c04040;font-size:13.5px}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+h3{font-size:15.5px;color:var(--navy);margin:20px 0 6px}
+.keys{font-size:12.5px;color:var(--muted)}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin:14px 0}
+.doc h4{font-size:15px;color:var(--navy);margin:18px 0 4px}
+.doc p{font-size:16px;line-height:1.95;margin:6px 0}
+.doc .k{font-size:11.5px;color:var(--muted);margin-right:6px;font-family:Consolas,monospace}
+ins.e{background:var(--new);color:var(--newink);text-decoration:underline}del.e{background:var(--old);color:var(--oldink)}
+ins.g{background:var(--gl);color:var(--glink);text-decoration:underline}del.g{background:var(--gl);color:var(--glink);opacity:.8}
+span.c{background:var(--hit)}sup.c{color:var(--accent);font-weight:700;font-size:11px;margin-left:1px}
+.cm{font-size:13px;color:var(--muted);border-left:2px solid var(--hit);padding-left:8px;margin:2px 0 8px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);align-items:center}
+@media (max-width:760px){.para{grid-template-columns:1fr}.doc{padding:14px}}
+footer{margin-top:30px;font-size:12px;color:var(--muted)}
+</style></head>
+<body><div class="wrap">
+<div class="top">
+  <div class="crumbs"><a href="../../index.html">AI Projects</a> / <a href="../../chinese-translation-quality-check.html">Chinese Translation Quality Check</a></div>
+  <div class="bar"><h1>Translation Review</h1><nav id="views"></nav><span id="prog" class="muted"></span></div>
+</div>
+<div id="intro"></div>
+<div id="main"></div>
+<footer>© 2026 Lee Yih Ven · Chinese Translation Quality Check</footer>
+</div>
+<script>
+/* Chinese Translation Quality Check: the tools and every rule, written once.
+ *
+ * Loaded by the MCP server (live path), the batch validator, the tool tests, the benchmark, the
+ * review server and, in the browser, the demo page, so a finding or an edit passes or fails by the
+ * same rule wherever it was made. Nothing here writes to the Word file; only an editor's decision
+ * does (write_docx.mjs, behind the decision gate).
+ *
+ * Rules held in code, not in the prompt:
+ *   - a finding targets a real paragraph (P1 to P44) or front-matter item (F1 to F4), and its English
+ *     and Chinese spans exist in that target's own text
+ *   - the category is on the fixed list and allowed for the calling specialist; severity is must or should
+ *   - the cited source exists: a glossary entry (G01), a house style rule (H1) or a brief point (B1)
+ *   - suggested Chinese uses full-width punctuation; a punctuation finding leaves no half-width mark in its sentence
+ *   - inside a protected passage only an accuracy finding is allowed (a correction, never a change of wording or tone)
+ *   - an addition with no suggestion deletes its span; any other finding with no suggestion is a comment
+ *   - coverage, recheck and conflict tools are for the coordinator only
+ * Every refusal: { ok: false, error: { category, retryable, message } }.
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) module.exports = factory();
+  else root.QualityCheckTools = factory();
+})(typeof self !== "undefined" ? self : this, function () {
+  "use strict";
+
+  const CATEGORIES = ["omission", "mistranslation", "addition", "wording", "fluency", "structure", "register", "punctuation", "quotation"];
+  const ALLOWED = {
+    accuracy: ["omission", "mistranslation", "addition"],
+    section: ["wording", "fluency", "structure", "punctuation", "quotation"],
+    register: ["register"],
+  };
+  const ACCURACY = ALLOWED.accuracy;
+  const SPECIALISTS = Object.keys(ALLOWED);
+  // Half-width marks in Chinese text, except a comma or full stop between digits (8,642万令吉, 24.01%): H1.
+  const HALF_WIDTH = /(?<!\d),|,(?!\d)|[;:!?()]/;
+  const FULL = { ",": "，", ";": "；", ":": "：", "!": "！", "?": "？", "(": "（", ")": "）" };
+
+  const err = (category, message, retryable = true) => ({ ok: false, error: { category, retryable, message } });
+  const normSpace = (s) => String(s || "").replace(/\s+/g, " ").replace(/[“”]/g, '"').replace(/[‘’]/g, "'").trim();
+  const overlap = (a, b) => a.start < b.end && b.start < a.end;
+
+  /** The punctuation hook: half-width marks in suggested Chinese become full-width before saving;
+   *  a comma between digits is a thousands separator and stays as it is. */
+  function normalisePunctuation(s) {
+    return String(s || "").replace(/[,;:!?()]/g, (c, i, str) => (c === "," && /\d/.test(str[i - 1] || "") && /\d/.test(str[i + 1] || "") ? c : FULL[c]));
+  }
+
+  /** Index a document once: byKey and byN for fast lookup. */
+  function indexDocument(doc) {
+    if (!doc.byKey) {
+      Object.defineProperty(doc, "byKey", { value: Object.fromEntries(doc.targets.map((t) => [t.key, t])), enumerable: false });
+      Object.defineProperty(doc, "byN", { value: Object.fromEntries(doc.targets.filter((t) => t.n).map((t) => [t.n, t])), enumerable: false });
+    }
+    return doc;
+  }
+
+  /** "P12", "p12", "12" or "F4" -> the target, or null. */
+  function resolveTarget(doc, target) {
+    const t = String(target || "").trim().toUpperCase();
+    const key = /^\d+$/.test(t) ? `P${t}` : t;
+    return doc.byKey[key] || null;
+  }
+
+  /** Does a cited source exist? Accepts G01, H1, B1. */
+  function sourceExists(sources, cited) {
+    const s = String(cited || "").trim();
+    if (/^G\d{2}$/.test(s)) return sources.glossary.includes(s);
+    if (/^H\d{1,2}$/.test(s)) return sources.style.includes(s);
+    if (/^B\d$/.test(s)) return sources.brief.includes(s);
+    return false;
+  }
+
+  /**
+   * findingMode(doc, finding) -> "change" | "delete" | "comment"
+   * What an accepted finding does to the text: a suggestion replaces the span; an addition with no
+   * suggestion deletes the added words, except in a protected passage, where a deletion is never
+   * guessed and it stays a comment; any other finding with no suggestion is a comment. (Only accuracy
+   * findings reach a protected passage at all: validateFinding.) One rule for the gate, the Word writer
+   * and the pages.
+   */
+  function findingMode(doc, f) {
+    const t = doc.byKey[f.target];
+    const span = { start: f.zh_start, end: f.zh_start + String(f.zh_span || "").length };
+    if (f.suggestion) return "change";
+    if (t && t.protected.some((s) => overlap(s, span))) return "comment";
+    return f.category === "addition" || (f.flags || []).some((x) => x.category === "addition") ? "delete" : "comment";
+  }
+
+  /** Two marks side by side at the edges of a change (不可扣税。。, or a deletion between two marks)? */
+  const MARK = /[。，；：！？、]/;
+  function doubledMark(text, start, end, replacement) {
+    const before = text[start - 1] || "", after = text[end] || "";
+    const r = String(replacement || "");
+    if (!r) return MARK.test(before) && MARK.test(after) ? before + after : null;
+    if (MARK.test(r[r.length - 1]) && MARK.test(after)) return r[r.length - 1] + after;
+    if (MARK.test(r[0]) && MARK.test(before)) return before + r[0];
+    return null;
+  }
+
+  /** The target's text after this one finding alone is applied; null for a comment. */
+  function resultText(doc, f) {
+    const mode = findingMode(doc, f);
+    if (mode === "comment") return null;
+    const t = doc.byKey[f.target].zh;
+    return t.slice(0, f.zh_start) + (mode === "delete" ? "" : f.suggestion) + t.slice(f.zh_start + f.zh_span.length);
+  }
+
+  /**
+   * groupOverlapping(findings) -> [[finding, ...], ...]
+   * Specialists work independently, so one fault is often flagged by several of them from different
+   * angles (an added phrase that is also casual wording). Findings on the same target whose Chinese
+   * spans overlap, directly or through another, form one group: one box for the editor, one change.
+   * Groups keep the order of their first finding; within a group, specialist order (accuracy,
+   * section, register).
+   */
+  function groupOverlapping(findings) {
+    const rank = (f) => SPECIALISTS.indexOf(f.specialist);
+    const ov = (a, b) => a.target === b.target && a.zh_start < b.zh_start + b.zh_span.length && b.zh_start < a.zh_start + a.zh_span.length;
+    const groups = [], used = new Set();
+    for (const f of findings) {
+      if (used.has(f)) continue;
+      const g = [f]; used.add(f);
+      for (let i = 0; i < g.length; i++) for (const x of findings) if (!used.has(x) && ov(g[i], x)) { g.push(x); used.add(x); }
+      groups.push(g.sort((a, b) => rank(a) - rank(b)));
+    }
+    return groups;
+  }
+
+  /**
+   * checkCombined(doc, group, change, banned) -> { ok, box } | error
+   * The one change for a group of flags: zh_span is in the target and covers every flagged span, the
+   * suggestion uses full-width punctuation and no banned wording, and a protected passage only takes
+   * it when every flag is an accuracy flag. The box keeps every flag; its category, specialist and
+   * source are the first flag's, its severity the highest.
+   */
+  function checkCombined(doc, group, change, banned) {
+    const t = doc.byKey[group[0].target];
+    const lo = Math.min(...group.map((f) => f.zh_start)), hi = Math.max(...group.map((f) => f.zh_start + f.zh_span.length));
+    const zhSpan = String(change.zh_span || "");
+    let at = -1;
+    for (let i = t.zh.indexOf(zhSpan); zhSpan && i >= 0; i = t.zh.indexOf(zhSpan, i + 1)) if (i <= lo && i + zhSpan.length >= hi) { at = i; break; }
+    if (at < 0) return err("span_does_not_cover", `zh_span must be text from ${t.key} that covers every flagged span, from 「${t.zh.slice(lo, hi)}」 at least`);
+    const suggestion = normalisePunctuation(change.suggestion);
+    if (HALF_WIDTH.test(suggestion)) return err("half_width_punctuation", "the suggestion uses half-width punctuation; use full-width marks");
+    const dbl = doubledMark(t.zh, at, at + zhSpan.length, suggestion);
+    if (dbl) return err("doubled_punctuation", `the change would leave "${dbl}" in ${t.key}: the text around zh_span already has its own mark; drop the mark from the suggestion or take it into zh_span`);
+    const w = bannedWording(suggestion + " " + (change.issue || ""), banned); if (w) return err("banned_wording", `wording not allowed in the output: ${w}`);
+    if (!String(change.issue || "").trim()) return err("missing_field", "issue is required");
+    const inProtected = t.protected.some((s) => s.start < at + zhSpan.length && at < s.end);
+    if (inProtected && group.some((f) => !ACCURACY.includes(f.category))) return err("protected_passage", "only accuracy corrections in a protected passage", false);
+    const lead = group[0];
+    const box = { ...lead, zh_span: zhSpan, zh_start: at, suggestion, issue: String(change.issue).trim(), reason: String(change.reason || lead.reason).trim(),
+                  severity: group.some((f) => f.severity === "must") ? "must" : "should", flags: group.map(flagOf) };
+    delete box.grader;
+    box.comment_only = findingMode(doc, box) === "comment";
+    return { ok: true, box };
+  }
+  const flagOf = (f) => ({ specialist: f.specialist, category: f.category, severity: f.severity, en_span: f.en_span, zh_span: f.zh_span,
+                           issue: f.issue, reason: f.reason, source: f.source, suggestion: f.suggestion });
+
+  /**
+   * validateFinding(doc, sources, finding, specialist) -> { ok, finding } | error
+   * Shared by record_finding (live) and the batch validator.
+   */
+  function validateFinding(doc, sources, f, specialist) {
+    if (!SPECIALISTS.includes(specialist)) return err("not_assigned", `unknown specialist ${specialist}`, false);
+    const tgt = resolveTarget(doc, f.target);
+    if (!tgt) return err("target_not_found", `target ${f.target} does not exist; use P1 to P${doc.paragraphs} or F1 to F${doc.targets.length - doc.paragraphs}`);
+    if (!CATEGORIES.includes(f.category) || !ALLOWED[specialist].includes(f.category))
+      return err("category_not_allowed", `category ${f.category} is not allowed for the ${specialist} specialist; allowed: ${ALLOWED[specialist].join(", ")}`);
+    if (!["must", "should"].includes(f.severity)) return err("invalid_severity", "severity must be must or should; optional suggestions are not reported");
+    const enSpan = String(f.en_span || "").trim();
+    if (!enSpan || !normSpace(tgt.en).includes(normSpace(enSpan)))
+      return err("span_not_in_english", `en_span is not in the English of ${tgt.key}; copy it exactly`);
+    const zhSpan = String(f.zh_span || "");
+    const at = zhSpan ? tgt.zh.indexOf(zhSpan) : -1;
+    if (at < 0) return err("span_not_in_chinese", `zh_span is not in the Chinese of ${tgt.key}; copy it exactly`);
+    if (!sourceExists(sources, f.source))
+      return err("unknown_source", `source ${f.source} does not exist; cite a glossary entry (G01), a house style rule (H1) or a brief point (B1)`);
+    const suggestion = String(f.suggestion || "");
+    if (HALF_WIDTH.test(suggestion)) return err("half_width_punctuation", "suggested Chinese uses half-width punctuation; use full-width marks");
+    if (!String(f.issue || "").trim() || !String(f.reason || "").trim()) return err("missing_field", "issue and reason are required");
+    const span = { start: at, end: at + zhSpan.length };
+    const dbl = (suggestion || f.category === "addition") && doubledMark(tgt.zh, span.start, span.end, suggestion);
+    if (dbl) return err("doubled_punctuation", `the change would leave "${dbl}" in ${tgt.key}: the text around zh_span already has its own mark; drop the mark from the suggestion or take it into zh_span`);
+    // A punctuation finding fixes the whole sentence: no half-width mark may be left outside its span.
+    if (f.category === "punctuation") {
+      const a = Math.max(tgt.zh.lastIndexOf("。", at - 1), tgt.zh.lastIndexOf("！", at - 1), tgt.zh.lastIndexOf("？", at - 1)) + 1;
+      const ends = ["。", "！", "？"].map((c) => tgt.zh.indexOf(c, span.end)).filter((i) => i >= 0);
+      const b = ends.length ? Math.min(...ends) + 1 : tgt.zh.length;
+      const sentence = tgt.zh.slice(a, b), re = new RegExp(HALF_WIDTH.source, "g"); let m;
+      while ((m = re.exec(sentence))) {
+        const i = a + m.index;
+        if (i < span.start || i >= span.end) return err("half_width_left", `another half-width mark "${m[0]}" is left in the same sentence at ${tgt.zh.slice(Math.max(a, i - 4), i + 5)}; widen zh_span to cover every wrong mark and correct them all`);
+      }
+    }
+    const inProtected = tgt.protected.some((s) => overlap(s, span));
+    if (inProtected && !ACCURACY.includes(f.category))
+      return err("protected_passage", `${tgt.key}: the span is inside a protected passage; no ${f.category} edit there (only an accuracy correction)`, false);
+    const finding = {
+      target: tgt.key, n: tgt.n, kind: tgt.kind, specialist, category: f.category, severity: f.severity,
+      en_span: enSpan, zh_span: zhSpan, zh_start: at, issue: String(f.issue).trim(), suggestion,
+      reason: String(f.reason).trim(), source: String(f.source).trim(),
+    };
+    finding.comment_only = findingMode(doc, finding) === "comment";
+    return { ok: true, finding };
+  }
+
+  /**
+   * checkEdit(doc, finding, text, banned) -> { ok, text } | { ok: false, error }
+   * The editor's own wording for a finding: full-width punctuation, not empty, the span still in the
+   * text, no banned wording. Used by the review server and, in the browser, the demo page.
+   */
+  function checkEdit(doc, f, text, banned) {
+    const t = normalisePunctuation(text);
+    if (!t.trim()) return { ok: false, error: "the edited text is empty" };
+    if (HALF_WIDTH.test(t)) return { ok: false, error: "use full-width punctuation" };
+    const tgt = doc.byKey[f.target];
+    if (!tgt || !tgt.zh.includes(f.zh_span)) return { ok: false, error: "the span is no longer in the text" };
+    const w = bannedWording(t, banned); if (w) return { ok: false, error: `wording not allowed in the output: ${w}` };
+    return { ok: true, text: t };
+  }
+
+  /** The output wording check: none of the configured words in text meant for the reader of the file. */
+  function bannedWording(text, banned) {
+    const s = String(text || "");
+    for (const w of banned || []) {
+      const re = /^[A-Za-z]+$/.test(w) ? new RegExp(`\\b${w}\\b`, "i") : null;
+      if (re ? re.test(s) : s.includes(w)) return w;
+    }
+    return null;
+  }
+
+  // ---------- tool definitions (MCP and live) ----------
+  const FINDING_PROPS = {
+    target: { type: "string", description: "P1 to P44, or F1 to F4 for the front matter" },
+    category: { type: "string", enum: CATEGORIES },
+    en_span: { type: "string", description: "The English words the finding rests on, copied exactly" },
+    zh_span: { type: "string", description: "The Chinese words at issue, copied exactly from the target" },
+    issue: { type: "string" },
+    suggestion: { type: "string", description: "Suggested Chinese replacing zh_span; empty for a comment only" },
+    reason: { type: "string" },
+    source: { type: "string", description: "A glossary entry G01, a house style rule H1, or a brief point B1" },
+    severity: { type: "string", enum: ["must", "should"] },
+  };
+  const TOOL_DEFINITIONS = [
+    { name: "get_pairs", description: "Paragraphs from..to with their English and Chinese, the paragraph before and after for context, and any protected passage marked. Front matter: from = 0, to = 0.",
+      input_schema: { type: "object", additionalProperties: false, required: ["from", "to"], properties: { from: { type: "integer" }, to: { type: "integer" } } } },
+    { name: "record_finding", description: "Record one finding. Checked in code; a refusal says exactly what to fix.",
+      input_schema: { type: "object", additionalProperties: false, required: Object.keys(FINDING_PROPS), properties: FINDING_PROPS } },
+    { name: "mark_done", description: "Record that the calling specialist finished a paragraph.",
+      input_schema: { type: "object", additionalProperties: false, required: ["n"], properties: { n: { type: "integer" } } } },
+    { name: "get_coverage", description: "Coordinator only: which paragraphs each specialist has done, and which requests failed.",
+      input_schema: { type: "object", additionalProperties: false, required: [], properties: {} } },
+    { name: "request_recheck", description: "Coordinator only: send a paragraph back to a specialist with a reason, once.",
+      input_schema: { type: "object", additionalProperties: false, required: ["n", "specialist", "reason"],
+        properties: { n: { type: "integer" }, specialist: { type: "string", enum: SPECIALISTS }, reason: { type: "string" } } } },
+    { name: "flag_conflict", description: "Coordinator only: link two findings that disagree on the same words, for the editor. It never settles them.",
+      input_schema: { type: "object", additionalProperties: false, required: ["a", "b", "note"],
+        properties: { a: { type: "string" }, b: { type: "string" }, note: { type: "string" } } } },
+  ];
+
+  /**
+   * createWorkbench({ doc, sources, store }) -> { tools, call(name, input, ctx) }
+   *   sources: { glossary: [ids], style: [ids], brief: [ids] }
+   *   store:   { load(): state, save(state) }; state = { findings, coverage, rechecks, conflicts }
+   *   ctx:     { caller: "accuracy" | "section" | "register" | "coordinator", assigned: [n] }
+   */
+  function createWorkbench(opts) {
+    const doc = indexDocument(opts.doc);
+    const sources = opts.sources;
+    const store = opts.store;
+    const last = doc.paragraphs;
+
+    function call(name, input, ctx) {
+      const caller = (ctx && ctx.caller) || "";
+      const state = store.load();
+      state.findings = state.findings || []; state.coverage = state.coverage || {};
+      state.rechecks = state.rechecks || []; state.conflicts = state.conflicts || [];
+      const done = (result) => { store.save(state); return result; };
+      const coordinatorOnly = () => caller !== "coordinator" ? err("coordinator_only", `${name} is for the coordinator only`, false) : null;
+      const pair = (t, contextOnly) => ({ target: t.key, context_only: contextOnly, heading: t.heading_en || undefined, en: t.en, zh: t.zh,
+                                          protected: t.protected.length ? t.protected.map((s) => t.zh.slice(s.start, s.end)) : undefined });
+
+      switch (name) {
+        case "get_pairs": {
+          const from = Number(input.from), to = Number(input.to);
+          if (from === 0 && to === 0) return { ok: true, paragraphs: doc.targets.filter((t) => !t.n).map((t) => pair(t, false)) };
+          if (!(from >= 1 && to <= last && from <= to)) return err("target_not_found", `range must be inside 1 to ${last}`);
+          const out = [];
+          for (let n = Math.max(1, from - 1); n <= Math.min(last, to + 1); n++) out.push(pair(doc.byN[n], n < from || n > to));
+          return { ok: true, paragraphs: out };
+        }
+        case "record_finding": {
+          const f = Object.assign({}, input, { suggestion: normalisePunctuation(input.suggestion) });   // punctuation hook
+          const v = validateFinding(doc, sources, f, caller);
+          if (!v.ok) return v;
+          if (ctx.assigned && v.finding.n && !ctx.assigned.includes(v.finding.n)) return err("not_assigned", `${v.finding.target} is not assigned to the ${caller} specialist in this request`);
+          const dup = state.findings.find((x) => x.target === v.finding.target && x.category === v.finding.category && x.zh_span === v.finding.zh_span && x.specialist === caller);
+          if (dup) return err("duplicate", `already recorded as ${dup.id}`, false);
+          const id = `F${String(state.findings.length + 1).padStart(4, "0")}`;
+          state.findings.push(Object.assign({ id, at: new Date().toISOString() }, v.finding));
+          return done({ ok: true, id, comment_only: v.finding.comment_only });
+        }
+        case "mark_done": {
+          const n = Number(input.n);
+          if (!doc.byN[n]) return err("target_not_found", `paragraph ${n} does not exist`);
+          if (!SPECIALISTS.includes(caller)) return err("not_assigned", "only a specialist marks paragraphs done", false);
+          if (ctx.assigned && !ctx.assigned.includes(n)) return err("not_assigned", `paragraph ${n} is not assigned to the ${caller} specialist in this request`);
+          (state.coverage[caller] = state.coverage[caller] || []).includes(n) || state.coverage[caller].push(n);
+          return done({ ok: true });
+        }
+        case "get_coverage": {
+          const c = coordinatorOnly(); if (c) return c;
+          return { ok: true, coverage: Object.fromEntries(SPECIALISTS.map((s) => [s, (state.coverage[s] || []).slice().sort((a, b) => a - b)])),
+                   failed: state.failed || [] };
+        }
+        case "request_recheck": {
+          const c = coordinatorOnly(); if (c) return c;
+          if (!doc.byN[Number(input.n)]) return err("target_not_found", `paragraph ${input.n} does not exist`);
+          if (state.rechecks.some((r) => r.n === Number(input.n) && r.specialist === input.specialist)) return err("already_rechecked", "each paragraph goes back to a specialist once", false);
+          state.rechecks.push({ n: Number(input.n), specialist: input.specialist, reason: String(input.reason || "") });
+          return done({ ok: true });
+        }
+        case "flag_conflict": {
+          const c = coordinatorOnly(); if (c) return c;
+          const a = state.findings.find((x) => x.id === input.a), b = state.findings.find((x) => x.id === input.b);
+          if (!a || !b) return err("finding_not_found", "both findings must exist");
+          const sa = { start: a.zh_start, end: a.zh_start + a.zh_span.length }, sb = { start: b.zh_start, end: b.zh_start + b.zh_span.length };
+          if (a.target !== b.target || !overlap(sa, sb)) return err("no_overlap", "the two findings are not on the same words", false);
+          state.conflicts.push({ a: a.id, b: b.id, note: String(input.note || "") });
+          return done({ ok: true });
+        }
+        default:
+          return err("unknown_tool", `no tool named ${name}`, false);
+      }
+    }
+    return { tools: TOOL_DEFINITIONS, call };
+  }
+
+  return { CATEGORIES, ALLOWED, SPECIALISTS, createWorkbench, validateFinding, findingMode, resultText, groupOverlapping, checkCombined, checkEdit, resolveTarget, sourceExists,
+           normalisePunctuation, bannedWording, indexDocument, TOOL_DEFINITIONS };
+});
+
+</script>
+<script>
+/* Apply the editor's decisions to the text, written once.
+ *
+ * Used by write_docx.mjs (the Word file), write_summary.mjs (the review summary) and, in the
+ * browser, the demo page (the reviewed report), so the three can never disagree.
+ *
+ * gate(doc, findings, decisions, banned)
+ *   Only findings the editor accepted or edited go further. An edit is re-checked (tools.js
+ *   checkEdit). A finding in a protected passage or with no suggestion becomes a comment, never a
+ *   change; an addition with no suggestion is a deletion (tools.js findingMode). Banned wording in the
+ *   text, issue or reason is refused.
+ * plan(doc, gateResult)
+ *   Per target, from the end backwards; a change that overlaps one already placed in the same
+ *   target is skipped and reported, as the Word writer does.
+ * reviewed(doc, glossaryReport, planResult)
+ *   Per target, the text as characters, each marked: kept, deleted or inserted by the glossary stage,
+ *   deleted or inserted by the editor, with the comments on it. From that: the clean text (every
+ *   change accepted), the original text (every change rejected) and runs for a tracked-changes view.
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) module.exports = factory(require("../tools.js"));
+  else root.ApplyDecisions = factory(root.QualityCheckTools);
+})(typeof self !== "undefined" ? self : this, function (tools) {
+  "use strict";
+
+  function gate(doc, findings, decisions, banned) {
+    tools.indexDocument(doc);
+    const changes = [], comments = [], refused = [], undecided = [], rejected = [];
+    for (const f of findings) {
+      const d = decisions[f.id];
+      if (!d) { undecided.push(f.id); continue; }
+      if (d.decision === "reject") { rejected.push(f.id); continue; }
+      if (!["accept", "edit"].includes(d.decision)) { refused.push({ id: f.id, why: `unknown decision ${d.decision}` }); continue; }
+      let text = f.suggestion;
+      if (d.decision === "edit") {
+        const c = tools.checkEdit(doc, f, d.text, banned);
+        if (!c.ok) { refused.push({ id: f.id, why: c.error }); continue; }
+        text = c.text;
+      }
+      const t = doc.byKey[f.target];
+      if (!t || t.zh.slice(f.zh_start, f.zh_start + f.zh_span.length) !== f.zh_span) { refused.push({ id: f.id, why: "span no longer in the text" }); continue; }
+      const w = tools.bannedWording(text, banned) || tools.bannedWording(f.issue, banned) || tools.bannedWording(f.reason, banned);
+      if (w) { refused.push({ id: f.id, why: `banned wording: ${w}` }); continue; }
+      const mode = tools.findingMode(doc, { ...f, suggestion: text });
+      if (mode === "comment") comments.push({ ...f, decided: d });
+      else changes.push({ ...f, text: mode === "delete" ? "" : text, decided: d });
+    }
+    return { changes, comments, refused, undecided, rejected };
+  }
+
+  function plan(doc, g) {
+    const byTarget = {};
+    const add = (kind, f) => (byTarget[f.target] = byTarget[f.target] || []).push({ kind, f, start: f.zh_start, end: f.zh_start + f.zh_span.length });
+    g.changes.forEach((f) => add("change", f)); g.comments.forEach((f) => add("comment", f));
+    const placed = {}, skipped = [];
+    for (const [key, items] of Object.entries(byTarget)) {
+      const done = [];
+      for (const it of items.sort((a, b) => b.start - a.start || (a.kind === "comment") - (b.kind === "comment"))) {
+        if (it.kind === "change" && done.some((d) => d.kind === "change" && it.start < d.end && d.start < it.end)) {
+          skipped.push({ id: it.f.id, target: key, why: "overlaps a change already placed in this target" }); continue;
+        }
+        done.push(it);
+      }
+      placed[key] = done;   // end first: safe to apply in this order
+    }
+    return { placed, skipped };
+  }
+
+  /** Characters of the glossary stage's file: the translator's text with the glossary changes tracked. */
+  function baseChars(before, changes) {
+    const chars = []; let i = 0;
+    const cs = changes.slice().sort((a, b) => a.start - b.start);
+    for (const c of cs) {
+      for (; i < c.start; i++) chars.push({ ch: before[i], st: "keep", notes: [] });
+      for (const ch of c.from) chars.push({ ch, st: "gdel", notes: [], glossary: c.entry });
+      for (const ch of c.to) chars.push({ ch, st: "gins", notes: [], glossary: c.entry });
+      i = c.end;
+    }
+    for (; i < before.length; i++) chars.push({ ch: before[i], st: "keep", notes: [] });
+    return chars;
+  }
+  const visible = (c) => c.st === "keep" || c.st === "gins" || c.st === "eins";
+
+  /** Index of the k-th visible character (accepted view); k = count gives the position after the last. */
+  function at(chars, k) {
+    let seen = 0;
+    for (let i = 0; i < chars.length; i++) if (visible(chars[i])) { if (seen === k) return i; seen++; }
+    return chars.length;
+  }
+
+  function reviewed(doc, glossaryReport, p) {
+    tools.indexDocument(doc);
+    const out = {};
+    for (const t of doc.targets) {
+      const before = (glossaryReport.before && glossaryReport.before[t.key]) || t.zh;
+      const chars = baseChars(before, (glossaryReport.changes || []).filter((c) => c.target === t.key));
+      for (const it of p.placed[t.key] || []) {
+        const a = at(chars, it.start), b = at(chars, it.end);
+        const span = [];
+        for (let i = a; i < b; i++) if (visible(chars[i])) span.push(i);
+        if (it.kind === "change") {
+          for (const i of span) { chars[i].st = chars[i].st === "gins" ? "gins-edel" : "edel"; chars[i].notes.push(it.f.id); }
+          const last = span.length ? span[span.length - 1] + 1 : a;
+          const ins = Array.from(it.f.text).map((ch) => ({ ch, st: "eins", notes: [it.f.id] }));
+          chars.splice(last, 0, ...ins);
+        } else {
+          for (const i of span) chars[i].notes.push(it.f.id);
+        }
+      }
+      // A glossary insertion the editor then deleted is shown as an editor deletion.
+      for (const c of chars) if (c.st === "gins-edel") c.st = "edel";
+      const runs = [];
+      for (const c of chars) {
+        const key = c.st + "|" + c.notes.join(",");
+        const lastRun = runs[runs.length - 1];
+        if (lastRun && lastRun.key === key) lastRun.text += c.ch;
+        else runs.push({ key, st: c.st, notes: c.notes.slice(), text: c.ch });
+      }
+      runs.forEach((r) => delete r.key);
+      out[t.key] = {
+        clean: chars.filter(visible).map((c) => c.ch).join(""),
+        original: chars.filter((c) => c.st === "keep" || c.st === "gdel" || c.st === "edel" && !c.glossary).map((c) => c.ch).join(""),
+        runs,
+      };
+    }
+    return out;
+  }
+
+  /** Everything at once: { gate, plan, reviewed }. */
+  function applyAll(doc, glossaryReport, findings, decisions, banned) {
+    const g = gate(doc, findings, decisions, banned);
+    const p = plan(doc, g);
+    return { gate: g, plan: p, reviewed: reviewed(doc, glossaryReport, p) };
+  }
+
+  return { gate, plan, reviewed, applyAll };
+});
+
+</script>
+<script>
+/* The review summary, written once: counted from the same decisions the Word file is written from.
+ *
+ * summarise(doc, glossaryReport, sections, decisions, applied) -> plain object
+ * renderSummary(summary) -> an HTML fragment (tables and short paragraphs), used by
+ *   write_summary.mjs inside a full page and by the demo page inside its Summary view.
+ * Replaces client-specific deliverables with one general handover document: what was found, what
+ * the editor decided, what the glossary stage changed, what failed the checks.
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) module.exports = factory();
+  else root.ReviewSummary = factory();
+})(typeof self !== "undefined" ? self : this, function () {
+  "use strict";
+  const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  /** sections: [{ id, findings, failed, failedRequests }]; applied: lib/apply_decisions applyAll result. */
+  function summarise(doc, glossaryReport, sections, decisions, applied) {
+    const findings = sections.flatMap((s) => s.findings);
+    const by = (keyFn) => {
+      const m = {};
+      for (const f of findings) {
+        const k = keyFn(f), d = decisions[f.id];
+        const x = m[k] = m[k] || { total: 0, accept: 0, edit: 0, reject: 0, undecided: 0 };
+        x.total++; x[d ? d.decision : "undecided"]++;
+      }
+      return m;
+    };
+    const verdicts = {};
+    for (const f of findings) {
+      const v = (f.grader && f.grader.verdict) || "not graded", d = decisions[f.id];
+      const x = verdicts[v] = verdicts[v] || { total: 0, accept: 0, edit: 0, reject: 0, undecided: 0 };
+      x.total++; x[d ? d.decision : "undecided"]++;
+    }
+    const g = applied.gate;
+    const changed = Object.entries(applied.reviewed).filter(([k, r]) => r.runs.some((x) => x.st === "eins" || x.st === "edel")).map(([k]) => k);
+    return {
+      title: doc.title, targets: doc.targets.length, paragraphs: doc.paragraphs,
+      findings: findings.length,
+      decided: findings.filter((f) => decisions[f.id]).length,
+      bySpecialist: by((f) => f.specialist), byCategory: by((f) => f.category), byVerdict: verdicts,
+      written: { changes: g.changes.length - applied.plan.skipped.length, comments: g.comments.length, skipped: applied.plan.skipped, refused: g.refused },
+      changedTargets: changed,
+      protectedComments: g.comments.filter((f) => (doc.byKey[f.target].protected || []).length).map((f) => ({ id: f.id, target: f.target, issue: f.issue })),
+      glossary: (glossaryReport.changes || []).map((c) => ({ target: c.target, from: c.from, to: c.to, entry: c.entry })),
+      glossaryLeft: glossaryReport.left_for_editor || [],
+      failed: sections.reduce((n, s) => n + (s.failed || []).length, 0),
+      failedRequests: sections.reduce((n, s) => n + (s.failedRequests || []).length, 0),
+    };
+  }
+
+  function table(head, rows) {
+    return `<table><tr>${head.map((h) => `<th>${esc(h)}</th>`).join("")}</tr>${rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join("")}</tr>`).join("")}</table>`;
+  }
+  const decisionRows = (m) => Object.entries(m).map(([k, x]) => [esc(k), x.total, x.accept, x.edit, x.reject, x.undecided]);
+  const DH = ["", "Findings", "Accepted", "Edited", "Rejected", "Undecided"];
+
+  function renderSummary(s) {
+    const pct = s.findings ? Math.round((100 * s.decided) / s.findings) : 0;
+    return [
+      `<p><strong>Document:</strong> ${esc(s.title)}. ${s.targets} targets checked (${s.paragraphs} paragraphs and the front matter).</p>`,
+      `<p><strong>Decided:</strong> ${s.decided} of ${s.findings} findings (${pct}%). Written to the reviewed report: ${plural(s.written.changes, "tracked change")} and ${plural(s.written.comments, "comment")}, in ${plural(s.changedTargets.length, "target")}.` +
+        `${s.written.skipped.length ? ` ${s.written.skipped.length} accepted change(s) overlapped another and were not written: ${s.written.skipped.map((x) => esc(x.id)).join(", ")}.` : ""}` +
+        `${s.written.refused.length ? ` ${s.written.refused.length} decision(s) refused by the checks: ${s.written.refused.map((x) => `${esc(x.id)} (${esc(x.why)})`).join("; ")}.` : ""}</p>`,
+      `<h3>By specialist</h3>`, table(["Specialist", ...DH.slice(1)], decisionRows(s.bySpecialist)),
+      `<h3>By category</h3>`, table(["Category", ...DH.slice(1)], decisionRows(s.byCategory)),
+      `<h3>Grader's verdict against the editor's decision</h3>`, table(["Verdict", ...DH.slice(1)], decisionRows(s.byVerdict)),
+      `<h3>Glossary stage</h3>`,
+      s.glossary.length ? table(["Target", "Changed", "To", "Glossary entry"], s.glossary.map((c) => [esc(c.target), esc(c.from), esc(c.to), esc(c.entry)])) : `<p>No glossary changes.</p>`,
+      `<p>Applied by the editor's standing decision before the review.${s.glossaryLeft.length ? ` ${s.glossaryLeft.length} match(es) inside a protected passage were left for the editor.` : ""}</p>`,
+      `<h3>Protected passage</h3>`,
+      s.protectedComments.length ? table(["Finding", "Target", "Comment"], s.protectedComments.map((c) => [esc(c.id), esc(c.target), esc(c.issue)])) : `<p>No accepted comments on the protected passage.</p>`,
+      `<h3>Checks in code</h3>`,
+      `<p>${s.failed} finding(s) still failed the checks after two retry rounds and ${s.failedRequests} request(s) failed; ${s.failed + s.failedRequests ? "they are listed under Failed checks" : "nothing is outstanding"}.</p>`,
+    ].join("\n");
+  }
+
+  return { summarise, renderSummary };
+});
+
+</script>
+<script>window.CTQC_DATA = {"doc":{"built":"2026-10-19T03:18:32.637Z","title":"Teras Laluan Logistics Berhad: unaudited interim financial report, 1Q FYE2026 (fictional sample)","paragraphs":44,"targets":[{"key":"F1","n":0,"kind":"front","en":"Teras Laluan Logistics Berhad (Registration No. 202301000000 (1500000-T)) (Incorporated in Malaysia under the Companies Act 2016)","zh":"德拉斯物流有限公司（注册编号：202301000000（1500000-T））（根据2016年公司法在马来西亚注册成立）","heading_en":"","heading_zh":"","name":"公司名称","protected":[]},{"key":"F2","n":0,"kind":"front","en":"Unaudited interim financial report for the first quarter ended 31 March 2026","zh":"截至2026年3月31日第一季度未经审计中期财务报告","heading_en":"","heading_zh":"","name":"报告标题","protected":[]},{"key":"F3","n":0,"kind":"front","en":"The figures in this report have not been audited and are presented in Ringgit Malaysia (RM'000) unless otherwise stated.","zh":"本报告所列数字未经审计，除另有说明外，均以马来西亚令吉千元（RM'000）为单位。","heading_en":"","heading_zh":"","name":"期间行","protected":[]},{"key":"F4","n":0,"kind":"front","en":"Lembayung Corporate Advisory Berhad is the Sponsor for the admission of Teras Laluan Logistics Berhad to the ACE Market. The Sponsor has not reviewed the contents of this report and assumes no responsibility for its accuracy or completeness.","zh":"兰巴扬企业咨询有限公司为德拉斯物流有限公司获准在创业板上市的保荐人。保荐人未审阅本报告内容。","heading_en":"","heading_zh":"","name":"保荐人声明","protected":[{"start":0,"end":46,"why":"The sponsor statement is the sponsor's wording: accuracy corrections only, never a change of wording or tone."}]},{"key":"P1","n":1,"kind":"paragraph","en":"This interim financial report of Teras Laluan Logistics Berhad (\"Teras Laluan\" or \"the Company\") and its subsidiaries (\"the Group\") has been prepared in accordance with MFRS 134 Interim Financial Reporting and the ACE Market Listing Requirements of Bursa Malaysia Securities Berhad.","zh":"德拉斯物流有限公司（“德拉斯”或“本公司”）及其子公司（“本集团“）的本中期财务报告，依据MFRS 134《中期财务报告》及马来西亚证券交易所创业板上市条例编制。","heading_en":"A1. Basis of preparation","heading_zh":"A1. 编制基础","protected":[]},{"key":"P2","n":2,"kind":"paragraph","en":"The report should be read in conjunction with the audited financial statements of the Group for the financial year ended 31 December 2025. The accounting policies adopted are consistent with those of the audited financial statements.","zh":"本报告应与本集团截至2025年12月31日财政年度的经审计财务报表一并阅读。所采用的会计政策与经审计财务报表一致。","heading_en":"","heading_zh":"","protected":[]},{"key":"P3","n":3,"kind":"paragraph","en":"The auditors' report on the audited financial statements of the Group for the financial year ended 31 December 2025 was not subject to any qualification.","zh":"审计师对本集团截至2025年12月31日财政年度经审计财务报表出具的报告不含任何保留意见。","heading_en":"A2. Auditors' report on preceding annual financial statements","heading_zh":"A2. 上一年度财务报表的审计师报告","protected":[]},{"key":"P4","n":4,"kind":"paragraph","en":"The Group's business is subject to seasonal factors. Parcel and freight volumes are normally highest in the fourth quarter with year-end online sales, and ease in the months that include major festive holidays.","zh":"本集团业务受季节性因素影响。包裹及货运量通常在第四季度随年终网购旺季达到高峰，并在包含主要节日假期的月份有所回落。","heading_en":"A3. Seasonal or cyclical factors","heading_zh":"A3. 季节性或周期性因素","protected":[]},{"key":"P5","n":5,"kind":"paragraph","en":"There were no unusual items affecting the assets, liabilities, equity, net income or cash flows of the Group during the current quarter.","zh":"本季度内，出现影响本集团资产、负债、权益、净收入或现金流的异常项目。","heading_en":"A4. Unusual items","heading_zh":"A4. 异常项目","protected":[]},{"key":"P6","n":6,"kind":"paragraph","en":"There were no material changes in the estimates of amounts reported in prior financial years that had a material effect in the current quarter.","zh":"以往财政年度所报金额的估计并无对本季度产生重大影响的重大变动。","heading_en":"A5. Changes in estimates","heading_zh":"A5. 估计变动","protected":[]},{"key":"P7","n":7,"kind":"paragraph","en":"There were no issuances, cancellations, repurchases, resales or repayments of debt and equity securities during the current quarter.","zh":"本季度内，并无债务及股本证券的发行、注销、回购、转售或偿还。","heading_en":"A6. Debt and equity securities","heading_zh":"A6. 债务及股本证券","protected":[]},{"key":"P8","n":8,"kind":"paragraph","en":"No dividend was paid during the current quarter.","zh":"本季度内并无派发股息。","heading_en":"A7. Dividend paid","heading_zh":"A7. 已派股息","protected":[]},{"key":"P9","n":9,"kind":"paragraph","en":"The Group is organised into three operating segments: freight forwarding, warehousing and distribution, and last-mile delivery. Segment revenue for the current quarter was as follows: freight forwarding RM38.48 million, warehousing and distribution RM31.26 million, last-mile delivery RM15.18 million, and others RM1.51 million, giving total revenue of RM86.42 million.","zh":"本集团分为三个营运分部：货运代理、仓储与配送，以及末端配送。本季度各分部收入如下：货运代理3,848万令吉，仓储与配送3,126万令吉，末端配送1,518万令吉，其他151万令吉，总收入为8,642万令吉。","heading_en":"A8. Segment information","heading_zh":"A8. 分部资料","zh_original":"本集团分为三个营运分部：货运代理、仓储与配送，以及末端配送。本季度各分部营业额如下：货运代理3,848万令吉，仓储与配送3,126万令吉，末端配送1,518万令吉，其他151万令吉，总收入为8,642万令吉。","protected":[]},{"key":"P10","n":10,"kind":"paragraph","en":"Freight forwarding remained the largest segment, contributing 44.52% of Group revenue, followed by warehousing and distribution at 36.17%. The warehousing segment benefited from the full operation of new storage contracts secured in the second half of 2025.","zh":"货运代理生意很火，仍是最大分部，占本集团收入的44.52%，其次为仓储与配送，占36.17%。仓储分部受益于2025年下半年获得的新仓储合约全面投入运作。","heading_en":"","heading_zh":"","protected":[]},{"key":"P11","n":11,"kind":"paragraph","en":"Last-mile delivery contributed 17.57% of Group revenue and others 1.74%. All of the Group's operations are carried out in Malaysia, and accordingly no geographical segment information is presented.","zh":"末端配送占本集团收入的17.57%，其他占1.74%。本集团所有业务均在马来西亚进行，因此不列示地区分部资料。","heading_en":"","heading_zh":"","zh_original":"最后一公里配送占本集团收入的17.57%，其他占1.74%。本集团所有业务均在马来西亚进行，因此不列示地区分部资料。","protected":[]},{"key":"P12","n":12,"kind":"paragraph","en":"There were no material events subsequent to the end of the current quarter that have not been reflected in this interim financial report.","zh":"本季度结束后，并无未在本中期财务报告中反映的重大事项。","heading_en":"A9. Material events subsequent to the end of the quarter","heading_zh":"A9. 季度结束后的重大事项","protected":[]},{"key":"P13","n":13,"kind":"paragraph","en":"There were no changes in the composition of the Group during the current quarter.","zh":"本季度内，本集团组成并无变动。","heading_en":"A10. Changes in the composition of the Group","heading_zh":"A10. 本集团组成变动","protected":[]},{"key":"P14","n":14,"kind":"paragraph","en":"There were no contingent liabilities since the last audited statement of financial position as at 31 December 2025.","zh":"自2025年12月31日最近一期经审计财务状况表以来，并无任何或有负债。","heading_en":"A11. Contingent liabilities","heading_zh":"A11. 或有负债","protected":[]},{"key":"P15","n":15,"kind":"paragraph","en":"Capital commitments contracted but not provided for as at 31 March 2026 amounted to RM7.35 million, comprising the purchase of delivery vehicles and the installation of warehouse racking.","zh":"截至2026年3月31日，已签约但未拨备的资本承诺为735万令吉，包括购置配送车辆及安装仓库货架。","heading_en":"A12. Capital commitments","heading_zh":"A12. 资本承诺","protected":[]},{"key":"P16","n":16,"kind":"paragraph","en":"During the current quarter, the Group rented a depot in Klang from a company in which a director of the Company has an interest. The Board is of the view that the rental was entered into in the ordinary course of business and on normal commercial terms.","zh":"本季度内，本集团向一家由本公司一名董事拥有权益的公司租用位于巴生的一处仓库。董事部认为，该租赁属日常业务范围，并按一般商业条款进行。","heading_en":"A13. Related party transactions","heading_zh":"A13. 关联方交易","protected":[]},{"key":"P17","n":17,"kind":"paragraph","en":"For the first quarter ended 31 March 2026 (\"1Q FYE2026\"), the Group recorded revenue of RM86.42 million, which increased by RM15.07 million or 21.12% from RM71.35 million in the first quarter ended 31 March 2025 (\"1Q FYE2025\").","zh":"截至2026年3月31日第一季度(“2026财年第一季度”)，本集团录得收入8,462万令吉，较截至2025年3月31日第一季度（“2025财年第一季度”）的7,135万令吉大幅飙升1,507万令吉或21.12%。","heading_en":"B1. Review of performance","heading_zh":"B1. 业绩回顾","zh_original":"截至2026年3月31日第一季度(“2026财年第一季度”)，本集团录得营业额8,462万令吉，较截至2025年3月31日第一季度（“2025财年第一季度”）的7,135万令吉大幅飙升1,507万令吉或21.12%。","protected":[]},{"key":"P18","n":18,"kind":"paragraph","en":"All three operating segments contributed to the growth in revenue. Higher e-commerce parcel volumes raised last-mile delivery revenue, while new warehousing contracts and the Shah Alam warehouse added to warehousing and distribution revenue.","zh":"三个营运分部均做出了贡献到收入增长。电商包裹量增加带动末端配送收入上升，而新的仓储合约及莎阿南仓库则增加了仓储与配送收入。","heading_en":"","heading_zh":"","protected":[]},{"key":"P19","n":19,"kind":"paragraph","en":"Gross profit increased by 13.83% to RM21.61 million. However, the gross profit margin decreased from 26.60% to 25.00%, mainly due to start-up costs of the Shah Alam warehouse and higher diesel costs during the quarter.","zh":"毛利增加13.83%至2,161万令吉。然而，毛利率由26.60%上升至25.00%，主要由于莎阿南仓库的启动成本及本季度柴油成本上升。","heading_en":"","heading_zh":"","protected":[]},{"key":"P20","n":20,"kind":"paragraph","en":"The Group delivered approximately 6.8 million parcels through its last-mile delivery network during the quarter. The new 250,000 square feet warehouse in Shah Alam began operations in February 2026, raising the Group's total warehouse space to approximately 1.2 million square feet.","zh":"本季度内，本集团通过其末端配送网络递送约680万件包裹。位于莎阿南的25万平方英尺新仓库于2026年2月投入运作，使本集团仓库总面积增至约120万平方英尺。","heading_en":"","heading_zh":"","zh_original":"本季度内，本集团通过其最后一公里配送网络递送约680万件包裹。位于莎阿南的25万平方英尺新仓库于2026年2月投入运作，使本集团仓库总面积增至约120万平方英尺。","protected":[]},{"key":"P21","n":21,"kind":"paragraph","en":"Profit before taxation increased by 24.45% to RM12.96 million, and the profit before taxation margin improved from 14.60% to 15.00%. The improvement was mainly due to lower finance costs after part of the proceeds from the initial public offering was used to repay a bridging loan.","zh":"税前利润增加24.45%至1,296万令吉，税前利润率由14.60%提高至15.00%。利润率提高主要由于首次公开发售所得款项的一部分用于偿还过渡性贷款，使融资成本降低。","heading_en":"","heading_zh":"","protected":[]},{"key":"P22","n":22,"kind":"paragraph","en":"Profit after taxation increased by 24.43% to RM9.85 million, with the profit after taxation margin improving from 11.10% to 11.40%.","zh":"税后利润增加24.43%至985万令吉，税后利润率由11.10%提高至11.40%。","heading_en":"","heading_zh":"","protected":[]},{"key":"P23","n":23,"kind":"paragraph","en":"Compared with the immediate preceding quarter ended 31 December 2025, Group revenue decreased by RM5.31 million or 5.79% from RM91.73 million to RM86.42 million.","zh":"与去年同期相比，本集团收入由9,173万令吉减少531万令吉或5.79%至8,642万令吉。","heading_en":"B2. Comparison with the immediate preceding quarter","heading_zh":"B2. 与上一季度比较","protected":[]},{"key":"P24","n":24,"kind":"paragraph","en":"The decrease was mainly due to lower parcel and freight volumes after the fourth-quarter peak of year-end online sales, and fewer working days during the quarter because of the Chinese New Year and Hari Raya Aidilfitri holidays.","zh":"包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。","heading_en":"","heading_zh":"","protected":[]},{"key":"P25","n":25,"kind":"paragraph","en":"In line with the lower revenue, gross profit decreased by 9.41% to RM21.61 million and profit before taxation decreased by 8.58% to RM12.96 million.","zh":"随着收入减少，毛利下降9.41%至2,161万令吉，税前利润下降8.58%至1,296万令吉。","heading_en":"","heading_zh":"","protected":[]},{"key":"P26","n":26,"kind":"paragraph","en":"Profit after taxation decreased by 3.80% to RM9.85 million. The smaller decrease in profit after taxation reflects a lower effective tax rate in the current quarter compared with the immediate preceding quarter.","zh":"税后利润下降3.80%至985万令吉。税后利润降幅较小，反映本季度实际税率低于上一季度。","heading_en":"","heading_zh":"","protected":[]},{"key":"P27","n":27,"kind":"paragraph","en":"Teras Laluan expects demand for logistics services in Malaysia to be supported by continued growth in online retail and in regional trade through Port Klang.","zh":"德拉斯预期，马来西亚物流服务需求将受到网上零售及经巴生港的区域贸易持续增长的支持。","heading_en":"B3. Prospects","heading_zh":"B3. 前景","zh_original":"特拉斯预期，马来西亚物流服务需求将受到网上零售及经巴生港的区域贸易持续增长的支持。","protected":[]},{"key":"P28","n":28,"kind":"paragraph","en":"The Group will continue to expand its warehousing capacity and delivery network in a measured manner, with priority given to contracts with longer tenures and to locations near major distribution routes.","zh":"本集团将继续稳步扩大仓储能力及配送网络，优先考虑租期较长的合约及靠近主要分销路线的地点。","heading_en":"","heading_zh":"","protected":[]},{"key":"P29","n":29,"kind":"paragraph","en":"The Shah Alam warehouse is expected to contribute more fully to revenue in the coming quarters as its occupancy increases.","zh":"随着莎阿南仓库使用率提高，预计其在未来数个季度对收入的贡献将更为全面。","heading_en":"","heading_zh":"","protected":[]},{"key":"P30","n":30,"kind":"paragraph","en":"The Group remains mindful of the risks to its operating environment. The rationalisation of diesel subsidies may increase transport costs. The availability of qualified drivers remains tight, and uncertainty over global tariffs may affect freight volumes.","zh":"本集团对营运环境的风险保持警惕。合格司机供应仍然紧张，全球关税的不确定性亦可能影响货运量。","heading_en":"","heading_zh":"","protected":[]},{"key":"P31","n":31,"kind":"paragraph","en":"Barring unforeseen circumstances, the Board expects the performance of the Group for the financial year ending 31 December 2026 to remain satisfactory.","zh":"除非出现不可预见的情况，董事部预期本集团截至2026年12月31日财政年度的表现必将再创新高。预计全年盈利将增长三成。","heading_en":"","heading_zh":"","protected":[]},{"key":"P32","n":32,"kind":"paragraph","en":"The Group has not issued any profit forecast or profit guarantee for the current quarter: accordingly, no variance between actual and forecast results is presented.","zh":"本集团并未就本季度发布任何盈利预测或盈利保证,因此,不列示实际业绩与预测之间的差异。","heading_en":"B4. Profit forecast or profit guarantee","heading_zh":"B4. 盈利预测或盈利保证","protected":[]},{"key":"P33","n":33,"kind":"paragraph","en":"The tax expense for the current quarter was RM3.11 million, representing an effective tax rate of 24.01%. This is slightly higher than the statutory tax rate of 24%, mainly because certain expenses were not deductible for tax purposes.","zh":"本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率。","heading_en":"B5. Taxation","heading_zh":"B5. 税项","protected":[]},{"key":"P34","n":34,"kind":"paragraph","en":"The tax expense comprises current tax and deferred tax. There was no under or over provision of tax in respect of prior years during the current quarter.","zh":"税项支出包括当期税项及递延税项。本季度内，并无以往年度税项的少提或多提。","heading_en":"","heading_zh":"","protected":[]},{"key":"P35","n":35,"kind":"paragraph","en":"There were no corporate proposals announced but not completed as at the date of this report.","zh":"截至本报告日期，并无已宣布但尚未完成的企业提案。","heading_en":"B6. Status of corporate proposals","heading_zh":"B6. 企业提案进展","protected":[]},{"key":"P36","n":36,"kind":"paragraph","en":"The Company raised gross proceeds of RM48.00 million from its initial public offering in conjunction with its listing on the ACE Market on 12 June 2025.","zh":"本公司于2025年6月12日在创业板上市时，通过首次公开发售筹得总额4.8亿令吉。","heading_en":"B7. Utilisation of proceeds from the initial public offering","heading_zh":"B7. 首次公开发售所得款项的使用","protected":[]},{"key":"P37","n":37,"kind":"paragraph","en":"As at 31 March 2026, RM21.60 million or 45.00% of the proceeds had been utilised, mainly for the Shah Alam warehouse and the purchase of delivery vehicles. The remaining proceeds are expected to be utilised within the timeframe stated in the prospectus.","zh":"截至2026年3月31日，已动用所得款项2,160万令吉，占45.00%，主要用于莎阿南仓库及购置配送车辆。其余款项预计将在招股书所列时限内动用。","heading_en":"","heading_zh":"","protected":[]},{"key":"P38","n":38,"kind":"paragraph","en":"Total borrowings of the Group as at 31 March 2026 amounted to RM62.40 million, comprising term loans for warehouses and hire purchase facilities for vehicles. All borrowings are secured and denominated in Ringgit Malaysia.","zh":"截至2026年3月31日，本集团借款总额为6,240万令吉，包括仓库定期贷款及车辆分期付款融资。所有借款均有抵押，并以马来西亚令吉计价。","heading_en":"B8. Group borrowings","heading_zh":"B8. 集团借款","protected":[]},{"key":"P39","n":39,"kind":"paragraph","en":"There was no material litigation pending as at the date of this report.","zh":"截至本报告日期，并无待决的重大诉讼。","heading_en":"B9. Material litigation","heading_zh":"B9. 重大诉讼","protected":[]},{"key":"P40","n":40,"kind":"paragraph","en":"The Board does not recommend any dividend for the current quarter.","zh":"董事部不建议就本季度派发任何股息。","heading_en":"B10. Dividend","heading_zh":"B10. 股息","protected":[]},{"key":"P41","n":41,"kind":"paragraph","en":"The basic earnings per share of Teras Laluan for 1Q FYE2026 was 0.82 sen, calculated on the profit attributable to owners of the Company of RM9.85 million and 1,200,000,000 ordinary shares in issue. The basic earnings per share for 1Q FYE2025 was 0.88 sen, based on 900,000,000 weighted ordinary shares before the listing.","zh":"德拉斯2026财年第一季度的每股基本盈利为0.82仙，按本公司股东应占利润985万令吉及1,200,000,000股已发行普通股计算。2025财年第一季度的每股基本盈利为0.88仙，按上市前900,000,000股加权普通股计算。","heading_en":"B11. Earnings per share","heading_zh":"B11. 每股盈利","zh_original":"特拉斯2026财年第一季度的每股基本盈利为0.82仙，按本公司股东应占利润985万令吉及1,200,000,000股已发行普通股计算。2025财年第一季度的每股基本盈利为0.88仙，按上市前900,000,000股加权普通股计算。","protected":[]},{"key":"P42","n":42,"kind":"paragraph","en":"The diluted earnings per share is equal to the basic earnings per share, as the Company has no dilutive instruments in issue.","zh":"由于本公司并无已发行的摊薄工具，每股摊薄盈利与每股基本盈利相同。","heading_en":"","heading_zh":"","protected":[]},{"key":"P43","n":43,"kind":"paragraph","en":"By order of the Board, this interim financial report was authorised for issue in accordance with a resolution of the Board of Directors.","zh":"承董事部命，本中期财务报告已根据董事部决议授权发布。","heading_en":"Authorisation for issue","heading_zh":"发布授权","protected":[]},{"key":"P44","n":44,"kind":"paragraph","en":"Nurul Aina binti Rahmat, Company Secretary. Kuala Lumpur, 26 May 2026.","zh":"公司秘书Nurul Aina binti Rahmat。2026年5月26日，吉隆坡。","heading_en":"","heading_zh":"","protected":[]}],"sections":[{"id":"S01","front_matter":true,"from":1,"to":20,"keys":["F1","F2","F3","F4","P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17","P18","P19","P20"]},{"id":"S02","front_matter":false,"from":21,"to":40,"keys":["P21","P22","P23","P24","P25","P26","P27","P28","P29","P30","P31","P32","P33","P34","P35","P36","P37","P38","P39","P40"]},{"id":"S03","front_matter":false,"from":41,"to":44,"keys":["P41","P42","P43","P44"]}]},"glossary_report":{"at":"2026-10-19T03:18:32.242Z","source":"sample/report_zh.docx","changes":[{"target":"P9","start":36,"end":39,"from":"营业额","to":"收入","entry":"G06"},{"target":"P11","start":0,"end":7,"from":"最后一公里配送","to":"末端配送","entry":"G22"},{"target":"P17","start":36,"end":39,"from":"营业额","to":"收入","entry":"G06"},{"target":"P20","start":11,"end":18,"from":"最后一公里配送","to":"末端配送","entry":"G22"},{"target":"P27","start":0,"end":3,"from":"特拉斯","to":"德拉斯","entry":"G02"},{"target":"P41","start":0,"end":3,"from":"特拉斯","to":"德拉斯","entry":"G02"}],"left_for_editor":[],"before":{"F1":"德拉斯物流有限公司（注册编号：202301000000（1500000-T））（根据2016年公司法在马来西亚注册成立）","F2":"截至2026年3月31日第一季度未经审计中期财务报告","F3":"本报告所列数字未经审计，除另有说明外，均以马来西亚令吉千元（RM'000）为单位。","F4":"兰巴扬企业咨询有限公司为德拉斯物流有限公司获准在创业板上市的保荐人。保荐人未审阅本报告内容。","P1":"德拉斯物流有限公司（“德拉斯”或“本公司”）及其子公司（“本集团“）的本中期财务报告，依据MFRS 134《中期财务报告》及马来西亚证券交易所创业板上市条例编制。","P2":"本报告应与本集团截至2025年12月31日财政年度的经审计财务报表一并阅读。所采用的会计政策与经审计财务报表一致。","P3":"审计师对本集团截至2025年12月31日财政年度经审计财务报表出具的报告不含任何保留意见。","P4":"本集团业务受季节性因素影响。包裹及货运量通常在第四季度随年终网购旺季达到高峰，并在包含主要节日假期的月份有所回落。","P5":"本季度内，出现影响本集团资产、负债、权益、净收入或现金流的异常项目。","P6":"以往财政年度所报金额的估计并无对本季度产生重大影响的重大变动。","P7":"本季度内，并无债务及股本证券的发行、注销、回购、转售或偿还。","P8":"本季度内并无派发股息。","P9":"本集团分为三个营运分部：货运代理、仓储与配送，以及末端配送。本季度各分部营业额如下：货运代理3,848万令吉，仓储与配送3,126万令吉，末端配送1,518万令吉，其他151万令吉，总收入为8,642万令吉。","P10":"货运代理生意很火，仍是最大分部，占本集团收入的44.52%，其次为仓储与配送，占36.17%。仓储分部受益于2025年下半年获得的新仓储合约全面投入运作。","P11":"最后一公里配送占本集团收入的17.57%，其他占1.74%。本集团所有业务均在马来西亚进行，因此不列示地区分部资料。","P12":"本季度结束后，并无未在本中期财务报告中反映的重大事项。","P13":"本季度内，本集团组成并无变动。","P14":"自2025年12月31日最近一期经审计财务状况表以来，并无任何或有负债。","P15":"截至2026年3月31日，已签约但未拨备的资本承诺为735万令吉，包括购置配送车辆及安装仓库货架。","P16":"本季度内，本集团向一家由本公司一名董事拥有权益的公司租用位于巴生的一处仓库。董事部认为，该租赁属日常业务范围，并按一般商业条款进行。","P17":"截至2026年3月31日第一季度(“2026财年第一季度”)，本集团录得营业额8,462万令吉，较截至2025年3月31日第一季度（“2025财年第一季度”）的7,135万令吉大幅飙升1,507万令吉或21.12%。","P18":"三个营运分部均做出了贡献到收入增长。电商包裹量增加带动末端配送收入上升，而新的仓储合约及莎阿南仓库则增加了仓储与配送收入。","P19":"毛利增加13.83%至2,161万令吉。然而，毛利率由26.60%上升至25.00%，主要由于莎阿南仓库的启动成本及本季度柴油成本上升。","P20":"本季度内，本集团通过其最后一公里配送网络递送约680万件包裹。位于莎阿南的25万平方英尺新仓库于2026年2月投入运作，使本集团仓库总面积增至约120万平方英尺。","P21":"税前利润增加24.45%至1,296万令吉，税前利润率由14.60%提高至15.00%。利润率提高主要由于首次公开发售所得款项的一部分用于偿还过渡性贷款，使融资成本降低。","P22":"税后利润增加24.43%至985万令吉，税后利润率由11.10%提高至11.40%。","P23":"与去年同期相比，本集团收入由9,173万令吉减少531万令吉或5.79%至8,642万令吉。","P24":"包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。","P25":"随着收入减少，毛利下降9.41%至2,161万令吉，税前利润下降8.58%至1,296万令吉。","P26":"税后利润下降3.80%至985万令吉。税后利润降幅较小，反映本季度实际税率低于上一季度。","P27":"特拉斯预期，马来西亚物流服务需求将受到网上零售及经巴生港的区域贸易持续增长的支持。","P28":"本集团将继续稳步扩大仓储能力及配送网络，优先考虑租期较长的合约及靠近主要分销路线的地点。","P29":"随着莎阿南仓库使用率提高，预计其在未来数个季度对收入的贡献将更为全面。","P30":"本集团对营运环境的风险保持警惕。合格司机供应仍然紧张，全球关税的不确定性亦可能影响货运量。","P31":"除非出现不可预见的情况，董事部预期本集团截至2026年12月31日财政年度的表现必将再创新高。预计全年盈利将增长三成。","P32":"本集团并未就本季度发布任何盈利预测或盈利保证,因此,不列示实际业绩与预测之间的差异。","P33":"本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率。","P34":"税项支出包括当期税项及递延税项。本季度内，并无以往年度税项的少提或多提。","P35":"截至本报告日期，并无已宣布但尚未完成的企业提案。","P36":"本公司于2025年6月12日在创业板上市时，通过首次公开发售筹得总额4.8亿令吉。","P37":"截至2026年3月31日，已动用所得款项2,160万令吉，占45.00%，主要用于莎阿南仓库及购置配送车辆。其余款项预计将在招股书所列时限内动用。","P38":"截至2026年3月31日，本集团借款总额为6,240万令吉，包括仓库定期贷款及车辆分期付款融资。所有借款均有抵押，并以马来西亚令吉计价。","P39":"截至本报告日期，并无待决的重大诉讼。","P40":"董事部不建议就本季度派发任何股息。","P41":"特拉斯2026财年第一季度的每股基本盈利为0.82仙，按本公司股东应占利润985万令吉及1,200,000,000股已发行普通股计算。2025财年第一季度的每股基本盈利为0.88仙，按上市前900,000,000股加权普通股计算。","P42":"由于本公司并无已发行的摊薄工具，每股摊薄盈利与每股基本盈利相同。","P43":"承董事部命，本中期财务报告已根据董事部决议授权发布。","P44":"公司秘书Nurul Aina binti Rahmat。2026年5月26日，吉隆坡。"},"after":{"F1":"德拉斯物流有限公司（注册编号：202301000000（1500000-T））（根据2016年公司法在马来西亚注册成立）","F2":"截至2026年3月31日第一季度未经审计中期财务报告","F3":"本报告所列数字未经审计，除另有说明外，均以马来西亚令吉千元（RM'000）为单位。","F4":"兰巴扬企业咨询有限公司为德拉斯物流有限公司获准在创业板上市的保荐人。保荐人未审阅本报告内容。","P1":"德拉斯物流有限公司（“德拉斯”或“本公司”）及其子公司（“本集团“）的本中期财务报告，依据MFRS 134《中期财务报告》及马来西亚证券交易所创业板上市条例编制。","P2":"本报告应与本集团截至2025年12月31日财政年度的经审计财务报表一并阅读。所采用的会计政策与经审计财务报表一致。","P3":"审计师对本集团截至2025年12月31日财政年度经审计财务报表出具的报告不含任何保留意见。","P4":"本集团业务受季节性因素影响。包裹及货运量通常在第四季度随年终网购旺季达到高峰，并在包含主要节日假期的月份有所回落。","P5":"本季度内，出现影响本集团资产、负债、权益、净收入或现金流的异常项目。","P6":"以往财政年度所报金额的估计并无对本季度产生重大影响的重大变动。","P7":"本季度内，并无债务及股本证券的发行、注销、回购、转售或偿还。","P8":"本季度内并无派发股息。","P9":"本集团分为三个营运分部：货运代理、仓储与配送，以及末端配送。本季度各分部收入如下：货运代理3,848万令吉，仓储与配送3,126万令吉，末端配送1,518万令吉，其他151万令吉，总收入为8,642万令吉。","P10":"货运代理生意很火，仍是最大分部，占本集团收入的44.52%，其次为仓储与配送，占36.17%。仓储分部受益于2025年下半年获得的新仓储合约全面投入运作。","P11":"末端配送占本集团收入的17.57%，其他占1.74%。本集团所有业务均在马来西亚进行，因此不列示地区分部资料。","P12":"本季度结束后，并无未在本中期财务报告中反映的重大事项。","P13":"本季度内，本集团组成并无变动。","P14":"自2025年12月31日最近一期经审计财务状况表以来，并无任何或有负债。","P15":"截至2026年3月31日，已签约但未拨备的资本承诺为735万令吉，包括购置配送车辆及安装仓库货架。","P16":"本季度内，本集团向一家由本公司一名董事拥有权益的公司租用位于巴生的一处仓库。董事部认为，该租赁属日常业务范围，并按一般商业条款进行。","P17":"截至2026年3月31日第一季度(“2026财年第一季度”)，本集团录得收入8,462万令吉，较截至2025年3月31日第一季度（“2025财年第一季度”）的7,135万令吉大幅飙升1,507万令吉或21.12%。","P18":"三个营运分部均做出了贡献到收入增长。电商包裹量增加带动末端配送收入上升，而新的仓储合约及莎阿南仓库则增加了仓储与配送收入。","P19":"毛利增加13.83%至2,161万令吉。然而，毛利率由26.60%上升至25.00%，主要由于莎阿南仓库的启动成本及本季度柴油成本上升。","P20":"本季度内，本集团通过其末端配送网络递送约680万件包裹。位于莎阿南的25万平方英尺新仓库于2026年2月投入运作，使本集团仓库总面积增至约120万平方英尺。","P21":"税前利润增加24.45%至1,296万令吉，税前利润率由14.60%提高至15.00%。利润率提高主要由于首次公开发售所得款项的一部分用于偿还过渡性贷款，使融资成本降低。","P22":"税后利润增加24.43%至985万令吉，税后利润率由11.10%提高至11.40%。","P23":"与去年同期相比，本集团收入由9,173万令吉减少531万令吉或5.79%至8,642万令吉。","P24":"包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。","P25":"随着收入减少，毛利下降9.41%至2,161万令吉，税前利润下降8.58%至1,296万令吉。","P26":"税后利润下降3.80%至985万令吉。税后利润降幅较小，反映本季度实际税率低于上一季度。","P27":"德拉斯预期，马来西亚物流服务需求将受到网上零售及经巴生港的区域贸易持续增长的支持。","P28":"本集团将继续稳步扩大仓储能力及配送网络，优先考虑租期较长的合约及靠近主要分销路线的地点。","P29":"随着莎阿南仓库使用率提高，预计其在未来数个季度对收入的贡献将更为全面。","P30":"本集团对营运环境的风险保持警惕。合格司机供应仍然紧张，全球关税的不确定性亦可能影响货运量。","P31":"除非出现不可预见的情况，董事部预期本集团截至2026年12月31日财政年度的表现必将再创新高。预计全年盈利将增长三成。","P32":"本集团并未就本季度发布任何盈利预测或盈利保证,因此,不列示实际业绩与预测之间的差异。","P33":"本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率。","P34":"税项支出包括当期税项及递延税项。本季度内，并无以往年度税项的少提或多提。","P35":"截至本报告日期，并无已宣布但尚未完成的企业提案。","P36":"本公司于2025年6月12日在创业板上市时，通过首次公开发售筹得总额4.8亿令吉。","P37":"截至2026年3月31日，已动用所得款项2,160万令吉，占45.00%，主要用于莎阿南仓库及购置配送车辆。其余款项预计将在招股书所列时限内动用。","P38":"截至2026年3月31日，本集团借款总额为6,240万令吉，包括仓库定期贷款及车辆分期付款融资。所有借款均有抵押，并以马来西亚令吉计价。","P39":"截至本报告日期，并无待决的重大诉讼。","P40":"董事部不建议就本季度派发任何股息。","P41":"德拉斯2026财年第一季度的每股基本盈利为0.82仙，按本公司股东应占利润985万令吉及1,200,000,000股已发行普通股计算。2025财年第一季度的每股基本盈利为0.88仙，按上市前900,000,000股加权普通股计算。","P42":"由于本公司并无已发行的摊薄工具，每股摊薄盈利与每股基本盈利相同。","P43":"承董事部命，本中期财务报告已根据董事部决议授权发布。","P44":"公司秘书Nurul Aina binti Rahmat。2026年5月26日，吉隆坡。"}},"glossary":{"title":"Sample glossary: financial reporting terms (English to Simplified Chinese)","note":"Each entry gives the approved rendering and the renderings to avoid. The glossary stage replaces an avoided rendering with the approved one as a tracked change; nothing else. `fixed_name` entries also catch a second spelling of a name.","entries":[{"id":"G01","en":"Teras Laluan Logistics Berhad","zh":"德拉斯物流有限公司","avoid":[],"kind":"fixed_name"},{"id":"G02","en":"Teras Laluan (short name)","zh":"德拉斯","avoid":["特拉斯","德拉士"],"kind":"fixed_name"},{"id":"G03","en":"Lembayung Corporate Advisory Berhad","zh":"兰巴扬企业咨询有限公司","avoid":[],"kind":"fixed_name"},{"id":"G04","en":"the Group","zh":"本集团","avoid":[],"kind":"term"},{"id":"G05","en":"the Company","zh":"本公司","avoid":[],"kind":"term"},{"id":"G06","en":"revenue","zh":"收入","avoid":["营业额","营收"],"kind":"term"},{"id":"G07","en":"gross profit","zh":"毛利","avoid":["毛利润"],"kind":"term"},{"id":"G08","en":"gross profit margin","zh":"毛利率","avoid":[],"kind":"term"},{"id":"G09","en":"profit before taxation","zh":"税前利润","avoid":["税前盈利"],"kind":"term"},{"id":"G10","en":"profit after taxation","zh":"税后利润","avoid":["税后盈利","净利"],"kind":"term"},{"id":"G11","en":"effective tax rate","zh":"实际税率","avoid":["有效税率"],"kind":"term"},{"id":"G12","en":"statutory tax rate","zh":"法定税率","avoid":[],"kind":"term"},{"id":"G13","en":"earnings per share","zh":"每股盈利","avoid":["每股收益","每股净利"],"kind":"term"},{"id":"G14","en":"sen","zh":"仙","avoid":[],"kind":"term"},{"id":"G15","en":"ringgit (RM)","zh":"令吉","avoid":["马币"],"kind":"term"},{"id":"G16","en":"first quarter","zh":"第一季度","avoid":["首季"],"kind":"term"},{"id":"G17","en":"financial year ended","zh":"截至……财政年度","avoid":[],"kind":"term"},{"id":"G18","en":"immediate preceding quarter","zh":"上一季度","avoid":[],"kind":"term"},{"id":"G19","en":"preceding year corresponding quarter","zh":"去年同期","avoid":[],"kind":"term"},{"id":"G20","en":"freight forwarding","zh":"货运代理","avoid":["货代"],"kind":"term"},{"id":"G21","en":"warehousing and distribution","zh":"仓储与配送","avoid":[],"kind":"term"},{"id":"G22","en":"last-mile delivery","zh":"末端配送","avoid":["最后一公里配送","最后一里配送"],"kind":"term"},{"id":"G23","en":"hire purchase","zh":"分期付款","avoid":["租购"],"kind":"term"},{"id":"G24","en":"term loan","zh":"定期贷款","avoid":[],"kind":"term"},{"id":"G25","en":"Sponsor","zh":"保荐人","avoid":[],"kind":"term"},{"id":"G26","en":"ACE Market","zh":"创业板","avoid":[],"kind":"term"},{"id":"G27","en":"Listing Requirements","zh":"上市条例","avoid":[],"kind":"term"},{"id":"G28","en":"MFRS 134 Interim Financial Reporting","zh":"MFRS 134《中期财务报告》","avoid":[],"kind":"term"},{"id":"G29","en":"initial public offering","zh":"首次公开发售","avoid":[],"kind":"term"},{"id":"G30","en":"the Board","zh":"董事部","avoid":[],"kind":"term"}]},"sections":[{"id":"S01","collected":true,"findings":[{"target":"P17","n":17,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"RM86.42 million","zh_span":"8,462万令吉","zh_start":38,"issue":"The revenue figure has transposed digits (8,462 instead of 8,642).","suggestion":"8,642万令吉","reason":"The English states revenue of RM86.42 million, which is 8,642万令吉.","source":"H2","comment_only":false,"id":"S01-F001","section":"S01","grader":{"verdict":"sound","note":"RM86.42 million converts to 8,642万令吉, so the Chinese has transposed digits, and the fix restores the correct figure."}},{"target":"P17","n":17,"kind":"paragraph","specialist":"accuracy","category":"addition","severity":"must","en_span":"which increased by RM15.07 million or 21.12%","zh_span":"大幅飙升","zh_start":87,"issue":"The Chinese adds an exaggerated description of the increase that is not in the English.","suggestion":"增加","reason":"The English simply says the revenue \"increased\", in a measured tone.","source":"H7","comment_only":false,"id":"S01-F002","section":"S01","flags":[{"specialist":"accuracy","category":"addition","severity":"must","en_span":"which increased by RM15.07 million or 21.12%","zh_span":"大幅飙升","issue":"The Chinese adds an exaggerated description of the increase that is not in the English.","reason":"The English simply says the revenue \"increased\", in a measured tone.","source":"H7","suggestion":"增加"},{"specialist":"section","category":"wording","severity":"must","en_span":"which increased by RM15.07 million or 21.12%","zh_span":"大幅飙升","issue":"The phrase 大幅飙升 is exaggerated.","reason":"The English says only \"increased\", and a regulatory disclosure keeps a measured tone.","source":"H7","suggestion":"增加"},{"specialist":"register","category":"register","severity":"must","en_span":"increased by RM15.07 million or 21.12%","zh_span":"大幅飙升","issue":"The phrase 大幅飙升 (surged sharply) exaggerates a plainly stated increase.","reason":"The English uses the neutral verb \"increased\", so the Chinese should keep the same measured tone.","source":"H7","suggestion":"增加"}],"change_by":"same","grader":{"verdict":"sound","note":"大幅飙升 exaggerates the plain \"increased\" and breaks the measured register, and 增加 matches the English."}},{"target":"P19","n":19,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"decreased from 26.60% to 25.00%","zh_span":"上升","zh_start":33,"issue":"The direction of change in the gross profit margin is reversed.","suggestion":"下降","reason":"The English says the gross profit margin decreased from 26.60% to 25.00%.","source":"B1","comment_only":false,"id":"S01-F003","section":"S01","grader":{"verdict":"sound","note":"The English says the margin decreased, so 上升 reverses the direction, and 下降 corrects it."}},{"target":"P16","n":16,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"should","en_span":"a depot in Klang","zh_span":"一处仓库","zh_start":33,"issue":"\"Depot\" is rendered as 仓库, which means warehouse and is a different facility in this report.","suggestion":"一处物流站","reason":"The English says \"depot\", whereas \"warehouse\" is used elsewhere for storage facilities.","source":"B1","comment_only":false,"id":"S01-F004","section":"S01","grader":{"verdict":"doubtful","note":"Distinguishing \"depot\" from the Shah Alam \"warehouse\" (仓库) is a fair point. However, 物流站 is only one possible rendering, and the editor should confirm the term, or check whether the glossary covers it."}},{"target":"P1","n":1,"kind":"paragraph","specialist":"section","category":"quotation","severity":"must","en_span":"(\"the Group\")","zh_span":"“本集团“","zh_start":28,"issue":"The defined term closes with an opening quotation mark instead of a closing one.","suggestion":"“本集团”","reason":"The English defined term \"the Group\" must be enclosed in a correctly opened and closed pair of marks.","source":"H4","comment_only":false,"id":"S01-F005","section":"S01","grader":{"verdict":"sound","note":"The closing mark is wrongly an opening quotation mark, and the fix gives a proper “ ” pair as H1 and H4 require."}},{"target":"P10","n":10,"kind":"paragraph","specialist":"accuracy","category":"addition","severity":"must","en_span":"Freight forwarding remained the largest segment","zh_span":"货运代理生意很火，仍是最大分部","zh_start":0,"issue":"The colloquial phrase 生意很火 has no counterpart in the English.","suggestion":"货运代理仍是最大分部","reason":"The English only says freight forwarding remained the largest segment, and a disclosure must not use colloquial wording.","source":"B1","comment_only":false,"id":"S01-F006","section":"S01","flags":[{"specialist":"accuracy","category":"addition","severity":"must","en_span":"Freight forwarding remained the largest segment","zh_span":"生意很火，","issue":"The Chinese adds a colloquial remark that freight forwarding business is booming, which the English does not say.","reason":"The English only states that freight forwarding remained the largest segment and contains no claim about how strong its business is.","source":"B1","suggestion":""},{"specialist":"section","category":"wording","severity":"must","en_span":"Freight forwarding remained the largest segment","zh_span":"货运代理生意很火，仍是最大分部","issue":"The colloquial phrase 生意很火 has no counterpart in the English.","reason":"The English only says freight forwarding remained the largest segment, and a disclosure must not use colloquial wording.","source":"H7","suggestion":"货运代理仍是最大分部"},{"specialist":"register","category":"register","severity":"must","en_span":"Freight forwarding remained the largest segment","zh_span":"货运代理生意很火，仍是最大分部","issue":"The colloquial phrase 生意很火 (business is booming) has no basis in the English and does not belong in a regulatory filing.","reason":"The English only states that freight forwarding remained the largest segment, in a plain and measured tone.","source":"B3","suggestion":"货运代理仍是最大分部"}],"change_by":"same","grader":{"verdict":"sound","note":"生意很火 is colloquial and has no counterpart in the English, so deleting it is the minimal correct fix."}},{"target":"P17","n":17,"kind":"paragraph","specialist":"section","category":"punctuation","severity":"must","en_span":"(\"1Q FYE2026\")","zh_span":"(“2026财年第一季度”)","zh_start":16,"issue":"The brackets are half-width.","suggestion":"（“2026财年第一季度”）","reason":"House style requires full-width brackets around the defined term, as in the English parenthetical for 1Q FYE2026.","source":"H1","comment_only":false,"id":"S01-F007","section":"S01","grader":{"verdict":"sound","note":"Under H1 the brackets around the defined term must be full-width, as in the later 2025 parenthetical."}},{"target":"P18","n":18,"kind":"paragraph","specialist":"section","category":"fluency","severity":"must","en_span":"All three operating segments contributed to the growth in revenue.","zh_span":"三个营运分部均做出了贡献到收入增长","zh_start":0,"issue":"The sentence is ungrammatical and reads as a literal rendering.","suggestion":"三个营运分部均对收入增长做出了贡献","reason":"The English says all three segments contributed to the revenue growth, which needs the natural structure 对……做出贡献.","source":"B2","comment_only":false,"id":"S01-F008","section":"S01","grader":{"verdict":"sound","note":"做出了贡献到收入增长 is ungrammatical, and 对收入增长做出了贡献 is the natural structure with unchanged meaning."}},{"target":"F4","n":0,"kind":"front","specialist":"accuracy","category":"omission","severity":"must","en_span":"assumes no responsibility for its accuracy or completeness","zh_span":"保荐人未审阅本报告内容。","zh_start":34,"issue":"The Chinese leaves out the Sponsor's statement that it assumes no responsibility for the report's accuracy or completeness.","suggestion":"保荐人未审阅本报告内容，且对其准确性或完整性不承担任何责任。","reason":"The English says the Sponsor has not reviewed the contents and also assumes no responsibility for accuracy or completeness.","source":"B4","comment_only":false,"id":"S01-F009","section":"S01","grader":{"verdict":"sound","note":"The disclaimer of responsibility is missing from the protected sponsor statement, and adding it is a permitted accuracy correction that leaves the existing wording untouched."}},{"target":"P5","n":5,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"There were no unusual items","zh_span":"出现影响","zh_start":5,"issue":"The negation is lost, so the Chinese says unusual items occurred.","suggestion":"并无出现影响","reason":"The English says there were no unusual items affecting the Group's assets, liabilities, equity, net income or cash flows.","source":"B1","comment_only":false,"id":"S01-F010","section":"S01","grader":{"verdict":"sound","note":"The negation is lost, so the Chinese asserts that unusual items occurred, and restoring 并无 fixes the meaning."}}],"failed":[],"failedRequests":[],"conflicts":[]},{"id":"S02","collected":true,"findings":[{"target":"P31","n":31,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"to remain satisfactory","zh_span":"必将再创新高","zh_start":40,"issue":"The Chinese 「必将再创新高」 mistranslates \"remain satisfactory\" by asserting certain record-high performance, which also shifts the Board's measured expectation into a promotional claim.","suggestion":"将保持令人满意","reason":"Replacing it with 「将保持令人满意」 restores the English meaning and the cautious, factual register expected in a regulatory disclosure.","source":"B1","comment_only":false,"id":"S02-F001","section":"S02","flags":[{"specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"to remain satisfactory","zh_span":"必将再创新高","issue":"The Chinese says performance will certainly hit new highs, whereas the English only says it is expected to remain satisfactory.","reason":"The English means performance is expected to stay satisfactory, not to reach record levels, and the Chinese overstates this in a promotional tone.","source":"B1","suggestion":"将保持令人满意"},{"specialist":"register","category":"register","severity":"must","en_span":"to remain satisfactory","zh_span":"必将再创新高","issue":"The Chinese turns the Board's measured expectation into a promotional claim of certain record performance.","reason":"The English says only that performance is expected to remain satisfactory, with no certainty and no claim of a new high.","source":"H7","suggestion":"将保持理想"}],"change_by":"consolidator","grader":{"verdict":"sound","note":"「必将再创新高」 turns \"remain satisfactory\" into a promotional certainty. 「将保持令人满意」 restores both the meaning and the measured tone required by H7."}},{"target":"P31","n":31,"kind":"paragraph","specialist":"accuracy","category":"addition","severity":"must","en_span":"the Board expects the performance of the Group for the financial year ending 31 December 2026 to remain satisfactory.","zh_span":"预计全年盈利将增长三成。","zh_start":47,"issue":"The Chinese adds a forecast that full-year profit will grow by 30%, which is not in the English.","suggestion":"","reason":"The English gives no profit growth figure or forecast, only that performance is expected to remain satisfactory.","source":"B1","comment_only":false,"id":"S02-F002","section":"S02","grader":{"verdict":"sound","note":"The English has no 30% profit growth forecast, so this is an addition. Deleting the sentence is the correct fix."}},{"target":"P36","n":36,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"RM48.00 million","zh_span":"4.8亿令吉","zh_start":34,"issue":"The amount is converted wrongly: RM48.00 million is 4,800万令吉, not 4.8亿令吉.","suggestion":"4,800万令吉","reason":"The English figure is RM48.00 million, which is 4,800万令吉, so the Chinese overstates it tenfold.","source":"H2","comment_only":false,"id":"S02-F003","section":"S02","grader":{"verdict":"sound","note":"RM48.00 million converts to 4,800万令吉 under H2. 4.8亿令吉 overstates the proceeds tenfold."}},{"target":"P23","n":23,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"Compared with the immediate preceding quarter ended 31 December 2025","zh_span":"与去年同期相比","zh_start":0,"issue":"The Chinese compares with the corresponding quarter of the previous year instead of the immediate preceding quarter ended 31 December 2025.","suggestion":"与截至2025年12月31日的上一季度相比","reason":"The English compares with the immediate preceding quarter, not the preceding year corresponding quarter.","source":"B1","comment_only":false,"id":"S02-F004","section":"S02","grader":{"verdict":"sound","note":"The English compares with the immediate preceding quarter ended 31 December 2025, not the same quarter last year. The suggested wording is accurate."}},{"target":"P24","n":24,"kind":"paragraph","specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"The decrease was mainly due to lower parcel and freight volumes after the fourth-quarter peak of year-end online sales, and fewer working days during the quarter","zh_span":"包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。","zh_start":0,"issue":"Cause and effect are reversed: the Chinese says lower volumes and fewer working days were due to lower revenue.","suggestion":"收入减少主要由于第四季度年终网购高峰过后包裹及货运量下降，以及本季度因农历新年和开斋节假期而工作日减少。","reason":"The English says the revenue decrease was caused by lower parcel and freight volumes and fewer working days.","source":"B1","comment_only":false,"id":"S02-F005","section":"S02","flags":[{"specialist":"accuracy","category":"mistranslation","severity":"must","en_span":"The decrease was mainly due to lower parcel and freight volumes after the fourth-quarter peak of year-end online sales, and fewer working days during the quarter","zh_span":"包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。","issue":"Cause and effect are reversed: the Chinese says lower volumes and fewer working days were due to lower revenue.","reason":"The English says the revenue decrease was caused by lower parcel and freight volumes and fewer working days.","source":"B1","suggestion":"收入减少主要由于第四季度年终网购高峰过后包裹及货运量下降，以及本季度因农历新年和开斋节假期而工作日减少。"},{"specialist":"section","category":"structure","severity":"must","en_span":"The decrease was mainly due to lower parcel and freight volumes after the fourth-quarter peak of year-end online sales, and fewer working days during the quarter because of the Chinese New Year and Hari Raya Aidilfitri holidays.","zh_span":"包裹及货运量下降以及工作日减少，主要由于收入减少，时值第四季度年终网购高峰过后及农历新年和开斋节假期。","issue":"The cause and effect are reversed, so lower volumes and fewer working days are presented as the effect of the revenue decrease.","reason":"The English says the decrease in revenue was mainly caused by lower parcel and freight volumes and fewer working days, not the other way round.","source":"B2","suggestion":"收入减少主要由于第四季度年终网购高峰过后包裹及货运量下降，以及本季度因农历新年和开斋节假期而工作日减少。"}],"change_by":"same","grader":{"verdict":"sound","note":"The Chinese reverses cause and effect. The suggestion correctly makes lower volumes and fewer working days the causes of the revenue decrease."}},{"target":"P30","n":30,"kind":"paragraph","specialist":"accuracy","category":"omission","severity":"must","en_span":"The rationalisation of diesel subsidies may increase transport costs.","zh_span":"本集团对营运环境的风险保持警惕。","zh_start":0,"issue":"The sentence on diesel subsidy rationalisation possibly increasing transport costs is missing.","suggestion":"本集团对营运环境的风险保持警惕。柴油补贴合理化可能增加运输成本。","reason":"The English lists the rationalisation of diesel subsidies, which may increase transport costs, as one of the risks.","source":"B1","comment_only":false,"id":"S02-F006","section":"S02","grader":{"verdict":"sound","note":"The diesel subsidy risk sentence is missing from the Chinese. The suggestion restores it in the English order."}},{"target":"P32","n":32,"kind":"paragraph","specialist":"section","category":"punctuation","severity":"should","en_span":"profit guarantee for the current quarter: accordingly, no variance","zh_span":"盈利保证,因此,不列示","zh_start":18,"issue":"Half-width commas are used in the Chinese sentence.","suggestion":"盈利保证，因此，不列示","reason":"The house style requires full-width Chinese punctuation outside figures.","source":"H1","comment_only":false,"id":"S02-F007","section":"S02","grader":{"verdict":"sound","note":"Half-width commas in Chinese text breach H1. Full-width commas fix it."}},{"target":"P33","n":33,"kind":"paragraph","specialist":"section","category":"fluency","severity":"must","en_span":"The tax expense for the current quarter was RM3.11 million, representing an effective tax rate of 24.01%. This is slightly higher than the statutory tax rate of 24%, mainly because certain expenses were not deductible for tax purposes.","zh_span":"本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率。","zh_start":0,"issue":"The sentence is an unpunctuated run-on with clumsy connectives (而由于…所以) and the cause is misplaced.","suggestion":"本季度税项支出为311万令吉，实际税率为24.01%，略高于24%的法定税率，主要由于部分开支不可扣税。","reason":"The English gives the tax expense and the effective tax rate, then explains that the slightly higher rate was mainly due to non-deductible expenses, which needs clear clauses and punctuation.","source":"B2","comment_only":false,"id":"S02-F008","section":"S02","grader":{"verdict":"sound","note":"The original is an unpunctuated run-on that also drops \"mainly\". The suggested restructuring adds proper punctuation and 主要由于, matching the English."}}],"failed":[],"failedRequests":[],"conflicts":[]},{"id":"S03","collected":true,"findings":[],"failed":[],"failedRequests":[],"conflicts":[]}],"decisions":{},"banned":["AI","Claude","Anthropic","model","LLM","模型","人工智能"],"intro":"This is the Chinese version of a fictional company's quarterly report, checked against its English original. The glossary stage has already corrected the settled terms; three specialists then raised 24 flags, each checked in code. Flags on the same words share one box with one correction, giving 18 boxes, and a separate grader annotated each one.","run_note":"The findings come from one recorded run on the Message Batches API."};</script>
+<script>
+"use strict";
+const T = window.QualityCheckTools, AD = window.ApplyDecisions, RS = window.ReviewSummary;
+const EMBED = window.CTQC_DATA || null;           // the demo: the recorded run built in
+const LS_KEY = "ctqc-demo-decisions-v1";
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const VIEWS = [["review", "Review"], ["report", "Reviewed report"], ["summary", "Review summary"], ["terms", "Terms"], ["listed", "Failed checks"], ["stats", "Accept rate"]];
+let D = null, view = "review", sec = null, pi = 0, fi = 0, editing = null, showChanges = true;
+
+// ---------- data: local server or embedded ----------
+function readLocal() { try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch (e) { return {}; } }
+function writeLocal(d) { try { localStorage.setItem(LS_KEY, JSON.stringify(d)); } catch (e) { /* private window: decisions last for this visit */ } }
+async function load() {
+  D = EMBED ? JSON.parse(JSON.stringify(EMBED)) : await fetch("/api/all").then((r) => r.json());
+  if (EMBED) D.decisions = readLocal();
+  T.indexDocument(D.doc);
+}
+async function saveDecision(id, decision, text) {
+  const f = allFindings().find((x) => x.id === id);
+  if (EMBED) {
+    if (decision === "undo") delete D.decisions[id];
+    else {
+      const entry = { decision, at: new Date().toISOString() };
+      if (decision === "edit") { const c = T.checkEdit(D.doc, f, text, D.banned); if (!c.ok) return { ok: false, error: c.error }; entry.text = c.text; }
+      D.decisions[id] = entry;
+    }
+    writeLocal(D.decisions);
+    return { ok: true };
+  }
+  const r = await fetch("/api/decision", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id, decision, text }) }).then((x) => x.json());
+  if (r.ok) { if (r.decision) D.decisions[id] = r.decision; else delete D.decisions[id]; }
+  return r;
+}
+const allFindings = () => D.sections.flatMap((s) => s.findings);
+const applied = () => AD.applyAll(D.doc, D.glossary_report, allFindings(), D.decisions, D.banned);
+
+// ---------- shell ----------
+function nav() {
+  document.getElementById("views").innerHTML = VIEWS.map(([k, t]) => `<button class="${view === k ? "on" : ""}" onclick="go('${k}')">${t}</button>`).join("");
+  const n = allFindings().length, d = allFindings().filter((f) => D.decisions[f.id]).length;
+  document.getElementById("prog").textContent = `${d} of ${n} findings decided`;
+}
+window.go = (k) => { view = k; editing = null; try { history.replaceState(null, "", "#" + k); } catch (e) {} render(); window.scrollTo(0, 0); };
+function intro() {
+  if (!EMBED) return;
+  document.getElementById("intro").innerHTML = `<div class="intro">
+    <p><b>You are the editor.</b> ${esc(D.intro)}</p>
+    <p>Accept, edit or reject each finding on the <b>Review</b> page. Your decisions rewrite the <b>Reviewed report</b> and recount the <b>Review summary</b> straight away. They stay in this browser only.</p>
+    <p class="acts"><button onclick="resetDemo()">Reset my decisions</button><span class="muted">${esc(D.run_note)}</span></p></div>`;
+}
+window.resetDemo = () => { if (!confirm("Clear every decision you made on this page?")) return; D.decisions = {}; writeLocal({}); pi = 0; fi = 0; render(); };
+function render() {
+  nav();
+  ({ review: viewReview, report: viewReport, summary: viewSummary, terms: viewTerms, listed: viewListed, stats: viewStats }[view] || viewReview)();
+  document.querySelectorAll("#main table").forEach((t) => { if (t.parentNode.className === "tw") return; const d = document.createElement("div"); d.className = "tw"; t.parentNode.insertBefore(d, t); d.appendChild(t); });
+}
+
+// ---------- Review ----------
+function section() { return D.sections.find((s) => s.id === sec) || D.sections[0]; }
+function targetsOf(s) {
+  const all = D.doc.sections.find((x) => x.id === s.id).keys.map((k) => D.doc.byKey[k]);
+  const withF = new Set(s.findings.map((f) => f.target));
+  return document.getElementById("onlyf") && !document.getElementById("onlyf").checked ? all : all.filter((t) => withF.has(t.key));
+}
+function highlight(t, fs) {
+  const marks = [];
+  for (const p of t.protected) marks.push({ a: p.start, b: p.end, cls: "p" });
+  fs.forEach((f) => marks.push({ a: f.zh_start, b: f.zh_start + f.zh_span.length, cls: "f", id: f.id }));
+  const pts = new Set([0, t.zh.length]); marks.forEach((m) => { pts.add(m.a); pts.add(m.b); });
+  const cuts = [...pts].sort((x, y) => x - y); let out = "";
+  for (let i = 0; i < cuts.length - 1; i++) {
+    const a = cuts[i], b = cuts[i + 1];
+    const f = marks.find((m) => m.cls === "f" && m.a <= a && m.b >= b), p = marks.find((m) => m.cls === "p" && m.a <= a && m.b >= b);
+    let h = esc(t.zh.slice(a, b)); if (p) h = `<span class="p">${h}</span>`; if (f) h = `<mark class="f" data-id="${f.id}">${h}</mark>`; out += h;
+  }
+  return out;
+}
+function viewReview() {
+  const s = section(); sec = s.id;
+  const counts = (x) => `${x.findings.filter((f) => D.decisions[f.id]).length}/${x.findings.length} decided`;
+  const only = document.getElementById("onlyf") ? document.getElementById("onlyf").checked : true;
+  const list = targetsOf(s);
+  const head = `<div class="acts" style="margin:12px 0"><select id="sec" aria-label="Section" onchange="sec=this.value;pi=0;fi=0;render()">${D.sections.map((x) => { const ds = D.doc.sections.find((y) => y.id === x.id); return `<option value="${x.id}" ${x.id === s.id ? "selected" : ""}>${x.id} · ${ds.front_matter ? "F1 to F4, " : ""}P${ds.from} to P${ds.to} · ${counts(x)}</option>`; }).join("")}</select>
+    <label class="muted"><input type="checkbox" id="onlyf" ${only ? "checked" : ""} onchange="pi=0;fi=0;render()"> only paragraphs with findings</label>
+    <span class="keys">j / k paragraph · n / p finding · a accept · e edit · r reject · u undo</span></div>`;
+  const main = document.getElementById("main");
+  if (!list.length) { main.innerHTML = head + `<p class="muted">No findings in this section.</p>`; return; }
+  pi = Math.max(0, Math.min(pi, list.length - 1));
+  const t = list[pi], fs = s.findings.filter((f) => f.target === t.key);
+  fi = Math.max(0, Math.min(fi, fs.length - 1));
+  const conflictsOf = (id) => (s.conflicts || []).filter((c) => c.a === id || c.b === id);
+  main.innerHTML = head + `<div class="para"><h2>${esc(t.key)}${t.name ? ` <span class="tag">${esc(t.name)}</span>` : ""}
+      <span class="muted">${pi + 1} of ${list.length}</span><span><button onclick="move(-1)">◀ prev</button> <button onclick="move(1)">next ▶</button></span></h2>
+    ${t.heading_en ? `<div class="hd">${esc(t.heading_en)} · ${esc(t.heading_zh)}</div>` : ""}
+    <div class="en">${esc(t.en)}</div><div class="zh">${highlight(t, fs)}</div>
+    ${t.protected.length ? `<div class="note">Grey dashed text is a protected passage: accuracy corrections only, never a change of wording or tone.</div>` : ""}
+    ${t.zh_original ? `<div class="note">The glossary stage already corrected a term here (see Terms).</div>` : ""}</div>
+  ${fs.map((f, i) => {
+    const d = D.decisions[f.id];
+    const g = f.grader ? `<span class="g-${esc(f.grader.verdict)}">grader: ${esc(f.grader.verdict)}</span> <span class="muted">${esc(f.grader.note)}</span>` : "";
+    const conf = conflictsOf(f.id).map((c) => `<span class="tag">overlaps ${esc(c.a === f.id ? c.b : c.a)}</span>`).join(" ");
+    return `<div class="find ${i === fi ? "sel" : ""} ${d ? d.decision : ""}" onclick="fi=${i};render()">
+      <div class="meta"><b>${esc(f.id)}</b><span>${f.flags ? `${f.flags.length} flags` : `${esc(f.specialist)} · ${esc(f.category)}`} · ${esc(f.severity)}</span>${f.flags ? "" : `<span>source ${esc(f.source)}</span>`}${{ comment: '<span class="tag">comment only</span>', delete: '<span class="tag">deletes the words</span>', change: "" }[T.findingMode(D.doc, f)]}${conf}</div>
+      ${f.flags ? `<div class="flags">${f.flags.map((x) => `<div class="flag"><b>${esc(x.specialist)}</b> · ${esc(x.category)} · ${esc(x.severity)} · source ${esc(x.source)}: ${esc(x.issue)} <span class="muted">English: “${esc(x.en_span)}”</span></div>`).join("")}</div>` : ""}
+      ${T.findingMode(D.doc, f) === "comment"
+        ? `<div class="chg"><span class="muted">Comment on</span> <mark class="f">${esc(f.zh_span)}</mark> <span class="muted">· the text is not changed</span></div>
+           ${f.category === "omission" ? `<div class="muted">Missing from the Chinese: <span class="new">${esc(f.en_span)}</span></div>` : ""}`
+        : `<div class="chg">${f.flags ? `<span class="lbl">Correction</span> ` : ""}<span class="old">${esc(f.zh_span)}</span>${f.suggestion ? ` → <span class="new">${esc(d && d.decision === "edit" ? d.text : f.suggestion)}</span>` : ` → <span class="muted">(deleted)</span>`}</div>`}
+      ${f.flags ? `<div class="muted">${f.change_by === "consolidator" ? `One change written to cover every flag: ${esc(f.issue)}` : f.change_by === "same" ? "Every flag proposed this same change." : esc(f.issue)}</div>`
+        : `<div>${esc(f.issue)}</div><div class="muted">${esc(f.reason)} · English: “${esc(f.en_span)}”</div>`}
+      ${g ? `<div>${g}</div>` : ""}
+      ${editing === f.id ? `<textarea id="edtext" onclick="event.stopPropagation()">${esc(d && d.text ? d.text : f.suggestion)}</textarea><div class="acts"><button class="pri" onclick="event.stopPropagation();decide('${f.id}','edit')">Save edit</button><button onclick="event.stopPropagation();editing=null;render()">Cancel</button><span id="ederr" class="err"></span></div>`
+        : `<div class="acts"><button onclick="event.stopPropagation();decide('${f.id}','accept')">Accept (a)</button>${f.suggestion ? `<button onclick="event.stopPropagation();editing='${f.id}';render()">Edit (e)</button>` : ""}<button onclick="event.stopPropagation();decide('${f.id}','reject')">Reject (r)</button>${d ? `<button onclick="event.stopPropagation();decide('${f.id}','undo')">Undo (u)</button><span class="muted">${esc(d.decision)}ed</span>` : ""}</div>`}
+    </div>`; }).join("")}`;
+  document.querySelectorAll("mark.f").forEach((m) => { if (fs[fi] && m.dataset.id === fs[fi].id) m.classList.add("sel"); });
+  if (editing) { const x = document.getElementById("edtext"); if (x) x.focus(); }
+}
+window.move = (d) => { pi += d; fi = 0; editing = null; render(); };
+window.decide = async (id, decision) => {
+  const text = decision === "edit" ? document.getElementById("edtext").value : undefined;
+  const r = await saveDecision(id, decision, text);
+  if (!r.ok) { const e = document.getElementById("ederr"); if (e) e.textContent = r.error; else alert(r.error); return; }
+  editing = null;
+  const s = section(), list = targetsOf(s), fs = list[pi] ? s.findings.filter((f) => f.target === list[pi].key) : [];
+  if (decision !== "undo" && fi < fs.length - 1) fi++;
+  render();
+};
+document.addEventListener("keydown", (e) => {
+  if (view !== "review" || !D || e.target.tagName === "TEXTAREA" || e.target.tagName === "SELECT" || e.ctrlKey || e.metaKey || e.altKey) return;
+  const s = section(), list = targetsOf(s), fs = list[pi] ? s.findings.filter((f) => f.target === list[pi].key) : [], f = fs[fi];
+  if (e.key === "j") move(1); else if (e.key === "k") move(-1);
+  else if (e.key === "n") { fi = Math.min(fi + 1, fs.length - 1); render(); } else if (e.key === "p") { fi = Math.max(fi - 1, 0); render(); }
+  else if (f && e.key === "a") decide(f.id, "accept"); else if (f && e.key === "r") decide(f.id, "reject"); else if (f && e.key === "u") decide(f.id, "undo");
+  else if (f && e.key === "e" && f.suggestion) { e.preventDefault(); editing = f.id; render(); }
+});
+
+// ---------- Reviewed report ----------
+function viewReport() {
+  const A = applied(), byId = Object.fromEntries(allFindings().map((f) => [f.id, f]));
+  const changes = A.gate.changes.length - A.plan.skipped.length, comments = A.gate.comments.length;
+  let n = 0; const num = {};
+  const paras = D.doc.targets.map((t) => {
+    const r = A.reviewed[t.key];
+    let html = "";
+    if (!showChanges) html = esc(r.clean);
+    else for (const x of r.runs) {
+      let h = esc(x.text);
+      if (x.st === "gins") h = `<ins class="g" title="Glossary stage">${h}</ins>`;
+      else if (x.st === "gdel") h = `<del class="g" title="Glossary stage">${h}</del>`;
+      else if (x.st === "eins") h = `<ins class="e" title="${esc(x.notes.join(", "))}">${h}</ins>`;
+      else if (x.st === "edel") h = `<del class="e">${h}</del>`;
+      const cs = x.notes.filter((id) => byId[id] && T.findingMode(D.doc, byId[id]) === "comment");
+      if (cs.length && x.st !== "eins") h = `<span class="c">${h}</span>`;
+      html += h;
+    }
+    const cms = [...new Set(r.runs.flatMap((x) => x.notes))].filter((id) => byId[id]);
+    if (showChanges) for (const id of cms) { num[id] = ++n; html += `<sup class="c">${n}</sup>`; }
+    const notes = showChanges ? cms.map((id) => { const f = byId[id]; return `<div class="cm">${num[id]}. ${esc(f.id)} [${esc(f.category)}] ${esc(f.issue)}${T.findingMode(D.doc, f) === "comment" ? " (comment)" : ""}</div>`; }).join("") : "";
+    const head = t.heading_zh ? `<h4>${esc(t.heading_zh)}</h4>` : "";
+    return `${head}<p><span class="k">${esc(t.key)}</span>${html}</p>${notes}`;
+  }).join("");
+  document.getElementById("main").innerHTML = `<div class="acts" style="margin:12px 0">
+      <button class="${showChanges ? "pri" : ""}" onclick="showChanges=true;render()">Show changes</button><button class="${showChanges ? "" : "pri"}" onclick="showChanges=false;render()">Clean text</button>
+      <span class="muted">${changes} tracked change${changes === 1 ? "" : "s"} and ${comments} comment${comments === 1 ? "" : "s"} from your decisions${A.plan.skipped.length ? `; ${A.plan.skipped.length} accepted change(s) overlap another and are not applied (${A.plan.skipped.map((x) => esc(x.id)).join(", ")})` : ""}.</span></div>
+    ${showChanges ? `<div class="legend"><span><ins class="e">inserted</ins> <del class="e">deleted</del> your decisions</span><span><ins class="g">inserted</ins> <del class="g">deleted</del> glossary stage</span><span><span class="c">highlighted</span><sup class="c">1</sup> comment</span></div>` : ""}
+    <div class="doc">${paras}</div>`;
+}
+
+// ---------- Summary, Terms, Failed checks, Accept rate ----------
+function viewSummary() {
+  const A = applied();
+  const s = RS.summarise(D.doc, D.glossary_report, D.sections, D.decisions, A);
+  document.getElementById("main").innerHTML = `<div class="doc" style="font-size:15px">${RS.renderSummary(s)}</div>`;
+}
+function viewTerms() {
+  const ch = D.glossary_report.changes || [];
+  document.getElementById("main").innerHTML = `<p class="muted">The glossary settles these terms. The glossary stage replaced every listed rendering to avoid with the approved one, as a tracked change, before the specialists read the text. ${ch.length} change${ch.length === 1 ? "" : "s"} made.</p>
+    <table><tr><th>Entry</th><th>English</th><th>Approved Chinese</th><th>Avoid</th><th>Changed by the glossary stage</th></tr>${D.glossary.entries.map((e) => {
+      const here = ch.filter((c) => c.entry === e.id);
+      return `<tr><td>${esc(e.id)}</td><td>${esc(e.en)}</td><td>${esc(e.zh)}</td><td>${esc(e.avoid.join("、"))}</td><td>${here.map((c) => `${esc(c.target)}: ${esc(c.from)} → ${esc(c.to)}`).join("<br>")}</td></tr>`; }).join("")}</table>`;
+}
+function viewListed() {
+  const l = D.sections.flatMap((s) => [...(s.failed || []).map((x) => ({ section: s.id, ...x })), ...(s.failedRequests || []).map((x) => ({ section: s.id, request: true, ...x }))]);
+  document.getElementById("main").innerHTML = l.length ? `<table><tr><th>Section</th><th>What</th><th>Error</th></tr>${l.map((x) => `<tr><td>${esc(x.section)}</td><td>${x.request ? "request " + esc(x.custom_id) : esc(JSON.stringify(x.finding)).slice(0, 300)}</td><td>${esc(x.error.category)}: ${esc(x.error.message)}</td></tr>`).join("")}</table>`
+    : `<p class="muted">Nothing failed the checks in code: every finding the specialists returned passed, or was fixed in a retry round.</p>`;
+}
+function viewStats() {
+  const by = {};
+  for (const f of allFindings()) { const x = by[f.category] = by[f.category] || { total: 0, accept: 0, edit: 0, reject: 0 }; x.total++; const d = D.decisions[f.id]; if (d) x[d.decision]++; }
+  document.getElementById("main").innerHTML = `<table><tr><th>Category</th><th>Findings</th><th>Accepted</th><th>Edited</th><th>Rejected</th><th>Accept rate</th></tr>${Object.entries(by).map(([k, v]) => { const dec = v.accept + v.edit + v.reject; return `<tr><td>${esc(k)}</td><td>${v.total}</td><td>${v.accept}</td><td>${v.edit}</td><td>${v.reject}</td><td>${dec ? Math.round((100 * (v.accept + v.edit)) / dec) + "%" : ""}</td></tr>`; }).join("")}</table>`;
+}
+
+(async () => {
+  await load();
+  sec = D.sections[0].id;
+  const h = (location.hash || "").slice(1); if (VIEWS.some(([k]) => k === h)) view = h;
+  intro(); render();
+  window.addEventListener("hashchange", () => { const k = location.hash.slice(1); if (k !== view && VIEWS.some(([x]) => x === k)) go(k); });
+})();
+</script>
+</body></html>

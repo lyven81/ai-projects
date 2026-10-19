@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "chinese-translation-quality-check": {
+      "command": "node",
+      "args": ["mcp_server.mjs"]
+    }
+  }
+}

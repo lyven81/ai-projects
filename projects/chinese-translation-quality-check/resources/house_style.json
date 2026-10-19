@@ -1,0 +1,13 @@
+{
+  "title": "Sample house style: Chinese version of a listed company's quarterly report",
+  "rules": [
+    { "id": "H1", "rule": "Full-width Chinese punctuation throughout (，。：；（）“ ”); half-width only inside figures, registration numbers and RM'000." },
+    { "id": "H2", "rule": "Amounts in RM million become 万令吉 (or 亿令吉 from RM100 million), converted exactly: RM12.50 million = 1,250万令吉; RM250.00 million = 2.5亿令吉." },
+    { "id": "H3", "rule": "Percentages keep the two decimals of the English (21.12%, 25.00%)." },
+    { "id": "H4", "rule": "A defined term is placed in “ ” inside full-width brackets at first use, then used without marks." },
+    { "id": "H5", "rule": "The company's short name 德拉斯 is fixed after first use; never a second spelling." },
+    { "id": "H6", "rule": "\"The Group\" is 本集团 and \"the Company\" is 本公司." },
+    { "id": "H7", "rule": "The Chinese keeps the measured tone of the English, in outlook statements above all (预计, 预期): no promotional, exaggerated or colloquial wording." },
+    { "id": "H8", "rule": "Dates as 2026年3月31日; financial periods as 截至2026年3月31日第一季度." }
+  ]
+}

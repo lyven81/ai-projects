@@ -67,7 +67,7 @@ document.getElementById("wa-link").href = S.whatsapp;
 document.getElementById("cards").innerHTML = list.map(p => `<div class="card">
   <a href="${encodeURI(p.page)}"><img src="${encodeURI(p.cover)}" alt="${esc(p.title)} cover"></a>
   <div class="cb"><div class="kick">${esc(p.valueProposition)}</div><h3><a href="${encodeURI(p.page)}">${esc(p.title)}</a></h3>
-  <p>${esc(p.tagline)}</p><p>${esc(p.problem)}</p>
+  ${p.hero ? `<p>${esc(p.hero)}</p>` : `<p>${esc(p.tagline)}</p><p>${esc(p.problem)}</p>`}
   <div class="acts"><a class="linkbtn primary" href="${encodeURI(p.page)}">View project</a><a class="linkbtn" href="${p.demo}" target="_blank" rel="noopener">Live demo</a></div></div></div>`).join("");
 document.getElementById("common").innerHTML = t.common.map(c => `<li>${esc(c)}</li>`).join("");
 // Only problem types that have projects are listed (founder, 16 Oct); the section hides when there are none.

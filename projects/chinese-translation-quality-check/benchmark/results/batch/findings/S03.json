@@ -1,0 +1,40 @@
+{
+ "findings": [],
+ "failed": [],
+ "failedRequests": [],
+ "coverage": {
+  "register": [
+   41,
+   42,
+   43,
+   44
+  ],
+  "section": [
+   41,
+   42,
+   43,
+   44
+  ],
+  "accuracy": [
+   41,
+   42,
+   43,
+   44
+  ]
+ },
+ "conflicts": [],
+ "consolidated": {
+  "boxes": 0,
+  "same": 0,
+  "combined": 0,
+  "failed": 0,
+  "usd": 0
+ },
+ "grader": {
+  "graded": 0,
+  "eligible": 0,
+  "usd": 0
+ },
+ "redone": [],
+ "collected": "2026-10-19T03:12:35.991Z"
+}

@@ -1,0 +1,18 @@
+{
+ "at": "2026-10-19T03:14:01.838Z",
+ "live": {
+  "caught": 20,
+  "findings": 18,
+  "falseFindings": 1,
+  "usd": 0.3058179000000001
+ },
+ "batch": {
+  "caught": 20,
+  "findings": 18,
+  "falseFindings": 1,
+  "usd": 0.18602249999999998
+ },
+ "onlyLive": [],
+ "onlyBatch": [],
+ "parity": true
+}

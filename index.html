@@ -50,18 +50,17 @@ footer{margin-top:36px;font-size:12px;color:var(--muted)}
 </style>
 </head>
 <body><div class="wrap">
-<div class="top"><h1>AI Projects · Lee Yih Ven</h1>
-<div class="bar"><nav id="toc"></nav><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn" href="about.html">About me</a><a class="linkbtn primary" id="wa-link" target="_blank" rel="noopener">Discuss a project</a></div></div>
+<div class="top"><div class="bar" style="margin-top:0"><h1>AI Projects · Lee Yih Ven</h1><span class="gap"></span><a class="linkbtn" href="index.html">Home</a><a class="linkbtn" href="about.html">About me</a><a class="linkbtn primary" id="wa-link" target="_blank" rel="noopener">Discuss a project</a></div>
+<nav id="toc"></nav></div>
 
 <p>I build practical AI applications that help businesses answer customers, process documents, research and route work. Each project starts from an operational problem and decides what the AI should and should not do. Each one is tested before it is shown, and you can try it yourself.</p>
 
 <h2>Latest Project</h2>
 <div id="latest"></div>
 
-<!-- Browse by Problem hidden (founder, 17 Oct). Restore with the script block below.
-<h2>Browse by Problem</h2>
+<!-- Project Categories (was Browse by Problem): restored 19 Oct (founder: live once a second problem type has a project; hidden 17 Oct). -->
+<h2>Project Categories</h2>
 <div class="types" id="types"></div>
--->
 
 <h2>All Projects</h2>
 <div class="plist" id="all"></div>
@@ -94,7 +93,7 @@ document.getElementById("latest").innerHTML = `<div class="feature">
   <h3><a href="${encodeURI(latest.page)}">${esc(latest.title)}</a></h3><p>${esc(latest.hero || latest.tagline)}</p>
   <div class="acts"><a class="linkbtn primary" href="${encodeURI(latest.page)}">View project</a><a class="linkbtn" href="${latest.demo}" target="_blank" rel="noopener">Live demo</a></div></div></div>`;
 
-// Browse by Problem is hidden; its builder runs only if the section is restored.
+// Project Categories: one card per problem type that has a project, linking its category page.
 if (document.getElementById("types")) document.getElementById("types").innerHTML = S.types.map(t => {
   const n = S.projects.filter(p => p.type === t.id).length;
   return n ? `<a class="type" href="category-${t.id}.html"><span class="n">${n} project${n > 1 ? "s" : ""}</span><b>${esc(t.name)}</b><p>${esc(t.intro.split(". ")[0])}.</p></a>` : "";

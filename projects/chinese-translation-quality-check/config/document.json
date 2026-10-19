@@ -1,0 +1,29 @@
+{
+  "title": "Teras Laluan Logistics Berhad: unaudited interim financial report, 1Q FYE2026 (fictional sample)",
+  "source_language": "en",
+  "target_language": "zh-Hans",
+  "source_file": "sample/report_en.md",
+  "target_file": "sample/report_zh_defects.md",
+  "target_docx": "sample/report_zh.docx",
+  "front_matter": {
+    "F1": "公司名称",
+    "F2": "报告标题",
+    "F3": "期间行",
+    "F4": "保荐人声明"
+  },
+  "protected": [
+    { "target": "F4", "why": "The sponsor statement is the sponsor's wording: accuracy corrections only, never a change of wording or tone." }
+  ],
+  "sections": [
+    { "id": "S01", "front_matter": true, "from": 1, "to": 20 },
+    { "id": "S02", "front_matter": false, "from": 21, "to": 40 },
+    { "id": "S03", "front_matter": false, "from": 41, "to": 44 }
+  ],
+  "editor_author": "Editor",
+  "resources": {
+    "brief": "resources/brief.md",
+    "glossary": "resources/glossary.json",
+    "house_style": "resources/house_style.json"
+  },
+  "banned_in_output": ["AI", "Claude", "Anthropic", "model", "LLM", "模型", "人工智能"]
+}

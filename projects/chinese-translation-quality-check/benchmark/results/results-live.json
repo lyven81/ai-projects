@@ -1,0 +1,248 @@
+{
+ "mode": "live",
+ "at": "2026-10-19T02:58:33.725Z",
+ "usd": 0.3058179000000001,
+ "findings": 18,
+ "graded": 18,
+ "failed": 0,
+ "failedRequests": 0,
+ "cases": [
+  {
+   "id": "D1",
+   "target": "P17",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S01-F004 accuracy/mistranslation"
+   ],
+   "what": "Revenue RM86.42 million written with two digits swapped"
+  },
+  {
+   "id": "D2",
+   "target": "P36",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S02-F007 accuracy/mistranslation"
+   ],
+   "what": "IPO proceeds RM48.00 million converted to 亿 wrongly (correct 4,800万)"
+  },
+  {
+   "id": "D3",
+   "target": "P5",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S01-F002 accuracy/mistranslation"
+   ],
+   "what": "\"There were no unusual items\" with the negation dropped"
+  },
+  {
+   "id": "D4",
+   "target": "P30",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S02-F003 accuracy/omission"
+   ],
+   "what": "The diesel subsidy risk sentence left out"
+  },
+  {
+   "id": "D5",
+   "target": "P23",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S02-F001 accuracy/mistranslation"
+   ],
+   "what": "\"Immediate preceding quarter\" rendered as the same quarter last year"
+  },
+  {
+   "id": "D6",
+   "target": "P19",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S01-F006 accuracy/mistranslation"
+   ],
+   "what": "Gross profit margin \"decreased\" rendered as rose"
+  },
+  {
+   "id": "D8",
+   "target": "P31",
+   "stage": "register",
+   "pass": true,
+   "by": [
+    "S02-F004 accuracy/mistranslation"
+   ],
+   "what": "\"Expects ... to remain satisfactory\" rendered as certain to hit a new record"
+  },
+  {
+   "id": "D7",
+   "target": "P31",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S02-F005 accuracy/addition"
+   ],
+   "what": "A profit growth forecast added that is not in the English"
+  },
+  {
+   "id": "D9",
+   "target": "P17",
+   "stage": "register",
+   "pass": true,
+   "by": [
+    "S01-F005 accuracy/addition"
+   ],
+   "what": "\"Increased\" rendered as soared"
+  },
+  {
+   "id": "D10",
+   "target": "P10",
+   "stage": "register",
+   "pass": true,
+   "by": [
+    "S01-F003 accuracy/addition"
+   ],
+   "what": "Colloquial \"business is hot\" in the segment note"
+  },
+  {
+   "id": "D11",
+   "target": "P18",
+   "stage": "section",
+   "pass": true,
+   "by": [
+    "S01-F009 section/fluency"
+   ],
+   "what": "Literal, ungrammatical word order"
+  },
+  {
+   "id": "D12",
+   "target": "P33",
+   "stage": "section",
+   "pass": true,
+   "by": [
+    "S02-F006 accuracy/omission"
+   ],
+   "what": "The taxation note as one run-on sentence with the reason buried"
+  },
+  {
+   "id": "D13",
+   "target": "P24",
+   "stage": "section",
+   "pass": true,
+   "by": [
+    "S02-F002 accuracy/mistranslation"
+   ],
+   "what": "Cause and effect reversed: the reason reads as the result"
+  },
+  {
+   "id": "D14",
+   "target": "P32",
+   "stage": "section",
+   "pass": true,
+   "by": [
+    "S02-F008 section/punctuation"
+   ],
+   "what": "Half-width commas"
+  },
+  {
+   "id": "D15",
+   "target": "P17",
+   "stage": "section",
+   "pass": true,
+   "by": [
+    "S01-F008 section/punctuation"
+   ],
+   "what": "Half-width brackets around the defined term"
+  },
+  {
+   "id": "D16",
+   "target": "P1",
+   "stage": "section",
+   "pass": true,
+   "by": [
+    "S01-F007 section/quotation"
+   ],
+   "what": "Mismatched quotation marks around the defined term"
+  },
+  {
+   "id": "D17",
+   "target": "F4",
+   "stage": "accuracy",
+   "pass": true,
+   "by": [
+    "S01-F001 accuracy/omission"
+   ],
+   "what": "Inside the protected sponsor statement: \"assumes no responsibility\" left out. An accuracy correction only"
+  },
+  {
+   "id": "D18",
+   "target": "P9 P17",
+   "stage": "glossary",
+   "pass": true,
+   "by": [
+    "glossary stage"
+   ],
+   "what": "Revenue as 营业额 against the glossary's 收入"
+  },
+  {
+   "id": "D19",
+   "target": "P11 P20",
+   "stage": "glossary",
+   "pass": true,
+   "by": [
+    "glossary stage"
+   ],
+   "what": "Last-mile delivery as 最后一公里配送 against the glossary's 末端配送"
+  },
+  {
+   "id": "D20",
+   "target": "P27 P41",
+   "stage": "glossary",
+   "pass": true,
+   "by": [
+    "glossary stage"
+   ],
+   "what": "Company short name written a second way"
+  }
+ ],
+ "groups": {
+  "accuracy": {
+   "pass": 8,
+   "total": 8
+  },
+  "register": {
+   "pass": 3,
+   "total": 3
+  },
+  "section": {
+   "pass": 6,
+   "total": 6
+  },
+  "glossary": {
+   "pass": 3,
+   "total": 3
+  }
+ },
+ "found": 20,
+ "total": 20,
+ "extraGlossary": [],
+ "falseFindings": [
+  {
+   "id": "S03-F001",
+   "target": "P43",
+   "specialist": "section",
+   "category": "wording",
+   "severity": "should",
+   "zh_span": "承董事部命",
+   "suggestion": "奉董事部命令",
+   "issue": "The phrase 承董事部命 is not the standard formal Chinese for the authorising formula and reads as stiff and unidiomatic.",
+   "grader": "wrong"
+  }
+ ],
+ "falseMust": 0,
+ "unplanned": [],
+ "passMark": true
+}

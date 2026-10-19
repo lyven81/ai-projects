@@ -1,0 +1,326 @@
+{
+ "built": "2026-10-19T02:43:13.791Z",
+ "review": [
+  {
+   "id": "D1",
+   "target": "P17",
+   "stage": "accuracy",
+   "categories": [
+    "mistranslation"
+   ],
+   "span": [
+    38,
+    46
+   ],
+   "span_text": "8,462万令吉",
+   "what": "Revenue RM86.42 million written with two digits swapped"
+  },
+  {
+   "id": "D2",
+   "target": "P36",
+   "stage": "accuracy",
+   "categories": [
+    "mistranslation"
+   ],
+   "span": [
+    34,
+    40
+   ],
+   "span_text": "4.8亿令吉",
+   "what": "IPO proceeds RM48.00 million converted to 亿 wrongly (correct 4,800万)"
+  },
+  {
+   "id": "D3",
+   "target": "P5",
+   "stage": "accuracy",
+   "categories": [
+    "mistranslation",
+    "omission"
+   ],
+   "span": [
+    5,
+    9
+   ],
+   "span_text": "出现影响",
+   "what": "\"There were no unusual items\" with the negation dropped"
+  },
+  {
+   "id": "D4",
+   "target": "P30",
+   "stage": "accuracy",
+   "categories": [
+    "omission"
+   ],
+   "span": null,
+   "span_text": null,
+   "what": "The diesel subsidy risk sentence left out"
+  },
+  {
+   "id": "D5",
+   "target": "P23",
+   "stage": "accuracy",
+   "categories": [
+    "mistranslation"
+   ],
+   "span": [
+    1,
+    5
+   ],
+   "span_text": "去年同期",
+   "what": "\"Immediate preceding quarter\" rendered as the same quarter last year"
+  },
+  {
+   "id": "D6",
+   "target": "P19",
+   "stage": "accuracy",
+   "categories": [
+    "mistranslation"
+   ],
+   "span": [
+    33,
+    42
+   ],
+   "span_text": "上升至25.00%",
+   "what": "Gross profit margin \"decreased\" rendered as rose"
+  },
+  {
+   "id": "D8",
+   "target": "P31",
+   "stage": "register",
+   "categories": [
+    "register",
+    "mistranslation"
+   ],
+   "span": [
+    40,
+    46
+   ],
+   "span_text": "必将再创新高",
+   "what": "\"Expects ... to remain satisfactory\" rendered as certain to hit a new record"
+  },
+  {
+   "id": "D7",
+   "target": "P31",
+   "stage": "accuracy",
+   "categories": [
+    "addition"
+   ],
+   "span": [
+    47,
+    59
+   ],
+   "span_text": "预计全年盈利将增长三成。",
+   "what": "A profit growth forecast added that is not in the English"
+  },
+  {
+   "id": "D9",
+   "target": "P17",
+   "stage": "register",
+   "categories": [
+    "register"
+   ],
+   "span": [
+    87,
+    91
+   ],
+   "span_text": "大幅飙升",
+   "what": "\"Increased\" rendered as soared"
+  },
+  {
+   "id": "D10",
+   "target": "P10",
+   "stage": "register",
+   "categories": [
+    "register",
+    "addition"
+   ],
+   "span": [
+    4,
+    8
+   ],
+   "span_text": "生意很火",
+   "what": "Colloquial \"business is hot\" in the segment note"
+  },
+  {
+   "id": "D11",
+   "target": "P18",
+   "stage": "section",
+   "categories": [
+    "wording",
+    "fluency"
+   ],
+   "span": [
+    7,
+    17
+   ],
+   "span_text": "做出了贡献到收入增长",
+   "what": "Literal, ungrammatical word order"
+  },
+  {
+   "id": "D12",
+   "target": "P33",
+   "stage": "section",
+   "categories": [
+    "fluency",
+    "structure",
+    "punctuation"
+   ],
+   "span": [
+    0,
+    50
+   ],
+   "span_text": "本季度税项支出为311万令吉而由于部分开支不可扣税所以实际税率为24.01%略高于24%的法定税率。",
+   "what": "The taxation note as one run-on sentence with the reason buried"
+  },
+  {
+   "id": "D13",
+   "target": "P24",
+   "stage": "section",
+   "categories": [
+    "structure",
+    "mistranslation"
+   ],
+   "span": [
+    0,
+    24
+   ],
+   "span_text": "包裹及货运量下降以及工作日减少，主要由于收入减少",
+   "what": "Cause and effect reversed: the reason reads as the result"
+  },
+  {
+   "id": "D14",
+   "target": "P32",
+   "stage": "section",
+   "categories": [
+    "punctuation"
+   ],
+   "span": [
+    22,
+    26
+   ],
+   "span_text": ",因此,",
+   "what": "Half-width commas"
+  },
+  {
+   "id": "D15",
+   "target": "P17",
+   "stage": "section",
+   "categories": [
+    "punctuation"
+   ],
+   "span": [
+    16,
+    30
+   ],
+   "span_text": "(“2026财年第一季度”)",
+   "what": "Half-width brackets around the defined term"
+  },
+  {
+   "id": "D16",
+   "target": "P1",
+   "stage": "section",
+   "categories": [
+    "quotation",
+    "punctuation"
+   ],
+   "span": [
+    28,
+    33
+   ],
+   "span_text": "“本集团“",
+   "what": "Mismatched quotation marks around the defined term"
+  },
+  {
+   "id": "D17",
+   "target": "F4",
+   "stage": "accuracy",
+   "categories": [
+    "omission"
+   ],
+   "span": null,
+   "span_text": null,
+   "suggestion_contains": [
+    "准确性",
+    "完整性",
+    "责任"
+   ],
+   "what": "Inside the protected sponsor statement: \"assumes no responsibility\" left out. An accuracy correction only"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "D18",
+   "what": "Revenue as 营业额 against the glossary's 收入",
+   "occurrences": [
+    {
+     "target": "P9",
+     "from": "营业额"
+    },
+    {
+     "target": "P17",
+     "from": "营业额"
+    }
+   ]
+  },
+  {
+   "id": "D19",
+   "what": "Last-mile delivery as 最后一公里配送 against the glossary's 末端配送",
+   "occurrences": [
+    {
+     "target": "P11",
+     "from": "最后一公里配送"
+    },
+    {
+     "target": "P20",
+     "from": "最后一公里配送"
+    }
+   ]
+  },
+  {
+   "id": "D20",
+   "what": "Company short name written a second way",
+   "occurrences": [
+    {
+     "target": "P27",
+     "from": "特拉斯"
+    },
+    {
+     "target": "P41",
+     "from": "特拉斯"
+    }
+   ]
+  }
+ ],
+ "clean": [
+  "F1",
+  "F2",
+  "F3",
+  "P2",
+  "P3",
+  "P4",
+  "P6",
+  "P7",
+  "P8",
+  "P12",
+  "P13",
+  "P14",
+  "P15",
+  "P16",
+  "P21",
+  "P22",
+  "P25",
+  "P26",
+  "P28",
+  "P29",
+  "P34",
+  "P35",
+  "P37",
+  "P38",
+  "P39",
+  "P40",
+  "P42",
+  "P43",
+  "P44"
+ ],
+ "pass_mark": "every review defect found with one of its listed categories, every glossary occurrence changed and no other glossary change, and at most 2 must findings on clean targets"
+}

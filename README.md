@@ -4,17 +4,27 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 3**
+**Total published AI projects: 4**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 4 | 2026-10-19 | Chinese Translation Quality Check | [page](https://lyven81.github.io/ai-projects/chinese-translation-quality-check.html) |
 | 3 | 2026-10-17 | Pak Razif The Gardener | [page](https://lyven81.github.io/ai-projects/pak-razif-the-gardener.html) |
 | 2 | 2026-10-16 | Badminton Court Booking Agent | [page](https://lyven81.github.io/ai-projects/badminton-booking-agent.html) |
 | 1 | 2026-10-16 | Wee Auto Car Care | [page](https://lyven81.github.io/ai-projects/wee-auto-car-care.html) |
 
 ## Projects by Problem Type
+
+### Document processing
+
+#### Chinese Translation Quality Check
+- **What it does:** A translation review where Claude specialists check the Chinese against the English, and an editor decides every change.
+- **How it's built:** A glossary stage corrects settled terms in code; a coordinator routes each section to three Claude specialists (accuracy, section, register); rules in one tools.js, also served as six MCP tools, check every finding; overlapping flags become one box; a fresh grader annotates each box; the editor's decisions become tracked changes and comments in Word. Runs live or on the Message Batches API, with failed requests redone live.
+- **Problem solved:** The Chinese version of a quarterly report must say exactly what the English says before release. The review finds wrong figures, dropped negations, added claims, promotional tone and broken punctuation, and the editor decides every change.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/chinese-translation-quality-check.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/chinese-translation-quality-check/demo.html)
+- **Rebuilt:** 2026-10-19
 
 ### Customer service
 

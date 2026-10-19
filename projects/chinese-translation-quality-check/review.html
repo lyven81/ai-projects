@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Translation Review</title>
+<!--FAVICON-->
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc;--old:#fbd0d0;--oldink:#8a1c1c;--new:#c9ecd3;--newink:#0f4a24;--hit:#fde68a;--prot:#e3e8ee;--gl:#dbe8f7;--glink:#1d4f8a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--old:#5a2323;--oldink:#ffd9d9;--new:#1f4a2c;--newink:#d4f5de;--hit:#5c4b14;--prot:#2c3743;--gl:#1e3550;--glink:#bcd7f5}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--old:#5a2323;--oldink:#ffd9d9;--new:#1f4a2c;--newink:#d4f5de;--hit:#5c4b14;--prot:#2c3743;--gl:#1e3550;--glink:#bcd7f5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.7 "Segoe UI","Microsoft YaHei",Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;z-index:3}
+.bar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.crumbs{font-size:12.5px;color:var(--muted)}.crumbs a{color:inherit;text-decoration:none}
+.top h1{font-size:20px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:4px 6px}
+nav button{border:1px solid var(--line);background:var(--card);color:var(--accent);border-radius:99px;padding:3px 12px;font-size:13.5px}
+nav button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+select,button,textarea{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+button{cursor:pointer}button.pri{background:var(--accent);color:#fff;border-color:var(--accent)}
+.muted{color:var(--muted);font-size:13.5px}
+.intro{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:10px 14px;margin:14px 0;font-size:14.5px}
+.intro p{margin:4px 0}
+.para{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin:14px 0}
+.para h2{grid-column:1/-1;font-size:17px;color:var(--navy);margin:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.hd{grid-column:1/-1;font-size:13px;color:var(--muted);margin-top:-6px}
+.en{font-size:14.5px;line-height:1.65}.zh{font-size:16px;line-height:1.9}
+mark.f{background:var(--hit);color:inherit;border-radius:2px}mark.f.sel{outline:2px solid var(--accent)}
+span.p{background:var(--prot);border-bottom:1px dashed var(--muted)}
+.note{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.find{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px;margin:10px 0;cursor:pointer}
+.find.sel{box-shadow:0 0 0 2px var(--accent)}
+.find.accept{border-left-color:#3a8f5c}.find.edit{border-left-color:#c0841a}.find.reject{border-left-color:#9aa7b5;opacity:.75}
+.find .meta{font-size:13px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.flags{margin:6px 0;border-left:2px solid var(--line);padding-left:10px}.flag{font-size:14px;margin:2px 0}
+.lbl{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;margin-right:4px}
+.chg{margin:6px 0;font-size:16px}.old{background:var(--old);color:var(--oldink);padding:0 3px}.new{background:var(--new);color:var(--newink);padding:0 3px}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:10px;padding:0 7px}
+.g-sound{color:#3a8f5c}.g-doubtful{color:#c0841a}.g-wrong{color:#c04040}
+.acts{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;align-items:center}
+textarea{width:100%;min-height:54px;font-size:15px}
+.err{color:#c04040;font-size:13.5px}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+h3{font-size:15.5px;color:var(--navy);margin:20px 0 6px}
+.keys{font-size:12.5px;color:var(--muted)}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin:14px 0}
+.doc h4{font-size:15px;color:var(--navy);margin:18px 0 4px}
+.doc p{font-size:16px;line-height:1.95;margin:6px 0}
+.doc .k{font-size:11.5px;color:var(--muted);margin-right:6px;font-family:Consolas,monospace}
+ins.e{background:var(--new);color:var(--newink);text-decoration:underline}del.e{background:var(--old);color:var(--oldink)}
+ins.g{background:var(--gl);color:var(--glink);text-decoration:underline}del.g{background:var(--gl);color:var(--glink);opacity:.8}
+span.c{background:var(--hit)}sup.c{color:var(--accent);font-weight:700;font-size:11px;margin-left:1px}
+.cm{font-size:13px;color:var(--muted);border-left:2px solid var(--hit);padding-left:8px;margin:2px 0 8px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);align-items:center}
+@media (max-width:760px){.para{grid-template-columns:1fr}.doc{padding:14px}}
+footer{margin-top:30px;font-size:12px;color:var(--muted)}
+</style></head>
+<body><div class="wrap">
+<div class="top">
+  <!--CRUMBS-->
+  <div class="bar"><h1>Translation Review</h1><nav id="views"></nav><span id="prog" class="muted"></span></div>
+</div>
+<div id="intro"></div>
+<div id="main"></div>
+<footer>© 2026 Lee Yih Ven · Chinese Translation Quality Check</footer>
+</div>
+<script src="tools.js"></script>
+<script src="lib/apply_decisions.js"></script>
+<script src="lib/summary.js"></script>
+<!--DATA-->
+<script>
+"use strict";
+const T = window.QualityCheckTools, AD = window.ApplyDecisions, RS = window.ReviewSummary;
+const EMBED = window.CTQC_DATA || null;           // the demo: the recorded run built in
+const LS_KEY = "ctqc-demo-decisions-v1";
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const VIEWS = [["review", "Review"], ["report", "Reviewed report"], ["summary", "Review summary"], ["terms", "Terms"], ["listed", "Failed checks"], ["stats", "Accept rate"]];
+let D = null, view = "review", sec = null, pi = 0, fi = 0, editing = null, showChanges = true;
+
+// ---------- data: local server or embedded ----------
+function readLocal() { try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch (e) { return {}; } }
+function writeLocal(d) { try { localStorage.setItem(LS_KEY, JSON.stringify(d)); } catch (e) { /* private window: decisions last for this visit */ } }
+async function load() {
+  D = EMBED ? JSON.parse(JSON.stringify(EMBED)) : await fetch("/api/all").then((r) => r.json());
+  if (EMBED) D.decisions = readLocal();
+  T.indexDocument(D.doc);
+}
+async function saveDecision(id, decision, text) {
+  const f = allFindings().find((x) => x.id === id);
+  if (EMBED) {
+    if (decision === "undo") delete D.decisions[id];
+    else {
+      const entry = { decision, at: new Date().toISOString() };
+      if (decision === "edit") { const c = T.checkEdit(D.doc, f, text, D.banned); if (!c.ok) return { ok: false, error: c.error }; entry.text = c.text; }
+      D.decisions[id] = entry;
+    }
+    writeLocal(D.decisions);
+    return { ok: true };
+  }
+  const r = await fetch("/api/decision", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id, decision, text }) }).then((x) => x.json());
+  if (r.ok) { if (r.decision) D.decisions[id] = r.decision; else delete D.decisions[id]; }
+  return r;
+}
+const allFindings = () => D.sections.flatMap((s) => s.findings);
+const applied = () => AD.applyAll(D.doc, D.glossary_report, allFindings(), D.decisions, D.banned);
+
+// ---------- shell ----------
+function nav() {
+  document.getElementById("views").innerHTML = VIEWS.map(([k, t]) => `<button class="${view === k ? "on" : ""}" onclick="go('${k}')">${t}</button>`).join("");
+  const n = allFindings().length, d = allFindings().filter((f) => D.decisions[f.id]).length;
+  document.getElementById("prog").textContent = `${d} of ${n} findings decided`;
+}
+window.go = (k) => { view = k; editing = null; try { history.replaceState(null, "", "#" + k); } catch (e) {} render(); window.scrollTo(0, 0); };
+function intro() {
+  if (!EMBED) return;
+  document.getElementById("intro").innerHTML = `<div class="intro">
+    <p><b>You are the editor.</b> ${esc(D.intro)}</p>
+    <p>Accept, edit or reject each finding on the <b>Review</b> page. Your decisions rewrite the <b>Reviewed report</b> and recount the <b>Review summary</b> straight away. They stay in this browser only.</p>
+    <p class="acts"><button onclick="resetDemo()">Reset my decisions</button><span class="muted">${esc(D.run_note)}</span></p></div>`;
+}
+window.resetDemo = () => { if (!confirm("Clear every decision you made on this page?")) return; D.decisions = {}; writeLocal({}); pi = 0; fi = 0; render(); };
+function render() {
+  nav();
+  ({ review: viewReview, report: viewReport, summary: viewSummary, terms: viewTerms, listed: viewListed, stats: viewStats }[view] || viewReview)();
+  document.querySelectorAll("#main table").forEach((t) => { if (t.parentNode.className === "tw") return; const d = document.createElement("div"); d.className = "tw"; t.parentNode.insertBefore(d, t); d.appendChild(t); });
+}
+
+// ---------- Review ----------
+function section() { return D.sections.find((s) => s.id === sec) || D.sections[0]; }
+function targetsOf(s) {
+  const all = D.doc.sections.find((x) => x.id === s.id).keys.map((k) => D.doc.byKey[k]);
+  const withF = new Set(s.findings.map((f) => f.target));
+  return document.getElementById("onlyf") && !document.getElementById("onlyf").checked ? all : all.filter((t) => withF.has(t.key));
+}
+function highlight(t, fs) {
+  const marks = [];
+  for (const p of t.protected) marks.push({ a: p.start, b: p.end, cls: "p" });
+  fs.forEach((f) => marks.push({ a: f.zh_start, b: f.zh_start + f.zh_span.length, cls: "f", id: f.id }));
+  const pts = new Set([0, t.zh.length]); marks.forEach((m) => { pts.add(m.a); pts.add(m.b); });
+  const cuts = [...pts].sort((x, y) => x - y); let out = "";
+  for (let i = 0; i < cuts.length - 1; i++) {
+    const a = cuts[i], b = cuts[i + 1];
+    const f = marks.find((m) => m.cls === "f" && m.a <= a && m.b >= b), p = marks.find((m) => m.cls === "p" && m.a <= a && m.b >= b);
+    let h = esc(t.zh.slice(a, b)); if (p) h = `<span class="p">${h}</span>`; if (f) h = `<mark class="f" data-id="${f.id}">${h}</mark>`; out += h;
+  }
+  return out;
+}
+function viewReview() {
+  const s = section(); sec = s.id;
+  const counts = (x) => `${x.findings.filter((f) => D.decisions[f.id]).length}/${x.findings.length} decided`;
+  const only = document.getElementById("onlyf") ? document.getElementById("onlyf").checked : true;
+  const list = targetsOf(s);
+  const head = `<div class="acts" style="margin:12px 0"><select id="sec" aria-label="Section" onchange="sec=this.value;pi=0;fi=0;render()">${D.sections.map((x) => { const ds = D.doc.sections.find((y) => y.id === x.id); return `<option value="${x.id}" ${x.id === s.id ? "selected" : ""}>${x.id} · ${ds.front_matter ? "F1 to F4, " : ""}P${ds.from} to P${ds.to} · ${counts(x)}</option>`; }).join("")}</select>
+    <label class="muted"><input type="checkbox" id="onlyf" ${only ? "checked" : ""} onchange="pi=0;fi=0;render()"> only paragraphs with findings</label>
+    <span class="keys">j / k paragraph · n / p finding · a accept · e edit · r reject · u undo</span></div>`;
+  const main = document.getElementById("main");
+  if (!list.length) { main.innerHTML = head + `<p class="muted">No findings in this section.</p>`; return; }
+  pi = Math.max(0, Math.min(pi, list.length - 1));
+  const t = list[pi], fs = s.findings.filter((f) => f.target === t.key);
+  fi = Math.max(0, Math.min(fi, fs.length - 1));
+  const conflictsOf = (id) => (s.conflicts || []).filter((c) => c.a === id || c.b === id);
+  main.innerHTML = head + `<div class="para"><h2>${esc(t.key)}${t.name ? ` <span class="tag">${esc(t.name)}</span>` : ""}
+      <span class="muted">${pi + 1} of ${list.length}</span><span><button onclick="move(-1)">◀ prev</button> <button onclick="move(1)">next ▶</button></span></h2>
+    ${t.heading_en ? `<div class="hd">${esc(t.heading_en)} · ${esc(t.heading_zh)}</div>` : ""}
+    <div class="en">${esc(t.en)}</div><div class="zh">${highlight(t, fs)}</div>
+    ${t.protected.length ? `<div class="note">Grey dashed text is a protected passage: accuracy corrections only, never a change of wording or tone.</div>` : ""}
+    ${t.zh_original ? `<div class="note">The glossary stage already corrected a term here (see Terms).</div>` : ""}</div>
+  ${fs.map((f, i) => {
+    const d = D.decisions[f.id];
+    const g = f.grader ? `<span class="g-${esc(f.grader.verdict)}">grader: ${esc(f.grader.verdict)}</span> <span class="muted">${esc(f.grader.note)}</span>` : "";
+    const conf = conflictsOf(f.id).map((c) => `<span class="tag">overlaps ${esc(c.a === f.id ? c.b : c.a)}</span>`).join(" ");
+    return `<div class="find ${i === fi ? "sel" : ""} ${d ? d.decision : ""}" onclick="fi=${i};render()">
+      <div class="meta"><b>${esc(f.id)}</b><span>${f.flags ? `${f.flags.length} flags` : `${esc(f.specialist)} · ${esc(f.category)}`} · ${esc(f.severity)}</span>${f.flags ? "" : `<span>source ${esc(f.source)}</span>`}${{ comment: '<span class="tag">comment only</span>', delete: '<span class="tag">deletes the words</span>', change: "" }[T.findingMode(D.doc, f)]}${conf}</div>
+      ${f.flags ? `<div class="flags">${f.flags.map((x) => `<div class="flag"><b>${esc(x.specialist)}</b> · ${esc(x.category)} · ${esc(x.severity)} · source ${esc(x.source)}: ${esc(x.issue)} <span class="muted">English: “${esc(x.en_span)}”</span></div>`).join("")}</div>` : ""}
+      ${T.findingMode(D.doc, f) === "comment"
+        ? `<div class="chg"><span class="muted">Comment on</span> <mark class="f">${esc(f.zh_span)}</mark> <span class="muted">· the text is not changed</span></div>
+           ${f.category === "omission" ? `<div class="muted">Missing from the Chinese: <span class="new">${esc(f.en_span)}</span></div>` : ""}`
+        : `<div class="chg">${f.flags ? `<span class="lbl">Correction</span> ` : ""}<span class="old">${esc(f.zh_span)}</span>${f.suggestion ? ` → <span class="new">${esc(d && d.decision === "edit" ? d.text : f.suggestion)}</span>` : ` → <span class="muted">(deleted)</span>`}</div>`}
+      ${f.flags ? `<div class="muted">${f.change_by === "consolidator" ? `One change written to cover every flag: ${esc(f.issue)}` : f.change_by === "same" ? "Every flag proposed this same change." : esc(f.issue)}</div>`
+        : `<div>${esc(f.issue)}</div><div class="muted">${esc(f.reason)} · English: “${esc(f.en_span)}”</div>`}
+      ${g ? `<div>${g}</div>` : ""}
+      ${editing === f.id ? `<textarea id="edtext" onclick="event.stopPropagation()">${esc(d && d.text ? d.text : f.suggestion)}</textarea><div class="acts"><button class="pri" onclick="event.stopPropagation();decide('${f.id}','edit')">Save edit</button><button onclick="event.stopPropagation();editing=null;render()">Cancel</button><span id="ederr" class="err"></span></div>`
+        : `<div class="acts"><button onclick="event.stopPropagation();decide('${f.id}','accept')">Accept (a)</button>${f.suggestion ? `<button onclick="event.stopPropagation();editing='${f.id}';render()">Edit (e)</button>` : ""}<button onclick="event.stopPropagation();decide('${f.id}','reject')">Reject (r)</button>${d ? `<button onclick="event.stopPropagation();decide('${f.id}','undo')">Undo (u)</button><span class="muted">${esc(d.decision)}ed</span>` : ""}</div>`}
+    </div>`; }).join("")}`;
+  document.querySelectorAll("mark.f").forEach((m) => { if (fs[fi] && m.dataset.id === fs[fi].id) m.classList.add("sel"); });
+  if (editing) { const x = document.getElementById("edtext"); if (x) x.focus(); }
+}
+window.move = (d) => { pi += d; fi = 0; editing = null; render(); };
+window.decide = async (id, decision) => {
+  const text = decision === "edit" ? document.getElementById("edtext").value : undefined;
+  const r = await saveDecision(id, decision, text);
+  if (!r.ok) { const e = document.getElementById("ederr"); if (e) e.textContent = r.error; else alert(r.error); return; }
+  editing = null;
+  const s = section(), list = targetsOf(s), fs = list[pi] ? s.findings.filter((f) => f.target === list[pi].key) : [];
+  if (decision !== "undo" && fi < fs.length - 1) fi++;
+  render();
+};
+document.addEventListener("keydown", (e) => {
+  if (view !== "review" || !D || e.target.tagName === "TEXTAREA" || e.target.tagName === "SELECT" || e.ctrlKey || e.metaKey || e.altKey) return;
+  const s = section(), list = targetsOf(s), fs = list[pi] ? s.findings.filter((f) => f.target === list[pi].key) : [], f = fs[fi];
+  if (e.key === "j") move(1); else if (e.key === "k") move(-1);
+  else if (e.key === "n") { fi = Math.min(fi + 1, fs.length - 1); render(); } else if (e.key === "p") { fi = Math.max(fi - 1, 0); render(); }
+  else if (f && e.key === "a") decide(f.id, "accept"); else if (f && e.key === "r") decide(f.id, "reject"); else if (f && e.key === "u") decide(f.id, "undo");
+  else if (f && e.key === "e" && f.suggestion) { e.preventDefault(); editing = f.id; render(); }
+});
+
+// ---------- Reviewed report ----------
+function viewReport() {
+  const A = applied(), byId = Object.fromEntries(allFindings().map((f) => [f.id, f]));
+  const changes = A.gate.changes.length - A.plan.skipped.length, comments = A.gate.comments.length;
+  let n = 0; const num = {};
+  const paras = D.doc.targets.map((t) => {
+    const r = A.reviewed[t.key];
+    let html = "";
+    if (!showChanges) html = esc(r.clean);
+    else for (const x of r.runs) {
+      let h = esc(x.text);
+      if (x.st === "gins") h = `<ins class="g" title="Glossary stage">${h}</ins>`;
+      else if (x.st === "gdel") h = `<del class="g" title="Glossary stage">${h}</del>`;
+      else if (x.st === "eins") h = `<ins class="e" title="${esc(x.notes.join(", "))}">${h}</ins>`;
+      else if (x.st === "edel") h = `<del class="e">${h}</del>`;
+      const cs = x.notes.filter((id) => byId[id] && T.findingMode(D.doc, byId[id]) === "comment");
+      if (cs.length && x.st !== "eins") h = `<span class="c">${h}</span>`;
+      html += h;
+    }
+    const cms = [...new Set(r.runs.flatMap((x) => x.notes))].filter((id) => byId[id]);
+    if (showChanges) for (const id of cms) { num[id] = ++n; html += `<sup class="c">${n}</sup>`; }
+    const notes = showChanges ? cms.map((id) => { const f = byId[id]; return `<div class="cm">${num[id]}. ${esc(f.id)} [${esc(f.category)}] ${esc(f.issue)}${T.findingMode(D.doc, f) === "comment" ? " (comment)" : ""}</div>`; }).join("") : "";
+    const head = t.heading_zh ? `<h4>${esc(t.heading_zh)}</h4>` : "";
+    return `${head}<p><span class="k">${esc(t.key)}</span>${html}</p>${notes}`;
+  }).join("");
+  document.getElementById("main").innerHTML = `<div class="acts" style="margin:12px 0">
+      <button class="${showChanges ? "pri" : ""}" onclick="showChanges=true;render()">Show changes</button><button class="${showChanges ? "" : "pri"}" onclick="showChanges=false;render()">Clean text</button>
+      <span class="muted">${changes} tracked change${changes === 1 ? "" : "s"} and ${comments} comment${comments === 1 ? "" : "s"} from your decisions${A.plan.skipped.length ? `; ${A.plan.skipped.length} accepted change(s) overlap another and are not applied (${A.plan.skipped.map((x) => esc(x.id)).join(", ")})` : ""}.</span></div>
+    ${showChanges ? `<div class="legend"><span><ins class="e">inserted</ins> <del class="e">deleted</del> your decisions</span><span><ins class="g">inserted</ins> <del class="g">deleted</del> glossary stage</span><span><span class="c">highlighted</span><sup class="c">1</sup> comment</span></div>` : ""}
+    <div class="doc">${paras}</div>`;
+}
+
+// ---------- Summary, Terms, Failed checks, Accept rate ----------
+function viewSummary() {
+  const A = applied();
+  const s = RS.summarise(D.doc, D.glossary_report, D.sections, D.decisions, A);
+  document.getElementById("main").innerHTML = `<div class="doc" style="font-size:15px">${RS.renderSummary(s)}</div>`;
+}
+function viewTerms() {
+  const ch = D.glossary_report.changes || [];
+  document.getElementById("main").innerHTML = `<p class="muted">The glossary settles these terms. The glossary stage replaced every listed rendering to avoid with the approved one, as a tracked change, before the specialists read the text. ${ch.length} change${ch.length === 1 ? "" : "s"} made.</p>
+    <table><tr><th>Entry</th><th>English</th><th>Approved Chinese</th><th>Avoid</th><th>Changed by the glossary stage</th></tr>${D.glossary.entries.map((e) => {
+      const here = ch.filter((c) => c.entry === e.id);
+      return `<tr><td>${esc(e.id)}</td><td>${esc(e.en)}</td><td>${esc(e.zh)}</td><td>${esc(e.avoid.join("、"))}</td><td>${here.map((c) => `${esc(c.target)}: ${esc(c.from)} → ${esc(c.to)}`).join("<br>")}</td></tr>`; }).join("")}</table>`;
+}
+function viewListed() {
+  const l = D.sections.flatMap((s) => [...(s.failed || []).map((x) => ({ section: s.id, ...x })), ...(s.failedRequests || []).map((x) => ({ section: s.id, request: true, ...x }))]);
+  document.getElementById("main").innerHTML = l.length ? `<table><tr><th>Section</th><th>What</th><th>Error</th></tr>${l.map((x) => `<tr><td>${esc(x.section)}</td><td>${x.request ? "request " + esc(x.custom_id) : esc(JSON.stringify(x.finding)).slice(0, 300)}</td><td>${esc(x.error.category)}: ${esc(x.error.message)}</td></tr>`).join("")}</table>`
+    : `<p class="muted">Nothing failed the checks in code: every finding the specialists returned passed, or was fixed in a retry round.</p>`;
+}
+function viewStats() {
+  const by = {};
+  for (const f of allFindings()) { const x = by[f.category] = by[f.category] || { total: 0, accept: 0, edit: 0, reject: 0 }; x.total++; const d = D.decisions[f.id]; if (d) x[d.decision]++; }
+  document.getElementById("main").innerHTML = `<table><tr><th>Category</th><th>Findings</th><th>Accepted</th><th>Edited</th><th>Rejected</th><th>Accept rate</th></tr>${Object.entries(by).map(([k, v]) => { const dec = v.accept + v.edit + v.reject; return `<tr><td>${esc(k)}</td><td>${v.total}</td><td>${v.accept}</td><td>${v.edit}</td><td>${v.reject}</td><td>${dec ? Math.round((100 * (v.accept + v.edit)) / dec) + "%" : ""}</td></tr>`; }).join("")}</table>`;
+}
+
+(async () => {
+  await load();
+  sec = D.sections[0].id;
+  const h = (location.hash || "").slice(1); if (VIEWS.some(([k]) => k === h)) view = h;
+  intro(); render();
+  window.addEventListener("hashchange", () => { const k = location.hash.slice(1); if (k !== view && VIEWS.some(([x]) => x === k)) go(k); });
+})();
+</script>
+</body></html>

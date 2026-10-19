@@ -1,0 +1,18 @@
+{
+  "name": "chinese-translation-quality-check",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quality check for a Chinese translation against its English source: glossary stage, routed specialists, rules in code, a fresh grader, the editor's decision, tracked changes in Word",
+  "type": "commonjs",
+  "scripts": {
+    "mcp": "node mcp_server.mjs",
+    "test:tools": "node benchmark/test_tools.mjs",
+    "benchmark": "node benchmark/run_benchmark.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.131.0",
+    "@modelcontextprotocol/sdk": "1.17.0",
+    "@xmldom/xmldom": "0.9.12",
+    "jszip": "3.10.1"
+  }
+}
