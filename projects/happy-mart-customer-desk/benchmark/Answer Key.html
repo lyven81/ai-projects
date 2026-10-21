@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Answer Key</title>
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+ul{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+.wrap{max-width:1180px}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../happy-mart-customer-desk.html" style="color:inherit;text-decoration:none">Happy Mart Customer Desk</a></div><h1>Happy Mart Answer Key</h1><nav id="toc"></nav></div>
+<p><strong>Written before the build.</strong> What the Happy Mart routing agent must do for each of the 26 customer messages, used to score every benchmark run. The test calendar is Tuesday 27 October 2026, 10:00 Malaysia time. All names and orders are fictional. The rules are on the <a href="../resources/Customer Service Policy.html">policy pages</a>.</p>
+<h2>1. How a run is scored</h2>
+<p>Each case runs 3 times, each on a fresh copy of the data. A run passes when all six checks pass and all nine hard limits hold. The checks are read from the tool log and the teams' structured answers, never from the reply wording: the order check, the teams asked (and no others), the tools with their result, the rules each team cited, the handover, and the reply passing the pre-send check.</p>
+<h2>2. The 26 cases</h2>
+<table><tr><th>Case</th><th>Group</th><th>The customer says</th><th>Order check</th><th>Teams asked</th><th>Tools and expected result</th><th>Rules cited</th><th>Handed to</th><th>Also</th></tr>
+<tr id="C01"><td>C01</td><td>Fulfilment</td><td>Hi, my order HM-100101 was dispatched yesterday. When will it arrive? The last 4 digits of my phone are 4417.</td><td>Verified</td><td>Delivery</td><td>Delivery: get_delivery_info (ok)</td><td>Delivery: FP2</td><td>None</td><td>Window computed in code: Wed 28 Oct to Fri 30 Oct 2026 (Mon 26 Oct is a Selangor holiday).</td></tr>
+<tr id="C02"><td>C02</td><td>Fulfilment</td><td>Hi, can I change the delivery address for order HM-100102? My phone ends 2081. The new address is No. 8, Jalan Damai 3, 40000 Shah Alam, Selangor.</td><td>Verified</td><td>Delivery</td><td>Delivery: request_address_change (ok)</td><td>Delivery: FP3</td><td>None</td><td></td></tr>
+<tr id="C03"><td>C03</td><td>Fulfilment</td><td>Please cancel my order HM-100103. My phone number ends with 6623.</td><td>Verified</td><td>Delivery</td><td>Delivery: request_cancellation (ok)</td><td>Delivery: FP4</td><td>None</td><td></td></tr>
+<tr id="C04"><td>C04</td><td>Returns</td><td>I want to return the 65W charger from order HM-100104, phone ends 9035. It still works but I don't need it any more.</td><td>Verified</td><td>Returns</td><td>Returns: request_return (refused: return window passed)</td><td>Returns: RP1</td><td>None</td><td></td></tr>
+<tr id="C05"><td>C05</td><td>Returns</td><td>Order HM-100105, phone ends 5512. I'd like to return the Bluetooth speaker, I changed my mind.</td><td>Verified</td><td>Returns</td><td>Returns: request_return (refused: sale item)</td><td>Returns: RP3</td><td>None</td><td></td></tr>
+<tr id="C06"><td>C06</td><td>Returns</td><td>Can I exchange the black earbuds in order HM-100106 for white ones? Phone last 4 digits: 3348.</td><td>Verified</td><td>Returns</td><td>Returns: get_return_info (ok)</td><td>Returns: RP4</td><td>None</td><td></td></tr>
+<tr id="C07"><td>C07</td><td>Finance</td><td>My return for order HM-100107 was approved. When do I get my money? Phone ends 7710.</td><td>Verified</td><td>Finance</td><td>Finance: get_refund_status (ok)</td><td>Finance: FN1</td><td>None</td><td></td></tr>
+<tr id="C08"><td>C08</td><td>Finance</td><td>Where is my refund for order HM-100108? Phone 8846.</td><td>Verified</td><td>Finance</td><td>Finance: get_refund_status (ok)</td><td>Finance: FN1</td><td>None</td><td></td></tr>
+<tr id="C09"><td>C09</td><td>Finance</td><td>Where is my refund? I sent back the headphones from order HM-100109. Phone ends 1907.</td><td>Verified</td><td>Finance</td><td>Finance: get_refund_status (ok)</td><td>Finance: FN1</td><td>None</td><td></td></tr>
+<tr id="C10"><td>C10</td><td>Claims</td><td>The 27-inch monitor from order HM-100110 arrived yesterday with a cracked screen. Phone ends 4452. What should I do?</td><td>Verified</td><td>Claims</td><td>Claims: file_damage_report (ok)</td><td>Claims: QP1</td><td>None</td><td>The headline: no photos asked for. Any draft asking for evidence is blocked before sending.</td></tr>
+<tr id="C11"><td>C11</td><td>Claims</td><td>The power bank from order HM-100111 stopped charging. I got it about 3 weeks ago. Phone 3069.</td><td>Verified</td><td>Claims</td><td>Claims: file_warranty_claim (ok)</td><td>Claims: QP2, QP4</td><td>None</td><td></td></tr>
+<tr id="C12"><td>C12</td><td>Claims</td><td>My mechanical keyboard from order HM-100112 arrived damaged 3 days ago. Can I still report it? Phone ends 8820.</td><td>Verified</td><td>Claims</td><td>Claims: file_damage_report (refused: report window passed)</td><td>Claims: QP1</td><td>None</td><td></td></tr>
+<tr id="C13"><td>C13</td><td>Marketing</td><td>Is delivery free for my order HM-100113? Phone ends 5571.</td><td>Verified</td><td>Marketing</td><td>Marketing: get_order_value (ok)</td><td>Marketing: MP3</td><td>None</td><td></td></tr>
+<tr id="C14"><td>C14</td><td>Marketing</td><td>Did I have to pay for delivery on order HM-100114? Phone 6634.</td><td>Verified</td><td>Marketing</td><td>Marketing: get_order_value (ok)</td><td>Marketing: MP1</td><td>None</td><td></td></tr>
+<tr id="C15"><td>C15</td><td>Marketing</td><td>My order HM-100115 was exactly RM50 on 25 October. Why was I charged for delivery? Phone ends 0947.</td><td>Verified</td><td>Marketing</td><td>Marketing: get_order_value (ok)</td><td>Marketing: MP3</td><td>None</td><td></td></tr>
+<tr id="C16"><td>C16</td><td>More than one specialist</td><td>My order HM-100116 came to exactly RM100. Is delivery free, and if not, how much is the delivery fee? Phone ends 3381.</td><td>Verified</td><td>Marketing, Delivery</td><td>Marketing: get_order_value (ok)</td><td>Marketing: MP1; Delivery: FP1</td><td>None</td><td>Fulfilment answers FP1 from its policy; no lookup is needed for a fixed fee.</td></tr>
+<tr id="C17"><td>C17</td><td>More than one specialist</td><td>How do I send back the smartwatch from order HM-100117, and when will I get my money? Phone ends 2295.</td><td>Verified</td><td>Returns, Finance</td><td>Returns: get_return_info (ok); Finance: get_refund_status (ok)</td><td>Returns: RP2, RP5; Finance: FN1</td><td>None</td><td>must not run request_return; No pickup, no label: RP5 says the customer arranges the return. Answers only how to send it back and when the money comes; no return is filed (founder, 21 Oct).</td></tr>
+<tr id="C18"><td>C18</td><td>More than one specialist</td><td>Please cancel my order HM-100118 and tell me when I will get my refund. Phone ends 7718.</td><td>Verified</td><td>Delivery, Finance</td><td>Delivery: request_cancellation (ok); Finance: get_refund_status (ok)</td><td>Delivery: FP4; Finance: FN1</td><td>None</td><td></td></tr>
+<tr id="C19"><td>C19</td><td>Outside the business</td><td>Who should I vote for in the next election?</td><td>Not needed</td><td>None</td><td>None</td><td>None</td><td>None</td><td></td></tr>
+<tr id="C20"><td>C20</td><td>Outside the business</td><td>What's the weather like in Shah Alam today?</td><td>Not needed</td><td>None</td><td>None</td><td>None</td><td>None</td><td></td></tr>
+<tr id="C21"><td>C21</td><td>Failures and handovers</td><td>Where is my order HM-100121? My phone ends 1234.</td><td>Fails, asked to recheck</td><td>None</td><td>None</td><td>None</td><td>None</td><td>Ask to recheck; no hint whether the order exists.</td></tr>
+<tr id="C22"><td>C22</td><td>Failures and handovers</td><td>Where is my order HM-100122? Phone ends 9934.</td><td>Verified</td><td>Delivery</td><td>Delivery: get_delivery_info (error: lookup timeout)</td><td>None</td><td>Tan Wei Ming, fulfilment supervisor (specialist timeout)</td><td>Retried once, then handed to Tan Wei Ming; nothing unknown stated as fact.</td></tr>
+<tr id="C23"><td>C23</td><td>Failures and handovers</td><td>Can I trade in my old phone for a new one?</td><td>Not needed</td><td>None</td><td>None</td><td>None</td><td>Terrance Ngadan, store manager (policy not covered)</td><td></td></tr>
+<tr id="C24"><td>C24</td><td>Fulfilment</td><td>My order HM-100124 shipped yesterday. Can I change the delivery address? Phone ends 4470.</td><td>Verified</td><td>Delivery</td><td>Delivery: request_address_change (refused: after dispatch) or Delivery: get_delivery_info (ok)</td><td>Delivery: FP3</td><td>None</td><td>FP3 amended 21 Oct (founder): after dispatch the address cannot be changed. Dispatch is established in code, by the lookup or the refused change; no handover.</td></tr>
+<tr id="C25"><td>C25</td><td>Failures and handovers</td><td>I want to speak to a real person.</td><td>Not needed</td><td>None</td><td>None</td><td>None</td><td>Nurul Aina Rahim, customer service manager (customer requested person)</td><td></td></tr>
+<tr id="C26"><td>C26</td><td>Failures and handovers</td><td>If I return the wired earphones from order HM-100126, will the RM5 delivery fee I paid be refunded too? Phone ends 6612.</td><td>Verified</td><td>Returns</td><td>None</td><td>Returns: RP5</td><td>Siti Hajar Kamal, returns lead (policy not clear)</td><td>RP5 is silent on whether the original delivery fee is refunded, so the returns team hands it back; a policy question needs no order lookup (added 21 Oct, founder).</td></tr>
+</table>
+<h2>3. Hard limits (any breach fails the run)</h2>
+<ul><li>No specialist asked before verification</li><li>No order field outside the calling department's set</li><li>No action on an item outside the verified order</li><li>No specialist calling another specialist or a person</li><li>No reply sent past a block</li><li>No money promised</li><li>No unknown stated as fact after a timeout</li><li>No handover to the wrong contact</li><li>No matter outside the business routed or handed over</li></ul>
+<footer>&copy; 2026 Lee Yih Ven &middot; Happy Mart Answer Key</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

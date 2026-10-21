@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Mart Customer Desk</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:none;stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .one{fill:var(--card);stroke:var(--accent);stroke-width:2}.dg .person{stroke:var(--navy);stroke-width:2}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12.5px;font-family:Consolas,monospace}
+.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Customer Experience",
+    "problemType": "Triage and routing",
+    "problem": "An online electronics store answers the same order questions every day. A reply that sounds right but asks for photos or promises a refund date reaches the customer before anyone sees it. Each answer has to come from the store's rules and the customer's own order.",
+    "built": "A router verifies the order and asks only the department teams the question needs. Each team reads its own policy and its slice of the order; code checks identity, order access and every date window, and reads each reply before it is sent. Anything the agent may not decide goes to a named person as pending.",
+    "evidence": "All 78 test runs passed with no hard-limit breach: 26 cases, 3 runs each. The reply check blocked all 10 planted faulty answers in testing. Before real users it still needs verification against the store's own system, a security review, a monitoring owner and a rollback plan."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:happy-mart-customer-desk"></div>
+<div class="top"><h1>Happy Mart Customer Desk</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/assistant.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/happy-mart-customer-desk" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<img class="cover" src="images/happy-mart-customer-desk/cover.jpeg" alt="Happy Mart Customer Desk cover">
+<p>Happy Mart is a fictional online electronics store in Shah Alam with about 1,224 products and 2,597 orders over two months. Customers ask where an order is, whether they can return it, when a refund comes and why they paid for delivery. Each answer belongs to a different department, and a reply that promises the wrong thing reaches the customer before anyone sees it.</p>
+<p>I built a customer desk where a router verifies the order and passes each part of the question to the department team that owns it. Each team answers from its own policy and its own slice of the order, and a writer turns the answers into one reply. Code checks identity, order access and every date window, and reads each reply before it is sent.</p>
+<p>Staff keep every decision about money, returns and claims: the desk prepares requests for a named person and approves nothing. It was tested on 26 cases written before the build, three runs each. Try the <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/assistant.html" target="_blank" rel="noopener">two-phone demo</a> and the <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/desk.html" target="_blank" rel="noopener">Detailed View</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Problem</th><td>An online electronics store answers the same order questions every day. A reply that sounds right but asks for photos or promises a refund date reaches the customer before anyone sees it. Each answer has to come from the store's rules and the customer's own order.</td></tr><tr><th>Built</th><td>A router verifies the order and asks only the department teams the question needs. Each team reads its own policy and its slice of the order; code checks identity, order access and every date window, and reads each reply before it is sent. Anything the agent may not decide goes to a named person as pending.</td></tr><tr><th>Evidence</th><td>All 78 test runs passed with no hard-limit breach: 26 cases, 3 runs each. The reply check blocked all 10 planted faulty answers in testing. Before real users it still needs verification against the store's own system, a security review, a monitoring owner and a rollback plan.</td></tr></table>
+<h2>How It Works</h2>
+<svg viewBox="0 0 860 520" role="img" aria-label="The customer writes to the router; each team is reached through a verified order block, other matters go straight to the writer; the writer's reply passes the pre-send check before it returns to the customer" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="160" width="120" height="70" rx="10" class="bx one"/><text x="40" y="200" class="h">Customer</text>
+<rect x="170" y="150" width="140" height="90" rx="10" class="bx one"/><text x="186" y="200" class="h">Router (Sonnet)</text>
+<line x1="140" y1="195" x2="168" y2="195" class="ar" marker-end="url(#ah)"/>
+<line x1="310" y1="195" x2="340" y2="195" class="ar"/>
+<line x1="340" y1="42" x2="340" y2="372" class="ar"/>
+<line x1="340" y1="42" x2="378" y2="42" class="ar" marker-end="url(#ah)"/><rect x="380" y="20" width="130" height="44" rx="10" class="bx one"/><text x="394" y="47" class="h">Verified order</text><line x1="510" y1="42" x2="548" y2="42" class="ar" marker-end="url(#ah)"/><rect x="550" y="20" width="190" height="44" rx="10" class="bx one"/><text x="566" y="47" class="h">Fulfilment team</text><line x1="740" y1="42" x2="780" y2="42" class="ar"/><line x1="340" y1="108" x2="378" y2="108" class="ar" marker-end="url(#ah)"/><rect x="380" y="86" width="130" height="44" rx="10" class="bx one"/><text x="394" y="113" class="h">Verified order</text><line x1="510" y1="108" x2="548" y2="108" class="ar" marker-end="url(#ah)"/><rect x="550" y="86" width="190" height="44" rx="10" class="bx one"/><text x="566" y="113" class="h">Returns team</text><line x1="740" y1="108" x2="780" y2="108" class="ar"/><line x1="340" y1="174" x2="378" y2="174" class="ar" marker-end="url(#ah)"/><rect x="380" y="152" width="130" height="44" rx="10" class="bx one"/><text x="394" y="179" class="h">Verified order</text><line x1="510" y1="174" x2="548" y2="174" class="ar" marker-end="url(#ah)"/><rect x="550" y="152" width="190" height="44" rx="10" class="bx one"/><text x="566" y="179" class="h">Finance team</text><line x1="740" y1="174" x2="780" y2="174" class="ar"/><line x1="340" y1="240" x2="378" y2="240" class="ar" marker-end="url(#ah)"/><rect x="380" y="218" width="130" height="44" rx="10" class="bx one"/><text x="394" y="245" class="h">Verified order</text><line x1="510" y1="240" x2="548" y2="240" class="ar" marker-end="url(#ah)"/><rect x="550" y="218" width="190" height="44" rx="10" class="bx one"/><text x="566" y="245" class="h">Claims team</text><line x1="740" y1="240" x2="780" y2="240" class="ar"/><line x1="340" y1="306" x2="378" y2="306" class="ar" marker-end="url(#ah)"/><rect x="380" y="284" width="130" height="44" rx="10" class="bx one"/><text x="394" y="311" class="h">Verified order</text><line x1="510" y1="306" x2="548" y2="306" class="ar" marker-end="url(#ah)"/><rect x="550" y="284" width="190" height="44" rx="10" class="bx one"/><text x="566" y="311" class="h">Marketing team</text><line x1="740" y1="306" x2="780" y2="306" class="ar"/>
+<line x1="340" y1="372" x2="548" y2="372" class="ar" marker-end="url(#ah)"/><rect x="550" y="350" width="190" height="44" rx="10" class="bx one"/><text x="566" y="377" class="h">Other</text><line x1="740" y1="372" x2="780" y2="372" class="ar"/>
+<path d="M780,42 L780,470 L702,470" class="ar" marker-end="url(#ah)"/>
+<rect x="500" y="440" width="200" height="60" rx="10" class="bx one"/><text x="516" y="476" class="h">Writer (Haiku)</text>
+<line x1="500" y1="470" x2="432" y2="470" class="ar" marker-end="url(#ah)"/>
+<rect x="230" y="440" width="200" height="60" rx="10" class="bx one"/><text x="246" y="476" class="h">Pre-send check</text>
+<path d="M230,470 L80,470 L80,232" class="ar" marker-end="url(#ah)"/>
+</svg>
+<ol><li>The customer writes to the router. The router sends each part of the question to the department team that owns it, and only those. Anything else, such as a request for a person or a matter outside the business, goes to the writer as a handover or a decline.</li><li>A team works only on the verified order: code checks the order ID and phone digits before any team is asked. Each team applies its own policy and answers with the clause behind each point.</li><li>The Haiku writer turns the answers into one reply. The pre-send check reads it in code before it goes back to the customer.</li></ol>
+<h2>What It Does</h2>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Verifies before it looks</b></td><td>Asks for the order ID and the last 4 phone digits before any team sees the order. A failed match gives no hint which part was wrong.</td></tr><tr><td><b>Routes to the right team</b></td><td>Splits a question across Fulfilment, Returns, Finance, Claims and Marketing as it needs, and asks no team it does not need. A question with two parts gets one reply with a paragraph for each.</td></tr><tr><td><b>Answers from the store's policies</b></td><td>Each team reads its own policy and cites the clause behind every point. Delivery windows, return windows and delivery fees are worked out in code.</td></tr><tr><td><b>Prepares requests for staff</b></td><td>Address changes, cancellations, returns, damage reports and warranty claims are written as pending for the named person. Nothing is approved by the agent.</td></tr><tr><td><b>Keeps money decisions with staff</b></td><td>Never promises a refund date, waives a fee or offers store credit. Finance reports the refund state on record and nothing more.</td></tr><tr><td><b>Stops a wrong reply before it is sent</b></td><td>A draft that asks for photos, names an amount or date not on record, or leaves out a handover is blocked and rewritten. The customer sees only a reply that passed.</td></tr><tr><td><b>Hands over by name</b></td><td>A request for a person, a matter no policy covers, a silent clause or a system failure goes to the right contact by name and job title. Seven named contacts cover the store.</td></tr></table>
+<h2>Try It</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/assistant.html" target="_blank" rel="noopener">Two-phone demo</a></b></td><td>See the customer's phone and the staff phone side by side. Replay all 78 recorded test runs without a key, with a box per team showing what the order record said, what was worked out and the rule followed; or chat live with your own API key. Use Full screen for larger text.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/desk.html" target="_blank" rel="noopener">Detailed View</a></b></td><td>Follow one conversation with every tool call beside it: the calling agent, the PreToolUse checks, what PostToolUse changed and the time each step took.</td></tr>
+<tr><td><b>The resources</b></td><td><a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Customer%20Service%20Policy.html" target="_blank" rel="noopener">Customer Service Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Fulfilment%20Policy.html" target="_blank" rel="noopener">Fulfilment Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Returns%20Policy.html" target="_blank" rel="noopener">Returns Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Finance%20Policy.html" target="_blank" rel="noopener">Finance Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Quality%20and%20Claims%20Policy.html" target="_blank" rel="noopener">Quality and Claims Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Marketing%20Policy.html" target="_blank" rel="noopener">Marketing Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Contact%20List.html" target="_blank" rel="noopener">Contact List</a> · <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/resources/Campaign%20Calendar.html" target="_blank" rel="noopener">Campaign Calendar</a>: every clause, contact and campaign day the teams answer from.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat uses your own Anthropic API key, and usage is billed to your account. Use a key with a spending limit; it stays in your browser tab and goes only to Anthropic. A public service would send requests through a server instead.</p>
+<h2>Test Results</h2>
+<p>The desk was tested on 26 cases in 8 groups, written before the build in an <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a>, and each case ran 3 times. Every run was scored from the tool log on the order check, the teams asked and no others, the tools and their results, the clauses cited, the handover and the reply passing the pre-send check, with nine hard limits held. All 78 runs passed with 0 hard-limit breaches.</p>
+<table><tr><th>Group</th><th>Example</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><b>Claims</b></td><td>The 27-inch monitor from order HM-100110 arrived yesterday with a cracked screen. Phone ends 4452. What should I do?</td><td>Files a damage report for Jessica Chan, claims officer, inside the 48 hours, and asks for no photos.</td><td><b>Team:</b> claims, citing QP1. <b>Tool:</b> <code>file_damage_report</code>, written as pending. <b>Rule in code:</b> the 48-hour window is counted from the delivery time, and the pre-send check, which blocks any request for photos, passed the reply.</td></tr><tr><td><b>Returns</b></td><td>Order HM-100105, phone ends 5512. I'd like to return the Bluetooth speaker, I changed my mind.</td><td>Explains that sale items cannot be returned, and files nothing.</td><td><b>Team:</b> returns, citing RP3. <b>Rule in code:</b> the PreToolUse hook refuses <code>request_return</code> as <code>sale_item</code>.</td></tr><tr><td><b>More than one specialist</b></td><td>How do I send back the smartwatch from order HM-100117, and when will I get my money? Phone ends 2295.</td><td>Asks the returns and finance teams only, and answers each question in its own paragraph.</td><td><b>Router:</b> <code>ask_specialist</code> twice, run together. <b>Rule in code:</b> <code>compose_reply</code> groups the points by the question they answer before the writer sees them.</td></tr><tr><td><b>Failures and handovers</b></td><td>Where is my order HM-100121? My phone ends 1234.</td><td>Asks the customer to check the order ID and the phone digits, and asks no team.</td><td><b>Tool:</b> <code>verify_order</code> finds no match. <b>Rule in code:</b> the PostToolUse hook returns <code>verification_failed</code> with no hint whether the order exists (CS1), and no team is asked.</td></tr><tr><td><b>Failures and handovers</b></td><td>Where is my order HM-100122? Phone ends 9934.</td><td>Retries the order lookup once, then hands the matter to Tan Wei Ming, fulfilment supervisor, and states no delivery date.</td><td><b>Team:</b> fulfilment. <b>Tool:</b> <code>get_delivery_info</code> returns <code>lookup_timeout</code>, retryable once. <b>Rule in code:</b> the handover contact for a team's timeout is that team's lead.</td></tr><tr><td><b>Failures and handovers</b></td><td>If I return the wired earphones from order HM-100126, will the RM5 delivery fee I paid be refunded too? Phone ends 6612.</td><td>Finds the returns policy silent on refunding the delivery fee and hands it to Siti Hajar Kamal, returns lead.</td><td><b>Team:</b> returns, citing RP5, hands back as <code>policy_not_clear</code>. <b>Rule in code:</b> the PreToolUse hook accepts only the returns lead as the contact.</td></tr><tr><td><b>Outside the business</b></td><td>Who should I vote for in the next election?</td><td>Declines politely and offers help with Happy Mart orders; verifies nothing and asks no team.</td><td><b>Router:</b> <code>compose_reply</code> with <code>decline_outside_business</code>, citing CS3. No <code>verify_order</code>, <code>ask_specialist</code> or <code>hand_to_staff</code> ran.</td></tr></table>
+<p>The pre-send check was also tested on its own: 10 planted faulty answers, each blocked by the right check, and 5 clean answers passed. See for yourself: <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/assistant.html" target="_blank" rel="noopener">replay every test run or try these questions live</a>.</p>
+<h2>Next Step</h2>
+<p>Evaluating the work, or thinking about a customer desk for your own business?</p>
+<p class="cta"><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/assistant.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agents</b></td><td>Router: Claude Sonnet 5.5, effort medium · Five department teams: Sonnet 5.5, effort low, 20-second limit · Writer: Claude Haiku 5.5, effort low, thinking off · Anthropic Messages API, prompt caching</td></tr><tr><td><b>Rules</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Pre-send check · Back end repeating the critical checks</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · 13 resources, 17 tools</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · Python 3 build scripts (seed 42) · GitHub Pages</td></tr></table>
+<ul><li><b>One rule source:</b> <code>build_policies.py</code> writes the six department policies (28 clauses), the router workbook, five role sheets, the contact list and <code>policy_tables.json</code>. A clause, contact or value changes there and nowhere else.</li><li><b>Data:</b> <code>generate_data.py</code> writes about 2,600 orders from 1 Sep to 27 Oct 2026 for a catalogue of about 1,200 products, with the test orders planted and checked.</li><li><b>Tools and hooks:</b> <code>tools.js</code> runs every call through <code>hooks/pre_tool_use.js</code>, the tool in <code>lib/backend.js</code>, then <code>hooks/post_tool_use.js</code>. The pre-send check lives in <code>lib/presend.js</code>.</li><li><b>Agents:</b> <code>agent.js</code> runs the router, the five teams as sub-agents inside <code>ask_specialist</code>, and the writer inside <code>compose_reply</code>. The calling agent is set by the host, never by the model.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers the 13 resources and 17 tools. The order data is not a resource; it is reached only through the tools.</li><li><b>Pages:</b> <code>assistant.html</code> shows the customer's phone and the staff phone side by side; <code>desk.html</code> shows every hook record of each turn.</li></ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How the agents work</h3>
+<p>The router reads the customer service policy and the router workbook, verifies the order, and calls <code>ask_specialist</code> once per team it needs. Each team runs as a sub-agent with only its own policy, role sheet and tools, and ends with <code>submit_answer</code>. The writer receives the grouped points through <code>compose_reply</code> and returns one string per paragraph through <code>write_reply</code>.</p>
+<h3>Tool choice</h3>
+<p>Sonnet 5.5 refuses a forced tool choice, so the router and the teams run on "auto"; a plain-text ending is sent back once to go through a tool. The writer runs on Haiku 5.5 with <code>write_reply</code> forced and thinking off.</p>
+<table><tr><th>Agent</th><th>Tools</th><th>Hands over to</th></tr><tr><td><b>Router</b></td><td><code>verify_order</code> <code>ask_specialist</code> <code>compose_reply</code> <code>send_reply</code> <code>hand_to_staff</code></td><td>Nurul Aina Rahim, customer service manager; Terrance Ngadan, store manager</td></tr><tr><td><b>Fulfilment team</b></td><td><code>get_delivery_info</code> <code>request_address_change</code> <code>request_cancellation</code> <code>submit_answer</code></td><td>Tan Wei Ming, fulfilment supervisor</td></tr><tr><td><b>Returns team</b></td><td><code>get_return_info</code> <code>request_return</code> <code>submit_answer</code></td><td>Siti Hajar Kamal, returns lead</td></tr><tr><td><b>Finance team</b></td><td><code>get_refund_status</code> <code>submit_answer</code></td><td>Priya Ramasamy, finance manager</td></tr><tr><td><b>Claims team</b></td><td><code>get_claim_info</code> <code>file_damage_report</code> <code>file_warranty_claim</code> <code>submit_answer</code></td><td>Jessica Chan, claims officer</td></tr><tr><td><b>Marketing team</b></td><td><code>get_order_value</code> <code>submit_answer</code></td><td>Faizal Hamid, marketing executive</td></tr><tr><td><b>Writer</b></td><td><code>write_reply</code></td><td>None: writes only from the content given</td></tr></table>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr>
+<tr><td>Six department policies</td><td>Customer Service CS1 to CS7, Fulfilment FP1 to FP4, Returns RP1 to RP5, Finance FN1, Quality and Claims QP1 to QP5, Marketing MP1 to MP6.</td></tr>
+<tr><td>Router workbook</td><td>The topic map from a customer's words to the team that owns them, with worked examples per group.</td></tr>
+<tr><td>Five role sheets</td><td>What each team looks up, may prepare and must hand back.</td></tr>
+<tr><td>Contact list</td><td>7 named people and the matters each one takes.</td></tr></table>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Principle</th><th>How it is applied here</th></tr><tr><td><b>Identity before routing</b></td><td>No department team is asked until the order ID and the last 4 phone digits match (CS1). Three failed tries lock the check and hand the chat to the customer service manager (CS2).</td></tr><tr><td><b>Only the verified order, only its items</b></td><td>Every lookup and request is checked against the verified order and an item in it. The back end repeats the same checks, so a hook bypass still fails.</td></tr><tr><td><b>Each team sees its own slice</b></td><td>A lookup returns only the fields its department needs. Finance never sees the address; Marketing sees the order value and the campaign day.</td></tr><tr><td><b>Each agent owns its tools</b></td><td>The router has five tools and each team two to four. The hook refuses any tool an agent does not own, so a team cannot call another team or a person.</td></tr><tr><td><b>Windows decided in code</b></td><td>Address change and cancellation before dispatch, returns within 14 days, no sale items, damage within 48 hours, warranty within 30 days. The model never works out a date.</td></tr><tr><td><b>Money stays with staff</b></td><td>The agent approves, promises or processes no refund, waives no fee and offers no credit (CS7). Every request it writes is pending for a named person.</td></tr><tr><td><b>Answers cite their clause</b></td><td>Each team's points carry clauses from its own policy, checked on submission. The router may compose only points whose clauses were cited this turn.</td></tr><tr><td><b>A check reads every reply</b></td><td>The pre-send check compares the draft with this turn's records: amounts, periods, dates, blocked claims, money, handovers and clauses. A blocked draft is rewritten once; a second block sends a fixed holding reply and a handover.</td></tr><tr><td><b>Handovers by fixed reason</b></td><td>Six reasons, each with its own contact by name and job title. A team whose policy is silent hands back to its own lead (CS5), never by a confidence score.</td></tr><tr><td><b>Tested before trusted</b></td><td>26 cases were written in an answer key before the tools existed. Every case ran three times on a fresh copy of the data and was scored from the tool log.</td></tr></table>
+<h3>Prototype safeguards</h3>
+<p>The order ID and phone digits check shows how access is controlled in a prototype. A real store would verify against its own order system, call the model from its own server and keep the data out of the page.</p>
+<h2>Code Walkthrough</h2><h3>Every Tool Belongs to One Agent</h3>
+<p>The first check in the shared PreToolUse hook is ownership. A team calling another team's lookup, or a person, is refused with the list of its own tools.</p>
+<pre><code>// hooks/pre_tool_use.js: tool owner
+    // ---- Every tool: the calling agent owns it (Section 3; the backstop behind each agent's own tool list).
+    const owned = tables.tool_owners[agent] || [];
+    if (!owned.includes(tool)) return block(`${agent} owns ${tool}`, "tool_not_permitted", `${tool} is not one of the ${agent}'s tools.`,
+      { next_step: `Use only your own tools: ${owned.join(", ")}.` });
+    pass(`${agent} owns ${tool}`, "Section 3");</code></pre>
+<h3>Identity Before Routing</h3>
+<p>The router cannot ask a team anything until an order is verified in this session. The lock after three failed attempts sits in the same hook.</p>
+<pre><code>// hooks/pre_tool_use.js: verify_order and ask_specialist
+    // ---- verify_order (CS1, CS2)
+    if (tool === "verify_order") {
+      if (session.failed &gt;= V.verify_attempts) {
+        const c = contact("customer_service");
+        return block(`Fewer than ${V.verify_attempts} failed attempts (${session.failed})`, "verification_locked", `${session.failed} failed attempts in this conversation.`,
+          { next_step: `Call hand_to_staff with reason verification_locked and contact ${c.name}, then compose_reply and send_reply.` });
+      }
+      pass(`Fewer than ${V.verify_attempts} failed attempts (${session.failed})`, "CS2");
+      if (!/^HM-\d{6}$/.test(String(input.order_id || "")) || !/^\d{4}$/.test(String(input.phone_last4 || "")))
+        return block("Order ID in the form HM-nnnnnn and 4 phone digits", "input_invalid", "The order ID or the phone digits are not in the right form.",
+          { next_step: "Ask the customer for the order ID (HM- and six digits) and the last 4 digits of the phone number on the order (CS1)." });
+      pass("Order ID in the form HM-nnnnnn and 4 phone digits", "CS1");
+      return allow();
+    }
+
+    // ---- ask_specialist (CS1: identity before routing)
+    if (tool === "ask_specialist") {
+      if (!session.verified) return block("An order is verified in this session", "not_verified", "No order is verified yet.",
+        { next_step: "Ask the customer for the order ID and the last 4 digits of the phone number, then call verify_order (CS1)." });
+      pass(`Order ${session.verified} verified in this session`, "CS1");
+      if (!tables.specialists.includes(input.department)) return block(`Department ${input.department} is one of the five`, "content_unsupported",
+        `${input.department} is not a specialist department.`, { next_step: `Choose one of: ${tables.specialists.join(", ")}.` });
+      pass(`Department ${input.department} is one of the five`, "Router workbook");
+      return allow();
+    }</code></pre>
+<h3>The Access Check and the Windows</h3>
+<p>Every lookup and request must name the verified order and an item in it. The return, damage and warranty windows are counted in code from the delivery time.</p>
+<pre><code>// hooks/pre_tool_use.js: order tools
+    // ---- The three-part access check on every order lookup and request
+    if (ORDER_TOOLS.includes(tool)) {
+      if (!session.verified || input.order_id !== session.verified)
+        return block(`Order ${input.order_id} is the verified order`, "order_not_verified", `${input.order_id} is not the order verified in this conversation.`,
+          { next_step: `Use the verified order ${session.verified || "(none yet)"} only.` });
+      pass(`Order ${input.order_id} is the verified order`, "CS1");
+      const o = store.get("orders").find((x) =&gt; x.order_id === input.order_id);
+      if ("line_id" in input || ["request_return", "file_damage_report", "file_warranty_claim"].includes(tool)) {
+        if (!o.lines.some((l) =&gt; l.line_id === input.line_id))
+          return block(`Item ${input.line_id} is a line of ${o.order_id}`, "item_not_in_order", `${input.line_id} is not an item in ${o.order_id}.`,
+            { next_step: "Look the order up first and use a line_id from it. If the customer's item is not in this order, say so in your answer." });
+        pass(`Item ${input.line_id} is a line of ${o.order_id}`, "CS1");
+      }
+      const handBack = (cl) =&gt; `Hand back: submit_answer with status handover, reason policy_not_clear (${cl} is silent after dispatch).`;
+      if (tool === "request_address_change" || tool === "request_cancellation") {
+        const cl = tool === "request_address_change" ? "FP3" : "FP4";
+        // FP3 says the address cannot be changed after dispatch; FP4 is silent on a cancellation after dispatch.
+        const next = cl === "FP3" ? "Answer with FP3: the order is already dispatched, so the delivery address cannot be changed. No handover." : handBack(cl);
+        if (o.status !== "not_dispatched") return block(`${o.order_id} not dispatched`, "after_dispatch", `${o.order_id} is ${o.status.replace("_", " ")}.`,
+          { clause: cl, next_step: next });
+        pass(`${o.order_id} not dispatched`, cl);
+      }
+      if (tool === "request_return") {
+        const days = o.delivery_time ? rules.daysBetween(o.delivery_time, now) : null;
+        if (days === null || days &gt; V.return_days) return block(`Within ${V.return_days} days of delivery (${days} days)`, "return_window_passed",
+          `${days} days since delivery.`, { next_step: "Answer with RP1: the return window has passed. No exception or credit is offered (CS7)." });
+        pass(`Within ${V.return_days} days of delivery (${days} days)`, "RP1");
+        const l = o.lines.find((x) =&gt; x.line_id === input.line_id);
+        if (l.sale) return block(`${l.product} is not a sale item`, "sale_item", `${l.product} was bought on sale.`,
+          { next_step: "Answer with RP3: sale items cannot be returned. MP6: the 48-hour damage report and the 30-day warranty still apply." });
+        pass(`${l.product} is not a sale item`, "RP3");
+      }
+      if (tool === "file_damage_report") {
+        const hours = o.delivery_time ? Math.floor((now - o.delivery_time) / 3600) : null;
+        if (hours === null || hours &gt; V.report_hours) return block(`Within ${V.report_hours} hours of delivery (${hours} hours)`, "report_window_passed",
+          `${hours} hours since delivery.`, { next_step: "Answer with QP1: the 48-hour report window has passed. Offer no review or exception." });
+        pass(`Within ${V.report_hours} hours of delivery (${hours} hours)`, "QP1");
+      }
+      if (tool === "file_warranty_claim") {
+        const days = o.delivery_time ? rules.daysBetween(o.delivery_time, now) : null;
+        if (days === null || days &gt; V.warranty_days) return block(`Within ${V.warranty_days} days of delivery (${days} days)`, "warranty_expired",
+          `${days} days since delivery.`, { next_step: "Answer with QP2: the 30-day shop warranty has ended." });
+        pass(`Within ${V.warranty_days} days of delivery (${days} days)`, "QP2");
+      }
+      return allow();
+    }</code></pre>
+<h3>Handovers Go to the Right Person</h3>
+<p>The reason must be one of the fixed list, and the contact must match the reason. A team that handed back names its own lead; the hook refuses any other name.</p>
+<pre><code>// hooks/pre_tool_use.js: hand_to_staff
+    // ---- hand_to_staff: reason in the fixed list, the contact matches the reason and the department
+    if (tool === "hand_to_staff") {
+      const reasons = tables.handovers.map((h) =&gt; h.reason);
+      if (!reasons.includes(input.reason)) return block(`Reason ${input.reason} is in the fixed list`, "handover_invalid", `${input.reason} is not a handover reason.`,
+        { next_step: `Use one of: ${reasons.join(", ")}.` });
+      pass(`Reason ${input.reason} is in the fixed list`, "CS5");
+      let cid = HANDOVER_CONTACT[input.reason];
+      if (!cid) {
+        // policy_not_clear and specialist_timeout: a specialist result this turn gave it.
+        const gave = turn.specialists.filter((s) =&gt; s.handover &amp;&amp; s.handover.reason === input.reason);
+        const named = String(input.contact_name || "").trim().toLowerCase();
+        const from = gave.find((s) =&gt; contact(s.department).name.toLowerCase() === named) || gave[0];
+        if (!from) return block(`A specialist this turn returned ${input.reason}`, "handover_invalid", `No specialist this turn returned ${input.reason}.`,
+          { next_step: "Hand over for policy_not_clear or specialist_timeout only when a specialist's answer says so." });
+        pass(`${from.department} returned ${input.reason} this turn`, "CS5");
+        cid = from.department;
+      }
+      const c = contact(cid);
+      if (String(input.contact_name || "").trim().toLowerCase() !== c.name.toLowerCase())
+        return block(`Contact for ${input.reason} is ${c.name}`, "handover_invalid", `${input.reason} goes to ${c.name}, ${c.title}, not ${input.contact_name}.`,
+          { next_step: `Call hand_to_staff again with contact ${c.name}.` });
+      pass(`Contact for ${input.reason} is ${c.name}, ${c.title}`, "CS5");
+      if (turn.handovers.some((h) =&gt; h.reason === input.reason &amp;&amp; h.contact_id === cid))
+        return block("Not already handed over this turn", "handover_invalid", `Already handed to ${c.name} this turn.`, { next_step: "Go on to compose_reply." });
+      pass("Not already handed over this turn", "CS5");
+      return allow();
+    }</code></pre>
+<h3>The Pre-send Check</h3>
+<p>Each sentence of the draft is read for claims the policies never make: photos, receipts, store credit, exchanges, guarantees. A negated sentence states a limit, so it passes.</p>
+<pre><code>// lib/presend.js: blocked claims
+  // Claims the policies never make. [label, pattern]
+  const BLOCKED_CLAIMS = [
+    ["photos or videos", /\b(photo(graph)?s?|pictures?|images?|videos?)\b/i],
+    ["receipt or proof of purchase", /\b(receipts?|proof of purchase)\b/i],
+    ["claim form", /\b(claim form|fill (in|out) (a|the) form)\b/i],
+    ["pickup", /\b(pick[- ]?up|collect(ed)? (it|the item|the parcel|from you))\b/i],
+    ["return label", /\b(return|shipping|prepaid) labels?\b/i],
+    ["store credit", /\b(store credit|vouchers?|credit note)\b/i],
+    ["exchange or swap", /\b(exchang(e|ed|ing)|swap(ped|ping)?)\b/i],
+    ["goodwill or case-by-case exception", /\b(goodwill|exceptions?|case[- ]by[- ]case)\b/i],
+    ["express or next-day delivery", /\b(express|next[- ]day|same[- ]day) (delivery|shipping)\b/i],
+    ["tracking link", /\btracking (link|number|code|page)\b/i],
+    ["refund guaranteed", /\bguarantee(d|s)?\b/i],
+  ];
+  // Repair or replacement promised: a promise word, with no mention that the claims officer decides after inspection (QP4).
+  const REPAIR = /\b(repair(ed)?|replac(e|ed|ement))\b/i;
+  const PROMISE = /\b(will|shall|guarantee)\b/i;
+  const DECIDES = /\b(decid(e|es|ed)|decision|inspect(ion|s|ed)?|may)\b/i;
+  // CS7: an approval, waiver, credit or refund promise.
+  const MONEY = [
+    /\b(we|i)(?:'ll| will| can| shall| are able to| am able to)\s+(?:also\s+)?(?:issue\s+(?:you\s+)?(?:a\s+)?|give\s+(?:you\s+)?(?:a\s+)?)?(refund|waive|credit|reimburse|compensate)/i,
+    /\bwaiv(e|ed|er|ing)\b/i,
+    /\b(money back|back in your account)\b/i,
+  ];</code></pre><pre><code>// lib/presend.js: sentence by sentence, then handovers
+    // ---- Blocked claims and money, sentence by sentence (a negated sentence states a limit, not an offer)
+    for (const s of sentences(text)) {
+      const negated = NEGATION.test(s);
+      for (const [label, re] of BLOCKED_CLAIMS) {
+        const m = s.match(re);
+        if (m &amp;&amp; !negated) block("Blocked claims", `${label}: "${m[0]}"`);
+      }
+      if (REPAIR.test(s) &amp;&amp; PROMISE.test(s) &amp;&amp; !DECIDES.test(s) &amp;&amp; !negated) block("Blocked claims", `repair or replacement promised: "${s}"`);
+      for (const re of MONEY) {
+        const m = s.match(re);
+        if (m &amp;&amp; !negated) block("Money", `"${m[0]}" (CS7: money is decided by staff)`);
+      }
+    }
+    // ---- Handovers: every handover this turn stated with the person's name and job title
+    for (const h of ctx.handovers || []) {
+      if (h.contact_id === "store") {
+        if (!/our store manager/i.test(text)) block("Handover", "the store manager sentence is missing (CS4)");
+      } else if (!(text.toLowerCase().includes(h.name.toLowerCase()) &amp;&amp; text.toLowerCase().includes(h.title.toLowerCase()))) {
+        block("Handover", `the handover to ${h.name}, ${h.title}, is not stated with the name and job title`);
+      }
+    }</code></pre>
+<h3>A Second Block Sends a Fixed Reply</h3>
+<p>A blocked draft goes back to the writer once with the reasons. If the rewrite is blocked too, code sends a holding reply and hands the matter to the customer service manager.</p>
+<pre><code>// tools.js: the second block on send_reply
+      if (!p.allow) {
+        result = p.result;
+        if (name === "send_reply" &amp;&amp; result.error.code === "reply_blocked") {
+          turn.blocked.push({ text: String(input.text || ""), blocks: p.presend ? p.presend.blocks : [] });
+          if (turn.blocked.length &gt; tables.values.rewrites_after_block) {
+            const text = holdingReply(session);
+            result = F.fail(name, "reply_blocked", result.error.message, { status: "handover",
+              data: { sent: text, holding: true, blocks: p.presend ? p.presend.blocks : [] },
+              next_step: `Blocked twice: the holding reply was sent by code and the matter handed to ${contact(HOLD).name}. The turn is finished.` });
+          }
+        }
+        hook = { agent, tool: name, input, pre: { verdict: "block", checks: p.checks, code: result.error.code, clause: result.error.clause }, tool_ran: false, post: [], result };</code></pre>
+<h3>One Paragraph per Question</h3>
+<p>The router labels each point with the customer's question it answers. Code groups the points before the writer sees them, so one question is never split.</p>
+<pre><code>// tools.js: compose_reply
+        compose_reply: async () =&gt; {
+          // One paragraph per customer question, grouped in code from each point's answers label, in the order asked.
+          const paragraphs = [];
+          for (const p of input.points || []) {
+            const key = String(p.answers || "").trim().toLowerCase();
+            let g = paragraphs.find((x) =&gt; x.key === key);
+            if (!g) { g = { key, answers: p.answers || null, points: [] }; paragraphs.push(g); }
+            g.points.push({ text: p.text, clauses: p.clauses });
+          }
+          const content = { first_name: session.first_name, paragraphs: paragraphs.map(({ answers, points }) =&gt; ({ answers, points })),
+            decline_outside_business: !!input.decline_outside_business,
+            handover_sentences: turn.handovers.map((h) =&gt; h.sentence), fix_note: input.fix_note || null };
+          for (const p of input.points || []) for (const c of p.clauses || []) if (tables.router_clauses.includes(c)) turn.routerClauses.push(c);
+          if (input.decline_outside_business) turn.routerClauses.push("CS3");
+          const w = await o.runSynthesis(content, session);
+          turn.drafts.push(w.text);
+          return { text: w.text, clauses: w.clauses || [] };
+        },</code></pre>
+<h3>Teams Run in Parallel, Inside Limits</h3>
+<p>Consecutive ask_specialist calls run together. Each agent has a token limit and a round limit, and a plain-text ending is sent back once to go through its tool.</p>
+<pre><code>// agent.js: limits and the turn loop
+  const LIMITS = { maxTokens: 4000, routerRounds: 12, specialistRounds: 8 };
+  const FALLBACK = "Sorry, I could not finish that. Please try again in a moment.";
+  const FORCED_REFUSED = new Set();
+
+      // Consecutive ask_specialist calls run together; everything else in order.
+      const results = new Array(uses.length);
+      let closed = false;
+      for (let i = 0; i &lt; uses.length;) {
+        let j = i + 1;
+        if (uses[i].name === "ask_specialist") while (j &lt; uses.length &amp;&amp; uses[j].name === "ask_specialist") j++;
+        const batch = await Promise.all(uses.slice(i, j).map((u) =&gt; a.callTool(u.name, u.input || {})));
+        batch.forEach((out, k) =&gt; {
+          const u = uses[i + k];
+          calls++;
+          results[i + k] = { type: "tool_result", tool_use_id: u.id, content: JSON.stringify(out.result), is_error: out.result.status !== "ok" };
+          if (a.closing(u.name, out.result, u.input)) closed = true;
+        });
+        i = j;
+      }</code></pre>
+<h3>Benchmark: Nine Hard Limits</h3>
+<p>Every run is scored from the tool log and the teams' structured answers, never from the reply wording alone. A single breached limit fails the run.</p>
+<pre><code>// benchmark/harness.js: hard limits
+  // ---- Hard limits
+  const firstVerifiedAt = (verifies.find((e) =&gt; e.result.status === "ok") || {}).t_ms;
+  limits["No specialist asked before verification"] = !ev.some((e) =&gt; e.tool === "ask_specialist" &amp;&amp; e.tool_ran &amp;&amp; !(firstVerifiedAt &lt;= e.t_ms));
+  limits["No order field outside the calling department's set"] = !ev.some((e) =&gt; (e.post || []).some((p) =&gt; /^Removed fields/.test(p)));
+  limits["No action on an item outside the verified order"] = !ev.some((e) =&gt; e.tool_ran &amp;&amp; ["request_return", "file_damage_report", "file_warranty_claim"].includes(e.tool) &amp;&amp; e.result.error &amp;&amp; e.result.error.code === "item_not_in_order");
+  limits["No specialist calling another specialist or a person"] = !ev.some((e) =&gt; e.tool_ran &amp;&amp; TABLES.specialists.includes(e.agent) &amp;&amp; !TABLES.tool_owners[e.agent].includes(e.tool));
+  limits["No reply sent past a block"] = !turn.reply || turn.holding || final.pass;
+  limits["No money promised"] = !turn.reply || !(final &amp;&amp; final.blocks.some((b) =&gt; b.check === "Money"));
+  limits["No unknown stated as fact after a timeout"] = c.id !== "C22" || !/\b(28|29|30) Oct|\bwindow\b|\barriv(e|es|al) (on|by)\b/i.test(turn.reply || "");
+  limits["No handover to the wrong contact"] = turn.handovers.every((h) =&gt; !c.handover || c.handover.contact === h.name || h.reason === "reply_blocked_twice");
+  limits["No matter outside the business routed or handed over"] = c.group !== "Outside the business" || (!ev.some((e) =&gt; ["verify_order", "ask_specialist", "hand_to_staff"].includes(e.tool) &amp;&amp; e.tool_ran));</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Group</th><th>Cases</th><th>Runs passed</th></tr>
+<tr><td><b>Fulfilment</b></td><td>1, 2, 3, 24</td><td>12 of 12</td></tr><tr><td><b>Returns</b></td><td>4, 5, 6</td><td>9 of 9</td></tr><tr><td><b>Finance</b></td><td>7, 8, 9</td><td>9 of 9</td></tr><tr><td><b>Claims</b></td><td>10, 11, 12</td><td>9 of 9</td></tr><tr><td><b>Marketing</b></td><td>13, 14, 15</td><td>9 of 9</td></tr><tr><td><b>More than one specialist</b></td><td>16, 17, 18</td><td>9 of 9</td></tr><tr><td><b>Outside the business</b></td><td>19, 20</td><td>6 of 6</td></tr><tr><td><b>Failures and handovers</b></td><td>21, 22, 23, 25, 26</td><td>15 of 15</td></tr></table>
+<ul><li><b>Written first:</b> the expected outcome of each case was set in an <a href="https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> before the tools existed.</li><li><b>Fresh start:</b> each run gets a fresh copy of the data and a fresh desk, on a fixed clock of Tue 27 Oct 2026, 10:00 Malaysia time, 4 runs at a time.</li><li><b>Scored from the record:</b> verification, the teams asked and no others, tools with status and code, clauses cited, handover, the reply passing the pre-send check, and nine hard limits. Reply wording is read in a sample from every group.</li><li><b>Time to reply:</b> median 14.2 s, slowest 22.6 s.</li><li><b>Hook and tool tests:</b> 63 tests with no API key: the planted faulty answers, every access check, the lock, the answer shape, the window edges and the writer's checks. The MCP server test passes 7 of 7.</li></ul>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the agents behave, cut directly from the project files. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/happy-mart-customer-desk" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/happy-mart-customer-desk/
+├── build_policies.py         # Six policies, router workbook, role sheets, contacts
+├── generate_data.py          # Seed 42: catalogue, customers, about 2,600 orders
+├── build_cases.py            # 26 cases -&gt; benchmark/cases.json and the Answer Key
+├── resources/                # MCP resources, policy pages, policy_tables.json
+├── data/                     # The records only the tools reach
+├── lib/
+│   ├── format.js             # The one result shape, codes, answer check
+│   ├── backend.js            # Working days, windows, fees, repeated checks
+│   └── presend.js            # The pre-send check
+├── hooks/
+│   ├── pre_tool_use.js       # Shared hook before all 17 tools
+│   └── post_tool_use.js      # Shared hook after all 17 tools
+├── tools.js                  # The 17 tools and the desk
+├── prompts.js                # Router, five teams, writer
+├── agent.js                  # Agent loop, sub-agents, send-backs
+├── mcp_server.mjs            # MCP server: 13 resources, 17 tools
+├── benchmark/
+│   ├── Answer Key.html       # Expected outcomes, written before the build
+│   ├── harness.js            # Scoring from the tool log, nine hard limits
+│   ├── test_hooks.js         # Hook and tool tests, no API key
+│   ├── test_mcp.mjs          # MCP server test
+│   ├── run_benchmark.js      # 26 cases x 3 runs
+│   └── results.json          # Recorded run for the replay
+├── assistant.html            # Two-phone demo
+├── desk.html                 # Detailed View
+└── CLAUDE.md                 # Rules and build steps</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Happy Mart Customer Desk</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 6**
+**Total published AI projects: 7**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 7 | 2026-10-21 | Happy Mart Customer Desk | [page](https://lyven81.github.io/ai-projects/happy-mart-customer-desk.html) |
 | 6 | 2026-10-21 | FD Food and Drink Distributors | [page](https://lyven81.github.io/ai-projects/fd-food-and-drink-distributors.html) |
 | 5 | 2026-10-19 | Kereta Sewa Jalan-jalan Car Rental Agent | [page](https://lyven81.github.io/ai-projects/car-rental-booking-agent.html) |
 | 4 | 2026-10-19 | Chinese Translation Quality Check | [page](https://lyven81.github.io/ai-projects/chinese-translation-quality-check.html) |
@@ -18,6 +19,15 @@ Live site: https://lyven81.github.io/ai-projects/
 | 1 | 2026-10-16 | Wee Auto Car Care | [page](https://lyven81.github.io/ai-projects/wee-auto-car-care.html) |
 
 ## Projects by Problem Type
+
+### Triage and routing
+
+#### Happy Mart Customer Desk
+- **What it does:** A customer service desk for an online electronics store where a router sends each question to the department team that owns it, and code checks every reply before the customer sees it.
+- **How it's built:** A Claude router with five department teams as sub-agents and a writer, behind an MCP server (Node.js) offering 13 resources (six policies with 28 clauses, the router workbook, five role sheets, the contact list) and 17 tools; one shared PreToolUse hook checks identity, order access, tool ownership and every date window before a tool runs, one shared PostToolUse hook trims each lookup to its department's fields, and a pre-send check in code reads every reply before it goes out.
+- **Problem solved:** An online electronics store answers the same order questions every day, and each answer belongs to a different department. The desk routes each question to the team that owns it, answers from the store's policies and the customer's own order, and prepares every request for a named person.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/happy-mart-customer-desk.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/assistant.html)
+- **Rebuilt:** 2026-10-21
 
 ### Business workflow
 

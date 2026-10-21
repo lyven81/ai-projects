@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fulfilment Policy</title>
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../happy-mart-customer-desk.html" style="color:inherit;text-decoration:none">Happy Mart Customer Desk</a></div><h1>Happy Mart Fulfilment Policy</h1><nav id="toc"></nav></div>
+<p><strong>Happy Mart Sdn Bhd</strong> is a fictional online 3C store in Shah Alam, Selangor, used for demonstration. This policy is owned by Fulfilment and read by the fulfilment specialist. Every point the assistant makes cites a clause from these pages.</p>
+<p>The other pages: <a href="Customer Service Policy.html">Customer Service Policy</a>, <a href="Returns Policy.html">Returns Policy</a>, <a href="Finance Policy.html">Finance Policy</a>, <a href="Quality and Claims Policy.html">Quality and Claims Policy</a>, <a href="Marketing Policy.html">Marketing Policy</a>, <a href="Contact List.html">Contact List</a>, <a href="Campaign Calendar.html">Campaign Calendar</a>.</p>
+<h2>1. Clauses</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Silent on</th><th>How the assistant keeps it</th></tr>
+<tr id="FP1"><td>FP1</td><td>Standard delivery is RM5 per order.</td><td></td><td>The delivery team answers from this clause; the pre-send check allows only the fixed amounts</td></tr>
+<tr id="FP2"><td>FP2</td><td>Orders are delivered within 3 to 5 working days of the order date.</td><td></td><td>Code: the delivery window is worked out from the order date, skipping weekends and Selangor holidays (PostToolUse)</td></tr>
+<tr id="FP3"><td>FP3</td><td>A delivery address can be changed before the order is dispatched. After dispatch, the delivery address cannot be changed.</td><td></td><td>Code: an address change after dispatch is refused, and the delivery team answers that it cannot be changed (PreToolUse and back end)</td></tr>
+<tr id="FP4"><td>FP4</td><td>An order can be cancelled before it is dispatched.</td><td>What happens after dispatch</td><td>Code: a cancellation after dispatch is refused (PreToolUse and back end)</td></tr>
+</table></div>
+<h2>2. Who to ask</h2>
+<p>Tan Wei Ming, fulfilment supervisor: Delivery matters the Fulfilment policy is silent on; Fulfilment lookups that time out. Where a clause is silent, the matter goes to this person (CS5).</p>
+<footer>&copy; 2026 Lee Yih Ven &middot; Happy Mart Fulfilment Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

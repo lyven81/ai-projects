@@ -1,0 +1,198 @@
+{
+ "CS1": {
+  "department": "customer_service",
+  "rule": "Before any department looks into an order, the customer gives the order ID and the last 4 digits of the phone number on the order. Both must match one order.",
+  "silent_on": "",
+  "page": "Customer Service Policy.html#CS1",
+  "enforced_by": "Code: verify_order checks the order ID and phone digits; every order lookup is refused for any other order (PreToolUse and back end)"
+ },
+ "CS2": {
+  "department": "customer_service",
+  "rule": "After 3 failed attempts in one conversation, the matter is handed to the customer service manager.",
+  "silent_on": "",
+  "page": "Customer Service Policy.html#CS2",
+  "enforced_by": "Code: a fourth attempt is refused and handed to the customer service manager (PreToolUse)"
+ },
+ "CS3": {
+  "department": "customer_service",
+  "rule": "A matter outside the nature of the business (for example politics or the weather) is politely declined. It is not handed to anyone.",
+  "silent_on": "",
+  "page": "Customer Service Policy.html#CS3",
+  "enforced_by": "The router declines; the hooks allow no order lookup or handover for it"
+ },
+ "CS4": {
+  "department": "customer_service",
+  "rule": "A Happy Mart matter that no policy covers is handed to the store manager. The customer is told: \"We will transfer the matter to our store manager, he will get back to you.\"",
+  "silent_on": "",
+  "page": "Customer Service Policy.html#CS4",
+  "enforced_by": "The router hands it to the store manager; the handover check confirms the contact (PreToolUse)"
+ },
+ "CS5": {
+  "department": "customer_service",
+  "rule": "A matter a policy covers but is silent on is handed to that department's contact.",
+  "silent_on": "",
+  "page": "Customer Service Policy.html#CS5",
+  "enforced_by": "The specialist hands it back; the handover check confirms the department's contact (PreToolUse)"
+ },
+ "CS6": {
+  "department": "customer_service",
+  "rule": "A customer who asks for a person is handed to the customer service manager straight away, with what the customer said.",
+  "silent_on": "",
+  "page": "Customer Service Policy.html#CS6",
+  "enforced_by": "The router hands it to the customer service manager straight away; the handover check confirms the contact"
+ },
+ "CS7": {
+  "department": "customer_service",
+  "rule": "The assistant never approves, promises or processes a refund, waives a fee or offers credit. Money is decided by staff.",
+  "silent_on": "",
+  "page": "Customer Service Policy.html#CS7",
+  "enforced_by": "Code: the pre-send check blocks any refund promise, waiver or credit before a reply is sent"
+ },
+ "FP1": {
+  "department": "fulfilment",
+  "rule": "Standard delivery is RM5 per order.",
+  "silent_on": "",
+  "page": "Fulfilment Policy.html#FP1",
+  "enforced_by": "The delivery team answers from this clause; the pre-send check allows only the fixed amounts"
+ },
+ "FP2": {
+  "department": "fulfilment",
+  "rule": "Orders are delivered within 3 to 5 working days of the order date.",
+  "silent_on": "",
+  "page": "Fulfilment Policy.html#FP2",
+  "enforced_by": "Code: the delivery window is worked out from the order date, skipping weekends and Selangor holidays (PostToolUse)"
+ },
+ "FP3": {
+  "department": "fulfilment",
+  "rule": "A delivery address can be changed before the order is dispatched. After dispatch, the delivery address cannot be changed.",
+  "silent_on": "",
+  "page": "Fulfilment Policy.html#FP3",
+  "enforced_by": "Code: an address change after dispatch is refused, and the delivery team answers that it cannot be changed (PreToolUse and back end)"
+ },
+ "FP4": {
+  "department": "fulfilment",
+  "rule": "An order can be cancelled before it is dispatched.",
+  "silent_on": "What happens after dispatch",
+  "page": "Fulfilment Policy.html#FP4",
+  "enforced_by": "Code: a cancellation after dispatch is refused (PreToolUse and back end)"
+ },
+ "RP1": {
+  "department": "returns",
+  "rule": "Items can be returned within 14 days of delivery.",
+  "silent_on": "",
+  "page": "Returns Policy.html#RP1",
+  "enforced_by": "Code: a return after 14 days is refused (PreToolUse and back end)"
+ },
+ "RP2": {
+  "department": "returns",
+  "rule": "Returned items must be unused and in their original packaging.",
+  "silent_on": "Receipts, accessories, the outer shipping box",
+  "page": "Returns Policy.html#RP2",
+  "enforced_by": "The returns team answers from this clause"
+ },
+ "RP3": {
+  "department": "returns",
+  "rule": "Sale items cannot be returned.",
+  "silent_on": "",
+  "page": "Returns Policy.html#RP3",
+  "enforced_by": "Code: a return of a sale item is refused (PreToolUse and back end)"
+ },
+ "RP4": {
+  "department": "returns",
+  "rule": "3C products cannot be exchanged. Only a return and refund apply, under RP1 (14-day window), RP2 (unused, original packaging), RP3 (no sale items), RP5 (customer arranges and pays the return postage) and FN1 (refund within 5 to 7 working days of approval).",
+  "silent_on": "",
+  "page": "Returns Policy.html#RP4",
+  "enforced_by": "The returns team answers from this clause; the pre-send check blocks any offer of an exchange"
+ },
+ "RP5": {
+  "department": "returns",
+  "rule": "Customers arrange their own return and bear the return postage. The RM5 standard delivery fee (FP1) applies only to delivering an order to the customer; it does not apply to returned goods.",
+  "silent_on": "Whether the original delivery fee is refunded",
+  "page": "Returns Policy.html#RP5",
+  "enforced_by": "The returns team answers from this clause; the pre-send check blocks pickup and return labels"
+ },
+ "FN1": {
+  "department": "finance",
+  "rule": "Approved refunds are processed within 5 to 7 working days.",
+  "silent_on": "The refund method",
+  "page": "Finance Policy.html#FN1",
+  "enforced_by": "The finance team answers from this clause; the pre-send check blocks any refund date not on record"
+ },
+ "QP1": {
+  "department": "claims",
+  "rule": "For a damaged or wrong item, contact customer service within 48 hours of delivery.",
+  "silent_on": "Any evidence the customer must supply",
+  "page": "Quality and Claims Policy.html#QP1",
+  "enforced_by": "Code: a damage report after 48 hours is refused (PreToolUse and back end); the pre-send check blocks requests for photos"
+ },
+ "QP2": {
+  "department": "claims",
+  "rule": "Every product carries a 30-day Happy Mart shop warranty from the delivery date. The warranty is limited to this shop warranty.",
+  "silent_on": "Any manufacturer warranty",
+  "page": "Quality and Claims Policy.html#QP2",
+  "enforced_by": "Code: a warranty claim after 30 days is refused (PreToolUse and back end)"
+ },
+ "QP3": {
+  "department": "claims",
+  "rule": "The warranty covers manufacturing defects only. It does not cover physical damage, liquid damage or misuse.",
+  "silent_on": "",
+  "page": "Quality and Claims Policy.html#QP3",
+  "enforced_by": "The claims team answers from this clause"
+ },
+ "QP4": {
+  "department": "claims",
+  "rule": "A faulty product under warranty is repaired or replaced, as decided by the claims officer after inspection.",
+  "silent_on": "",
+  "page": "Quality and Claims Policy.html#QP4",
+  "enforced_by": "The claims team answers from this clause; the pre-send check blocks a promised repair or replacement"
+ },
+ "QP5": {
+  "department": "claims",
+  "rule": "The customer arranges and pays the postage to send a product in for a warranty claim.",
+  "silent_on": "Return postage after repair",
+  "page": "Quality and Claims Policy.html#QP5",
+  "enforced_by": "The claims team answers from this clause"
+ },
+ "MP1": {
+  "department": "marketing",
+  "rule": "Delivery is free on orders above RM100. An order totalling exactly RM100 is not above RM100 and pays the standard RM5 delivery fee.",
+  "silent_on": "",
+  "page": "Marketing Policy.html#MP1",
+  "enforced_by": "Code: the threshold and the fee due are worked out from the order (PostToolUse)"
+ },
+ "MP2": {
+  "department": "marketing",
+  "rule": "Campaign days in 2026: 9 September, 25 September, 10 October, 25 October, 11 November and 25 November.",
+  "silent_on": "",
+  "page": "Marketing Policy.html#MP2",
+  "enforced_by": "Code: the campaign day is read from this calendar (PostToolUse)"
+ },
+ "MP3": {
+  "department": "marketing",
+  "rule": "On an order placed on a campaign day (Malaysia time), delivery is free on orders above RM50, in place of MP1. An order totalling exactly RM50 pays the standard RM5 delivery fee. The order total is the value of the items, before delivery.",
+  "silent_on": "",
+  "page": "Marketing Policy.html#MP3",
+  "enforced_by": "Code: the campaign threshold and the fee due are worked out from the order date (PostToolUse)"
+ },
+ "MP4": {
+  "department": "marketing",
+  "rule": "9 September, 10 October and 11 November are storewide sales: every product ordered on those days is a sale item.",
+  "silent_on": "",
+  "page": "Marketing Policy.html#MP4",
+  "enforced_by": "The order data marks every line ordered on a storewide sale day as a sale item"
+ },
+ "MP5": {
+  "department": "marketing",
+  "rule": "25 September, 25 October and 25 November are payday sales: selected products, about 20% of the range, are on sale. A product ordered on a payday sale is a sale item only when the order marks it as one.",
+  "silent_on": "Which products are selected, beyond the mark on the order",
+  "page": "Marketing Policy.html#MP5",
+  "enforced_by": "The order data marks the selected products on a payday sale day"
+ },
+ "MP6": {
+  "department": "marketing",
+  "rule": "Sale items cannot be returned (RP3). The 48-hour damage report (QP1) and the 30-day shop warranty (QP2 to QP5) still apply to sale items.",
+  "silent_on": "The size of the sale discount",
+  "page": "Marketing Policy.html#MP6",
+  "enforced_by": "Code: the sale-item check refuses the return (RP3); damage reports and warranty claims still run"
+ }
+}

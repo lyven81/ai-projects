@@ -1,0 +1,387 @@
+{
+ "now": 1793066400,
+ "contacts": [
+  {
+   "id": "store",
+   "name": "Terrance Ngadan",
+   "title": "store manager",
+   "department": "Store",
+   "takes": "Every Happy Mart matter no policy covers (CS4)"
+  },
+  {
+   "id": "customer_service",
+   "name": "Nurul Aina Rahim",
+   "title": "customer service manager",
+   "department": "Customer Service",
+   "takes": "A customer's request for a person (CS6), verification lock-outs (CS2), replies blocked twice"
+  },
+  {
+   "id": "fulfilment",
+   "name": "Tan Wei Ming",
+   "title": "fulfilment supervisor",
+   "department": "Fulfilment",
+   "takes": "Delivery matters the Fulfilment policy is silent on; Fulfilment lookups that time out"
+  },
+  {
+   "id": "returns",
+   "name": "Siti Hajar Kamal",
+   "title": "returns lead",
+   "department": "Returns",
+   "takes": "Return matters the Returns policy is silent on; approving returns after checking the item"
+  },
+  {
+   "id": "finance",
+   "name": "Priya Ramasamy",
+   "title": "finance manager",
+   "department": "Finance",
+   "takes": "Refund matters the Finance policy is silent on; processing approved refunds"
+  },
+  {
+   "id": "claims",
+   "name": "Jessica Chan",
+   "title": "claims officer",
+   "department": "Quality and Claims",
+   "takes": "Damage reports, warranty claims, and claims matters the policy is silent on"
+  },
+  {
+   "id": "marketing",
+   "name": "Faizal Hamid",
+   "title": "marketing executive",
+   "department": "Marketing",
+   "takes": "Campaign and free-delivery matters the Marketing policy is silent on"
+  }
+ ],
+ "store_manager_sentence": "We will transfer the matter to our store manager, he will get back to you.",
+ "handover_sentences": {
+  "store": "We will transfer the matter to our store manager, he will get back to you.",
+  "customer_service": "We will transfer the matter to Nurul Aina Rahim, our customer service manager, who will get back to you.",
+  "fulfilment": "We will transfer the matter to Tan Wei Ming, our fulfilment supervisor, who will get back to you.",
+  "returns": "We will transfer the matter to Siti Hajar Kamal, our returns lead, who will get back to you.",
+  "finance": "We will transfer the matter to Priya Ramasamy, our finance manager, who will get back to you.",
+  "claims": "We will transfer the matter to Jessica Chan, our claims officer, who will get back to you.",
+  "marketing": "We will transfer the matter to Faizal Hamid, our marketing executive, who will get back to you."
+ },
+ "departments": {
+  "customer_service": {
+   "title": "Customer Service",
+   "prefix": "CS"
+  },
+  "fulfilment": {
+   "title": "Fulfilment",
+   "prefix": "FP"
+  },
+  "returns": {
+   "title": "Returns",
+   "prefix": "RP"
+  },
+  "finance": {
+   "title": "Finance",
+   "prefix": "FN"
+  },
+  "claims": {
+   "title": "Quality and Claims",
+   "prefix": "QP"
+  },
+  "marketing": {
+   "title": "Marketing",
+   "prefix": "MP"
+  }
+ },
+ "specialists": [
+  "fulfilment",
+  "returns",
+  "finance",
+  "claims",
+  "marketing"
+ ],
+ "tool_owners": {
+  "router": [
+   "verify_order",
+   "ask_specialist",
+   "compose_reply",
+   "send_reply",
+   "hand_to_staff"
+  ],
+  "fulfilment": [
+   "get_delivery_info",
+   "request_address_change",
+   "request_cancellation",
+   "submit_answer"
+  ],
+  "returns": [
+   "get_return_info",
+   "request_return",
+   "submit_answer"
+  ],
+  "finance": [
+   "get_refund_status",
+   "submit_answer"
+  ],
+  "claims": [
+   "get_claim_info",
+   "file_damage_report",
+   "file_warranty_claim",
+   "submit_answer"
+  ],
+  "marketing": [
+   "get_order_value",
+   "submit_answer"
+  ],
+  "synthesis": [
+   "write_reply"
+  ]
+ },
+ "field_sets": {
+  "get_delivery_info": [
+   "order_id",
+   "status",
+   "order_time",
+   "dispatch_time",
+   "delivery_time",
+   "delivery_address",
+   "delivery_window"
+  ],
+  "get_return_info": [
+   "order_id",
+   "delivery_time",
+   "days_since_delivery",
+   "items"
+  ],
+  "get_refund_status": [
+   "order_id",
+   "state",
+   "amount",
+   "approval_date",
+   "paid_date"
+  ],
+  "get_claim_info": [
+   "order_id",
+   "delivery_time",
+   "hours_since_delivery",
+   "days_since_delivery",
+   "items"
+  ],
+  "get_order_value": [
+   "order_id",
+   "order_time",
+   "order_total",
+   "delivery_fee_charged",
+   "campaign_day",
+   "threshold",
+   "fee_due"
+  ]
+ },
+ "handovers": [
+  {
+   "reason": "customer_requested_person",
+   "when": "The customer asks for a person (CS6)",
+   "contact": "customer_service",
+   "clause": "CS6"
+  },
+  {
+   "reason": "policy_not_covered",
+   "when": "A Happy Mart matter no policy covers (CS4)",
+   "contact": "store",
+   "clause": "CS4"
+  },
+  {
+   "reason": "policy_not_clear",
+   "when": "A specialist finds its clause silent on the case (CS5)",
+   "contact": "department",
+   "clause": "CS5"
+  },
+  {
+   "reason": "specialist_timeout",
+   "when": "A specialist could not answer after its own retry",
+   "contact": "department",
+   "clause": "CS5"
+  },
+  {
+   "reason": "verification_locked",
+   "when": "3 failed verification attempts (CS2)",
+   "contact": "customer_service",
+   "clause": "CS2"
+  },
+  {
+   "reason": "reply_blocked_twice",
+   "when": "The pre-send check blocks the rewrite too",
+   "contact": "customer_service",
+   "clause": "CS7"
+  }
+ ],
+ "values": {
+  "standard_fee_sen": 500,
+  "free_above_sen": 10000,
+  "campaign_free_above_sen": 5000,
+  "return_days": 14,
+  "report_hours": 48,
+  "warranty_days": 30,
+  "verify_attempts": 3,
+  "specialist_limit_ms": 20000,
+  "rewrites_after_block": 1,
+  "allowed_rm": [
+   5,
+   50,
+   100
+  ],
+  "allowed_ranges": [
+   [
+    3,
+    5
+   ],
+   [
+    5,
+    7
+   ]
+  ],
+  "allowed_periods": [
+   [
+    14,
+    "days"
+   ],
+   [
+    48,
+    "hours"
+   ],
+   [
+    30,
+    "days"
+   ]
+  ]
+ },
+ "campaign_days": {
+  "2026-09-09": "storewide",
+  "2026-09-25": "payday",
+  "2026-10-10": "storewide",
+  "2026-10-25": "payday",
+  "2026-11-11": "storewide",
+  "2026-11-25": "payday"
+ },
+ "holidays": {
+  "2026-09-01": "Selangor public holiday",
+  "2026-09-16": "Malaysia Day",
+  "2026-10-26": "Silver Jubilee of the Sultan of Selangor (replacement for Sunday 25 October)",
+  "2026-11-08": "Deepavali",
+  "2026-11-09": "Deepavali (replacement)",
+  "2026-12-11": "Birthday of the Sultan of Selangor",
+  "2026-12-25": "Christmas Day"
+ },
+ "router_clauses": [
+  "CS1",
+  "CS2",
+  "CS3",
+  "CS4",
+  "CS6"
+ ],
+ "resources": [
+  {
+   "uri": "policy://customer_service",
+   "name": "Customer Service Policy",
+   "file": "Customer Service Policy.md",
+   "for": [
+    "router"
+   ]
+  },
+  {
+   "uri": "policy://fulfilment",
+   "name": "Fulfilment Policy",
+   "file": "Fulfilment Policy.md",
+   "for": [
+    "fulfilment"
+   ]
+  },
+  {
+   "uri": "policy://returns",
+   "name": "Returns Policy",
+   "file": "Returns Policy.md",
+   "for": [
+    "returns"
+   ]
+  },
+  {
+   "uri": "policy://finance",
+   "name": "Finance Policy",
+   "file": "Finance Policy.md",
+   "for": [
+    "finance"
+   ]
+  },
+  {
+   "uri": "policy://claims",
+   "name": "Quality and Claims Policy",
+   "file": "Quality and Claims Policy.md",
+   "for": [
+    "claims"
+   ]
+  },
+  {
+   "uri": "policy://marketing",
+   "name": "Marketing Policy",
+   "file": "Marketing Policy.md",
+   "for": [
+    "marketing"
+   ]
+  },
+  {
+   "uri": "workbook://router",
+   "name": "Router Workbook",
+   "file": "Router Workbook.md",
+   "for": [
+    "router"
+   ]
+  },
+  {
+   "uri": "role://fulfilment",
+   "name": "Role Sheet - Fulfilment",
+   "file": "Role Sheet - Fulfilment.md",
+   "for": [
+    "fulfilment"
+   ]
+  },
+  {
+   "uri": "role://returns",
+   "name": "Role Sheet - Returns",
+   "file": "Role Sheet - Returns.md",
+   "for": [
+    "returns"
+   ]
+  },
+  {
+   "uri": "role://finance",
+   "name": "Role Sheet - Finance",
+   "file": "Role Sheet - Finance.md",
+   "for": [
+    "finance"
+   ]
+  },
+  {
+   "uri": "role://claims",
+   "name": "Role Sheet - Quality and Claims",
+   "file": "Role Sheet - Quality and Claims.md",
+   "for": [
+    "claims"
+   ]
+  },
+  {
+   "uri": "role://marketing",
+   "name": "Role Sheet - Marketing",
+   "file": "Role Sheet - Marketing.md",
+   "for": [
+    "marketing"
+   ]
+  },
+  {
+   "uri": "contacts://staff",
+   "name": "Contact List",
+   "file": "Contact List.md",
+   "for": [
+    "router",
+    "fulfilment",
+    "returns",
+    "finance",
+    "claims",
+    "marketing"
+   ]
+  }
+ ]
+}

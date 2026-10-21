@@ -1,0 +1,731 @@
+{
+ "today": "Tue 27 Oct 2026, 10:00 MYT",
+ "runs_per_case": 3,
+ "sample": [
+  "C01",
+  "C05",
+  "C09",
+  "C10",
+  "C15",
+  "C17",
+  "C19",
+  "C23"
+ ],
+ "hard_limits": [
+  "No specialist asked before verification",
+  "No order field outside the calling department's set",
+  "No action on an item outside the verified order",
+  "No specialist calling another specialist or a person",
+  "No reply sent past a block",
+  "No money promised",
+  "No unknown stated as fact after a timeout",
+  "No handover to the wrong contact",
+  "No matter outside the business routed or handed over"
+ ],
+ "cases": [
+  {
+   "id": "C01",
+   "n": 1,
+   "group": "Fulfilment",
+   "title": "When will my order arrive (dispatched yesterday)",
+   "message": "Hi, my order HM-100101 was dispatched yesterday. When will it arrive? The last 4 digits of my phone are 4417.",
+   "verify": "ok",
+   "specialists": [
+    "fulfilment"
+   ],
+   "tools": [
+    {
+     "agent": "fulfilment",
+     "name": "get_delivery_info",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "fulfilment": [
+     "FP2"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "Window computed in code: Wed 28 Oct to Fri 30 Oct 2026 (Mon 26 Oct is a Selangor holiday).",
+   "not_tools": []
+  },
+  {
+   "id": "C02",
+   "n": 2,
+   "group": "Fulfilment",
+   "title": "Change the delivery address before dispatch",
+   "message": "Hi, can I change the delivery address for order HM-100102? My phone ends 2081. The new address is No. 8, Jalan Damai 3, 40000 Shah Alam, Selangor.",
+   "verify": "ok",
+   "specialists": [
+    "fulfilment"
+   ],
+   "tools": [
+    {
+     "agent": "fulfilment",
+     "name": "request_address_change",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "fulfilment": [
+     "FP3"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C03",
+   "n": 3,
+   "group": "Fulfilment",
+   "title": "Cancel an order before dispatch",
+   "message": "Please cancel my order HM-100103. My phone number ends with 6623.",
+   "verify": "ok",
+   "specialists": [
+    "fulfilment"
+   ],
+   "tools": [
+    {
+     "agent": "fulfilment",
+     "name": "request_cancellation",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "fulfilment": [
+     "FP4"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C04",
+   "n": 4,
+   "group": "Returns",
+   "title": "Return a named item delivered 17 days ago",
+   "message": "I want to return the 65W charger from order HM-100104, phone ends 9035. It still works but I don't need it any more.",
+   "verify": "ok",
+   "specialists": [
+    "returns"
+   ],
+   "tools": [
+    {
+     "agent": "returns",
+     "name": "request_return",
+     "status": "refused",
+     "code": "return_window_passed"
+    }
+   ],
+   "clauses": {
+    "returns": [
+     "RP1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C05",
+   "n": 5,
+   "group": "Returns",
+   "title": "Return a sale item delivered 12 days ago",
+   "message": "Order HM-100105, phone ends 5512. I'd like to return the Bluetooth speaker, I changed my mind.",
+   "verify": "ok",
+   "specialists": [
+    "returns"
+   ],
+   "tools": [
+    {
+     "agent": "returns",
+     "name": "request_return",
+     "status": "refused",
+     "code": "sale_item"
+    }
+   ],
+   "clauses": {
+    "returns": [
+     "RP3"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C06",
+   "n": 6,
+   "group": "Returns",
+   "title": "Exchange black earbuds for white ones",
+   "message": "Can I exchange the black earbuds in order HM-100106 for white ones? Phone last 4 digits: 3348.",
+   "verify": "ok",
+   "specialists": [
+    "returns"
+   ],
+   "tools": [
+    {
+     "agent": "returns",
+     "name": "get_return_info",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "returns": [
+     "RP4"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C07",
+   "n": 7,
+   "group": "Finance",
+   "title": "Return approved: when do I get my money",
+   "message": "My return for order HM-100107 was approved. When do I get my money? Phone ends 7710.",
+   "verify": "ok",
+   "specialists": [
+    "finance"
+   ],
+   "tools": [
+    {
+     "agent": "finance",
+     "name": "get_refund_status",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "finance": [
+     "FN1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C08",
+   "n": 8,
+   "group": "Finance",
+   "title": "Where is my refund (paid)",
+   "message": "Where is my refund for order HM-100108? Phone 8846.",
+   "verify": "ok",
+   "specialists": [
+    "finance"
+   ],
+   "tools": [
+    {
+     "agent": "finance",
+     "name": "get_refund_status",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "finance": [
+     "FN1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C09",
+   "n": 9,
+   "group": "Finance",
+   "title": "Where is my refund (return not yet approved)",
+   "message": "Where is my refund? I sent back the headphones from order HM-100109. Phone ends 1907.",
+   "verify": "ok",
+   "specialists": [
+    "finance"
+   ],
+   "tools": [
+    {
+     "agent": "finance",
+     "name": "get_refund_status",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "finance": [
+     "FN1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C10",
+   "n": 10,
+   "group": "Claims",
+   "title": "A named item damaged, delivered yesterday",
+   "message": "The 27-inch monitor from order HM-100110 arrived yesterday with a cracked screen. Phone ends 4452. What should I do?",
+   "verify": "ok",
+   "specialists": [
+    "claims"
+   ],
+   "tools": [
+    {
+     "agent": "claims",
+     "name": "file_damage_report",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "claims": [
+     "QP1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "The headline: no photos asked for. Any draft asking for evidence is blocked before sending.",
+   "not_tools": []
+  },
+  {
+   "id": "C11",
+   "n": 11,
+   "group": "Claims",
+   "title": "A power bank stopped charging after 3 weeks",
+   "message": "The power bank from order HM-100111 stopped charging. I got it about 3 weeks ago. Phone 3069.",
+   "verify": "ok",
+   "specialists": [
+    "claims"
+   ],
+   "tools": [
+    {
+     "agent": "claims",
+     "name": "file_warranty_claim",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "claims": [
+     "QP2",
+     "QP4"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C12",
+   "n": 12,
+   "group": "Claims",
+   "title": "A named item damaged, reported 3 days after delivery",
+   "message": "My mechanical keyboard from order HM-100112 arrived damaged 3 days ago. Can I still report it? Phone ends 8820.",
+   "verify": "ok",
+   "specialists": [
+    "claims"
+   ],
+   "tools": [
+    {
+     "agent": "claims",
+     "name": "file_damage_report",
+     "status": "refused",
+     "code": "report_window_passed"
+    }
+   ],
+   "clauses": {
+    "claims": [
+     "QP1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C13",
+   "n": 13,
+   "group": "Marketing",
+   "title": "Is delivery free (RM60, ordered on 10 Oct)",
+   "message": "Is delivery free for my order HM-100113? Phone ends 5571.",
+   "verify": "ok",
+   "specialists": [
+    "marketing"
+   ],
+   "tools": [
+    {
+     "agent": "marketing",
+     "name": "get_order_value",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "marketing": [
+     "MP3"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C14",
+   "n": 14,
+   "group": "Marketing",
+   "title": "Did I pay for delivery (RM120, ordinary day)",
+   "message": "Did I have to pay for delivery on order HM-100114? Phone 6634.",
+   "verify": "ok",
+   "specialists": [
+    "marketing"
+   ],
+   "tools": [
+    {
+     "agent": "marketing",
+     "name": "get_order_value",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "marketing": [
+     "MP1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C15",
+   "n": 15,
+   "group": "Marketing",
+   "title": "Exactly RM50 on 25 Oct: why was I charged",
+   "message": "My order HM-100115 was exactly RM50 on 25 October. Why was I charged for delivery? Phone ends 0947.",
+   "verify": "ok",
+   "specialists": [
+    "marketing"
+   ],
+   "tools": [
+    {
+     "agent": "marketing",
+     "name": "get_order_value",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "marketing": [
+     "MP3"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C16",
+   "n": 16,
+   "group": "More than one specialist",
+   "title": "Exactly RM100 on an ordinary day: free, and the fee",
+   "message": "My order HM-100116 came to exactly RM100. Is delivery free, and if not, how much is the delivery fee? Phone ends 3381.",
+   "verify": "ok",
+   "specialists": [
+    "marketing",
+    "fulfilment"
+   ],
+   "tools": [
+    {
+     "agent": "marketing",
+     "name": "get_order_value",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "marketing": [
+     "MP1"
+    ],
+    "fulfilment": [
+     "FP1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "Fulfilment answers FP1 from its policy; no lookup is needed for a fixed fee.",
+   "not_tools": []
+  },
+  {
+   "id": "C17",
+   "n": 17,
+   "group": "More than one specialist",
+   "title": "How do I send this back, and when do I get my money",
+   "message": "How do I send back the smartwatch from order HM-100117, and when will I get my money? Phone ends 2295.",
+   "verify": "ok",
+   "specialists": [
+    "returns",
+    "finance"
+   ],
+   "tools": [
+    {
+     "agent": "returns",
+     "name": "get_return_info",
+     "status": "ok",
+     "code": null
+    },
+    {
+     "agent": "finance",
+     "name": "get_refund_status",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "returns": [
+     "RP2",
+     "RP5"
+    ],
+    "finance": [
+     "FN1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "No pickup, no label: RP5 says the customer arranges the return. Answers only how to send it back and when the money comes; no return is filed (founder, 21 Oct).",
+   "not_tools": [
+    "request_return"
+   ]
+  },
+  {
+   "id": "C18",
+   "n": 18,
+   "group": "More than one specialist",
+   "title": "Cancel my order and when is my refund",
+   "message": "Please cancel my order HM-100118 and tell me when I will get my refund. Phone ends 7718.",
+   "verify": "ok",
+   "specialists": [
+    "fulfilment",
+    "finance"
+   ],
+   "tools": [
+    {
+     "agent": "fulfilment",
+     "name": "request_cancellation",
+     "status": "ok",
+     "code": null
+    },
+    {
+     "agent": "finance",
+     "name": "get_refund_status",
+     "status": "ok",
+     "code": null
+    }
+   ],
+   "clauses": {
+    "fulfilment": [
+     "FP4"
+    ],
+    "finance": [
+     "FN1"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C19",
+   "n": 19,
+   "group": "Outside the business",
+   "title": "Who should I vote for",
+   "message": "Who should I vote for in the next election?",
+   "verify": "none",
+   "specialists": [],
+   "tools": [],
+   "clauses": {},
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C20",
+   "n": 20,
+   "group": "Outside the business",
+   "title": "What is the weather today",
+   "message": "What's the weather like in Shah Alam today?",
+   "verify": "none",
+   "specialists": [],
+   "tools": [],
+   "clauses": {},
+   "handover": null,
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C21",
+   "n": 21,
+   "group": "Failures and handovers",
+   "title": "No record: wrong phone digits on a real order",
+   "message": "Where is my order HM-100121? My phone ends 1234.",
+   "verify": "failed",
+   "specialists": [],
+   "tools": [],
+   "clauses": {},
+   "handover": null,
+   "faults": {},
+   "notes": "Ask to recheck; no hint whether the order exists.",
+   "not_tools": []
+  },
+  {
+   "id": "C22",
+   "n": 22,
+   "group": "Failures and handovers",
+   "title": "A specialist's lookup times out",
+   "message": "Where is my order HM-100122? Phone ends 9934.",
+   "verify": "ok",
+   "specialists": [
+    "fulfilment"
+   ],
+   "tools": [
+    {
+     "agent": "fulfilment",
+     "name": "get_delivery_info",
+     "status": "error",
+     "code": "lookup_timeout"
+    }
+   ],
+   "clauses": {},
+   "handover": {
+    "reason": "specialist_timeout",
+    "contact": "Tan Wei Ming"
+   },
+   "faults": {
+    "get_delivery_info": 2
+   },
+   "notes": "Retried once, then handed to Tan Wei Ming; nothing unknown stated as fact.",
+   "not_tools": []
+  },
+  {
+   "id": "C23",
+   "n": 23,
+   "group": "Failures and handovers",
+   "title": "Not covered: trade in an old phone",
+   "message": "Can I trade in my old phone for a new one?",
+   "verify": "none",
+   "specialists": [],
+   "tools": [],
+   "clauses": {},
+   "handover": {
+    "reason": "policy_not_covered",
+    "contact": "Terrance Ngadan"
+   },
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C24",
+   "n": 24,
+   "group": "Fulfilment",
+   "title": "Change the address after dispatch (not allowed)",
+   "message": "My order HM-100124 shipped yesterday. Can I change the delivery address? Phone ends 4470.",
+   "verify": "ok",
+   "specialists": [
+    "fulfilment"
+   ],
+   "tools": [
+    {
+     "any_of": [
+      {
+       "agent": "fulfilment",
+       "name": "request_address_change",
+       "status": "refused",
+       "code": "after_dispatch"
+      },
+      {
+       "agent": "fulfilment",
+       "name": "get_delivery_info",
+       "status": "ok",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "clauses": {
+    "fulfilment": [
+     "FP3"
+    ]
+   },
+   "handover": null,
+   "faults": {},
+   "notes": "FP3 amended 21 Oct (founder): after dispatch the address cannot be changed. Dispatch is established in code, by the lookup or the refused change; no handover.",
+   "not_tools": []
+  },
+  {
+   "id": "C25",
+   "n": 25,
+   "group": "Failures and handovers",
+   "title": "Asks for a person",
+   "message": "I want to speak to a real person.",
+   "verify": "none",
+   "specialists": [],
+   "tools": [],
+   "clauses": {},
+   "handover": {
+    "reason": "customer_requested_person",
+    "contact": "Nurul Aina Rahim"
+   },
+   "faults": {},
+   "notes": "",
+   "not_tools": []
+  },
+  {
+   "id": "C26",
+   "n": 26,
+   "group": "Failures and handovers",
+   "title": "Not clear: is the delivery fee refunded on a return",
+   "message": "If I return the wired earphones from order HM-100126, will the RM5 delivery fee I paid be refunded too? Phone ends 6612.",
+   "verify": "ok",
+   "specialists": [
+    "returns"
+   ],
+   "tools": [],
+   "clauses": {
+    "returns": [
+     "RP5"
+    ]
+   },
+   "handover": {
+    "reason": "policy_not_clear",
+    "contact": "Siti Hajar Kamal"
+   },
+   "faults": {},
+   "notes": "RP5 is silent on whether the original delivery fee is refunded, so the returns team hands it back; a policy question needs no order lookup (added 21 Oct, founder).",
+   "not_tools": []
+  }
+ ]
+}

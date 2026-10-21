@@ -1,0 +1,65 @@
+PASS  H1 S01 (invented_requirement) blocked by Blocked claims
+PASS  H1 S02 (clean) passed
+PASS  H1 S03 (wrong_fact) blocked by Fixed values
+PASS  H1 S04 (wrong_fact) blocked by Fixed values
+PASS  H1 S05 (unsupported_scope) blocked by Blocked claims
+PASS  H1 S06 (out_of_policy_promise) blocked by Blocked claims
+PASS  H1 S07 (clean) passed
+PASS  H1 S08 (invented_requirement) blocked by Blocked claims
+PASS  H1 S09 (wrong_fact) blocked by Fixed values
+PASS  H1 S10 (unsupported_scope) blocked by Blocked claims
+PASS  H1 S11 (clean) passed
+PASS  H1 S12 (clean) passed
+PASS  H1 S13 (out_of_policy_promise) blocked by Fixed values
+PASS  H1 S14 (clean) passed
+PASS  H1 S15 (out_of_policy_promise) blocked by Blocked claims
+PASS  H1 summary: 10 of 10 faulty blocked, 5 of 5 clean passed
+PASS  verify_order HM-100104 with the right digits: ok
+PASS  H2 a line ID from another order: item_not_in_order
+PASS  H3 a lookup naming another order: order_not_verified
+PASS  H4 Finance calling get_delivery_info: tool_not_permitted
+PASS  H7 a specialist answer citing another department's clause: specialist_output_invalid
+PASS  H5 ask_specialist before verification: not_verified
+PASS  3 failed attempts: verification_failed, no hint
+PASS  H6 a fourth attempt after 3 failures: verification_locked
+PASS  hand_to_staff to the wrong contact: handover_invalid
+PASS  hand_to_staff verification_locked to Nurul Aina Rahim: ok
+PASS  H7 ask_specialist with an answer citing RP1 from Finance: specialist_output_invalid
+PASS  H8 return at exactly 14 days: allowed
+PASS  H8 return at 15 days: return_window_passed
+PASS  H8 damage report at exactly 48 hours: allowed
+PASS  H8 damage report at 48 hours and 1 minute: report_window_passed
+PASS  H8 warranty at exactly 30 days: allowed
+PASS  H8 warranty at 31 days: warranty_expired
+PASS  H8 RM50.00 on a campaign day: RM5 due (MP3)
+PASS  H8 RM50.01 on a campaign day: free (MP3)
+PASS  H8 RM100.00 on an ordinary day: RM5 due (MP1)
+PASS  H8 RM100.01 on an ordinary day: free (MP1)
+PASS  H8 RM60.00 on 10 Oct (campaign): free (MP3)
+PASS  case 1: delivery window Wed 28 Oct to Fri 30 Oct (26 Oct is a Selangor holiday)
+PASS  case 2: address change before dispatch: pending
+PASS  case 3: cancellation before dispatch: pending
+PASS  case 24: address change after dispatch: after_dispatch, answered with FP3, no handover
+PASS  case 4: return after 17 days: return_window_passed
+PASS  case 5: sale item within 14 days: sale_item
+PASS  case 7: refund approved, not yet paid
+PASS  case 8: refund paid, RM 129.00, Tue 20 Oct
+PASS  case 9: refund awaiting approval
+PASS  case 10: damage report at 19 hours: pending
+PASS  case 11: warranty claim at 21 days: pending
+PASS  case 12: damage report at 68 hours: report_window_passed
+PASS  case 13: fee due RM 0.00, campaign true
+PASS  case 14: fee due RM 0.00, campaign false
+PASS  case 15: fee due RM 5.00, campaign true
+PASS  case 16: fee due RM 5.00, campaign false
+PASS  case 21: wrong digits on a real order: verification_failed
+PASS  case 22: the lookup times out twice: lookup_timeout, retryable
+PASS  field set: get_delivery_info returns only Fulfilment's fields
+PASS  two teams hand back: each to its own contact, any other contact refused
+PASS  compose_reply with a clause no specialist cited: content_unsupported
+PASS  send_reply with photos: reply_blocked
+PASS  second block: holding reply sent, handed to Nurul Aina Rahim
+PASS  writer check: he or she found, inside a word not
+PASS  writer check: I, me or my found, we and words like Item not
+
+63 passed, 0 failed

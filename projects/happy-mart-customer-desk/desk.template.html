@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<title>Happy Mart Customer Desk: Detailed View</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+/* status colours, light */
+:root{--ok:#1e7a4c;--okbg:#e6f4ec;--ref:#8a5a00;--refbg:#fdf3e0;--err:#b23a2a;--errbg:#fbeae7;--rec:#6b3fa0;--recbg:#f1eafb;--me:#2f6fb0;--meink:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ok:#8fd3a8;--okbg:#16301f;--ref:#e9c27a;--refbg:#2e2614;--err:#f0a58f;--errbg:#3a2019;--rec:#c9a8f0;--recbg:#2a2038;--me:#2d5f93;--meink:#fff}}
+:root[data-theme="dark"]{--ok:#8fd3a8;--okbg:#16301f;--ref:#e9c27a;--refbg:#2e2614;--err:#f0a58f;--errbg:#3a2019;--rec:#c9a8f0;--recbg:#2a2038;--me:#2d5f93;--meink:#fff}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Segoe UI",Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1280px;margin:0 auto;padding:16px 16px 40px}
+.crumbs{font-size:12.5px;color:var(--muted)}
+.crumbs a{color:inherit;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+h1{font-size:22px;color:var(--navy);margin:2px 0 2px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 8px}
+.how{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:6px;padding:7px 12px;font-size:13.5px;margin:0 0 12px}
+.how b{color:var(--navy)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 12px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+.seg button{border:0;background:transparent;color:var(--ink);font:inherit;font-size:13.5px;padding:5px 16px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--navy);color:var(--card)}
+.seg.zoom{margin-left:auto}
+.seg.zoom button{padding:5px 12px;min-width:36px}
+.seg.zoom button+button{border-left:1px solid var(--line)}
+.seg.zoom #z-reset{font-size:12.5px;color:var(--muted);min-width:54px}
+.seg.zoom button:hover{background:var(--box)}
+.seg.zoom button:disabled{opacity:.4;cursor:default;background:transparent}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0 0 12px}
+.card h2{font-size:15.5px;color:var(--navy);margin:0 0 8px}
+.row{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+input[type=password],textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--box);border:1px solid var(--line);border-radius:6px;padding:6px 8px;max-width:100%;min-width:0}
+#key{flex:1 1 240px}
+.btn{font:inherit;font-size:13.5px;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:6px;padding:6px 14px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:disabled{opacity:.5;cursor:default}
+.warn{background:var(--refbg);color:var(--ink);border:1px solid var(--line);border-left:3px solid var(--ref);border-radius:6px;padding:7px 10px;font-size:13px;margin-top:8px}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:10px;padding:1px 8px;white-space:nowrap}
+.t-ok,.t-allow,.t-pass,.t-answered{background:var(--okbg);color:var(--ok)}
+.t-refused{background:var(--refbg);color:var(--ref)}
+.t-error,.t-block,.t-fail{background:var(--errbg);color:var(--err)}
+.t-handover{background:var(--recbg);color:var(--rec)}
+.t-plain{background:var(--box);color:var(--muted);border:1px solid var(--line)}
+.chipc{display:inline-block;font-family:Consolas,monospace;font-size:11.5px;font-weight:600;border:1px solid var(--accent);color:var(--accent);border-radius:9px;padding:0 6px;margin:0 2px;cursor:help;white-space:nowrap}
+/* the two panels */
+.desk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:14px;align-items:start}
+.side{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;min-width:0}
+.side>h2{font-size:15.5px;color:var(--navy);margin:0 0 4px}
+.side>.note{font-size:12.5px;color:var(--muted);margin:0 0 8px}
+.today{display:inline-block;font-size:12.5px;background:var(--box);border:1px solid var(--line);border-radius:12px;padding:1px 10px;margin:0 0 8px;color:var(--navy)}
+.chat{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:220px;max-height:60vh;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:88%;padding:7px 11px;border-radius:12px;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.me{align-self:flex-end;background:var(--me);color:var(--meink);border-bottom-right-radius:3px}
+.msg.bot{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-bottom-left-radius:3px}
+.msg .by{display:block;font-size:11.5px;opacity:.8;margin-bottom:2px}
+.sys{align-self:center;font-size:12.5px;color:var(--muted);text-align:center}
+.composer{display:flex;gap:8px;margin-top:8px}
+.composer textarea{flex:1;min-height:56px;resize:vertical}
+.starters{margin-top:10px;font-size:13px}
+.starters .grp{color:var(--muted);font-size:12px;margin:8px 0 3px;font-weight:600}
+.chip{display:block;width:100%;text-align:left;font:inherit;font-size:13px;color:var(--ink);background:var(--box);border:1px solid var(--line);border-radius:8px;padding:5px 9px;margin:0 0 4px;cursor:pointer}
+.chip:hover,.chip[aria-current="true"]{border-color:var(--accent)}
+.chip[aria-current="true"]{background:var(--card);box-shadow:inset 3px 0 0 var(--accent)}
+.chip b{color:var(--navy);font-weight:600}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:13px;margin:6px 0}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+/* behind the conversation */
+.steps{display:flex;flex-direction:column;gap:10px}
+.empty{color:var(--muted);font-size:13.5px;padding:18px 6px;text-align:center;border:1px dashed var(--line);border-radius:8px}
+.turnh{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:6px 0 -2px}
+.st{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;background:var(--card);overflow:hidden}
+.st.k-block{border-left-color:var(--err)}
+.st.k-hand{border-left-color:var(--rec)}
+.st>.h{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;padding:6px 10px;background:var(--box);border-bottom:1px solid var(--line)}
+.st>.h .tm{font-family:Consolas,monospace;font-size:12px;color:var(--muted);min-width:46px}
+.st>.h .nm{font-weight:700;color:var(--navy);font-size:14px}
+.st>.h .who{font-size:12.5px;color:var(--muted)}
+.st>.h .sp{flex:1}
+.st>.h .el{font-size:12px;color:var(--muted)}
+.st>.b{padding:7px 10px;font-size:13.5px}
+.lbl{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:6px 0 2px}
+.lbl:first-child{margin-top:0}
+.quote{background:var(--box);border:1px solid var(--line);border-radius:6px;padding:6px 9px;white-space:pre-wrap;overflow-wrap:anywhere}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:6px;align-items:baseline;padding:1px 0;font-size:13px}
+.checks .cl{color:var(--muted);font-size:12px;white-space:nowrap}
+.checks li.f{font-weight:600}
+.post{margin:2px 0 0;padding-left:18px;font-size:13px}
+.points{margin:2px 0 0;padding-left:18px}
+.points li{margin:2px 0}
+.sub-steps{border-left:2px dashed var(--line);margin:6px 0 6px 4px;padding-left:10px;display:flex;flex-direction:column;gap:6px}
+.ss{border:1px solid var(--line);border-radius:6px;padding:5px 8px;background:var(--box);font-size:13px}
+.ss .sh{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.ss .sh .tm{font-family:Consolas,monospace;font-size:12px;color:var(--muted)}
+.ss .sh b{color:var(--navy)}
+.ss code,.st code{font-family:Consolas,monospace;font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px;overflow-wrap:anywhere}
+.why{margin-top:3px;color:var(--err)}
+.why.ok{color:var(--muted)}
+pre{margin:3px 0 0;font-family:Consolas,monospace;font-size:12px;background:var(--box);border:1px solid var(--line);border-radius:6px;padding:6px 8px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:240px;overflow-y:auto}
+details>summary{cursor:pointer;color:var(--accent);font-size:12.5px}
+.blocked{border:1px solid var(--err);background:var(--errbg);border-radius:6px;padding:6px 9px;margin-top:6px}
+.blocked b{color:var(--err)}
+/* timing strip */
+.timing .lane{position:relative;height:14px;background:var(--box);border:1px solid var(--line);border-radius:4px;margin:3px 0}
+.timing .seg-t{position:absolute;top:1px;bottom:1px;border-radius:3px;min-width:3px}
+.c-verify{background:#2f6fb0}.c-ask{background:#6b3fa0}.c-compose{background:#1e7a4c}.c-send{background:#8a5a00}.c-hand{background:#b23a2a}
+.timing .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;margin-top:6px}
+.timing .legend span{display:inline-flex;align-items:center;gap:5px}
+.timing .legend i{display:inline-block;width:10px;height:10px;border-radius:2px}
+.score{display:flex;flex-wrap:wrap;gap:5px;align-items:center;font-size:13px}
+[hidden]{display:none!important}
+footer{margin-top:28px;font-size:12px;color:var(--muted)}
+/* the Full screen button, as on Kereta Sewa Jalan-jalan */
+.btn.alt{background:var(--card);color:var(--accent)}
+.fsbtn{display:inline-flex;align-items:center;gap:6px;font-weight:600;border-radius:8px}
+.fsbtn .fs-out,.fsbtn[aria-pressed="true"] .fs-in{display:none}
+.fsbtn[aria-pressed="true"] .fs-out{display:inline}
+/* full screen: native (Fullscreen API) or the CSS fallback; the two sides fill the window and scroll inside (as on FD) */
+html.fs,html.fs body{height:100%;overflow:hidden}
+html.fs .wrap{max-width:none;height:calc(100vh / var(--z, 1));display:flex;flex-direction:column;padding:10px 16px}
+html.fs .crumbs,html.fs h1,html.fs .sub,html.fs .how,html.fs footer,html.fs #run-summary,html.fs #replay-box h2,html.fs #live-box h2{display:none}
+html.fs .bar,html.fs .card{margin-bottom:8px;flex:none}
+html.fs .card{padding:8px 12px}
+html.fs .desk{flex:1;min-height:0;align-items:stretch}
+html.fs .side{height:100%;display:flex;flex-direction:column;min-height:0}
+html.fs .side>*{flex-shrink:0}
+html.fs .chat{flex:1 1 0;max-height:none;min-height:120px}
+html.fs .starters{flex:0 1 auto;max-height:30vh;min-height:0;overflow-y:auto}
+html.fs .steps{flex:1 1 0;min-height:0;overflow-y:auto}
+html.fs .steps>*{flex-shrink:0}
+@media (max-width:860px){
+  .desk{grid-template-columns:1fr}
+  .chat{max-height:none}
+  html.fs .desk{overflow-y:auto}
+  html.fs .side{height:auto}
+  html.fs .chat{min-height:55vh}
+  html.fs .starters,html.fs .steps{max-height:none;overflow:visible}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="crumbs"><a href="../../index.html">AI Projects</a> / <a href="../../happy-mart-customer-desk.html">Happy Mart Customer Desk</a></div>
+<h1>Happy Mart Customer Desk: Detailed View</h1>
+<p class="sub">The customer service chat of Happy Mart, a fictional Selangor electronics retailer. A router verifies the order, asks only the departments the question needs, and a writer turns their answers into one reply.</p>
+<div class="how"><b>How it works:</b> on the left, what a customer sees. On the right, what happened behind it: the order check, each specialist with its lookups and hook verdicts, the answers with their policy clauses, the draft, the pre-send check, and what was left pending for staff.</div>
+
+<div class="bar">
+  <div class="seg" role="group" aria-label="Mode">
+    <button type="button" id="m-replay" aria-pressed="true">Replay</button>
+    <button type="button" id="m-live" aria-pressed="false">Live</button>
+  </div>
+  <span class="muted small" id="mode-note"></span>
+  <div class="seg zoom" role="group" aria-label="Zoom">
+    <button type="button" id="z-out" aria-label="Zoom out" title="Zoom out">&minus;</button>
+    <button type="button" id="z-reset" aria-label="Reset zoom" title="Reset zoom">100%</button>
+    <button type="button" id="z-in" aria-label="Zoom in" title="Zoom in">+</button>
+  </div>
+  <button type="button" class="btn alt fsbtn" id="fs-btn" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fs-in" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="fs-out" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span>Full screen</span></button>
+</div>
+
+<!-- Replay summary -->
+<div class="card" id="replay-box">
+  <h2>Recorded runs</h2>
+  <div class="small muted" id="run-summary"></div>
+  <div class="row small" id="run-pick" style="margin-top:6px" hidden></div>
+  <div class="score" id="run-score" style="margin-top:8px"></div>
+</div>
+
+<!-- Live controls -->
+<div class="card" id="live-box" hidden>
+  <h2>Live chat with your own key</h2>
+  <div class="row">
+    <label for="key" class="small"><b>Anthropic API key</b></label>
+    <input type="password" id="key" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
+    <button type="button" class="btn ghost" id="forget">Forget key</button>
+  </div>
+  <div class="warn"><b>Calls are billed to your own Anthropic account.</b> Use a key with a spending limit that you can revoke. The key is kept in this tab's session storage only and goes only to api.anthropic.com. A public service would run this server-side, with its own key.</div>
+  <div class="small muted" style="margin-top:6px" id="model-note"></div>
+</div>
+
+<div class="desk" id="desk">
+  <section class="side" aria-label="Customer chat">
+    <h2>Customer chat</h2>
+    <span class="today">Today in this demo: <span id="clock"></span></span>
+    <p class="note" id="chat-note"></p>
+    <div class="chat" id="chat" aria-live="polite"></div>
+    <div class="composer">
+      <textarea id="input" placeholder="Type a message, or pick a starter below"></textarea>
+      <button type="button" class="btn" id="send">Send</button>
+    </div>
+    <div class="row small" style="margin-top:6px" id="live-actions" hidden>
+      <button type="button" class="btn ghost" id="newconv">New conversation</button>
+      <span class="muted">Follow-up messages stay in the same conversation.</span>
+    </div>
+    <div class="starters" id="starters"></div>
+  </section>
+  <section class="side" aria-label="Behind the conversation">
+    <h2>Behind the conversation</h2>
+    <p class="note">Step by step, with the time each started (seconds after the message arrived) and how long it took.</p>
+    <div class="steps" id="steps"></div>
+  </section>
+</div>
+
+<footer>© 2026 Lee Yih Ven · Happy Mart Customer Desk: Detailed View</footer>
+</div>
+
+<script>/*__FORMAT_JS__*/</script>
+<script>/*__PRESEND_JS__*/</script>
+<script>/*__BACKEND_JS__*/</script>
+<script>/*__PRE_JS__*/</script>
+<script>/*__POST_JS__*/</script>
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPTS_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+"use strict";
+const DATA = /*__DATA_JSON__*/null;
+const TABLES = /*__TABLES_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CASES = /*__CASES_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+const KEY_SLOT = "happymart-desk-key";
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s === null || s === undefined ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const sec = (ms) => (ms === null || ms === undefined ? "" : (ms / 1000).toFixed(1) + " s");
+const pretty = (o) => esc(JSON.stringify(o, null, 2));
+
+// ---------------------------------------------------------------- plain labels
+const AGENT = { router: "Router (Customer Service)", fulfilment: "Fulfilment specialist", returns: "Returns specialist", finance: "Finance specialist",
+  claims: "Claims specialist", marketing: "Marketing specialist", synthesis: "Writer (synthesis)" };
+const TOOL = { get_delivery_info: "Looks up the delivery", request_address_change: "Prepares an address change", request_cancellation: "Prepares a cancellation",
+  get_return_info: "Looks up the return", request_return: "Prepares a return", get_refund_status: "Looks up the refund",
+  get_claim_info: "Looks up the claim details", file_damage_report: "Files a damage report", file_warranty_claim: "Files a warranty claim",
+  get_order_value: "Looks up the order value", submit_answer: "Submits its answer" };
+const REASON = { customer_requested_person: "the customer asked for a person", policy_not_covered: "no policy covers it", policy_not_clear: "the policy is not clear on it",
+  specialist_timeout: "a specialist could not answer in time", verification_locked: "too many failed order checks", reply_blocked_twice: "the reply was blocked twice" };
+const GROUP_ORDER = [...new Set(CASES.map((c) => c.group))];
+const chip = (c) => `<span class="chipc" title="${esc(CLAUSES[c] ? CLAUSES[c].rule : c)}">${esc(c)}</span>`;
+const chips = (list) => (list || []).map(chip).join("");
+const tag = (cls, text) => `<span class="tag t-${esc(cls)}">${esc(text)}</span>`;
+
+// ---------------------------------------------------------------- state
+const S = { mode: "replay", key: "", busy: false, token: 0, desk: null, session: null, agents: null, store: null, turns: [], current: null, poll: null };
+
+function readKey() { try { return sessionStorage.getItem(KEY_SLOT) || ""; } catch (e) { return ""; } }
+function saveKey(v) { try { if (v) sessionStorage.setItem(KEY_SLOT, v); else sessionStorage.removeItem(KEY_SLOT); } catch (e) { /* storage blocked: memory only */ } }
+
+// ---------------------------------------------------------------- chat
+function chatScroll() { const c = $("chat"); c.scrollTop = c.scrollHeight; }
+function addMsg(who, text) {
+  const d = document.createElement("div");
+  d.className = "msg " + (who === "me" ? "me" : "bot");
+  d.innerHTML = `<span class="by">${who === "me" ? "You" : "Happy Mart Customer Service"}</span>${esc(text)}`;
+  $("chat").appendChild(d); chatScroll();
+  return d;
+}
+function addSys(text) {
+  const d = document.createElement("div"); d.className = "sys"; d.textContent = text;
+  $("chat").appendChild(d); chatScroll();
+  return d;
+}
+
+// ---------------------------------------------------------------- the routing panel
+function checksList(checks) {
+  if (!checks || !checks.length) return `<span class="muted small">No checks.</span>`;
+  return `<ul class="checks">${checks.map((c) => `<li class="${c.pass ? "" : "f"}">${tag(c.pass ? "pass" : "fail", c.pass ? "pass" : "fail")}<span>${esc(c.check)}</span><span class="cl">${esc(c.clause)}</span></li>`).join("")}</ul>`;
+}
+function errLine(r) {
+  const e = r && r.error;
+  if (!e) return "";
+  return `<div class="why">${esc(e.message || e.code)} <code>${esc(e.code)}</code>${e.clause ? " " + chip(e.clause) : ""}</div>`;
+}
+function postList(post) {
+  return post && post.length ? `<ul class="post">${post.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>` : "";
+}
+function dataBox(label, data) {
+  if (data === null || data === undefined) return "";
+  return `<details><summary>${esc(label)}</summary><pre>${pretty(data)}</pre></details>`;
+}
+function stHead(e, name, who, extra) {
+  return `<div class="h"><span class="tm">+${sec(e.t_ms)}</span><span class="nm">${esc(name)}</span><span class="who">${esc(who)}</span><span class="sp"></span>${extra || ""}${e.elapsed_ms !== undefined ? `<span class="el">${sec(e.elapsed_ms)}</span>` : ""}</div>`;
+}
+const verdictTag = (e) => (e.pre && e.pre.verdict === "block" ? tag("block", "blocked") : tag("allow", "allowed"));
+
+/** One specialist call, nested under its ask_specialist. */
+function subStep(e) {
+  const r = e.result || {};
+  const blocked = e.pre && e.pre.verdict === "block";
+  let h = `<div class="ss"><div class="sh"><span class="tm">+${sec(e.t_ms)}</span><b>${esc(TOOL[e.tool] || e.tool)}</b> <code>${esc(e.tool)}</code>${verdictTag(e)}${!blocked ? tag(r.status, r.status) : ""}</div>`;
+  if (blocked) {
+    const f = (e.pre.checks || []).filter((c) => !c.pass);
+    h += `<div class="why">Hook blocked it: ${esc(f.map((c) => c.check).join("; ") || (r.error && r.error.message))} ${chip(e.pre.clause || (r.error && r.error.clause))}</div>`;
+    if (r.error && r.error.message) h += `<div class="small muted">${esc(r.error.message)}</div>`;
+  } else {
+    const n = (e.pre.checks || []).length;
+    h += `<div class="why ok">Hook allowed it: ${n} check${n === 1 ? "" : "s"} passed (${[...new Set((e.pre.checks || []).map((c) => c.clause))].map(esc).join(", ")}).</div>`;
+    if (r.status !== "ok") h += errLine(r);
+    h += postList(e.post);
+  }
+  if (e.tool !== "submit_answer") h += dataBox("what the specialist saw", r.data);
+  h += `</div>`;
+  return h;
+}
+
+function answerBlock(r, dept) {
+  const d = (r && r.data) || {};
+  if (!r) return `<div class="muted small">Working...</div>`;
+  let h = `<div class="lbl">Standardised answer from the ${esc(AGENT[dept] || dept)} ${d.status ? tag(d.status, d.status) : tag(r.status, r.status)}</div>`;
+  if (d.points && d.points.length) h += `<ul class="points">${d.points.map((p) => `<li>${esc(p.text)} ${chips(p.clauses)}</li>`).join("")}</ul>`;
+  else if (r.status === "ok") h += `<div class="muted small">No points.</div>`;
+  if (r.status !== "ok") h += errLine(r);
+  if (r.next_step) h += `<div class="small muted">Next: ${esc(r.next_step)}</div>`;
+  return h;
+}
+
+function stepCard(e, subs) {
+  const r = e.result || {};
+  const blocked = e.pre && e.pre.verdict === "block";
+  const failing = blocked ? (e.pre.checks || []).filter((c) => !c.pass) : [];
+  let kind = "", name = "", who = AGENT[e.agent] || e.agent, body = "";
+  if (e.tool === "verify_order") {
+    name = "Verification";
+    body += `<div>Order <code>${esc(e.input.order_id)}</code>, phone ending <code>${esc(e.input.phone_last4)}</code></div>`;
+    body += `<div class="lbl">Hook checks</div>${checksList(e.pre.checks)}`;
+    body += `<div class="lbl">Result</div>`;
+    body += r.status === "ok" ? `<div>Verified. The router now holds the order; it sees only the first name, ${esc(r.data && r.data.first_name)}.</div>` : errLine(r);
+    if (r.next_step) body += `<div class="small muted">Next: ${esc(r.next_step)}</div>`;
+  } else if (e.tool === "ask_specialist") {
+    const dept = e.input.department;
+    name = `Routing: ${AGENT[dept] || dept}`;
+    body += `<div class="lbl">Question passed on</div><div class="quote">${esc(e.input.question)}</div>`;
+    if (blocked) body += `<div class="lbl">Hook</div>${checksList(e.pre.checks)}${errLine(r)}`;
+    else {
+      body += `<div class="lbl">What the specialist did</div><div class="sub-steps">${subs.length ? subs.map(subStep).join("") : `<span class="muted small">No tool calls.</span>`}</div>`;
+      body += answerBlock(e.pending ? null : r, dept);
+      if (!e.pending) body += postList(e.post);
+    }
+  } else if (e.tool === "hand_to_staff") {
+    kind = "k-hand";
+    name = "Handover";
+    body += `<div>To <b>${esc(e.input.contact_name)}</b>${r.data && r.data.title ? `, ${esc(r.data.title)}` : ""}, because ${esc(REASON[e.input.reason] || e.input.reason)}.</div>`;
+    body += `<div class="lbl">Summary for staff</div><div class="quote">${esc(e.input.summary)}</div>`;
+    body += `<div class="lbl">Hook checks</div>${checksList(e.pre.checks)}`;
+    if (r.status === "ok" && r.data) body += `<div class="lbl">Result</div><div>Pending handover <code>${esc(r.data.reference)}</code>. Sentence added to the reply by code:</div><div class="quote">${esc(r.data.sentence)}</div>`;
+    else body += errLine(r);
+  } else if (e.tool === "compose_reply") {
+    name = "Synthesis";
+    who = AGENT.synthesis + ", called by the router";
+    const pts = e.input.points || [];
+    body += `<div class="lbl">Content passed to the writer</div>`;
+    body += pts.length ? `<ul class="points">${pts.map((p) => `<li>${esc(p.text)} ${chips(p.clauses)}</li>`).join("")}</ul>` : `<div class="muted small">No points${e.input.decline_outside_business ? "; a polite decline, outside the business (CS3)" : ""}.</div>`;
+    if (pts.length && e.input.decline_outside_business) body += `<div class="small muted">Marked outside the business (CS3).</div>`;
+    if (e.input.fix_note) body += `<div class="lbl">Fix note after a block</div><div class="quote">${esc(e.input.fix_note)}</div>`;
+    if (blocked) body += `<div class="lbl">Hook</div>${checksList(e.pre.checks)}${errLine(r)}`;
+    else if (r.status === "ok") body += `<div class="lbl">Draft ${chips(r.data.clauses)}</div><div class="quote">${esc(r.data.draft)}</div>${postList(e.post)}`;
+    else body += errLine(r);
+  } else if (e.tool === "send_reply") {
+    if (blocked) {
+      kind = "k-block";
+      name = "Pre-send check: draft blocked";
+      body += `<div class="lbl">Draft</div><div class="quote">${esc(e.input.text)}</div>`;
+      body += `<div class="blocked"><b>Blocked before it reached the customer.</b><ul class="post">${failing.map((c) => `<li>${esc(c.check)}</li>`).join("")}</ul></div>`;
+      if (r.data && r.data.holding) body += `<div class="small" style="margin-top:4px">Second block: the holding reply was sent by code and the matter handed to the customer service manager.</div>`;
+      else if (r.next_step) body += `<div class="small muted">Next: ${esc(r.next_step)}</div>`;
+    } else {
+      name = "Pre-send check and send";
+      body += `<div class="lbl">Pre-send check</div>${checksList(e.pre.checks)}`;
+      body += `<div class="lbl">Sent ${r.data && r.data.time ? "at " + esc(r.data.time) : ""}</div><div class="quote">${esc(e.input.text)}</div>`;
+    }
+  } else {
+    kind = "k-block";
+    name = `Tool ${e.tool}`;
+    body += `${checksList(e.pre && e.pre.checks)}${errLine(r)}`;
+  }
+  const extra = e.pending ? tag("plain", "working") : e.tool === "send_reply" ? (blocked ? tag("block", "blocked") : tag("ok", "sent")) : verdictTag(e) + (blocked ? "" : tag(r.status, r.status));
+  return `<article class="st ${kind}">${stHead(e, name, who, extra)}<div class="b">${body}</div></article>`;
+}
+
+/** Router steps in time order, each specialist's calls nested under its ask_specialist. */
+function routedSteps(events) {
+  const evs = (events || []).slice().sort((a, b) => a.t_ms - b.t_ms);
+  const top = evs.filter((e) => e.agent === "router");
+  const subs = new Map(top.map((e) => [e, []]));
+  const orphans = {};
+  for (const e of evs.filter((x) => x.agent !== "router")) {
+    const asks = top.filter((a) => a.tool === "ask_specialist" && a.input.department === e.agent && a.t_ms <= e.t_ms);
+    if (asks.length) subs.get(asks[asks.length - 1]).push(e);
+    else (orphans[e.agent] = orphans[e.agent] || []).push(e);
+  }
+  // live: a specialist still working has no ask_specialist record yet
+  for (const [dept, list] of Object.entries(orphans)) {
+    const p = { agent: "router", tool: "ask_specialist", input: { department: dept, question: "(in progress)" }, pre: { verdict: "allow", checks: [] },
+      t_ms: list[0].t_ms, pending: true, result: null };
+    top.push(p); subs.set(p, list);
+  }
+  top.sort((a, b) => a.t_ms - b.t_ms);
+  return top.map((e) => stepCard(e, subs.get(e) || [])).join("");
+}
+
+function writtenCard(w) {
+  const rows = [];
+  for (const q of (w && w.requests) || []) rows.push([q.request_id, (q.type || "request").replace(/_/g, " ") + " request", `${q.order_id}${q.line_id ? " " + q.line_id : ""}`, q.for, q.status]);
+  for (const c of (w && w.claims) || []) rows.push([c.claim_id, (c.type || "claim").replace(/_/g, " ") + " claim", `${c.order_id}${c.line_id ? " " + c.line_id : ""}`, c.for, c.status]);
+  for (const h of (w && w.handovers) || []) rows.push([h.handover_id, "handover: " + (REASON[h.reason] || h.reason), h.order_id || "no order", `${h.contact_name}, ${h.title}`, h.status]);
+  const body = rows.length
+    ? `<div class="tw"><table><thead><tr><th>Reference</th><th>What</th><th>Order</th><th>For</th><th>Status</th></tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
+       <div class="small muted">Nothing is approved by the assistant; each record waits for the person named.</div>`
+    : `<div class="muted small">Nothing written: no request, claim or handover is pending from this message.</div>`;
+  return `<article class="st"><div class="h"><span class="nm">Pending for staff</span><span class="sp"></span>${tag("plain", rows.length + " written")}</div><div class="b">${body}</div></article>`;
+}
+
+function timingCard(events, total) {
+  const top = (events || []).filter((e) => e.agent === "router" && e.elapsed_ms !== undefined).sort((a, b) => a.t_ms - b.t_ms);
+  if (!total) total = Math.max(1, ...top.map((e) => e.t_ms + e.elapsed_ms));
+  const cls = { verify_order: "c-verify", ask_specialist: "c-ask", compose_reply: "c-compose", send_reply: "c-send", hand_to_staff: "c-hand" };
+  const lanes = [];
+  for (const e of top) {
+    let i = lanes.findIndex((l) => l.end <= e.t_ms);
+    if (i < 0) { lanes.push({ end: 0, items: [] }); i = lanes.length - 1; }
+    lanes[i].items.push(e); lanes[i].end = e.t_ms + e.elapsed_ms;
+  }
+  const bars = lanes.map((l) => `<div class="lane">${l.items.map((e) => `<span class="seg-t ${cls[e.tool] || "c-send"}" style="left:${(100 * e.t_ms / total).toFixed(2)}%;width:${(100 * e.elapsed_ms / total).toFixed(2)}%" title="${esc(e.tool)} ${sec(e.elapsed_ms)}"></span>`).join("")}</div>`).join("");
+  const sum = (t) => top.filter((e) => e.tool === t).reduce((a, e) => a + e.elapsed_ms, 0);
+  const asks = top.filter((e) => e.tool === "ask_specialist");
+  const items = [["c-verify", "verify_order", sum("verify_order")]];
+  if (asks.length) asks.forEach((a) => items.push(["c-ask", `ask_specialist (${a.input.department})`, a.elapsed_ms]));
+  else items.push(["c-ask", "ask_specialist", 0]);
+  if (top.some((e) => e.tool === "hand_to_staff")) items.push(["c-hand", "hand_to_staff", sum("hand_to_staff")]);
+  items.push(["c-compose", "compose_reply", sum("compose_reply")], ["c-send", "send_reply", sum("send_reply")]);
+  const together = asks.length > 1 && asks.every((a) => a.t_ms === asks[0].t_ms) ? `<div class="small muted">The ${asks.length} specialists ran at the same time.</div>` : "";
+  return `<article class="st timing"><div class="h"><span class="nm">Timing</span><span class="sp"></span><b>Time to reply: ${sec(total)}</b></div><div class="b">
+    ${bars}<div class="legend">${items.map(([c, t, ms]) => `<span><i class="${c}"></i>${esc(t)} ${sec(ms)}</span>`).join("")}</div>${together}
+    <div class="small muted" style="margin-top:3px">The gaps between bars are the router model choosing its next step.</div></div></article>`;
+}
+
+function scoreCard(r) {
+  const s = r.score || {};
+  const checks = Object.entries(s.checks || {});
+  const limits = Object.entries(s.limits || {});
+  const held = limits.filter(([, v]) => v).length;
+  return `<article class="st"><div class="h"><span class="nm">Benchmark score for this run</span><span class="sp"></span>${tag(s.pass ? "pass" : "fail", s.pass ? "pass" : "fail")}</div><div class="b">
+    <div class="score">${checks.map(([k, v]) => tag(v ? "pass" : "fail", k.replace(/_/g, " "))).join("")}</div>
+    <details style="margin-top:5px"><summary>${held} of ${limits.length} hard limits held</summary><ul class="checks" style="margin-top:4px">${limits.map(([k, v]) => `<li class="${v ? "" : "f"}">${tag(v ? "pass" : "fail", v ? "held" : "broken")}<span>${esc(k)}</span><span></span></li>`).join("")}</ul></details>
+  </div></article>`;
+}
+
+/** The whole record of one customer message. T: { n, message, events, written, total_ms, score, done }. */
+function turnHtml(T, showHeading) {
+  let h = showHeading ? `<div class="turnh">Message ${T.n}</div>` : "";
+  h += `<article class="st"><div class="h"><span class="tm">+0.0 s</span><span class="nm">Customer message</span><span class="sp"></span></div><div class="b"><div class="quote">${esc(T.message)}</div></div></article>`;
+  h += routedSteps(T.events);
+  if (!T.done) return h + `<div class="empty">Working...</div>`;
+  if (T.holding) h += `<article class="st k-block"><div class="h"><span class="nm">Holding reply sent</span></div><div class="b">The pre-send check blocked the rewrite too, so a fixed holding reply went out and the matter went to the customer service manager.</div></article>`;
+  h += writtenCard(T.written);
+  h += timingCard(T.events, T.total_ms);
+  if (T.score) h += scoreCard(T);
+  return h;
+}
+
+function renderSteps() {
+  if (!S.turns.length) { $("steps").innerHTML = `<div class="empty">${S.mode === "replay" ? "Pick a starter to replay a recorded conversation." : "Send a message to see each step."}</div>`; return; }
+  $("steps").innerHTML = S.turns.map((T) => turnHtml(T, S.mode === "live")).join("");
+}
+
+// ---------------------------------------------------------------- replay
+const RUNS = {};
+for (const r of RESULTS.results || []) (RUNS[r.id] = RUNS[r.id] || []).push(r);
+const wait = (ms) => new Promise((res) => setTimeout(res, ms));
+
+function replaySummary() {
+  const sm = RESULTS.summary || {};
+  const models = sm.models ? `${sm.models.router} (router and specialists), ${sm.models.synthesis} (writer)` : "";
+  $("run-summary").textContent = `From ${RESULTS.file}: ${sm.passed} of ${sm.runs} runs passed, ${sm.hard_limit_breaches} hard-limit breaches, median time to reply ${sec(sm.median_ms)}. ${models}. No key needed.`;
+}
+
+async function playRun(id, runIdx) {
+  const token = ++S.token;
+  const runs = RUNS[id] || [];
+  const r = runs[runIdx || 0];
+  markStarter(id);
+  $("chat").innerHTML = "";
+  S.turns = [];
+  if (runs.length > 1) {
+    $("run-pick").hidden = false;
+    $("run-pick").innerHTML = `<span class="muted">Run</span>` + runs.map((x, i) => `<button type="button" class="btn ${i === (runIdx || 0) ? "" : "ghost"}" data-i="${i}">${x.run}</button>`).join("");
+    $("run-pick").querySelectorAll("button").forEach((b) => (b.onclick = () => playRun(id, Number(b.dataset.i))));
+  } else $("run-pick").hidden = true;
+  if (!r) { addSys("No recorded run for this case."); renderSteps(); return; }
+  $("run-score").innerHTML = `<b>${esc(r.id)}</b> ${esc(r.title)} ${tag(r.score.pass ? "pass" : "fail", r.score.pass ? "pass" : "fail")}`;
+  addMsg("me", r.message);
+  const T = { n: 1, message: r.message, events: [], written: r.written, total_ms: r.score.metrics && r.score.metrics.time_ms ? r.score.metrics.time_ms.total : null,
+    score: r.score, holding: !!(r.score.metrics && r.score.metrics.holding_reply), done: false };
+  S.turns = [T];
+  renderSteps();
+  const typing = addSys("Happy Mart is looking into it...");
+  const all = (r.events || []).slice().sort((a, b) => a.t_ms - b.t_ms);
+  for (const e of all) {
+    await wait(260);
+    if (token !== S.token) return;
+    T.events.push(e);
+    renderSteps();
+  }
+  await wait(260);
+  if (token !== S.token) return;
+  typing.remove();
+  if (r.error) addSys(`The run stopped with an error: ${r.error}`);
+  else addMsg("bot", r.reply);
+  T.done = true;
+  renderSteps();
+}
+
+// ---------------------------------------------------------------- starters
+function markStarter(id) {
+  $("starters").querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-current", b.dataset.id === id ? "true" : "false"));
+}
+function renderStarters() {
+  const live = S.mode === "live";
+  const list = live ? CASES.filter((c) => !c.faults) : CASES.filter((c) => RUNS[c.id]);
+  let h = `<div class="small muted">${live ? "Starters: pick one to fill the box, edit it if you like, then Send. Each holds an order ID and the last 4 phone digits." : "Starters with a recorded run: pick one to replay it."}</div>`;
+  for (const g of GROUP_ORDER) {
+    const cs = list.filter((c) => c.group === g);
+    if (!cs.length) continue;
+    h += `<div class="grp">${esc(g)}</div>` + cs.map((c) => `<button type="button" class="chip" data-id="${esc(c.id)}"><b>${esc(c.id)}</b> ${esc(c.title)}</button>`).join("");
+  }
+  $("starters").innerHTML = h;
+  $("starters").querySelectorAll(".chip").forEach((b) => (b.onclick = () => {
+    if (S.mode === "replay") playRun(b.dataset.id, 0);
+    else { $("input").value = CASES.find((c) => c.id === b.dataset.id).message; markStarter(b.dataset.id); $("input").focus(); }
+  }));
+}
+
+// ---------------------------------------------------------------- live
+const RES = RESOURCES;
+function newConversation(note) {
+  clearInterval(S.poll);
+  S.token++;
+  const store = window.HMTools.memoryStore(DATA);
+  let desk;
+  const agents = window.HMAgent.createAgents({ apiKey: S.key, desk: () => desk, resources: RES });
+  desk = window.HMTools.createDesk(store, TABLES, CLAUSES, { now: TABLES.now, faults: {}, runSpecialist: agents.runSpecialist, runSynthesis: agents.runSynthesis });
+  Object.assign(S, { store, desk, agents, session: desk.newSession(), turns: [], busy: false });
+  $("chat").innerHTML = "";
+  markStarter(null);
+  addSys(note || "A new conversation, on a fresh copy of the demo data.");
+  renderSteps();
+}
+const writtenNow = () => ({ requests: S.store.get("requests") || [], claims: S.store.get("claims") || [], handovers: S.store.get("handovers") || [] });
+
+async function send(text) {
+  text = (text || "").trim();
+  if (S.mode !== "live") return;
+  if (!S.key) { addSys("Paste your Anthropic API key in the box above to chat live."); $("key").focus(); return; }
+  if (!text || S.busy) return;
+  if (!S.agents || S.agentsKey !== S.key) { newConversation(); S.agentsKey = S.key; }
+  S.busy = true; $("send").disabled = true;
+  addMsg("me", text);
+  $("input").value = "";
+  const before = writtenNow();
+  const count = { requests: before.requests.length, claims: before.claims.length, handovers: before.handovers.length };
+  const T = { n: S.turns.length + 1, message: text, events: [], written: null, total_ms: null, done: false };
+  S.turns.push(T);
+  const session = S.session, token = S.token;
+  const typing = addSys("Happy Mart is looking into it...");
+  S.poll = setInterval(() => { if (session.turn && token === S.token) { T.events = session.turn.events.slice(); renderSteps(); } }, 500);
+  renderSteps();
+  try {
+    const out = await S.agents.runTurn(session, text);
+    if (token !== S.token) return;
+    const w = writtenNow();
+    Object.assign(T, { events: out.turn.events.slice(), total_ms: out.turn.end - out.turn.start, holding: !!out.turn.holding, done: true,
+      written: { requests: w.requests.slice(count.requests), claims: w.claims.slice(count.claims), handovers: w.handovers.slice(count.handovers) } });
+    typing.remove();
+    addMsg("bot", out.reply);
+    if (out.stoppedBy !== "send_reply") addSys(`The router stopped without sending (${out.stoppedBy}); the fallback reply was shown.`);
+  } catch (e) {
+    if (token !== S.token) return;
+    typing.remove();
+    T.done = true; T.written = { requests: [], claims: [], handovers: [] };
+    if (session.turn) T.events = session.turn.events.slice();
+    addSys(`The model call failed: ${e.message}. Check the key, or start a new conversation.`);
+  } finally {
+    if (token === S.token) { clearInterval(S.poll); S.busy = false; $("send").disabled = false; renderSteps(); }
+  }
+}
+
+// ---------------------------------------------------------------- modes
+function setMode(m) {
+  S.mode = m;
+  S.token++;
+  clearInterval(S.poll);
+  S.busy = false; $("send").disabled = false;
+  $("m-replay").setAttribute("aria-pressed", m === "replay");
+  $("m-live").setAttribute("aria-pressed", m === "live");
+  $("replay-box").hidden = m !== "replay";
+  $("live-box").hidden = m !== "live";
+  $("live-actions").hidden = m !== "live";
+  $("input").disabled = m !== "live";
+  $("send").disabled = m !== "live";
+  $("input").placeholder = m === "live" ? "Type a message, or pick a starter below" : "Switch to Live to type your own message";
+  $("mode-note").textContent = m === "replay" ? "Recorded conversations from the benchmark; no key needed." : "Your own key, a fresh copy of the demo data per conversation.";
+  $("chat-note").textContent = m === "replay" ? "What the customer sent and the reply they got, as recorded." : "You are the customer. Give an order ID and the last 4 digits of the phone number, as in the starters.";
+  $("chat").innerHTML = "";
+  S.turns = [];
+  renderStarters();
+  if (m === "replay") {
+    const first = CASES.find((c) => RUNS[c.id]);
+    if (first) playRun(first.id, 0); else renderSteps();
+  } else {
+    S.agents = null; S.desk = null; S.session = null;
+    addSys(S.key ? "Ready. Pick a starter or type a message." : "Paste your Anthropic API key above to start.");
+    renderSteps();
+  }
+}
+
+// ---------------------------------------------------------------- wiring
+$("clock").textContent = DATA.meta.now_label;
+$("model-note").textContent = `Models: ${window.HMAgent.MODELS.router} for the router and specialists, ${window.HMAgent.MODELS.synthesis} for the writer. Each message makes several model calls.`;
+S.key = readKey();
+$("key").value = S.key;
+$("key").oninput = () => { S.key = $("key").value.trim(); saveKey(S.key); };
+$("forget").onclick = () => { S.key = ""; $("key").value = ""; saveKey(""); S.agents = null; };
+$("newconv").onclick = () => { if (S.busy) return; S.agents = null; if (S.key) { newConversation(); S.agentsKey = S.key; } else { $("chat").innerHTML = ""; S.turns = []; renderSteps(); addSys("Paste your Anthropic API key above to start."); } };
+$("m-replay").onclick = () => setMode("replay");
+$("m-live").onclick = () => setMode("live");
+$("send").onclick = () => send($("input").value);
+$("input").onkeydown = (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send($("input").value); } };
+replaySummary();
+setMode("replay");
+</script>
+<script>
+// Zoom: scales the whole page, 80% to 150% in steps of 10; the setting is kept in this browser only.
+(function () {
+  const wrap = document.querySelector(".wrap");
+  const out = document.getElementById("z-out"), reset = document.getElementById("z-reset"), inn = document.getElementById("z-in");
+  const SLOT = "hm-desk-zoom", MIN = 80, MAX = 150, STEP = 10;
+  let z = 100;
+  try { const v = Number(localStorage.getItem(SLOT)); if (v >= MIN && v <= MAX) z = v; } catch (e) { /* storage blocked */ }
+  function apply() {
+    wrap.style.zoom = z === 100 ? "" : String(z / 100);
+    wrap.style.setProperty("--z", String(z / 100));  // full screen keeps the page to the window at any zoom
+    reset.textContent = z + "%";
+    out.disabled = z <= MIN; inn.disabled = z >= MAX;
+    try { localStorage.setItem(SLOT, String(z)); } catch (e) { /* storage blocked */ }
+  }
+  out.addEventListener("click", () => { z = Math.max(MIN, z - STEP); apply(); });
+  inn.addEventListener("click", () => { z = Math.min(MAX, z + STEP); apply(); });
+  reset.addEventListener("click", () => { z = 100; apply(); });
+  apply();
+})();
+// Full screen (as on FD): the Fullscreen API where it exists (webkit prefix as fallback), else a CSS class. Esc leaves natively.
+(function () {
+  const btn = document.getElementById("fs-btn");
+  const FS = {
+    el: () => document.fullscreenElement || document.webkitFullscreenElement || null,
+    can: () => !!(document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen),
+    fake: false,
+  };
+  function fsSync() {
+    const on = !!FS.el() || FS.fake;
+    document.documentElement.classList.toggle("fs", on);
+    btn.setAttribute("aria-pressed", String(on));
+    btn.querySelector("span").textContent = on ? "Exit full screen" : "Full screen";
+  }
+  btn.onclick = () => {
+    const d = document.documentElement;
+    if (FS.el()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+    if (FS.fake) { FS.fake = false; fsSync(); return; }
+    if (FS.can()) {
+      try {
+        const p = (d.requestFullscreen || d.webkitRequestFullscreen).call(d);
+        if (p && p.catch) p.catch(() => { FS.fake = true; fsSync(); });
+      } catch (e) { FS.fake = true; fsSync(); }
+    } else { FS.fake = true; fsSync(); }
+  };
+  document.addEventListener("fullscreenchange", fsSync);
+  document.addEventListener("webkitfullscreenchange", fsSync);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && FS.fake) { FS.fake = false; fsSync(); } });
+})();
+</script>
+</body>
+</html>

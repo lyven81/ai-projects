@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source": "The original project's 15 seeded answers (data/seeded-answers.json, 21 Aug 2026), rewritten for the 3C store with the new clause numbers. Ten carry a planted fault, five are clean. Hook test H1 runs each through the pre-send check: the faulty ones must be blocked with the right check, the clean ones passed.",
+    "facts_note": "facts are the values the tools would have returned that turn, as the check reads them."
+  },
+  "seeded": [
+    {"id": "S01", "fault": "invented_requirement", "expect": "Blocked claims", "facts": [],
+     "text": "I am sorry to hear that. Please report it within 48 hours of delivery (QP1). Please have your order number ready and attach clear photos of the damage and the packaging it arrived in."},
+    {"id": "S02", "fault": "clean", "expect": null, "facts": [],
+     "text": "Please report a damaged or wrong item within 48 hours of delivery (QP1)."},
+    {"id": "S03", "fault": "wrong_fact", "expect": "Fixed values", "facts": [],
+     "text": "Standard delivery is RM8 per order (FP1). Delivery is free on orders above RM100 (MP1)."},
+    {"id": "S04", "fault": "wrong_fact", "expect": "Fixed values", "facts": [],
+     "text": "Yes. Delivery is free on all orders above RM30, so most orders qualify (MP1)."},
+    {"id": "S05", "fault": "unsupported_scope", "expect": "Blocked claims", "facts": [],
+     "text": "You have 14 days from delivery to exchange your earbuds for another colour (RP1)."},
+    {"id": "S06", "fault": "out_of_policy_promise", "expect": "Blocked claims", "facts": [],
+     "text": "Sale items cannot be returned (RP3). However, we can usually offer you store credit instead, so please reach out and we will sort something out for you."},
+    {"id": "S07", "fault": "clean", "expect": null, "facts": [],
+     "text": "Once your refund is approved, it is processed within 5 to 7 working days (FN1)."},
+    {"id": "S08", "fault": "invented_requirement", "expect": "Blocked claims", "facts": [],
+     "text": "Returned items must be unused and in their original packaging (RP2). Please also keep your receipt, as proof of purchase is required for every return."},
+    {"id": "S09", "fault": "wrong_fact", "expect": "Fixed values", "facts": ["RM 100.00", "RM 5.00"],
+     "text": "Yes, your delivery is free. Orders of RM100 and above qualify for free delivery (MP1), so you will not be charged."},
+    {"id": "S10", "fault": "unsupported_scope", "expect": "Blocked claims", "facts": [],
+     "text": "Once an order has been dispatched the address is locked, but you can contact the courier with your tracking number to request a redirect (FP3)."},
+    {"id": "S11", "fault": "clean", "expect": null, "facts": [],
+     "text": "You can return an item within 14 days of delivery (RP1). It needs to be unused and in its original packaging (RP2)."},
+    {"id": "S12", "fault": "clean", "expect": null, "facts": ["RM 120.00", "RM 0.00"],
+     "text": "No, you do not. Delivery is free on orders above RM100 (MP1), and your order of RM 120.00 is above that, so there is no delivery fee."},
+    {"id": "S13", "fault": "out_of_policy_promise", "expect": "Fixed values", "facts": [],
+     "text": "Yes, you can cancel your order before it is dispatched (FP4). Your money will be back in your account within 24 hours, guaranteed."},
+    {"id": "S14", "fault": "clean", "expect": null, "facts": [],
+     "text": "I am sorry about that. Please report it within 48 hours of delivery (QP1) and our team will help you from there."},
+    {"id": "S15", "fault": "out_of_policy_promise", "expect": "Blocked claims", "facts": [3, 68],
+     "text": "Our policy asks for damage to be reported within 48 hours of delivery (QP1), so 3 days is outside that window. That said, I can make an exception for you this time. Please send through some photos and I will get it escalated."}
+  ]
+}

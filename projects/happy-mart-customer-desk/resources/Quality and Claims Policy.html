@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quality and Claims Policy</title>
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../happy-mart-customer-desk.html" style="color:inherit;text-decoration:none">Happy Mart Customer Desk</a></div><h1>Happy Mart Quality and Claims Policy</h1><nav id="toc"></nav></div>
+<p><strong>Happy Mart Sdn Bhd</strong> is a fictional online 3C store in Shah Alam, Selangor, used for demonstration. This policy is owned by Quality and Claims and read by the claims specialist. Every point the assistant makes cites a clause from these pages.</p>
+<p>The other pages: <a href="Customer Service Policy.html">Customer Service Policy</a>, <a href="Fulfilment Policy.html">Fulfilment Policy</a>, <a href="Returns Policy.html">Returns Policy</a>, <a href="Finance Policy.html">Finance Policy</a>, <a href="Marketing Policy.html">Marketing Policy</a>, <a href="Contact List.html">Contact List</a>, <a href="Campaign Calendar.html">Campaign Calendar</a>.</p>
+<h2>1. Clauses</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Silent on</th><th>How the assistant keeps it</th></tr>
+<tr id="QP1"><td>QP1</td><td>For a damaged or wrong item, contact customer service within 48 hours of delivery.</td><td>Any evidence the customer must supply</td><td>Code: a damage report after 48 hours is refused (PreToolUse and back end); the pre-send check blocks requests for photos</td></tr>
+<tr id="QP2"><td>QP2</td><td>Every product carries a 30-day Happy Mart shop warranty from the delivery date. The warranty is limited to this shop warranty.</td><td>Any manufacturer warranty</td><td>Code: a warranty claim after 30 days is refused (PreToolUse and back end)</td></tr>
+<tr id="QP3"><td>QP3</td><td>The warranty covers manufacturing defects only. It does not cover physical damage, liquid damage or misuse.</td><td></td><td>The claims team answers from this clause</td></tr>
+<tr id="QP4"><td>QP4</td><td>A faulty product under warranty is repaired or replaced, as decided by the claims officer after inspection.</td><td></td><td>The claims team answers from this clause; the pre-send check blocks a promised repair or replacement</td></tr>
+<tr id="QP5"><td>QP5</td><td>The customer arranges and pays the postage to send a product in for a warranty claim.</td><td>Return postage after repair</td><td>The claims team answers from this clause</td></tr>
+</table></div>
+<h2>2. Who to ask</h2>
+<p>Jessica Chan, claims officer: Damage reports, warranty claims, and claims matters the policy is silent on. Where a clause is silent, the matter goes to this person (CS5).</p>
+<footer>&copy; 2026 Lee Yih Ven &middot; Happy Mart Quality and Claims Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>
