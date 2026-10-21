@@ -111,6 +111,11 @@ details>summary{cursor:pointer;color:var(--accent);font-size:12.5px}
 .score{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;margin-top:8px}
 [hidden]{display:none!important}
 footer{margin-top:28px;font-size:12px;color:var(--muted)}
+/* the Full screen button, as on Kereta Sewa Jalan-jalan */
+.btn.alt{background:var(--card);color:var(--accent)}
+.fsbtn{display:inline-flex;align-items:center;gap:6px;font-weight:600;border-radius:8px}
+.fsbtn .fs-out,.fsbtn[aria-pressed="true"] .fs-in{display:none}
+.fsbtn[aria-pressed="true"] .fs-out{display:inline}
 /* full screen: native (Fullscreen API) or the CSS fallback; the two sides fill the window and scroll inside */
 html.fs,html.fs body{height:100%;overflow:hidden}
 html.fs .wrap{max-width:none;height:100vh;display:flex;flex-direction:column;padding:10px 16px}
@@ -154,7 +159,7 @@ html.fs #confirm-panel,html.fs #approvals-panel{max-height:34vh;overflow-y:auto;
     <button type="button" id="m-live" aria-pressed="false">Live</button>
   </div>
   <span class="muted small" id="mode-note"></span>
-  <button type="button" class="btn ghost" id="fs-btn" style="margin-left:auto">Full screen</button>
+  <button type="button" class="btn alt fsbtn" id="fs-btn" aria-pressed="false" style="margin-left:auto"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fs-in" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="fs-out" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span>Full screen</span></button>
 </div>
 
 <!-- Replay controls -->
@@ -743,7 +748,7 @@ html.fs #confirm-panel,html.fs #approvals-panel{max-height:34vh;overflow-y:auto;
     if (tool === "create_order") {
       const d = deptOnly(["SL"], "SP-01"); if (d) return d;
       if (staff.tier !== "02") {
-        // The sales manager reads what his salespeople read: the order summary comes back read-only.
+        // The sales manager reads what the salespeople read: the order summary comes back read-only.
         const c0 = cust(input.customer_id);
         let data = null;
         if (c0 && (input.lines || []).length) {
@@ -1881,7 +1886,8 @@ const FS = {
 function fsSync() {
   const on = !!FS.el() || FS.fake;
   document.documentElement.classList.toggle("fs", on);
-  $("fs-btn").textContent = on ? "Exit full screen" : "Full screen";
+  $("fs-btn").setAttribute("aria-pressed", String(on));
+  $("fs-btn").querySelector("span").textContent = on ? "Exit full screen" : "Full screen";
 }
 $("fs-btn").onclick = () => {
   const d = document.documentElement;
