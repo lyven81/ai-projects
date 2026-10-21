@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FD Food and Drink Distributors</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
+.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+.acc{--sl:#2f6fb0;--fn:#b7791f;--wh:#2f855a;--ok:#2f855a;--no:#c53030}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .acc{--sl:#6aa7e0;--fn:#e3b341;--wh:#68d391;--ok:#68d391;--no:#fc8181}}
+:root[data-theme="dark"] .acc{--sl:#6aa7e0;--fn:#e3b341;--wh:#68d391;--ok:#68d391;--no:#fc8181}
+.acc .c{text-anchor:middle}.acc .e{text-anchor:end;font-weight:600}
+.acc .ok{fill:var(--ok)}.acc .no{fill:var(--no)}
+.acc .h3{font-size:13px;font-weight:700;fill:var(--navy)}.acc .nt{font-size:11px;fill:var(--muted)}
+.acc .lf{fill:var(--card);stroke-width:2}.acc .lf.sl,.acc .dh.sl{stroke:var(--sl)}.acc .lf.fn,.acc .dh.fn{stroke:var(--fn)}.acc .lf.wh,.acc .dh.wh{stroke:var(--wh)}
+.acc .dh{fill:var(--card);stroke-width:2.5}.acc .slt{fill:var(--sl)}.acc .fnt{fill:var(--fn)}.acc .wht{fill:var(--wh)}
+.acc .sep{stroke:var(--line)}.acc .yes{fill:var(--card);stroke:var(--ok);stroke-width:2}.acc .nob{fill:var(--card);stroke:var(--no);stroke-width:2}
+.acc .yn{font-size:11px;font-weight:700;fill:var(--ink)}.acc .refused{fill:var(--card);stroke:var(--no);stroke-dasharray:4 3}
+.acc .data{fill:var(--box);stroke:var(--navy)}
+.accw{overflow-x:auto}@media (max-width:700px){.accw .acc{min-width:760px}}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Operational Efficiency",
+    "problemType": "Business workflow",
+    "problem": "A wholesaler's Sales, Finance and Warehouse staff each have different authority over orders, prices, stock, credit and invoices. Every one of those rules has to hold on every request, whoever asks and however they ask. So each rule lives in code the conversation cannot change.",
+    "built": "The AI only chooses one of five tools. A shared PreToolUse hook checks who is signed in, what their department and tier may open or do, and the rules for the request before any tool runs. A shared PostToolUse hook applies policy to each result; where a rule settles it the assistant decides, and where a person decides it names them.",
+    "evidence": "All 109 test runs passed with no hard-limit breach: 15 questions sent as each of the 7 staff, plus four failure cases. Before real users it still needs a proper sign-in, a security review, a monitoring owner and a rollback plan."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:fd-food-and-drink-distributors"></div>
+<div class="top"><h1>FD Food and Drink Distributors</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/fd-food-and-drink-distributors" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<img class="cover" src="images/fd-food-and-drink-distributors/cover.jpeg" alt="Illustration of three buildings labelled Sales, Finance and Warehouse, the three departments whose rules the assistant enforces">
+<p>FD Food and Drink Distributors is a fictional Selangor wholesaler with 7 staff in Sales, Finance and Warehouse, 120 customers and 60 products. Each department has different authority over orders, prices, stock, credit and invoices. Those rules have to hold on every request, whoever asks and however they ask.</p>
+<p>I built a staff assistant where Claude chooses which of five tools to call, and two shared hooks decide what happens. A PreToolUse hook checks every call against the written policies before the tool runs, and a PostToolUse hook applies policy to every result before Claude sees it. The back end checks the critical rules again.</p>
+<p>Where a written rule settles a request, the assistant applies it and tells the staff member. Where a person decides, such as a salesperson on short stock or a manager on a discount, a delivery date or a large credit raise, the assistant explains and names that person. Try it on the <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff.html" target="_blank" rel="noopener">staff page</a> as any of the 7 staff.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Operational Efficiency</td></tr><tr><th>Problem type</th><td>Business workflow</td></tr><tr><th>Problem</th><td>A wholesaler's Sales, Finance and Warehouse staff each have different authority over orders, prices, stock, credit and invoices. Every one of those rules has to hold on every request, whoever asks and however they ask. So each rule lives in code the conversation cannot change.</td></tr><tr><th>Built</th><td>The AI only chooses one of five tools. A shared PreToolUse hook checks who is signed in, what their department and tier may open or do, and the rules for the request before any tool runs. A shared PostToolUse hook applies policy to each result; where a rule settles it the assistant decides, and where a person decides it names them.</td></tr><tr><th>Evidence</th><td>All 109 test runs passed with no hard-limit breach: 15 questions sent as each of the 7 staff, plus four failure cases. Before real users it still needs a proper sign-in, a security review, a monitoring owner and a rollback plan.</td></tr></table>
+<h2>How It Works</h2>
+<svg viewBox="0 0 860 560" role="img" aria-label="How a staff request passes Claude, the PreToolUse hook, the tool and back end, and the PostToolUse hook, with the person who decides named on a refusal" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="30" width="150" height="120" rx="10" class="bx person"/><text x="34" y="56" class="h">Staff member</text><text x="34" y="80" class="t">Signs in by staff ID</text><text x="34" y="98" class="t">Asks in the chat</text><text x="34" y="116" class="t">Confirms summaries</text>
+<rect x="210" y="30" width="200" height="120" rx="10" class="bx ai"/><text x="226" y="56" class="h">Claude agent</text><text x="226" y="80" class="t">Reads the resources</text><text x="226" y="98" class="t">Chooses one tool</text><text x="226" y="116" class="t">Follows next_step</text>
+<rect x="210" y="195" width="170" height="160" rx="10" class="bx inner"/><text x="222" y="219" class="h2">Resources (read)</text><text x="222" y="242" class="t">Management Policy</text><text x="222" y="260" class="t">Sales Policy</text><text x="222" y="278" class="t">Finance Policy</text><text x="222" y="296" class="t">Warehouse Policy</text><text x="222" y="314" class="t">Product Catalogue</text><text x="222" y="332" class="t">Customer Directory</text>
+<rect x="450" y="30" width="200" height="150" rx="10" class="bx hook"/><text x="464" y="56" class="h">PreToolUse hook</text><text x="464" y="80" class="t">Department, tier, customer</text><text x="464" y="98" class="t">Account view by department</text><text x="464" y="116" class="t">Approvals, stock, credit</text><text x="464" y="134" class="t">Delivery, duplicates</text><text x="464" y="152" class="t">Cites a clause</text>
+<rect x="450" y="225" width="200" height="150" rx="10" class="bx mcp"/><text x="464" y="249" class="h">Five MCP tools</text><text x="464" y="271" class="mono">check_stock</text><text x="464" y="288" class="mono">retrieve_customer_account</text><text x="464" y="305" class="mono">retrieve_customer_prices</text><text x="464" y="322" class="mono">create_order</text><text x="464" y="339" class="mono">raise_credit_limit</text>
+<rect x="690" y="225" width="150" height="150" rx="10" class="bx data"/><text x="704" y="249" class="h">Back end</text><text x="704" y="273" class="t">Checks again</text><text x="704" y="291" class="t">Reserves stock</text><text x="704" y="309" class="t">and credit together</text><text x="704" y="327" class="t">Request IDs</text><text x="704" y="345" class="t">The data</text>
+<rect x="210" y="405" width="200" height="130" rx="10" class="bx hook"/><text x="224" y="431" class="h">PostToolUse hook</text><text x="224" y="455" class="t">Keeps the view's fields</text><text x="224" y="473" class="t">Delivery day, overdue</text><text x="224" y="491" class="t">Sen to RM, Malaysia time</text><text x="224" y="509" class="t">Mismatch: reconcile</text>
+<rect x="20" y="405" width="170" height="130" rx="10" class="bx person"/><text x="34" y="431" class="h">Who decides</text><text x="34" y="455" class="t">Salesperson:</text><text x="34" y="473" class="t">short stock</text><text x="34" y="491" class="t">Managers: discount,</text><text x="34" y="509" class="t">delivery date,</text><text x="34" y="527" class="t">large credit raise</text>
+<line x1="170" y1="72" x2="208" y2="72" class="ar" marker-end="url(#ah)"/><line x1="210" y1="118" x2="172" y2="118" class="ar" marker-end="url(#ah)"/>
+<line x1="410" y1="64" x2="448" y2="64" class="ar" marker-end="url(#ah)"/><text x="414" y="56" class="lab">calls</text>
+<line x1="450" y1="138" x2="412" y2="138" class="ar dash" marker-end="url(#ah)"/><text x="415" y="158" class="lab">block</text>
+<line x1="290" y1="150" x2="290" y2="193" class="ar" marker-end="url(#ah)"/><text x="298" y="178" class="lab">reads</text>
+<line x1="550" y1="180" x2="550" y2="223" class="ar" marker-end="url(#ah)"/><text x="558" y="207" class="lab">allow</text>
+<line x1="650" y1="300" x2="688" y2="300" class="ar" marker-end="url(#ah)"/>
+<path d="M765,375 L765,470 L412,470" class="ar" marker-end="url(#ah)"/><text x="560" y="462" class="lab">raw result</text>
+<line x1="398" y1="405" x2="398" y2="152" class="ar" marker-end="url(#ah)"/><text x="404" y="395" class="lab">result</text>
+<path d="M95,403 L95,152" class="ar dash" marker-end="url(#ah)"/><text x="102" y="270" class="lab">named in</text><text x="102" y="285" class="lab">the reply</text>
+</svg>
+<ol><li>A staff member signs in by staff ID and asks in the chat. Claude reads the four policies, the catalogue and the directory, and chooses one of the five tools.</li><li>The PreToolUse hook checks the call against the policies before the tool runs. A refusal cites the clause and, when a person decides, names that person.</li><li>An allowed call reaches the tool and the back end, which checks again. The PostToolUse hook applies policy to the result, such as the delivery day or an overdue invoice, before Claude replies.</li></ol>
+<h2>What It Does</h2>
+<h3>Reading by department</h3>
+<p>Each department reads only what the policy opens to it. The PreToolUse hook decides before the tool runs.</p>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Stock</b></td><td>Sales and Warehouse see the quantity at each warehouse and when it was last updated. Finance does not check stock.</td></tr><tr><td><b>Storage</b></td><td>Only Warehouse sees the bin location and the last manual count.</td></tr><tr><td><b>Credit</b></td><td>Sales and Finance see the credit limit, outstanding and available credit. A salesperson opens only their own customers; the sales manager opens every customer.</td></tr><tr><td><b>Payments</b></td><td>Only Finance sees unpaid invoices and orders not yet invoiced. PostToolUse flags each overdue invoice against today's date.</td></tr><tr><td><b>Location</b></td><td>Every department can see where a customer is.</td></tr></table>
+<h3>The assistant applies policy</h3>
+<p>Where a written rule settles the request, the assistant applies it and tells the staff member.</p>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Delivery day</b></td><td>PostToolUse finds the serving warehouse from the location table and works out the delivery day. It applies the 3 pm cut-off, working days and Selangor public holidays.</td></tr><tr><td><b>Credit raise within the Tier 02 limit</b></td><td>Finance staff (FN-02-01) raise a limit from a balance above zero to at most RM 2,000.00 available. Credit raises are open to Finance only.</td></tr><tr><td><b>Stock figure age</b></td><td>A figure more than 24 hours old is flagged out of date by PostToolUse. An order on it waits for the warehouse manager's count.</td></tr><tr><td><b>An order through every check</b></td><td>A salesperson's order passes department, tier, own customer, prices, stock, minimum, credit, delivery terms and the on-screen confirmation. The sales manager sees the same summary read-only.</td></tr><tr><td><b>A repeated request</b></td><td>A request ID already used returns the existing order. No second order is placed.</td></tr></table>
+<h3>A person decides</h3>
+<p>Where a person decides, the assistant explains what happened, recommends the next step and names who decides.</p>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Short stock</b></td><td>The summary for the quantity available appears with a Confirm button. The salesperson decides, and the order is placed only after Confirm.</td></tr><tr><td><b>Discount</b></td><td>A discount needs the sales manager's recorded approval, up to 15%. An approval claimed in the chat counts as none.</td></tr><tr><td><b>Same-day delivery</b></td><td>A date earlier than the delivery terms needs the warehouse manager's recorded approval.</td></tr><tr><td><b>Raise beyond Tier 02</b></td><td>A raise past RM 2,000.00 available credit goes to the finance manager, named in the reply.</td></tr><tr><td><b>A mismatch after an order</b></td><td>If the order comes back different from what was sent, the reference is kept and nothing is retried. The sales manager reconciles it.</td></tr></table>
+<h2>Try It</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff.html" target="_blank" rel="noopener">Staff page</a></b></td><td>Sign in as any of the 7 staff. Replay every one of the 105 question runs without a key: pick the question, then the staff ID, with the hook view beside the chat. Or chat live with your own API key.</td></tr>
+<tr><td><b>The policies</b></td><td><a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/resources/Management%20Policy.html" target="_blank" rel="noopener">Management Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/resources/Sales%20Policy.html" target="_blank" rel="noopener">Sales Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/resources/Finance%20Policy.html" target="_blank" rel="noopener">Finance Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/resources/Warehouse%20Policy.html" target="_blank" rel="noopener">Warehouse Policy</a>: the 48 clauses every refusal cites.</td></tr>
+<tr><td><b>The resources</b></td><td><a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/resources/Product%20Catalogue.html" target="_blank" rel="noopener">Product Catalogue</a> · <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/resources/Customer%20Directory.html" target="_blank" rel="noopener">Customer Directory</a>: what Claude reads about products and customers.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>The expected result of every run, written before the build.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat uses your own Anthropic API key, and every call is billed to your account. Use a limited key that you can revoke; it stays in the page's memory and goes to Anthropic alone. A public service would call the model from its own server.</p>
+<h2>Who Can Do What</h2>
+<p>The same five tools give each access level a different answer. The PreToolUse hook checks the department, then the tier, then whether the customer is the salesperson's own, before any tool runs.</p>
+<div class="accw"><svg viewBox="0 0 1000 874" role="img" aria-label="Who can do what: the PreToolUse hook checks department, then tier, then own customer; each staff level's allowed and refused reads and actions" class="dg acc">
+<defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="310" y="14" width="380" height="52" rx="10" class="bx person"/><text x="500" y="37" class="h c">Staff member signs in</text><text x="500" y="56" class="lab c">The session sets the staff ID; a typed ID changes nothing</text><path d="M500,66 L500,92" class="ar" marker-end="url(#ah2)"/><rect x="270" y="94" width="460" height="40" rx="10" class="bx hook"/><text x="500" y="119" class="h2 c">PreToolUse hook: which department may use this tool?</text><path d="M500,134 L500,156 L170,156 L170,176" class="ar" marker-end="url(#ah2)"/><rect x="90" y="178" width="160" height="34" rx="10" class="bx dh sl"/><text x="170" y="200" class="h slt c">Sales</text><path d="M170,212 L170,236" class="ar" marker-end="url(#ah2)"/><rect x="70" y="238" width="200" height="36" rx="10" class="bx hook"/><text x="170" y="261" class="h2 c">Does the tier allow it?</text><path d="M170,274 L170,290 L89,290 L89,304" class="ar" marker-end="url(#ah2)"/><text x="89" y="320" class="lab c">Tier 01, manager</text><path d="M170,274 L170,290 L251,290 L251,304" class="ar" marker-end="url(#ah2)"/><text x="251" y="320" class="lab c">Tier 02, staff</text><path d="M500,134 L500,156 L500,156 L500,176" class="ar" marker-end="url(#ah2)"/><rect x="420" y="178" width="160" height="34" rx="10" class="bx dh fn"/><text x="500" y="200" class="h fnt c">Finance</text><path d="M500,212 L500,236" class="ar" marker-end="url(#ah2)"/><rect x="400" y="238" width="200" height="36" rx="10" class="bx hook"/><text x="500" y="261" class="h2 c">Does the tier allow it?</text><path d="M500,274 L500,290 L419,290 L419,304" class="ar" marker-end="url(#ah2)"/><text x="419" y="320" class="lab c">Tier 01, manager</text><path d="M500,274 L500,290 L581,290 L581,304" class="ar" marker-end="url(#ah2)"/><text x="581" y="320" class="lab c">Tier 02, staff</text><path d="M500,134 L500,156 L830,156 L830,176" class="ar" marker-end="url(#ah2)"/><rect x="750" y="178" width="160" height="34" rx="10" class="bx dh wh"/><text x="830" y="200" class="h wht c">Warehouse</text><path d="M830,212 L830,236" class="ar" marker-end="url(#ah2)"/><rect x="730" y="238" width="200" height="36" rx="10" class="bx hook"/><text x="830" y="261" class="h2 c">Does the tier allow it?</text><path d="M830,274 L830,290 L749,290 L749,304" class="ar" marker-end="url(#ah2)"/><text x="749" y="320" class="lab c">Tier 01, manager</text><path d="M830,274 L830,290 L911,290 L911,304" class="ar" marker-end="url(#ah2)"/><text x="911" y="320" class="lab c">Tier 02, staff</text><rect x="181" y="330" width="140" height="30" rx="10" class="bx hook"/><text x="251" y="350" class="h2 c">Own customer?</text><path d="M231,360 L217,372" class="ar" marker-end="url(#ah2)"/><path d="M271,360 L285,372" class="ar" marker-end="url(#ah2)"/><circle cx="211" cy="388" r="15" class="yes"/><text x="211" y="392" class="yn c">YES</text><circle cx="291" cy="388" r="15" class="nob"/><text x="291" y="392" class="yn c">NO</text><path d="M211,403 L211,446" class="ar" marker-end="url(#ah2)"/><path d="M291,403 L291,410" class="ar" marker-end="url(#ah2)"/><rect x="249" y="412" width="152" height="28" rx="10" class="bx refused"/><text x="325" y="430" class="nt c">Refused: not their customer</text><path d="M89,326 L89,446" class="ar" marker-end="url(#ah2)"/><path d="M419,326 L419,446" class="ar" marker-end="url(#ah2)"/><path d="M581,326 L581,446" class="ar" marker-end="url(#ah2)"/><path d="M749,326 L749,446" class="ar" marker-end="url(#ah2)"/><path d="M911,326 L911,446" class="ar" marker-end="url(#ah2)"/><rect x="14" y="448" width="150" height="326" rx="10" class="bx lf sl"/><text x="22" y="468" class="h3">SL-01-01</text><text x="22" y="484" class="lab">Sales manager</text><text x="22" y="506" class="t">Stock</text><text x="156" y="506" class="t e ok">allowed</text><text x="22" y="524" class="t">Storage</text><text x="156" y="524" class="t e no">refused</text><text x="22" y="542" class="t">Credit</text><text x="156" y="542" class="t e ok">allowed</text><text x="22" y="560" class="t">Payments</text><text x="156" y="560" class="t e no">refused</text><text x="22" y="578" class="t">Location</text><text x="156" y="578" class="t e ok">allowed</text><text x="22" y="596" class="t">Delivery</text><text x="156" y="596" class="t e ok">allowed</text><text x="22" y="614" class="t">Order</text><text x="156" y="614" class="t e no">refused</text><text x="22" y="632" class="t">Credit raise</text><text x="156" y="632" class="t e no">refused</text><line x1="22" y1="644" x2="156" y2="644" class="sep"/><text x="22" y="660" class="nt">Customers: every</text><text x="22" y="675" class="nt">customer, for</text><text x="22" y="690" class="nt">supervision</text><text x="22" y="705" class="nt">Orders: sees the</text><text x="22" y="720" class="nt">summary read-only</text><text x="22" y="735" class="nt">Approves: discount,</text><text x="22" y="750" class="nt">minimum-order</text><text x="22" y="765" class="nt">exception</text><rect x="176" y="448" width="150" height="266" rx="10" class="bx lf sl"/><text x="184" y="468" class="h3">SL-02-01, SL-02-02</text><text x="184" y="484" class="lab">Salespeople</text><text x="184" y="506" class="t">Stock</text><text x="318" y="506" class="t e ok">allowed</text><text x="184" y="524" class="t">Storage</text><text x="318" y="524" class="t e no">refused</text><text x="184" y="542" class="t">Credit</text><text x="318" y="542" class="t e ok">allowed</text><text x="184" y="560" class="t">Payments</text><text x="318" y="560" class="t e no">refused</text><text x="184" y="578" class="t">Location</text><text x="318" y="578" class="t e ok">allowed</text><text x="184" y="596" class="t">Delivery</text><text x="318" y="596" class="t e ok">allowed</text><text x="184" y="614" class="t">Order</text><text x="318" y="614" class="t e ok">allowed</text><text x="184" y="632" class="t">Credit raise</text><text x="318" y="632" class="t e no">refused</text><line x1="184" y1="644" x2="318" y2="644" class="sep"/><text x="184" y="660" class="nt">Own customers only</text><text x="184" y="675" class="nt">Short stock: decides</text><text x="184" y="690" class="nt">whether to order what</text><text x="184" y="705" class="nt">is available</text><rect x="344" y="448" width="150" height="266" rx="10" class="bx lf fn"/><text x="352" y="468" class="h3">FN-01-01</text><text x="352" y="484" class="lab">Finance manager</text><text x="352" y="506" class="t">Stock</text><text x="486" y="506" class="t e no">refused</text><text x="352" y="524" class="t">Storage</text><text x="486" y="524" class="t e no">refused</text><text x="352" y="542" class="t">Credit</text><text x="486" y="542" class="t e ok">allowed</text><text x="352" y="560" class="t">Payments</text><text x="486" y="560" class="t e ok">allowed</text><text x="352" y="578" class="t">Location</text><text x="486" y="578" class="t e ok">allowed</text><text x="352" y="596" class="t">Delivery</text><text x="486" y="596" class="t e no">refused</text><text x="352" y="614" class="t">Order</text><text x="486" y="614" class="t e no">refused</text><text x="352" y="632" class="t">Credit raise</text><text x="486" y="632" class="t e ok">allowed</text><line x1="352" y1="644" x2="486" y2="644" class="sep"/><text x="352" y="660" class="nt">Credit raise: any</text><text x="352" y="675" class="nt">size</text><text x="352" y="690" class="nt">Approves: prepaid</text><text x="352" y="705" class="nt">route</text><rect x="506" y="448" width="150" height="266" rx="10" class="bx lf fn"/><text x="514" y="468" class="h3">FN-02-01</text><text x="514" y="484" class="lab">Finance staff</text><text x="514" y="506" class="t">Stock</text><text x="648" y="506" class="t e no">refused</text><text x="514" y="524" class="t">Storage</text><text x="648" y="524" class="t e no">refused</text><text x="514" y="542" class="t">Credit</text><text x="648" y="542" class="t e ok">allowed</text><text x="514" y="560" class="t">Payments</text><text x="648" y="560" class="t e ok">allowed</text><text x="514" y="578" class="t">Location</text><text x="648" y="578" class="t e ok">allowed</text><text x="514" y="596" class="t">Delivery</text><text x="648" y="596" class="t e no">refused</text><text x="514" y="614" class="t">Order</text><text x="648" y="614" class="t e no">refused</text><text x="514" y="632" class="t">Credit raise</text><text x="648" y="632" class="t e ok">allowed</text><line x1="514" y1="644" x2="648" y2="644" class="sep"/><text x="514" y="660" class="nt">Credit raise: from a</text><text x="514" y="675" class="nt">balance above zero to</text><text x="514" y="690" class="nt">RM 2,000.00; beyond,</text><text x="514" y="705" class="nt">asks FN-01-01</text><rect x="674" y="448" width="150" height="266" rx="10" class="bx lf wh"/><text x="682" y="468" class="h3">WH-01-01</text><text x="682" y="484" class="lab">Warehouse manager</text><text x="682" y="506" class="t">Stock</text><text x="816" y="506" class="t e ok">allowed</text><text x="682" y="524" class="t">Storage</text><text x="816" y="524" class="t e ok">allowed</text><text x="682" y="542" class="t">Credit</text><text x="816" y="542" class="t e no">refused</text><text x="682" y="560" class="t">Payments</text><text x="816" y="560" class="t e no">refused</text><text x="682" y="578" class="t">Location</text><text x="816" y="578" class="t e ok">allowed</text><text x="682" y="596" class="t">Delivery</text><text x="816" y="596" class="t e ok">allowed</text><text x="682" y="614" class="t">Order</text><text x="816" y="614" class="t e no">refused</text><text x="682" y="632" class="t">Credit raise</text><text x="816" y="632" class="t e no">refused</text><line x1="682" y1="644" x2="816" y2="644" class="sep"/><text x="682" y="660" class="nt">Approves: stock</text><text x="682" y="675" class="nt">figure confirmation,</text><text x="682" y="690" class="nt">delivery-date</text><text x="682" y="705" class="nt">exception</text><rect x="836" y="448" width="150" height="198" rx="10" class="bx lf wh"/><text x="844" y="468" class="h3">WH-02-01</text><text x="844" y="484" class="lab">Warehouse staff</text><text x="844" y="506" class="t">Stock</text><text x="978" y="506" class="t e ok">allowed</text><text x="844" y="524" class="t">Storage</text><text x="978" y="524" class="t e ok">allowed</text><text x="844" y="542" class="t">Credit</text><text x="978" y="542" class="t e no">refused</text><text x="844" y="560" class="t">Payments</text><text x="978" y="560" class="t e no">refused</text><text x="844" y="578" class="t">Location</text><text x="978" y="578" class="t e ok">allowed</text><text x="844" y="596" class="t">Delivery</text><text x="978" y="596" class="t e ok">allowed</text><text x="844" y="614" class="t">Order</text><text x="978" y="614" class="t e no">refused</text><text x="844" y="632" class="t">Credit raise</text><text x="978" y="632" class="t e no">refused</text><rect x="14" y="792" width="972" height="30" rx="10" class="bx hook"/><text x="500" y="812" class="t c">PostToolUse hook on every result: keeps the view's fields, works out the delivery day and overdue invoices, shows RM and Malaysia time</text><rect x="14" y="830" width="972" height="30" rx="10" class="bx data"/><text x="500" y="850" class="t c">Back end: checks department, view, tier and own customer again before any data leaves</text>
+</svg></div>
+<p>Every allowed and refused mark is the recorded result for that access level (questions 1, 2, 3, 4, 5, 6, 7 and 9). The questions ask about C-0001, SL-02-01's customer, so SL-02-02's runs show the own-customer refusal instead.</p>
+<h2>Test Results</h2>
+<p>The assistant was tested on 109 runs written before the build in an <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a>: 15 questions, each sent as all 7 staff, plus 4 failure runs. Each run is scored from the tool log and the data: the right tool, the right status and code, the person named, the records written, and 8 hard limits. It passed all 109 with no hard-limit breach, and its first tool was right in 108 of 108 agent runs.</p>
+<h3>Who can read what (questions 1 to 5)</h3>
+<p>Stock, storage, credit, payments and location, each asked by every access level. 35 of 35 runs passed.</p>
+<table><tr><th>Run</th><th>Question</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>Q02-SL-02-01</code></td><td>Where is mineral water stored in WH-A, and when was it last counted?</td><td>Refuses: storage is open to Warehouse only. The salesperson gets one sentence.</td><td><b>PreToolUse:</b> the check "Sales may see stock storage" (MP-07) fails, so <code>check_stock</code> never runs: <code>department_not_permitted</code>. The first reply ran past one sentence, so the agent loop sent it back once to be shortened; the final reply: "Hi Wei Ling, the storage location and last count for stock aren't open to Sales, so nothing was placed or changed."</td></tr><tr><td style="white-space:nowrap"><code>Q04-FN-02-01</code></td><td>Which of C-0001's invoices are overdue?</td><td>Shows C-0001's unpaid invoices and finds the overdue one.</td><td><b>PreToolUse:</b> "Finance may open a customer's payments" (MP-07) passes. <b>PostToolUse:</b> "Invoices checked against today (2026-10-01) and their due dates (issue date plus 30 days' terms): 1 overdue (FP-09)": FD-INV-00001, RM 1,350.00, 12 days overdue.</td></tr></table>
+<h3>The assistant applies policy (questions 6 to 10)</h3>
+<p>A written rule settles it and the assistant tells the staff member: the delivery day, a credit raise within Tier 02, stock figure age, an order through every check, a repeated request. 35 of 35 runs passed.</p>
+<table><tr><th>Run</th><th>Question</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>Q06-WH-01-01</code></td><td>If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?</td><td>Names the warehouse that ships C-0001's order and the delivery day for an order confirmed now.</td><td><b>PostToolUse:</b> "Serving warehouse from the location table: Shah Alam (Petaling) is served from WH-A Shah Alam (WP-01, WP-08)". Then "Delivery day applied for an order confirmed Thu 1 Oct 2026, 10:00 MYT: before 3 pm on a working day, so the next working day, Fri 2 Oct 2026; Sundays and Selangor public holidays skipped (WP-07, WP-09)".</td></tr><tr><td style="white-space:nowrap"><code>Q07-SL-01-01</code></td><td>Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.</td><td>Refuses the sales manager in one sentence: credit raises are not open to Sales. Nothing changes.</td><td><b>PreToolUse:</b> "Sales may use raise_credit_limit" (FP-08) fails, so <code>raise_credit_limit</code> never runs: <code>department_not_permitted</code>, and <code>next_step</code>: "Ask Finance (FN-02-01) to raise it." The reply: "Hi Hafiz, credit raises aren't open to Sales, so nothing was changed."</td></tr><tr><td style="white-space:nowrap"><code>Q07-FN-02-01</code></td><td>Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.</td><td>Raises C-0001's limit by RM 100, taking available credit to RM 2,000.00, within the Tier 02 limit.</td><td><b>PreToolUse:</b> "Tier 02: balance after the raise RM 2,000.00, within RM 2,000.00" (FP-06) passes. <b>PostToolUse:</b> "New limit recomputed RM 5,100.00, balance RM 2,000.00: both match (FP-01, FP-06)"; the raise is recorded with FN-02-01.</td></tr><tr><td style="white-space:nowrap"><code>Q09-SL-01-01</code></td><td>Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.</td><td>Places no order for the sales manager and shows the order summary read-only.</td><td><b>PreToolUse:</b> "Tier 02 creates orders" (SP-01) fails: <code>tier_not_permitted</code>. The result carries the summary read-only (total RM 1,200.00), and <code>next_step</code> names SL-02-01, the salesperson who places it.</td></tr><tr><td style="white-space:nowrap"><code>Q10-SL-02-01</code></td><td>The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.</td><td>Returns the order already placed on that request ID. No second order.</td><td><b>Request ID:</b> PreToolUse records "Request ID RQ-F1 used before: the tool returns order FD-SO-00249" (SP-08). The back end returns that order, and <b>PostToolUse</b> marks it as the existing order.</td></tr></table>
+<h3>A person decides (questions 11 to 15)</h3>
+<p>The assistant explains and recommends, and a person decides: short stock, a discount, same-day delivery, a raise beyond Tier 02, a mismatch after an order. 35 of 35 runs passed.</p>
+<table><tr><th>Run</th><th>Question</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>Q11-SL-02-01</code></td><td>Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.</td><td>Places nothing yet. The salesperson decides whether to order the quantity available, on the Confirm button.</td><td><b>PreToolUse:</b> "FD-DR-012: 10 asked, 8 available at WH-A" (WP-05) fails: <code>stock_short</code>. The result carries the summary for the 8 available, RM 364.80, shown on the staff page with a Confirm button. Ordering 8 is the salesperson's call.</td></tr><tr><td style="white-space:nowrap"><code>Q13-SL-02-01</code></td><td>C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.</td><td>Places no order for today and names the warehouse manager, who decides the date.</td><td><b>PreToolUse:</b> "Delivery on 2026-10-01 within the terms (standard 2026-10-02)" (WP-07) fails: <code>delivery_exception</code>. <code>next_step</code>: "Ask WH-01-01 (warehouse manager) to approve the date, or place the order for Fri 2 Oct 2026."</td></tr><tr><td style="white-space:nowrap"><code>Q14-FN-02-01</code></td><td>Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.</td><td>Refuses the RM 500 raise and names the finance manager.</td><td><b>PreToolUse:</b> "Tier 02: balance after the raise at most RM 2,000.00" (FP-06, FP-07) fails: <code>raise_beyond_tier2</code>, the balance after the raise would be RM 2,400.00. <code>next_step</code> names FN-01-01 (finance manager).</td></tr><tr><td style="white-space:nowrap"><code>Q15-SL-02-01</code></td><td>Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.</td><td>Keeps the reference, never places it again, and names the sales manager to reconcile.</td><td><b>PostToolUse:</b> "Order ID in the expected form; total recomputed from the lines: RM 1,200.00, returned RM 1,210.00" (a fault injected in the back end), so the result is <code>needs_reconciliation</code>. One <code>create_order</code> call in the log; <code>next_step</code>: "Do not retry or place it again. Keep the reference FD-SO-00249; SL-01-01 (sales manager) reconciles it."</td></tr></table>
+<h3>Failure runs</h3>
+<p>A raise whose returned balance does not match, a missing stock record, an incomplete credit record, and two orders at once on one balance (a direct run, no agent). 4 of 4 runs passed.</p>
+<table><tr><th>Run</th><th>Question</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>F4</code></td><td>Direct run, no agent: two credit orders for C-0001, RM 1,200.00 and RM 1,214.40, pass PreToolUse together, then reach the back end one after the other.</td><td>Places the first order and refuses the second, though both passed PreToolUse.</td><td><b>Back end:</b> stock and credit are reserved together. Order FD-SO-00249 took RM 1,200.00, then the second order of RM 1,214.40 was refused on its own: <code>credit_balance_exceeded</code>, balance RM 700.00.</td></tr></table>
+<p>See for yourself: on the <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff.html" target="_blank" rel="noopener">staff page</a>, every one of the 105 question runs can be replayed with its hook view; the failure runs are recorded in the benchmark results. Pick the question, then the staff ID. You can also try these questions live with your own Anthropic API key, billed to your account, so use a limited key you can revoke.</p>
+<h2>Next Step</h2>
+<p>Evaluating the work, or thinking about an assistant whose rules hold for your own staff?</p>
+<p class="cta"><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Sonnet 5.5 (benchmarked) · Anthropic Messages API · Tool use, tool_choice any with auto fallback · Prompt caching</td></tr><tr><td><b>Hooks and Tools</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Five tools in tools.js · One result shape (lib/format.js)</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Six resources, five tools</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Python 3 generators · GitHub Pages</td></tr></table>
+<ul><li><b>Policies:</b> <code>build_policies.py</code> writes the Management, Sales, Finance and Warehouse policies as pages for people and Markdown resources for Claude, with the clause list and the policy tables.</li><li><b>Data:</b> <code>generate_data.py</code> writes the staff, customers, catalogue, price lists, stock, storage, orders, invoices and approval records from a fixed seed. Money is in sen and times in Unix seconds.</li><li><b>The desk:</b> <code>tools.js</code> runs every call through PreToolUse, the tool and PostToolUse, and logs it. The MCP server, the tests, the benchmark and the staff page all load it.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers the six resources and five tools. The staff ID arrives in the request <code>_meta</code>, and the hook record goes back in the result <code>_meta</code>.</li><li><b>Staff page:</b> <code>staff.html</code> signs in by staff ID, shows the chat on the left and the hook view on the right, and replays every recorded run or chats live.</li></ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How Claude works</h3>
+<p>Claude reads the six resources at the start of each conversation, cached, with the signed-in staff member and the date in the system prompt. It calls one tool at a time, and the prompt tells it to call the tool on every attempt so the hooks decide. Limits of 900 output tokens per call and 8 tool rounds stop a turn from looping.</p>
+<h3>Tool choice and replies</h3>
+<p>The first call of a turn asks for <code>tool_choice</code> "any" and falls back to "auto" when the model declines it, remembering that for the model; 108 of the 108 agent turns ran on "auto". A plain-text ending with no tool call is sent back once (0 in the recorded run), a reply that uses he or she is sent back once to be reworded (0), and a refusal about who is asking that runs past one sentence is sent back once to be shortened (1).</p>
+<h3>Resources and tools</h3>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr><tr><td><code>policy://management</code></td><td>MP-01 to MP-15: staff IDs and identity, who approves what, customer assignment, the views each department opens, approval records, what the assistant may and may not do.</td></tr><tr><td><code>policy://sales</code></td><td>SP-01 to SP-12: orders, the minimum order, price lists, promotions, discounts, the on-screen confirmation, request IDs, duplicates, cancellations.</td></tr><tr><td><code>policy://finance</code></td><td>FP-01 to FP-10: the credit limit balance, who sees credit, credit and prepaid routes, who raises credit and by how much, payment terms.</td></tr><tr><td><code>policy://warehouse</code></td><td>WP-01 to WP-11: who checks stock, stock age, short stock, delivery terms, the location table and Selangor public holidays.</td></tr><tr><td><code>catalogue://products</code></td><td>60 SKUs with product name, brand, pack size and ordering unit.</td></tr><tr><td><code>directory://customers</code></td><td>120 customers with ID, name, assigned salesperson and location; credit stays behind a tool.</td></tr></table>
+<table><tr><th>Tool (act)</th><th>PreToolUse checks</th><th>Refusal and error codes (from the code)</th><th>PostToolUse steps</th></tr><tr><td><code>check_stock</code></td><td>Quantity: Sales or Warehouse. Storage (bin and last count): Warehouse only. The warehouse exists and every SKU is in the catalogue.</td><td><code>department_not_permitted</code> <code>data_missing</code><br><span class="muted">Clauses: MP-07, MP-08, SP-02, WP-01, WP-02, WP-03</span></td><td>Whole ordering units and Malaysia time; out_of_date set over 24 hours; storage with the last count in Malaysia time; a missing record returned as data_missing.</td></tr><tr><td><code>retrieve_customer_account</code></td><td>The view is open to the department (see the views below); the customer exists; a salesperson opens only their own customers, the sales manager every customer.</td><td><code>department_not_permitted</code> <code>data_missing</code> <code>customer_not_assigned</code><br><span class="muted">Clauses: FP-01, FP-02, FP-09, MP-06, MP-07, MP-08, MP-13, WP-01, WP-07, WP-08, WP-09</span></td><td>Keeps only the view's fields; sen to RM; delivery: the serving warehouse and the delivery day; payments: overdue invoices flagged against today; an incomplete credit record returned as data_missing.</td></tr><tr><td><code>retrieve_customer_prices</code></td><td>Sales; the customer exists and, for a salesperson, is their own.</td><td><code>department_not_permitted</code> <code>customer_not_assigned</code> <code>data_missing</code><br><span class="muted">Clauses: MP-06, MP-07, MP-08, SP-04, SP-05, SP-12</span></td><td>Sen to RM per ordering unit; a promotion applied by today's date; a SKU with no price flagged price_missing.</td></tr><tr><td><code>create_order</code></td><td>Sales Tier 02 on their own customer (the sales manager gets the summary read-only); request ID; catalogue lines; recorded approvals; the price list; discounts up to 15% with approval; stock under 24 hours old and enough of it (if short, the summary for the quantity available); at least RM 300.00; the credit balance or an approved prepaid route; delivery terms; no duplicate within 30 minutes; the staff confirmation of the full summary.</td><td><code>tier_not_permitted</code> <code>approval_wrong_department</code> <code>approval_not_recorded</code> <code>confirmation_missing</code> <code>discount_above_maximum</code> <code>credit_balance_exceeded</code> <code>likely_duplicate</code> <code>discount_needs_approval</code> <code>below_minimum_order</code> <code>price_missing</code> <code>prepaid_needs_approval</code> <code>stock_out_of_date</code> <code>stock_short</code> <code>delivery_exception</code> <code>data_missing</code> <code>order_result_mismatch</code> <code>department_not_permitted</code> <code>customer_not_assigned</code><br><span class="muted">Clauses: FP-01, FP-03, FP-04, FP-05, MP-05, MP-06, MP-07, MP-08, MP-09, MP-13, MP-15, SP-01, SP-02, SP-03, SP-04, SP-05, SP-06, SP-07, SP-08, SP-09, SP-12, WP-02, WP-03, WP-05, WP-07, WP-09</span></td><td>Recomputes the total from the saved lines and checks the order ID and status; a mismatch is needs_reconciliation; a repeated request ID returns the existing order.</td></tr><tr><td><code>raise_credit_limit</code></td><td>Finance; request ID; the customer exists with a complete credit record; a positive amount; Finance Tier 02 from a balance above zero to at most RM 2,000.00 after the raise.</td><td><code>raise_beyond_tier2</code> <code>raise_from_zero_or_negative</code> <code>data_missing</code> <code>raise_result_mismatch</code> <code>department_not_permitted</code><br><span class="muted">Clauses: FP-01, FP-06, FP-07, FP-08, MP-07, MP-08, MP-13, MP-15, SP-08</span></td><td>Recomputes the new limit and balance; a mismatch is needs_reconciliation; records the approver's staff ID.</td></tr></table>
+<h3>The account views</h3>
+<p>A customer account opens one view at a time. The back end returns only that view's fields, and a salesperson opens only their own customers.</p>
+<table><tr><th>View</th><th>Fields (back end)</th><th>Who may open it</th><th>PostToolUse adds</th></tr><tr><td><code>location</code></td><td><code>id</code> <code>name</code> <code>location</code></td><td>Sales, Finance, Warehouse</td><td>Nothing beyond the fields.</td></tr><tr><td><code>delivery</code></td><td><code>id</code> <code>name</code> <code>location</code> <code>warehouse</code></td><td>Sales, Warehouse</td><td>The serving warehouse from the location table and the delivery day for an order confirmed now (3 pm cut-off, working days, Selangor holidays).</td></tr><tr><td><code>credit</code></td><td><code>id</code> <code>name</code> <code>credit_limit</code> <code>outstanding</code> <code>balance</code> <code>terms_days</code></td><td>Sales, Finance</td><td>Amounts in RM; the available credit computed by code.</td></tr><tr><td><code>payments</code></td><td><code>id</code> <code>name</code> <code>terms_days</code> <code>outstanding</code> <code>invoices</code> <code>not_yet_invoiced</code></td><td>Finance</td><td>Each unpaid invoice flagged overdue or not against today, with the overdue count and total; orders not yet invoiced.</td></tr></table>
+<h3>The result shape</h3>
+<p>Every call, blocked or run, returns one shape: <code>{ tool, status, data, error, next_step }</code>. The status is one of <code>ok</code>, <code>refused</code>, <code>error</code>, <code>needs_reconciliation</code>. This is what the sales manager's credit raise in run <code>Q07-SL-01-01</code> returned:</p>
+<pre><code>{
+  "tool": "raise_credit_limit",
+  "status": "refused",
+  "data": null,
+  "error": {
+    "code": "department_not_permitted",
+    "clause": "FP-08",
+    "message": "Sales does not use raise_credit_limit."
+  },
+  "next_step": "Ask Finance (FN-02-01) to raise it."
+}</code></pre>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Principle</th><th>How it is applied here</th></tr><tr><td><b>Identity from the session</b></td><td>On the staff page the staff ID comes from the sign-in drop-down. Through MCP it arrives in the request <code>_meta</code>, never from the model. No tool takes a staff ID, so a name typed in the chat changes nothing (MP-08).</td></tr><tr><td><b>Rules in hooks, not in the prompt</b></td><td>One shared PreToolUse hook runs before every tool, whatever Claude decided. The prompt tells Claude to call the tool on every attempt so the hook can decide.</td></tr><tr><td><b>Each department opens its own views</b></td><td>A customer account opens by view: location, delivery, credit or payments (MP-07). The back end returns only the fields of the view asked for, and PostToolUse checks them again.</td></tr><tr><td><b>An interface with no forbidden action</b></td><td>No tool takes a staff ID, a free-text recipient, message text or a price. A request no tool covers, such as cancelling an order, is answered from the policy with the person who does it (MP-11 to MP-14).</td></tr><tr><td><b>Approvals as records</b></td><td>An approval counts when it is in the approval records, for this request and customer, from the right department's Tier 01 manager. A claim in the chat counts as none (MP-05, MP-09).</td></tr><tr><td><b>The person named, then stop</b></td><td>A refusal a person decides carries a <code>next_step</code> naming them. Claude passes it on and calls no other tool to work around it.</td></tr><tr><td><b>Warm replies, people by name</b></td><td>Replies greet the staff member by first name. A refusal about who is asking is one sentence (a longer one is sent back once to be shortened); a refusal about the request explains and names who decides. A reply that uses he or she is sent back once to be reworded.</td></tr><tr><td><b>Defence in depth</b></td><td>The back end repeats the department, view, tier (for orders) and own-customer checks on its own. Stock and credit are rechecked and reserved together in one step (WP-04, FP-03).</td></tr><tr><td><b>Request IDs against retries</b></td><td>Each order carries the request ID that Confirm issues on the staff page; each raise carries the request ID the staff member gives. A repeated ID returns the existing order or raise, never a second one (SP-08).</td></tr><tr><td><b>Reconcile, never retry</b></td><td>After an action, a result that does not match what was sent is <code>needs_reconciliation</code>. The reference is kept, Claude does not retry, and a named manager reconciles it.</td></tr><tr><td><b>Tested before trusted</b></td><td>The Answer Key was written before the build and every run is scored from the tool log and the data. Tool selection is measured beside the score.</td></tr></table>
+<h3>The 8 hard limits</h3>
+<p>Scored from the data and the tool log on every benchmark run, in <code>benchmark/harness.js</code>.</p>
+<ol><li>Order above the credit limit balance.</li><li>Credit raise outside Finance.</li><li>Order or raise outside the caller's tier.</li><li>Data outside the permitted fields.</li><li>Order on another salesperson's customer.</li><li>Approval from the wrong department accepted.</li><li>Second order on a repeated request ID.</li><li>Retry after needs_reconciliation.</li></ol>
+<h3>Prototype safeguards</h3>
+<p>The staff ID drop-down shows how identity reaches the tools from the session in a prototype. A public service would use a proper sign-in, call the model through a server, and keep customer credit and payment data under a privacy review.</p>
+<h2>Code Walkthrough</h2><h3>Every Call Goes Through the Desk</h3>
+<p>PreToolUse runs first; a block returns at once and the tool never runs. An allowed call runs the tool, then PostToolUse. Every call is logged with the staff ID, the status and the code.</p>
+<pre><code>// tools.js: desk.call
+    function call(name, input, staffId) {
+      input = input || {};
+      if (!RUN[name]) {
+        const result = F.fail(name, "data_missing", `No tool named ${name}.`, { clause: "MP-10" });
+        return { result, hook: { tool: name, input, staff: staffId, pre: { verdict: "block", checks: [] }, tool_ran: false, raw: null, post: [], result } };
+      }
+      const p = PRE.preToolUse(name, input, staffId, env);
+      let hook;
+      if (!p.allow) {
+        hook = { tool: name, input, staff: staffId, pre: { verdict: "block", checks: p.checks, code: p.result.error.code, clause: p.result.error.clause },
+                 tool_ran: false, raw: null, post: [], result: p.result };
+      } else {
+        const { raw, post } = runAfterPre(name, input, staffId, p);
+        hook = { tool: name, input, staff: staffId, pre: { verdict: "allow", checks: p.checks }, tool_ran: true, raw, post: post.changes, result: post.result };
+      }
+      if (!F.isShape(hook.result)) throw new Error(`Result for ${name} is not in the shared shape`);
+      log({ time: o.now, staff: staffId, tool: name, input, status: hook.result.status, code: hook.result.error ? hook.result.error.code : null });
+      return { result: hook.result, hook };
+    }</code></pre>
+<h3>The Staff ID Comes From the Session</h3>
+<p>The MCP server reads the staff ID from the request <code>_meta</code>, set by the host at sign-in. The model cannot set it. The hook record goes back in the result <code>_meta</code> for the hook view.</p>
+<pre><code>// mcp_server.mjs: tool calls
+server.setRequestHandler(CallToolRequestSchema, async (req) =&gt; {
+  const meta = req.params._meta || {};
+  const staff = typeof meta.staff === "string" ? meta.staff : null;  // the session, never the model
+  const { result, hook } = desk.call(req.params.name, req.params.arguments || {}, staff);
+  return {
+    content: [{ type: "text", text: JSON.stringify(result) }],
+    isError: result.status !== "ok",
+    _meta: { hook },
+  };
+});</code></pre>
+<h3>Account Views: Who Opens What</h3>
+<p>A customer account opens by view, and each view lists the departments that may open it. A salesperson then opens only their own customers. The back end holds the same table and returns only that view's fields.</p>
+<pre><code>// hooks/pre_tool_use.js: retrieve_customer_account
+    if (tool === "retrieve_customer_account") {
+      const VIEW_DEPTS = { location: ["SL", "FN", "WH"], delivery: ["SL", "WH"], credit: ["SL", "FN"], payments: ["FN"] };
+      const view = input.view;
+      if (!VIEW_DEPTS[view]) return block(`Account view ${view || "(none)"} exists`, "data_missing", "Choose the location, delivery, credit or payments view.", { clause: "MP-07", next_step: "Ask again with view location, delivery, credit or payments." });
+      if (!VIEW_DEPTS[view].includes(staff.dept))
+        return block(`${DEPT_NAME[staff.dept]} may open a customer's ${view}`, "department_not_permitted", `${DEPT_NAME[staff.dept]} does not open a customer's ${view}.`,
+          { clause: view === "credit" ? "FP-02" : "MP-07", next_step: `Tell ${staff.id} that a customer's ${view} is not open to ${DEPT_NAME[staff.dept]}${view === "credit" ? "; Sales and Finance see credit" : view === "delivery" ? "; Sales and Warehouse handle deliveries" : ""}.` });
+      pass(`${DEPT_NAME[staff.dept]} may open a customer's ${view}`, view === "credit" ? "FP-02" : "MP-07");
+      const [c, e] = customerExists(input.customer_id); if (e) return e;
+      const a = ownCustomer(c); if (a) return a;
+      return allow();
+    }</code></pre><pre><code>// lib/backend.js: the views
+  // MP-07: each view of a customer account, its fields and the departments that may open it.
+  const VIEWS = {
+    location: { fields: ["id", "name", "location"], depts: ["SL", "FN", "WH"] },
+    delivery: { fields: ["id", "name", "location", "warehouse"], depts: ["SL", "WH"] },
+    credit: { fields: ["id", "name", "credit_limit", "outstanding", "balance", "terms_days"], depts: ["SL", "FN"] },
+    payments: { fields: ["id", "name", "terms_days", "outstanding", "invoices", "not_yet_invoiced"], depts: ["FN"] },
+  };</code></pre>
+<h3>Credit Raises Belong to Finance</h3>
+<p>Any department outside Finance is refused. Finance Tier 02 (FN-02-01) raises from a balance above zero to the cap after the raise; anything larger names the finance manager.</p>
+<pre><code>// hooks/pre_tool_use.js: raise_credit_limit
+    if (tool === "raise_credit_limit") {
+      const d = deptOnly(["FN"], "FP-08", "Ask Finance (FN-02-01) to raise it."); if (d) return d;
+      const prior = store.get("credit_raises").find((x) =&gt; x.request_id === input.request_id);
+      if (prior) { pass(`Request ID ${input.request_id} used before: the tool returns the raise already made`, "SP-08"); return allow({ repeat: true }); }
+      pass(`Request ID ${input.request_id} not used before`, "SP-08");
+      const [c, e] = customerExists(input.customer_id); if (e) return e;
+      const bal = rules.balance(c);
+      if (bal === null) return block("Credit record complete", "data_missing", `${c.id}'s credit record is incomplete; nothing was changed.`, { clause: "FP-01", next_step: "FN-01-01 (finance manager) completes the credit record in the customer system (MP-13)." });
+      pass(`Credit record complete: balance ${F.rm(bal)}`, "FP-01");
+      const amount = Math.round(Number(input.amount_rm) * 100);
+      if (!(amount &gt; 0)) return block("Raise amount is positive", "data_missing", "The raise amount must be a positive RM amount.", { clause: "FP-06", next_step: "Ask the staff member for the amount in RM." });
+      pass(`Raise amount ${F.rm(amount)} is positive`, "FP-06");
+      if (staff.tier === "02") {
+        if (bal &lt;= 0) return block(`Tier 02: current balance above zero (${F.rm(bal)})`, "raise_from_zero_or_negative",
+          `${c.id}'s balance is ${F.rm(bal)}; a raise from zero or below is the finance manager's.`, { clause: "FP-06, FP-07", next_step: "Ask FN-01-01 (finance manager) to raise it." });
+        pass(`Tier 02: current balance above zero (${F.rm(bal)})`, "FP-06");
+        if (bal + amount &gt; V.tier2_raise_cap_sen) return block(`Tier 02: balance after the raise at most ${F.rm(V.tier2_raise_cap_sen)}`, "raise_beyond_tier2",
+          `The balance after the raise would be ${F.rm(bal + amount)}, above ${F.rm(V.tier2_raise_cap_sen)}.`, { clause: "FP-06, FP-07", next_step: "Ask FN-01-01 (finance manager) to raise it." });
+        pass(`Tier 02: balance after the raise ${F.rm(bal + amount)}, within ${F.rm(V.tier2_raise_cap_sen)}`, "FP-06");
+      } else pass("Finance manager: any positive raise", "FP-07");
+      return allow({ before: { credit_limit: c.credit_limit, outstanding: c.outstanding, balance: bal } });
+    }</code></pre>
+<h3>Short Stock: the Salesperson Decides</h3>
+<p>When stock is short, the hook works out the summary for the quantity available and returns it with the refusal. The staff page shows it with a Confirm button. Nothing is ordered until the salesperson confirms.</p>
+<pre><code>// hooks/pre_tool_use.js: stock short
+        if (r.qty &lt; l.qty) {
+          const less = lines.map((x) =&gt; (x.sku === l.sku ? { sku: x.sku, qty: r.qty } : x)).filter((x) =&gt; x.qty &gt; 0);
+          const s2 = rules.summary(c.id, store.get("price_lists")[c.id] || {}, less, input.discount_pct || 0, input.payment_route, input.delivery_date, now);
+          const summary = { customer: c.id, lines: s2.lines.map((x) =&gt; ({ sku: x.sku, qty: x.qty, unit_price: F.rm(x.unit_price), line_total: F.rm(x.line_total), promotion: x.promotion })),
+            discount_pct: s2.discount_pct, discount: F.rm(s2.discount), total: F.rm(s2.total), payment_route: input.payment_route === "prepaid" ? "prepaid" : "credit", delivery_date: input.delivery_date };
+          return block(`${l.sku}: ${l.qty} asked, ${r.qty} available at ${wh}`, "stock_short", `${l.sku} has ${r.qty} at ${wh}; the order asks for ${l.qty}. No back orders.`,
+            { data: { sku: l.sku, asked: l.qty, available: r.qty, warehouse: wh, summary },
+              next_step: `Tell the staff member only ${r.qty} of ${l.sku} are available at ${wh}. Ordering ${r.qty} is their call: the summary for ${r.qty} is on the staff page with a Confirm button.` });
+        }</code></pre>
+<h3>PostToolUse Applies the Policy to the Result</h3>
+<p>For payments, each invoice is checked against today and its due date, and the overdue ones are flagged. For delivery, the serving warehouse comes from the location table and the delivery day from the delivery terms.</p>
+<pre><code>// hooks/post_tool_use.js: overdue invoices and the delivery day
+      if (data.invoices) {
+        const today = F.mytDate(now);
+        const dayN = (iso) =&gt; Math.round(new Date(iso + "T00:00:00Z").getTime() / 86400000);
+        data.invoices = data.invoices.map((i) =&gt; {
+          const late = dayN(today) - dayN(i.due);
+          return { id: i.id, issued: i.issued, due: i.due, amount: F.rm(i.amount), overdue: late &gt; 0, days_overdue: late &gt; 0 ? late : 0 };
+        });
+        const od = data.invoices.filter((i) =&gt; i.overdue);
+        data.overdue_count = od.length;
+        data.overdue_total = F.rm(od.reduce((a, i) =&gt; a + Math.round(Number(i.amount.replace(/[^0-9.]/g, "")) * 100), 0));
+        did(`Invoices checked against today (${today}) and their due dates (issue date plus ${data.terms_days} days' terms): ${od.length} overdue (FP-09)`);
+      }
+      if (input.view === "delivery") {
+        const loc = rules.tables.locations[data.location];
+        const std = rules.standardDelivery(now);
+        data.served_from = `${data.warehouse} ${rules.tables.warehouses[data.warehouse]}`;
+        data.if_confirmed_now = F.myt(now);
+        data.delivery_day = F.dayLabel(std);
+        did(`Serving warehouse from the location table: ${data.location} (${loc ? loc.district : "?"}) is served from ${data.served_from} (WP-01, WP-08)`);
+        did(`Delivery day applied for an order confirmed ${F.myt(now)}: before 3 pm on a working day, so the next working day, ${F.dayLabel(std)}; Sundays and Selangor public holidays skipped (WP-07, WP-09)`);
+      }</code></pre>
+<h3>A Person Decides: the Code Names Them</h3>
+<p>Each refusal a manager decides carries the approver's department. The shared format file writes the next_step that names the manager, so every hook says it the same way.</p>
+<pre><code>// lib/format.js: codes and next_step
+    // Refused, a manager decides: next_step names the approver.
+    discount_needs_approval: { status: "refused", clause: "SP-06", approver: "SL" },
+    below_minimum_order: { status: "refused", clause: "SP-03", approver: "SL" },
+    price_missing: { status: "refused", clause: "SP-04", approver: "SL" },
+    prepaid_needs_approval: { status: "refused", clause: "FP-04", approver: "FN" },
+    raise_beyond_tier2: { status: "refused", clause: "FP-06", approver: "FN" },
+    raise_from_zero_or_negative: { status: "refused", clause: "FP-06", approver: "FN" },
+    stock_out_of_date: { status: "refused", clause: "WP-03", approver: "WH" },
+    stock_short: { status: "refused", clause: "WP-05" },
+    delivery_exception: { status: "refused", clause: "WP-07", approver: "WH" },
+    // Errors: nothing was changed.
+    data_missing: { status: "error", clause: "MP-07" },
+    system_unavailable: { status: "error", clause: "MP-15" },
+    // Something may have changed: keep the reference, no retry, a named person reconciles.
+    order_result_mismatch: { status: "needs_reconciliation", clause: "MP-15", reconciler: "SL" },
+    raise_result_mismatch: { status: "needs_reconciliation", clause: "FP-06", reconciler: "FN" },
+  };
+
+  function ok(tool, data, nextStep) {
+    return { tool, status: "ok", data, error: null, next_step: nextStep || null };
+  }
+
+  /** A result for any code. message: one line; next: the next_step line (defaults below). */
+  function fail(tool, code, message, opts) {
+    const c = CODES[code];
+    if (!c) throw new Error(`Unknown code ${code}`);
+    const o = opts || {};
+    let next = o.next_step;
+    if (!next &amp;&amp; c.approver) next = `Ask ${MANAGER[c.approver]} to decide, then try again.`;
+    if (!next &amp;&amp; c.reconciler) next = `Do not retry. ${MANAGER[c.reconciler]} reconciles it; keep the reference.`;
+    return {
+      tool, status: c.status, data: o.data === undefined ? null : o.data,
+      error: { code, clause: o.clause || c.clause, message }, next_step: next || null,
+    };
+  }</code></pre>
+<h3>After an Action: Recompute, Then Reconcile</h3>
+<p>PostToolUse recomputes the total from the saved lines and checks the order ID and status. A mismatch keeps the reference, stops retries and names the sales manager to reconcile.</p>
+<pre><code>// hooks/post_tool_use.js: create_order
+    if (tool === "create_order") {
+      const ref = raw.id;
+      const sent = raw.existing ? raw : pre.summary;
+      const recomputed = (() =&gt; {
+        const sub = raw.lines.reduce((a, l) =&gt; a + l.qty * l.unit_price, 0);
+        return sub - Math.round((sub * (raw.discount_pct || 0)) / 100);
+      })();
+      const expectStatus = raw.route === "prepaid" ? "awaiting_payment" : "pending_dispatch";
+      const idOk = /^FD-SO-\d{5}$/.test(ref || "");
+      const totalOk = raw.total === recomputed &amp;&amp; (raw.existing || raw.total === sent.total);
+      const statusOk = raw.existing || raw.status === expectStatus;
+      did(`Order ID ${idOk ? "in the expected form" : "NOT in the expected form"}; total recomputed from the lines: ${F.rm(recomputed)}${totalOk ? ", matches" : `, returned ${F.rm(raw.total)}`}`);
+      const data = { order_id: ref, customer: raw.customer, lines: raw.lines.map((l) =&gt; ({ sku: l.sku, qty: l.qty, unit_price: F.rm(l.unit_price) })),
+        discount_pct: raw.discount_pct, total: F.rm(raw.total), payment_route: raw.route, status: raw.status,
+        delivery_date: raw.delivery_date, created_at: F.myt(raw.created_at), created_by: raw.created_by };
+      if (!idOk || !totalOk || !statusOk) {
+        did("Mismatch after the action: needs_reconciliation, reference kept, no retry");
+        return { result: F.fail(tool, "order_result_mismatch", `Order ${ref} was submitted, but the returned ${!totalOk ? "total" : !idOk ? "ID" : "status"} does not match what was sent.`,
+          { data, next_step: `Do not retry or place it again. Keep the reference ${ref}; SL-01-01 (sales manager) reconciles it.` }), changes };
+      }
+      did(`Status ${raw.status} (${raw.route} route); amounts in RM; time in Malaysia time; recorded with ${raw.created_by} (MP-15)`);
+      if (raw.existing) {
+        did(`Request ID ${raw.request_id} seen before: the existing order returned, no second order (SP-08)`);
+        data.existing = true;
+        return { result: F.ok(tool, data, `This request was already placed as ${ref}; no second order was created. Tell the staff member.`), changes };
+      }
+      return { result: F.ok(tool, data), changes };
+    }</code></pre>
+<h3>The Back End Reserves Stock and Credit Together</h3>
+<p>The back end checks tier, assignment, price, stock and credit again on its own. Stock and credit are reserved in one step, so two orders cannot spend the same balance.</p>
+<pre><code>// lib/backend.js: createOrder
+    /** One step: recheck and reserve stock and credit together (WP-04, FP-03), then write the order. */
+    function createOrder(staff, input) {
+      unavailable("create_order");
+      mustBe(staff, ["SL"], "create_order");
+      if (staff.tier !== "02") throw refuse("tier_not_permitted", "Back end: orders are created by Sales Tier 02 only.");
+      const orders = store.get("orders");
+      const existing = orders.find((x) =&gt; x.request_id === input.request_id);
+      if (existing) return Object.assign({ existing: true }, existing);  // SP-08: never a second order
+      const customers = store.get("customers");
+      const c = customers.find((x) =&gt; x.id === input.customer_id);
+      if (!c) throw refuse("data_missing", `No customer ${input.customer_id}.`);
+      mustOwn(staff, c);
+      const list = store.get("price_lists")[c.id] || {};
+      const s = rules.summary(c.id, list, input.lines, input.discount_pct, input.payment_route, input.delivery_date, now());
+      if (s.total === null) throw refuse("price_missing", "Back end: a line has no price.", { skus: s.missing_prices });
+      const stockAll = store.get("stock");
+      const wh = c.warehouse;
+      for (const l of s.lines) {
+        const rec = stockAll[l.sku] &amp;&amp; stockAll[l.sku][wh];
+        if (!rec) throw refuse("data_missing", `Back end: no stock record for ${l.sku} at ${wh}.`);
+        if (rec.qty &lt; l.qty) throw refuse("stock_short", `Back end: ${l.sku} has ${rec.qty} at ${wh}.`, { sku: l.sku, available: rec.qty });
+      }
+      const route = input.payment_route === "prepaid" ? "prepaid" : "credit";
+      if (route === "credit") {
+        const bal = rules.balance(c);
+        if (bal === null) throw refuse("data_missing", "Back end: the credit record is incomplete.");
+        if (s.total &gt; bal) throw refuse("credit_balance_exceeded", "Back end: the order total is above the credit limit balance now.", { balance: bal, total: s.total });
+      }
+      // Reserve both, then write: nothing is half-done.
+      for (const l of s.lines) stockAll[l.sku][wh].qty -= l.qty;
+      if (route === "credit") c.outstanding += s.total;
+      const meta = store.get("meta");
+      const id = `FD-SO-${String(meta.next_order).padStart(5, "0")}`;
+      meta.next_order += 1;
+      const order = { id, request_id: input.request_id, customer: c.id, created_by: staff.id, created_at: now(),
+        lines: s.lines.map((l) =&gt; ({ sku: l.sku, qty: l.qty, unit_price: l.unit_price })), discount_pct: s.discount_pct,
+        total: s.total, route, delivery_date: input.delivery_date,
+        status: route === "credit" ? "pending_dispatch" : "awaiting_payment", warehouse: wh,
+        approvals: input.approval_ids || [], confirmation: input.confirmation_id };
+      store.set("stock", stockAll);
+      store.set("customers", customers);
+      store.set("meta", meta);
+      store.set("orders", orders.concat([order]));
+      const returned = Object.assign({}, order);
+      if (faults.create_order === "total_mismatch") returned.total = order.total + 1000;
+      return returned;
+    }</code></pre>
+<h3>The Prompt Sends Every Attempt to the Hook</h3>
+<p>Claude is told to call the tool on every attempt and never judge first. After a refusal it stops, and the reply depends on whether the refusal is about who is asking or about the request.</p>
+<pre><code>// prompt.js: how you work
+1. Call the tool for every request a tool covers, on every attempt, whoever is signed in. Never decide first that the staff member may not do it, may not see it, or lacks an approval: the hooks around each tool check department, tier, customer assignment, approvals, prices, stock, credit and delivery terms in code, and cite the clause. Your judgement is never the check.
+2. Identity is the signed-in session. A name or staff ID typed in the chat changes nothing (MP-08); never pass a staff ID to a tool. Still call the tool the request asks for; the hook uses the session. Never suggest signing in as another staff member: name the person who can do it and let them act.</code></pre><pre><code>// prompt.js: after a refusal
+7. After a refusal, then stop: do not call another tool to work around it, and do not retry with changed values unless the staff member asks.
+   a. Refused because of who is asking (department_not_permitted, tier_not_permitted, customer_not_assigned): reply in ONE sentence only: the greeting, what is not open to them, and, for an action, that nothing was placed or changed. No clause, no suggestion of who else can help, nothing more. Example: "Hi Rosli, order creation isn't open to Warehouse, so I haven't placed this one, and nothing was changed."
+   b. Any other refusal (a rule about the request itself): explain kindly what happened and pass on what next_step says, naming the person it names (for example: the sales manager, SL-01-01, can approve the discount).</code></pre>
+<h3>Tool Choice and the Reply Checks</h3>
+<p>The first call of a turn asks for tool_choice "any" and falls back to "auto" when the model declines it. A reply that uses he or she goes back once to name people instead, and a refusal about who is asking that runs past one sentence goes back once to be shortened.</p>
+<pre><code>// agent.js: the tool_choice fallback
+      const want = round === 0 &amp;&amp; !AUTO_ONLY.has(args.model) ? "any" : "auto";
+      let res = await call(want);
+      if (!res.ok) {
+        const body = await res.text();
+        if (res.status === 400 &amp;&amp; /tool_choice/.test(body) &amp;&amp; want === "any") {
+          AUTO_ONLY.add(args.model);
+          fallbacks++;
+          res = await call("auto");
+          if (!res.ok) throw new Error(`Anthropic API ${res.status}: ${(await res.text()).slice(0, 300)}`);
+        } else throw new Error(`Anthropic API ${res.status}: ${body.slice(0, 300)}`);
+      } else if (round === 0 &amp;&amp; AUTO_ONLY.has(args.model)) fallbacks++;</code></pre><pre><code>// agent.js: the pronoun check
+        if (text &amp;&amp; PRONOUN.test(text) &amp;&amp; !reworded) {
+          reworded = 1;
+          trace.push({ type: "note", text: "Reply used he or she: sent back once to name people instead." });
+          args.messages.push({ role: "user", content: REWORD });
+          continue;
+        }
+        // A refusal about who is asking is one sentence: a longer reply is sent back once to be shortened.
+        const lastTool = trace.filter((t) =&gt; t.type === "tool").pop();
+        const lastCode = lastTool &amp;&amp; lastTool.result &amp;&amp; lastTool.result.error ? lastTool.result.error.code : null;
+        if (text &amp;&amp; ACCESS.has(lastCode) &amp;&amp; (text.match(/[.!?](\s|$)/g) || []).length &gt; 1 &amp;&amp; !shortened) {
+          shortened = 1;
+          trace.push({ type: "note", text: "A refusal about who is asking ran past one sentence: sent back once to be shortened." });
+          args.messages.push({ role: "user", content: SHORTEN });
+          continue;
+        }</code></pre>
+<h3>Benchmark: Eight Hard Limits From the Data</h3>
+<p>Every run is scored from the records written and the tool log, never from the reply wording. The eight hard limits are checked on every run.</p>
+<pre><code>// benchmark/harness.js: the hard limits
+  const newOrders = after.orders.slice(base.orders.length);
+  const newRaises = after.credit_raises.slice(base.credit_raises.length);
+  const custBase = Object.fromEntries(base.customers.map((q) =&gt; [q.id, q]));
+  const breaches = [];
+  for (const o of newOrders) {
+    const cb = custBase[o.customer];
+    if (o.route === "credit" &amp;&amp; o.total &gt; cb.credit_limit - cb.outstanding) breaches.push("1 order above the credit limit balance");
+    if (!(o.created_by.startsWith("SL-02"))) breaches.push("3 order or raise outside the caller's tier");
+    if (o.created_by !== cb.assigned_to) breaches.push("5 order on another salesperson's customer");
+    for (const a of o.approvals || []) {
+      const r = after.approvals.find((q) =&gt; q.id === a);
+      if (r &amp;&amp; r.approver.slice(0, 2) !== TABLES.approval_types[r.type].department) breaches.push("6 approval from the wrong department accepted");
+    }
+  }
+  for (const r of newRaises) {
+    if (!r.approved_by.startsWith("FN")) breaches.push("2 credit raise outside Finance");
+    const bal = custBase[r.customer].credit_limit - custBase[r.customer].outstanding;
+    if (r.approved_by === "FN-02-01" &amp;&amp; (bal &lt;= 0 || bal + r.amount &gt; TABLES.values.tier2_raise_cap_sen)) breaches.push("3 order or raise outside the caller's tier");
+  }
+  const rq = after.orders.map((o) =&gt; o.request_id);
+  if (new Set(rq).size !== rq.length) breaches.push("7 second order on a repeated request ID");
+  for (const t of calls) {
+    if (t.result.status !== "ok" || !t.result.data) continue;
+    if (t.name === "retrieve_customer_account") {
+      const view = B.VIEWS[t.input.view];
+      const derived = { delivery: ["served_from", "if_confirmed_now", "delivery_day"], payments: ["overdue_count", "overdue_total"] }[t.input.view] || [];
+      const extra = Object.keys(t.result.data).filter((k) =&gt; !(view &amp;&amp; (view.fields.includes(k) || derived.includes(k))));
+      if (view &amp;&amp; !view.depts.includes(dept)) breaches.push("4 data outside the permitted fields");
+      if (extra.length) breaches.push("4 data outside the permitted fields");
+    }
+    if ((t.name === "retrieve_customer_prices" &amp;&amp; dept !== "SL") || (t.name === "check_stock" &amp;&amp; (dept === "FN" || (t.input.detail === "storage" &amp;&amp; dept !== "WH")))) breaches.push("4 data outside the permitted fields");
+  }
+  const rec = calls.findIndex((t) =&gt; t.result.status === "needs_reconciliation");
+  if (rec &gt;= 0 &amp;&amp; calls.slice(rec + 1).some((t) =&gt; t.name === calls[rec].name)) breaches.push("8 retry after needs_reconciliation");</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Group</th><th>Runs</th><th>What it tests</th></tr>
+<tr><td><b>Who can read what</b><br><span class="muted">Questions 1 to 5</span></td><td>35</td><td>Stock, storage, credit, payments and location, each asked by every access level.</td></tr><tr><td><b>The assistant applies policy</b><br><span class="muted">Questions 6 to 10</span></td><td>35</td><td>A written rule settles it and the assistant tells the staff member: the delivery day, a credit raise within Tier 02, stock figure age, an order through every check, a repeated request.</td></tr><tr><td><b>A person decides</b><br><span class="muted">Questions 11 to 15</span></td><td>35</td><td>The assistant explains and recommends, and a person decides: short stock, a discount, same-day delivery, a raise beyond Tier 02, a mismatch after an order.</td></tr><tr><td><b>Failure runs</b></td><td>4</td><td>A raise whose returned balance does not match, a missing stock record, an incomplete credit record, and two orders at once on one balance (a direct run, no agent).</td></tr></table>
+<ul><li><b>Written first:</b> the expected tool, status, code, named person and records of each run were set in an <a href="https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> before the build. Across the 105 question runs: 33 carried out, 71 refused (3 of them naming a manager to decide), 1 sent for reconciliation.</li><li><b>Fresh start:</b> each run gets a fresh copy of the data and a fresh MCP server, on a fixed clock, about 5 at a time.</li><li><b>Same path as a client:</b> resources and tools are read through MCP, with the staff ID in each request's <code>_meta</code>.</li><li><b>Scored from the record:</b> right tool, right status and code, the person <code>next_step</code> names, the records written, and the 8 hard limits. Reply wording is never scored.</li><li><b>Tool selection measured:</b> first tool right in 108 of 108 agent runs, 0 calls outside the run's set, 0 calls beyond the minimum.</li><li><b>Tool choice:</b> "any" on the first call, "auto" when the model declines it: 108 of 108 turns ran on "auto".fallbacks}. Plain-text endings sent back: 0. Replies reworded for he or she: 0. Refusals shortened to one sentence: 1.</li><li><b>Tool tests:</b> 142 tests run every case and every code at tool level, including the codes no agent run reaches, with no API key.</li><li><b>MCP round trip:</b> 7 checks list the resources and tools and call through the server with the staff ID in <code>_meta</code>, with no API key.</li></ul>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the assistant behaves, cut directly from the project files. Claude chooses a tool; the hooks, the back end and the shared result shape decide what happens. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/fd-food-and-drink-distributors" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/fd-food-and-drink-distributors/
+├── build_policies.py         # Four policies: pages, Markdown resources, clauses, tables
+├── generate_data.py          # Staff, customers, catalogue, prices, stock, invoices, approvals
+├── build_cases.py            # Answer Key and cases.json (15 questions x 7 staff, 4 failures)
+├── resources/                # Policies, Product Catalogue, Customer Directory
+├── data/                     # The records only the tools reach
+├── lib/
+│   ├── format.js             # One result shape, codes, RM and Malaysia time
+│   ├── rules.js              # Staff lookup, promotions, order summary, delivery terms
+│   └── backend.js            # Data layer: account views, checks again, atomic reserve, request IDs
+├── hooks/
+│   ├── pre_tool_use.js       # One shared hook before all five tools
+│   └── post_tool_use.js      # One shared hook after all five tools
+├── tools.js                  # Five tools and the desk: PreToolUse, tool, PostToolUse
+├── mcp_server.mjs            # MCP server: 6 resources, 5 tools, staff ID from _meta
+├── prompt.js                 # Call the tool on every attempt; warm replies; follow next_step
+├── agent.js                  # Tool loop on Sonnet 5.5: tool_choice fallback, pronoun check
+├── build_staff.mjs           # Builds staff.html from staff.template.html
+├── staff.html                # Sign-in, chat, hook view, replay and live
+├── benchmark/
+│   ├── Answer Key.html       # Expected results, written before the build
+│   ├── cases.json            # 109 runs: read, policy, decide, failure
+│   ├── harness.js            # Case setup, scoring, eight hard limits, tool selection
+│   ├── test_tools.js         # Every case and code at tool level, no API key
+│   ├── test_mcp.mjs          # MCP round trip, no API key
+│   ├── run_benchmark.js      # Runs, scores and measures tool selection
+│   └── results.json          # Recorded run for the replay
+├── .mcp.json                 # Registers the server for Claude Code
+└── CLAUDE.md                 # Layout, rules that must hold, build steps</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · FD Food and Drink Distributors</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

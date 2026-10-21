@@ -1,0 +1,338 @@
+{
+ "MP-01": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "Every staff ID has the form DD-TT-NN: department, tier, staff number. SL-01-01 is the Tier 1 employee of Sales, staff number 01.",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-02": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "Departments: SL Sales, FN Finance, WH Warehouse.",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-03": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "Tier 01 is the management layer of a department. The department manager is the highest authority in the department; there is no authority above them. Tier 02 is a non-management employee.",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-04": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "The staff list: SL-01-01 Sales manager, who manages the Sales Tier 02 staff, has no customers of his own, and creates no orders; SL-02-01 and SL-02-02 Sales staff; FN-01-01 Finance manager; FN-02-01 Finance staff; WH-01-01 Warehouse manager; WH-02-01 Warehouse staff.",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-05": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "Each manager decides only within their own department's domain (SP, FP, WP), as set in the approval domain table below. An approval given by a manager of another department is invalid. Example: the finance manager cannot approve a warehouse decision. Each manager's interface shows only the approval records of their own domain, read-only, and the PreToolUse hook refuses any action that relies on another department's approval (approval_wrong_department).",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-06": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "Each customer is assigned to one Sales Tier 02 salesperson; customers are assigned only to Sales Tier 02. A Sales Tier 02 employee may act only on their own assigned customers, and makes no decision on another salesperson's customer, including opening the file or the credit. The sales manager may open every customer's account and prices and check stock, for supervision, and acts on a customer only through approvals: his approval of a Tier 02 request is an approval record (MP-09).",
+  "enforced_by": "PreToolUse, Back end"
+ },
+ "MP-07": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "What each department may open, by view: a customer's location (where it is): every department; a customer's delivery (the warehouse that serves it and the delivery day for an order confirmed now): Sales and Warehouse; a customer's credit (limit, outstanding, available credit, terms): Sales and Finance; a customer's payments (unpaid invoices and their due dates): Finance only; stock quantities: Sales and Warehouse; stock storage (bin location and last manual count): Warehouse only; prices: Sales. Sales Tier 02 opens only its own assigned customers; the sales manager opens every customer, for supervision. The back end enforces this before it returns any data.",
+  "enforced_by": "PreToolUse, Back end, PostToolUse"
+ },
+ "MP-08": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "A staff member's identity comes from their signed-in session: the staff ID chosen at sign-in, the first step on the staff page. A name or ID typed later in the conversation is never used.",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-09": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "Staff and identity",
+  "text": "An approval counts only when it is recorded in the approval records. An approval claimed in the conversation counts as none.",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-10": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "What the assistant may do",
+  "text": "The assistant may: check stock and its storage, open a view of a customer account, open a customer's prices, create an order, and raise a credit limit, each within the rules in these policies. Where a rule settles the outcome, the assistant applies it and tells the staff member; where a person decides, it explains what happened and who decides.",
+  "enforced_by": "PreToolUse"
+ },
+ "MP-11": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "What the assistant may do",
+  "text": "Never allowed through the assistant: deleting or changing an order or a customer record, taking or confirming a payment. Changes to customer records are made by their owners under MP-13, outside the assistant. No tool exists for these; the assistant answers such a request from this clause.",
+  "enforced_by": "Policy"
+ },
+ "MP-12": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "What the assistant may do",
+  "text": "Not for the assistant, but a person can: cancelling an order, changing a price or payment terms, moving a customer between salespersons, transferring stock. No tool exists for these; the assistant tells the staff member which manager of that domain does it (MP-14).",
+  "enforced_by": "Policy"
+ },
+ "MP-13": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "What the assistant may do",
+  "text": "Customer records are created, changed and closed only in the customer system, outside the assistant, by the manager of the department that owns that part of the record: the sales manager for the customer's name, contacts, delivery address and assigned salesperson; the finance manager for the credit limit, payment terms and closing a customer; the warehouse manager for the warehouse that serves the customer. No one deletes a customer record: a former customer is closed and its order history is kept.",
+  "enforced_by": "Policy"
+ },
+ "MP-14": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "What the assistant may do",
+  "text": "When a request needs a decision these policies give to a person, the assistant tells the staff member who decides and which clause applies. A request no policy covers is referred to the manager of the department it concerns.",
+  "enforced_by": "PreToolUse (next_step), Policy"
+ },
+ "MP-15": {
+  "policy": "Management Policy",
+  "page": "Management Policy.html",
+  "section": "What the assistant may do",
+  "text": "Every tool call and refusal is recorded with the staff ID and the time; every approval record carries the approver's staff ID and the time.",
+  "enforced_by": "PostToolUse"
+ },
+ "SP-01": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Orders are created by Sales Tier 02 only, for their own assigned customers (MP-06). The sales manager does not create orders; the sales manager approves the team's requests and may read any order summary.",
+  "enforced_by": "PreToolUse, Back end"
+ },
+ "SP-02": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "An order lists catalogue SKUs in their ordering unit, in whole units.",
+  "enforced_by": "PreToolUse"
+ },
+ "SP-03": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Minimum order value RM 300. A smaller order needs the sales manager's recorded approval.",
+  "enforced_by": "PreToolUse"
+ },
+ "SP-04": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Prices are the customer's own price list, held in the back end and served only by retrieve_customer_prices. An SKU with no price on that list cannot be ordered until the sales manager sets one.",
+  "enforced_by": "PostToolUse, PreToolUse"
+ },
+ "SP-05": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Promotions apply only between their start and end dates, as listed in the promotion calendar (SP-12). A promotion is a published price and applies without approval.",
+  "enforced_by": "PostToolUse, PreToolUse"
+ },
+ "SP-06": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Every discount needs the sales manager's recorded approval, up to 15%; nothing above 15%. Sales Tier 02 staff cannot give a discount on their own.",
+  "enforced_by": "PreToolUse"
+ },
+ "SP-07": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "The staff member confirms the full order summary on the staff page before the order is created: customer, SKUs and quantities, prices, discount, total, payment route and delivery date. A change to any of these needs a new confirmation.",
+  "enforced_by": "PreToolUse"
+ },
+ "SP-08": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Every order request carries a unique request ID. A retry with the same request ID returns the order already created and never creates a second one. The same applies to a credit raise.",
+  "enforced_by": "PreToolUse, Back end"
+ },
+ "SP-09": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Separately, the same order for the same customer (same SKUs and quantities) under a new request ID within 30 minutes is treated as a likely duplicate and not created; the staff member is asked.",
+  "enforced_by": "PreToolUse"
+ },
+ "SP-10": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "A confirmed order may be cancelled before dispatch by the sales manager only, outside the assistant. After dispatch it cannot be cancelled.",
+  "enforced_by": "Policy"
+ },
+ "SP-11": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "Order confirmations to customers are sent outside the assistant, only to an approved contact stored against the customer, with text taken from the saved order. The assistant has no tool for them.",
+  "enforced_by": "Policy"
+ },
+ "SP-12": {
+  "policy": "Sales Policy",
+  "page": "Sales Policy.html",
+  "section": "Orders",
+  "text": "The promotion calendar is the table below: promotion, SKUs, discount, start and end date. Its promotion prices are published prices, not discounts under SP-06.",
+  "enforced_by": "PostToolUse"
+ },
+ "FP-01": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit",
+  "text": "Each customer has a credit limit, a credit limit balance (the credit still available) and an outstanding balance. Credit limit balance = credit limit minus outstanding balance. It can be negative when the outstanding balance is above the limit.",
+  "enforced_by": "PostToolUse"
+ },
+ "FP-02": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit",
+  "text": "Credit is visible to Finance for every customer, to the assigned salesperson for their own customers, and to the sales manager for every customer. Warehouse does not see credit.",
+  "enforced_by": "Back end, PostToolUse"
+ },
+ "FP-03": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit",
+  "text": "Credit route: an order on credit always requires a credit limit balance at least equal to the order total. No approval from any department overrides this.",
+  "enforced_by": "PreToolUse, Back end"
+ },
+ "FP-04": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit",
+  "text": "Prepaid route: with the finance manager's recorded approval, an order is created as a separate prepaid order. It uses no credit, is held as awaiting payment, and is not dispatched until Finance confirms payment outside the assistant. A prepaid approval never turns a credit order into an allowed one.",
+  "enforced_by": "PreToolUse"
+ },
+ "FP-05": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit",
+  "text": "When a credit order exceeds the balance, the options are: a smaller order, the prepaid route (FP-04), or a credit raise by Finance (FP-06 to FP-08).",
+  "enforced_by": "PreToolUse (next_step)"
+ },
+ "FP-06": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit raises",
+  "text": "A credit raise increases the customer's credit limit; the credit limit balance is then recalculated (FP-01). Finance Tier 02 may raise credit only when the current balance is above zero and the balance after the raise is at most RM 2,000. Example: a balance of RM 1,900 allows a Tier 02 raise of RM 100 at most. Any other raise by Finance Tier 02 is refused, naming the finance manager (raise_beyond_tier2 or raise_from_zero_or_negative).",
+  "enforced_by": "PreToolUse, PostToolUse"
+ },
+ "FP-07": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit raises",
+  "text": "The finance manager may approve any credit raise. A raise that takes the balance beyond RM 2,000, or any raise when the current balance is zero or negative, is decided by the finance manager only.",
+  "enforced_by": "PreToolUse"
+ },
+ "FP-08": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Credit raises",
+  "text": "No one outside Finance approves a credit raise, the sales manager included.",
+  "enforced_by": "PreToolUse, Back end"
+ },
+ "FP-09": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Terms and payments",
+  "text": "Payment terms are set per customer (30 days by default) and changed only by the finance manager, outside the assistant.",
+  "enforced_by": "Policy"
+ },
+ "FP-10": {
+  "policy": "Finance Policy",
+  "page": "Finance Policy.html",
+  "section": "Terms and payments",
+  "text": "The assistant never takes, records or confirms a payment.",
+  "enforced_by": "Policy"
+ },
+ "WP-01": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Stock",
+  "text": "Two warehouses, WH-A Shah Alam and WH-B Puchong. Each customer is served from the warehouse for its location, as set in the location table (WP-08).",
+  "enforced_by": "Back end"
+ },
+ "WP-02": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Stock",
+  "text": "Stock is checked per warehouse. Sales and Warehouse may check stock; Finance may not (MP-07).",
+  "enforced_by": "PreToolUse, Back end"
+ },
+ "WP-03": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Stock",
+  "text": "24 hours is the maximum age of a stock figure. A figure within 24 hours is recent enough to quote, not proof that the stock is still there. A figure older than 24 hours is out of date: no order is created on it until the warehouse manager confirms it by a manual count.",
+  "enforced_by": "PostToolUse, PreToolUse"
+ },
+ "WP-04": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Stock",
+  "text": "Stock is rechecked and reserved by the back end when the order is created, together with the credit.",
+  "enforced_by": "Back end"
+ },
+ "WP-05": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Stock",
+  "text": "When stock is short, the salesperson decides whether to order the quantity available, with a new confirmation of the summary. There are no back orders. The warehouse delivers what Sales has ordered.",
+  "enforced_by": "PreToolUse"
+ },
+ "WP-06": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Stock",
+  "text": "Transfers between the two warehouses are decided by the warehouse manager only, outside the assistant.",
+  "enforced_by": "Policy"
+ },
+ "WP-07": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Delivery",
+  "text": "Delivery terms, in Malaysia time (UTC+8): an order confirmed before 3 pm on a working day is delivered the next working day; an order confirmed at or after 3 pm, or on a non-working day, is delivered on the second working day. Working days are Monday to Saturday, except Selangor public holidays listed in WP-09. An earlier or special delivery date needs the warehouse manager's recorded approval.",
+  "enforced_by": "PreToolUse"
+ },
+ "WP-08": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Delivery",
+  "text": "The location table below: each customer location and the warehouse that serves it.",
+  "enforced_by": "Back end"
+ },
+ "WP-09": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Delivery",
+  "text": "The public holiday table below: the Selangor public holidays for the period the demo covers, September to December 2026.",
+  "enforced_by": "PreToolUse"
+ },
+ "WP-10": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Delivery",
+  "text": "Warehouse staff check stock and schedule deliveries within the terms. They do not create orders or see credit.",
+  "enforced_by": "PreToolUse, Back end"
+ },
+ "WP-11": {
+  "policy": "Warehouse Policy",
+  "page": "Warehouse Policy.html",
+  "section": "Delivery",
+  "text": "An order's delivery address cannot be changed after 3 pm Malaysia time on the working day before delivery, when routes are planned. Before that, an address change is made by the sales manager on the customer record (MP-13). After it, the order is delivered as planned, or cancelled and placed again (SP-10). No tool changes an order's address; the assistant answers such a request from this clause.",
+  "enforced_by": "Policy"
+ }
+}

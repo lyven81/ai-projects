@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sales Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../fd-food-and-drink-distributors.html" style="color:inherit;text-decoration:none">FD Food and Drink Distributors</a></div><h1>Sales Policy</h1><nav id="toc"></nav></div>
+<p><strong>FD Food and Drink Distributors</strong> is a fictional Selangor wholesaler of packaged food, drinks, sauces and cooking ingredients, used for demonstration. This policy is an MCP resource: the staff assistant reads it, and the hooks around its five tools cite these clauses when they refuse.</p>
+<p><strong>Enforced by:</strong> <b>PreToolUse</b> the hook checks before the tool runs; <b>PostToolUse</b> the hook checks or converts the result; <b>Back end</b> the data layer repeats the check on its own; <b>Policy</b> no tool exists, so the assistant answers from the clause and names who decides.</p>
+<p>The other policies: <a href="Management Policy.html">Management Policy</a>, <a href="Finance Policy.html">Finance Policy</a>, <a href="Warehouse Policy.html">Warehouse Policy</a>.</p>
+<h2>1. Orders</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="SP-01"><td>SP-01</td><td>Orders are created by Sales Tier 02 only, for their own assigned customers (MP-06). The sales manager does not create orders; the sales manager approves the team's requests and may read any order summary.</td><td>PreToolUse, Back end</td></tr>
+<tr id="SP-02"><td>SP-02</td><td>An order lists catalogue SKUs in their ordering unit, in whole units.</td><td>PreToolUse</td></tr>
+<tr id="SP-03"><td>SP-03</td><td>Minimum order value RM 300. A smaller order needs the sales manager's recorded approval.</td><td>PreToolUse</td></tr>
+<tr id="SP-04"><td>SP-04</td><td>Prices are the customer's own price list, held in the back end and served only by retrieve_customer_prices. An SKU with no price on that list cannot be ordered until the sales manager sets one.</td><td>PostToolUse, PreToolUse</td></tr>
+<tr id="SP-05"><td>SP-05</td><td>Promotions apply only between their start and end dates, as listed in the promotion calendar (SP-12). A promotion is a published price and applies without approval.</td><td>PostToolUse, PreToolUse</td></tr>
+<tr id="SP-06"><td>SP-06</td><td>Every discount needs the sales manager's recorded approval, up to 15%; nothing above 15%. Sales Tier 02 staff cannot give a discount on their own.</td><td>PreToolUse</td></tr>
+<tr id="SP-07"><td>SP-07</td><td>The staff member confirms the full order summary on the staff page before the order is created: customer, SKUs and quantities, prices, discount, total, payment route and delivery date. A change to any of these needs a new confirmation.</td><td>PreToolUse</td></tr>
+<tr id="SP-08"><td>SP-08</td><td>Every order request carries a unique request ID. A retry with the same request ID returns the order already created and never creates a second one. The same applies to a credit raise.</td><td>PreToolUse, Back end</td></tr>
+<tr id="SP-09"><td>SP-09</td><td>Separately, the same order for the same customer (same SKUs and quantities) under a new request ID within 30 minutes is treated as a likely duplicate and not created; the staff member is asked.</td><td>PreToolUse</td></tr>
+<tr id="SP-10"><td>SP-10</td><td>A confirmed order may be cancelled before dispatch by the sales manager only, outside the assistant. After dispatch it cannot be cancelled.</td><td>Policy</td></tr>
+<tr id="SP-11"><td>SP-11</td><td>Order confirmations to customers are sent outside the assistant, only to an approved contact stored against the customer, with text taken from the saved order. The assistant has no tool for them.</td><td>Policy</td></tr>
+<tr id="SP-12"><td>SP-12</td><td>The promotion calendar is the table below: promotion, SKUs, discount, start and end date. Its promotion prices are published prices, not discounts under SP-06.</td><td>PostToolUse</td></tr>
+</table></div>
+<h2>2. Promotion calendar (SP-12)</h2>
+<table><tr><th>Promotion</th><th>Name</th><th>SKUs</th><th>Off the list price</th><th>From</th><th>To</th></tr>
+<tr><td>PR-01</td><td>Malaysia Day drinks</td><td>FD-DR-001, FD-DR-002</td><td>8%</td><td>2026-09-10</td><td>2026-09-20</td></tr>
+<tr><td>PR-02</td><td>October noodles</td><td>FD-PF-003, FD-PF-004</td><td>10%</td><td>2026-09-25</td><td>2026-10-15</td></tr>
+<tr><td>PR-03</td><td>Deepavali cooking oil and ghee</td><td>FD-CI-001, FD-CI-005</td><td>12%</td><td>2026-10-20</td><td>2026-11-08</td></tr>
+</table>
+<h2>3. Values (SP-03, SP-06, SP-09)</h2>
+<table><tr><th>Value</th><th>Setting</th></tr>
+<tr><td>Minimum order value</td><td>RM 300.00</td></tr>
+<tr><td>Maximum discount, with the sales manager's approval</td><td>15%</td></tr>
+<tr><td>Likely-duplicate window</td><td>30 minutes</td></tr>
+</table>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Sales Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 5**
+**Total published AI projects: 6**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 6 | 2026-10-21 | FD Food and Drink Distributors | [page](https://lyven81.github.io/ai-projects/fd-food-and-drink-distributors.html) |
 | 5 | 2026-10-19 | Kereta Sewa Jalan-jalan Car Rental Agent | [page](https://lyven81.github.io/ai-projects/car-rental-booking-agent.html) |
 | 4 | 2026-10-19 | Chinese Translation Quality Check | [page](https://lyven81.github.io/ai-projects/chinese-translation-quality-check.html) |
 | 3 | 2026-10-17 | Pak Razif The Gardener | [page](https://lyven81.github.io/ai-projects/pak-razif-the-gardener.html) |
@@ -17,6 +18,15 @@ Live site: https://lyven81.github.io/ai-projects/
 | 1 | 2026-10-16 | Wee Auto Car Care | [page](https://lyven81.github.io/ai-projects/wee-auto-car-care.html) |
 
 ## Projects by Problem Type
+
+### Business workflow
+
+#### FD Food and Drink Distributors
+- **What it does:** A staff assistant for a food and drink wholesaler where Claude chooses the tool and two shared hooks apply the written policy, naming the person on every decision that is theirs.
+- **How it's built:** Claude with an MCP server (Node.js) offering four policies (48 numbered clauses), two directories and five tools; one shared PreToolUse hook checks department, tier, own customer and the request's rules before any tool runs, and one shared PostToolUse hook applies policy to every result; the back end checks the critical rules again. Seven staff sign in by ID.
+- **Problem solved:** A wholesaler's Sales, Finance and Warehouse staff each have different authority over orders, prices, stock, credit and invoices. The assistant applies each rule on every request and names the person who decides when the decision is theirs.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/fd-food-and-drink-distributors.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff.html)
+- **Rebuilt:** 2026-10-21
 
 ### Document processing
 

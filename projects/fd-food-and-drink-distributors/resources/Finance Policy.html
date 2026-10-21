@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Finance Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../fd-food-and-drink-distributors.html" style="color:inherit;text-decoration:none">FD Food and Drink Distributors</a></div><h1>Finance Policy</h1><nav id="toc"></nav></div>
+<p><strong>FD Food and Drink Distributors</strong> is a fictional Selangor wholesaler of packaged food, drinks, sauces and cooking ingredients, used for demonstration. This policy is an MCP resource: the staff assistant reads it, and the hooks around its five tools cite these clauses when they refuse.</p>
+<p><strong>Enforced by:</strong> <b>PreToolUse</b> the hook checks before the tool runs; <b>PostToolUse</b> the hook checks or converts the result; <b>Back end</b> the data layer repeats the check on its own; <b>Policy</b> no tool exists, so the assistant answers from the clause and names who decides.</p>
+<p>The other policies: <a href="Management Policy.html">Management Policy</a>, <a href="Sales Policy.html">Sales Policy</a>, <a href="Warehouse Policy.html">Warehouse Policy</a>.</p>
+<h2>1. Credit</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="FP-01"><td>FP-01</td><td>Each customer has a credit limit, a credit limit balance (the credit still available) and an outstanding balance. Credit limit balance = credit limit minus outstanding balance. It can be negative when the outstanding balance is above the limit.</td><td>PostToolUse</td></tr>
+<tr id="FP-02"><td>FP-02</td><td>Credit is visible to Finance for every customer, to the assigned salesperson for their own customers, and to the sales manager for every customer. Warehouse does not see credit.</td><td>Back end, PostToolUse</td></tr>
+<tr id="FP-03"><td>FP-03</td><td>Credit route: an order on credit always requires a credit limit balance at least equal to the order total. No approval from any department overrides this.</td><td>PreToolUse, Back end</td></tr>
+<tr id="FP-04"><td>FP-04</td><td>Prepaid route: with the finance manager's recorded approval, an order is created as a separate prepaid order. It uses no credit, is held as awaiting payment, and is not dispatched until Finance confirms payment outside the assistant. A prepaid approval never turns a credit order into an allowed one.</td><td>PreToolUse</td></tr>
+<tr id="FP-05"><td>FP-05</td><td>When a credit order exceeds the balance, the options are: a smaller order, the prepaid route (FP-04), or a credit raise by Finance (FP-06 to FP-08).</td><td>PreToolUse (next_step)</td></tr>
+</table></div>
+<h2>2. Credit raises</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="FP-06"><td>FP-06</td><td>A credit raise increases the customer's credit limit; the credit limit balance is then recalculated (FP-01). Finance Tier 02 may raise credit only when the current balance is above zero and the balance after the raise is at most RM 2,000. Example: a balance of RM 1,900 allows a Tier 02 raise of RM 100 at most. Any other raise by Finance Tier 02 is refused, naming the finance manager (raise_beyond_tier2 or raise_from_zero_or_negative).</td><td>PreToolUse, PostToolUse</td></tr>
+<tr id="FP-07"><td>FP-07</td><td>The finance manager may approve any credit raise. A raise that takes the balance beyond RM 2,000, or any raise when the current balance is zero or negative, is decided by the finance manager only.</td><td>PreToolUse</td></tr>
+<tr id="FP-08"><td>FP-08</td><td>No one outside Finance approves a credit raise, the sales manager included.</td><td>PreToolUse, Back end</td></tr>
+</table></div>
+<h2>3. Terms and payments</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="FP-09"><td>FP-09</td><td>Payment terms are set per customer (30 days by default) and changed only by the finance manager, outside the assistant.</td><td>Policy</td></tr>
+<tr id="FP-10"><td>FP-10</td><td>The assistant never takes, records or confirms a payment.</td><td>Policy</td></tr>
+</table></div>
+<h2>4. Values (FP-06, FP-09)</h2>
+<table><tr><th>Value</th><th>Setting</th></tr>
+<tr><td>Finance Tier 02 raise: highest balance after the raise</td><td>RM 2,000.00</td></tr>
+<tr><td>Default payment terms</td><td>30 days</td></tr>
+</table>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Finance Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

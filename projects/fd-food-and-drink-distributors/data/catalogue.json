@@ -1,0 +1,422 @@
+[
+ {
+  "sku": "FD-DR-001",
+  "name": "Chrysanthemum Tea Drink",
+  "brand": "Taman Segar",
+  "pack": "24 x 250 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-002",
+  "name": "Soya Bean Drink",
+  "brand": "Taman Segar",
+  "pack": "24 x 250 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-003",
+  "name": "Mineral Water",
+  "brand": "Air Bukit",
+  "pack": "12 x 1.5 L",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-004",
+  "name": "Sparkling Orange",
+  "brand": "Kilau",
+  "pack": "24 x 325 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-005",
+  "name": "Isotonic Drink",
+  "brand": "Lari Laju",
+  "pack": "24 x 500 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-006",
+  "name": "Teh Tarik 3 in 1",
+  "brand": "Warung Pagi",
+  "pack": "20 x 10 sachets",
+  "unit": "case"
+ },
+ {
+  "sku": "FD-DR-007",
+  "name": "White Coffee 3 in 1",
+  "brand": "Warung Pagi",
+  "pack": "20 x 15 sachets",
+  "unit": "case"
+ },
+ {
+  "sku": "FD-DR-008",
+  "name": "Malt Chocolate Drink",
+  "brand": "Kuat Pagi",
+  "pack": "12 x 1 kg",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-009",
+  "name": "Lychee Juice",
+  "brand": "Buah Manis",
+  "pack": "24 x 300 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-010",
+  "name": "Guava Juice",
+  "brand": "Buah Manis",
+  "pack": "24 x 300 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-011",
+  "name": "Green Tea Drink",
+  "brand": "Daun Hijau",
+  "pack": "24 x 480 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-012",
+  "name": "Coconut Water",
+  "brand": "Pantai Timur",
+  "pack": "24 x 300 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-013",
+  "name": "Cola",
+  "brand": "Kilau",
+  "pack": "24 x 325 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-014",
+  "name": "Sweetened Condensed Creamer",
+  "brand": "Lembu Emas",
+  "pack": "48 x 500 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-DR-015",
+  "name": "Evaporated Creamer",
+  "brand": "Lembu Emas",
+  "pack": "48 x 390 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-001",
+  "name": "Cream Crackers",
+  "brand": "Rangup",
+  "pack": "12 x 400 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-002",
+  "name": "Marie Biscuits",
+  "brand": "Rangup",
+  "pack": "12 x 400 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-003",
+  "name": "Instant Noodles Curry",
+  "brand": "Mee Senang",
+  "pack": "30 x 5 packs",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-004",
+  "name": "Instant Noodles Chicken",
+  "brand": "Mee Senang",
+  "pack": "30 x 5 packs",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-005",
+  "name": "Rice Vermicelli",
+  "brand": "Bihun Jaya",
+  "pack": "30 x 400 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-006",
+  "name": "Canned Sardines in Tomato Sauce",
+  "brand": "Laut Biru",
+  "pack": "24 x 425 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-007",
+  "name": "Canned Tuna Chunks",
+  "brand": "Laut Biru",
+  "pack": "48 x 185 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-008",
+  "name": "Canned Baked Beans",
+  "brand": "Kebun Ria",
+  "pack": "24 x 425 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-009",
+  "name": "Canned Button Mushrooms",
+  "brand": "Kebun Ria",
+  "pack": "24 x 425 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-010",
+  "name": "Corned Beef",
+  "brand": "Ladang Utara",
+  "pack": "24 x 340 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-011",
+  "name": "Kaya Spread",
+  "brand": "Pandan Wangi",
+  "pack": "24 x 400 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-012",
+  "name": "Peanut Butter",
+  "brand": "Kacang Emas",
+  "pack": "12 x 510 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-013",
+  "name": "Wafer Rolls",
+  "brand": "Rangup",
+  "pack": "12 x 300 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-PF-014",
+  "name": "Prawn Crackers",
+  "brand": "Keropok Ria",
+  "pack": "20 x 200 g",
+  "unit": "bag"
+ },
+ {
+  "sku": "FD-PF-015",
+  "name": "Oat Cereal",
+  "brand": "Pagi Sihat",
+  "pack": "12 x 800 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-001",
+  "name": "Chilli Sauce",
+  "brand": "Api Merah",
+  "pack": "12 x 1 kg",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-002",
+  "name": "Tomato Ketchup",
+  "brand": "Api Merah",
+  "pack": "12 x 1 kg",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-003",
+  "name": "Light Soy Sauce",
+  "brand": "Kicap Tua",
+  "pack": "12 x 640 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-004",
+  "name": "Dark Soy Sauce",
+  "brand": "Kicap Tua",
+  "pack": "12 x 640 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-005",
+  "name": "Sweet Soy Sauce",
+  "brand": "Kicap Manis Bonda",
+  "pack": "12 x 620 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-006",
+  "name": "Oyster Sauce",
+  "brand": "Tiram Mas",
+  "pack": "12 x 770 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-007",
+  "name": "Fish Sauce",
+  "brand": "Laut Biru",
+  "pack": "12 x 700 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-008",
+  "name": "Chilli Paste",
+  "brand": "Api Merah",
+  "pack": "24 x 230 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-009",
+  "name": "Sambal Belacan",
+  "brand": "Dapur Bonda",
+  "pack": "24 x 200 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-010",
+  "name": "Mayonnaise",
+  "brand": "Kebun Ria",
+  "pack": "12 x 1 L",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-011",
+  "name": "Black Pepper Sauce",
+  "brand": "Tiram Mas",
+  "pack": "12 x 500 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-012",
+  "name": "Satay Peanut Sauce",
+  "brand": "Dapur Bonda",
+  "pack": "24 x 300 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-013",
+  "name": "Vinegar",
+  "brand": "Kicap Tua",
+  "pack": "12 x 1 L",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-014",
+  "name": "Sesame Oil",
+  "brand": "Bijan Emas",
+  "pack": "12 x 320 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-SC-015",
+  "name": "Curry Paste",
+  "brand": "Dapur Bonda",
+  "pack": "24 x 250 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-001",
+  "name": "Cooking Oil",
+  "brand": "Sawit Murni",
+  "pack": "6 x 5 kg",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-002",
+  "name": "Rice, local white",
+  "brand": "Padi Utara",
+  "pack": "1 x 10 kg",
+  "unit": "bag"
+ },
+ {
+  "sku": "FD-CI-003",
+  "name": "Rice, fragrant",
+  "brand": "Padi Utara",
+  "pack": "1 x 10 kg",
+  "unit": "bag"
+ },
+ {
+  "sku": "FD-CI-004",
+  "name": "Wheat Flour",
+  "brand": "Gandum Jaya",
+  "pack": "1 x 25 kg",
+  "unit": "bag"
+ },
+ {
+  "sku": "FD-CI-005",
+  "name": "Ghee",
+  "brand": "Lembu Emas",
+  "pack": "12 x 800 g",
+  "unit": "tin"
+ },
+ {
+  "sku": "FD-CI-006",
+  "name": "Coarse Sugar",
+  "brand": "Tebu Manis",
+  "pack": "1 x 25 kg",
+  "unit": "bag"
+ },
+ {
+  "sku": "FD-CI-007",
+  "name": "Fine Salt",
+  "brand": "Garam Laut",
+  "pack": "24 x 500 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-008",
+  "name": "Curry Powder, meat",
+  "brand": "Rempah Bonda",
+  "pack": "20 x 250 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-009",
+  "name": "Chilli Powder",
+  "brand": "Rempah Bonda",
+  "pack": "20 x 250 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-010",
+  "name": "Turmeric Powder",
+  "brand": "Rempah Bonda",
+  "pack": "20 x 250 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-011",
+  "name": "Coconut Milk",
+  "brand": "Santan Segar",
+  "pack": "24 x 200 ml",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-012",
+  "name": "Cornflour",
+  "brand": "Gandum Jaya",
+  "pack": "24 x 400 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-013",
+  "name": "Anchovies, dried",
+  "brand": "Laut Biru",
+  "pack": "10 x 500 g",
+  "unit": "bag"
+ },
+ {
+  "sku": "FD-CI-014",
+  "name": "Belacan Block",
+  "brand": "Dapur Bonda",
+  "pack": "40 x 250 g",
+  "unit": "carton"
+ },
+ {
+  "sku": "FD-CI-015",
+  "name": "Palm Sugar",
+  "brand": "Tebu Manis",
+  "pack": "20 x 500 g",
+  "unit": "carton"
+ }
+]

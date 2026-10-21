@@ -1,0 +1,2794 @@
+[
+ {
+  "id": "C-0001",
+  "name": "Kedai Runcit Seri Mawar",
+  "kind": "sundry",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 500000,
+  "outstanding": 310000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0001-1",
+    "name": "Puan Zarina",
+    "channel": "whatsapp",
+    "value": "+60 12-418 7702",
+    "approved": true
+   },
+   {
+    "id": "CT-0001-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts@serimawar.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0002",
+  "name": "Restoran Bunga Raya",
+  "kind": "restaurant",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 300000,
+  "outstanding": 300000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0002-1",
+    "name": "Encik Faizal",
+    "channel": "whatsapp",
+    "value": "+60 13-552 0914",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0003",
+  "name": "Pelangi Jaya Mini Mart",
+  "kind": "minimarket",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": null,
+  "outstanding": 420000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0003-1",
+    "name": "Ms Lim",
+    "channel": "whatsapp",
+    "value": "+60 16-730 2281",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0004",
+  "name": "Kedai Runcit Gemilang",
+  "kind": "sundry",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 560000,
+  "outstanding": 445800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0004-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-969 5050",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0005",
+  "name": "Kedai Runcit Taman Baru",
+  "kind": "sundry",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 390000,
+  "outstanding": 300000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0005-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-451 2419",
+    "approved": true
+   },
+   {
+    "id": "CT-0005-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts5@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0006",
+  "name": "Restoran Lestari",
+  "kind": "restaurant",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 760000,
+  "outstanding": 364300,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0006-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-916 7594",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0007",
+  "name": "Restoran Wangi",
+  "kind": "restaurant",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 630000,
+  "outstanding": 552800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0007-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-471 6546",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0008",
+  "name": "Ros Mini Mart",
+  "kind": "minimarket",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1200000,
+  "outstanding": 390400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0008-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-824 4626",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0009",
+  "name": "Restoran Taman Baru",
+  "kind": "restaurant",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 600000,
+  "outstanding": 340300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0009-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-620 6793",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0010",
+  "name": "Kedai Runcit Indah",
+  "kind": "sundry",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 500000,
+  "outstanding": 292300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0010-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-354 8205",
+    "approved": true
+   },
+   {
+    "id": "CT-0010-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts10@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0011",
+  "name": "Kedai Runcit Kenanga",
+  "kind": "sundry",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 240000,
+  "outstanding": 128800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0011-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-285 3626",
+    "approved": true
+   },
+   {
+    "id": "CT-0011-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts11@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0012",
+  "name": "Puncak Mini Mart",
+  "kind": "minimarket",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1290000,
+  "outstanding": 622900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0012-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-944 6776",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0013",
+  "name": "Sinar Pagi Mini Mart",
+  "kind": "minimarket",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1490000,
+  "outstanding": 1292500,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0013-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-901 7653",
+    "approved": true
+   },
+   {
+    "id": "CT-0013-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts13@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0014",
+  "name": "Restoran Anggerik",
+  "kind": "restaurant",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 350000,
+  "outstanding": 188600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0014-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-738 7173",
+    "approved": true
+   },
+   {
+    "id": "CT-0014-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts14@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0015",
+  "name": "Restoran Damai",
+  "kind": "restaurant",
+  "location": "Puchong",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 710000,
+  "outstanding": 579200,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0015-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-854 5833",
+    "approved": true
+   },
+   {
+    "id": "CT-0015-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts15@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0016",
+  "name": "Kedai Runcit Ceria",
+  "kind": "sundry",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 590000,
+  "outstanding": 373100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0016-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-913 7821",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0017",
+  "name": "Restoran Seroja",
+  "kind": "restaurant",
+  "location": "Puchong",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 760000,
+  "outstanding": 511400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0017-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-869 1519",
+    "approved": true
+   },
+   {
+    "id": "CT-0017-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts17@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0018",
+  "name": "Kedai Runcit Sentosa",
+  "kind": "sundry",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 390000,
+  "outstanding": 340600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0018-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-952 9044",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0019",
+  "name": "Berkat Mini Mart",
+  "kind": "minimarket",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1080000,
+  "outstanding": 640000,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0019-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-320 4908",
+    "approved": true
+   },
+   {
+    "id": "CT-0019-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts19@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0020",
+  "name": "Suria Mini Mart",
+  "kind": "minimarket",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 810000,
+  "outstanding": 416300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0020-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-247 2631",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0021",
+  "name": "Kedai Runcit Suria",
+  "kind": "sundry",
+  "location": "Kajang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 470000,
+  "outstanding": 179800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0021-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-259 5005",
+    "approved": true
+   },
+   {
+    "id": "CT-0021-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts21@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0022",
+  "name": "Restoran Setia",
+  "kind": "restaurant",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 490000,
+  "outstanding": 147900,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0022-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-308 3693",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0023",
+  "name": "Bunga Raya Mini Mart",
+  "kind": "minimarket",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1400000,
+  "outstanding": 394300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0023-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-257 4811",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0024",
+  "name": "Kedai Runcit Selasih",
+  "kind": "sundry",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 230000,
+  "outstanding": 235800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0024-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-684 2892",
+    "approved": true
+   },
+   {
+    "id": "CT-0024-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts24@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0025",
+  "name": "Lestari Mini Mart",
+  "kind": "minimarket",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 920000,
+  "outstanding": 310100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0025-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-569 4262",
+    "approved": true
+   },
+   {
+    "id": "CT-0025-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts25@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0026",
+  "name": "Kedai Runcit Makmur",
+  "kind": "sundry",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 430000,
+  "outstanding": 382600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0026-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-932 3954",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0027",
+  "name": "Kedai Runcit Bintang Timur",
+  "kind": "sundry",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 540000,
+  "outstanding": 343100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0027-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-648 5395",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0028",
+  "name": "Kedai Runcit Rimba",
+  "kind": "sundry",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 470000,
+  "outstanding": 342600,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0028-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-874 9260",
+    "approved": true
+   },
+   {
+    "id": "CT-0028-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts28@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0029",
+  "name": "Kedai Runcit Harmoni",
+  "kind": "sundry",
+  "location": "Sepang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 400000,
+  "outstanding": 225000,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0029-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-738 4603",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0030",
+  "name": "Sakura Mini Mart",
+  "kind": "minimarket",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 680000,
+  "outstanding": 577500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0030-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-497 2103",
+    "approved": true
+   },
+   {
+    "id": "CT-0030-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts30@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0031",
+  "name": "Melati Mini Mart",
+  "kind": "minimarket",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1380000,
+  "outstanding": 702700,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0031-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-222 4992",
+    "approved": true
+   },
+   {
+    "id": "CT-0031-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts31@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0032",
+  "name": "Kedai Runcit Tiara",
+  "kind": "sundry",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 490000,
+  "outstanding": 435200,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0032-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-992 3871",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0033",
+  "name": "Kedai Runcit Orkid",
+  "kind": "sundry",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 330000,
+  "outstanding": 262800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0033-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-442 5413",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0034",
+  "name": "Indah Mini Mart",
+  "kind": "minimarket",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1310000,
+  "outstanding": 824800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0034-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-693 9841",
+    "approved": true
+   },
+   {
+    "id": "CT-0034-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts34@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0035",
+  "name": "Jaya Baru Mini Mart",
+  "kind": "minimarket",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 770000,
+  "outstanding": 249800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0035-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-950 4161",
+    "approved": true
+   },
+   {
+    "id": "CT-0035-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts35@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0036",
+  "name": "Restoran Kenanga",
+  "kind": "restaurant",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 550000,
+  "outstanding": 617800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0036-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 13-296 1618",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0037",
+  "name": "Kedai Runcit Aman",
+  "kind": "sundry",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 470000,
+  "outstanding": 303100,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0037-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-499 7332",
+    "approved": true
+   },
+   {
+    "id": "CT-0037-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts37@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0038",
+  "name": "Kedai Runcit Seroja",
+  "kind": "sundry",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 410000,
+  "outstanding": 201900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0038-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-731 9812",
+    "approved": true
+   },
+   {
+    "id": "CT-0038-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts38@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0039",
+  "name": "Selasih Mini Mart",
+  "kind": "minimarket",
+  "location": "Puchong",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1070000,
+  "outstanding": 840800,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0039-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-332 9132",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0040",
+  "name": "Harmoni Mini Mart",
+  "kind": "minimarket",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 760000,
+  "outstanding": 313600,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0040-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-344 5641",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0041",
+  "name": "Kedai Runcit Wangi",
+  "kind": "sundry",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 530000,
+  "outstanding": 123100,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0041-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-440 8073",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0042",
+  "name": "Kedai Runcit Anggerik",
+  "kind": "sundry",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 300000,
+  "outstanding": 71000,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0042-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-608 8802",
+    "approved": true
+   },
+   {
+    "id": "CT-0042-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts42@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0043",
+  "name": "Kedai Runcit Cempaka",
+  "kind": "sundry",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 230000,
+  "outstanding": 181700,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0043-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-670 5750",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0044",
+  "name": "Kedai Runcit Pelangi Jaya",
+  "kind": "sundry",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 260000,
+  "outstanding": 227800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0044-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-380 3617",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0045",
+  "name": "Restoran Pelangi Jaya",
+  "kind": "restaurant",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 720000,
+  "outstanding": 472300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0045-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-592 6989",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0046",
+  "name": "Kedai Runcit Permata",
+  "kind": "sundry",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 570000,
+  "outstanding": 380100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0046-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-342 2914",
+    "approved": true
+   },
+   {
+    "id": "CT-0046-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts46@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0047",
+  "name": "Restoran Melati",
+  "kind": "restaurant",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 410000,
+  "outstanding": 441800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0047-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-621 6575",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0048",
+  "name": "Restoran Makmur",
+  "kind": "restaurant",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 850000,
+  "outstanding": 218800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0048-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-959 3764",
+    "approved": true
+   },
+   {
+    "id": "CT-0048-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts48@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0049",
+  "name": "Kedai Runcit Sri Muda",
+  "kind": "sundry",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 540000,
+  "outstanding": 197300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0049-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-787 7586",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0050",
+  "name": "Mesra Mini Mart",
+  "kind": "minimarket",
+  "location": "Sepang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 680000,
+  "outstanding": 504200,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0050-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-765 7302",
+    "approved": true
+   },
+   {
+    "id": "CT-0050-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts50@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0051",
+  "name": "Restoran Ceria",
+  "kind": "restaurant",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 370000,
+  "outstanding": 69900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0051-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-562 1745",
+    "approved": true
+   },
+   {
+    "id": "CT-0051-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts51@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0052",
+  "name": "Orkid Mini Mart",
+  "kind": "minimarket",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1230000,
+  "outstanding": 703900,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0052-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-974 7922",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0053",
+  "name": "Teratai Mini Mart",
+  "kind": "minimarket",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1370000,
+  "outstanding": 845300,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0053-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-914 8147",
+    "approved": true
+   },
+   {
+    "id": "CT-0053-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts53@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0054",
+  "name": "Kedai Runcit Setia",
+  "kind": "sundry",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 470000,
+  "outstanding": 413300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0054-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-897 5986",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0055",
+  "name": "Restoran Jasmin",
+  "kind": "restaurant",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 330000,
+  "outstanding": 191300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0055-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-586 8786",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0056",
+  "name": "Restoran Jaya Baru",
+  "kind": "restaurant",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 430000,
+  "outstanding": 246000,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0056-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-604 3014",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0057",
+  "name": "Kedai Runcit Sinar Pagi",
+  "kind": "sundry",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 210000,
+  "outstanding": 158700,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0057-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-453 2766",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0058",
+  "name": "Kedai Runcit Damai",
+  "kind": "sundry",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 420000,
+  "outstanding": 124700,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0058-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-303 1343",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0059",
+  "name": "Nusa Mini Mart",
+  "kind": "minimarket",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1360000,
+  "outstanding": 674600,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0059-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-392 8025",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0060",
+  "name": "Wangi Mini Mart",
+  "kind": "minimarket",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 640000,
+  "outstanding": 429300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0060-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-551 7542",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0061",
+  "name": "Kedai Runcit Nusa",
+  "kind": "sundry",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 440000,
+  "outstanding": 212400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0061-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 13-484 6202",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0062",
+  "name": "Restoran Bintang Timur",
+  "kind": "restaurant",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 710000,
+  "outstanding": 457100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0062-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-951 7743",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0063",
+  "name": "Kedai Runcit Lembah",
+  "kind": "sundry",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 420000,
+  "outstanding": 129600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0063-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-645 1478",
+    "approved": true
+   },
+   {
+    "id": "CT-0063-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts63@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0064",
+  "name": "Kedai Runcit Lestari",
+  "kind": "sundry",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 370000,
+  "outstanding": 102100,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0064-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-564 8763",
+    "approved": true
+   },
+   {
+    "id": "CT-0064-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts64@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0065",
+  "name": "Rezeki Mini Mart",
+  "kind": "minimarket",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1310000,
+  "outstanding": 1143600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0065-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-476 3041",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0066",
+  "name": "Kedai Runcit Sejahtera",
+  "kind": "sundry",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 570000,
+  "outstanding": 484400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0066-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-832 8999",
+    "approved": true
+   },
+   {
+    "id": "CT-0066-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts66@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0067",
+  "name": "Cahaya Mini Mart",
+  "kind": "minimarket",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1140000,
+  "outstanding": 863500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0067-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 13-865 5521",
+    "approved": true
+   },
+   {
+    "id": "CT-0067-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts67@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0068",
+  "name": "Jasmin Mini Mart",
+  "kind": "minimarket",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1400000,
+  "outstanding": 399400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0068-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-517 3669",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0069",
+  "name": "Restoran Lembah",
+  "kind": "restaurant",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 300000,
+  "outstanding": 236300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0069-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-336 2804",
+    "approved": true
+   },
+   {
+    "id": "CT-0069-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts69@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0070",
+  "name": "Kedai Runcit Puncak",
+  "kind": "sundry",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 280000,
+  "outstanding": 179300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0070-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-658 3149",
+    "approved": true
+   },
+   {
+    "id": "CT-0070-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts70@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0071",
+  "name": "Kedai Runcit Mutiara",
+  "kind": "sundry",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 520000,
+  "outstanding": 155400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0071-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-880 6185",
+    "approved": true
+   },
+   {
+    "id": "CT-0071-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts71@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0072",
+  "name": "Bintang Timur Mini Mart",
+  "kind": "minimarket",
+  "location": "Kajang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 930000,
+  "outstanding": 157300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0072-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-228 9907",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0073",
+  "name": "Restoran Rimba",
+  "kind": "restaurant",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 560000,
+  "outstanding": 322300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0073-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 13-775 2085",
+    "approved": true
+   },
+   {
+    "id": "CT-0073-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts73@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0074",
+  "name": "Restoran Rezeki",
+  "kind": "restaurant",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 470000,
+  "outstanding": 206400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0074-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-998 7556",
+    "approved": true
+   },
+   {
+    "id": "CT-0074-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts74@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0075",
+  "name": "Gemilang Mini Mart",
+  "kind": "minimarket",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1040000,
+  "outstanding": 685400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0075-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-471 6715",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0076",
+  "name": "Kedai Runcit Cahaya",
+  "kind": "sundry",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 490000,
+  "outstanding": 75800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0076-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-317 2100",
+    "approved": true
+   },
+   {
+    "id": "CT-0076-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts76@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0077",
+  "name": "Kedai Runcit Mesra",
+  "kind": "sundry",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 270000,
+  "outstanding": 45400,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0077-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-234 3302",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0078",
+  "name": "Sejahtera Mini Mart",
+  "kind": "minimarket",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1250000,
+  "outstanding": 302200,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0078-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-456 9907",
+    "approved": true
+   },
+   {
+    "id": "CT-0078-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts78@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0079",
+  "name": "Restoran Bahagia",
+  "kind": "restaurant",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 860000,
+  "outstanding": 412900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0079-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-766 4734",
+    "approved": true
+   },
+   {
+    "id": "CT-0079-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts79@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0080",
+  "name": "Kedai Runcit Murni",
+  "kind": "sundry",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 490000,
+  "outstanding": 544200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0080-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-618 8368",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0081",
+  "name": "Anggerik Mini Mart",
+  "kind": "minimarket",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 980000,
+  "outstanding": 502900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0081-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-437 5786",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0082",
+  "name": "Kedai Runcit Kasih",
+  "kind": "sundry",
+  "location": "Kajang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 490000,
+  "outstanding": 155800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0082-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-989 4802",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0083",
+  "name": "Seri Mawar Mini Mart",
+  "kind": "minimarket",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1370000,
+  "outstanding": 208200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0083-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-293 3400",
+    "approved": true
+   },
+   {
+    "id": "CT-0083-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts83@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0084",
+  "name": "Kedai Runcit Delima",
+  "kind": "sundry",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 570000,
+  "outstanding": 397300,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0084-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-805 1329",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0085",
+  "name": "Aman Mini Mart",
+  "kind": "minimarket",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1160000,
+  "outstanding": 652300,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0085-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-683 7165",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0086",
+  "name": "Kedai Runcit Bunga Raya",
+  "kind": "sundry",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 560000,
+  "outstanding": 299300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0086-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-852 5947",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0087",
+  "name": "Kemboja Mini Mart",
+  "kind": "minimarket",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 960000,
+  "outstanding": 590300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0087-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-223 6325",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0088",
+  "name": "Kedai Runcit Jasmin",
+  "kind": "sundry",
+  "location": "Sepang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 550000,
+  "outstanding": 154800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0088-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-884 2060",
+    "approved": true
+   },
+   {
+    "id": "CT-0088-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts88@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0089",
+  "name": "Kedai Runcit Kemboja",
+  "kind": "sundry",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 550000,
+  "outstanding": 235400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0089-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-944 6798",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0090",
+  "name": "Permata Mini Mart",
+  "kind": "minimarket",
+  "location": "Kajang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 630000,
+  "outstanding": 233300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0090-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-208 4690",
+    "approved": true
+   },
+   {
+    "id": "CT-0090-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts90@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0091",
+  "name": "Restoran Tiara",
+  "kind": "restaurant",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 480000,
+  "outstanding": 427700,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0091-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-675 7800",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0092",
+  "name": "Bahagia Mini Mart",
+  "kind": "minimarket",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1250000,
+  "outstanding": 1032100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0092-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-679 6274",
+    "approved": true
+   },
+   {
+    "id": "CT-0092-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts92@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0093",
+  "name": "Kedai Runcit Berkat",
+  "kind": "sundry",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 490000,
+  "outstanding": 400900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0093-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 16-560 5074",
+    "approved": true
+   },
+   {
+    "id": "CT-0093-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts93@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0094",
+  "name": "Restoran Gemilang",
+  "kind": "restaurant",
+  "location": "Kajang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 750000,
+  "outstanding": 478200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0094-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-923 3422",
+    "approved": true
+   },
+   {
+    "id": "CT-0094-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts94@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0095",
+  "name": "Kedai Runcit Lily",
+  "kind": "sundry",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 570000,
+  "outstanding": 408000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0095-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-879 6251",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0096",
+  "name": "Restoran Teratai",
+  "kind": "restaurant",
+  "location": "Sepang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 650000,
+  "outstanding": 311000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0096-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-811 1672",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0097",
+  "name": "Kedai Runcit Ros",
+  "kind": "sundry",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 270000,
+  "outstanding": 191500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0097-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-788 4240",
+    "approved": true
+   },
+   {
+    "id": "CT-0097-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts97@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0098",
+  "name": "Kedai Runcit Jaya Baru",
+  "kind": "sundry",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 530000,
+  "outstanding": 382400,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0098-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-381 7117",
+    "approved": true
+   },
+   {
+    "id": "CT-0098-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts98@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0099",
+  "name": "Ehsan Mini Mart",
+  "kind": "minimarket",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1500000,
+  "outstanding": 438600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0099-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-645 3618",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0100",
+  "name": "Restoran Kemboja",
+  "kind": "restaurant",
+  "location": "Sepang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 810000,
+  "outstanding": 318200,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0100-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-827 1565",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0101",
+  "name": "Restoran Puncak",
+  "kind": "restaurant",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 520000,
+  "outstanding": 196300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0101-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-299 1877",
+    "approved": true
+   },
+   {
+    "id": "CT-0101-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts101@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0102",
+  "name": "Restoran Aman",
+  "kind": "restaurant",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 620000,
+  "outstanding": 256200,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0102-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-431 8432",
+    "approved": true
+   },
+   {
+    "id": "CT-0102-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts102@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0103",
+  "name": "Damai Mini Mart",
+  "kind": "minimarket",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 700000,
+  "outstanding": 565800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0103-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-610 9308",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0104",
+  "name": "Seroja Mini Mart",
+  "kind": "minimarket",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 900000,
+  "outstanding": 736100,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0104-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-394 6922",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0105",
+  "name": "Sentosa Mini Mart",
+  "kind": "minimarket",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1110000,
+  "outstanding": 394700,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0105-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 13-588 8695",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0106",
+  "name": "Kedai Runcit Bahagia",
+  "kind": "sundry",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 380000,
+  "outstanding": 282200,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0106-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-605 5005",
+    "approved": true
+   },
+   {
+    "id": "CT-0106-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts106@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0107",
+  "name": "Restoran Indah",
+  "kind": "restaurant",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 420000,
+  "outstanding": 282600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0107-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 19-960 7551",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0108",
+  "name": "Restoran Berkat",
+  "kind": "restaurant",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 620000,
+  "outstanding": 494000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0108-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-534 7919",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0109",
+  "name": "Kedai Runcit Teratai",
+  "kind": "sundry",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 380000,
+  "outstanding": 199600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0109-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-692 5559",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0110",
+  "name": "Kedai Runcit Melati",
+  "kind": "sundry",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 390000,
+  "outstanding": 177200,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0110-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-362 5056",
+    "approved": true
+   },
+   {
+    "id": "CT-0110-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts110@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0111",
+  "name": "Kedai Runcit Sakura",
+  "kind": "sundry",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 430000,
+  "outstanding": 235300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0111-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-741 1055",
+    "approved": true
+   },
+   {
+    "id": "CT-0111-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts111@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0112",
+  "name": "Mutiara Mini Mart",
+  "kind": "minimarket",
+  "location": "Sepang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1320000,
+  "outstanding": 455600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0112-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-400 7648",
+    "approved": true
+   },
+   {
+    "id": "CT-0112-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts112@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0113",
+  "name": "Rimba Mini Mart",
+  "kind": "minimarket",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1460000,
+  "outstanding": 289600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0113-1",
+    "name": "Store manager",
+    "channel": "whatsapp",
+    "value": "+60 12-325 7417",
+    "approved": true
+   },
+   {
+    "id": "CT-0113-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts113@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0114",
+  "name": "Kedai Runcit Rezeki",
+  "kind": "sundry",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 420000,
+  "outstanding": 228200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0114-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-389 4419",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0115",
+  "name": "Ceria Mini Mart",
+  "kind": "minimarket",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1210000,
+  "outstanding": 777500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0115-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-734 5842",
+    "approved": true
+   },
+   {
+    "id": "CT-0115-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts115@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0116",
+  "name": "Tiara Mini Mart",
+  "kind": "minimarket",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1340000,
+  "outstanding": 379000,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0116-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-857 7736",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0117",
+  "name": "Kenanga Mini Mart",
+  "kind": "minimarket",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 790000,
+  "outstanding": 533300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0117-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-441 7636",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0118",
+  "name": "Kedai Runcit Ehsan",
+  "kind": "sundry",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 300000,
+  "outstanding": 162800,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0118-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-400 3299",
+    "approved": true
+   },
+   {
+    "id": "CT-0118-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts118@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0119",
+  "name": "Restoran Orkid",
+  "kind": "restaurant",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 660000,
+  "outstanding": 459500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0119-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-533 3978",
+    "approved": true
+   },
+   {
+    "id": "CT-0119-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts119@shop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0120",
+  "name": "Restoran Sinar Pagi",
+  "kind": "restaurant",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 300000,
+  "outstanding": 268200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0120-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-903 9189",
+    "approved": true
+   },
+   {
+    "id": "CT-0120-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts120@shop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ }
+]

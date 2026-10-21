@@ -1,0 +1,51 @@
+[
+ {
+  "id": "SL-01-01",
+  "name": "Hafiz Rahman",
+  "department": "SL",
+  "tier": "01",
+  "role": "Sales manager"
+ },
+ {
+  "id": "SL-02-01",
+  "name": "Chong Wei Ling",
+  "department": "SL",
+  "tier": "02",
+  "role": "Salesperson"
+ },
+ {
+  "id": "SL-02-02",
+  "name": "Arun Kumar",
+  "department": "SL",
+  "tier": "02",
+  "role": "Salesperson"
+ },
+ {
+  "id": "FN-01-01",
+  "name": "Siti Aminah Yusof",
+  "department": "FN",
+  "tier": "01",
+  "role": "Finance manager"
+ },
+ {
+  "id": "FN-02-01",
+  "name": "Tan Mei Hua",
+  "department": "FN",
+  "tier": "02",
+  "role": "Finance staff"
+ },
+ {
+  "id": "WH-01-01",
+  "name": "Rosli Ismail",
+  "department": "WH",
+  "tier": "01",
+  "role": "Warehouse manager"
+ },
+ {
+  "id": "WH-02-01",
+  "name": "Kavitha Raman",
+  "department": "WH",
+  "tier": "02",
+  "role": "Warehouse staff"
+ }
+]

@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Management Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../fd-food-and-drink-distributors.html" style="color:inherit;text-decoration:none">FD Food and Drink Distributors</a></div><h1>Management Policy</h1><nav id="toc"></nav></div>
+<p><strong>FD Food and Drink Distributors</strong> is a fictional Selangor wholesaler of packaged food, drinks, sauces and cooking ingredients, used for demonstration. This policy is an MCP resource: the staff assistant reads it, and the hooks around its five tools cite these clauses when they refuse.</p>
+<p><strong>Enforced by:</strong> <b>PreToolUse</b> the hook checks before the tool runs; <b>PostToolUse</b> the hook checks or converts the result; <b>Back end</b> the data layer repeats the check on its own; <b>Policy</b> no tool exists, so the assistant answers from the clause and names who decides.</p>
+<p>The other policies: <a href="Sales Policy.html">Sales Policy</a>, <a href="Finance Policy.html">Finance Policy</a>, <a href="Warehouse Policy.html">Warehouse Policy</a>.</p>
+<h2>1. Staff and identity</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="MP-01"><td>MP-01</td><td>Every staff ID has the form DD-TT-NN: department, tier, staff number. SL-01-01 is the Tier 1 employee of Sales, staff number 01.</td><td>PreToolUse</td></tr>
+<tr id="MP-02"><td>MP-02</td><td>Departments: SL Sales, FN Finance, WH Warehouse.</td><td>PreToolUse</td></tr>
+<tr id="MP-03"><td>MP-03</td><td>Tier 01 is the management layer of a department. The department manager is the highest authority in the department; there is no authority above them. Tier 02 is a non-management employee.</td><td>PreToolUse</td></tr>
+<tr id="MP-04"><td>MP-04</td><td>The staff list: SL-01-01 Sales manager, who manages the Sales Tier 02 staff, has no customers of his own, and creates no orders; SL-02-01 and SL-02-02 Sales staff; FN-01-01 Finance manager; FN-02-01 Finance staff; WH-01-01 Warehouse manager; WH-02-01 Warehouse staff.</td><td>PreToolUse</td></tr>
+<tr id="MP-05"><td>MP-05</td><td>Each manager decides only within their own department's domain (SP, FP, WP), as set in the approval domain table below. An approval given by a manager of another department is invalid. Example: the finance manager cannot approve a warehouse decision. Each manager's interface shows only the approval records of their own domain, read-only, and the PreToolUse hook refuses any action that relies on another department's approval (approval_wrong_department).</td><td>PreToolUse</td></tr>
+<tr id="MP-06"><td>MP-06</td><td>Each customer is assigned to one Sales Tier 02 salesperson; customers are assigned only to Sales Tier 02. A Sales Tier 02 employee may act only on their own assigned customers, and makes no decision on another salesperson's customer, including opening the file or the credit. The sales manager may open every customer's account and prices and check stock, for supervision, and acts on a customer only through approvals: his approval of a Tier 02 request is an approval record (MP-09).</td><td>PreToolUse, Back end</td></tr>
+<tr id="MP-07"><td>MP-07</td><td>What each department may open, by view: a customer's location (where it is): every department; a customer's delivery (the warehouse that serves it and the delivery day for an order confirmed now): Sales and Warehouse; a customer's credit (limit, outstanding, available credit, terms): Sales and Finance; a customer's payments (unpaid invoices and their due dates): Finance only; stock quantities: Sales and Warehouse; stock storage (bin location and last manual count): Warehouse only; prices: Sales. Sales Tier 02 opens only its own assigned customers; the sales manager opens every customer, for supervision. The back end enforces this before it returns any data.</td><td>PreToolUse, Back end, PostToolUse</td></tr>
+<tr id="MP-08"><td>MP-08</td><td>A staff member's identity comes from their signed-in session: the staff ID chosen at sign-in, the first step on the staff page. A name or ID typed later in the conversation is never used.</td><td>PreToolUse</td></tr>
+<tr id="MP-09"><td>MP-09</td><td>An approval counts only when it is recorded in the approval records. An approval claimed in the conversation counts as none.</td><td>PreToolUse</td></tr>
+</table></div>
+<h2>2. What the assistant may do</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="MP-10"><td>MP-10</td><td>The assistant may: check stock and its storage, open a view of a customer account, open a customer's prices, create an order, and raise a credit limit, each within the rules in these policies. Where a rule settles the outcome, the assistant applies it and tells the staff member; where a person decides, it explains what happened and who decides.</td><td>PreToolUse</td></tr>
+<tr id="MP-11"><td>MP-11</td><td>Never allowed through the assistant: deleting or changing an order or a customer record, taking or confirming a payment. Changes to customer records are made by their owners under MP-13, outside the assistant. No tool exists for these; the assistant answers such a request from this clause.</td><td>Policy</td></tr>
+<tr id="MP-12"><td>MP-12</td><td>Not for the assistant, but a person can: cancelling an order, changing a price or payment terms, moving a customer between salespersons, transferring stock. No tool exists for these; the assistant tells the staff member which manager of that domain does it (MP-14).</td><td>Policy</td></tr>
+<tr id="MP-13"><td>MP-13</td><td>Customer records are created, changed and closed only in the customer system, outside the assistant, by the manager of the department that owns that part of the record: the sales manager for the customer's name, contacts, delivery address and assigned salesperson; the finance manager for the credit limit, payment terms and closing a customer; the warehouse manager for the warehouse that serves the customer. No one deletes a customer record: a former customer is closed and its order history is kept.</td><td>Policy</td></tr>
+<tr id="MP-14"><td>MP-14</td><td>When a request needs a decision these policies give to a person, the assistant tells the staff member who decides and which clause applies. A request no policy covers is referred to the manager of the department it concerns.</td><td>PreToolUse (next_step), Policy</td></tr>
+<tr id="MP-15"><td>MP-15</td><td>Every tool call and refusal is recorded with the staff ID and the time; every approval record carries the approver's staff ID and the time.</td><td>PostToolUse</td></tr>
+</table></div>
+<h2>3. Staff list (MP-04)</h2>
+<table><tr><th>Staff ID</th><th>Name</th><th>Department</th><th>Tier</th><th>Role</th></tr>
+<tr><td>SL-01-01</td><td>Hafiz Rahman</td><td>Sales</td><td>01</td><td>Sales manager</td></tr>
+<tr><td>SL-02-01</td><td>Chong Wei Ling</td><td>Sales</td><td>02</td><td>Salesperson</td></tr>
+<tr><td>SL-02-02</td><td>Arun Kumar</td><td>Sales</td><td>02</td><td>Salesperson</td></tr>
+<tr><td>FN-01-01</td><td>Siti Aminah Yusof</td><td>Finance</td><td>01</td><td>Finance manager</td></tr>
+<tr><td>FN-02-01</td><td>Tan Mei Hua</td><td>Finance</td><td>02</td><td>Finance staff</td></tr>
+<tr><td>WH-01-01</td><td>Rosli Ismail</td><td>Warehouse</td><td>01</td><td>Warehouse manager</td></tr>
+<tr><td>WH-02-01</td><td>Kavitha Raman</td><td>Warehouse</td><td>02</td><td>Warehouse staff</td></tr>
+</table>
+<h2>4. Approval domains (MP-05)</h2>
+<table><tr><th>Manager</th><th>Decides alone</th><th>Their Tier 02 staff handle</th></tr>
+<tr><td>SL-01-01 Sales manager</td><td>Approves his Tier 02 staff's requests, each recorded as an approval record: every discount, up to 15%; minimum-order exceptions. Sets missing prices (SP-04). Outside the assistant: cancelling a confirmed order before dispatch; moving a customer between salespersons; a customer's name, contacts, delivery address and assigned salesperson (MP-13). He may open every customer's account and prices and check stock (supervision); he has no customers of his own and creates no orders or confirmations.</td><td>Orders for their own assigned customers only (SP-01); no discount on their own (SP-06); on short stock, whether to order what is available (WP-05).</td></tr>
+<tr><td>FN-01-01 Finance manager</td><td>Any credit raise, of any size; alone, the raises beyond an RM 2,000 balance or from a zero or negative balance; the prepaid route (approval record). Outside the assistant: a customer's credit limit, payment terms and closing a customer (MP-13).</td><td>Credit raises from a balance above zero to at most RM 2,000; viewing credit.</td></tr>
+<tr><td>WH-01-01 Warehouse manager</td><td>Confirming an out-of-date stock figure; delivery-date exceptions (each an approval record). Outside the assistant: transfers between warehouses and the warehouse that serves a customer (MP-13).</td><td>Stock checks; delivery scheduling within the terms.</td></tr>
+</table>
+<h2>5. Approval records (MP-09)</h2>
+<table><tr><th>Type</th><th>Recorded by</th><th>Value approved</th><th>Clause</th></tr>
+<tr><td>Discount, up to 15%</td><td>SL-01 (Sales manager)</td><td>Discount in percent, the most the order may carry</td><td>SP-06</td></tr>
+<tr><td>Minimum-order exception</td><td>SL-01 (Sales manager)</td><td>The lowest order total allowed, in sen</td><td>SP-03</td></tr>
+<tr><td>Prepaid route</td><td>FN-01 (Finance manager)</td><td>The highest prepaid order total allowed, in sen</td><td>FP-04</td></tr>
+<tr><td>Stock figure confirmation</td><td>WH-01 (Warehouse manager)</td><td>The SKU whose out-of-date figure was confirmed by a count</td><td>WP-03</td></tr>
+<tr><td>Delivery-date exception</td><td>WH-01 (Warehouse manager)</td><td>The delivery date approved (YYYY-MM-DD)</td><td>WP-07</td></tr>
+</table>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Management Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

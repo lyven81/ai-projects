@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<title>Staff Desk</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+/* status colours, light */
+:root{--ok:#1e7a4c;--okbg:#e6f4ec;--ref:#8a5a00;--refbg:#fdf3e0;--err:#b23a2a;--errbg:#fbeae7;--rec:#6b3fa0;--recbg:#f1eafb;--me:#2f6fb0;--meink:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ok:#8fd3a8;--okbg:#16301f;--ref:#e9c27a;--refbg:#2e2614;--err:#f0a58f;--errbg:#3a2019;--rec:#c9a8f0;--recbg:#2a2038;--me:#2d5f93;--meink:#fff}}
+:root[data-theme="dark"]{--ok:#8fd3a8;--okbg:#16301f;--ref:#e9c27a;--refbg:#2e2614;--err:#f0a58f;--errbg:#3a2019;--rec:#c9a8f0;--recbg:#2a2038;--me:#2d5f93;--meink:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Segoe UI",Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1280px;margin:0 auto;padding:16px 16px 40px}
+.crumbs{font-size:12.5px;color:var(--muted)}
+.crumbs a{color:inherit;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+h1{font-size:22px;color:var(--navy);margin:2px 0 2px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 6px}
+.links{font-size:13px;color:var(--muted);margin:0 0 10px;display:flex;flex-wrap:wrap;gap:4px 12px}
+.links a{white-space:nowrap}
+.how{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:6px;padding:7px 12px;font-size:13.5px;margin:0 0 12px}
+.how b{color:var(--navy)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 12px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+.seg button{border:0;background:transparent;color:var(--ink);font:inherit;font-size:13.5px;padding:5px 16px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--navy);color:var(--card)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0 0 12px}
+.card h2{font-size:15.5px;color:var(--navy);margin:0 0 8px}
+.row{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+select,input[type=password],input[type=text],textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--box);border:1px solid var(--line);border-radius:6px;padding:6px 8px;max-width:100%}
+select{min-width:0}
+#run-select{flex:1 1 380px;width:100%}
+#key{flex:1 1 260px}
+.btn{font:inherit;font-size:13.5px;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:6px;padding:6px 14px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:disabled{opacity:.5;cursor:default}
+.warn{background:var(--refbg);color:var(--ink);border:1px solid var(--line);border-left:3px solid var(--ref);border-radius:6px;padding:7px 10px;font-size:13px;margin-top:8px}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:10px;padding:1px 8px;white-space:nowrap}
+.t-ok{background:var(--okbg);color:var(--ok)}
+.t-refused{background:var(--refbg);color:var(--ref)}
+.t-error{background:var(--errbg);color:var(--err)}
+.t-needs_reconciliation{background:var(--recbg);color:var(--rec)}
+.t-allow{background:var(--okbg);color:var(--ok)}
+.t-block{background:var(--errbg);color:var(--err)}
+.t-pass{background:var(--okbg);color:var(--ok)}
+.t-fail{background:var(--errbg);color:var(--err)}
+.t-plain{background:var(--box);color:var(--muted);border:1px solid var(--line)}
+/* sign-in */
+.who{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:13.5px;margin-top:8px}
+.who dt{color:var(--muted)}.who dd{margin:0}
+/* the two sides */
+.desk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px;align-items:start}
+.side{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;min-width:0}
+.side>h2{font-size:15.5px;color:var(--navy);margin:0 0 4px}
+.side>.note{font-size:12.5px;color:var(--muted);margin:0 0 8px}
+.chat{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:220px;max-height:62vh;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:88%;padding:7px 11px;border-radius:12px;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.me{align-self:flex-end;background:var(--me);color:var(--meink);border-bottom-right-radius:3px}
+.msg.bot{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-bottom-left-radius:3px}
+.msg .by{display:block;font-size:11.5px;opacity:.8;margin-bottom:2px}
+.sys{align-self:center;font-size:12.5px;color:var(--muted);text-align:center}
+.refusal{align-self:stretch;border:1px solid var(--line);border-left:4px solid var(--ref);background:var(--refbg);border-radius:8px;padding:7px 10px;font-size:13.5px}
+.refusal.s-error{border-left-color:var(--err);background:var(--errbg)}
+.refusal.s-needs_reconciliation{border-left-color:var(--rec);background:var(--recbg)}
+.refusal .head{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:3px}
+.refusal code,.hk code{font-family:Consolas,monospace;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.person{font-weight:700;color:var(--navy)}
+.composer{display:flex;gap:8px;margin-top:8px}
+.composer textarea{flex:1;min-height:56px;resize:vertical}
+.examples{margin-top:8px;font-size:13px}
+.examples .grp{color:var(--muted);font-size:12px;margin:6px 0 3px}
+.chip{display:block;width:100%;text-align:left;font:inherit;font-size:13px;color:var(--ink);background:var(--box);border:1px solid var(--line);border-radius:8px;padding:5px 9px;margin:0 0 4px;cursor:pointer}
+.chip:hover{border-color:var(--accent)}
+.chip b{color:var(--navy);font-weight:600}
+.panel{border:1px solid var(--line);border-radius:8px;padding:10px;margin-top:10px;background:var(--card)}
+.panel h3{font-size:14.5px;color:var(--navy);margin:0 0 6px}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:13px;margin:6px 0}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+/* hook view */
+.hooks{display:flex;flex-direction:column;gap:10px}
+.empty{color:var(--muted);font-size:13.5px;padding:18px 6px;text-align:center;border:1px dashed var(--line);border-radius:8px}
+.hk{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden}
+.hk>.top{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;padding:7px 10px;background:var(--box);border-bottom:1px solid var(--line)}
+.hk>.top .n{font-weight:700;color:var(--navy)}
+.hk>.top .tool{font-family:Consolas,monospace;font-size:13.5px;font-weight:600}
+.hk>.top .sp{flex:1}
+.stage{padding:7px 10px;border-bottom:1px solid var(--line);font-size:13px}
+.stage:last-child{border-bottom:0}
+.stage>.lbl{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.stage>.lbl code{text-transform:none;letter-spacing:0}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{display:grid;grid-template-columns:46px 1fr auto;gap:6px;align-items:baseline;padding:1px 0}
+.checks .cl{color:var(--muted);font-size:12px;white-space:nowrap}
+.checks li.f{font-weight:600}
+.post{margin:0;padding-left:18px}
+pre{margin:3px 0 0;font-family:Consolas,monospace;font-size:12px;background:var(--box);border:1px solid var(--line);border-radius:6px;padding:6px 8px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:260px;overflow-y:auto}
+details>summary{cursor:pointer;color:var(--accent);font-size:12.5px}
+.recon{margin-top:6px;border:1px solid var(--rec);background:var(--recbg);border-radius:6px;padding:6px 9px}
+.recon b{color:var(--rec)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:1px 10px}
+.kv dt{color:var(--muted)}.kv dd{margin:0;overflow-wrap:anywhere}
+.score{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;margin-top:8px}
+[hidden]{display:none!important}
+footer{margin-top:28px;font-size:12px;color:var(--muted)}
+/* full screen: native (Fullscreen API) or the CSS fallback; the two sides fill the window and scroll inside */
+html.fs,html.fs body{height:100%;overflow:hidden}
+html.fs .wrap{max-width:none;height:100vh;display:flex;flex-direction:column;padding:10px 16px}
+html.fs .crumbs,html.fs h1,html.fs .sub,html.fs .links,html.fs .how,html.fs footer,html.fs #who,html.fs #run-summary,html.fs #replay-box h2,html.fs #live-box h2,html.fs #signin h2{display:none}
+html.fs .bar,html.fs .card{margin-bottom:8px;flex:none}
+html.fs .card{padding:8px 12px}
+html.fs .desk{flex:1;min-height:0}
+html.fs .side{height:100%;display:flex;flex-direction:column;min-height:0}
+html.fs .chat{flex:1;max-height:none;min-height:0}
+html.fs .hooks{flex:1;min-height:0;overflow-y:auto}
+html.fs #confirm-panel,html.fs #approvals-panel{max-height:34vh;overflow-y:auto;flex:none}
+@media (max-width:860px){
+  .desk{grid-template-columns:1fr}
+  .chat{max-height:none}
+  html.fs .desk{overflow-y:auto}
+  html.fs .side{height:auto}
+  html.fs .chat{min-height:55vh}
+  html.fs .hooks{overflow:visible}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../fd-food-and-drink-distributors.html">FD Food and Drink Distributors</a></div>
+<h1>Staff Desk</h1>
+<p class="sub">The staff assistant of FD Food and Drink Distributors, a fictional Selangor food and drink wholesaler. Demo clock: <span id="clock"></span>.</p>
+<p class="links">Policies:
+  <a href="resources/Management%20Policy.html" target="_blank" rel="noopener">Management Policy</a>
+  <a href="resources/Sales%20Policy.html" target="_blank" rel="noopener">Sales Policy</a>
+  <a href="resources/Finance%20Policy.html" target="_blank" rel="noopener">Finance Policy</a>
+  <a href="resources/Warehouse%20Policy.html" target="_blank" rel="noopener">Warehouse Policy</a>
+  <a href="resources/Product%20Catalogue.html" target="_blank" rel="noopener">Product Catalogue</a>
+  <a href="resources/Customer%20Directory.html" target="_blank" rel="noopener">Customer Directory</a>
+  <a href="benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a>
+</p>
+<div class="how"><b>How it works:</b> the agent only chooses a tool. The PreToolUse hook decides before the tool runs, the PostToolUse hook cleans the result after it, and the back end checks again.</div>
+
+<div class="bar">
+  <div class="seg" role="group" aria-label="Mode">
+    <button type="button" id="m-replay" aria-pressed="true">Replay</button>
+    <button type="button" id="m-live" aria-pressed="false">Live</button>
+  </div>
+  <span class="muted small" id="mode-note"></span>
+  <button type="button" class="btn ghost" id="fs-btn" style="margin-left:auto">Full screen</button>
+</div>
+
+<!-- Replay controls -->
+<div class="card" id="replay-box">
+  <h2>Recorded runs</h2>
+  <div class="row">
+    <label for="run-select" class="small muted">Question</label>
+    <select id="run-select"></select>
+    <button type="button" class="btn ghost" id="replay-again">Play again</button>
+  </div>
+  <div class="score" id="run-score"></div>
+  <div class="small muted" id="run-summary" style="margin-top:6px"></div>
+</div>
+
+<!-- Live controls -->
+<div class="card" id="live-box" hidden>
+  <h2>Live chat with your own key</h2>
+  <div class="row">
+    <label for="key" class="small"><b>Anthropic API key</b></label>
+    <input type="password" id="key" placeholder="sk-ant-..." autocomplete="off" spellcheck="false">
+    <button type="button" class="btn ghost" id="reset">Reset</button>
+  </div>
+  <div class="warn"><b>Calls are billed to your key.</b> Use a limited key that you can revoke. The key stays in this tab's memory and goes only to api.anthropic.com. A public service would call the model from its own server.</div>
+  <div class="small muted" style="margin-top:6px">Model claude-sonnet-5-5. Each sign-in starts from a fresh copy of the demo data; Reset starts it again.</div>
+</div>
+
+<!-- Panel 0: sign-in -->
+<div class="card" id="signin">
+  <h2>Sign in</h2>
+  <div class="row">
+    <label for="staff-select" class="small muted">Staff ID</label>
+    <select id="staff-select"></select>
+    <button type="button" class="btn" id="signin-btn">Sign in</button>
+    <span class="small muted" id="signin-note"></span>
+  </div>
+  <dl class="who" id="who"></dl>
+</div>
+
+<div class="desk" id="desk">
+  <section class="side" aria-label="Chat">
+    <h2>Chat with the assistant</h2>
+    <p class="note" id="chat-note">Signed in as the staff member above. Nothing typed in the chat changes who is signed in.</p>
+    <div class="chat" id="chat" aria-live="polite"></div>
+    <div id="live-chat" hidden>
+      <div class="composer">
+        <textarea id="input" placeholder="Type a request, or pick an example below"></textarea>
+        <button type="button" class="btn" id="send">Send</button>
+      </div>
+      <div class="examples" id="examples"></div>
+    </div>
+    <div class="panel" id="confirm-panel" hidden>
+      <h3 id="confirm-title">Order summary to confirm</h3>
+      <div id="confirm-body"></div>
+    </div>
+    <div class="panel" id="approvals-panel" hidden>
+      <h3>Approval records you made (read only)</h3>
+      <div id="approvals-body"></div>
+    </div>
+  </section>
+  <section class="side" aria-label="Hook view">
+    <h2>Hook view</h2>
+    <p class="note">One card per tool call: what was asked, the PreToolUse verdict and its checks, what the tool returned, what PostToolUse changed, and the result the agent saw.</p>
+    <div class="hooks" id="hooks"></div>
+  </section>
+</div>
+
+<footer>© 2026 Lee Yih Ven · Staff Desk</footer>
+</div>
+
+<script>/*__FORMAT_JS__*/</script>
+<script>/*__RULES_JS__*/</script>
+<script>/*__BACKEND_JS__*/</script>
+<script>/*__PRE_JS__*/</script>
+<script>/*__POST_JS__*/</script>
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPT_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+"use strict";
+const DATA = /*__DATA_JSON__*/null;
+const TABLES = /*__TABLES_JSON__*/null;
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CASES = /*__CASES_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+const MODEL = "claude-sonnet-5-5";
+const NOW = DATA.meta.now;
+const F = window.FDFormat;
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s === null || s === undefined ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const DEPT = TABLES.departments;
+const STAFF = TABLES.staff;
+const staffById = Object.fromEntries(STAFF.map((s) => [s.id, s]));
+const GROUPS = [["matrix", "Questions, each sent as all 7 staff"]];
+const KINDS = [["read", "Who can read what"], ["policy", "The assistant decides by applying a rule"], ["decide", "The assistant recommends; a person decides"]];
+
+// What each signed-in ID may do through the assistant (Management Policy MP-04 to MP-07, SP-01, FP-06 to FP-08, WP-02).
+const MAY = {
+  "SL-01-01": "Opens every customer's location, delivery, credit and prices and checks stock, for supervision (MP-06, MP-07). Reads any order summary; creates no orders (SP-01). Records discount and minimum-order approvals; raises no credit (FP-08).",
+  "SL-02": "Works on own assigned customers only (MP-06): location, delivery, credit, prices, stock, and orders after confirming the summary on screen (SP-07). Decides whether to order what is available when stock is short (WP-05). No discount without a recorded approval (SP-06); raises no credit (FP-08).",
+  "FN-01-01": "Opens every customer's location, credit and payments (MP-07, FP-02). Raises any credit limit (FP-07) and records prepaid approvals (FP-04). No stock, delivery or prices (MP-07).",
+  "FN-02": "Opens every customer's location, credit and payments (MP-07, FP-02). Raises a credit limit when the balance is above zero and stays at most RM 2,000 after the raise (FP-06). No stock, delivery or prices (MP-07).",
+  "WH-01-01": "Checks stock and where it is stored (WP-02, MP-07), and opens a customer's location and delivery (MP-07). Records stock-count confirmations and delivery-date exceptions.",
+  "WH-02": "Checks stock and where it is stored (WP-02, MP-07), and opens a customer's location and delivery (MP-07). No prices, orders, credit or payments.",
+};
+const mayDo = (s) => MAY[s.id] || MAY[s.id.slice(0, 5)] || "";
+
+// ---------------------------------------------------------------- state
+const S = {
+  mode: "replay",
+  staff: null,          // the signed-in staff ID (the session)
+  desk: null,           // live: a desk over a fresh in-memory copy of the data
+  messages: [],         // live: the conversation sent to the model
+  key: "",              // live: kept in memory only
+  busy: false,
+  calls: 0,             // hook card counter
+  pendingSummary: null, // live: the summary from the last confirmation_missing
+  replayToken: 0,
+};
+
+function freshDesk() {
+  return window.FDTools.createDesk(window.FDTools.memoryStore(DATA), TABLES, { now: NOW });
+}
+// A seeded desk for read-only panels in replay (approval records never change).
+const SEEDED = freshDesk();
+
+// ---------------------------------------------------------------- sign-in panel
+function fillStaffSelect() {
+  $("staff-select").innerHTML = STAFF.map((s) => `<option value="${s.id}">${s.id} ${esc(s.name)}, ${esc(s.role)}</option>`).join("");
+}
+function showWho(id) {
+  const s = staffById[id];
+  if (!s) { $("who").innerHTML = ""; return; }
+  $("who").innerHTML = `<dt>Name</dt><dd>${esc(s.name)}, ${esc(s.role)}</dd>
+    <dt>Department</dt><dd>${esc(DEPT[s.department])} (${s.department})</dd>
+    <dt>Tier</dt><dd>${s.tier === "01" ? "01, the department manager" : "02, staff"}</dd>
+    <dt>May do</dt><dd>${esc(mayDo(s))}</dd>`;
+}
+
+// ---------------------------------------------------------------- rendering helpers
+const PERSON = /\b(?:SL|FN|WH)-0[12]-0\d\b(?: \([^)]*\))?|\bFinance \(FN-0[12]-0\d\)/g;
+const markPeople = (text) => esc(text).replace(PERSON, (m) => `<span class="person">${m}</span>`);
+const firstPerson = (text) => { const m = String(text || "").match(/\b(?:SL|FN|WH)-0[12]-0\d\b(?: \([^)]*\))?/); return m ? m[0] : null; };
+const statusTag = (st) => `<span class="tag t-${esc(st)}">${esc(st)}</span>`;
+const pretty = (o) => esc(JSON.stringify(o, null, 2));
+
+function chatScroll() { const c = $("chat"); c.scrollTop = c.scrollHeight; }
+function addMsg(who, text) {
+  const d = document.createElement("div");
+  d.className = "msg " + (who === "me" ? "me" : "bot");
+  const by = who === "me" ? (staffById[S.staff] ? `${S.staff} ${staffById[S.staff].name}` : "Staff") : "Assistant";
+  d.innerHTML = `<span class="by">${esc(by)}</span>${esc(text)}`;
+  $("chat").appendChild(d); chatScroll();
+}
+function addSys(text) {
+  const d = document.createElement("div"); d.className = "sys"; d.textContent = text;
+  $("chat").appendChild(d); chatScroll();
+}
+/** A refusal, error or needs_reconciliation result as a card in the chat: code, clause, next_step with the person. */
+function addRefusal(r) {
+  if (!r || r.status === "ok") return;
+  const e = r.error || {};
+  const d = document.createElement("div");
+  d.className = "refusal s-" + r.status;
+  const who = [...new Set((String(r.next_step || "").match(/\b(?:SL|FN|WH)-0[12]-0\d\b(?: \([^)]*\))?/g) || []))].join(", ");
+  d.innerHTML = `<div class="head">${statusTag(r.status)} <code>${esc(r.tool)}</code> <span>code <code>${esc(e.code)}</code></span> <span>clause <code>${esc(e.clause)}</code></span></div>
+    <div>${esc(e.message)}</div>
+    ${r.next_step ? `<div><b>Next:</b> ${markPeople(r.next_step)}</div>` : ""}
+    ${who ? `<div class="small muted">${who.includes(",") ? "People" : "Person"} named: <span class="person">${esc(who)}</span></div>` : ""}`;
+  $("chat").appendChild(d); chatScroll();
+}
+
+function stageResult(r) {
+  const e = r.error;
+  let h = `<dl class="kv"><dt>status</dt><dd>${statusTag(r.status)}</dd>`;
+  if (e) h += `<dt>code</dt><dd><code>${esc(e.code)}</code></dd><dt>clause</dt><dd><code>${esc(e.clause)}</code></dd><dt>message</dt><dd>${esc(e.message)}</dd>`;
+  h += `<dt>next_step</dt><dd>${r.next_step ? markPeople(r.next_step) : '<span class="muted">none</span>'}</dd></dl>`;
+  if (r.status === "needs_reconciliation") {
+    const d = r.data || {};
+    const ref = d.order_id || d.request_id || (r.next_step && (r.next_step.match(/\b(?:FD-SO-\d{5}|RQ-[\w-]+)\b/) || [])[0]) || d.customer || "the reference";
+    h += `<div class="recon"><b>Needs reconciliation.</b> Reference kept: <code>${esc(ref)}</code>. Reconciles: <span class="person">${esc(firstPerson(r.next_step) || "the manager named in next_step")}</span>. No retry.</div>`;
+  }
+  if (r.data !== null && r.data !== undefined) h += `<details><summary>data the agent saw</summary><pre>${pretty(r.data)}</pre></details>`;
+  return h;
+}
+
+/** One hook card per tool call. hook may be null (a tool name outside the six). */
+function addHookCard(name, input, hook, result) {
+  const empty = $("hooks").querySelector(".empty"); if (empty) empty.remove();
+  S.calls++;
+  const r = (hook && hook.result) || result;
+  const card = document.createElement("article");
+  card.className = "hk";
+  let h = `<div class="top"><span class="n">#${S.calls}</span><span class="tool">${esc(name)}</span><span class="sp"></span>`;
+  if (hook) h += `<span class="tag t-${hook.pre.verdict}">PreToolUse: ${hook.pre.verdict}</span>`;
+  h += statusTag(r.status) + `</div>`;
+  h += `<div class="stage"><div class="lbl">1. Asked${hook ? ` <span class="tag t-plain">session ${esc(hook.staff)}</span>` : ""}</div><pre>${pretty(input)}</pre></div>`;
+  if (!hook) {
+    h += `<div class="stage"><div class="lbl">2. PreToolUse</div>No such tool among the six; nothing ran.</div>`;
+  } else {
+    const checks = hook.pre.checks || [];
+    h += `<div class="stage"><div class="lbl">2. PreToolUse <span class="tag t-${hook.pre.verdict}">${hook.pre.verdict}</span>${hook.pre.code ? ` <code>${esc(hook.pre.code)}</code> <code>${esc(hook.pre.clause)}</code>` : ""}</div>`;
+    h += checks.length ? `<ul class="checks">${checks.map((c) => `<li class="${c.pass ? "" : "f"}"><span class="tag t-${c.pass ? "pass" : "fail"}">${c.pass ? "pass" : "fail"}</span><span>${esc(c.check)}</span><span class="cl">${esc(c.clause)}</span></li>`).join("")}</ul>` : `<span class="muted">No checks.</span>`;
+    h += `</div>`;
+    h += `<div class="stage"><div class="lbl">3. Tool returned (raw: sen, Unix seconds)</div>`;
+    if (!hook.tool_ran) h += `<span class="muted">Did not run: PreToolUse blocked it.</span>`;
+    else if (hook.raw && hook.raw.backendRefusal) h += `<span>The back end refused on its own: <code>${esc(hook.raw.backendRefusal.code)}</code>.</span><pre>${pretty(hook.raw)}</pre>`;
+    else h += `<details open><summary>raw result</summary><pre>${pretty(hook.raw)}</pre></details>`;
+    h += `</div>`;
+    h += `<div class="stage"><div class="lbl">4. PostToolUse</div>`;
+    h += hook.post && hook.post.length ? `<ul class="post">${hook.post.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>` : `<span class="muted">${hook.tool_ran ? "No changes." : "Not reached: the tool did not run."}</span>`;
+    h += `</div>`;
+  }
+  h += `<div class="stage"><div class="lbl">5. Result</div>${stageResult(r)}</div>`;
+  card.innerHTML = h;
+  // keep a long raw (an account with open orders) closed by default
+  const det = card.querySelector("details[open]");
+  if (det && JSON.stringify(hook.raw).length > 1500) det.removeAttribute("open");
+  $("hooks").appendChild(card);
+  card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+}
+
+function clearViews(chatNote) {
+  $("chat").innerHTML = "";
+  $("hooks").innerHTML = `<div class="empty">No tool calls yet.</div>`;
+  S.calls = 0;
+  if (chatNote) addSys(chatNote);
+}
+
+// ---------------------------------------------------------------- role panels
+function renderPanels() {
+  const s = staffById[S.staff];
+  const sales = s && s.department === "SL";
+  const manager = s && s.tier === "01";
+  $("confirm-panel").hidden = !sales;
+  $("approvals-panel").hidden = !manager;
+  if (sales) renderConfirm();
+  if (manager) renderApprovals();
+}
+
+function renderApprovals() {
+  const desk = S.mode === "live" && S.desk ? S.desk : SEEDED;
+  const list = desk.approvalsFor(S.staff);
+  if (!list.length) { $("approvals-body").innerHTML = `<p class="muted small">No approval records in your domain.</p>`; return; }
+  const val = (a) => (a.type === "minimum_order" || a.type === "prepaid") ? F.rm(a.value) : a.type === "discount" ? a.value + "%" : a.value;
+  $("approvals-body").innerHTML = `<p class="small muted" style="margin:0">The approval records you made, as the hook reads them (MP-09). The hook accepts a record only for a decision in the ${esc(DEPT[staffById[S.staff].department])} domain (MP-05). Read only.</p>
+    <table><thead><tr><th>ID</th><th>Type</th><th>Customer</th><th>Request</th><th>Value</th><th>Recorded by</th><th>Time</th></tr></thead><tbody>${
+      list.map((a) => `<tr><td>${esc(a.id)}</td><td>${esc(a.label)}</td><td>${esc(a.customer)}</td><td>${esc(a.request_id)}</td><td>${esc(val(a))}</td><td>${esc(a.approver)}</td><td>${esc(a.time_label)}</td></tr>`).join("")
+    }</tbody></table>`;
+  wrapTables($("approvals-body"));
+}
+
+function renderConfirm() {
+  const sm = S.pendingSummary;
+  $("confirm-title").textContent = sm && S.pendingNote ? S.pendingNote : "Order summary to confirm";
+  if (!sm) {
+    $("confirm-body").innerHTML = `<p class="muted small" style="margin:0">When an order needs your confirmation, its full summary appears here with a Confirm button (SP-07).</p>`;
+    return;
+  }
+  const rows = sm.lines.map((l) => `<tr><td>${esc(l.sku)}</td><td>${esc(l.qty)}</td><td>${esc(l.unit_price)}${l.promotion ? ` (${esc(l.promotion)})` : ""}</td><td>${esc(l.line_total)}</td></tr>`).join("");
+  const live = S.mode === "live";
+  $("confirm-body").innerHTML = `<dl class="kv small"><dt>Customer</dt><dd>${esc(sm.customer)}</dd><dt>Payment route</dt><dd>${esc(sm.payment_route)}</dd><dt>Delivery</dt><dd>${esc(sm.delivery_date)}</dd><dt>Discount</dt><dd>${esc(sm.discount_pct)}% (${esc(sm.discount)})</dd><dt>Total</dt><dd><b>${esc(sm.total)}</b></dd></dl>
+    <table><thead><tr><th>SKU</th><th>Qty</th><th>Unit price</th><th>Line total</th></tr></thead><tbody>${rows}</tbody></table>
+    ${S.readOnly ? `<p class="small muted" style="margin:6px 0 0">You can read this order; placing it is the assigned salesperson's step.</p>` : `<div class="row"><button type="button" class="btn" id="confirm-btn">Confirm</button>
+    <span class="small muted" id="confirm-msg">${live ? "Confirm writes a confirmation record bound to this exact summary." : "Replay: Confirm places it through the same hooks, in your browser, with no AI call."}</span></div>`}`;
+  wrapTables($("confirm-body"));
+  if ($("confirm-btn") && !S.readOnly) $("confirm-btn").onclick = live ? onConfirm : onReplayConfirm;
+}
+
+function onConfirm() {
+  const sm = S.pendingSummary;
+  if (!sm || !S.desk) return;
+  let rec;
+  try {
+    rec = S.desk.confirm(S.staff, { customer: sm.customer, lines: sm.lines.map((l) => ({ sku: l.sku, qty: l.qty })),
+      discount_pct: sm.discount_pct, route: sm.payment_route, delivery_date: sm.delivery_date });
+  } catch (e) {
+    $("confirm-msg").textContent = `Not confirmed: ${e.code || ""} ${e.message}`;
+    return;
+  }
+  S.pendingSummary = null;
+  renderConfirm();
+  const text = `Confirmed on screen: confirmation ${rec.id}, request ID ${rec.request_id}. Place the order.`;
+  addSys(`Confirmation ${rec.id} recorded for ${rec.customer}, total ${F.rm(rec.total)}.`);
+  if (S.key) send(text);
+  else { $("input").value = text; addSys("Paste your API key above, then press Send."); }
+}
+
+/** Replay: the staff member's Confirm, run through the desk in the browser (the hooks decide; no AI call). */
+function onReplayConfirm() {
+  const sm = S.pendingSummary;
+  if (!sm) return;
+  const desk = freshDesk();
+  let rec;
+  try {
+    rec = desk.confirm(S.staff, { customer: sm.customer, lines: sm.lines.map((l) => ({ sku: l.sku, qty: l.qty })),
+      discount_pct: sm.discount_pct, route: sm.payment_route, delivery_date: sm.delivery_date });
+  } catch (e) {
+    $("confirm-msg").textContent = `Not confirmed: ${e.code || ""} ${e.message}`;
+    return;
+  }
+  S.pendingSummary = null; S.pendingNote = null; S.readOnly = false;
+  renderConfirm();
+  addMsg("me", `Confirmed on screen: ${sm.lines.map((l) => `${l.qty} x ${l.sku}`).join(", ")}, total ${sm.total}.`);
+  const input = { request_id: rec.request_id, customer_id: sm.customer, lines: sm.lines.map((l) => ({ sku: l.sku, qty: l.qty })),
+    discount_pct: sm.discount_pct, payment_route: sm.payment_route, delivery_date: sm.delivery_date, confirmation_id: rec.id };
+  const out = desk.call("create_order", input, S.staff);
+  addHookCard("create_order", input, out.hook, out.result);
+  addRefusal(out.result);
+  if (out.result.status === "ok") addSys(`Order ${out.result.data.order_id} placed for ${out.result.data.customer}: ${out.result.data.total}, delivery ${out.result.data.delivery_date}. Placed after your confirmation, through the same hooks.`);
+}
+
+function wrapTables(root) {
+  root.querySelectorAll("table").forEach((t) => {
+    if (t.parentNode.classList.contains("tw")) return;
+    const d = document.createElement("div"); d.className = "tw"; t.parentNode.insertBefore(d, t); d.appendChild(t);
+  });
+}
+
+/** After tool results arrive: the latest confirmation_missing summary drives the Confirm panel. */
+function noteSummary(result) {
+  if (result && result.tool === "create_order") {
+    const code = result.error && result.error.code;
+    if ((code === "confirmation_missing" || code === "stock_short" || code === "tier_not_permitted") && result.data && result.data.summary) {
+      S.pendingSummary = result.data.summary;
+      S.pendingNote = code === "stock_short" ? `Only ${result.data.available} of ${result.data.sku} at ${result.data.warehouse}. Order the ${result.data.available} available?`
+        : code === "tier_not_permitted" ? `Read only: the order ${result.data.assigned_to} would place` : null;
+      S.readOnly = code === "tier_not_permitted";
+    }
+    else if (result.status === "ok") S.pendingSummary = null;
+  }
+}
+
+// ---------------------------------------------------------------- sign-in and session
+function signIn(id, note) {
+  S.staff = id;
+  $("staff-select").value = id;
+  showWho(id);
+  S.pendingSummary = null; S.pendingNote = null; S.readOnly = false;
+  if (S.mode === "live") {
+    S.desk = freshDesk();
+    S.messages = [];
+    $("input").value = "";
+    clearViews(note || `Signed in as ${id}. Fresh demo data; clock ${DATA.meta.now_label}.`);
+    renderExamples();
+  }
+  $("signin-note").textContent = S.mode === "live" ? `Signed in: ${id}` : "";
+  renderPanels();
+}
+
+// ---------------------------------------------------------------- live chat
+function examplesFor(id) {
+  const mine = CASES.filter((c) => c.staff === id && c.id !== "F7" && !c.faults && !c.prior_orders);
+  const other = mine.filter((c) => c.group !== "matrix").slice(0, 2);
+  const order = [7, 4, 2, 1, 8, 11, 3, 10, 14, 15, 5, 6, 9, 12, 13, 16];
+  const matrix = order.map((n) => mine.find((c) => c.group === "matrix" && c.row === n)).filter(Boolean).slice(0, 6 - other.length);
+  return { matrix, other };
+}
+function renderExamples() {
+  const { matrix, other } = examplesFor(S.staff);
+  const chip = (c) => `<button type="button" class="chip" data-msg="${esc(c.message)}"><b>${esc(c.id)}</b> ${esc(c.title)}</button>`;
+  let h = `<div class="grp">Examples from the Answer Key for ${esc(S.staff)}: Matrix</div>` + matrix.map(chip).join("");
+  const byGroup = {};
+  other.forEach((c) => (byGroup[c.group] = (byGroup[c.group] || []).concat([c])));
+  for (const [g, label] of GROUPS) if (byGroup[g]) h += `<div class="grp">${esc(label)}</div>` + byGroup[g].map(chip).join("");
+  $("examples").innerHTML = h;
+  $("examples").querySelectorAll(".chip").forEach((b) => (b.onclick = () => { $("input").value = b.dataset.msg; $("input").focus(); }));
+}
+
+async function send(text) {
+  text = (text || "").trim();
+  if (!text || S.busy) return;
+  if (!S.staff) { addSys("Sign in first."); return; }
+  if (!S.key) { addSys("Paste your Anthropic API key above to chat live."); return; }
+  S.busy = true; $("send").disabled = true;
+  addMsg("me", text);
+  $("input").value = "";
+  S.messages.push({ role: "user", content: text });
+  const s = staffById[S.staff];
+  const system = window.FDPrompt.buildSystem(RESOURCES, { staff: s.id, name: s.name, role: s.role, today: DATA.meta.now_label });
+  const thinking = document.createElement("div"); thinking.className = "sys"; thinking.textContent = "The assistant is working...";
+  $("chat").appendChild(thinking); chatScroll();
+  const staffId = S.staff, desk = S.desk;
+  try {
+    const out = await window.FDAgent.runTurn({
+      apiKey: S.key, model: MODEL, system, tools: window.FDTools.TOOLS, messages: S.messages,
+      callTool: async (name, input) => {
+        const o = desk.call(name, input, staffId);   // the session staff ID, never a model argument
+        if (S.desk === desk) { addHookCard(name, input, o.hook, o.result); addRefusal(o.result); noteSummary(o.result); }
+        return o;
+      },
+    });
+    thinking.remove();
+    if (S.desk !== desk) return;   // reset or signed in again during the turn
+    out.trace.filter((t) => t.type === "tool" && !t.hook).forEach((t) => { addHookCard(t.name, t.input, null, t.result); addRefusal(t.result); });
+    out.trace.filter((t) => t.type === "note").forEach((t) => addSys(t.text));
+    addMsg("bot", out.reply);
+  } catch (e) {
+    thinking.remove();
+    addSys(`The model call failed: ${e.message}`);
+    S.messages.pop();
+  } finally {
+    S.busy = false; $("send").disabled = false;
+    if (S.desk === desk) { renderPanels(); }
+  }
+}
+
+// ---------------------------------------------------------------- replay
+const recorded = Object.fromEntries((RESULTS.results || []).map((r) => [r.id, r]));
+// Questions in Answer Key order, numbered 1 to 15 (each run as all 7 staff,
+// chosen with the Staff ID drop-down), grouped by kind; the failure runs stay in the benchmark only.
+const QUESTIONS = [];
+function fillRunSelect() {
+  let n = 0, h = "";
+  for (const [g, label] of GROUPS) {
+    if (g === "matrix") {
+      const rowsAll = [...new Set(CASES.filter((c) => c.group === g).map((c) => c.row))].sort((a, b) => a - b);
+      const kinds = KINDS.filter(([k]) => CASES.some((c) => c.group === g && c.kind === k));
+      const groupsOf = kinds.length ? kinds.map(([k, lab]) => [lab, rowsAll.filter((r) => CASES.find((c) => c.row === r && c.group === g).kind === k)]) : [[label, rowsAll]];
+      for (const [lab, rows] of groupsOf) {
+      h += `<optgroup label="${esc(lab)}">`;
+      for (const row of rows) {
+        const cs = CASES.filter((c) => c.group === g && c.row === row);
+        const pass = cs.filter((c) => recorded[c.id] && recorded[c.id].score.pass).length;
+        n = row;
+        QUESTIONS.push({ key: `M${row}`, n, title: cs[0].title, cases: cs });
+        h += `<option value="M${row}">${n}. ${esc(cs[0].title)} · ${pass} of ${cs.length} staff pass</option>`;
+      }
+      h += `</optgroup>`;
+      }
+    } else {
+      h += `<optgroup label="${esc(label)}">`;
+      for (const c of CASES.filter((x) => x.group === g)) {
+        const r = recorded[c.id];
+        const mark = r ? (r.score.pass ? "pass" : "fail") : "not recorded";
+        QUESTIONS.push({ key: c.id, n: ++n, title: c.title, cases: [c] });
+        h += `<option value="${esc(c.id)}">${n}. ${esc(c.title)} (${esc(c.staff)}) · ${mark}</option>`;
+      }
+      h += `</optgroup>`;
+    }
+  }
+  $("run-select").innerHTML = h;
+  const sm = RESULTS.summary || {};
+  const t = sm.total || { pass: 0, total: 0 };
+  $("run-summary").textContent = `Recorded run (${RESULTS.file}): ${t.pass} of ${t.total} runs passed on ${sm.model || MODEL}, ${sm.ranAt ? sm.ranAt.slice(0, 10) : ""}. Hard-limit breaches: ${sm.hard_limit_breaches === undefined ? "n/a" : sm.hard_limit_breaches}. Each question was sent as each of the 7 staff: pick the question, then the staff ID.`;
+}
+const question = () => QUESTIONS.find((q) => q.key === $("run-select").value);
+/** In replay: enable only the staff who ran this question, keep the chosen one if it ran it, then play that run. */
+function playQuestion() {
+  const q = question();
+  const staffIds = q.cases.map((c) => c.staff);
+  for (const o of $("staff-select").options) o.disabled = !staffIds.includes(o.value);
+  if (!staffIds.includes($("staff-select").value)) $("staff-select").value = staffIds[0];
+  const c = q.cases.find((x) => x.staff === $("staff-select").value);
+  playRun(c.id);
+}
+
+const wait = (ms) => new Promise((res) => setTimeout(res, ms));
+async function playRun(id) {
+  const token = ++S.replayToken;
+  const c = CASES.find((x) => x.id === id);
+  const r = recorded[id];
+  signIn(c.staff);
+  clearViews();
+  $("signin-note").textContent = question() && question().cases.length > 1 ? "Choose a staff ID to see how the same question plays for that access level." : `This question was run as ${c.staff}.`;
+  const sc = $("run-score");
+  if (!r) {
+    sc.innerHTML = `<span class="tag t-plain">not recorded</span> <span class="muted">This case is not in the recorded run yet.</span>`;
+    addSys(`${c.id}: ${c.title}`);
+    addMsg("me", c.message);
+    addSys("No recorded run for this case yet.");
+    return;
+  }
+  const checks = Object.entries(r.score.checks || {}).map(([k, v]) => `<span class="tag t-${v ? "pass" : "fail"}">${esc(k.replace(/_/g, " "))}</span>`).join(" ");
+  sc.innerHTML = `<b>${esc(r.id)}</b> <span class="tag t-${r.score.pass ? "pass" : "fail"}">${r.score.pass ? "pass" : "fail"}</span> ${checks}`;
+  const step = async () => { await wait(350); return token === S.replayToken; };
+  if (r.direct) addSys(r.message);
+  else { addMsg("me", r.message); if (!(await step())) return; }
+  for (const t of r.trace) {
+    if (t.type === "tool") {
+      const res = t.hook ? t.hook.result : t.result;
+      addHookCard(t.name, t.input, t.hook, res);
+      addRefusal(res);
+      noteSummary(res);
+      if (S.pendingSummary) renderConfirm();
+    } else if (t.type === "note") addSys(t.text);
+    else if (t.type === "reply") addMsg("bot", t.text);
+    if (!(await step())) return;
+  }
+  if (r.error) addSys(`The run stopped with an error: ${r.error}`);
+}
+
+// ---------------------------------------------------------------- modes
+function setMode(m) {
+  S.mode = m;
+  S.replayToken++;
+  $("m-replay").setAttribute("aria-pressed", m === "replay");
+  $("m-live").setAttribute("aria-pressed", m === "live");
+  $("replay-box").hidden = m !== "replay";
+  $("live-box").hidden = m !== "live";
+  $("live-chat").hidden = m !== "live";
+  if (m === "live") for (const o of $("staff-select").options) o.disabled = false;
+  $("signin-btn").hidden = m === "replay";
+  $("mode-note").textContent = m === "replay" ? "Recorded runs from the benchmark; no key needed." : "Your own key, a fresh copy of the demo data per sign-in.";
+  if (m === "replay") {
+    $("desk").hidden = false;
+    playQuestion();
+  } else {
+    S.staff = null; S.desk = null; S.messages = []; S.pendingSummary = null;
+    $("signin-note").textContent = "Choose a staff ID and sign in.";
+    showWho($("staff-select").value);
+    $("desk").hidden = true;
+  }
+}
+
+// ---------------------------------------------------------------- wiring
+$("clock").textContent = DATA.meta.now_label;
+fillStaffSelect();
+fillRunSelect();
+$("run-select").value = QUESTIONS.some((q) => q.key === "M7") ? "M7" : QUESTIONS[0].key;
+$("staff-select").value = "SL-01-01";
+$("run-select").onchange = () => playQuestion();
+$("replay-again").onclick = () => playQuestion();
+$("m-replay").onclick = () => setMode("replay");
+$("m-live").onclick = () => setMode("live");
+$("staff-select").onchange = () => { if (S.mode === "replay") playQuestion(); else showWho($("staff-select").value); };
+$("signin-btn").onclick = () => { signIn($("staff-select").value); $("desk").hidden = false; };
+$("key").oninput = () => { S.key = $("key").value.trim(); };
+$("reset").onclick = () => { if (S.staff) signIn(S.staff, `Reset: fresh demo data for ${S.staff}.`); };
+$("send").onclick = () => send($("input").value);
+$("input").onkeydown = (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send($("input").value); } };
+// Full screen: the Fullscreen API where it exists (webkit prefix as fallback), else a CSS class. Esc leaves natively.
+const FS = {
+  el: () => document.fullscreenElement || document.webkitFullscreenElement || null,
+  can: () => !!(document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen),
+  fake: false,
+};
+function fsSync() {
+  const on = !!FS.el() || FS.fake;
+  document.documentElement.classList.toggle("fs", on);
+  $("fs-btn").textContent = on ? "Exit full screen" : "Full screen";
+}
+$("fs-btn").onclick = () => {
+  const d = document.documentElement;
+  if (FS.el()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+  if (FS.fake) { FS.fake = false; fsSync(); return; }
+  if (FS.can()) {
+    try {
+      const p = (d.requestFullscreen || d.webkitRequestFullscreen).call(d);
+      if (p && p.catch) p.catch(() => { FS.fake = true; fsSync(); });
+    } catch (e) { FS.fake = true; fsSync(); }
+  } else { FS.fake = true; fsSync(); }
+};
+document.addEventListener("fullscreenchange", fsSync);
+document.addEventListener("webkitfullscreenchange", fsSync);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && FS.fake) { FS.fake = false; fsSync(); } });
+setMode("replay");
+</script>
+</body>
+</html>

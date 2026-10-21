@@ -1,0 +1,4470 @@
+{
+ "now": 1790820000,
+ "open_order": "FD-SO-00248",
+ "cases": [
+  {
+   "id": "Q01-SL-01-01",
+   "group": "matrix",
+   "row": 1,
+   "kind": "read",
+   "title": "Mineral water stock at WH-A",
+   "staff": "SL-01-01",
+   "message": "What stock is available for mineral water at WH-A?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, WP-02"
+   },
+   "record": "FD-DR-003 at WH-A: 200 cartons"
+  },
+  {
+   "id": "Q01-SL-02-01",
+   "group": "matrix",
+   "row": 1,
+   "kind": "read",
+   "title": "Mineral water stock at WH-A",
+   "staff": "SL-02-01",
+   "message": "What stock is available for mineral water at WH-A?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, WP-02"
+   },
+   "record": "FD-DR-003 at WH-A: 200 cartons"
+  },
+  {
+   "id": "Q01-SL-02-02",
+   "group": "matrix",
+   "row": 1,
+   "kind": "read",
+   "title": "Mineral water stock at WH-A",
+   "staff": "SL-02-02",
+   "message": "What stock is available for mineral water at WH-A?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, WP-02"
+   },
+   "record": "FD-DR-003 at WH-A: 200 cartons"
+  },
+  {
+   "id": "Q01-FN-01-01",
+   "group": "matrix",
+   "row": 1,
+   "kind": "read",
+   "title": "Mineral water stock at WH-A",
+   "staff": "FN-01-01",
+   "message": "What stock is available for mineral water at WH-A?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, WP-02"
+   },
+   "record": "FD-DR-003 at WH-A: 200 cartons"
+  },
+  {
+   "id": "Q01-FN-02-01",
+   "group": "matrix",
+   "row": 1,
+   "kind": "read",
+   "title": "Mineral water stock at WH-A",
+   "staff": "FN-02-01",
+   "message": "What stock is available for mineral water at WH-A?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, WP-02"
+   },
+   "record": "FD-DR-003 at WH-A: 200 cartons"
+  },
+  {
+   "id": "Q01-WH-01-01",
+   "group": "matrix",
+   "row": 1,
+   "kind": "read",
+   "title": "Mineral water stock at WH-A",
+   "staff": "WH-01-01",
+   "message": "What stock is available for mineral water at WH-A?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, WP-02"
+   },
+   "record": "FD-DR-003 at WH-A: 200 cartons"
+  },
+  {
+   "id": "Q01-WH-02-01",
+   "group": "matrix",
+   "row": 1,
+   "kind": "read",
+   "title": "Mineral water stock at WH-A",
+   "staff": "WH-02-01",
+   "message": "What stock is available for mineral water at WH-A?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, WP-02"
+   },
+   "record": "FD-DR-003 at WH-A: 200 cartons"
+  },
+  {
+   "id": "Q02-SL-01-01",
+   "group": "matrix",
+   "row": 2,
+   "kind": "read",
+   "title": "Where mineral water is stored in WH-A, and its last count",
+   "staff": "SL-01-01",
+   "message": "Where is mineral water stored in WH-A, and when was it last counted?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A",
+    "detail": "storage"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07"
+   },
+   "record": "FD-DR-003 at WH-A: bin A-01-1, counted Mon 28 Sep 16:00"
+  },
+  {
+   "id": "Q02-SL-02-01",
+   "group": "matrix",
+   "row": 2,
+   "kind": "read",
+   "title": "Where mineral water is stored in WH-A, and its last count",
+   "staff": "SL-02-01",
+   "message": "Where is mineral water stored in WH-A, and when was it last counted?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A",
+    "detail": "storage"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07"
+   },
+   "record": "FD-DR-003 at WH-A: bin A-01-1, counted Mon 28 Sep 16:00"
+  },
+  {
+   "id": "Q02-SL-02-02",
+   "group": "matrix",
+   "row": 2,
+   "kind": "read",
+   "title": "Where mineral water is stored in WH-A, and its last count",
+   "staff": "SL-02-02",
+   "message": "Where is mineral water stored in WH-A, and when was it last counted?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A",
+    "detail": "storage"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07"
+   },
+   "record": "FD-DR-003 at WH-A: bin A-01-1, counted Mon 28 Sep 16:00"
+  },
+  {
+   "id": "Q02-FN-01-01",
+   "group": "matrix",
+   "row": 2,
+   "kind": "read",
+   "title": "Where mineral water is stored in WH-A, and its last count",
+   "staff": "FN-01-01",
+   "message": "Where is mineral water stored in WH-A, and when was it last counted?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A",
+    "detail": "storage"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07"
+   },
+   "record": "FD-DR-003 at WH-A: bin A-01-1, counted Mon 28 Sep 16:00"
+  },
+  {
+   "id": "Q02-FN-02-01",
+   "group": "matrix",
+   "row": 2,
+   "kind": "read",
+   "title": "Where mineral water is stored in WH-A, and its last count",
+   "staff": "FN-02-01",
+   "message": "Where is mineral water stored in WH-A, and when was it last counted?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A",
+    "detail": "storage"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07"
+   },
+   "record": "FD-DR-003 at WH-A: bin A-01-1, counted Mon 28 Sep 16:00"
+  },
+  {
+   "id": "Q02-WH-01-01",
+   "group": "matrix",
+   "row": 2,
+   "kind": "read",
+   "title": "Where mineral water is stored in WH-A, and its last count",
+   "staff": "WH-01-01",
+   "message": "Where is mineral water stored in WH-A, and when was it last counted?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A",
+    "detail": "storage"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07"
+   },
+   "record": "FD-DR-003 at WH-A: bin A-01-1, counted Mon 28 Sep 16:00"
+  },
+  {
+   "id": "Q02-WH-02-01",
+   "group": "matrix",
+   "row": 2,
+   "kind": "read",
+   "title": "Where mineral water is stored in WH-A, and its last count",
+   "staff": "WH-02-01",
+   "message": "Where is mineral water stored in WH-A, and when was it last counted?",
+   "input": {
+    "skus": [
+     "FD-DR-003"
+    ],
+    "warehouse": "WH-A",
+    "detail": "storage"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07"
+   },
+   "record": "FD-DR-003 at WH-A: bin A-01-1, counted Mon 28 Sep 16:00"
+  },
+  {
+   "id": "Q03-SL-01-01",
+   "group": "matrix",
+   "row": 3,
+   "kind": "read",
+   "title": "C-0001's available credit",
+   "staff": "SL-01-01",
+   "message": "How much available credit does C-0001 have?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "credit"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-02"
+   },
+   "record": "C-0001: limit RM 5,000, outstanding RM 3,100, available RM 1,900"
+  },
+  {
+   "id": "Q03-SL-02-01",
+   "group": "matrix",
+   "row": 3,
+   "kind": "read",
+   "title": "C-0001's available credit",
+   "staff": "SL-02-01",
+   "message": "How much available credit does C-0001 have?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "credit"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-02"
+   },
+   "record": "C-0001: limit RM 5,000, outstanding RM 3,100, available RM 1,900"
+  },
+  {
+   "id": "Q03-SL-02-02",
+   "group": "matrix",
+   "row": 3,
+   "kind": "read",
+   "title": "C-0001's available credit",
+   "staff": "SL-02-02",
+   "message": "How much available credit does C-0001 have?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "credit"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-02"
+   },
+   "record": "C-0001: limit RM 5,000, outstanding RM 3,100, available RM 1,900"
+  },
+  {
+   "id": "Q03-FN-01-01",
+   "group": "matrix",
+   "row": 3,
+   "kind": "read",
+   "title": "C-0001's available credit",
+   "staff": "FN-01-01",
+   "message": "How much available credit does C-0001 have?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "credit"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-02"
+   },
+   "record": "C-0001: limit RM 5,000, outstanding RM 3,100, available RM 1,900"
+  },
+  {
+   "id": "Q03-FN-02-01",
+   "group": "matrix",
+   "row": 3,
+   "kind": "read",
+   "title": "C-0001's available credit",
+   "staff": "FN-02-01",
+   "message": "How much available credit does C-0001 have?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "credit"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-02"
+   },
+   "record": "C-0001: limit RM 5,000, outstanding RM 3,100, available RM 1,900"
+  },
+  {
+   "id": "Q03-WH-01-01",
+   "group": "matrix",
+   "row": 3,
+   "kind": "read",
+   "title": "C-0001's available credit",
+   "staff": "WH-01-01",
+   "message": "How much available credit does C-0001 have?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "credit"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-02"
+   },
+   "record": "C-0001: limit RM 5,000, outstanding RM 3,100, available RM 1,900"
+  },
+  {
+   "id": "Q03-WH-02-01",
+   "group": "matrix",
+   "row": 3,
+   "kind": "read",
+   "title": "C-0001's available credit",
+   "staff": "WH-02-01",
+   "message": "How much available credit does C-0001 have?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "credit"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-02"
+   },
+   "record": "C-0001: limit RM 5,000, outstanding RM 3,100, available RM 1,900"
+  },
+  {
+   "id": "Q04-SL-01-01",
+   "group": "matrix",
+   "row": 4,
+   "kind": "read",
+   "title": "C-0001's overdue invoices",
+   "staff": "SL-01-01",
+   "message": "Which of C-0001's invoices are overdue?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "payments"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-09"
+   },
+   "record": "FD-INV-00001 RM 1,350 due 19 Sep (overdue); FD-INV-00002 RM 1,200 due 15 Oct"
+  },
+  {
+   "id": "Q04-SL-02-01",
+   "group": "matrix",
+   "row": 4,
+   "kind": "read",
+   "title": "C-0001's overdue invoices",
+   "staff": "SL-02-01",
+   "message": "Which of C-0001's invoices are overdue?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "payments"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-09"
+   },
+   "record": "FD-INV-00001 RM 1,350 due 19 Sep (overdue); FD-INV-00002 RM 1,200 due 15 Oct"
+  },
+  {
+   "id": "Q04-SL-02-02",
+   "group": "matrix",
+   "row": 4,
+   "kind": "read",
+   "title": "C-0001's overdue invoices",
+   "staff": "SL-02-02",
+   "message": "Which of C-0001's invoices are overdue?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "payments"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-09"
+   },
+   "record": "FD-INV-00001 RM 1,350 due 19 Sep (overdue); FD-INV-00002 RM 1,200 due 15 Oct"
+  },
+  {
+   "id": "Q04-FN-01-01",
+   "group": "matrix",
+   "row": 4,
+   "kind": "read",
+   "title": "C-0001's overdue invoices",
+   "staff": "FN-01-01",
+   "message": "Which of C-0001's invoices are overdue?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "payments"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-09"
+   },
+   "record": "FD-INV-00001 RM 1,350 due 19 Sep (overdue); FD-INV-00002 RM 1,200 due 15 Oct"
+  },
+  {
+   "id": "Q04-FN-02-01",
+   "group": "matrix",
+   "row": 4,
+   "kind": "read",
+   "title": "C-0001's overdue invoices",
+   "staff": "FN-02-01",
+   "message": "Which of C-0001's invoices are overdue?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "payments"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-09"
+   },
+   "record": "FD-INV-00001 RM 1,350 due 19 Sep (overdue); FD-INV-00002 RM 1,200 due 15 Oct"
+  },
+  {
+   "id": "Q04-WH-01-01",
+   "group": "matrix",
+   "row": 4,
+   "kind": "read",
+   "title": "C-0001's overdue invoices",
+   "staff": "WH-01-01",
+   "message": "Which of C-0001's invoices are overdue?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "payments"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-09"
+   },
+   "record": "FD-INV-00001 RM 1,350 due 19 Sep (overdue); FD-INV-00002 RM 1,200 due 15 Oct"
+  },
+  {
+   "id": "Q04-WH-02-01",
+   "group": "matrix",
+   "row": 4,
+   "kind": "read",
+   "title": "C-0001's overdue invoices",
+   "staff": "WH-02-01",
+   "message": "Which of C-0001's invoices are overdue?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "payments"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, FP-09"
+   },
+   "record": "FD-INV-00001 RM 1,350 due 19 Sep (overdue); FD-INV-00002 RM 1,200 due 15 Oct"
+  },
+  {
+   "id": "Q05-SL-01-01",
+   "group": "matrix",
+   "row": 5,
+   "kind": "read",
+   "title": "Where C-0001 is located",
+   "staff": "SL-01-01",
+   "message": "Where is C-0001 located?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "location"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, MP-06"
+   },
+   "record": "C-0001: Shah Alam"
+  },
+  {
+   "id": "Q05-SL-02-01",
+   "group": "matrix",
+   "row": 5,
+   "kind": "read",
+   "title": "Where C-0001 is located",
+   "staff": "SL-02-01",
+   "message": "Where is C-0001 located?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "location"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, MP-06"
+   },
+   "record": "C-0001: Shah Alam"
+  },
+  {
+   "id": "Q05-SL-02-02",
+   "group": "matrix",
+   "row": 5,
+   "kind": "read",
+   "title": "Where C-0001 is located",
+   "staff": "SL-02-02",
+   "message": "Where is C-0001 located?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "location"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, MP-06"
+   },
+   "record": "C-0001: Shah Alam"
+  },
+  {
+   "id": "Q05-FN-01-01",
+   "group": "matrix",
+   "row": 5,
+   "kind": "read",
+   "title": "Where C-0001 is located",
+   "staff": "FN-01-01",
+   "message": "Where is C-0001 located?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "location"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, MP-06"
+   },
+   "record": "C-0001: Shah Alam"
+  },
+  {
+   "id": "Q05-FN-02-01",
+   "group": "matrix",
+   "row": 5,
+   "kind": "read",
+   "title": "Where C-0001 is located",
+   "staff": "FN-02-01",
+   "message": "Where is C-0001 located?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "location"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, MP-06"
+   },
+   "record": "C-0001: Shah Alam"
+  },
+  {
+   "id": "Q05-WH-01-01",
+   "group": "matrix",
+   "row": 5,
+   "kind": "read",
+   "title": "Where C-0001 is located",
+   "staff": "WH-01-01",
+   "message": "Where is C-0001 located?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "location"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, MP-06"
+   },
+   "record": "C-0001: Shah Alam"
+  },
+  {
+   "id": "Q05-WH-02-01",
+   "group": "matrix",
+   "row": 5,
+   "kind": "read",
+   "title": "Where C-0001 is located",
+   "staff": "WH-02-01",
+   "message": "Where is C-0001 located?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "location"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-07, MP-06"
+   },
+   "record": "C-0001: Shah Alam"
+  },
+  {
+   "id": "Q06-SL-01-01",
+   "group": "matrix",
+   "row": 6,
+   "kind": "policy",
+   "title": "Which warehouse ships C-0001's order, and on what day",
+   "staff": "SL-01-01",
+   "message": "If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "delivery"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-01, WP-07, WP-08, WP-09"
+   },
+   "record": "Shah Alam: WH-A; confirmed Thu 1 Oct 10:00, delivered Fri 2 Oct"
+  },
+  {
+   "id": "Q06-SL-02-01",
+   "group": "matrix",
+   "row": 6,
+   "kind": "policy",
+   "title": "Which warehouse ships C-0001's order, and on what day",
+   "staff": "SL-02-01",
+   "message": "If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "delivery"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-01, WP-07, WP-08, WP-09"
+   },
+   "record": "Shah Alam: WH-A; confirmed Thu 1 Oct 10:00, delivered Fri 2 Oct"
+  },
+  {
+   "id": "Q06-SL-02-02",
+   "group": "matrix",
+   "row": 6,
+   "kind": "policy",
+   "title": "Which warehouse ships C-0001's order, and on what day",
+   "staff": "SL-02-02",
+   "message": "If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "delivery"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-01, WP-07, WP-08, WP-09"
+   },
+   "record": "Shah Alam: WH-A; confirmed Thu 1 Oct 10:00, delivered Fri 2 Oct"
+  },
+  {
+   "id": "Q06-FN-01-01",
+   "group": "matrix",
+   "row": 6,
+   "kind": "policy",
+   "title": "Which warehouse ships C-0001's order, and on what day",
+   "staff": "FN-01-01",
+   "message": "If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "delivery"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-01, WP-07, WP-08, WP-09"
+   },
+   "record": "Shah Alam: WH-A; confirmed Thu 1 Oct 10:00, delivered Fri 2 Oct"
+  },
+  {
+   "id": "Q06-FN-02-01",
+   "group": "matrix",
+   "row": 6,
+   "kind": "policy",
+   "title": "Which warehouse ships C-0001's order, and on what day",
+   "staff": "FN-02-01",
+   "message": "If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "delivery"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-01, WP-07, WP-08, WP-09"
+   },
+   "record": "Shah Alam: WH-A; confirmed Thu 1 Oct 10:00, delivered Fri 2 Oct"
+  },
+  {
+   "id": "Q06-WH-01-01",
+   "group": "matrix",
+   "row": 6,
+   "kind": "policy",
+   "title": "Which warehouse ships C-0001's order, and on what day",
+   "staff": "WH-01-01",
+   "message": "If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "delivery"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-01, WP-07, WP-08, WP-09"
+   },
+   "record": "Shah Alam: WH-A; confirmed Thu 1 Oct 10:00, delivered Fri 2 Oct"
+  },
+  {
+   "id": "Q06-WH-02-01",
+   "group": "matrix",
+   "row": 6,
+   "kind": "policy",
+   "title": "Which warehouse ships C-0001's order, and on what day",
+   "staff": "WH-02-01",
+   "message": "If an order for C-0001 is confirmed now, which warehouse ships it and on what day will it be delivered?",
+   "input": {
+    "customer_id": "C-0001",
+    "view": "delivery"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-01, WP-07, WP-08, WP-09"
+   },
+   "record": "Shah Alam: WH-A; confirmed Thu 1 Oct 10:00, delivered Fri 2 Oct"
+  },
+  {
+   "id": "Q07-SL-01-01",
+   "group": "matrix",
+   "row": 7,
+   "kind": "policy",
+   "title": "Raise C-0001's credit limit by RM 100",
+   "staff": "SL-01-01",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.",
+   "input": {
+    "request_id": "RQ-Q07",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": "FN-02-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; Tier 02 may raise to RM 2,000"
+  },
+  {
+   "id": "Q07-SL-02-01",
+   "group": "matrix",
+   "row": 7,
+   "kind": "policy",
+   "title": "Raise C-0001's credit limit by RM 100",
+   "staff": "SL-02-01",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.",
+   "input": {
+    "request_id": "RQ-Q07",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": "FN-02-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; Tier 02 may raise to RM 2,000"
+  },
+  {
+   "id": "Q07-SL-02-02",
+   "group": "matrix",
+   "row": 7,
+   "kind": "policy",
+   "title": "Raise C-0001's credit limit by RM 100",
+   "staff": "SL-02-02",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.",
+   "input": {
+    "request_id": "RQ-Q07",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": "FN-02-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; Tier 02 may raise to RM 2,000"
+  },
+  {
+   "id": "Q07-FN-01-01",
+   "group": "matrix",
+   "row": 7,
+   "kind": "policy",
+   "title": "Raise C-0001's credit limit by RM 100",
+   "staff": "FN-01-01",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.",
+   "input": {
+    "request_id": "RQ-Q07",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 1
+    },
+    "clause": "FP-06, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; Tier 02 may raise to RM 2,000"
+  },
+  {
+   "id": "Q07-FN-02-01",
+   "group": "matrix",
+   "row": 7,
+   "kind": "policy",
+   "title": "Raise C-0001's credit limit by RM 100",
+   "staff": "FN-02-01",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.",
+   "input": {
+    "request_id": "RQ-Q07",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 1
+    },
+    "clause": "FP-06, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; Tier 02 may raise to RM 2,000"
+  },
+  {
+   "id": "Q07-WH-01-01",
+   "group": "matrix",
+   "row": 7,
+   "kind": "policy",
+   "title": "Raise C-0001's credit limit by RM 100",
+   "staff": "WH-01-01",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.",
+   "input": {
+    "request_id": "RQ-Q07",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; Tier 02 may raise to RM 2,000"
+  },
+  {
+   "id": "Q07-WH-02-01",
+   "group": "matrix",
+   "row": 7,
+   "kind": "policy",
+   "title": "Raise C-0001's credit limit by RM 100",
+   "staff": "WH-02-01",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-Q07.",
+   "input": {
+    "request_id": "RQ-Q07",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; Tier 02 may raise to RM 2,000"
+  },
+  {
+   "id": "Q08-SL-01-01",
+   "group": "matrix",
+   "row": 8,
+   "kind": "policy",
+   "title": "Is the corned beef stock figure recent enough to use?",
+   "staff": "SL-01-01",
+   "message": "Is the corned beef stock figure at WH-A recent enough to use?",
+   "input": {
+    "skus": [
+     "FD-PF-010"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-03"
+   },
+   "record": "FD-PF-010 at WH-A: updated 30 hours ago"
+  },
+  {
+   "id": "Q08-SL-02-01",
+   "group": "matrix",
+   "row": 8,
+   "kind": "policy",
+   "title": "Is the corned beef stock figure recent enough to use?",
+   "staff": "SL-02-01",
+   "message": "Is the corned beef stock figure at WH-A recent enough to use?",
+   "input": {
+    "skus": [
+     "FD-PF-010"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-03"
+   },
+   "record": "FD-PF-010 at WH-A: updated 30 hours ago"
+  },
+  {
+   "id": "Q08-SL-02-02",
+   "group": "matrix",
+   "row": 8,
+   "kind": "policy",
+   "title": "Is the corned beef stock figure recent enough to use?",
+   "staff": "SL-02-02",
+   "message": "Is the corned beef stock figure at WH-A recent enough to use?",
+   "input": {
+    "skus": [
+     "FD-PF-010"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-03"
+   },
+   "record": "FD-PF-010 at WH-A: updated 30 hours ago"
+  },
+  {
+   "id": "Q08-FN-01-01",
+   "group": "matrix",
+   "row": 8,
+   "kind": "policy",
+   "title": "Is the corned beef stock figure recent enough to use?",
+   "staff": "FN-01-01",
+   "message": "Is the corned beef stock figure at WH-A recent enough to use?",
+   "input": {
+    "skus": [
+     "FD-PF-010"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-03"
+   },
+   "record": "FD-PF-010 at WH-A: updated 30 hours ago"
+  },
+  {
+   "id": "Q08-FN-02-01",
+   "group": "matrix",
+   "row": 8,
+   "kind": "policy",
+   "title": "Is the corned beef stock figure recent enough to use?",
+   "staff": "FN-02-01",
+   "message": "Is the corned beef stock figure at WH-A recent enough to use?",
+   "input": {
+    "skus": [
+     "FD-PF-010"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-03"
+   },
+   "record": "FD-PF-010 at WH-A: updated 30 hours ago"
+  },
+  {
+   "id": "Q08-WH-01-01",
+   "group": "matrix",
+   "row": 8,
+   "kind": "policy",
+   "title": "Is the corned beef stock figure recent enough to use?",
+   "staff": "WH-01-01",
+   "message": "Is the corned beef stock figure at WH-A recent enough to use?",
+   "input": {
+    "skus": [
+     "FD-PF-010"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-03"
+   },
+   "record": "FD-PF-010 at WH-A: updated 30 hours ago"
+  },
+  {
+   "id": "Q08-WH-02-01",
+   "group": "matrix",
+   "row": 8,
+   "kind": "policy",
+   "title": "Is the corned beef stock figure recent enough to use?",
+   "staff": "WH-02-01",
+   "message": "Is the corned beef stock figure at WH-A recent enough to use?",
+   "input": {
+    "skus": [
+     "FD-PF-010"
+    ],
+    "warehouse": "WH-A"
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-03"
+   },
+   "record": "FD-PF-010 at WH-A: updated 30 hours ago"
+  },
+  {
+   "id": "Q09-SL-01-01",
+   "group": "matrix",
+   "row": 9,
+   "kind": "policy",
+   "title": "Place a RM 1,200 credit order for C-0001",
+   "staff": "SL-01-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.",
+   "input": {
+    "request_id": "RQ-Q09",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q09"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q09",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-01, SP-07, FP-03, WP-04"
+   },
+   "record": "C-0001: available RM 1,900; FD-DR-003 RM 40.00, 200 at WH-A"
+  },
+  {
+   "id": "Q09-SL-02-01",
+   "group": "matrix",
+   "row": 9,
+   "kind": "policy",
+   "title": "Place a RM 1,200 credit order for C-0001",
+   "staff": "SL-02-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.",
+   "input": {
+    "request_id": "RQ-Q09",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q09"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q09",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 1,
+     "credit_raises": 0
+    },
+    "clause": "SP-01, SP-07, FP-03, WP-04"
+   },
+   "record": "C-0001: available RM 1,900; FD-DR-003 RM 40.00, 200 at WH-A"
+  },
+  {
+   "id": "Q09-SL-02-02",
+   "group": "matrix",
+   "row": 9,
+   "kind": "policy",
+   "title": "Place a RM 1,200 credit order for C-0001",
+   "staff": "SL-02-02",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.",
+   "input": {
+    "request_id": "RQ-Q09",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q09"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q09",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-01, SP-07, FP-03, WP-04"
+   },
+   "record": "C-0001: available RM 1,900; FD-DR-003 RM 40.00, 200 at WH-A"
+  },
+  {
+   "id": "Q09-FN-01-01",
+   "group": "matrix",
+   "row": 9,
+   "kind": "policy",
+   "title": "Place a RM 1,200 credit order for C-0001",
+   "staff": "FN-01-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.",
+   "input": {
+    "request_id": "RQ-Q09",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q09"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q09",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-01, SP-07, FP-03, WP-04"
+   },
+   "record": "C-0001: available RM 1,900; FD-DR-003 RM 40.00, 200 at WH-A"
+  },
+  {
+   "id": "Q09-FN-02-01",
+   "group": "matrix",
+   "row": 9,
+   "kind": "policy",
+   "title": "Place a RM 1,200 credit order for C-0001",
+   "staff": "FN-02-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.",
+   "input": {
+    "request_id": "RQ-Q09",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q09"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q09",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-01, SP-07, FP-03, WP-04"
+   },
+   "record": "C-0001: available RM 1,900; FD-DR-003 RM 40.00, 200 at WH-A"
+  },
+  {
+   "id": "Q09-WH-01-01",
+   "group": "matrix",
+   "row": 9,
+   "kind": "policy",
+   "title": "Place a RM 1,200 credit order for C-0001",
+   "staff": "WH-01-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.",
+   "input": {
+    "request_id": "RQ-Q09",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q09"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q09",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-01, SP-07, FP-03, WP-04"
+   },
+   "record": "C-0001: available RM 1,900; FD-DR-003 RM 40.00, 200 at WH-A"
+  },
+  {
+   "id": "Q09-WH-02-01",
+   "group": "matrix",
+   "row": 9,
+   "kind": "policy",
+   "title": "Place a RM 1,200 credit order for C-0001",
+   "staff": "WH-02-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q09. I confirmed the summary on screen: confirmation CF-Q09.",
+   "input": {
+    "request_id": "RQ-Q09",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q09"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q09",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-01, SP-07, FP-03, WP-04"
+   },
+   "record": "C-0001: available RM 1,900; FD-DR-003 RM 40.00, 200 at WH-A"
+  },
+  {
+   "id": "Q10-SL-01-01",
+   "group": "matrix",
+   "row": 10,
+   "kind": "policy",
+   "title": "Place C-0001's order again after the screen froze",
+   "staff": "SL-01-01",
+   "message": "The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.",
+   "input": {
+    "request_id": "RQ-F1",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-SC-002",
+      "qty": 20
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-F1"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F1",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-SC-002",
+        "qty": 20
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": [
+     {
+      "confirmation": "CF-F1",
+      "request_id": "RQ-F1",
+      "minutes_ago": 4
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-08"
+   },
+   "record": "Order already placed on RQ-F1, 4 minutes ago"
+  },
+  {
+   "id": "Q10-SL-02-01",
+   "group": "matrix",
+   "row": 10,
+   "kind": "policy",
+   "title": "Place C-0001's order again after the screen froze",
+   "staff": "SL-02-01",
+   "message": "The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.",
+   "input": {
+    "request_id": "RQ-F1",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-SC-002",
+      "qty": 20
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-F1"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F1",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-SC-002",
+        "qty": 20
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": [
+     {
+      "confirmation": "CF-F1",
+      "request_id": "RQ-F1",
+      "minutes_ago": 4
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-08",
+    "existing": true
+   },
+   "record": "Order already placed on RQ-F1, 4 minutes ago"
+  },
+  {
+   "id": "Q10-SL-02-02",
+   "group": "matrix",
+   "row": 10,
+   "kind": "policy",
+   "title": "Place C-0001's order again after the screen froze",
+   "staff": "SL-02-02",
+   "message": "The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.",
+   "input": {
+    "request_id": "RQ-F1",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-SC-002",
+      "qty": 20
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-F1"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F1",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-SC-002",
+        "qty": 20
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": [
+     {
+      "confirmation": "CF-F1",
+      "request_id": "RQ-F1",
+      "minutes_ago": 4
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-08"
+   },
+   "record": "Order already placed on RQ-F1, 4 minutes ago"
+  },
+  {
+   "id": "Q10-FN-01-01",
+   "group": "matrix",
+   "row": 10,
+   "kind": "policy",
+   "title": "Place C-0001's order again after the screen froze",
+   "staff": "FN-01-01",
+   "message": "The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.",
+   "input": {
+    "request_id": "RQ-F1",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-SC-002",
+      "qty": 20
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-F1"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F1",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-SC-002",
+        "qty": 20
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": [
+     {
+      "confirmation": "CF-F1",
+      "request_id": "RQ-F1",
+      "minutes_ago": 4
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-08"
+   },
+   "record": "Order already placed on RQ-F1, 4 minutes ago"
+  },
+  {
+   "id": "Q10-FN-02-01",
+   "group": "matrix",
+   "row": 10,
+   "kind": "policy",
+   "title": "Place C-0001's order again after the screen froze",
+   "staff": "FN-02-01",
+   "message": "The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.",
+   "input": {
+    "request_id": "RQ-F1",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-SC-002",
+      "qty": 20
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-F1"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F1",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-SC-002",
+        "qty": 20
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": [
+     {
+      "confirmation": "CF-F1",
+      "request_id": "RQ-F1",
+      "minutes_ago": 4
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-08"
+   },
+   "record": "Order already placed on RQ-F1, 4 minutes ago"
+  },
+  {
+   "id": "Q10-WH-01-01",
+   "group": "matrix",
+   "row": 10,
+   "kind": "policy",
+   "title": "Place C-0001's order again after the screen froze",
+   "staff": "WH-01-01",
+   "message": "The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.",
+   "input": {
+    "request_id": "RQ-F1",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-SC-002",
+      "qty": 20
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-F1"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F1",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-SC-002",
+        "qty": 20
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": [
+     {
+      "confirmation": "CF-F1",
+      "request_id": "RQ-F1",
+      "minutes_ago": 4
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-08"
+   },
+   "record": "Order already placed on RQ-F1, 4 minutes ago"
+  },
+  {
+   "id": "Q10-WH-02-01",
+   "group": "matrix",
+   "row": 10,
+   "kind": "policy",
+   "title": "Place C-0001's order again after the screen froze",
+   "staff": "WH-02-01",
+   "message": "The screen froze while I was placing C-0001's order. Place it again: 20 cartons of tomato ketchup, delivery Friday 2 October 2026. Request ID RQ-F1. I confirmed the summary on screen: confirmation CF-F1.",
+   "input": {
+    "request_id": "RQ-F1",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-SC-002",
+      "qty": 20
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-F1"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F1",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-SC-002",
+        "qty": 20
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": [
+     {
+      "confirmation": "CF-F1",
+      "request_id": "RQ-F1",
+      "minutes_ago": 4
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-08"
+   },
+   "record": "Order already placed on RQ-F1, 4 minutes ago"
+  },
+  {
+   "id": "Q11-SL-01-01",
+   "group": "matrix",
+   "row": 11,
+   "kind": "decide",
+   "title": "10 cartons of coconut water, 8 in stock",
+   "staff": "SL-01-01",
+   "message": "Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.",
+   "input": {
+    "request_id": "RQ-Q11",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-012",
+      "qty": 10
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q11"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q11",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-012",
+        "qty": 10
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-05"
+   },
+   "record": "FD-DR-012 at WH-A: 8 cartons; the salesperson decides whether to order 8"
+  },
+  {
+   "id": "Q11-SL-02-01",
+   "group": "matrix",
+   "row": 11,
+   "kind": "decide",
+   "title": "10 cartons of coconut water, 8 in stock",
+   "staff": "SL-02-01",
+   "message": "Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.",
+   "input": {
+    "request_id": "RQ-Q11",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-012",
+      "qty": 10
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q11"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q11",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-012",
+        "qty": 10
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "stock_short",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-05"
+   },
+   "record": "FD-DR-012 at WH-A: 8 cartons; the salesperson decides whether to order 8"
+  },
+  {
+   "id": "Q11-SL-02-02",
+   "group": "matrix",
+   "row": 11,
+   "kind": "decide",
+   "title": "10 cartons of coconut water, 8 in stock",
+   "staff": "SL-02-02",
+   "message": "Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.",
+   "input": {
+    "request_id": "RQ-Q11",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-012",
+      "qty": 10
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q11"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q11",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-012",
+        "qty": 10
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-05"
+   },
+   "record": "FD-DR-012 at WH-A: 8 cartons; the salesperson decides whether to order 8"
+  },
+  {
+   "id": "Q11-FN-01-01",
+   "group": "matrix",
+   "row": 11,
+   "kind": "decide",
+   "title": "10 cartons of coconut water, 8 in stock",
+   "staff": "FN-01-01",
+   "message": "Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.",
+   "input": {
+    "request_id": "RQ-Q11",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-012",
+      "qty": 10
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q11"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q11",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-012",
+        "qty": 10
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-05"
+   },
+   "record": "FD-DR-012 at WH-A: 8 cartons; the salesperson decides whether to order 8"
+  },
+  {
+   "id": "Q11-FN-02-01",
+   "group": "matrix",
+   "row": 11,
+   "kind": "decide",
+   "title": "10 cartons of coconut water, 8 in stock",
+   "staff": "FN-02-01",
+   "message": "Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.",
+   "input": {
+    "request_id": "RQ-Q11",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-012",
+      "qty": 10
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q11"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q11",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-012",
+        "qty": 10
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-05"
+   },
+   "record": "FD-DR-012 at WH-A: 8 cartons; the salesperson decides whether to order 8"
+  },
+  {
+   "id": "Q11-WH-01-01",
+   "group": "matrix",
+   "row": 11,
+   "kind": "decide",
+   "title": "10 cartons of coconut water, 8 in stock",
+   "staff": "WH-01-01",
+   "message": "Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.",
+   "input": {
+    "request_id": "RQ-Q11",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-012",
+      "qty": 10
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q11"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q11",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-012",
+        "qty": 10
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-05"
+   },
+   "record": "FD-DR-012 at WH-A: 8 cartons; the salesperson decides whether to order 8"
+  },
+  {
+   "id": "Q11-WH-02-01",
+   "group": "matrix",
+   "row": 11,
+   "kind": "decide",
+   "title": "10 cartons of coconut water, 8 in stock",
+   "staff": "WH-02-01",
+   "message": "Place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October 2026. Request ID RQ-Q11. I confirmed the summary on screen: confirmation CF-Q11.",
+   "input": {
+    "request_id": "RQ-Q11",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-012",
+      "qty": 10
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q11"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q11",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-012",
+        "qty": 10
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-05"
+   },
+   "record": "FD-DR-012 at WH-A: 8 cartons; the salesperson decides whether to order 8"
+  },
+  {
+   "id": "Q12-SL-01-01",
+   "group": "matrix",
+   "row": 12,
+   "kind": "decide",
+   "title": "A 10% discount for C-0001",
+   "staff": "SL-01-01",
+   "message": "C-0001 asks for a 10% discount. Place a credit order for C-0001: 30 cartons of mineral water at 10% off, delivery Friday 2 October 2026. Request ID RQ-Q12. I confirmed the summary on screen: confirmation CF-Q12.",
+   "input": {
+    "request_id": "RQ-Q12",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 10,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q12"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q12",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 10,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-06, MP-09"
+   },
+   "record": "No recorded approval on RQ-Q12; the sales manager decides"
+  },
+  {
+   "id": "Q12-SL-02-01",
+   "group": "matrix",
+   "row": 12,
+   "kind": "decide",
+   "title": "A 10% discount for C-0001",
+   "staff": "SL-02-01",
+   "message": "C-0001 asks for a 10% discount. Place a credit order for C-0001: 30 cartons of mineral water at 10% off, delivery Friday 2 October 2026. Request ID RQ-Q12. I confirmed the summary on screen: confirmation CF-Q12.",
+   "input": {
+    "request_id": "RQ-Q12",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 10,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q12"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q12",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 10,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "discount_needs_approval",
+    "next_step_names": "SL-01-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-06, MP-09"
+   },
+   "record": "No recorded approval on RQ-Q12; the sales manager decides"
+  },
+  {
+   "id": "Q12-SL-02-02",
+   "group": "matrix",
+   "row": 12,
+   "kind": "decide",
+   "title": "A 10% discount for C-0001",
+   "staff": "SL-02-02",
+   "message": "C-0001 asks for a 10% discount. Place a credit order for C-0001: 30 cartons of mineral water at 10% off, delivery Friday 2 October 2026. Request ID RQ-Q12. I confirmed the summary on screen: confirmation CF-Q12.",
+   "input": {
+    "request_id": "RQ-Q12",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 10,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q12"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q12",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 10,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-06, MP-09"
+   },
+   "record": "No recorded approval on RQ-Q12; the sales manager decides"
+  },
+  {
+   "id": "Q12-FN-01-01",
+   "group": "matrix",
+   "row": 12,
+   "kind": "decide",
+   "title": "A 10% discount for C-0001",
+   "staff": "FN-01-01",
+   "message": "C-0001 asks for a 10% discount. Place a credit order for C-0001: 30 cartons of mineral water at 10% off, delivery Friday 2 October 2026. Request ID RQ-Q12. I confirmed the summary on screen: confirmation CF-Q12.",
+   "input": {
+    "request_id": "RQ-Q12",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 10,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q12"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q12",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 10,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-06, MP-09"
+   },
+   "record": "No recorded approval on RQ-Q12; the sales manager decides"
+  },
+  {
+   "id": "Q12-FN-02-01",
+   "group": "matrix",
+   "row": 12,
+   "kind": "decide",
+   "title": "A 10% discount for C-0001",
+   "staff": "FN-02-01",
+   "message": "C-0001 asks for a 10% discount. Place a credit order for C-0001: 30 cartons of mineral water at 10% off, delivery Friday 2 October 2026. Request ID RQ-Q12. I confirmed the summary on screen: confirmation CF-Q12.",
+   "input": {
+    "request_id": "RQ-Q12",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 10,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q12"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q12",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 10,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-06, MP-09"
+   },
+   "record": "No recorded approval on RQ-Q12; the sales manager decides"
+  },
+  {
+   "id": "Q12-WH-01-01",
+   "group": "matrix",
+   "row": 12,
+   "kind": "decide",
+   "title": "A 10% discount for C-0001",
+   "staff": "WH-01-01",
+   "message": "C-0001 asks for a 10% discount. Place a credit order for C-0001: 30 cartons of mineral water at 10% off, delivery Friday 2 October 2026. Request ID RQ-Q12. I confirmed the summary on screen: confirmation CF-Q12.",
+   "input": {
+    "request_id": "RQ-Q12",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 10,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q12"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q12",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 10,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-06, MP-09"
+   },
+   "record": "No recorded approval on RQ-Q12; the sales manager decides"
+  },
+  {
+   "id": "Q12-WH-02-01",
+   "group": "matrix",
+   "row": 12,
+   "kind": "decide",
+   "title": "A 10% discount for C-0001",
+   "staff": "WH-02-01",
+   "message": "C-0001 asks for a 10% discount. Place a credit order for C-0001: 30 cartons of mineral water at 10% off, delivery Friday 2 October 2026. Request ID RQ-Q12. I confirmed the summary on screen: confirmation CF-Q12.",
+   "input": {
+    "request_id": "RQ-Q12",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 10,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q12"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q12",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 10,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "SP-06, MP-09"
+   },
+   "record": "No recorded approval on RQ-Q12; the sales manager decides"
+  },
+  {
+   "id": "Q13-SL-01-01",
+   "group": "matrix",
+   "row": 13,
+   "kind": "decide",
+   "title": "C-0001 needs delivery today",
+   "staff": "SL-01-01",
+   "message": "C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.",
+   "input": {
+    "request_id": "RQ-Q13",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-01",
+    "confirmation_id": "CF-Q13"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q13",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-01"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-07"
+   },
+   "record": "Standard delivery Fri 2 Oct; an earlier date is the warehouse manager's decision"
+  },
+  {
+   "id": "Q13-SL-02-01",
+   "group": "matrix",
+   "row": 13,
+   "kind": "decide",
+   "title": "C-0001 needs delivery today",
+   "staff": "SL-02-01",
+   "message": "C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.",
+   "input": {
+    "request_id": "RQ-Q13",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-01",
+    "confirmation_id": "CF-Q13"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q13",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-01"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "delivery_exception",
+    "next_step_names": "WH-01-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-07"
+   },
+   "record": "Standard delivery Fri 2 Oct; an earlier date is the warehouse manager's decision"
+  },
+  {
+   "id": "Q13-SL-02-02",
+   "group": "matrix",
+   "row": 13,
+   "kind": "decide",
+   "title": "C-0001 needs delivery today",
+   "staff": "SL-02-02",
+   "message": "C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.",
+   "input": {
+    "request_id": "RQ-Q13",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-01",
+    "confirmation_id": "CF-Q13"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q13",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-01"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-07"
+   },
+   "record": "Standard delivery Fri 2 Oct; an earlier date is the warehouse manager's decision"
+  },
+  {
+   "id": "Q13-FN-01-01",
+   "group": "matrix",
+   "row": 13,
+   "kind": "decide",
+   "title": "C-0001 needs delivery today",
+   "staff": "FN-01-01",
+   "message": "C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.",
+   "input": {
+    "request_id": "RQ-Q13",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-01",
+    "confirmation_id": "CF-Q13"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q13",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-01"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-07"
+   },
+   "record": "Standard delivery Fri 2 Oct; an earlier date is the warehouse manager's decision"
+  },
+  {
+   "id": "Q13-FN-02-01",
+   "group": "matrix",
+   "row": 13,
+   "kind": "decide",
+   "title": "C-0001 needs delivery today",
+   "staff": "FN-02-01",
+   "message": "C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.",
+   "input": {
+    "request_id": "RQ-Q13",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-01",
+    "confirmation_id": "CF-Q13"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q13",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-01"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-07"
+   },
+   "record": "Standard delivery Fri 2 Oct; an earlier date is the warehouse manager's decision"
+  },
+  {
+   "id": "Q13-WH-01-01",
+   "group": "matrix",
+   "row": 13,
+   "kind": "decide",
+   "title": "C-0001 needs delivery today",
+   "staff": "WH-01-01",
+   "message": "C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.",
+   "input": {
+    "request_id": "RQ-Q13",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-01",
+    "confirmation_id": "CF-Q13"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q13",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-01"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-07"
+   },
+   "record": "Standard delivery Fri 2 Oct; an earlier date is the warehouse manager's decision"
+  },
+  {
+   "id": "Q13-WH-02-01",
+   "group": "matrix",
+   "row": 13,
+   "kind": "decide",
+   "title": "C-0001 needs delivery today",
+   "staff": "WH-02-01",
+   "message": "C-0001 needs its order today. Place a credit order for C-0001: 30 cartons of mineral water for delivery today, Thursday 1 October 2026. Request ID RQ-Q13. I confirmed the summary on screen: confirmation CF-Q13.",
+   "input": {
+    "request_id": "RQ-Q13",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-01",
+    "confirmation_id": "CF-Q13"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q13",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-01"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-07"
+   },
+   "record": "Standard delivery Fri 2 Oct; an earlier date is the warehouse manager's decision"
+  },
+  {
+   "id": "Q14-SL-01-01",
+   "group": "matrix",
+   "row": 14,
+   "kind": "decide",
+   "title": "Raise C-0001's credit limit by RM 500",
+   "staff": "SL-01-01",
+   "message": "Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.",
+   "input": {
+    "request_id": "RQ-Q14",
+    "customer_id": "C-0001",
+    "amount_rm": 500
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": "FN-02-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-07, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; RM 2,400 after is beyond Tier 02"
+  },
+  {
+   "id": "Q14-SL-02-01",
+   "group": "matrix",
+   "row": 14,
+   "kind": "decide",
+   "title": "Raise C-0001's credit limit by RM 500",
+   "staff": "SL-02-01",
+   "message": "Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.",
+   "input": {
+    "request_id": "RQ-Q14",
+    "customer_id": "C-0001",
+    "amount_rm": 500
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": "FN-02-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-07, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; RM 2,400 after is beyond Tier 02"
+  },
+  {
+   "id": "Q14-SL-02-02",
+   "group": "matrix",
+   "row": 14,
+   "kind": "decide",
+   "title": "Raise C-0001's credit limit by RM 500",
+   "staff": "SL-02-02",
+   "message": "Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.",
+   "input": {
+    "request_id": "RQ-Q14",
+    "customer_id": "C-0001",
+    "amount_rm": 500
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": "FN-02-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-07, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; RM 2,400 after is beyond Tier 02"
+  },
+  {
+   "id": "Q14-FN-01-01",
+   "group": "matrix",
+   "row": 14,
+   "kind": "decide",
+   "title": "Raise C-0001's credit limit by RM 500",
+   "staff": "FN-01-01",
+   "message": "Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.",
+   "input": {
+    "request_id": "RQ-Q14",
+    "customer_id": "C-0001",
+    "amount_rm": 500
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "ok",
+    "code": null,
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 1
+    },
+    "clause": "FP-06, FP-07, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; RM 2,400 after is beyond Tier 02"
+  },
+  {
+   "id": "Q14-FN-02-01",
+   "group": "matrix",
+   "row": 14,
+   "kind": "decide",
+   "title": "Raise C-0001's credit limit by RM 500",
+   "staff": "FN-02-01",
+   "message": "Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.",
+   "input": {
+    "request_id": "RQ-Q14",
+    "customer_id": "C-0001",
+    "amount_rm": 500
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "raise_beyond_tier2",
+    "next_step_names": "FN-01-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-07, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; RM 2,400 after is beyond Tier 02"
+  },
+  {
+   "id": "Q14-WH-01-01",
+   "group": "matrix",
+   "row": 14,
+   "kind": "decide",
+   "title": "Raise C-0001's credit limit by RM 500",
+   "staff": "WH-01-01",
+   "message": "Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.",
+   "input": {
+    "request_id": "RQ-Q14",
+    "customer_id": "C-0001",
+    "amount_rm": 500
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-07, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; RM 2,400 after is beyond Tier 02"
+  },
+  {
+   "id": "Q14-WH-02-01",
+   "group": "matrix",
+   "row": 14,
+   "kind": "decide",
+   "title": "Raise C-0001's credit limit by RM 500",
+   "staff": "WH-02-01",
+   "message": "Raise C-0001's credit limit by RM 500. Request ID RQ-Q14.",
+   "input": {
+    "request_id": "RQ-Q14",
+    "customer_id": "C-0001",
+    "amount_rm": 500
+   },
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {},
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-06, FP-07, FP-08"
+   },
+   "record": "C-0001: available RM 1,900; RM 2,400 after is beyond Tier 02"
+  },
+  {
+   "id": "Q15-SL-01-01",
+   "group": "matrix",
+   "row": 15,
+   "kind": "decide",
+   "title": "The order's returned total differs",
+   "staff": "SL-01-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.",
+   "input": {
+    "request_id": "RQ-Q15",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q15"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q15",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-15"
+   },
+   "record": "Fault: the back end returns a total RM 10.00 higher; the sales manager reconciles"
+  },
+  {
+   "id": "Q15-SL-02-01",
+   "group": "matrix",
+   "row": 15,
+   "kind": "decide",
+   "title": "The order's returned total differs",
+   "staff": "SL-02-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.",
+   "input": {
+    "request_id": "RQ-Q15",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q15"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q15",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "needs_reconciliation",
+    "code": "order_result_mismatch",
+    "next_step_names": "SL-01-01",
+    "writes": {
+     "orders": 1,
+     "credit_raises": 0
+    },
+    "clause": "MP-15"
+   },
+   "record": "Fault: the back end returns a total RM 10.00 higher; the sales manager reconciles"
+  },
+  {
+   "id": "Q15-SL-02-02",
+   "group": "matrix",
+   "row": 15,
+   "kind": "decide",
+   "title": "The order's returned total differs",
+   "staff": "SL-02-02",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.",
+   "input": {
+    "request_id": "RQ-Q15",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q15"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q15",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-15"
+   },
+   "record": "Fault: the back end returns a total RM 10.00 higher; the sales manager reconciles"
+  },
+  {
+   "id": "Q15-FN-01-01",
+   "group": "matrix",
+   "row": 15,
+   "kind": "decide",
+   "title": "The order's returned total differs",
+   "staff": "FN-01-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.",
+   "input": {
+    "request_id": "RQ-Q15",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q15"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q15",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-15"
+   },
+   "record": "Fault: the back end returns a total RM 10.00 higher; the sales manager reconciles"
+  },
+  {
+   "id": "Q15-FN-02-01",
+   "group": "matrix",
+   "row": 15,
+   "kind": "decide",
+   "title": "The order's returned total differs",
+   "staff": "FN-02-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.",
+   "input": {
+    "request_id": "RQ-Q15",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q15"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q15",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-15"
+   },
+   "record": "Fault: the back end returns a total RM 10.00 higher; the sales manager reconciles"
+  },
+  {
+   "id": "Q15-WH-01-01",
+   "group": "matrix",
+   "row": 15,
+   "kind": "decide",
+   "title": "The order's returned total differs",
+   "staff": "WH-01-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.",
+   "input": {
+    "request_id": "RQ-Q15",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q15"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q15",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-15"
+   },
+   "record": "Fault: the back end returns a total RM 10.00 higher; the sales manager reconciles"
+  },
+  {
+   "id": "Q15-WH-02-01",
+   "group": "matrix",
+   "row": 15,
+   "kind": "decide",
+   "title": "The order's returned total differs",
+   "staff": "WH-02-01",
+   "message": "Place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October 2026. Request ID RQ-Q15. I confirmed the summary on screen: confirmation CF-Q15.",
+   "input": {
+    "request_id": "RQ-Q15",
+    "customer_id": "C-0001",
+    "lines": [
+     {
+      "sku": "FD-DR-003",
+      "qty": 30
+     }
+    ],
+    "discount_pct": 0,
+    "payment_route": "credit",
+    "delivery_date": "2026-10-02",
+    "confirmation_id": "CF-Q15"
+   },
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-Q15",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "MP-15"
+   },
+   "record": "Fault: the back end returns a total RM 10.00 higher; the sales manager reconciles"
+  },
+  {
+   "group": "failure",
+   "id": "F1",
+   "staff": "FN-02-01",
+   "title": "Raise submitted but the new balance does not match",
+   "message": "Raise C-0001's credit limit by RM 100. Request ID RQ-F3.",
+   "input": {
+    "request_id": "RQ-F3",
+    "customer_id": "C-0001",
+    "amount_rm": 100
+   },
+   "faults": {
+    "raise_credit_limit": "balance_mismatch"
+   },
+   "expect": {
+    "tool": "raise_credit_limit",
+    "status": "needs_reconciliation",
+    "code": "raise_result_mismatch",
+    "next_step_names": "FN-01-01",
+    "writes": {
+     "orders": 0,
+     "credit_raises": 1
+    },
+    "clause": "FP-01, FP-06"
+   },
+   "record": "Fault: the back end returns a balance RM 100.00 short",
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   }
+  },
+  {
+   "group": "failure",
+   "id": "F2",
+   "staff": "WH-02-01",
+   "title": "Stock record missing for a SKU",
+   "message": "What stock is available for belacan blocks at WH-A?",
+   "input": {
+    "skus": [
+     "FD-CI-014"
+    ],
+    "warehouse": "WH-A"
+   },
+   "expect": {
+    "tool": "check_stock",
+    "status": "error",
+    "code": "data_missing",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "WP-02"
+   },
+   "record": "FD-CI-014 has no record at WH-A",
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {}
+  },
+  {
+   "group": "failure",
+   "id": "F3",
+   "staff": "FN-02-01",
+   "title": "Credit record incomplete",
+   "message": "How much available credit does C-0003 have?",
+   "input": {
+    "customer_id": "C-0003",
+    "view": "credit"
+   },
+   "expect": {
+    "tool": "retrieve_customer_account",
+    "status": "error",
+    "code": "data_missing",
+    "next_step_names": null,
+    "writes": {
+     "orders": 0,
+     "credit_raises": 0
+    },
+    "clause": "FP-01"
+   },
+   "record": "C-0003 has no credit limit on record",
+   "setup": {
+    "confirmations": [],
+    "orders": []
+   },
+   "faults": {}
+  },
+  {
+   "group": "failure",
+   "id": "F4",
+   "staff": "SL-02-01",
+   "title": "Two orders at the same time on the same balance",
+   "direct": true,
+   "message": "Direct run, no agent: two credit orders for C-0001, RM 1,200.00 and RM 1,214.40, pass PreToolUse together, then reach the back end one after the other.",
+   "setup": {
+    "confirmations": [
+     {
+      "id": "CF-F7A",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-003",
+        "qty": 30
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     },
+     {
+      "id": "CF-F7B",
+      "staff": "SL-02-01",
+      "customer": "C-0001",
+      "lines": [
+       {
+        "sku": "FD-DR-005",
+        "qty": 23
+       }
+      ],
+      "discount_pct": 0,
+      "route": "credit",
+      "delivery_date": "2026-10-02"
+     }
+    ],
+    "orders": []
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "credit_balance_exceeded",
+    "next_step_names": null,
+    "writes": {
+     "orders": 1,
+     "credit_raises": 0
+    },
+    "clause": "WP-04, FP-03",
+    "backend": true
+   },
+   "record": "C-0001 available RM 1,900; two orders of RM 1,200.00 and RM 1,214.40",
+   "faults": {}
+  }
+ ]
+}

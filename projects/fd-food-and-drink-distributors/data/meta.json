@@ -1,0 +1,26 @@
+{
+ "seed": 42,
+ "now": 1790820000,
+ "now_label": "Thursday 1 October 2026, 10:00 Malaysia time",
+ "next_order": 249,
+ "open_order": "FD-SO-00248",
+ "named": {
+  "C-A": "C-0001",
+  "C-Z": "C-0002",
+  "credit_incomplete": "C-0003",
+  "stock_30h": [
+   "FD-PF-010",
+   "WH-A"
+  ],
+  "stock_missing": [
+   "FD-CI-014",
+   "WH-A"
+  ],
+  "stock_short": [
+   "FD-DR-012",
+   "WH-A"
+  ],
+  "promotion_sku": "FD-PF-003",
+  "no_price_sku": "FD-SC-007"
+ }
+}

@@ -1,0 +1,65 @@
+[
+ {
+  "id": "AP-0091",
+  "approver": "SL-01-01",
+  "type": "minimum_order",
+  "customer": "C-0018",
+  "request_id": "RQ-H00012",
+  "value": 22000,
+  "time": 1788319200
+ },
+ {
+  "id": "AP-0092",
+  "approver": "WH-01-01",
+  "type": "delivery_exception",
+  "customer": "C-0108",
+  "request_id": "RQ-H00040",
+  "value": "2026-09-05",
+  "time": 1788487500
+ },
+ {
+  "id": "AP-0093",
+  "approver": "FN-01-01",
+  "type": "prepaid",
+  "customer": "C-0014",
+  "request_id": "RQ-H00088",
+  "value": 180000,
+  "time": 1789026000
+ },
+ {
+  "id": "AP-0101",
+  "approver": "SL-01-01",
+  "type": "discount",
+  "customer": "C-0001",
+  "request_id": "RQ-A",
+  "value": 10,
+  "time": 1790818200
+ },
+ {
+  "id": "AP-0102",
+  "approver": "FN-01-01",
+  "type": "discount",
+  "customer": "C-0001",
+  "request_id": "RQ-B",
+  "value": 10,
+  "time": 1790818320
+ },
+ {
+  "id": "AP-0103",
+  "approver": "FN-01-01",
+  "type": "prepaid",
+  "customer": "C-0001",
+  "request_id": "RQ-D",
+  "value": 120000,
+  "time": 1790818500
+ },
+ {
+  "id": "AP-0104",
+  "approver": "WH-01-01",
+  "type": "stock_confirmation",
+  "customer": "C-0001",
+  "request_id": "RQ-E",
+  "value": "FD-PF-010",
+  "time": 1790818800
+ }
+]
