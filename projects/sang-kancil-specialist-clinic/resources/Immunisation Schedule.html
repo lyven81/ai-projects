@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Immunisation Schedule</title><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+.crumbs{font-size:12.5px;opacity:.8;margin-bottom:2px}.crumbs a{color:inherit;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../sang-kancil-specialist-clinic.html">Sang Kancil Specialist Clinic</a></div><h1>Immunisation Schedule</h1><nav id="toc"></nav></div>
+<p>IMMUNISATION SCHEDULE (IS)</p><p>Version: 1.0 | Prepared and source-checked: 22 October 2026</p><p>Demo location: Kota Damansara, Selangor, Malaysia</p><p>Status: Source-backed recall reference for a fictional software demonstration; not authority to administer vaccines.</p><p>Owner: Dr Aisyah Rahman, lead paediatrician</p><p>Related policies: CP-06, CP-10, OP-11, CL-13</p>
+<h2>1. Basis and scope</h2>
+<p>The baseline is the Malaysian MOH National Immunisation Schedule poster updated August 2023, visually checked against the full-size official poster. The HPV routine age is updated by the official 2026 circular included in S2. This file supports record completeness and recall flags, not vaccine selection, catch-up prescribing, minimum-interval validation or contraindication decisions. It is not a claim that no later local or product-specific instructions exist.</p>
+<p>The national baseline, regional exceptions, school programme and optional private services must remain distinguishable. Use calendar months and years, not 30-day months or 365-day years. Historical administrations may follow an earlier valid schedule and require cohort-aware review rather than automatic rejection.</p>
+<h2>2. Routine baseline for selangor</h2>
+<table><tr><th>schedule_id</th><th>vaccine_id</th><th>vaccine</th><th>dose label</th><th>target age</th><th>service channel</th></tr>
+<tr><td>IS-BCG-0</td><td>VAC-BCG</td><td>BCG</td><td>single birth dose</td><td>birth</td><td>maternity/public service; external history</td></tr>
+<tr><td>IS-HB-0</td><td>VAC-HEPB</td><td>Hepatitis B</td><td>birth dose</td><td>birth</td><td>maternity/public service; external history</td></tr>
+<tr><td>IS-HEX-1</td><td>VAC-HEX</td><td>DTaP-IPV-HepB-Hib, six-in-one</td><td>primary dose 1</td><td>2 months</td><td>infant clinic</td></tr>
+<tr><td>IS-HEX-2</td><td>VAC-HEX</td><td>DTaP-IPV-HepB-Hib, six-in-one</td><td>primary dose 2</td><td>3 months</td><td>infant clinic</td></tr>
+<tr><td>IS-PCV-1</td><td>VAC-PCV</td><td>Pneumococcal conjugate</td><td>primary dose 1</td><td>4 months</td><td>infant clinic</td></tr>
+<tr><td>IS-HEX-3</td><td>VAC-HEX</td><td>DTaP-IPV-HepB-Hib, six-in-one</td><td>primary dose 3</td><td>5 months</td><td>infant clinic</td></tr>
+<tr><td>IS-PCV-2</td><td>VAC-PCV</td><td>Pneumococcal conjugate</td><td>primary dose 2</td><td>6 months</td><td>infant clinic</td></tr>
+<tr><td>IS-MMR-1</td><td>VAC-MMR</td><td>Measles, mumps, rubella</td><td>dose 1</td><td>9 months</td><td>infant clinic</td></tr>
+<tr><td>IS-MMR-2</td><td>VAC-MMR</td><td>Measles, mumps, rubella</td><td>dose 2</td><td>12 months</td><td>infant clinic</td></tr>
+<tr><td>IS-PCV-B</td><td>VAC-PCV</td><td>Pneumococcal conjugate</td><td>booster</td><td>15 months</td><td>infant clinic</td></tr>
+<tr><td>IS-HEX-B</td><td>VAC-HEX</td><td>DTaP-IPV-HepB-Hib, six-in-one</td><td>booster</td><td>18 months</td><td>infant clinic</td></tr>
+<tr><td>IS-DT-SCHOOL</td><td>VAC-DT</td><td>Diphtheria and tetanus</td><td>school booster</td><td>age 7 / Year 1</td><td>school health service</td></tr>
+<tr><td>IS-HPV-SCHOOL</td><td>VAC-HPV</td><td>Human papillomavirus</td><td>one routine programme dose</td><td>girls age 12 / Year 6, from 1 January 2026</td><td>school health service</td></tr>
+<tr><td>IS-TT-SCHOOL</td><td>VAC-TT</td><td>Tetanus toxoid</td><td>school booster</td><td>age 15 / Form 3</td><td>school health service</td></tr>
+</table>
+<p>The six-in-one product contains hepatitis B antigen; do not add separate routine hepatitis B doses at ages 1 and 6 months to this baseline. The baseline contains no universal appointment at 8 months, 21 months, age 6 or age 13. Empty ages are not missing doses. The former routine school MR dose is not included; S3 reports its discontinuation from July 2022. Do not automatically schedule MR at age 7 from an older chart.</p>
+<p>Age labels for school services identify a school cohort, not an automatic birthday injection date. Verify school enrolment and the programme's invitation or appointment. Historical HPV at age 13 before the 2026 age change remains valid history; never create another dose solely because the current target age is 12.</p>
+<h2>3. Regional exceptions, off by default in selangor</h2>
+<table><tr><th>schedule_id</th><th>vaccine_id</th><th>vaccine</th><th>dose label</th><th>target age</th><th>applicability</th></tr>
+<tr><td>IS-MEASLES-SBH</td><td>VAC-MEASLES</td><td>Measles, additional early dose</td><td>regional early dose</td><td>6 months</td><td>Sabah programme only</td></tr>
+<tr><td>IS-JE-SWK-1</td><td>VAC-JE</td><td>Japanese encephalitis</td><td>dose 1</td><td>9 months</td><td>Sarawak programme only</td></tr>
+<tr><td>IS-JE-SWK-B</td><td>VAC-JE</td><td>Japanese encephalitis</td><td>booster</td><td>21 months</td><td>Sarawak programme only</td></tr>
+</table>
+<p>Record regional administrations if documented, but do not apply these rows to every Selangor patient. A child moving between states requires a clinician-reviewed applicable schedule. The Sabah early measles dose must not automatically replace the later MMR doses; an antigen overlap alone does not establish equivalence. Do not infer a BCG repeat from absence of a scar.</p>
+<h2>4. Hpv change and private-product separation</h2>
+<p>S2 contains the MOH letter dated 19 November 2025, reference KKM.600-29/4/16 Jld.2 (38), and implementation details reducing routine HPV age from 13 to 12 effective 1 January 2026. It describes one programme dose and catch-up access for specified older groups. This demo activates only the routine Year 6/girls age-12 flag; older unvaccinated girls receive PROGRAMME_REVIEW_REQUIRED rather than an invented catch-up appointment.</p>
+<p>The programme one-dose rule shall not be treated as a universal product-label schedule for every private HPV product, sex, age, immune status or previous series. Record the product, prior administrations and programme context. VAC-HPV is the programme tracking antigen; VAC-HPV9 is a specific private billing category in the Fee Schedule. A clinician decides whether a recorded HPV9 dose satisfies programme history; do not automatically generate a multi-dose course from the price entry.</p>
+<h2>5. Optional private services</h2>
+<p>Influenza is available as a fictional priced private service in the Fee Schedule, but is not an automatic overdue item under this NIP baseline. Varicella, rotavirus, hepatitis A, travel vaccines and other optional services are outside the current demo catalogue. If a doctor later approves one, add a separate versioned product-specific schedule; do not invent ages, dose counts or prices. A booking or a paid vaccine invoice is not evidence that vaccination occurred.</p>
+<h2>6. Data required for status calculation</h2>
+<p>Patient fields: patient_id, date_of_birth, recorded sex/programme eligibility where required, applicable region, schedule/cohort context and history completeness flag.</p>
+<p>Administration fields: administration_id, patient_id, actual product and antigen code, documented dose label, administration date, provider/source, verification status, and batch where available. Mark verified outside-clinic doses as external, not absent. Missing batch information alone does not mean a documented dose was never given; eligibility and record adequacy remain a clinician decision.</p>
+<p>Recall fields: schedule_id, status, target_date if applicable, actual programme appointment if known, days_past_target, basis/source, review reason, assigned doctor and clerk action ID. Confidential clinical details shall not be copied into the recall summary.</p>
+<h2>7. Status rules for the demo engine</h2>
+<p>COMPLETED_RECORDED: A verified administration is explicitly mapped to this required dose. This means recorded completion, not a guarantee of immunological protection or independently validated minimum intervals.</p>
+<p>NOT_YET_DUE: For a supported routine infant row, its target age is later than the demo date and there is no contrary clinician plan.</p>
+<p>DUE_TODAY: A supported routine infant row reaches its nominal target date today and history explicitly establishes the dose is not given.</p>
+<p>PAST_TARGET_REVIEW: A nominal infant target date has passed and complete verified history establishes no mapped dose. Display 'past routine target; clinician to confirm catch-up', not 'give now'. This is the demo's overdue flag for benchmark filtering; it is not a catch-up schedule.</p>
+<p>HISTORY_UNVERIFIED: Records are absent, incomplete or contradictory, or a possible equivalent/older-schedule dose is not mapped. Create a record-check action; do not label the patient definitively unvaccinated or count this as confirmed overdue.</p>
+<p>SCHOOL_PROGRAMME_REVIEW: The patient belongs to a school-vaccine cohort, but no verified administration or programme appointment is recorded. Request school/public-clinic confirmation; a birthday alone does not establish a missed school visit.</p>
+<p>PROGRAMME_REVIEW_REQUIRED: Older HPV catch-up eligibility, regional transfer, immune-status exception or another unsupported programme decision requires clinician/public-service review.</p>
+<p>DEFERRED_BY_CLINICIAN: An authorised clinician records a deferral reason and review date. Keep the original target and incomplete status, but follow the recorded review date for contacts; do not describe the dose as completed.</p>
+<p>NOT_APPLICABLE: The row does not apply to the patient's verified region or programme group.</p>
+<p>For infant dates, add calendar months to date of birth, clamping to the last day of the target month where necessary. Birth doses use the date of birth as the nominal record target. This calculation does not set a clinical grace period or minimum interval. A local reminder may start on the target date; there is no invented 30-day medical grace window. Where a school appointment is explicitly recorded, a missed-appointment flag may be calculated from that date, separately from birthday-based eligibility.</p>
+<h2>8. Recall workflow and access</h2>
+<p>Use a unique action key patient_id + schedule_id + active review episode to prevent duplicate recalls. Nurul Huda verifies history and contacts the registered guardian; the attending doctor decides catch-up, deferral or other clinical matters. Keep unsuccessful contacts open with a named owner. Recording a booking or closing a recall shall not fabricate an administration; only a verified source record may change vaccination completion.</p>
+<p>The clerk may open individual vaccination views for all patients. Each doctor's vaccine-overdue list is limited to their own panel, including Dr Aisyah's infant panel even when she uses lead capacity, under CP-10. Return list fields only: patient ID, name, age and doctor. Details come from an authorised patient view.</p>
+<p>The historical eight-tool scope has no vaccination-administration write tool. Actual administrations and history corrections occur in the source clinic system and are then read back; do not add an unapproved write path merely because this reference lists the required fields.</p>
+<h2>9. Benchmark fixtures at thursday, 22 october 2026</h2>
+<p>A. Mei Xin, 6, proposed DOB 10 February 2020: routine infant PCV booster target 10 May 2021. Seed a verified complete history explicitly showing that booster was not given. Result: PAST_TARGET_REVIEW, requiring Dr Daniel's catch-up assessment; do not recommend an automatic infant booster at age 6. Her school DT is not yet due by age, and there is no universal NIP age-6 booster.</p>
+<p>B. Synthetic infant born 22 January 2026: MMR dose-1 target 22 October 2026. With complete history and dose not given, DUE_TODAY; a booking still awaits clinical assessment and guardian confirmation.</p>
+<p>C. Baby Adam, DOB 27 October 2025, turns 1 on 27 October 2026: MMR dose-2 target 27 October 2026, so NOT_YET_DUE on 22 October. Doctor-of-record handover follows CL-02 independently of vaccination status.</p>
+<p>D. Hana, 15, has a verified historical HPV programme administration at age 13: COMPLETED_RECORDED. Do not recall her for another routine dose because the new cohort age is 12. If her record is missing, route to programme/history review rather than inventing a dose count.</p>
+<p>E. A Selangor child with no Sarawak history is NOT_APPLICABLE for the JE rows. A documented Sarawak transfer requires clinician review of that child's regional history.</p>
+<p>These dates and history states are proposed synthetic fixtures to support the build, not facts already present in the user's patient database. Old cohorts need clinician mapping where the historical product schedule differs.</p>
+<h2>10. Official sources and update control</h2>
+<p>S1. MOH Health Education Division, Jadual Imunisasi Kebangsaan, updated August 2023. Full poster visually reviewed; routine infant ages, DT, TT, one-dose HPV baseline and regional exceptions transcribed. HPV age is superseded for the routine 2026 cohort by S2.</p>
+<p>https://infosihat.moh.gov.my/penerbitan-multimedia/infografik/item/jadual-imunisasi-kebangsaan-kemaskini-ogos-2023.html</p>
+<p>S2. Official 2026 school circular packet hosted by Johor State Education Department, including MOH age-change letter and implementation details. The MOH change concerns the national programme, not a Johor-only vaccine rule. Pages 2 to 3 and 5 were visually checked.</p>
+<p>https://jpnjohor.moe.gov.my/images/VAKSIN_HPV_2026.pdf</p>
+<p>S3. MOH Annual Report 2022, school-health programme report: routine Year 1 MR administration discontinued from July 2022.</p>
+<p>https://www.moh.gov.my/images/04-penerbitan/laporan-tahunan/3a._Laporan_Tahunan_2022_KKM_BM_FINAL.pdf</p>
+<p>All sources checked 22 October 2026. Status names, date arithmetic, recall routing and demo fixtures are local design choices, not wording or clinical rules prescribed by MOH. Keep each calculated result linked to this version and its source. Before production use or a new-year cohort, a responsible Malaysian clinician must confirm the applicable national circulars, school programme, catch-up guidance and product-specific requirements. Do not silently apply a new version to historical administrations.</p>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Immunisation Schedule</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

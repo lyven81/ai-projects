@@ -1,0 +1,61 @@
+SANG KANCIL SPECIALIST CLINIC
+OPERATIONS POLICY (OP)
+Version: 1.0 | Prepared: 22 October 2026 | Clauses: 12
+Status: Proposed policy for a fictional demonstration clinic; not an approved policy for clinical deployment.
+
+PURPOSE AND PRINCLES
+Make bookings and guardian communication clear, traceable and owned by the right person. Use the approved schedule and registered guardian information. Clinical decisions remain with doctors; this is an internal staff assistant, not a guardian-facing chatbot.
+
+SECTION A: REGISTRATION AND COMMUNICATION
+
+OP-01. Verify the patient and registered guardian
+Use an existing patient ID and the guardian relationship recorded in the clinic system for bookings and guardian communication. When a name matches more than one patient, ask for the patient ID. Missing registration, a disputed guardian relationship or a requested contact change shall be referred to Nurul Huda for verification in the source system. The assistant shall not create or edit registration or guardian records.
+Enforced by: Patient and guardian lookup, tool input checks and back-end mutation restrictions.
+
+OP-02. The clerk coordinates guardian contact
+Nurul Huda handles routine booking confirmations, recalls, reminders and referral arrangements. A guardian's clinical question becomes a callback request to the patient's own doctor under CL-10. A doctor may contact a guardian directly for an assigned callback or documented clinical or safety need; the purpose and outcome shall be recorded by authorised staff. The assistant shall not independently call, message or disclose records to a guardian or outside party.
+Enforced by: Request ownership, available tool boundaries and communication outcome records.
+
+SECTION B: SCHEDULE AND BOOKING
+
+OP-03. Use the clinic hours and rota
+check_schedule shall read the maintained Clinic Hours and Rota resource for sessions, doctor availability, visit types, slot lengths and Selangor public holidays. A closed session, holiday or unavailable doctor shall not appear as an ordinary available slot. If the rota or holiday reference is missing or not valid for the requested date, report the gap and refer scheduling to Nurul Huda. Do not infer opening hours or holidays from memory.
+Enforced by: check_schedule and back-end calendar validation.
+
+OP-04. Apply doctor choice and age rules
+An ordinary appointment may be with the patient's age-band doctor or Dr Aisyah, subject to availability and the guardian's choice. Booking with the lead does not itself change the doctor of record or grant continuing clinical access. A requested doctor outside this rule shall be refused; Nurul Huda raises a doctor-assignment request to Dr Aisyah in lead capacity, who assigns the appointment to the age-band doctor or herself, and Nurul Huda then books the assigned doctor. Age-band transitions follow CL-01 and CL-02; an urgent visit follows OP-10 and CL-04.
+Enforced by: Booking eligibility checks using patient age, doctor registry and accepted handovers.
+
+OP-05. Only the clerk enters appointments
+Only Nurul Huda may call book_appointment. A doctor asking to book shall receive a next_step naming Nurul Huda, with a follow-up action created when the visit workflow provides one. Each booking shall record patient ID, registered guardian, doctor, visit type, slot and the channel through which the request arrived. An online form creates work for the clerk; it does not create a confirmed appointment by itself.
+Enforced by: Role-specific tool catalogue, book_appointment schema and back-end authorisation.
+
+OP-06. Validate and reserve the slot
+Before saving, book_appointment shall recheck the doctor, session, visit-type duration and availability, and prevent overlapping bookings. The availability check and reservation shall occur atomically so simultaneous requests cannot take the same slot. A pending booking reserves its slot until confirmed or explicitly released by the clerk through a validated booking transition. On conflict, return current alternatives without claiming a booking was made.
+Enforced by: Back-end transaction, overlap constraints and booking state transitions.
+
+OP-07. A booking remains pending until confirmed
+A new booking shall be marked pending confirmation and assigned to Nurul Huda. It becomes confirmed only after she records that the registered guardian agreed to the named doctor, day, date and time. An unanswered call or unverified reply shall leave it pending. Confirmation shall close the confirmation action without recreating the booking; withdrawal releases the reservation and retains its history.
+Enforced by: book_appointment confirmation and withdrawal transitions, guardian checks and action store.
+
+OP-08. State dates and times explicitly
+Scheduling replies shall state the weekday, full date and time in Malaysia time, together with the doctor and booking status. Relative requests such as 'in two weeks' shall be resolved from the recorded encounter date or an explicitly established reference date; ask when the reference is unclear. If the requested session is unavailable, offer the permitted doctor's next available session. The demo clock is Thursday, 22 October 2026; it shall not silently become the actual date in a deployed system.
+Enforced by: Date parser, explicit clock configuration and shared time formatter.
+
+OP-09. Overbooking requires the requested doctor's recorded decision
+Only Nurul Huda may raise an overbooking request, naming the patient, doctor, session and reason, to the requested doctor. That doctor decides and names the slot he or she can allocate; the request alone shall not reserve a conflicting slot or count as an appointment. Once the decision is recorded, the clerk may book only the slot the doctor allocated, and guardian confirmation is still required. The decision shall not override doctor eligibility, guardian verification or clinical checks.
+Enforced by: create_request ownership, approval scope and book_appointment approval validation.
+
+SECTION C: EXCEPTIONS AND FOLLOW-THROUGH
+
+OP-10. Urgent visits and emergency staff guidance
+The assistant shall use only explicit urgent and emergency criteria approved in the Clinical Policy's maintained staff guidance, without judging severity itself. A request matching those criteria shall direct staff to the doctor on duty or the clinic's emergency procedure; an emergency response shall tell staff to call 999 rather than wait for an appointment. Staff may initiate an urgent clinical review without waiting for a complete checklist. Until approved criteria and the on-duty rota are available, the assistant shall not classify urgency or promise a slot; it shall name the on-duty doctor if known, otherwise Nurul Huda to locate one immediately.
+Enforced by: Approved criteria matcher, rota lookup, response rules and urgent booking validation.
+
+OP-11. Follow-ups, recalls and reminders remain staff tasks
+Closing a visit shall create the prescribed follow-up booking action for Nurul Huda when an interval is recorded. Vaccine recall actions shall come from the maintained immunisation schedule and patient records; billing reminders follow BP-06. Each action shall remain open until she records its outcome or an authorised disposition, without claiming contact or delivery occurred automatically. An unsuccessful contact attempt shall be recorded and retain a follow-up owner.
+Enforced by: Code-generated action rules, authorised completion transitions and audit log.
+
+OP-12. Referral arrangements and booking corrections
+Nurul Huda arranges an external referral only after a doctor supplies the destination and referral details under CL-12. She records the arrangement outcome, including the agreed day, date and time when available. Requests to reschedule a confirmed appointment, change its doctor or correct existing appointment details shall go to her in the clinic's source system; pending confirmation and withdrawal use OP-07. The assistant shall not claim a referral or booking change is complete without a recorded outcome.
+Enforced by: Referral request ownership, booking mutation boundaries and action-state validation.

@@ -1,0 +1,3934 @@
+[
+ {
+  "id": "SK-INV-00001",
+  "patient": "SK-P-0001",
+  "visit": "SK-VIS-00001",
+  "date": "2026-10-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00002",
+  "patient": "SK-P-0002",
+  "visit": "SK-VIS-00003",
+  "date": "2026-07-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00003",
+  "patient": "SK-P-0002",
+  "visit": "SK-VIS-00004",
+  "date": "2026-09-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00004",
+  "patient": "SK-P-0003",
+  "visit": "SK-VIS-00005",
+  "date": "2026-06-15",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00005",
+  "patient": "SK-P-0004",
+  "visit": "SK-VIS-00006",
+  "date": "2026-09-15",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00006",
+  "patient": "SK-P-0005",
+  "visit": "SK-VIS-00007",
+  "date": "2026-07-28",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00007",
+  "patient": "SK-P-0005",
+  "visit": "SK-VIS-00008",
+  "date": "2026-10-12",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00008",
+  "patient": "SK-P-0006",
+  "visit": "SK-VIS-00009",
+  "date": "2026-10-05",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   },
+   {
+    "fee_id": "FS-E01",
+    "qty": 1,
+    "sen": 5500,
+    "label": "Valved spacer, mask supplied if prescribed"
+   },
+   {
+    "fee_id": "FS-M07",
+    "qty": 2,
+    "sen": 3500,
+    "label": "Salbutamol 100 micrograms/actuation pMDI"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00009",
+  "patient": "SK-P-0007",
+  "visit": "SK-VIS-00010",
+  "date": "2026-09-21",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00010",
+  "patient": "SK-P-0007",
+  "visit": "SK-VIS-00011",
+  "date": "2026-08-13",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00011",
+  "patient": "SK-P-0008",
+  "visit": "SK-VIS-00012",
+  "date": "2026-06-20",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00012",
+  "patient": "SK-P-0008",
+  "visit": "SK-VIS-00013",
+  "date": "2026-08-26",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00013",
+  "patient": "SK-P-0008",
+  "visit": "SK-VIS-00014",
+  "date": "2026-08-01",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00014",
+  "patient": "SK-P-0010",
+  "visit": "SK-VIS-00015",
+  "date": "2026-06-04",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00015",
+  "patient": "SK-P-0011",
+  "visit": "SK-VIS-00016",
+  "date": "2026-06-17",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00016",
+  "patient": "SK-P-0011",
+  "visit": "SK-VIS-00017",
+  "date": "2026-06-03",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00017",
+  "patient": "SK-P-0012",
+  "visit": "SK-VIS-00018",
+  "date": "2026-09-16",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00018",
+  "patient": "SK-P-0012",
+  "visit": "SK-VIS-00019",
+  "date": "2026-10-01",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00019",
+  "patient": "SK-P-0013",
+  "visit": "SK-VIS-00020",
+  "date": "2026-04-27",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00020",
+  "patient": "SK-P-0014",
+  "visit": "SK-VIS-00021",
+  "date": "2026-10-09",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00021",
+  "patient": "SK-P-0014",
+  "visit": "SK-VIS-00022",
+  "date": "2026-05-29",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00022",
+  "patient": "SK-P-0015",
+  "visit": "SK-VIS-00023",
+  "date": "2026-07-27",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00023",
+  "patient": "SK-P-0015",
+  "visit": "SK-VIS-00024",
+  "date": "2026-06-11",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00024",
+  "patient": "SK-P-0016",
+  "visit": "SK-VIS-00025",
+  "date": "2026-09-18",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00025",
+  "patient": "SK-P-0016",
+  "visit": "SK-VIS-00026",
+  "date": "2026-07-07",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00026",
+  "patient": "SK-P-0016",
+  "visit": "SK-VIS-00027",
+  "date": "2026-08-31",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00027",
+  "patient": "SK-P-0017",
+  "visit": "SK-VIS-00028",
+  "date": "2026-08-01",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00028",
+  "patient": "SK-P-0017",
+  "visit": "SK-VIS-00029",
+  "date": "2026-08-18",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00029",
+  "patient": "SK-P-0017",
+  "visit": "SK-VIS-00030",
+  "date": "2026-05-11",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00030",
+  "patient": "SK-P-0018",
+  "visit": "SK-VIS-00031",
+  "date": "2026-06-20",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00031",
+  "patient": "SK-P-0018",
+  "visit": "SK-VIS-00032",
+  "date": "2026-08-10",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00032",
+  "patient": "SK-P-0018",
+  "visit": "SK-VIS-00033",
+  "date": "2026-09-30",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00033",
+  "patient": "SK-P-0019",
+  "visit": "SK-VIS-00034",
+  "date": "2026-06-02",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00034",
+  "patient": "SK-P-0019",
+  "visit": "SK-VIS-00035",
+  "date": "2026-06-30",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00035",
+  "patient": "SK-P-0019",
+  "visit": "SK-VIS-00036",
+  "date": "2026-07-25",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00036",
+  "patient": "SK-P-0020",
+  "visit": "SK-VIS-00037",
+  "date": "2026-06-03",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00037",
+  "patient": "SK-P-0020",
+  "visit": "SK-VIS-00038",
+  "date": "2026-10-02",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00038",
+  "patient": "SK-P-0020",
+  "visit": "SK-VIS-00039",
+  "date": "2026-10-12",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00039",
+  "patient": "SK-P-0022",
+  "visit": "SK-VIS-00040",
+  "date": "2026-08-12",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00040",
+  "patient": "SK-P-0023",
+  "visit": "SK-VIS-00041",
+  "date": "2026-08-19",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00041",
+  "patient": "SK-P-0023",
+  "visit": "SK-VIS-00042",
+  "date": "2026-10-15",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00042",
+  "patient": "SK-P-0023",
+  "visit": "SK-VIS-00043",
+  "date": "2026-05-03",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00043",
+  "patient": "SK-P-0025",
+  "visit": "SK-VIS-00044",
+  "date": "2026-05-25",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00044",
+  "patient": "SK-P-0026",
+  "visit": "SK-VIS-00045",
+  "date": "2026-09-29",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00045",
+  "patient": "SK-P-0026",
+  "visit": "SK-VIS-00046",
+  "date": "2026-10-19",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00046",
+  "patient": "SK-P-0026",
+  "visit": "SK-VIS-00047",
+  "date": "2026-08-21",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00047",
+  "patient": "SK-P-0027",
+  "visit": "SK-VIS-00048",
+  "date": "2026-06-15",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00048",
+  "patient": "SK-P-0027",
+  "visit": "SK-VIS-00049",
+  "date": "2026-07-29",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00049",
+  "patient": "SK-P-0027",
+  "visit": "SK-VIS-00050",
+  "date": "2026-05-25",
+  "lines": [
+   {
+    "fee_id": "FS-C02",
+    "qty": 1,
+    "sen": 10000,
+    "label": "Follow-up consultation, lead"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00050",
+  "patient": "SK-P-0028",
+  "visit": "SK-VIS-00051",
+  "date": "2026-09-27",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00051",
+  "patient": "SK-P-0028",
+  "visit": "SK-VIS-00052",
+  "date": "2026-10-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00052",
+  "patient": "SK-P-0029",
+  "visit": "SK-VIS-00053",
+  "date": "2026-06-23",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00053",
+  "patient": "SK-P-0030",
+  "visit": "SK-VIS-00054",
+  "date": "2026-05-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00054",
+  "patient": "SK-P-0030",
+  "visit": "SK-VIS-00055",
+  "date": "2026-05-31",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00055",
+  "patient": "SK-P-0030",
+  "visit": "SK-VIS-00056",
+  "date": "2026-08-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00056",
+  "patient": "SK-P-0031",
+  "visit": "SK-VIS-00057",
+  "date": "2026-06-05",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00057",
+  "patient": "SK-P-0031",
+  "visit": "SK-VIS-00058",
+  "date": "2026-05-14",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00058",
+  "patient": "SK-P-0031",
+  "visit": "SK-VIS-00059",
+  "date": "2026-09-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00059",
+  "patient": "SK-P-0032",
+  "visit": "SK-VIS-00060",
+  "date": "2026-05-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00060",
+  "patient": "SK-P-0032",
+  "visit": "SK-VIS-00061",
+  "date": "2026-06-02",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00061",
+  "patient": "SK-P-0033",
+  "visit": "SK-VIS-00062",
+  "date": "2026-08-07",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00062",
+  "patient": "SK-P-0033",
+  "visit": "SK-VIS-00063",
+  "date": "2026-09-01",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00063",
+  "patient": "SK-P-0034",
+  "visit": "SK-VIS-00064",
+  "date": "2026-09-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00064",
+  "patient": "SK-P-0034",
+  "visit": "SK-VIS-00065",
+  "date": "2026-04-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00065",
+  "patient": "SK-P-0035",
+  "visit": "SK-VIS-00066",
+  "date": "2026-06-15",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00066",
+  "patient": "SK-P-0035",
+  "visit": "SK-VIS-00067",
+  "date": "2026-07-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00067",
+  "patient": "SK-P-0036",
+  "visit": "SK-VIS-00068",
+  "date": "2026-05-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00068",
+  "patient": "SK-P-0037",
+  "visit": "SK-VIS-00069",
+  "date": "2026-07-29",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00069",
+  "patient": "SK-P-0037",
+  "visit": "SK-VIS-00070",
+  "date": "2026-09-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00070",
+  "patient": "SK-P-0037",
+  "visit": "SK-VIS-00071",
+  "date": "2026-07-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00071",
+  "patient": "SK-P-0038",
+  "visit": "SK-VIS-00072",
+  "date": "2026-07-28",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00072",
+  "patient": "SK-P-0038",
+  "visit": "SK-VIS-00073",
+  "date": "2026-07-01",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00073",
+  "patient": "SK-P-0038",
+  "visit": "SK-VIS-00074",
+  "date": "2026-05-31",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00074",
+  "patient": "SK-P-0039",
+  "visit": "SK-VIS-00075",
+  "date": "2026-08-01",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00075",
+  "patient": "SK-P-0039",
+  "visit": "SK-VIS-00076",
+  "date": "2026-08-23",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00076",
+  "patient": "SK-P-0039",
+  "visit": "SK-VIS-00077",
+  "date": "2026-08-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00077",
+  "patient": "SK-P-0040",
+  "visit": "SK-VIS-00078",
+  "date": "2026-07-28",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00078",
+  "patient": "SK-P-0040",
+  "visit": "SK-VIS-00079",
+  "date": "2026-05-14",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00079",
+  "patient": "SK-P-0040",
+  "visit": "SK-VIS-00080",
+  "date": "2026-05-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00080",
+  "patient": "SK-P-0041",
+  "visit": "SK-VIS-00081",
+  "date": "2026-07-21",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00081",
+  "patient": "SK-P-0041",
+  "visit": "SK-VIS-00082",
+  "date": "2026-10-15",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00082",
+  "patient": "SK-P-0041",
+  "visit": "SK-VIS-00083",
+  "date": "2026-05-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00083",
+  "patient": "SK-P-0042",
+  "visit": "SK-VIS-00084",
+  "date": "2026-09-05",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00084",
+  "patient": "SK-P-0043",
+  "visit": "SK-VIS-00085",
+  "date": "2026-07-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00085",
+  "patient": "SK-P-0044",
+  "visit": "SK-VIS-00086",
+  "date": "2026-07-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00086",
+  "patient": "SK-P-0045",
+  "visit": "SK-VIS-00087",
+  "date": "2026-09-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00087",
+  "patient": "SK-P-0045",
+  "visit": "SK-VIS-00088",
+  "date": "2026-05-07",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00088",
+  "patient": "SK-P-0046",
+  "visit": "SK-VIS-00089",
+  "date": "2026-06-27",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00089",
+  "patient": "SK-P-0046",
+  "visit": "SK-VIS-00090",
+  "date": "2026-07-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00090",
+  "patient": "SK-P-0047",
+  "visit": "SK-VIS-00091",
+  "date": "2026-08-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00091",
+  "patient": "SK-P-0047",
+  "visit": "SK-VIS-00092",
+  "date": "2026-09-24",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00092",
+  "patient": "SK-P-0048",
+  "visit": "SK-VIS-00093",
+  "date": "2026-05-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00093",
+  "patient": "SK-P-0048",
+  "visit": "SK-VIS-00094",
+  "date": "2026-06-10",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00094",
+  "patient": "SK-P-0049",
+  "visit": "SK-VIS-00095",
+  "date": "2026-05-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00095",
+  "patient": "SK-P-0049",
+  "visit": "SK-VIS-00096",
+  "date": "2026-09-03",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00096",
+  "patient": "SK-P-0050",
+  "visit": "SK-VIS-00097",
+  "date": "2026-06-14",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00097",
+  "patient": "SK-P-0050",
+  "visit": "SK-VIS-00098",
+  "date": "2026-09-29",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00098",
+  "patient": "SK-P-0050",
+  "visit": "SK-VIS-00099",
+  "date": "2026-09-23",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00099",
+  "patient": "SK-P-0051",
+  "visit": "SK-VIS-00100",
+  "date": "2026-05-27",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00100",
+  "patient": "SK-P-0051",
+  "visit": "SK-VIS-00101",
+  "date": "2026-09-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00101",
+  "patient": "SK-P-0052",
+  "visit": "SK-VIS-00102",
+  "date": "2026-05-02",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00102",
+  "patient": "SK-P-0052",
+  "visit": "SK-VIS-00103",
+  "date": "2026-09-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00103",
+  "patient": "SK-P-0053",
+  "visit": "SK-VIS-00104",
+  "date": "2026-07-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00104",
+  "patient": "SK-P-0054",
+  "visit": "SK-VIS-00105",
+  "date": "2026-09-06",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00105",
+  "patient": "SK-P-0054",
+  "visit": "SK-VIS-00106",
+  "date": "2026-05-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00106",
+  "patient": "SK-P-0054",
+  "visit": "SK-VIS-00107",
+  "date": "2026-05-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00107",
+  "patient": "SK-P-0055",
+  "visit": "SK-VIS-00108",
+  "date": "2026-06-10",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00108",
+  "patient": "SK-P-0055",
+  "visit": "SK-VIS-00109",
+  "date": "2026-08-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00109",
+  "patient": "SK-P-0056",
+  "visit": "SK-VIS-00110",
+  "date": "2026-06-21",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00110",
+  "patient": "SK-P-0056",
+  "visit": "SK-VIS-00111",
+  "date": "2026-08-13",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00111",
+  "patient": "SK-P-0056",
+  "visit": "SK-VIS-00112",
+  "date": "2026-05-27",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00112",
+  "patient": "SK-P-0057",
+  "visit": "SK-VIS-00113",
+  "date": "2026-06-25",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00113",
+  "patient": "SK-P-0057",
+  "visit": "SK-VIS-00114",
+  "date": "2026-09-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00114",
+  "patient": "SK-P-0057",
+  "visit": "SK-VIS-00115",
+  "date": "2026-06-12",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00115",
+  "patient": "SK-P-0058",
+  "visit": "SK-VIS-00116",
+  "date": "2026-04-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00116",
+  "patient": "SK-P-0058",
+  "visit": "SK-VIS-00117",
+  "date": "2026-10-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00117",
+  "patient": "SK-P-0059",
+  "visit": "SK-VIS-00118",
+  "date": "2026-10-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00118",
+  "patient": "SK-P-0059",
+  "visit": "SK-VIS-00119",
+  "date": "2026-08-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00119",
+  "patient": "SK-P-0060",
+  "visit": "SK-VIS-00120",
+  "date": "2026-05-07",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00120",
+  "patient": "SK-P-0060",
+  "visit": "SK-VIS-00121",
+  "date": "2026-10-10",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00121",
+  "patient": "SK-P-0061",
+  "visit": "SK-VIS-00122",
+  "date": "2026-07-25",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00122",
+  "patient": "SK-P-0061",
+  "visit": "SK-VIS-00123",
+  "date": "2026-05-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00123",
+  "patient": "SK-P-0061",
+  "visit": "SK-VIS-00124",
+  "date": "2026-09-25",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00124",
+  "patient": "SK-P-0062",
+  "visit": "SK-VIS-00125",
+  "date": "2026-06-21",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00125",
+  "patient": "SK-P-0062",
+  "visit": "SK-VIS-00126",
+  "date": "2026-04-28",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00126",
+  "patient": "SK-P-0062",
+  "visit": "SK-VIS-00127",
+  "date": "2026-07-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00127",
+  "patient": "SK-P-0063",
+  "visit": "SK-VIS-00128",
+  "date": "2026-10-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00128",
+  "patient": "SK-P-0063",
+  "visit": "SK-VIS-00129",
+  "date": "2026-06-03",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00129",
+  "patient": "SK-P-0064",
+  "visit": "SK-VIS-00130",
+  "date": "2026-08-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00130",
+  "patient": "SK-P-0065",
+  "visit": "SK-VIS-00131",
+  "date": "2026-06-13",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00131",
+  "patient": "SK-P-0066",
+  "visit": "SK-VIS-00132",
+  "date": "2026-08-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00132",
+  "patient": "SK-P-0067",
+  "visit": "SK-VIS-00133",
+  "date": "2026-07-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00133",
+  "patient": "SK-P-0068",
+  "visit": "SK-VIS-00134",
+  "date": "2026-05-31",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00134",
+  "patient": "SK-P-0068",
+  "visit": "SK-VIS-00135",
+  "date": "2026-08-22",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00135",
+  "patient": "SK-P-0069",
+  "visit": "SK-VIS-00136",
+  "date": "2026-08-21",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00136",
+  "patient": "SK-P-0069",
+  "visit": "SK-VIS-00137",
+  "date": "2026-10-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00137",
+  "patient": "SK-P-0069",
+  "visit": "SK-VIS-00138",
+  "date": "2026-10-16",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00138",
+  "patient": "SK-P-0070",
+  "visit": "SK-VIS-00139",
+  "date": "2026-06-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00139",
+  "patient": "SK-P-0070",
+  "visit": "SK-VIS-00140",
+  "date": "2026-06-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00140",
+  "patient": "SK-P-0070",
+  "visit": "SK-VIS-00141",
+  "date": "2026-10-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00141",
+  "patient": "SK-P-0071",
+  "visit": "SK-VIS-00142",
+  "date": "2026-10-06",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00142",
+  "patient": "SK-P-0071",
+  "visit": "SK-VIS-00143",
+  "date": "2026-05-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00143",
+  "patient": "SK-P-0072",
+  "visit": "SK-VIS-00144",
+  "date": "2026-09-16",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00144",
+  "patient": "SK-P-0073",
+  "visit": "SK-VIS-00145",
+  "date": "2026-06-15",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00145",
+  "patient": "SK-P-0073",
+  "visit": "SK-VIS-00146",
+  "date": "2026-07-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00146",
+  "patient": "SK-P-0074",
+  "visit": "SK-VIS-00147",
+  "date": "2026-06-16",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00147",
+  "patient": "SK-P-0074",
+  "visit": "SK-VIS-00148",
+  "date": "2026-07-11",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00148",
+  "patient": "SK-P-0074",
+  "visit": "SK-VIS-00149",
+  "date": "2026-04-28",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00149",
+  "patient": "SK-P-0075",
+  "visit": "SK-VIS-00150",
+  "date": "2026-07-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00150",
+  "patient": "SK-P-0076",
+  "visit": "SK-VIS-00151",
+  "date": "2026-08-05",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00151",
+  "patient": "SK-P-0077",
+  "visit": "SK-VIS-00152",
+  "date": "2026-09-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00152",
+  "patient": "SK-P-0077",
+  "visit": "SK-VIS-00153",
+  "date": "2026-05-11",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00153",
+  "patient": "SK-P-0077",
+  "visit": "SK-VIS-00154",
+  "date": "2026-05-15",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00154",
+  "patient": "SK-P-0078",
+  "visit": "SK-VIS-00155",
+  "date": "2026-04-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00155",
+  "patient": "SK-P-0079",
+  "visit": "SK-VIS-00156",
+  "date": "2026-06-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00156",
+  "patient": "SK-P-0079",
+  "visit": "SK-VIS-00157",
+  "date": "2026-10-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00157",
+  "patient": "SK-P-0080",
+  "visit": "SK-VIS-00158",
+  "date": "2026-06-29",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00158",
+  "patient": "SK-P-0081",
+  "visit": "SK-VIS-00159",
+  "date": "2026-10-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00159",
+  "patient": "SK-P-0081",
+  "visit": "SK-VIS-00160",
+  "date": "2026-08-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00160",
+  "patient": "SK-P-0082",
+  "visit": "SK-VIS-00161",
+  "date": "2026-08-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00161",
+  "patient": "SK-P-0082",
+  "visit": "SK-VIS-00162",
+  "date": "2026-04-28",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00162",
+  "patient": "SK-P-0083",
+  "visit": "SK-VIS-00163",
+  "date": "2026-08-21",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00163",
+  "patient": "SK-P-0083",
+  "visit": "SK-VIS-00164",
+  "date": "2026-09-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00164",
+  "patient": "SK-P-0083",
+  "visit": "SK-VIS-00165",
+  "date": "2026-07-24",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00165",
+  "patient": "SK-P-0084",
+  "visit": "SK-VIS-00166",
+  "date": "2026-09-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00166",
+  "patient": "SK-P-0085",
+  "visit": "SK-VIS-00167",
+  "date": "2026-10-01",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00167",
+  "patient": "SK-P-0085",
+  "visit": "SK-VIS-00168",
+  "date": "2026-07-12",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00168",
+  "patient": "SK-P-0085",
+  "visit": "SK-VIS-00169",
+  "date": "2026-06-21",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00169",
+  "patient": "SK-P-0086",
+  "visit": "SK-VIS-00170",
+  "date": "2026-07-11",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00170",
+  "patient": "SK-P-0086",
+  "visit": "SK-VIS-00171",
+  "date": "2026-08-01",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00171",
+  "patient": "SK-P-0087",
+  "visit": "SK-VIS-00172",
+  "date": "2026-07-02",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00172",
+  "patient": "SK-P-0087",
+  "visit": "SK-VIS-00173",
+  "date": "2026-06-14",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00173",
+  "patient": "SK-P-0088",
+  "visit": "SK-VIS-00174",
+  "date": "2026-09-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00174",
+  "patient": "SK-P-0088",
+  "visit": "SK-VIS-00175",
+  "date": "2026-06-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00175",
+  "patient": "SK-P-0089",
+  "visit": "SK-VIS-00176",
+  "date": "2026-07-15",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00176",
+  "patient": "SK-P-0089",
+  "visit": "SK-VIS-00177",
+  "date": "2026-07-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00177",
+  "patient": "SK-P-0089",
+  "visit": "SK-VIS-00178",
+  "date": "2026-09-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00178",
+  "patient": "SK-P-0090",
+  "visit": "SK-VIS-00179",
+  "date": "2026-09-22",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00179",
+  "patient": "SK-P-0090",
+  "visit": "SK-VIS-00180",
+  "date": "2026-06-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00180",
+  "patient": "SK-P-0090",
+  "visit": "SK-VIS-00181",
+  "date": "2026-09-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00181",
+  "patient": "SK-P-0091",
+  "visit": "SK-VIS-00182",
+  "date": "2026-09-28",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00182",
+  "patient": "SK-P-0091",
+  "visit": "SK-VIS-00183",
+  "date": "2026-08-30",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00183",
+  "patient": "SK-P-0091",
+  "visit": "SK-VIS-00184",
+  "date": "2026-06-23",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00184",
+  "patient": "SK-P-0092",
+  "visit": "SK-VIS-00185",
+  "date": "2026-05-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00185",
+  "patient": "SK-P-0093",
+  "visit": "SK-VIS-00186",
+  "date": "2026-05-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00186",
+  "patient": "SK-P-0094",
+  "visit": "SK-VIS-00187",
+  "date": "2026-08-24",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00187",
+  "patient": "SK-P-0094",
+  "visit": "SK-VIS-00188",
+  "date": "2026-09-16",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00188",
+  "patient": "SK-P-0094",
+  "visit": "SK-VIS-00189",
+  "date": "2026-09-12",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00189",
+  "patient": "SK-P-0095",
+  "visit": "SK-VIS-00190",
+  "date": "2026-10-19",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00190",
+  "patient": "SK-P-0095",
+  "visit": "SK-VIS-00191",
+  "date": "2026-05-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00191",
+  "patient": "SK-P-0095",
+  "visit": "SK-VIS-00192",
+  "date": "2026-09-23",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00192",
+  "patient": "SK-P-0096",
+  "visit": "SK-VIS-00193",
+  "date": "2026-06-02",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00193",
+  "patient": "SK-P-0096",
+  "visit": "SK-VIS-00194",
+  "date": "2026-04-27",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00194",
+  "patient": "SK-P-0097",
+  "visit": "SK-VIS-00195",
+  "date": "2026-05-31",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00195",
+  "patient": "SK-P-0097",
+  "visit": "SK-VIS-00196",
+  "date": "2026-08-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00196",
+  "patient": "SK-P-0097",
+  "visit": "SK-VIS-00197",
+  "date": "2026-06-16",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00197",
+  "patient": "SK-P-0098",
+  "visit": "SK-VIS-00198",
+  "date": "2026-06-29",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00198",
+  "patient": "SK-P-0098",
+  "visit": "SK-VIS-00199",
+  "date": "2026-05-02",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00199",
+  "patient": "SK-P-0099",
+  "visit": "SK-VIS-00200",
+  "date": "2026-10-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00200",
+  "patient": "SK-P-0100",
+  "visit": "SK-VIS-00201",
+  "date": "2026-06-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00201",
+  "patient": "SK-P-0100",
+  "visit": "SK-VIS-00202",
+  "date": "2026-05-17",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00202",
+  "patient": "SK-P-0101",
+  "visit": "SK-VIS-00203",
+  "date": "2026-05-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00203",
+  "patient": "SK-P-0101",
+  "visit": "SK-VIS-00204",
+  "date": "2026-06-09",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00204",
+  "patient": "SK-P-0102",
+  "visit": "SK-VIS-00205",
+  "date": "2026-05-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00205",
+  "patient": "SK-P-0102",
+  "visit": "SK-VIS-00206",
+  "date": "2026-07-23",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00206",
+  "patient": "SK-P-0103",
+  "visit": "SK-VIS-00207",
+  "date": "2026-08-10",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00207",
+  "patient": "SK-P-0103",
+  "visit": "SK-VIS-00208",
+  "date": "2026-06-22",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00208",
+  "patient": "SK-P-0103",
+  "visit": "SK-VIS-00209",
+  "date": "2026-10-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00209",
+  "patient": "SK-P-0104",
+  "visit": "SK-VIS-00210",
+  "date": "2026-07-08",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00210",
+  "patient": "SK-P-0104",
+  "visit": "SK-VIS-00211",
+  "date": "2026-07-24",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00211",
+  "patient": "SK-P-0105",
+  "visit": "SK-VIS-00212",
+  "date": "2026-07-16",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00212",
+  "patient": "SK-P-0105",
+  "visit": "SK-VIS-00213",
+  "date": "2026-05-10",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00213",
+  "patient": "SK-P-0106",
+  "visit": "SK-VIS-00214",
+  "date": "2026-10-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00214",
+  "patient": "SK-P-0107",
+  "visit": "SK-VIS-00215",
+  "date": "2026-09-23",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00215",
+  "patient": "SK-P-0108",
+  "visit": "SK-VIS-00216",
+  "date": "2026-10-10",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00216",
+  "patient": "SK-P-0108",
+  "visit": "SK-VIS-00217",
+  "date": "2026-09-22",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00217",
+  "patient": "SK-P-0108",
+  "visit": "SK-VIS-00218",
+  "date": "2026-07-14",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00218",
+  "patient": "SK-P-0109",
+  "visit": "SK-VIS-00219",
+  "date": "2026-08-27",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00219",
+  "patient": "SK-P-0109",
+  "visit": "SK-VIS-00220",
+  "date": "2026-09-27",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00220",
+  "patient": "SK-P-0110",
+  "visit": "SK-VIS-00221",
+  "date": "2026-09-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00221",
+  "patient": "SK-P-0110",
+  "visit": "SK-VIS-00222",
+  "date": "2026-08-11",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00222",
+  "patient": "SK-P-0111",
+  "visit": "SK-VIS-00223",
+  "date": "2026-07-31",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00223",
+  "patient": "SK-P-0111",
+  "visit": "SK-VIS-00224",
+  "date": "2026-05-28",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00224",
+  "patient": "SK-P-0111",
+  "visit": "SK-VIS-00225",
+  "date": "2026-04-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00225",
+  "patient": "SK-P-0112",
+  "visit": "SK-VIS-00226",
+  "date": "2026-05-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00226",
+  "patient": "SK-P-0112",
+  "visit": "SK-VIS-00227",
+  "date": "2026-05-05",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00227",
+  "patient": "SK-P-0113",
+  "visit": "SK-VIS-00228",
+  "date": "2026-07-21",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00228",
+  "patient": "SK-P-0113",
+  "visit": "SK-VIS-00229",
+  "date": "2026-09-22",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00229",
+  "patient": "SK-P-0114",
+  "visit": "SK-VIS-00230",
+  "date": "2026-09-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00230",
+  "patient": "SK-P-0114",
+  "visit": "SK-VIS-00231",
+  "date": "2026-05-04",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00231",
+  "patient": "SK-P-0114",
+  "visit": "SK-VIS-00232",
+  "date": "2026-04-25",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00232",
+  "patient": "SK-P-0115",
+  "visit": "SK-VIS-00233",
+  "date": "2026-05-26",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00233",
+  "patient": "SK-P-0115",
+  "visit": "SK-VIS-00234",
+  "date": "2026-07-03",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00234",
+  "patient": "SK-P-0115",
+  "visit": "SK-VIS-00235",
+  "date": "2026-10-05",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00235",
+  "patient": "SK-P-0116",
+  "visit": "SK-VIS-00236",
+  "date": "2026-10-06",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00236",
+  "patient": "SK-P-0116",
+  "visit": "SK-VIS-00237",
+  "date": "2026-05-10",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00237",
+  "patient": "SK-P-0116",
+  "visit": "SK-VIS-00238",
+  "date": "2026-05-18",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00238",
+  "patient": "SK-P-0117",
+  "visit": "SK-VIS-00239",
+  "date": "2026-07-20",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00239",
+  "patient": "SK-P-0117",
+  "visit": "SK-VIS-00240",
+  "date": "2026-10-02",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00240",
+  "patient": "SK-P-0117",
+  "visit": "SK-VIS-00241",
+  "date": "2026-08-24",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00241",
+  "patient": "SK-P-0118",
+  "visit": "SK-VIS-00242",
+  "date": "2026-08-05",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00242",
+  "patient": "SK-P-0119",
+  "visit": "SK-VIS-00243",
+  "date": "2026-08-16",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00243",
+  "patient": "SK-P-0120",
+  "visit": "SK-VIS-00244",
+  "date": "2026-10-12",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00244",
+  "patient": "SK-P-0120",
+  "visit": "SK-VIS-00245",
+  "date": "2026-06-02",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ },
+ {
+  "id": "SK-INV-00245",
+  "patient": "SK-P-0120",
+  "visit": "SK-VIS-00246",
+  "date": "2026-05-07",
+  "lines": [
+   {
+    "fee_id": "FS-C04",
+    "qty": 1,
+    "sen": 6000,
+    "label": "Follow-up consultation, associate"
+   }
+  ],
+  "adjustments": [],
+  "fee_version": "FS 1.0"
+ }
+]

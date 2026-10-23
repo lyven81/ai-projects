@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff Desk</title>
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc;--ok:#1f7a4d;--okbg:#e3f3ea;--no:#a23b2a;--nobg:#f8e4e0;--wait:#8a5a00;--waitbg:#fbefd6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--ok:#7fd1a6;--okbg:#17302a;--no:#f0a395;--nobg:#3a201c;--wait:#f0c674;--waitbg:#352a14}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21;--ok:#7fd1a6;--okbg:#17302a;--no:#f0a395;--nobg:#3a201c;--wait:#f0c674;--waitbg:#352a14}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:18px 16px 50px}
+.crumb{font-size:13px;color:var(--muted)}.crumb a{color:var(--accent);text-decoration:none}
+h1{font-size:24px;color:var(--navy);margin:6px 0 4px}
+h2{font-size:15px;color:var(--navy);margin:0 0 8px}
+.muted{color:var(--muted)}.small{font-size:13px}
+.links{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin:8px 0}.links a{color:var(--accent)}
+.note{background:var(--card);border-left:3px solid var(--accent);padding:8px 14px;margin:10px 0;font-size:14px}
+.warn{background:var(--waitbg);color:var(--wait);border:1px dashed var(--wait);border-radius:8px;padding:8px 12px;font-size:13.5px;margin:8px 0}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:10px 0}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;background:var(--card);color:var(--ink);border:0;padding:6px 14px;cursor:pointer}.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:12px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+select,input[type=password],textarea{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
+select{max-width:100%}
+#key{flex:1;min-width:200px}
+.btn{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer}.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:var(--card);color:var(--accent);border:1px solid var(--accent)}
+.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.lbl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.chat{display:flex;flex-direction:column;gap:10px;min-height:320px;max-height:640px;overflow-y:auto}
+.msg{max-width:88%;padding:8px 12px;border-radius:10px;font-size:14.5px;white-space:pre-wrap;word-wrap:break-word}
+.me{align-self:flex-end;background:var(--accent);color:#fff}
+.ai{align-self:flex-start;background:var(--box);border:1px solid var(--line)}
+.by{display:block;font-size:11.5px;opacity:.8;margin-bottom:2px}
+.basis{margin-top:6px;font-size:12.5px;border-top:1px dashed var(--line);padding-top:5px;color:var(--muted)}.basis b{color:var(--ink)}
+.sys{align-self:center;font-size:12.5px;color:var(--muted);text-align:center;max-width:92%}
+.composer{display:flex;gap:8px;margin-top:10px}.composer textarea{flex:1;min-height:44px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font:inherit;font-size:12.5px;background:var(--box);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:3px 10px;cursor:pointer;text-align:left}
+.item{border:1px solid var(--line);border-radius:8px;padding:7px 10px;margin-bottom:8px;background:var(--box);font-size:13.5px}
+.item .r{display:flex;justify-content:space-between;gap:8px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;border-radius:4px;padding:0 6px;white-space:nowrap}
+.t-ok,.t-pass,.t-allow{background:var(--okbg);color:var(--ok)}.t-refused,.t-error,.t-fail,.t-block{background:var(--nobg);color:var(--no)}.t-pending,.t-wait{background:var(--waitbg);color:var(--wait)}.t-plain{background:var(--box);color:var(--muted);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+.hk{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px;background:var(--box);margin-bottom:10px}
+.hk .top{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:4px}.hk .tool{font-weight:700;color:var(--navy)}
+.hk pre{white-space:pre-wrap;word-break:break-word;font-size:12px;margin:4px 0;max-height:240px;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:6px}
+.hk ul{margin:4px 0;padding-left:18px}.hk li.f{color:var(--no)}
+.hk .st{margin-top:6px}.hk .st>b{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.person{font-weight:600;color:var(--navy)}
+.empty{color:var(--muted);font-size:13px}
+.fsbtn{display:inline-flex;align-items:center;gap:6px;font-weight:600;margin-left:auto}
+.fsbtn .fs-out,.fsbtn[aria-pressed="true"] .fs-in{display:none}
+.fsbtn[aria-pressed="true"] .fs-out{display:inline}
+html.fs,html.fs body{height:100%;overflow:hidden}
+html.fs .wrap{max-width:none;height:100vh;display:flex;flex-direction:column;padding:10px 16px}
+html.fs .crumb,html.fs h1,html.fs .sub,html.fs .links,html.fs .note,html.fs footer,html.fs #run-summary,html.fs #replay-box h2,html.fs #live-box h2,html.fs #live-box .warn{display:none}
+html.fs .bar{margin:0 0 8px;flex:none}
+html.fs .card{margin-top:0;margin-bottom:8px;padding:8px 12px;flex:none}
+html.fs #desk{flex:1;min-height:0}
+html.fs #desk>.card{height:100%;display:flex;flex-direction:column;min-height:0;margin:0}
+html.fs .chat{flex:1;max-height:none;min-height:0}
+html.fs #desk>div:last-child{height:100%;overflow-y:auto;min-height:0}
+@media (max-width:860px){html.fs #desk{overflow-y:auto}html.fs #desk>.card{height:auto}html.fs .chat{min-height:55vh}html.fs #desk>div:last-child{height:auto;overflow:visible}}
+footer{margin-top:30px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body><div class="wrap">
+<div class="crumb"><a href="../../index.html">AI Projects</a> / <a href="../../sang-kancil-specialist-clinic.html">Sang Kancil Specialist Clinic</a></div>
+<h1>Staff Desk</h1>
+<p class="muted sub">The staff assistant of Sang Kancil Specialist Clinic, a fictional paediatric clinic in Kota Damansara, Selangor. Demo clock: <span id="clock"></span>.</p>
+<div class="links small">Policies:
+  <a href="resources/Clinic%20Policy.html" target="_blank" rel="noopener">Clinic Policy</a>
+  <a href="resources/Operations%20Policy.html" target="_blank" rel="noopener">Operations Policy</a>
+  <a href="resources/Clinical%20Policy.html" target="_blank" rel="noopener">Clinical Policy</a>
+  <a href="resources/Billing%20Policy.html" target="_blank" rel="noopener">Billing Policy</a>
+  <a href="resources/Fee%20Schedule.html" target="_blank" rel="noopener">Fee Schedule</a>
+  <a href="resources/Clinic%20Formulary.html" target="_blank" rel="noopener">Clinic Formulary</a>
+  <a href="resources/Immunisation%20Schedule.html" target="_blank" rel="noopener">Immunisation Schedule</a>
+  <a href="resources/Clinic%20Hours%20and%20Rota.html" target="_blank" rel="noopener">Clinic Hours and Rota</a>
+  <a href="benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></div>
+<div class="note"><b>How it works:</b> the assistant only chooses a tool. The PreToolUse hook checks who is signed in and what they may open before the tool runs; the back end removes every field the role may not see; the PostToolUse hook works out ages, vaccines due and amounts outstanding and adds the Basis line. Whatever a person decides is named to that person.</div>
+
+<div class="bar">
+  <div class="seg" role="group" aria-label="Mode"><button type="button" id="m-replay" aria-pressed="true">Replay</button><button type="button" id="m-live" aria-pressed="false">Live</button></div>
+  <span class="small muted" id="mode-note"></span>
+  <button type="button" class="btn ghost fsbtn" id="fs-btn" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="fs-in" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="fs-out" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span>Full screen</span></button>
+</div>
+
+<div class="card" id="replay-box">
+  <h2>Recorded runs</h2>
+  <div class="row"><label for="run-select" class="small muted">Question</label><select id="run-select"></select><button type="button" class="btn ghost" id="replay-again">Play again</button></div>
+  <div class="small" id="run-score" style="margin-top:6px"></div>
+  <div class="small muted" id="run-summary" style="margin-top:4px"></div>
+</div>
+
+<div class="card" id="live-box" hidden>
+  <h2>Live chat with your own key</h2>
+  <div class="row"><label for="key" class="small"><b>Anthropic API key</b></label><input type="password" id="key" placeholder="sk-ant-..." autocomplete="off" spellcheck="false"><button type="button" class="btn ghost" id="reset">Reset</button></div>
+  <div class="warn"><b>Calls are billed to your key.</b> Use a limited key that you can revoke. The key stays in this tab's memory and goes only to api.anthropic.com. A public service would call the model from its own server.</div>
+  <div class="small muted">Model <span id="model"></span>. Each sign-in starts from a fresh copy of the demo data; Reset starts it again. Hooks, checks and data run in your browser, exactly as in the benchmark.</div>
+</div>
+
+<div class="card">
+  <div class="row"><span class="lbl" style="margin:0">Sign in</span><select id="staff"></select><button type="button" class="btn" id="signin-btn">Sign in</button>
+  <span class="small muted" id="signin-note">Signed in as the staff member chosen here. Nothing typed in the chat changes who is signed in.</span></div>
+</div>
+
+<div class="grid" id="desk">
+  <div class="card">
+    <p class="lbl">Chat with the assistant</p>
+    <div class="chat" id="chat" aria-live="polite"></div>
+    <div id="live-chat" hidden>
+      <div class="composer"><textarea id="input" placeholder="Ask about a patient, a booking or your actions"></textarea><button type="button" class="btn" id="send">Send</button></div>
+      <div class="small muted" style="margin-top:8px">Benchmark questions for this sign-in:</div>
+      <div class="chips" id="examples"></div>
+    </div>
+  </div>
+  <div>
+    <div class="card" style="margin-top:12px">
+      <p class="lbl">My actions <span id="count" class="tag t-wait"></span></p>
+      <div class="small muted" id="actions-note"></div>
+      <div id="actions"></div>
+    </div>
+    <div class="card">
+      <p class="lbl">What this role can open</p>
+      <div class="tw"><table id="views"></table></div>
+    </div>
+    <div class="card">
+      <p class="lbl">Hook view, one card per tool call</p>
+      <div id="hooks"></div>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Lee Yih Ven · Staff Desk</footer></div>
+
+<script>/*__FORMAT_JS__*/</script>
+<script>/*__RULES_JS__*/</script>
+<script>/*__BACKEND_JS__*/</script>
+<script>/*__PRE_JS__*/</script>
+<script>/*__POST_JS__*/</script>
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPT_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+"use strict";
+const DATA = /*__DATA_JSON__*/null;
+const TABLES = /*__TABLES_JSON__*/null;
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CASES = /*__CASES_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+const MODEL = "claude-haiku-5-5";
+const NOW = DATA.meta.now;
+const T = window.SKTools;
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s === null || s === undefined ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const STAFF = TABLES.staff;
+const staffById = Object.fromEntries(STAFF.map((s) => [s.id, s]));
+const pretty = (o) => esc(JSON.stringify(o, null, 2));
+
+// What each role can open (Clinic Policy CP-04 to CP-10, Billing Policy BP-01), as the hook and the back end apply it.
+const Y = '<span class="tag t-ok">Yes</span>', N = '<span class="tag t-refused">No</span>';
+const OWN = '<span class="tag t-wait">Own patients</span>';
+const VIEWS = {
+  "PD-01-01": [["Registration (name, age, doctor, guardian name)", Y], ["Guardian contact details", "Own infants; as lead, an open consult"], ["Clinical record and prescriptions", "Own infants; as lead, an open consult or approved cover"],
+    ["Appointments and vaccinations", "Own infants; as lead, an open consult or approved cover"], ["Confidential adolescent notes", "As lead, an open consult or cover and a recorded reason"],
+    ["Billing and payments", Y + " (as lead)"], ["Fee Schedule", Y + " (as lead)"], ["Patient lists", "As lead every patient; vaccine-overdue list own infants only"]],
+  "PD-02-01": [["Registration (name, age, doctor, guardian name)", Y], ["Guardian contact details", OWN + " or approved cover"], ["Clinical record and prescriptions", OWN + " or approved cover"],
+    ["Appointments and vaccinations", OWN], ["Confidential adolescent notes", N], ["Billing and payments", N], ["Fee Schedule", N], ["Patient lists", OWN]],
+  "PD-02-02": [["Registration (name, age, doctor, guardian name)", Y], ["Guardian contact details", OWN + " or approved cover"], ["Clinical record and prescriptions", OWN + " or approved cover"],
+    ["Appointments and vaccinations", OWN], ["Confidential adolescent notes", Y + " own adolescent patients"], ["Billing and payments", N], ["Fee Schedule", N], ["Patient lists", OWN]],
+  "FD-02-01": [["Registration (name, age, doctor, guardian name)", Y], ["Guardian contact details", Y], ["Clinical record and prescriptions", Y + " (dispenses exactly as written)"],
+    ["Appointments and vaccinations", Y], ["Confidential adolescent notes", N], ["Billing and payments", Y + " (records payments received)"], ["Fee Schedule", Y], ["Patient lists", N + " (works from her recall items)"]],
+};
+
+const S = { mode: "replay", staff: null, desk: null, messages: [], key: "", busy: false, calls: 0, token: 0 };
+
+/** A desk over a fresh copy of the demo data, with a case's earlier workflow steps made by their owners (as the benchmark does). */
+function deskFor(c) {
+  const store = T.memoryStore(DATA);
+  if (c && c.setup && c.setup.open_visit) {
+    const v = store.get("visits");
+    v.push({ id: "SK-VIS-90001", patient: c.setup.open_visit, doctor: store.get("patients").find((p) => p.id === c.setup.open_visit).doctor, date: DATA.meta.today, type: "sick_visit", diagnosis: "Fever, viral", indication: null, status: "open" });
+    store.set("visits", v);
+  }
+  const d = T.createDesk(store, TABLES, { now: NOW });
+  for (const s of (c && c.setup && c.setup.calls) || []) d.call(s.tool, s.input, s.staff);
+  store.set("call_log", []);
+  return d;
+}
+const resourcesFor = (id) => RESOURCES.filter((r) => !r.restricted || r.restricted.some((x) => x.split(":")[0] === id));
+
+// ---------------------------------------------------------------- panels
+function renderViews(id) {
+  $("views").innerHTML = "<tr><th>View</th><th>Access</th></tr>" + (VIEWS[id] || []).map((v) => `<tr><td>${esc(v[0])}</td><td>${v[1]}</td></tr>`).join("");
+}
+function renderActions(desk, id, note) {
+  $("actions-note").textContent = note || "";
+  if (!desk || !id) { $("actions").innerHTML = '<div class="empty">Sign in to see your actions.</div>'; $("count").textContent = ""; return; }
+  const r = desk.backend.myActions(staffById[id]);
+  const items = r.items.map((i) => ({ title: i.kind === "request" ? `${i.type.replace(/_/g, " ")} to decide` : i.text || i.type.replace(/_/g, " "),
+    sub: [i.patient_name, i.detail, i.dates ? `${i.dates.from}${i.dates.to !== i.dates.from ? " to " + i.dates.to : ""}` : null, i.id].filter(Boolean).join(" · "), tag: i.kind === "flag" ? "Due" : "Open" }));
+  if (r.case_file) for (const c of r.case_file) items.push({ title: `${c.type} (read only)`, sub: [c.patient_name, `${staffById[c.raised_by] ? staffById[c.raised_by].name : c.raised_by} to ${staffById[c.owner] ? staffById[c.owner].name : c.owner}`, c.status, c.id].filter(Boolean).join(" · "), tag: "Case file" });
+  const extra = r.case_file ? `<div class="small muted">Bookings to confirm: ${r.pending_confirmations} · vaccine recalls: ${r.vaccine_recalls.length} · payment reminders: ${r.payment_reminders}</div>` : "";
+  $("count").textContent = `${items.length} open`;
+  $("actions").innerHTML = (items.length ? items.map((a) => `<div class="item"><div class="r"><b>${esc(a.title)}</b><span class="tag ${a.tag === "Case file" ? "t-plain" : "t-wait"}">${esc(a.tag)}</span></div><div class="small muted">${esc(a.sub)}</div></div>`).join("") : '<div class="empty">Nothing waiting.</div>') + extra;
+}
+
+// ---------------------------------------------------------------- chat and hook view
+function chatScroll() { const c = $("chat"); c.scrollTop = c.scrollHeight; }
+function addSys(text) { const d = document.createElement("div"); d.className = "sys"; d.textContent = text; $("chat").appendChild(d); chatScroll(); }
+function addMsg(who, text) {
+  const d = document.createElement("div");
+  d.className = "msg " + (who === "me" ? "me" : "ai");
+  const s = staffById[S.staff];
+  let body = String(text || ""), basis = "";
+  const m = body.match(/\n*\s*Basis:\s*([\s\S]*)$/);
+  if (who !== "me" && m) { basis = m[1].trim(); body = body.slice(0, m.index).trim(); }
+  d.innerHTML = `<span class="by">${who === "me" ? esc(s ? s.name : "Staff") : "Assistant"}</span>${esc(body)}${basis ? `<div class="basis"><b>Basis:</b> ${esc(basis)}</div>` : ""}`;
+  $("chat").appendChild(d); chatScroll();
+}
+function person(ns) { return ns && ns.staff_id ? `<span class="person">${esc(ns.person)}, ${esc(ns.job_title)} (${esc(ns.staff_id)})</span>` : ""; }
+function addHookCard(name, input, hook, result) {
+  const empty = $("hooks").querySelector(".empty"); if (empty) empty.remove();
+  S.calls++;
+  const r = (hook && hook.result) || result;
+  const card = document.createElement("article");
+  card.className = "hk";
+  let h = `<div class="top"><span class="tag t-plain">#${S.calls}</span><span class="tool">${esc(name)}</span>`;
+  if (hook) h += `<span class="tag t-${hook.pre.verdict}">PreToolUse: ${hook.pre.verdict}</span>`;
+  h += `<span class="tag t-${esc(r.status)}">${esc(r.status)}</span>${hook && hook.capacity ? `<span class="tag t-plain">capacity: ${esc(hook.capacity)}</span>` : ""}</div>`;
+  h += `<div class="st"><b>Asked</b><pre>${pretty(input)}</pre></div>`;
+  if (hook) {
+    h += `<div class="st"><b>PreToolUse checks</b><ul>${(hook.pre.checks || []).map((c) => `<li class="${c.pass ? "" : "f"}">${c.pass ? "pass" : "FAIL"}: ${esc(c.check)} <span class="muted">(${esc(c.clause)})</span></li>`).join("")}</ul></div>`;
+    if (hook.tool_ran) h += `<div class="st"><b>PostToolUse</b><ul>${(hook.post || []).map((l) => `<li>${esc(l)}</li>`).join("") || "<li>No changes.</li>"}</ul></div>`;
+    else h += `<div class="st muted">The tool did not run: PreToolUse blocked it.</div>`;
+  }
+  const e = r.error;
+  h += `<div class="st"><b>Result the assistant saw</b><div>${e ? `<code>${esc(e.code)}</code> <code>${esc(e.clause)}</code> ${esc(e.message)}` : ""}</div>${r.next_step ? `<div>Next step: ${person(r.next_step)} ${r.next_step.request_id ? `request <code>${esc(r.next_step.request_id)}</code>` : ""} ${esc(r.next_step.action || "")}</div>` : ""}`;
+  if (r.data) h += `<details><summary>data</summary><pre>${pretty(r.data)}</pre></details>`;
+  h += `</div>`;
+  card.innerHTML = h;
+  $("hooks").appendChild(card);
+}
+function clearViews() { $("chat").innerHTML = ""; $("hooks").innerHTML = '<div class="empty">No tool calls yet.</div>'; S.calls = 0; }
+
+// ---------------------------------------------------------------- replay
+const recorded = Object.fromEntries((RESULTS.results || []).map((r) => [r.id, r]));
+const QUESTIONS = [...new Set(RESULTS.results.map((r) => r.q))].map((q) => {
+  const cs = CASES.filter((c) => c.q === q);
+  return { q, message: cs[0].message, category: cs[0].category, cases: cs.filter((c) => recorded[c.id]) };
+});
+function fillRunSelect() {
+  $("run-select").innerHTML = QUESTIONS.map((x) => {
+    const pass = x.cases.filter((c) => recorded[c.id].score.pass).length;
+    return `<option value="${esc(x.q)}">${esc(x.q)} ${esc(x.category)}: ${esc(x.message)} · ${pass} of ${x.cases.length} pass</option>`;
+  }).join("");
+  const sm = RESULTS.summary || {};
+  $("run-summary").textContent = `Recorded ${RESULTS.file === "sample.json" ? "sample" : "run"} on ${sm.model}, ${String(sm.ranAt || "").slice(0, 10)}: ${sm.total.pass} of ${sm.total.total} runs passed, hard-limit breaches ${sm.hard_limit_breaches}. Each question was asked by each of the four staff: pick the question, then the staff member.`;
+}
+const wait = (ms) => new Promise((res) => setTimeout(res, ms));
+async function playQuestion() {
+  const x = QUESTIONS.find((q) => q.q === $("run-select").value);
+  const c = x.cases.find((k) => k.staff === $("staff").value) || x.cases[0];
+  $("staff").value = c.staff;
+  const r = recorded[c.id];
+  const token = ++S.token;
+  S.staff = c.staff;
+  clearViews();
+  renderViews(c.staff);
+  renderActions(deskFor(c), c.staff, c.setup && c.setup.calls.length ? "At the start of this run (earlier workflow steps already made by their owners)." : "At the start of this run.");
+  const checks = Object.entries(r.score.checks || {}).map(([k, v]) => `<span class="tag t-${v ? "pass" : "fail"}">${esc(k.replace(/_/g, " "))}</span>`).join(" ");
+  $("run-score").innerHTML = `<b>${esc(r.id)}</b> <span class="tag t-${r.score.pass ? "pass" : "fail"}">${r.score.pass ? "pass" : "fail"}</span> ${checks}`;
+  if (c.setup && c.setup.calls.length) addSys(`Before this run: ${c.setup.calls.map((s) => `${staffById[s.staff].name} made ${s.tool.replace(/_/g, " ")}${s.input.type ? " (" + s.input.type.replace(/_/g, " ") + ")" : ""}`).join("; ")}.`);
+  addMsg("me", r.message);
+  for (const t of r.trace) {
+    await wait(400);
+    if (token !== S.token) return;
+    if (t.type === "tool") addHookCard(t.name, t.input, t.hook, t.hook ? t.hook.result : t.result);
+    else if (t.type === "note") addSys(t.text);
+    else if (t.type === "reply") addMsg("ai", t.text);
+  }
+  if (r.error) addSys(`The run stopped with an error: ${r.error}`);
+}
+
+// ---------------------------------------------------------------- live
+function signIn(id, note) {
+  S.staff = id; S.desk = deskFor(null); S.messages = [];
+  clearViews();
+  addSys(note || `Signed in as ${staffById[id].name}, ${staffById[id].title}. Fresh demo data; ${DATA.meta.now_label}.`);
+  renderViews(id);
+  renderActions(S.desk, id, "Live, from the current demo data.");
+  const mine = CASES.filter((c) => c.staff === id && c.group === "matrix");
+  $("examples").innerHTML = mine.map((c) => `<button type="button" class="chip" data-msg="${esc(c.message)}"><b>${esc(c.q)}</b> ${esc(c.message)}</button>`).join("");
+  $("examples").querySelectorAll(".chip").forEach((b) => (b.onclick = () => { $("input").value = b.dataset.msg; $("input").focus(); }));
+  $("signin-note").textContent = `Signed in: ${id}. Nothing typed in the chat changes who is signed in.`;
+}
+async function send(text) {
+  text = (text || "").trim();
+  if (!text || S.busy) return;
+  if (!S.desk) { addSys("Sign in first."); return; }
+  if (!S.key) { addSys("Paste your Anthropic API key above to chat live."); return; }
+  S.busy = true; $("send").disabled = true;
+  addMsg("me", text); $("input").value = "";
+  S.messages.push({ role: "user", content: text });
+  const s = staffById[S.staff];
+  const system = window.SKPrompt.buildSystem(resourcesFor(s.id), { staff: s.id, name: s.name, title: s.title, today: DATA.meta.now_label });
+  const thinking = document.createElement("div"); thinking.className = "sys"; thinking.textContent = "The assistant is working..."; $("chat").appendChild(thinking); chatScroll();
+  const desk = S.desk, staffId = S.staff;
+  try {
+    const out = await window.SKAgent.runTurn({ apiKey: S.key, model: MODEL, system, tools: desk.toolsFor(staffId), messages: S.messages,
+      callTool: async (name, input) => { const o = desk.call(name, input, staffId); if (S.desk === desk) addHookCard(name, input, o.hook, o.result); return o; } });
+    thinking.remove();
+    if (S.desk !== desk) return;
+    out.trace.filter((t) => t.type === "note").forEach((t) => addSys(t.text));
+    addMsg("ai", out.reply);
+  } catch (e) { thinking.remove(); addSys(`The model call failed: ${e.message}`); S.messages.pop(); }
+  finally { S.busy = false; $("send").disabled = false; if (S.desk === desk) renderActions(desk, staffId, "Live, from the current demo data."); }
+}
+
+// ---------------------------------------------------------------- modes and wiring
+function setMode(m) {
+  S.mode = m; S.token++;
+  $("m-replay").setAttribute("aria-pressed", m === "replay");
+  $("m-live").setAttribute("aria-pressed", m === "live");
+  $("replay-box").hidden = m !== "replay";
+  $("live-box").hidden = m !== "live";
+  $("live-chat").hidden = m !== "live";
+  $("signin-btn").hidden = m === "replay";
+  $("mode-note").textContent = m === "replay" ? "Recorded runs from the benchmark; no key needed." : "Your own key; a fresh copy of the demo data per sign-in.";
+  if (m === "replay") playQuestion();
+  else { S.desk = null; clearViews(); addSys("Choose a staff member and press Sign in."); renderActions(null, null); renderViews($("staff").value); }
+}
+$("clock").textContent = DATA.meta.now_label;
+$("model").textContent = MODEL;
+$("staff").innerHTML = STAFF.map((s) => `<option value="${s.id}">${s.id} · ${esc(s.name)} · ${esc(s.title)}</option>`).join("");
+fillRunSelect();
+$("run-select").onchange = playQuestion;
+$("replay-again").onclick = playQuestion;
+$("staff").onchange = () => { if (S.mode === "replay") playQuestion(); else renderViews($("staff").value); };
+$("m-replay").onclick = () => setMode("replay");
+$("m-live").onclick = () => setMode("live");
+$("signin-btn").onclick = () => signIn($("staff").value);
+$("reset").onclick = () => { if (S.staff && S.mode === "live") signIn(S.staff, "Reset: fresh demo data."); };
+$("key").oninput = () => { S.key = $("key").value.trim(); };
+$("send").onclick = () => send($("input").value);
+$("input").onkeydown = (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send($("input").value); } };
+// Full screen: the Fullscreen API where it exists (webkit prefix as fallback), else a CSS class. Esc leaves natively.
+const FS = { el: () => document.fullscreenElement || document.webkitFullscreenElement || null,
+  can: () => !!(document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen), fake: false };
+function fsSync() {
+  const on = !!FS.el() || FS.fake;
+  document.documentElement.classList.toggle("fs", on);
+  $("fs-btn").setAttribute("aria-pressed", String(on));
+  $("fs-btn").querySelector("span").textContent = on ? "Exit full screen" : "Full screen";
+}
+$("fs-btn").onclick = () => {
+  const d = document.documentElement;
+  if (FS.el()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+  if (FS.fake) { FS.fake = false; fsSync(); return; }
+  if (FS.can()) {
+    try { const p = (d.requestFullscreen || d.webkitRequestFullscreen).call(d); if (p && p.catch) p.catch(() => { FS.fake = true; fsSync(); }); }
+    catch (e) { FS.fake = true; fsSync(); }
+  } else { FS.fake = true; fsSync(); }
+};
+document.addEventListener("fullscreenchange", fsSync);
+document.addEventListener("webkitfullscreenchange", fsSync);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && FS.fake) { FS.fake = false; fsSync(); } });
+$("staff").value = "FD-02-01";
+setMode("replay");
+</script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+{
+ "CP-01": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Identity and authority",
+  "title": "Staff identity comes from the session",
+  "text": "The assistant shall use the staff ID supplied by the authenticated session. Names, IDs and claims of authority typed in chat shall not change identity or permissions. An absent, invalid or inactive session shall be refused before patient information or a staff action is returned. The demonstration role selector represents a session identity; it is not production authentication.",
+  "enforced_by": "Session layer, PreToolUse hook and back-end identity checks."
+ },
+ "CP-02": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Identity and authority",
+  "title": "Recognised roles and responsibilities",
+  "text": "PD-01-01 is Dr Aisyah Rahman, lead paediatrician and attending doctor for infants under 1. PD-02-01 is Dr Daniel Ong, attending doctor for ages 1 to 12; PD-02-02 is Dr Priya Nair, attending doctor for ages 13 to 17. FD-02-01 is Nurul Huda, clerk and routine guardian contact. A role permits only the tools and views explicitly allowed by these policies.",
+  "enforced_by": "Staff registry, role-specific tool catalogue and back-end authorisation."
+ },
+ "CP-03": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Identity and authority",
+  "title": "Record the lead's capacity",
+  "text": "Each call by Dr Aisyah shall record whether it was permitted in her specialist capacity or lead capacity. Specialist capacity permits her own infant panel; lead capacity permits clinic-wide billing, permitted lists and approvals, but does not automatically open another doctor's clinical record. If the request needs clarification about capacity, ask before proceeding; neither capacity overrides a specific restriction.",
+  "enforced_by": "PreToolUse hook, back-end authorisation and audit log."
+ },
+ "CP-04": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Patient information",
+  "title": "Registration and contact views",
+  "text": "All four staff may open a single patient's registration view containing patient ID, name, age, doctor of record and guardian name. Guardian phone, email, address and MyKid or IC belong to a separate contact view. The clerk may open all contact views; doctors may open them for their own patients, an active cover, or, for the lead, an open consult. Registration access shall not expose restricted contact or clinical fields.",
+  "enforced_by": "retrieve_patient_record view schema, PreToolUse hook and back-end field filtering."
+ },
+ "CP-05": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Patient information",
+  "title": "Clinical and prescription views",
+  "text": "The doctor of record and the clerk may open ordinary clinical and prescription views. A covering doctor may open these views only during an approved cover period; the lead may also open them while a consult to her is open. Confidential adolescent notes are excluded and governed by CP-08. Access shall be rechecked on every call, including calls in an existing conversation.",
+  "enforced_by": "PreToolUse hook and back-end patient and column checks."
+ },
+ "CP-06": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Patient information",
+  "title": "Appointment and vaccination views",
+  "text": "Doctors may open appointment and vaccination views for their own patients. The lead may also open these views for an open consult or approved active cover. The clerk may open these views for every patient to manage bookings and recalls. For associates, cover access to clinical, prescription and contact views does not grant appointment or vaccination views; the clerk coordinates those details.",
+  "enforced_by": "View-specific access matrix and back-end field filtering."
+ },
+ "CP-07": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Patient information",
+  "title": "Consult and cover access expires",
+  "text": "A consult grants the lead access only to its named patient while the consult is open. Cover grants only the named covering doctor access to the specified patients during the approved dates, evaluated using Malaysia time. A pending, declined, closed or expired request grants no access. Closing a consult or ending cover removes that permission on the next call; it does not change the doctor of record.",
+  "enforced_by": "Request store, session clock, PreToolUse hook and back-end access checks."
+ },
+ "CP-08": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Patient information",
+  "title": "Confidential adolescent notes",
+  "text": "Dr Priya may open confidential notes for her own adolescent patients. Dr Aisyah may open them only for an open consult or active cover and with a specific recorded reason, logged before release. Dr Daniel and the clerk shall not receive these notes, including through summaries, action lists or ordinary clinical views. Recording a reason alone does not grant access; clinical safety handling follows CL-15.",
+  "enforced_by": "Dedicated confidential view, reason validation, back-end field exclusion and audit log."
+ },
+ "CP-09": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Patient information",
+  "title": "Billing access",
+  "text": "Only Dr Aisyah in lead capacity and Nurul Huda may open invoices, payment records and amounts outstanding. Associates shall not receive billing information, including billing fields attached to another view. Dr Aisyah's specialist capacity alone grants no billing access. Payment entry and waiver decisions remain subject to the Billing Policy.",
+  "enforced_by": "Role and capacity checks, back-end field filtering and Billing Policy checks."
+ },
+ "CP-10": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Patient information",
+  "title": "Patient lists use fixed filters",
+  "text": "Only doctors are offered find_patients. Permitted filters are condition, vaccine overdue, age band and no visit since a date; free-text database searches and bulk record exports are not offered. Dr Aisyah in lead capacity may list all patients for condition, age-band and no-visit filters; each doctor's vaccine-overdue list is restricted to their own panel, including Dr Aisyah's infants. Other doctor lists are restricted to their own patients; every list returns only patient ID, name, age and doctor.",
+  "enforced_by": "find_patients filter schema, capacity checks and back-end row and column restrictions."
+ },
+ "CP-11": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Actions and accountability",
+  "title": "Offer tools by role",
+  "text": "All roles may retrieve permitted records, check schedules, create permitted requests and list their own actions. Only doctors receive close_visit and find_patients; only the clerk receives book_appointment and record_payment. Hidden or manually constructed calls remain subject to the same back-end checks. Permission to use a tool does not grant permission for every patient or request type.",
+  "enforced_by": "Sign-in tool catalogue, PreToolUse hook and back-end checks."
+ },
+ "CP-12": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Actions and accountability",
+  "title": "Request owners and decisions",
+  "text": "Associates raise consults to Dr Aisyah; doctors raise cover requests to Dr Aisyah and age-band handovers to the receiving doctor. The clerk raises fee-waiver and doctor-assignment requests to Dr Aisyah, overbooking requests to the requested doctor, and callback and repeat-prescription requests to the patient's own doctor. Doctors write external referrals for the clerk to arrange. A request no rule covers is referred to Dr Aisyah as policy owner as a policy question: a billing question by the clerk, a new service or a disclosure question by the patient's attending doctor; a clinical matter remains the attending doctor's own decision. Only the named authorised owner may record a decision or completion; Dr Aisyah shall not approve her own request, and an unassigned authorised alternative must be resolved outside the assistant without applying the request. When the person who decides gives the instruction directly, the assistant records it as that person's decision and carries it out; it is not a request they raised, and it is not referred back to the person who would raise it.",
+  "enforced_by": "create_request type and transition schema, owner checks, self-approval checks and direct-decision records."
+ },
+ "CP-13": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Actions and accountability",
+  "title": "Pending work has a named owner",
+  "text": "Every pending item shall include an ID, patient or invoice reference where applicable, one named owner with staff ID, status, creation time and originating clause. Request decisions and task completions shall be recorded through authorised, validated transitions in the existing tools, not inferred from chat. list_my_actions shall derive only the signed-in person's items from stored records and omit information that person cannot view; Nurul Huda may also read handover and cover requests for case and file management, without deciding them. Completing a step shall create the next required item in code; workflow-specific confirmation gates follow the Operations and Clinical Policies.",
+  "enforced_by": "Request and action stores, tool transition schemas and list_my_actions."
+ },
+ "CP-14": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Actions and accountability",
+  "title": "Refusals, ambiguity and service failures",
+  "text": "An unclear patient match shall trigger a request for the patient ID, without guessing or showing unauthorised candidates. Refusals shall return a code, clause, plain explanation and next_step naming the authorised person, job title and staff ID, plus a request ID if created. A missing record, unavailable reference or failed service shall be reported as an error without invented information or a claimed completed action. Tool results shall use tool, status, data, error and next_step, with status limited to ok, refused, error or pending.",
+  "enforced_by": "Tool schemas, back-end errors, shared result formatter and agent response instructions."
+ },
+ "CP-15": {
+  "policy": "Clinic Policy",
+  "page": "Clinic Policy.html",
+  "section": "Actions and accountability",
+  "title": "Audit, provenance and protected changes",
+  "text": "Every tool attempt shall log staff ID, capacity where relevant, tool, target reference, time, outcome and applicable clause, without copying confidential note content into routine logs. Answers shall identify the source record or resource, clause and relevant data date; unavailable dates shall be stated as unavailable. The assistant shall not delete or overwrite patient records, closed visits or payments, or directly change fees or the doctor of record. New permitted records and the accepted-handover transition in CL-02 are controlled exceptions; other corrections go to the source-system owner named in the applicable policy.",
+  "enforced_by": "Audit writer, PostToolUse checks, Basis formatter and back-end mutation restrictions."
+ },
+ "CL-01": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Responsibility for the patient",
+  "title": "Age bands and doctor of record",
+  "text": "Calculate age from the recorded date of birth using the encounter date in Malaysia time, including completed months for infants. The service bands are under 1 year for Dr Aisyah, ages 1 to 12 for Dr Daniel, and ages 13 to 17 for Dr Priya. The recorded doctor of record remains responsible until an authorised handover is accepted; a birthday flag shall not silently reassign the patient. Missing or inconsistent birth dates shall be returned to Nurul Huda for source-system correction.",
+  "enforced_by": "Back-end age calculation, band flags and protected doctor-of-record field."
+ },
+ "CL-02": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Responsibility for the patient",
+  "title": "Age-band handover requires acceptance",
+  "text": "The current attending doctor raises a handover naming the patient, receiving band doctor, reason and relevant birthday date. Only the named receiving doctor may accept it. Acceptance changes the doctor of record in one logged transaction and transfers continuing responsibility; a pending or declined handover leaves the existing doctor responsible. The receiving doctor may read the handover's permitted summary to decide, but shall not gain unrestricted record access before acceptance unless separately authorised by cover or another applicable rule.",
+  "enforced_by": "create_request handover schema, owner checks, restricted handover view and atomic acceptance transition."
+ },
+ "CL-03": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Responsibility for the patient",
+  "title": "Turning 18 needs a transition plan",
+  "text": "A patient approaching or reaching 18 shall be flagged for the attending doctor's review of onward care. The assistant shall not choose an adult specialist, discharge the patient or automatically remove access and responsibility. The doctor records the transition decision and, when needed, writes an external referral under CL-12. Existing responsibility remains recorded until a clinician completes the transition in the source system.",
+  "enforced_by": "Age flag, action generator and mutation restrictions."
+ },
+ "CL-04": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Responsibility for the patient",
+  "title": "Cover and urgent attendance are limited exceptions",
+  "text": "A doctor requests cover by naming the covering doctor, patients, dates and reason; Dr Aisyah must approve it before access starts. Cover is temporary and does not change the doctor of record. For an urgent encounter, the doctor on duty may close a visit only when a patient-specific urgent encounter assignment has been recorded by authorised staff against the rota; being on duty or saying 'urgent' in chat alone is insufficient. That assignment permits the necessary ordinary clinical and prescription views for the encounter, is time-limited and logged, and does not unlock confidential notes or billing.",
+  "enforced_by": "Cover approval, rota checks, encounter assignment store, expiry checks and back-end access control."
+ },
+ "CL-05": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Responsibility for the patient",
+  "title": "Consults preserve the attending doctor's responsibility",
+  "text": "An associate may raise a patient-specific consult to Dr Aisyah with the clinical question and relevant information they are authorised to use. While open, the consult permits her ordinary clinical access under CP-07; confidential notes still require CP-08. She records her advice and closes the consult. The associate remains the treating doctor and decides the clinical response; a consult does not transfer ownership or authorise the assistant to give advice.",
+  "enforced_by": "Consult ownership, request transitions, scoped access and doctor-of-record protection."
+ },
+ "CL-06": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Visits and prescriptions",
+  "title": "Only a responsible doctor closes a visit",
+  "text": "close_visit is available only to doctors for their own patient, an approved active cover, or an authorised urgent encounter under CL-04. The doctor supplies the visit reference, prescription lines where applicable and any follow-up interval with a reason category from the configured list. Schema or clinical check failures shall prevent closure and return the exact failed rule to the prescriber. The tool shall append a new closure record, prevent duplicate closure and never overwrite a closed visit.",
+  "enforced_by": "close_visit schema, patient responsibility checks and atomic visit-state validation."
+ },
+ "CL-07": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Visits and prescriptions",
+  "title": "Prescriptions use the maintained formulary",
+  "text": "Every prescription line shall identify a listed medicine, form and strength, with dose and unit, frequency and duration supplied by the doctor. The code shall resolve the exact formulation and reject unknown, incomplete or incompatible entries rather than substitute a medicine or convert an ambiguous dose. Dose ranges and maxima shall come from the versioned Clinic Formulary, not the model's memory. Demo values shall be labelled 'Not for clinical use'; a missing required reference prevents the prescription being recorded.",
+  "enforced_by": "Strict prescription schema, formulary lookup and unit validation."
+ },
+ "CL-08": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Visits and prescriptions",
+  "title": "Check weight and dose before recording",
+  "text": "When the formulary requires weight-based checking, use a valid recorded weight no more than 30 days old at the encounter date; future-dated, missing or non-positive weights fail. Calculate the prescribed amount using the stated strength and units, and compare it with the relevant per-dose or per-day range and maximum specified by that formulary entry. Missing or ambiguous calculation inputs shall fail the check. Return the measured value, date and failed limit to the prescribing doctor; the assistant shall not choose a replacement dose or bypass the limit.",
+  "enforced_by": "Back-end weight-age, unit-conversion, dose-range and maximum-dose checks before any write."
+ },
+ "CL-09": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Visits and prescriptions",
+  "title": "Check allergies and return mismatches",
+  "text": "Before recording a prescription, compare each medicine with the patient's recorded allergies and the formulary's maintained ingredient or allergy mappings. A recorded match, unavailable allergy status or incomplete required mapping shall block the prescription and return the reason to the prescriber. The assistant shall not declare a medicine safe merely because no string match was found. The doctor resolves the issue through the authorised clinical process and retries with valid data; there is no chat-based override.",
+  "enforced_by": "Allergy-status validation, maintained mapping checks and transactional prescription validation."
+ },
+ "CL-10": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Visits and prescriptions",
+  "title": "Repeat prescriptions and clinical questions go to the doctor",
+  "text": "Nurul Huda may raise a repeat-prescription or callback request for the patient's own doctor, recording the guardian's question without adding a diagnosis or recommendation. The doctor records the decision or callback outcome; a repeat request itself shall never issue medicine. Any new prescription must be entered by an authorised doctor through close_visit for a valid encounter and pass CL-06 to CL-09. A completed callback shall close its action with a recorded outcome, not merely a chat acknowledgement.",
+  "enforced_by": "Request type and owner checks, prescription tool boundary and completion transitions."
+ },
+ "CL-11": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "Visits and prescriptions",
+  "title": "Visit closure creates dispensing and follow-up work",
+  "text": "A successful visit closure shall create the applicable clerk actions to dispense the exact recorded prescription, prepare the bill and book the doctor's stated follow-up. Nurul Huda shall not alter medicine, dose, strength, frequency or duration; any mismatch goes back to the prescribing doctor and remains unresolved. Dispensing is completed only when she records that it occurred through an authorised action transition. Follow-up booking remains pending guardian confirmation under OP-07, and repeated calls shall not duplicate actions.",
+  "enforced_by": "Code-generated visit chain, immutable prescription reference, owner checks and idempotent action creation."
+ },
+ "CL-12": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "References, privacy and safety",
+  "title": "The doctor chooses external referrals",
+  "text": "Only a doctor responsible for the patient may raise an external referral, supplying the destination, reason and referral details. The assistant shall not choose the provider, infer missing clinical details or claim that a referral was sent. The request goes to Nurul Huda to arrange and record the outcome. Any disclosure outside the clinic must be handled by authorised staff through the clinic's approved process; the assistant provides no external transmission tool.",
+  "enforced_by": "Referral schema, patient responsibility and owner checks, and tool boundaries."
+ },
+ "CL-13": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "References, privacy and safety",
+  "title": "Vaccination status comes from maintained records",
+  "text": "Calculate due and overdue vaccinations from the patient's date of birth, recorded administrations and the maintained Immunisation Schedule. The schedule shall carry its source, verification date and version, and be checked against Malaysia's National Immunisation Programme before the demonstration claims alignment. Missing or conflicting history shall be flagged for clinician review, without inventing administrations, catch-up dates or eligibility decisions. Recall actions follow OP-11; vaccination views and lists remain subject to CP-06 and CP-10.",
+  "enforced_by": "Versioned schedule lookup, deterministic calculations, data-completeness checks and access filtering."
+ },
+ "CL-14": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "References, privacy and safety",
+  "title": "The assistant does not make clinical decisions",
+  "text": "The assistant shall not diagnose, select treatment, propose a dose, determine a referral destination or provide independent medical advice. It may retrieve permitted information, report code-calculated results and record a doctor's structured decisions. Requests requiring judgement shall name the patient's responsible doctor, or the doctor on duty for an urgent matter. Every clinical response shall show its record or reference basis and relevant data dates without presenting a passed software check as clinical approval.",
+  "enforced_by": "Tool boundaries, structured inputs, response instructions and response review in benchmarks."
+ },
+ "CL-15": {
+  "policy": "Clinical Policy",
+  "page": "Clinical Policy.html",
+  "section": "References, privacy and safety",
+  "title": "Adolescent confidentiality and safety escalation",
+  "text": "Confidential adolescent material shall remain in its restricted view and shall not appear in routine guardian messages, summaries or clerk actions. A safety concern shall be referred immediately to the responsible clinician or doctor on duty using only the information the receiving staff member is authorised to see. Only the lead with an open consult or active cover and a recorded specific reason may open confidential notes under CP-08; a claimed safety concern does not automatically unlock them. Any exceptional disclosure outside these permissions must be decided and documented by authorised clinicians outside the assistant under the clinic's approved safeguarding process; emergency staff guidance follows OP-10.",
+  "enforced_by": "Confidential-view checks, field filtering, reason logging, routing rules and lack of an automatic override."
+ },
+ "OP-01": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Registration and communication",
+  "title": "Verify the patient and registered guardian",
+  "text": "Use an existing patient ID and the guardian relationship recorded in the clinic system for bookings and guardian communication. When a name matches more than one patient, ask for the patient ID. Missing registration, a disputed guardian relationship or a requested contact change shall be referred to Nurul Huda for verification in the source system. The assistant shall not create or edit registration or guardian records.",
+  "enforced_by": "Patient and guardian lookup, tool input checks and back-end mutation restrictions."
+ },
+ "OP-02": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Registration and communication",
+  "title": "The clerk coordinates guardian contact",
+  "text": "Nurul Huda handles routine booking confirmations, recalls, reminders and referral arrangements. A guardian's clinical question becomes a callback request to the patient's own doctor under CL-10. A doctor may contact a guardian directly for an assigned callback or documented clinical or safety need; the purpose and outcome shall be recorded by authorised staff. The assistant shall not independently call, message or disclose records to a guardian or outside party.",
+  "enforced_by": "Request ownership, available tool boundaries and communication outcome records."
+ },
+ "OP-03": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Schedule and booking",
+  "title": "Use the clinic hours and rota",
+  "text": "check_schedule shall read the maintained Clinic Hours and Rota resource for sessions, doctor availability, visit types, slot lengths and Selangor public holidays. A closed session, holiday or unavailable doctor shall not appear as an ordinary available slot. If the rota or holiday reference is missing or not valid for the requested date, report the gap and refer scheduling to Nurul Huda. Do not infer opening hours or holidays from memory.",
+  "enforced_by": "check_schedule and back-end calendar validation."
+ },
+ "OP-04": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Schedule and booking",
+  "title": "Apply doctor choice and age rules",
+  "text": "An ordinary appointment may be with the patient's age-band doctor or Dr Aisyah, subject to availability and the guardian's choice. Booking with the lead does not itself change the doctor of record or grant continuing clinical access. A requested doctor outside this rule shall be refused; Nurul Huda raises a doctor-assignment request to Dr Aisyah in lead capacity, who assigns the appointment to the age-band doctor or herself, and Nurul Huda then books the assigned doctor. Age-band transitions follow CL-01 and CL-02; an urgent visit follows OP-10 and CL-04.",
+  "enforced_by": "Booking eligibility checks using patient age, doctor registry and accepted handovers."
+ },
+ "OP-05": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Schedule and booking",
+  "title": "Only the clerk enters appointments",
+  "text": "Only Nurul Huda may call book_appointment. A doctor asking to book shall receive a next_step naming Nurul Huda, with a follow-up action created when the visit workflow provides one. Each booking shall record patient ID, registered guardian, doctor, visit type, slot and the channel through which the request arrived. An online form creates work for the clerk; it does not create a confirmed appointment by itself.",
+  "enforced_by": "Role-specific tool catalogue, book_appointment schema and back-end authorisation."
+ },
+ "OP-06": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Schedule and booking",
+  "title": "Validate and reserve the slot",
+  "text": "Before saving, book_appointment shall recheck the doctor, session, visit-type duration and availability, and prevent overlapping bookings. The availability check and reservation shall occur atomically so simultaneous requests cannot take the same slot. A pending booking reserves its slot until confirmed or explicitly released by the clerk through a validated booking transition. On conflict, return current alternatives without claiming a booking was made.",
+  "enforced_by": "Back-end transaction, overlap constraints and booking state transitions."
+ },
+ "OP-07": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Schedule and booking",
+  "title": "A booking remains pending until confirmed",
+  "text": "A new booking shall be marked pending confirmation and assigned to Nurul Huda. It becomes confirmed only after she records that the registered guardian agreed to the named doctor, day, date and time. An unanswered call or unverified reply shall leave it pending. Confirmation shall close the confirmation action without recreating the booking; withdrawal releases the reservation and retains its history.",
+  "enforced_by": "book_appointment confirmation and withdrawal transitions, guardian checks and action store."
+ },
+ "OP-08": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Schedule and booking",
+  "title": "State dates and times explicitly",
+  "text": "Scheduling replies shall state the weekday, full date and time in Malaysia time, together with the doctor and booking status. Relative requests such as 'in two weeks' shall be resolved from the recorded encounter date or an explicitly established reference date; ask when the reference is unclear. If the requested session is unavailable, offer the permitted doctor's next available session. The demo clock is Thursday, 22 October 2026; it shall not silently become the actual date in a deployed system.",
+  "enforced_by": "Date parser, explicit clock configuration and shared time formatter."
+ },
+ "OP-09": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Schedule and booking",
+  "title": "Overbooking requires the requested doctor's recorded decision",
+  "text": "Only Nurul Huda may raise an overbooking request, naming the patient, doctor, session and reason, to the requested doctor. That doctor decides and names the slot he or she can allocate; the request alone shall not reserve a conflicting slot or count as an appointment. Once the decision is recorded, the clerk may book only the slot the doctor allocated, and guardian confirmation is still required. The decision shall not override doctor eligibility, guardian verification or clinical checks.",
+  "enforced_by": "create_request ownership, approval scope and book_appointment approval validation."
+ },
+ "OP-10": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Exceptions and follow-through",
+  "title": "Urgent visits and emergency staff guidance",
+  "text": "The assistant shall use only explicit urgent and emergency criteria approved in the Clinical Policy's maintained staff guidance, without judging severity itself. A request matching those criteria shall direct staff to the doctor on duty or the clinic's emergency procedure; an emergency response shall tell staff to call 999 rather than wait for an appointment. Staff may initiate an urgent clinical review without waiting for a complete checklist. Until approved criteria and the on-duty rota are available, the assistant shall not classify urgency or promise a slot; it shall name the on-duty doctor if known, otherwise Nurul Huda to locate one immediately.",
+  "enforced_by": "Approved criteria matcher, rota lookup, response rules and urgent booking validation."
+ },
+ "OP-11": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Exceptions and follow-through",
+  "title": "Follow-ups, recalls and reminders remain staff tasks",
+  "text": "Closing a visit shall create the prescribed follow-up booking action for Nurul Huda when an interval is recorded. Vaccine recall actions shall come from the maintained immunisation schedule and patient records; billing reminders follow BP-06. Each action shall remain open until she records its outcome or an authorised disposition, without claiming contact or delivery occurred automatically. An unsuccessful contact attempt shall be recorded and retain a follow-up owner.",
+  "enforced_by": "Code-generated action rules, authorised completion transitions and audit log."
+ },
+ "OP-12": {
+  "policy": "Operations Policy",
+  "page": "Operations Policy.html",
+  "section": "Exceptions and follow-through",
+  "title": "Referral arrangements and booking corrections",
+  "text": "Nurul Huda arranges an external referral only after a doctor supplies the destination and referral details under CL-12. She records the arrangement outcome, including the agreed day, date and time when available. Requests to reschedule a confirmed appointment, change its doctor or correct existing appointment details shall go to her in the clinic's source system; pending confirmation and withdrawal use OP-07. The assistant shall not claim a referral or booking change is complete without a recorded outcome.",
+  "enforced_by": "Referral request ownership, booking mutation boundaries and action-state validation."
+ },
+ "BP-01": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Billing records",
+  "title": "Restrict billing information and actions",
+  "text": "Nurul Huda and Dr Aisyah in lead capacity may view invoices, payments and outstanding balances for all patients. Only Nurul Huda may record a payment; Dr Aisyah's billing oversight does not grant payment-entry rights. Associates shall not receive billing amounts through patient records, tool results or action lists. Clinical care requests shall not be refused merely because a balance exists unless a separate approved rule explicitly requires it; no such blocking rule is defined here.",
+  "enforced_by": "Tool distribution, role and capacity checks, and back-end field filtering."
+ },
+ "BP-02": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Billing records",
+  "title": "Use the maintained Fee Schedule",
+  "text": "Consultation, vaccination and medicine charges shall come from the versioned Fee Schedule and the recorded service or prescription. Nurul Huda prepares the bill in the source billing system from those references; a visit closure creates her billing action but does not claim an invoice has been issued. A missing or ambiguous price shall be referred to her for resolution without an invented amount. The assistant shall not negotiate or change a fee; approved waivers follow BP-07.",
+  "enforced_by": "Fee lookup, billing-action generation and absence of invoice-writing or price-changing tools."
+ },
+ "BP-03": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Billing records",
+  "title": "Validate invoice references and outstanding amounts",
+  "text": "Billing lookups and payment entries shall use a specific existing invoice linked to the correct patient. Calculate the outstanding amount from the invoice's recorded charges, valid adjustments and payment entries; keep money as integer sen and display it in RM. Missing, inconsistent or unavailable billing records shall return an error rather than an estimated balance. Each displayed balance shall identify the invoice and data time.",
+  "enforced_by": "Invoice integrity checks, deterministic balance calculation and shared formatter."
+ },
+ "BP-04": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Payments and reminders",
+  "title": "Record only payments actually received",
+  "text": "Nurul Huda may use record_payment only after confirming receipt through the clinic's actual payment process. The entry shall include invoice ID, positive amount, recorded payment method, receipt time and a unique receipt or transaction reference for duplicate checking. Permit partial payments but reject amounts above the current outstanding balance, unknown invoices and duplicate references. Recheck the balance and write the entry atomically; the resulting status shall say 'payment recorded', not imply the assistant collected money.",
+  "enforced_by": "record_payment schema, clerk authorisation, duplicate constraints and transactional balance checks."
+ },
+ "BP-05": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Payments and reminders",
+  "title": "Do not process or alter financial transactions",
+  "text": "The assistant shall not charge a card, initiate a transfer, collect payment credentials, issue a refund, reverse a payment or edit or delete a payment record. Requests for refunds or corrections shall name Nurul Huda to check the source billing system and Dr Aisyah where approval is needed. No chat instruction or claimed approval unlocks a missing financial tool. An erroneous payment entry remains traceable and is corrected only through the authorised source-system process.",
+  "enforced_by": "Tool boundaries, back-end mutation restrictions and structured refusal routing."
+ },
+ "BP-06": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Payments and reminders",
+  "title": "Reminders remain owned by the clerk",
+  "text": "An outstanding invoice may create a reminder item for Nurul Huda using the current recorded balance and permitted guardian contact details. She verifies the recipient and amount, contacts the guardian through the clinic's approved channel and records the result. The assistant shall not automatically send a reminder or mark a bill paid because contact occurred. An unsuccessful attempt remains recorded with its follow-up owner; a settled invoice shall no longer generate an outstanding-payment reminder.",
+  "enforced_by": "Balance-based action rules, clerk-only completion transitions and reminder deduplication."
+ },
+ "BP-07": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Approval and traceability",
+  "title": "Fee waivers require the lead's recorded decision",
+  "text": "Only Nurul Huda may raise a fee-waiver request, identifying the patient, invoice or charge, requested amount and reason. Dr Aisyah in lead capacity may approve or decline; a pending request is not a waiver, and the lead shall not approve a request she raised herself. The decision shall record its exact scope and amount, and an approval creates a clerk action to apply it in the source billing system. The assistant shall not change the fee or balance itself; the balance changes only when the resulting authorised adjustment is present in source records.",
+  "enforced_by": "Request schema, owner and self-approval checks, decision log and fee-mutation restrictions."
+ },
+ "BP-08": {
+  "policy": "Billing Policy",
+  "page": "Billing Policy.html",
+  "section": "Approval and traceability",
+  "title": "Retain a traceable billing history",
+  "text": "Payment entries, waiver requests, decisions and reminder outcomes shall retain their IDs, invoice references, staff identity, time, status and originating clause. Billing replies shall state the record basis and distinguish recorded payments, outstanding amounts and pending approvals. A service failure shall not be reported as a successful payment entry or decision; retries shall use the original operation reference to prevent duplicates. Missing or disputed records go to Nurul Huda, with Dr Aisyah named for a discretionary decision, rather than being guessed or silently repaired.",
+  "enforced_by": "Append-only audit events, idempotency checks, result formatter and error routing."
+ }
+}

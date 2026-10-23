@@ -1,0 +1,219 @@
+[
+ {
+  "patient": "SK-P-0006",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "urticaria",
+  "recorded": "2023-05-22"
+ },
+ {
+  "patient": "SK-P-0008",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "rash",
+  "recorded": "2025-12-14"
+ },
+ {
+  "patient": "SK-P-0011",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "sneezing",
+  "recorded": "2026-05-21"
+ },
+ {
+  "patient": "SK-P-0013",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "urticaria",
+  "recorded": "2025-12-18"
+ },
+ {
+  "patient": "SK-P-0015",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "rash",
+  "recorded": "2026-05-21"
+ },
+ {
+  "patient": "SK-P-0018",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "rash",
+  "recorded": "2026-01-23"
+ },
+ {
+  "patient": "SK-P-0021",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "rash",
+  "recorded": "2026-07-17"
+ },
+ {
+  "patient": "SK-P-0030",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "sneezing",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0032",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "rash",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0035",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "rash",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0036",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "sneezing",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0038",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "sneezing",
+  "recorded": "2024-06-14"
+ },
+ {
+  "patient": "SK-P-0044",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "sneezing",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0050",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0057",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "urticaria",
+  "recorded": "2023-09-08"
+ },
+ {
+  "patient": "SK-P-0058",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "rash",
+  "recorded": "2024-09-20"
+ },
+ {
+  "patient": "SK-P-0061",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "rash",
+  "recorded": "2023-06-24"
+ },
+ {
+  "patient": "SK-P-0074",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "sneezing",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0078",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "sneezing",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0082",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0083",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0088",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "sneezing",
+  "recorded": "2025-10-16"
+ },
+ {
+  "patient": "SK-P-0091",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "sneezing",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0094",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "rash",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0103",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "sneezing",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0105",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0107",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0114",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0116",
+  "substance": "house dust mite",
+  "class": "environmental",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0118",
+  "substance": "peanut",
+  "class": "food",
+  "reaction": "urticaria",
+  "recorded": "2023-01-09"
+ },
+ {
+  "patient": "SK-P-0119",
+  "substance": "penicillin",
+  "class": "penicillin",
+  "reaction": "rash",
+  "recorded": "2023-01-09"
+ }
+]

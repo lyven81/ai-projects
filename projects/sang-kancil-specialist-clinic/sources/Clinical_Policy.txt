@@ -1,0 +1,73 @@
+SANG KANCIL SPECIALIST CLINIC
+CLINICAL POLICY (CL)
+Version: 1.0 | Prepared: 22 October 2026 | Clauses: 15
+Status: Proposed policy for a fictional demonstration clinic; not an approved policy for clinical deployment.
+
+PURPOSE AND PRINCLES
+Doctors make clinical decisions. The assistant records authorised decisions, checks structured entries against approved reference values and routes work to named staff. Demo formulary values are not for clinical use, and passing a software check does not establish that treatment is clinically appropriate.
+
+SECTION A: RESPONSIBILITY FOR THE PATIENT
+
+CL-01. Age bands and doctor of record
+Calculate age from the recorded date of birth using the encounter date in Malaysia time, including completed months for infants. The service bands are under 1 year for Dr Aisyah, ages 1 to 12 for Dr Daniel, and ages 13 to 17 for Dr Priya. The recorded doctor of record remains responsible until an authorised handover is accepted; a birthday flag shall not silently reassign the patient. Missing or inconsistent birth dates shall be returned to Nurul Huda for source-system correction.
+Enforced by: Back-end age calculation, band flags and protected doctor-of-record field.
+
+CL-02. Age-band handover requires acceptance
+The current attending doctor raises a handover naming the patient, receiving band doctor, reason and relevant birthday date. Only the named receiving doctor may accept it. Acceptance changes the doctor of record in one logged transaction and transfers continuing responsibility; a pending or declined handover leaves the existing doctor responsible. The receiving doctor may read the handover's permitted summary to decide, but shall not gain unrestricted record access before acceptance unless separately authorised by cover or another applicable rule.
+Enforced by: create_request handover schema, owner checks, restricted handover view and atomic acceptance transition.
+
+CL-03. Turning 18 needs a transition plan
+A patient approaching or reaching 18 shall be flagged for the attending doctor's review of onward care. The assistant shall not choose an adult specialist, discharge the patient or automatically remove access and responsibility. The doctor records the transition decision and, when needed, writes an external referral under CL-12. Existing responsibility remains recorded until a clinician completes the transition in the source system.
+Enforced by: Age flag, action generator and mutation restrictions.
+
+CL-04. Cover and urgent attendance are limited exceptions
+A doctor requests cover by naming the covering doctor, patients, dates and reason; Dr Aisyah must approve it before access starts. Cover is temporary and does not change the doctor of record. For an urgent encounter, the doctor on duty may close a visit only when a patient-specific urgent encounter assignment has been recorded by authorised staff against the rota; being on duty or saying 'urgent' in chat alone is insufficient. That assignment permits the necessary ordinary clinical and prescription views for the encounter, is time-limited and logged, and does not unlock confidential notes or billing.
+Enforced by: Cover approval, rota checks, encounter assignment store, expiry checks and back-end access control.
+
+CL-05. Consults preserve the attending doctor's responsibility
+An associate may raise a patient-specific consult to Dr Aisyah with the clinical question and relevant information they are authorised to use. While open, the consult permits her ordinary clinical access under CP-07; confidential notes still require CP-08. She records her advice and closes the consult. The associate remains the treating doctor and decides the clinical response; a consult does not transfer ownership or authorise the assistant to give advice.
+Enforced by: Consult ownership, request transitions, scoped access and doctor-of-record protection.
+
+SECTION B: VISITS AND PRESCRIPTIONS
+
+CL-06. Only a responsible doctor closes a visit
+close_visit is available only to doctors for their own patient, an approved active cover, or an authorised urgent encounter under CL-04. The doctor supplies the visit reference, prescription lines where applicable and any follow-up interval with a reason category from the configured list. Schema or clinical check failures shall prevent closure and return the exact failed rule to the prescriber. The tool shall append a new closure record, prevent duplicate closure and never overwrite a closed visit.
+Enforced by: close_visit schema, patient responsibility checks and atomic visit-state validation.
+
+CL-07. Prescriptions use the maintained formulary
+Every prescription line shall identify a listed medicine, form and strength, with dose and unit, frequency and duration supplied by the doctor. The code shall resolve the exact formulation and reject unknown, incomplete or incompatible entries rather than substitute a medicine or convert an ambiguous dose. Dose ranges and maxima shall come from the versioned Clinic Formulary, not the model's memory. Demo values shall be labelled 'Not for clinical use'; a missing required reference prevents the prescription being recorded.
+Enforced by: Strict prescription schema, formulary lookup and unit validation.
+
+CL-08. Check weight and dose before recording
+When the formulary requires weight-based checking, use a valid recorded weight no more than 30 days old at the encounter date; future-dated, missing or non-positive weights fail. Calculate the prescribed amount using the stated strength and units, and compare it with the relevant per-dose or per-day range and maximum specified by that formulary entry. Missing or ambiguous calculation inputs shall fail the check. Return the measured value, date and failed limit to the prescribing doctor; the assistant shall not choose a replacement dose or bypass the limit.
+Enforced by: Back-end weight-age, unit-conversion, dose-range and maximum-dose checks before any write.
+
+CL-09. Check allergies and return mismatches
+Before recording a prescription, compare each medicine with the patient's recorded allergies and the formulary's maintained ingredient or allergy mappings. A recorded match, unavailable allergy status or incomplete required mapping shall block the prescription and return the reason to the prescriber. The assistant shall not declare a medicine safe merely because no string match was found. The doctor resolves the issue through the authorised clinical process and retries with valid data; there is no chat-based override.
+Enforced by: Allergy-status validation, maintained mapping checks and transactional prescription validation.
+
+CL-10. Repeat prescriptions and clinical questions go to the doctor
+Nurul Huda may raise a repeat-prescription or callback request for the patient's own doctor, recording the guardian's question without adding a diagnosis or recommendation. The doctor records the decision or callback outcome; a repeat request itself shall never issue medicine. Any new prescription must be entered by an authorised doctor through close_visit for a valid encounter and pass CL-06 to CL-09. A completed callback shall close its action with a recorded outcome, not merely a chat acknowledgement.
+Enforced by: Request type and owner checks, prescription tool boundary and completion transitions.
+
+CL-11. Visit closure creates dispensing and follow-up work
+A successful visit closure shall create the applicable clerk actions to dispense the exact recorded prescription, prepare the bill and book the doctor's stated follow-up. Nurul Huda shall not alter medicine, dose, strength, frequency or duration; any mismatch goes back to the prescribing doctor and remains unresolved. Dispensing is completed only when she records that it occurred through an authorised action transition. Follow-up booking remains pending guardian confirmation under OP-07, and repeated calls shall not duplicate actions.
+Enforced by: Code-generated visit chain, immutable prescription reference, owner checks and idempotent action creation.
+
+SECTION C: REFERENCES, PRIVACY AND SAFETY
+
+CL-12. The doctor chooses external referrals
+Only a doctor responsible for the patient may raise an external referral, supplying the destination, reason and referral details. The assistant shall not choose the provider, infer missing clinical details or claim that a referral was sent. The request goes to Nurul Huda to arrange and record the outcome. Any disclosure outside the clinic must be handled by authorised staff through the clinic's approved process; the assistant provides no external transmission tool.
+Enforced by: Referral schema, patient responsibility and owner checks, and tool boundaries.
+
+CL-13. Vaccination status comes from maintained records
+Calculate due and overdue vaccinations from the patient's date of birth, recorded administrations and the maintained Immunisation Schedule. The schedule shall carry its source, verification date and version, and be checked against Malaysia's National Immunisation Programme before the demonstration claims alignment. Missing or conflicting history shall be flagged for clinician review, without inventing administrations, catch-up dates or eligibility decisions. Recall actions follow OP-11; vaccination views and lists remain subject to CP-06 and CP-10.
+Enforced by: Versioned schedule lookup, deterministic calculations, data-completeness checks and access filtering.
+
+CL-14. The assistant does not make clinical decisions
+The assistant shall not diagnose, select treatment, propose a dose, determine a referral destination or provide independent medical advice. It may retrieve permitted information, report code-calculated results and record a doctor's structured decisions. Requests requiring judgement shall name the patient's responsible doctor, or the doctor on duty for an urgent matter. Every clinical response shall show its record or reference basis and relevant data dates without presenting a passed software check as clinical approval.
+Enforced by: Tool boundaries, structured inputs, response instructions and response review in benchmarks.
+
+CL-15. Adolescent confidentiality and safety escalation
+Confidential adolescent material shall remain in its restricted view and shall not appear in routine guardian messages, summaries or clerk actions. A safety concern shall be referred immediately to the responsible clinician or doctor on duty using only the information the receiving staff member is authorised to see. Only the lead with an open consult or active cover and a recorded specific reason may open confidential notes under CP-08; a claimed safety concern does not automatically unlock them. Any exceptional disclosure outside these permissions must be decided and documented by authorised clinicians outside the assistant under the clinic's approved safeguarding process; emergency staff guidance follows OP-10.
+Enforced by: Confidential-view checks, field filtering, reason logging, routing rules and lack of an automatic override.

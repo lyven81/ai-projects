@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Clinic Hours and Rota</title><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+.crumbs{font-size:12.5px;opacity:.8;margin-bottom:2px}.crumbs a{color:inherit;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../sang-kancil-specialist-clinic.html">Sang Kancil Specialist Clinic</a></div><h1>Clinic Hours and Rota</h1><nav id="toc"></nav></div>
+<p>Maintained resource read by check_schedule and book_appointment (OP-03). Valid 2026-10-01 to 2026-12-31, Malaysia time. A demo rota prepared 22 October 2026 from the design discussion.</p>
+<h2>1. Sessions</h2><table><tr><th>Session</th><th>From</th><th>To</th></tr>
+<tr><td>AM</td><td>09:00</td><td>13:00</td></tr>
+<tr><td>PM</td><td>14:00</td><td>17:00</td></tr>
+</table><p>Saturday: morning only, one doctor on the Saturday rota. Saturday afternoon, Sunday and Selangor public holidays: closed.</p><h2>2. Weekly rota</h2><table><tr><th>Day</th><th>Morning</th><th>Afternoon</th></tr>
+<tr><td>Mon</td><td>Dr Aisyah Rahman, Dr Daniel Ong</td><td>Dr Aisyah Rahman, Dr Daniel Ong, Dr Priya Nair</td></tr>
+<tr><td>Tue</td><td>Dr Aisyah Rahman, Dr Daniel Ong, Dr Priya Nair</td><td>Dr Daniel Ong, Dr Priya Nair</td></tr>
+<tr><td>Wed</td><td>Dr Aisyah Rahman, Dr Daniel Ong</td><td>Dr Aisyah Rahman, Dr Daniel Ong, Dr Priya Nair</td></tr>
+<tr><td>Thu</td><td>Dr Aisyah Rahman, Dr Daniel Ong, Dr Priya Nair</td><td>Dr Daniel Ong, Dr Priya Nair</td></tr>
+<tr><td>Fri</td><td>Dr Aisyah Rahman, Dr Daniel Ong</td><td>Dr Daniel Ong, Dr Priya Nair</td></tr>
+</table><p>Doctor on duty for urgent attendance on weekdays: Dr Aisyah Rahman (morning), Dr Daniel Ong (afternoon); on Saturday morning, the Saturday rota doctor.</p><h2>3. Saturday rota (morning only)</h2><table><tr><th>Saturday</th><th>Doctor</th></tr>
+<tr><td>2026-10-24</td><td>Dr Aisyah Rahman</td></tr>
+<tr><td>2026-10-31</td><td>Dr Daniel Ong</td></tr>
+<tr><td>2026-11-07</td><td>Dr Priya Nair</td></tr>
+<tr><td>2026-11-14</td><td>Dr Aisyah Rahman</td></tr>
+<tr><td>2026-11-21</td><td>Dr Daniel Ong</td></tr>
+<tr><td>2026-11-28</td><td>Dr Priya Nair</td></tr>
+<tr><td>2026-12-05</td><td>Dr Aisyah Rahman</td></tr>
+<tr><td>2026-12-12</td><td>Dr Daniel Ong</td></tr>
+<tr><td>2026-12-19</td><td>Dr Priya Nair</td></tr>
+<tr><td>2026-12-26</td><td>Dr Aisyah Rahman</td></tr>
+</table><h2>4. Slot lengths</h2><table><tr><th>Visit type</th><th>Minutes</th></tr>
+<tr><td>vaccination</td><td>15</td></tr>
+<tr><td>follow up</td><td>20</td></tr>
+<tr><td>new patient</td><td>30</td></tr>
+<tr><td>sick visit</td><td>30</td></tr>
+</table><p>Slots start on a 10-minute grid from the start of the session; a booking takes its full length and may not overlap another.</p><h2>5. Selangor public holidays, October to December 2026</h2><table><tr><th>Date</th><th>Holiday</th></tr>
+<tr><td>2026-11-08</td><td>Deepavali (a Sunday)</td></tr>
+<tr><td>2026-11-09</td><td>Deepavali holiday in lieu</td></tr>
+<tr><td>2026-12-11</td><td>Birthday of the Sultan of Selangor</td></tr>
+<tr><td>2026-12-25</td><td>Christmas Day</td></tr>
+</table><p>Source: FMM circular GI17, 2026 Public Holidays National and State (12 Aug 2025), checked 22 October 2026. Sources differ on whether Selangor observes the 9 November in-lieu day; confirm against the state gazette before real use.</p>
+<footer>&copy; 2026 Lee Yih Ven &middot; Clinic Hours and Rota</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

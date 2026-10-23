@@ -1,0 +1,833 @@
+{
+ "clinic": "Sang Kancil Specialist Clinic",
+ "staff": [
+  {
+   "id": "PD-01-01",
+   "name": "Dr Aisyah Rahman",
+   "first": "Dr Aisyah",
+   "title": "Lead paediatrician",
+   "band": "infant",
+   "role": "doctor"
+  },
+  {
+   "id": "PD-02-01",
+   "name": "Dr Daniel Ong",
+   "first": "Dr Daniel",
+   "title": "Associate paediatrician",
+   "band": "child",
+   "role": "doctor"
+  },
+  {
+   "id": "PD-02-02",
+   "name": "Dr Priya Nair",
+   "first": "Dr Priya",
+   "title": "Associate paediatrician",
+   "band": "adolescent",
+   "role": "doctor"
+  },
+  {
+   "id": "FD-02-01",
+   "name": "Nurul Huda",
+   "first": "Nurul Huda",
+   "title": "Clinic clerk",
+   "band": null,
+   "role": "clerk"
+  }
+ ],
+ "bands": {
+  "infant": {
+   "min_years": 0,
+   "max_years": 0,
+   "doctor": "PD-01-01",
+   "label": "under 1"
+  },
+  "child": {
+   "min_years": 1,
+   "max_years": 12,
+   "doctor": "PD-02-01",
+   "label": "1 to 12"
+  },
+  "adolescent": {
+   "min_years": 13,
+   "max_years": 17,
+   "doctor": "PD-02-02",
+   "label": "13 to 17"
+  }
+ },
+ "sessions": {
+  "AM": [
+   "09:00",
+   "13:00"
+  ],
+  "PM": [
+   "14:00",
+   "17:00"
+  ]
+ },
+ "weekly": {
+  "Mon": {
+   "AM": [
+    "PD-01-01",
+    "PD-02-01"
+   ],
+   "PM": [
+    "PD-01-01",
+    "PD-02-01",
+    "PD-02-02"
+   ]
+  },
+  "Tue": {
+   "AM": [
+    "PD-01-01",
+    "PD-02-01",
+    "PD-02-02"
+   ],
+   "PM": [
+    "PD-02-01",
+    "PD-02-02"
+   ]
+  },
+  "Wed": {
+   "AM": [
+    "PD-01-01",
+    "PD-02-01"
+   ],
+   "PM": [
+    "PD-01-01",
+    "PD-02-01",
+    "PD-02-02"
+   ]
+  },
+  "Thu": {
+   "AM": [
+    "PD-01-01",
+    "PD-02-01",
+    "PD-02-02"
+   ],
+   "PM": [
+    "PD-02-01",
+    "PD-02-02"
+   ]
+  },
+  "Fri": {
+   "AM": [
+    "PD-01-01",
+    "PD-02-01"
+   ],
+   "PM": [
+    "PD-02-01",
+    "PD-02-02"
+   ]
+  },
+  "Sat": {
+   "AM": [],
+   "PM": []
+  },
+  "Sun": {
+   "AM": [],
+   "PM": []
+  }
+ },
+ "on_duty": {
+  "AM": "PD-01-01",
+  "PM": "PD-02-01"
+ },
+ "saturday_rota": {
+  "2026-10-24": "PD-01-01",
+  "2026-10-31": "PD-02-01",
+  "2026-11-07": "PD-02-02",
+  "2026-11-14": "PD-01-01",
+  "2026-11-21": "PD-02-01",
+  "2026-11-28": "PD-02-02",
+  "2026-12-05": "PD-01-01",
+  "2026-12-12": "PD-02-01",
+  "2026-12-19": "PD-02-02",
+  "2026-12-26": "PD-01-01"
+ },
+ "rota_valid": [
+  "2026-10-01",
+  "2026-12-31"
+ ],
+ "holidays": {
+  "2026-11-08": "Deepavali (a Sunday)",
+  "2026-11-09": "Deepavali holiday in lieu",
+  "2026-12-11": "Birthday of the Sultan of Selangor",
+  "2026-12-25": "Christmas Day"
+ },
+ "slot_minutes": {
+  "vaccination": 15,
+  "follow_up": 20,
+  "new_patient": 30,
+  "sick_visit": 30
+ },
+ "grid_minutes": 10,
+ "request_types": {
+  "consult": {
+   "raised_by": "an associate, for their own patient",
+   "decided_by": "Dr Aisyah Rahman as lead",
+   "clause": "CL-05, CP-12"
+  },
+  "cover": {
+   "raised_by": "a doctor, for their own patients",
+   "decided_by": "Dr Aisyah Rahman as lead",
+   "clause": "CL-04, CP-12"
+  },
+  "handover": {
+   "raised_by": "the attending doctor",
+   "decided_by": "the receiving band doctor, who accepts or declines",
+   "clause": "CL-02, CP-12"
+  },
+  "fee_waiver": {
+   "raised_by": "Nurul Huda",
+   "decided_by": "Dr Aisyah Rahman as lead",
+   "clause": "BP-07, CP-12"
+  },
+  "doctor_assignment": {
+   "raised_by": "Nurul Huda",
+   "decided_by": "Dr Aisyah Rahman as lead",
+   "clause": "OP-04, CP-12"
+  },
+  "overbooking": {
+   "raised_by": "Nurul Huda",
+   "decided_by": "the requested doctor",
+   "clause": "OP-09, CP-12"
+  },
+  "callback": {
+   "raised_by": "Nurul Huda",
+   "decided_by": "the patient's own doctor",
+   "clause": "CL-10, CP-12"
+  },
+  "repeat_prescription": {
+   "raised_by": "Nurul Huda",
+   "decided_by": "the patient's own doctor",
+   "clause": "CL-10, CP-12"
+  },
+  "external_referral": {
+   "raised_by": "the responsible doctor",
+   "decided_by": "Nurul Huda, who arranges it",
+   "clause": "CL-12, OP-12"
+  },
+  "policy_question": {
+   "raised_by": "any staff member, for a request no rule covers in their own work",
+   "decided_by": "Dr Aisyah Rahman as policy owner",
+   "clause": "CP-12"
+  }
+ },
+ "fees": {
+  "FS-C01": {
+   "id": "FS-C01",
+   "ref": null,
+   "label": "First consultation, lead",
+   "unit": "encounter",
+   "sen": 15000
+  },
+  "FS-C02": {
+   "id": "FS-C02",
+   "ref": null,
+   "label": "Follow-up consultation, lead",
+   "unit": "encounter",
+   "sen": 10000
+  },
+  "FS-C03": {
+   "id": "FS-C03",
+   "ref": null,
+   "label": "First consultation, associate",
+   "unit": "encounter",
+   "sen": 10000
+  },
+  "FS-C04": {
+   "id": "FS-C04",
+   "ref": null,
+   "label": "Follow-up consultation, associate",
+   "unit": "encounter",
+   "sen": 6000
+  },
+  "FS-C05": {
+   "id": "FS-C05",
+   "ref": null,
+   "label": "Vaccination-only clinical assessment",
+   "unit": "encounter",
+   "sen": 0
+  },
+  "FS-C06": {
+   "id": "FS-C06",
+   "ref": null,
+   "label": "Administrative clarification call",
+   "unit": "call",
+   "sen": 0
+  },
+  "FS-V01": {
+   "id": "FS-V01",
+   "ref": "VAC-HEX",
+   "label": "DTaP-IPV-HepB-Hib, six-in-one",
+   "unit": "administered dose",
+   "sen": 20000
+  },
+  "FS-V02": {
+   "id": "FS-V02",
+   "ref": "VAC-PCV",
+   "label": "Pneumococcal conjugate vaccine",
+   "unit": "administered dose",
+   "sen": 22000
+  },
+  "FS-V03": {
+   "id": "FS-V03",
+   "ref": "VAC-MMR",
+   "label": "Measles, mumps and rubella",
+   "unit": "administered dose",
+   "sen": 9500
+  },
+  "FS-V04": {
+   "id": "FS-V04",
+   "ref": "VAC-HEPB",
+   "label": "Hepatitis B, paediatric product",
+   "unit": "administered dose",
+   "sen": 5500
+  },
+  "FS-V05": {
+   "id": "FS-V05",
+   "ref": "VAC-DT",
+   "label": "Diphtheria and tetanus, school booster product",
+   "unit": "administered dose",
+   "sen": 4500
+  },
+  "FS-V06": {
+   "id": "FS-V06",
+   "ref": "VAC-TT",
+   "label": "Tetanus toxoid, school booster product",
+   "unit": "administered dose",
+   "sen": 3000
+  },
+  "FS-V07": {
+   "id": "FS-V07",
+   "ref": "VAC-HPV9",
+   "label": "Nine-valent HPV, private-service product",
+   "unit": "administered dose",
+   "sen": 60000
+  },
+  "FS-V08": {
+   "id": "FS-V08",
+   "ref": "VAC-FLU",
+   "label": "Inactivated seasonal influenza, optional service",
+   "unit": "administered dose",
+   "sen": 9500
+  },
+  "FS-M01": {
+   "id": "FS-M01",
+   "ref": "MED-PAR120",
+   "label": "Paracetamol 120 mg/5 mL",
+   "unit": "60 mL bottle",
+   "sen": 1200
+  },
+  "FS-M02": {
+   "id": "FS-M02",
+   "ref": "MED-PAR250",
+   "label": "Paracetamol 250 mg/5 mL",
+   "unit": "60 mL bottle",
+   "sen": 1500
+  },
+  "FS-M03": {
+   "id": "FS-M03",
+   "ref": "MED-AMX125",
+   "label": "Amoxicillin 125 mg/5 mL after reconstitution",
+   "unit": "100 mL bottle",
+   "sen": 1800
+  },
+  "FS-M04": {
+   "id": "FS-M04",
+   "ref": "MED-AMX250",
+   "label": "Amoxicillin 250 mg/5 mL after reconstitution",
+   "unit": "100 mL bottle",
+   "sen": 2800
+  },
+  "FS-M05": {
+   "id": "FS-M05",
+   "ref": "MED-CET1",
+   "label": "Cetirizine 1 mg/mL",
+   "unit": "60 mL bottle",
+   "sen": 1800
+  },
+  "FS-M06": {
+   "id": "FS-M06",
+   "ref": "MED-CET10",
+   "label": "Cetirizine 10 mg",
+   "unit": "tablet",
+   "sen": 100
+  },
+  "FS-M07": {
+   "id": "FS-M07",
+   "ref": "MED-SAL100",
+   "label": "Salbutamol 100 micrograms/actuation pMDI",
+   "unit": "200-actuation inhaler",
+   "sen": 3500
+  },
+  "FS-M08": {
+   "id": "FS-M08",
+   "ref": "MED-HC1",
+   "label": "Hydrocortisone 1% cream",
+   "unit": "15 g tube",
+   "sen": 1500
+  },
+  "FS-E01": {
+   "id": "FS-E01",
+   "ref": null,
+   "label": "Valved spacer, mask supplied if prescribed",
+   "unit": "device",
+   "sen": 5500
+  }
+ },
+ "fee_by_ref": {
+  "VAC-HEX": "FS-V01",
+  "VAC-PCV": "FS-V02",
+  "VAC-MMR": "FS-V03",
+  "VAC-HEPB": "FS-V04",
+  "VAC-DT": "FS-V05",
+  "VAC-TT": "FS-V06",
+  "VAC-HPV9": "FS-V07",
+  "VAC-FLU": "FS-V08",
+  "MED-PAR120": "FS-M01",
+  "MED-PAR250": "FS-M02",
+  "MED-AMX125": "FS-M03",
+  "MED-AMX250": "FS-M04",
+  "MED-CET1": "FS-M05",
+  "MED-CET10": "FS-M06",
+  "MED-SAL100": "FS-M07",
+  "MED-HC1": "FS-M08"
+ },
+ "presentations": {
+  "MED-PAR120": {
+   "id": "MED-PAR120",
+   "generic": "Paracetamol",
+   "form": "oral liquid",
+   "strength": "120 mg/5 mL = 24 mg/mL",
+   "route": "oral",
+   "stocked": "60 mL",
+   "allergy": [
+    "paracetamol"
+   ],
+   "dose_unit": "mL",
+   "mg_per_unit": 24,
+   "stocked_volume_ml": 60
+  },
+  "MED-PAR250": {
+   "id": "MED-PAR250",
+   "generic": "Paracetamol",
+   "form": "oral liquid",
+   "strength": "250 mg/5 mL = 50 mg/mL",
+   "route": "oral",
+   "stocked": "60 mL",
+   "allergy": [
+    "paracetamol"
+   ],
+   "dose_unit": "mL",
+   "mg_per_unit": 50,
+   "stocked_volume_ml": 60
+  },
+  "MED-AMX125": {
+   "id": "MED-AMX125",
+   "generic": "Amoxicillin",
+   "form": "reconstituted suspension",
+   "strength": "125 mg/5 mL = 25 mg/mL",
+   "route": "oral",
+   "stocked": "100 mL",
+   "allergy": [
+    "amoxicillin",
+    "penicillin"
+   ],
+   "dose_unit": "mL",
+   "mg_per_unit": 25,
+   "stocked_volume_ml": 100
+  },
+  "MED-AMX250": {
+   "id": "MED-AMX250",
+   "generic": "Amoxicillin",
+   "form": "reconstituted suspension",
+   "strength": "250 mg/5 mL = 50 mg/mL",
+   "route": "oral",
+   "stocked": "100 mL",
+   "allergy": [
+    "amoxicillin",
+    "penicillin"
+   ],
+   "dose_unit": "mL",
+   "mg_per_unit": 50,
+   "stocked_volume_ml": 100
+  },
+  "MED-CET1": {
+   "id": "MED-CET1",
+   "generic": "Cetirizine hydrochloride",
+   "form": "oral solution",
+   "strength": "1 mg/mL = 5 mg/5 mL",
+   "route": "oral",
+   "stocked": "60 mL",
+   "allergy": [
+    "cetirizine",
+    "hydroxyzine/piperazine derivative review"
+   ],
+   "dose_unit": "mL",
+   "mg_per_unit": 1,
+   "stocked_volume_ml": 60
+  },
+  "MED-CET10": {
+   "id": "MED-CET10",
+   "generic": "Cetirizine hydrochloride",
+   "form": "tablet",
+   "strength": "10 mg/tablet",
+   "route": "oral",
+   "stocked": "whole tablets",
+   "allergy": [
+    "cetirizine",
+    "hydroxyzine/piperazine derivative review"
+   ],
+   "dose_unit": "tablet",
+   "mg_per_unit": 10,
+   "stocked_volume_ml": null
+  },
+  "MED-SAL100": {
+   "id": "MED-SAL100",
+   "generic": "Salbutamol",
+   "form": "pressurised metered-dose inhaler",
+   "strength": "100 micrograms/actuation",
+   "route": "inhaled",
+   "stocked": "200 actuations",
+   "allergy": [
+    "salbutamol"
+   ],
+   "dose_unit": "puff",
+   "mg_per_unit": 0.1,
+   "stocked_volume_ml": null
+  },
+  "MED-HC1": {
+   "id": "MED-HC1",
+   "generic": "Hydrocortisone",
+   "form": "cream",
+   "strength": "1% w/w = 10 mg/g",
+   "route": "topical",
+   "stocked": "15 g",
+   "allergy": [
+    "hydrocortisone",
+    "corticosteroid allergy review"
+   ],
+   "dose_unit": "application",
+   "mg_per_unit": null,
+   "stocked_volume_ml": null
+  }
+ },
+ "profiles": {
+  "CF-PAR-01": {
+   "medicine": "paracetamol",
+   "presentations": [
+    "MED-PAR120",
+    "MED-PAR250"
+   ],
+   "age_min_months": 3,
+   "age_max_months": 215,
+   "weight_max_kg": 40,
+   "weight_required": true,
+   "mg_per_kg_dose": [
+    10,
+    15
+   ],
+   "max_doses_day": 4,
+   "max_mg_per_kg_day": 60,
+   "duration": [
+    1,
+    3
+   ],
+   "clause": "CL-07, CL-08"
+  },
+  "CF-AMX-GAS-BID": {
+   "medicine": "amoxicillin",
+   "presentations": [
+    "MED-AMX125",
+    "MED-AMX250"
+   ],
+   "age_min_months": 36,
+   "age_max_months": 215,
+   "weight_required": true,
+   "indication": "confirmed_gas",
+   "mg_per_kg_dose_target": 25,
+   "cap_mg_dose": 500,
+   "cap_mg_day": 1000,
+   "doses_day_exact": 2,
+   "duration_exact": 10,
+   "tolerance_pct": 2,
+   "clause": "CL-07, CL-08"
+  },
+  "CF-CET-2TO5": {
+   "medicine": "cetirizine",
+   "presentations": [
+    "MED-CET1"
+   ],
+   "age_min_months": 24,
+   "age_max_months": 71,
+   "weight_required": false,
+   "mg_dose_exact": 2.5,
+   "doses_day_exact": 2,
+   "max_mg_day": 5,
+   "duration": [
+    1,
+    14
+   ],
+   "clause": "CL-07"
+  },
+  "CF-CET-6TO11": {
+   "medicine": "cetirizine",
+   "presentations": [
+    "MED-CET1"
+   ],
+   "age_min_months": 72,
+   "age_max_months": 143,
+   "weight_required": false,
+   "mg_dose_exact": 5,
+   "doses_day_exact": 2,
+   "max_mg_day": 10,
+   "duration": [
+    1,
+    14
+   ],
+   "clause": "CL-07"
+  },
+  "CF-CET-12TO17": {
+   "medicine": "cetirizine",
+   "presentations": [
+    "MED-CET1",
+    "MED-CET10"
+   ],
+   "age_min_months": 144,
+   "age_max_months": 215,
+   "weight_required": false,
+   "mg_dose_exact": 10,
+   "doses_day_exact": 1,
+   "max_mg_day": 10,
+   "duration": [
+    1,
+    14
+   ],
+   "clause": "CL-07"
+  },
+  "CF-SAL-ROUTINE": {
+   "medicine": "salbutamol",
+   "presentations": [
+    "MED-SAL100"
+   ],
+   "age_min_months": 72,
+   "age_max_months": 215,
+   "weight_required": false,
+   "puffs": [
+    1,
+    2
+   ],
+   "max_occasions_day": 4,
+   "max_puffs_day": 8,
+   "review_max_days": 30,
+   "clause": "CL-07"
+  },
+  "CF-HC-MANUAL": {
+   "medicine": "hydrocortisone",
+   "presentations": [
+    "MED-HC1"
+   ],
+   "weight_required": false,
+   "manual": true,
+   "clause": "CL-07"
+  }
+ },
+ "immunisation": [
+  {
+   "id": "IS-BCG-0",
+   "vaccine": "VAC-BCG",
+   "name": "BCG",
+   "dose": "single birth dose",
+   "target": "birth",
+   "channel": "maternity/public service; external history"
+  },
+  {
+   "id": "IS-HB-0",
+   "vaccine": "VAC-HEPB",
+   "name": "Hepatitis B",
+   "dose": "birth dose",
+   "target": "birth",
+   "channel": "maternity/public service; external history"
+  },
+  {
+   "id": "IS-HEX-1",
+   "vaccine": "VAC-HEX",
+   "name": "DTaP-IPV-HepB-Hib, six-in-one",
+   "dose": "primary dose 1",
+   "target": "2 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-HEX-2",
+   "vaccine": "VAC-HEX",
+   "name": "DTaP-IPV-HepB-Hib, six-in-one",
+   "dose": "primary dose 2",
+   "target": "3 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-PCV-1",
+   "vaccine": "VAC-PCV",
+   "name": "Pneumococcal conjugate",
+   "dose": "primary dose 1",
+   "target": "4 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-HEX-3",
+   "vaccine": "VAC-HEX",
+   "name": "DTaP-IPV-HepB-Hib, six-in-one",
+   "dose": "primary dose 3",
+   "target": "5 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-PCV-2",
+   "vaccine": "VAC-PCV",
+   "name": "Pneumococcal conjugate",
+   "dose": "primary dose 2",
+   "target": "6 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-MMR-1",
+   "vaccine": "VAC-MMR",
+   "name": "Measles, mumps, rubella",
+   "dose": "dose 1",
+   "target": "9 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-MMR-2",
+   "vaccine": "VAC-MMR",
+   "name": "Measles, mumps, rubella",
+   "dose": "dose 2",
+   "target": "12 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-PCV-B",
+   "vaccine": "VAC-PCV",
+   "name": "Pneumococcal conjugate",
+   "dose": "booster",
+   "target": "15 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-HEX-B",
+   "vaccine": "VAC-HEX",
+   "name": "DTaP-IPV-HepB-Hib, six-in-one",
+   "dose": "booster",
+   "target": "18 months",
+   "channel": "infant clinic"
+  },
+  {
+   "id": "IS-DT-SCHOOL",
+   "vaccine": "VAC-DT",
+   "name": "Diphtheria and tetanus",
+   "dose": "school booster",
+   "target": "age 7 / Year 1",
+   "channel": "school health service"
+  },
+  {
+   "id": "IS-HPV-SCHOOL",
+   "vaccine": "VAC-HPV",
+   "name": "Human papillomavirus",
+   "dose": "one routine programme dose",
+   "target": "girls age 12 / Year 6, from 1 January 2026",
+   "channel": "school health service"
+  },
+  {
+   "id": "IS-TT-SCHOOL",
+   "vaccine": "VAC-TT",
+   "name": "Tetanus toxoid",
+   "dose": "school booster",
+   "target": "age 15 / Form 3",
+   "channel": "school health service"
+  },
+  {
+   "id": "IS-MEASLES-SBH",
+   "vaccine": "VAC-MEASLES",
+   "name": "Measles, additional early dose",
+   "dose": "regional early dose",
+   "target": "6 months",
+   "channel": "Sabah programme only"
+  },
+  {
+   "id": "IS-JE-SWK-1",
+   "vaccine": "VAC-JE",
+   "name": "Japanese encephalitis",
+   "dose": "dose 1",
+   "target": "9 months",
+   "channel": "Sarawak programme only"
+  },
+  {
+   "id": "IS-JE-SWK-B",
+   "vaccine": "VAC-JE",
+   "name": "Japanese encephalitis",
+   "dose": "booster",
+   "target": "21 months",
+   "channel": "Sarawak programme only"
+  }
+ ],
+ "values": {
+  "weight_max_days": 30,
+  "utc_offset_hours": 8,
+  "demo_now_label": "Thursday 22 October 2026, 10:00 Malaysia time",
+  "demo_today": "2026-10-22"
+ },
+ "resources": [
+  {
+   "uri": "policy://clinic",
+   "name": "Clinic Policy",
+   "file": "Clinic Policy.md",
+   "restricted": null
+  },
+  {
+   "uri": "policy://clinical",
+   "name": "Clinical Policy",
+   "file": "Clinical Policy.md",
+   "restricted": null
+  },
+  {
+   "uri": "policy://operations",
+   "name": "Operations Policy",
+   "file": "Operations Policy.md",
+   "restricted": null
+  },
+  {
+   "uri": "policy://billing",
+   "name": "Billing Policy",
+   "file": "Billing Policy.md",
+   "restricted": null
+  },
+  {
+   "uri": "reference://fee-schedule",
+   "name": "Fee Schedule",
+   "file": "Fee Schedule.md",
+   "restricted": [
+    "FD-02-01",
+    "PD-01-01:lead"
+   ]
+  },
+  {
+   "uri": "reference://formulary",
+   "name": "Clinic Formulary",
+   "file": "Clinic Formulary.md",
+   "restricted": null
+  },
+  {
+   "uri": "reference://immunisation-schedule",
+   "name": "Immunisation Schedule",
+   "file": "Immunisation Schedule.md",
+   "restricted": null
+  },
+  {
+   "uri": "reference://clinic-hours-and-rota",
+   "name": "Clinic Hours and Rota",
+   "file": "Clinic Hours and Rota.md",
+   "restricted": null
+  }
+ ]
+}

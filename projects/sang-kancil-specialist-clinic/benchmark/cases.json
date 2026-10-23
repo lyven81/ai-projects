@@ -1,0 +1,4351 @@
+{
+ "now": 1792634400,
+ "now_label": "Thursday 22 October 2026, 10:00 Malaysia time",
+ "sample": [
+  "1.1",
+  "2.1",
+  "3.1",
+  "4.1",
+  "5.1",
+  "6.1",
+  "7.1"
+ ],
+ "cases": [
+  {
+   "id": "Q1.1-PD-01-01",
+   "group": "matrix",
+   "q": "1.1",
+   "category": "Patient records",
+   "sample": true,
+   "staff": "PD-01-01",
+   "message": "What is the diagnosis for Aiman, 4?",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "view": "clinical"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-05",
+   "record": "SK-P-0001 Aiman, Dr Daniel's patient; open visit today, swab-confirmed GAS",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied: no consult or cover open; lead capacity does not open another doctor's record (CP-03, CP-05); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q1.1-PD-02-01",
+   "group": "matrix",
+   "q": "1.1",
+   "category": "Patient records",
+   "sample": true,
+   "staff": "PD-02-01",
+   "message": "What is the diagnosis for Aiman, 4?",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "view": "clinical"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-05",
+   "record": "SK-P-0001 Aiman, Dr Daniel's patient; open visit today, swab-confirmed GAS",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: own patient, with the Basis line"
+    }
+   ]
+  },
+  {
+   "id": "Q1.1-PD-02-02",
+   "group": "matrix",
+   "q": "1.1",
+   "category": "Patient records",
+   "sample": true,
+   "staff": "PD-02-02",
+   "message": "What is the diagnosis for Aiman, 4?",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "view": "clinical"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-05",
+   "record": "SK-P-0001 Aiman, Dr Daniel's patient; open visit today, swab-confirmed GAS",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-05); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q1.1-FD-02-01",
+   "group": "matrix",
+   "q": "1.1",
+   "category": "Patient records",
+   "sample": true,
+   "staff": "FD-02-01",
+   "message": "What is the diagnosis for Aiman, 4?",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "view": "clinical"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-05",
+   "record": "SK-P-0001 Aiman, Dr Daniel's patient; open visit today, swab-confirmed GAS",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only (CP-05)"
+    }
+   ]
+  },
+  {
+   "id": "Q1.2-PD-01-01",
+   "group": "matrix",
+   "q": "1.2",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "What is the phone number of the mother of Hana, 15?",
+   "input": {
+    "patient": "Hana",
+    "age": "15",
+    "view": "contact"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-02",
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-04",
+   "record": "SK-P-0002 Hana, Dr Priya's patient; mother Wong Pei San",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied: no consult open (CP-04); names Dr Priya"
+    }
+   ]
+  },
+  {
+   "id": "Q1.2-PD-02-01",
+   "group": "matrix",
+   "q": "1.2",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "What is the phone number of the mother of Hana, 15?",
+   "input": {
+    "patient": "Hana",
+    "age": "15",
+    "view": "contact"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-02",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-04",
+   "record": "SK-P-0002 Hana, Dr Priya's patient; mother Wong Pei San",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-04); names Dr Priya"
+    }
+   ]
+  },
+  {
+   "id": "Q1.2-PD-02-02",
+   "group": "matrix",
+   "q": "1.2",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "What is the phone number of the mother of Hana, 15?",
+   "input": {
+    "patient": "Hana",
+    "age": "15",
+    "view": "contact"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-04",
+   "record": "SK-P-0002 Hana, Dr Priya's patient; mother Wong Pei San",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: contact the guardian for a clinical purpose (CP-04, OP-02)"
+    }
+   ]
+  },
+  {
+   "id": "Q1.2-FD-02-01",
+   "group": "matrix",
+   "q": "1.2",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "What is the phone number of the mother of Hana, 15?",
+   "input": {
+    "patient": "Hana",
+    "age": "15",
+    "view": "contact"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-04",
+   "record": "SK-P-0002 Hana, Dr Priya's patient; mother Wong Pei San",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: contact the guardian for an administrative task (CP-04, OP-02)"
+    }
+   ]
+  },
+  {
+   "id": "Q1.4-PD-01-01",
+   "group": "matrix",
+   "q": "1.4",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "List all patients with asthma.",
+   "input": {
+    "filter": "condition",
+    "value": "asthma"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "find_patients",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "scope": "every patient"
+   },
+   "clause": "CP-10",
+   "record": "Asthma in the child and adolescent bands; none among Dr Aisyah's infants",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read only: every patient, list fields only (CP-10)"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Read only: her own infants"
+    }
+   ]
+  },
+  {
+   "id": "Q1.4-PD-02-01",
+   "group": "matrix",
+   "q": "1.4",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "List all patients with asthma.",
+   "input": {
+    "filter": "condition",
+    "value": "asthma"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "find_patients",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "scope": "own patients"
+   },
+   "clause": "CP-10",
+   "record": "Asthma in the child and adolescent bands; none among Dr Aisyah's infants",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: own patients"
+    }
+   ]
+  },
+  {
+   "id": "Q1.4-PD-02-02",
+   "group": "matrix",
+   "q": "1.4",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "List all patients with asthma.",
+   "input": {
+    "filter": "condition",
+    "value": "asthma"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "find_patients",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "scope": "own patients"
+   },
+   "clause": "CP-10",
+   "record": "Asthma in the child and adolescent bands; none among Dr Aisyah's infants",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: own patients"
+    }
+   ]
+  },
+  {
+   "id": "Q1.4-FD-02-01",
+   "group": "matrix",
+   "q": "1.4",
+   "category": "Patient records",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "List all patients with asthma.",
+   "input": {
+    "filter": "condition",
+    "value": "asthma"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "not_offered": "find_patients",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-10",
+   "record": "Asthma in the child and adolescent bands; none among Dr Aisyah's infants",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: find_patients is for doctors (CP-10, CP-11)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.1-PD-01-01",
+   "group": "matrix",
+   "q": "2.1",
+   "category": "Appointments",
+   "sample": true,
+   "staff": "PD-01-01",
+   "message": "Book a follow-up in 2 weeks for Aiman, 4.",
+   "input": {
+    "action": "book",
+    "patient": "Aiman",
+    "age": "4",
+    "doctor": "PD-02-01",
+    "in_days": 14,
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "not_offered": "book_appointment",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-05, OP-07, OP-08",
+   "record": "Aiman's visit Monday 19 October 2026 with a 14-day follow-up; Dr Daniel free Monday 2 November 2026, 9:00am",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied: bookings are made by Nurul Huda (OP-05)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.1-PD-02-01",
+   "group": "matrix",
+   "q": "2.1",
+   "category": "Appointments",
+   "sample": true,
+   "staff": "PD-02-01",
+   "message": "Book a follow-up in 2 weeks for Aiman, 4.",
+   "input": {
+    "action": "book",
+    "patient": "Aiman",
+    "age": "4",
+    "doctor": "PD-02-01",
+    "in_days": 14,
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "not_offered": "book_appointment",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-05, OP-07, OP-08",
+   "record": "Aiman's visit Monday 19 October 2026 with a 14-day follow-up; Dr Daniel free Monday 2 November 2026, 9:00am",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: the booking status; cannot book (OP-05); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q2.1-PD-02-02",
+   "group": "matrix",
+   "q": "2.1",
+   "category": "Appointments",
+   "sample": true,
+   "staff": "PD-02-02",
+   "message": "Book a follow-up in 2 weeks for Aiman, 4.",
+   "input": {
+    "action": "book",
+    "patient": "Aiman",
+    "age": "4",
+    "doctor": "PD-02-01",
+    "in_days": 14,
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "not_offered": "book_appointment",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-05, OP-07, OP-08",
+   "record": "Aiman's visit Monday 19 October 2026 with a 14-day follow-up; Dr Daniel free Monday 2 November 2026, 9:00am",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: bookings are made by Nurul Huda (OP-05)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.1-FD-02-01",
+   "group": "matrix",
+   "q": "2.1",
+   "category": "Appointments",
+   "sample": true,
+   "staff": "FD-02-01",
+   "message": "Book a follow-up in 2 weeks for Aiman, 4.",
+   "input": {
+    "action": "book",
+    "patient": "Aiman",
+    "age": "4",
+    "doctor": "PD-02-01",
+    "in_days": 14,
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "book_appointment",
+      "status": "pending",
+      "code": null,
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 1,
+     "payments": 0
+    },
+    "booked": {
+     "doctor": "PD-02-01",
+     "date": "2026-11-02"
+    }
+   },
+   "clause": "OP-05, OP-07, OP-08",
+   "record": "Aiman's visit Monday 19 October 2026 with a 14-day follow-up; Dr Daniel free Monday 2 November 2026, 9:00am",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: book Dr Daniel's slot two weeks from the Mon 19 Oct encounter (Mon 2 Nov 2026, or his next session) as pending, stated as day, date and time; confirm with the mother (OP-05, OP-07, OP-08)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.2-PD-01-01",
+   "group": "matrix",
+   "q": "2.2",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Book Hana, 15, with Dr Daniel on Tuesday.",
+   "input": {
+    "action": "book",
+    "patient": "Hana",
+    "age": "15",
+    "doctor": "PD-02-01",
+    "date": "2026-10-27",
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "not_offered": "book_appointment",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-04 (amended 22 Oct)",
+   "record": "Hana, 15: band doctor Dr Priya; Dr Daniel sees 1 to 12",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read and follow up: assign Hana to Dr Priya or herself (OP-04, founder rule)"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Not in specialist capacity: the assistant asks her to act as lead (CP-03)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.2-PD-02-01",
+   "group": "matrix",
+   "q": "2.2",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Book Hana, 15, with Dr Daniel on Tuesday.",
+   "input": {
+    "action": "book",
+    "patient": "Hana",
+    "age": "15",
+    "doctor": "PD-02-01",
+    "date": "2026-10-27",
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "not_offered": "book_appointment",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-04 (amended 22 Oct)",
+   "record": "Hana, 15: band doctor Dr Priya; Dr Daniel sees 1 to 12",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: outside his band, and bookings are made by Nurul Huda (OP-04, OP-05)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.2-PD-02-02",
+   "group": "matrix",
+   "q": "2.2",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Book Hana, 15, with Dr Daniel on Tuesday.",
+   "input": {
+    "action": "book",
+    "patient": "Hana",
+    "age": "15",
+    "doctor": "PD-02-01",
+    "date": "2026-10-27",
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "not_offered": "book_appointment",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-04 (amended 22 Oct)",
+   "record": "Hana, 15: band doctor Dr Priya; Dr Daniel sees 1 to 12",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: Hana's appointments; cannot book (OP-05)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.2-FD-02-01",
+   "group": "matrix",
+   "q": "2.2",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Book Hana, 15, with Dr Daniel on Tuesday.",
+   "input": {
+    "action": "book",
+    "patient": "Hana",
+    "age": "15",
+    "doctor": "PD-02-01",
+    "date": "2026-10-27",
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "book_appointment",
+      "status": "pending",
+      "code": "doctor_assignment_requested",
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-04 (amended 22 Oct)",
+   "record": "Hana, 15: band doctor Dr Priya; Dr Daniel sees 1 to 12",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: Dr Daniel refused (OP-04); raise a doctor-assignment request to Dr Aisyah; book the doctor she assigns, pending, with day, date and time"
+    }
+   ]
+  },
+  {
+   "id": "Q2.4-PD-01-01",
+   "group": "matrix",
+   "q": "2.4",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Dr Daniel's Tuesday 27 Oct 2026 morning session is full. Ryan, 7, needs to be seen that morning.",
+   "input": {
+    "action": "raise",
+    "type": "overbooking",
+    "patient": "Ryan",
+    "age": "7",
+    "to": "PD-02-01",
+    "date": "2026-10-27",
+    "session": "AM",
+    "reason": "Needs to be seen that morning"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-09 (amended 22 Oct)",
+   "record": "Dr Daniel's Tuesday 27 October 2026 morning: 12 follow-ups, no free slot",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied: not involved; names Dr Daniel (OP-09)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.4-PD-02-01",
+   "group": "matrix",
+   "q": "2.4",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Dr Daniel's Tuesday 27 Oct 2026 morning session is full. Ryan, 7, needs to be seen that morning.",
+   "input": {
+    "action": "raise",
+    "type": "overbooking",
+    "patient": "Ryan",
+    "age": "7",
+    "to": "PD-02-01",
+    "date": "2026-10-27",
+    "session": "AM",
+    "reason": "Needs to be seen that morning"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-09 (amended 22 Oct)",
+   "record": "Dr Daniel's Tuesday 27 October 2026 morning: 12 follow-ups, no free slot",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: decide which slot he can allocate; Nurul Huda books it, pending (OP-09)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.4-PD-02-02",
+   "group": "matrix",
+   "q": "2.4",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Dr Daniel's Tuesday 27 Oct 2026 morning session is full. Ryan, 7, needs to be seen that morning.",
+   "input": {
+    "action": "raise",
+    "type": "overbooking",
+    "patient": "Ryan",
+    "age": "7",
+    "to": "PD-02-01",
+    "date": "2026-10-27",
+    "session": "AM",
+    "reason": "Needs to be seen that morning"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-09 (amended 22 Oct)",
+   "record": "Dr Daniel's Tuesday 27 October 2026 morning: 12 follow-ups, no free slot",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: not involved; names Dr Daniel (OP-09)"
+    }
+   ]
+  },
+  {
+   "id": "Q2.4-FD-02-01",
+   "group": "matrix",
+   "q": "2.4",
+   "category": "Appointments",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Dr Daniel's Tuesday 27 Oct 2026 morning session is full. Ryan, 7, needs to be seen that morning.",
+   "input": {
+    "action": "raise",
+    "type": "overbooking",
+    "patient": "Ryan",
+    "age": "7",
+    "to": "PD-02-01",
+    "date": "2026-10-27",
+    "session": "AM",
+    "reason": "Needs to be seen that morning"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-09 (amended 22 Oct)",
+   "record": "Dr Daniel's Tuesday 27 October 2026 morning: 12 follow-ups, no free slot",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: no booking; raise an overbooking request to Dr Daniel and wait for his decision (OP-09, founder rule)"
+    }
+   ]
+  },
+  {
+   "id": "Q3.1-PD-01-01",
+   "group": "matrix",
+   "q": "3.1",
+   "category": "Visits and prescriptions",
+   "sample": true,
+   "staff": "PD-01-01",
+   "message": "Give Aiman, 4, amoxicillin 250 mg/5 mL, 6 mL twice daily for 10 days.",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "lines": [
+     {
+      "medicine": "amoxicillin",
+      "strength": "250 mg/5 mL",
+      "amount_per_dose": 6,
+      "dose_unit": "mL",
+      "times_per_day": 2,
+      "duration_days": 10
+     }
+    ]
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "close_visit",
+      "status": "refused",
+      "code": "not_prescriber",
+      "names": "PD-02-01",
+      "capacity": "lead"
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-06 to CL-11",
+   "record": "Aiman 12.0 kg on 19 Oct; confirmed GAS on today's open visit; no known allergies (formulary fixture A)",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied (CL-06); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q3.1-PD-02-01",
+   "group": "matrix",
+   "q": "3.1",
+   "category": "Visits and prescriptions",
+   "sample": true,
+   "staff": "PD-02-01",
+   "message": "Give Aiman, 4, amoxicillin 250 mg/5 mL, 6 mL twice daily for 10 days.",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "lines": [
+     {
+      "medicine": "amoxicillin",
+      "strength": "250 mg/5 mL",
+      "amount_per_dose": 6,
+      "dose_unit": "mL",
+      "times_per_day": 2,
+      "duration_days": 10
+     }
+    ]
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "close_visit",
+      "status": "ok",
+      "code": null,
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 1,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-06 to CL-11",
+   "record": "Aiman 12.0 kg on 19 Oct; confirmed GAS on today's open visit; no known allergies (formulary fixture A)",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: record the prescription with close_visit after the checks pass; Nurul Huda gets dispense, prepare the bill and book the follow-up (CL-06 to CL-11)"
+    }
+   ]
+  },
+  {
+   "id": "Q3.1-PD-02-02",
+   "group": "matrix",
+   "q": "3.1",
+   "category": "Visits and prescriptions",
+   "sample": true,
+   "staff": "PD-02-02",
+   "message": "Give Aiman, 4, amoxicillin 250 mg/5 mL, 6 mL twice daily for 10 days.",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "lines": [
+     {
+      "medicine": "amoxicillin",
+      "strength": "250 mg/5 mL",
+      "amount_per_dose": 6,
+      "dose_unit": "mL",
+      "times_per_day": 2,
+      "duration_days": 10
+     }
+    ]
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "close_visit",
+      "status": "refused",
+      "code": "not_prescriber",
+      "names": "PD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-06 to CL-11",
+   "record": "Aiman 12.0 kg on 19 Oct; confirmed GAS on today's open visit; no known allergies (formulary fixture A)",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CL-06); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q3.1-FD-02-01",
+   "group": "matrix",
+   "q": "3.1",
+   "category": "Visits and prescriptions",
+   "sample": true,
+   "staff": "FD-02-01",
+   "message": "Give Aiman, 4, amoxicillin 250 mg/5 mL, 6 mL twice daily for 10 days.",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "lines": [
+     {
+      "medicine": "amoxicillin",
+      "strength": "250 mg/5 mL",
+      "amount_per_dose": 6,
+      "dose_unit": "mL",
+      "times_per_day": 2,
+      "duration_days": 10
+     }
+    ]
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "close_visit",
+      "staff": "PD-02-01",
+      "input": {
+       "patient": "Aiman",
+       "age": "4",
+       "lines": [
+        {
+         "medicine": "amoxicillin",
+         "strength": "250 mg/5 mL",
+         "amount_per_dose": 6,
+         "dose_unit": "mL",
+         "times_per_day": 2,
+         "duration_days": 10
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "notice": "dispense",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-06 to CL-11",
+   "record": "Aiman 12.0 kg on 19 Oct; confirmed GAS on today's open visit; no known allergies (formulary fixture A)",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: read Dr Daniel's instruction and dispense exactly as written; does not prescribe (CL-11)"
+    }
+   ]
+  },
+  {
+   "id": "Q3.4-PD-01-01",
+   "group": "matrix",
+   "q": "3.4",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Ryan, 7, needs a repeat inhaler.",
+   "input": {
+    "action": "raise",
+    "type": "repeat_prescription",
+    "patient": "Ryan",
+    "age": "7",
+    "question": "Needs a repeat inhaler"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": "lead"
+     },
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": "FD-02-01",
+      "capacity": "lead"
+     },
+     {
+      "tool": "close_visit",
+      "status": "refused",
+      "code": "not_prescriber",
+      "names": "PD-02-01",
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-10",
+   "record": "Ryan's routine salbutamol plan (SK-RX-00002); no open visit today",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied (CL-10); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q3.4-PD-02-01",
+   "group": "matrix",
+   "q": "3.4",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Ryan, 7, needs a repeat inhaler.",
+   "input": {
+    "action": "raise",
+    "type": "repeat_prescription",
+    "patient": "Ryan",
+    "age": "7",
+    "question": "Needs a repeat inhaler"
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "create_request",
+      "staff": "FD-02-01",
+      "input": {
+       "action": "raise",
+       "type": "repeat_prescription",
+       "patient": "Ryan",
+       "age": "7",
+       "question": "Guardian asks for another salbutamol inhaler"
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "notice": "repeat_prescription",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-10",
+   "record": "Ryan's routine salbutamol plan (SK-RX-00002); no open visit today",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: decide the request; a new inhaler only through close_visit for a valid encounter (CL-10)"
+    }
+   ]
+  },
+  {
+   "id": "Q3.4-PD-02-02",
+   "group": "matrix",
+   "q": "3.4",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Ryan, 7, needs a repeat inhaler.",
+   "input": {
+    "action": "raise",
+    "type": "repeat_prescription",
+    "patient": "Ryan",
+    "age": "7",
+    "question": "Needs a repeat inhaler"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": "FD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "close_visit",
+      "status": "refused",
+      "code": "not_prescriber",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-10",
+   "record": "Ryan's routine salbutamol plan (SK-RX-00002); no open visit today",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CL-10); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q3.4-FD-02-01",
+   "group": "matrix",
+   "q": "3.4",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Ryan, 7, needs a repeat inhaler.",
+   "input": {
+    "action": "raise",
+    "type": "repeat_prescription",
+    "patient": "Ryan",
+    "age": "7",
+    "question": "Needs a repeat inhaler"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-10",
+   "record": "Ryan's routine salbutamol plan (SK-RX-00002); no open visit today",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: raise a repeat-prescription request to Dr Daniel; nothing issued (CL-10)"
+    }
+   ]
+  },
+  {
+   "id": "Q3.5-PD-01-01",
+   "group": "matrix",
+   "q": "3.5",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Aiman's amoxicillin has been dispensed exactly as written. Mark it done.",
+   "input": null,
+   "setup": {
+    "calls": [
+     {
+      "tool": "close_visit",
+      "staff": "PD-02-01",
+      "input": {
+       "patient": "Aiman",
+       "age": "4",
+       "lines": [
+        {
+         "medicine": "amoxicillin",
+         "strength": "250 mg/5 mL",
+         "amount_per_dose": 6,
+         "dose_unit": "mL",
+         "times_per_day": 2,
+         "duration_days": 10
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "not_owner",
+      "names": "FD-02-01",
+      "capacity": "lead"
+     },
+     {
+      "tool": "list_my_actions",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": "lead"
+     },
+     {
+      "tool": "create_request",
+      "status": "error",
+      "code": "data_missing",
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "actions_done": 0
+   },
+   "clause": "CL-11, CP-13",
+   "record": "Dr Daniel's amoxicillin prescription recorded; Nurul Huda's dispense action open",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied (CP-13); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q3.5-PD-02-01",
+   "group": "matrix",
+   "q": "3.5",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Aiman's amoxicillin has been dispensed exactly as written. Mark it done.",
+   "input": null,
+   "setup": {
+    "calls": [
+     {
+      "tool": "close_visit",
+      "staff": "PD-02-01",
+      "input": {
+       "patient": "Aiman",
+       "age": "4",
+       "lines": [
+        {
+         "medicine": "amoxicillin",
+         "strength": "250 mg/5 mL",
+         "amount_per_dose": 6,
+         "dose_unit": "mL",
+         "times_per_day": 2,
+         "duration_days": 10
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "not_owner",
+      "names": "FD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "list_my_actions",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     },
+     {
+      "tool": "create_request",
+      "status": "error",
+      "code": "data_missing",
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "actions_done": 0
+   },
+   "clause": "CL-11, CP-13",
+   "record": "Dr Daniel's amoxicillin prescription recorded; Nurul Huda's dispense action open",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: the prescription; cannot complete Nurul Huda's action (CP-13)"
+    }
+   ]
+  },
+  {
+   "id": "Q3.5-PD-02-02",
+   "group": "matrix",
+   "q": "3.5",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Aiman's amoxicillin has been dispensed exactly as written. Mark it done.",
+   "input": null,
+   "setup": {
+    "calls": [
+     {
+      "tool": "close_visit",
+      "staff": "PD-02-01",
+      "input": {
+       "patient": "Aiman",
+       "age": "4",
+       "lines": [
+        {
+         "medicine": "amoxicillin",
+         "strength": "250 mg/5 mL",
+         "amount_per_dose": 6,
+         "dose_unit": "mL",
+         "times_per_day": 2,
+         "duration_days": 10
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "not_owner",
+      "names": "FD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "list_my_actions",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "create_request",
+      "status": "error",
+      "code": "data_missing",
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "actions_done": 0
+   },
+   "clause": "CL-11, CP-13",
+   "record": "Dr Daniel's amoxicillin prescription recorded; Nurul Huda's dispense action open",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-13); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q3.5-FD-02-01",
+   "group": "matrix",
+   "q": "3.5",
+   "category": "Visits and prescriptions",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Aiman's amoxicillin has been dispensed exactly as written. Mark it done.",
+   "input": null,
+   "setup": {
+    "calls": [
+     {
+      "tool": "close_visit",
+      "staff": "PD-02-01",
+      "input": {
+       "patient": "Aiman",
+       "age": "4",
+       "lines": [
+        {
+         "medicine": "amoxicillin",
+         "strength": "250 mg/5 mL",
+         "amount_per_dose": 6,
+         "dose_unit": "mL",
+         "times_per_day": 2,
+         "duration_days": 10
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "actions_done": 1
+   },
+   "clause": "CL-11, CP-13",
+   "record": "Dr Daniel's amoxicillin prescription recorded; Nurul Huda's dispense action open",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: record dispensing as done through her action (CL-11)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.1-PD-01-01",
+   "group": "matrix",
+   "q": "4.1",
+   "category": "Vaccinations and recalls",
+   "sample": true,
+   "staff": "PD-01-01",
+   "message": "Which vaccines are due for Mei Xin, 6?",
+   "input": {
+    "patient": "Mei Xin",
+    "age": "6",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-06, CL-13",
+   "record": "SK-P-0003 Mei Xin: complete history, PCV booster not given (target Monday 10 May 2021)",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied: no consult or cover open (CP-06); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q4.1-PD-02-01",
+   "group": "matrix",
+   "q": "4.1",
+   "category": "Vaccinations and recalls",
+   "sample": true,
+   "staff": "PD-02-01",
+   "message": "Which vaccines are due for Mei Xin, 6?",
+   "input": {
+    "patient": "Mei Xin",
+    "age": "6",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-06, CL-13",
+   "record": "SK-P-0003 Mei Xin: complete history, PCV booster not given (target Monday 10 May 2021)",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: PCV booster past its routine target of 10 May 2021, decide catch-up; school DT not yet due (CL-13, IS fixture A)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.1-PD-02-02",
+   "group": "matrix",
+   "q": "4.1",
+   "category": "Vaccinations and recalls",
+   "sample": true,
+   "staff": "PD-02-02",
+   "message": "Which vaccines are due for Mei Xin, 6?",
+   "input": {
+    "patient": "Mei Xin",
+    "age": "6",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-06, CL-13",
+   "record": "SK-P-0003 Mei Xin: complete history, PCV booster not given (target Monday 10 May 2021)",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: no consult or cover open (CP-06); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q4.1-FD-02-01",
+   "group": "matrix",
+   "q": "4.1",
+   "category": "Vaccinations and recalls",
+   "sample": true,
+   "staff": "FD-02-01",
+   "message": "Which vaccines are due for Mei Xin, 6?",
+   "input": {
+    "patient": "Mei Xin",
+    "age": "6",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-06, CL-13",
+   "record": "SK-P-0003 Mei Xin: complete history, PCV booster not given (target Monday 10 May 2021)",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: the same status; coordinate the recall (CP-06, OP-11)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.2-PD-01-01",
+   "group": "matrix",
+   "q": "4.2",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Who is late for vaccines?",
+   "input": {
+    "filter": "vaccine_overdue"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "find_patients",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": "specialist"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "scope": "own patients"
+   },
+   "clause": "CP-10, OP-11",
+   "record": "Past-target patients in every band",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Read only: her own infants; panel-only even as lead (CP-10)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.2-PD-02-01",
+   "group": "matrix",
+   "q": "4.2",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Who is late for vaccines?",
+   "input": {
+    "filter": "vaccine_overdue"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "find_patients",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "scope": "own patients"
+   },
+   "clause": "CP-10, OP-11",
+   "record": "Past-target patients in every band",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: own patients (CP-10)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.2-PD-02-02",
+   "group": "matrix",
+   "q": "4.2",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Who is late for vaccines?",
+   "input": {
+    "filter": "vaccine_overdue"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "find_patients",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "scope": "own patients"
+   },
+   "clause": "CP-10, OP-11",
+   "record": "Past-target patients in every band",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: own patients (CP-10)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.2-FD-02-01",
+   "group": "matrix",
+   "q": "4.2",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Who is late for vaccines?",
+   "input": {
+    "filter": "vaccine_overdue"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "list_my_actions",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "not_offered": "find_patients",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-10, OP-11",
+   "record": "Past-target patients in every band",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: find_patients not offered; works from her vaccine recall items (OP-11)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.4-PD-01-01",
+   "group": "matrix",
+   "q": "4.4",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Ryan, 7, has no vaccination records from before he joined us. Is he overdue?",
+   "input": {
+    "patient": "Ryan",
+    "age": "7",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-13",
+   "record": "SK-P-0004 Ryan: history before February 2024 not on record",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied (CP-06); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q4.4-PD-02-01",
+   "group": "matrix",
+   "q": "4.4",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Ryan, 7, has no vaccination records from before he joined us. Is he overdue?",
+   "input": {
+    "patient": "Ryan",
+    "age": "7",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-13",
+   "record": "SK-P-0004 Ryan: history before February 2024 not on record",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: history unverified, not counted as overdue; decide the next step (CL-13)"
+    }
+   ]
+  },
+  {
+   "id": "Q4.4-PD-02-02",
+   "group": "matrix",
+   "q": "4.4",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Ryan, 7, has no vaccination records from before he joined us. Is he overdue?",
+   "input": {
+    "patient": "Ryan",
+    "age": "7",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-13",
+   "record": "SK-P-0004 Ryan: history before February 2024 not on record",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-06); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q4.4-FD-02-01",
+   "group": "matrix",
+   "q": "4.4",
+   "category": "Vaccinations and recalls",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Ryan, 7, has no vaccination records from before he joined us. Is he overdue?",
+   "input": {
+    "patient": "Ryan",
+    "age": "7",
+    "view": "vaccinations"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-13",
+   "record": "SK-P-0004 Ryan: history before February 2024 not on record",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: obtain and verify the missing records"
+    }
+   ]
+  },
+  {
+   "id": "Q5.1-PD-01-01",
+   "group": "matrix",
+   "q": "5.1",
+   "category": "Requests and escalation",
+   "sample": true,
+   "staff": "PD-01-01",
+   "message": "Ask Dr Aisyah about the headaches of Hana, 15.",
+   "input": {
+    "action": "raise",
+    "type": "consult",
+    "patient": "Hana",
+    "age": "15",
+    "question": "Recurrent headaches"
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "create_request",
+      "staff": "PD-02-02",
+      "input": {
+       "action": "raise",
+       "type": "consult",
+       "patient": "Hana",
+       "age": "15",
+       "question": "recurrent headaches"
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "notice": "consult",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-05, CP-12",
+   "record": "Hana, Dr Priya's patient; recurrent headaches",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read and follow up: receives the consult note in her actions, reporting what happened; reads Hana's record while it is open and records her advice (CL-05, CP-07, founder rule)"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied: consults are answered as lead; she does not raise one (CP-12)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.1-PD-02-01",
+   "group": "matrix",
+   "q": "5.1",
+   "category": "Requests and escalation",
+   "sample": true,
+   "staff": "PD-02-01",
+   "message": "Ask Dr Aisyah about the headaches of Hana, 15.",
+   "input": {
+    "action": "raise",
+    "type": "consult",
+    "patient": "Hana",
+    "age": "15",
+    "question": "Recurrent headaches"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": "PD-02-02",
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-02-02",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-05, CP-12",
+   "record": "Hana, Dr Priya's patient; recurrent headaches",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: not his patient (CL-05)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.1-PD-02-02",
+   "group": "matrix",
+   "q": "5.1",
+   "category": "Requests and escalation",
+   "sample": true,
+   "staff": "PD-02-02",
+   "message": "Ask Dr Aisyah about the headaches of Hana, 15.",
+   "input": {
+    "action": "raise",
+    "type": "consult",
+    "patient": "Hana",
+    "age": "15",
+    "question": "Recurrent headaches"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-05, CP-12",
+   "record": "Hana, Dr Priya's patient; recurrent headaches",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: raise the consult to Dr Aisyah with the question (CL-05)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.1-FD-02-01",
+   "group": "matrix",
+   "q": "5.1",
+   "category": "Requests and escalation",
+   "sample": true,
+   "staff": "FD-02-01",
+   "message": "Ask Dr Aisyah about the headaches of Hana, 15.",
+   "input": {
+    "action": "raise",
+    "type": "consult",
+    "patient": "Hana",
+    "age": "15",
+    "question": "Recurrent headaches"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": null,
+      "capacity": null
+     },
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-02-02",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": [
+      0,
+      1
+     ],
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-05, CP-12",
+   "record": "Hana, Dr Priya's patient; recurrent headaches",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: consults are doctor to lead; offer a callback request to Dr Priya (CL-10)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.3-PD-01-01",
+   "group": "matrix",
+   "q": "5.3",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Baby Adam, 11 months, turns 1 on Tuesday 27 Oct 2026. Hand him over to Dr Daniel.",
+   "input": {
+    "action": "raise",
+    "type": "handover",
+    "patient": "Adam",
+    "to": "PD-02-01",
+    "reason": "Age band change: turns 1 on Tuesday 27 October 2026"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-02-01",
+      "capacity": "specialist"
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-01, CL-02",
+   "record": "SK-P-0005 Adam, born Monday 27 October 2025, Dr Aisyah's patient",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Read and follow up: send the handover to Dr Daniel with the reason and the birthday date; capacity recorded as specialist (CL-02)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.3-PD-02-01",
+   "group": "matrix",
+   "q": "5.3",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Baby Adam, 11 months, turns 1 on Tuesday 27 Oct 2026. Hand him over to Dr Daniel.",
+   "input": {
+    "action": "raise",
+    "type": "handover",
+    "patient": "Adam",
+    "to": "PD-02-01",
+    "reason": "Age band change: turns 1 on Tuesday 27 October 2026"
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "create_request",
+      "staff": "PD-01-01",
+      "input": {
+       "action": "raise",
+       "type": "handover",
+       "patient": "Adam",
+       "to": "PD-02-01",
+       "reason": "Age band change: turns 1 on Tuesday 27 October 2026"
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "notice": "handover",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-01, CL-02",
+   "record": "SK-P-0005 Adam, born Monday 27 October 2025, Dr Aisyah's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: receives the handover notification in his actions; accepts or declines; doctor of record changes on acceptance (CL-02, founder rule)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.3-PD-02-02",
+   "group": "matrix",
+   "q": "5.3",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Baby Adam, 11 months, turns 1 on Tuesday 27 Oct 2026. Hand him over to Dr Daniel.",
+   "input": {
+    "action": "raise",
+    "type": "handover",
+    "patient": "Adam",
+    "to": "PD-02-01",
+    "reason": "Age band change: turns 1 on Tuesday 27 October 2026"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": "PD-01-01",
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "not_attending",
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-01, CL-02",
+   "record": "SK-P-0005 Adam, born Monday 27 October 2025, Dr Aisyah's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CL-02); names Dr Aisyah"
+    }
+   ]
+  },
+  {
+   "id": "Q5.3-FD-02-01",
+   "group": "matrix",
+   "q": "5.3",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Baby Adam, 11 months, turns 1 on Tuesday 27 Oct 2026. Hand him over to Dr Daniel.",
+   "input": {
+    "action": "raise",
+    "type": "handover",
+    "patient": "Adam",
+    "to": "PD-02-01",
+    "reason": "Age band change: turns 1 on Tuesday 27 October 2026"
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "create_request",
+      "staff": "PD-01-01",
+      "input": {
+       "action": "raise",
+       "type": "handover",
+       "patient": "Adam",
+       "to": "PD-02-01",
+       "reason": "Age band change: turns 1 on Tuesday 27 October 2026"
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "list_my_actions",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-01, CL-02",
+   "record": "SK-P-0005 Adam, born Monday 27 October 2025, Dr Aisyah's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: the handover, for case management (CP-13, founder rule)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.5-PD-01-01",
+   "group": "matrix",
+   "q": "5.5",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Dr Daniel is on leave on Friday 23 Oct 2026. Ask Dr Aisyah to cover his patients.",
+   "input": {
+    "action": "raise",
+    "type": "cover",
+    "patients_of": "PD-02-01",
+    "cover_doctor": "PD-01-01",
+    "from": "2026-10-23",
+    "to_date": "2026-10-23",
+    "reason": "Leave on Friday 23 October 2026"
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "create_request",
+      "staff": "PD-02-01",
+      "input": {
+       "action": "raise",
+       "type": "cover",
+       "patients_of": "PD-02-01",
+       "cover_doctor": "PD-01-01",
+       "from": "2026-10-23",
+       "to_date": "2026-10-23",
+       "reason": "Annual leave on Friday 23 October 2026"
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "notice": "cover",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-04, CP-07, CP-12",
+   "record": "Dr Daniel's patients; cover for Friday 23 October 2026",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read and follow up: receives the leave and cover notification in her actions; approves it; covers his patients on the approved date only (CL-04, CP-07, founder rule)"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied: the doctor who needs cover raises it (CP-12); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q5.5-PD-02-01",
+   "group": "matrix",
+   "q": "5.5",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Dr Daniel is on leave on Friday 23 Oct 2026. Ask Dr Aisyah to cover his patients.",
+   "input": {
+    "action": "raise",
+    "type": "cover",
+    "patients_of": "PD-02-01",
+    "cover_doctor": "PD-01-01",
+    "from": "2026-10-23",
+    "to_date": "2026-10-23",
+    "reason": "Leave on Friday 23 October 2026"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-04, CP-07, CP-12",
+   "record": "Dr Daniel's patients; cover for Friday 23 October 2026",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: raise a cover request to Dr Aisyah naming the patients, Friday 23 Oct 2026 and the reason (CL-04)"
+    }
+   ]
+  },
+  {
+   "id": "Q5.5-PD-02-02",
+   "group": "matrix",
+   "q": "5.5",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Dr Daniel is on leave on Friday 23 Oct 2026. Ask Dr Aisyah to cover his patients.",
+   "input": {
+    "action": "raise",
+    "type": "cover",
+    "patients_of": "PD-02-01",
+    "cover_doctor": "PD-01-01",
+    "from": "2026-10-23",
+    "to_date": "2026-10-23",
+    "reason": "Leave on Friday 23 October 2026"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-04, CP-07, CP-12",
+   "record": "Dr Daniel's patients; cover for Friday 23 October 2026",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: the doctor who needs cover raises it (CP-12); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q5.5-FD-02-01",
+   "group": "matrix",
+   "q": "5.5",
+   "category": "Requests and escalation",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Dr Daniel is on leave on Friday 23 Oct 2026. Ask Dr Aisyah to cover his patients.",
+   "input": {
+    "action": "raise",
+    "type": "cover",
+    "patients_of": "PD-02-01",
+    "cover_doctor": "PD-01-01",
+    "from": "2026-10-23",
+    "to_date": "2026-10-23",
+    "reason": "Leave on Friday 23 October 2026"
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "create_request",
+      "staff": "PD-02-01",
+      "input": {
+       "action": "raise",
+       "type": "cover",
+       "patients_of": "PD-02-01",
+       "cover_doctor": "PD-01-01",
+       "from": "2026-10-23",
+       "to_date": "2026-10-23",
+       "reason": "Annual leave on Friday 23 October 2026"
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "list_my_actions",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     },
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-04, CP-07, CP-12",
+   "record": "Dr Daniel's patients; cover for Friday 23 October 2026",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: the cover, for file management (CP-13, founder rule)"
+    }
+   ]
+  },
+  {
+   "id": "Q6.1-PD-01-01",
+   "group": "matrix",
+   "q": "6.1",
+   "category": "Billing",
+   "sample": true,
+   "staff": "PD-01-01",
+   "message": "How much does Arjun, 9, owe?",
+   "input": {
+    "patient": "Arjun",
+    "age": "9",
+    "view": "billing"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-09, BP-03",
+   "record": "SK-P-0006 Arjun: invoice SK-INV-00008, RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read only: RM 185.00, with the invoice and the data time (CP-09, BP-03)"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied: specialist capacity has no billing (CP-09)"
+    }
+   ]
+  },
+  {
+   "id": "Q6.1-PD-02-01",
+   "group": "matrix",
+   "q": "6.1",
+   "category": "Billing",
+   "sample": true,
+   "staff": "PD-02-01",
+   "message": "How much does Arjun, 9, owe?",
+   "input": {
+    "patient": "Arjun",
+    "age": "9",
+    "view": "billing"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "billing_not_permitted",
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-09, BP-03",
+   "record": "SK-P-0006 Arjun: invoice SK-INV-00008, RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q6.1-PD-02-02",
+   "group": "matrix",
+   "q": "6.1",
+   "category": "Billing",
+   "sample": true,
+   "staff": "PD-02-02",
+   "message": "How much does Arjun, 9, owe?",
+   "input": {
+    "patient": "Arjun",
+    "age": "9",
+    "view": "billing"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "billing_not_permitted",
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-09, BP-03",
+   "record": "SK-P-0006 Arjun: invoice SK-INV-00008, RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q6.1-FD-02-01",
+   "group": "matrix",
+   "q": "6.1",
+   "category": "Billing",
+   "sample": true,
+   "staff": "FD-02-01",
+   "message": "How much does Arjun, 9, owe?",
+   "input": {
+    "patient": "Arjun",
+    "age": "9",
+    "view": "billing"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "ok",
+      "code": null,
+      "names": null,
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-09, BP-03",
+   "record": "SK-P-0006 Arjun: invoice SK-INV-00008, RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: RM 185.00, with the invoice and the data time (CP-09, BP-03)"
+    }
+   ]
+  },
+  {
+   "id": "Q6.3-PD-01-01",
+   "group": "matrix",
+   "q": "6.3",
+   "category": "Billing",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "A vaccination-only visit gives one MMR dose. What do we charge?",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "resource": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_has": [
+     "95"
+    ]
+   },
+   "clause": "Fee Schedule FS-C05, FS-V03; section 5",
+   "record": "Fee Schedule: MMR RM 95.00 including the vaccination-only assessment",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read only: RM 95.00"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied: the Fee Schedule is restricted (FS section 5)"
+    }
+   ]
+  },
+  {
+   "id": "Q6.3-PD-02-01",
+   "group": "matrix",
+   "q": "6.3",
+   "category": "Billing",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "A vaccination-only visit gives one MMR dose. What do we charge?",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "resource": false,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_not": [
+     "RM 95"
+    ]
+   },
+   "clause": "Fee Schedule FS-C05, FS-V03; section 5",
+   "record": "Fee Schedule: MMR RM 95.00 including the vaccination-only assessment",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: the Fee Schedule is restricted (FS section 5)"
+    }
+   ]
+  },
+  {
+   "id": "Q6.3-PD-02-02",
+   "group": "matrix",
+   "q": "6.3",
+   "category": "Billing",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "A vaccination-only visit gives one MMR dose. What do we charge?",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "resource": false,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_not": [
+     "RM 95"
+    ]
+   },
+   "clause": "Fee Schedule FS-C05, FS-V03; section 5",
+   "record": "Fee Schedule: MMR RM 95.00 including the vaccination-only assessment",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied: the Fee Schedule is restricted (FS section 5)"
+    }
+   ]
+  },
+  {
+   "id": "Q6.3-FD-02-01",
+   "group": "matrix",
+   "q": "6.3",
+   "category": "Billing",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "A vaccination-only visit gives one MMR dose. What do we charge?",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "resource": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_has": [
+     "95"
+    ]
+   },
+   "clause": "Fee Schedule FS-C05, FS-V03; section 5",
+   "record": "Fee Schedule: MMR RM 95.00 including the vaccination-only assessment",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: RM 95.00, no consultation charge (FS-C05, FS-V03); prepare the bill"
+    }
+   ]
+  },
+  {
+   "id": "Q6.4-PD-01-01",
+   "group": "matrix",
+   "q": "6.4",
+   "category": "Billing",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Waive the RM 60 fee for Arjun, 9.",
+   "input": {
+    "action": "raise",
+    "type": "fee_waiver",
+    "patient": "Arjun",
+    "age": "9",
+    "amount_rm": 60,
+    "invoice_id": "SK-INV-00008"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "ok",
+      "code": null,
+      "names": "FD-02-01",
+      "capacity": "lead"
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "BP-07, CP-12",
+   "record": "Arjun's invoice line FS-C04, RM 60.00",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read and follow up: decide the request once Nurul Huda raises it; none raised yet (BP-07)"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q6.4-PD-02-01",
+   "group": "matrix",
+   "q": "6.4",
+   "category": "Billing",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Waive the RM 60 fee for Arjun, 9.",
+   "input": {
+    "action": "raise",
+    "type": "fee_waiver",
+    "patient": "Arjun",
+    "age": "9",
+    "amount_rm": 60,
+    "invoice_id": "SK-INV-00008"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": "FD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "billing_not_permitted",
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "BP-07, CP-12",
+   "record": "Arjun's invoice line FS-C04, RM 60.00",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q6.4-PD-02-02",
+   "group": "matrix",
+   "q": "6.4",
+   "category": "Billing",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Waive the RM 60 fee for Arjun, 9.",
+   "input": {
+    "action": "raise",
+    "type": "fee_waiver",
+    "patient": "Arjun",
+    "age": "9",
+    "amount_rm": 60,
+    "invoice_id": "SK-INV-00008"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "refused",
+      "code": "request_not_permitted",
+      "names": "FD-02-01",
+      "capacity": null
+     },
+     {
+      "tool": "retrieve_patient_record",
+      "status": "refused",
+      "code": "billing_not_permitted",
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "BP-07, CP-12",
+   "record": "Arjun's invoice line FS-C04, RM 60.00",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q6.4-FD-02-01",
+   "group": "matrix",
+   "q": "6.4",
+   "category": "Billing",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Waive the RM 60 fee for Arjun, 9.",
+   "input": {
+    "action": "raise",
+    "type": "fee_waiver",
+    "patient": "Arjun",
+    "age": "9",
+    "amount_rm": 60,
+    "invoice_id": "SK-INV-00008"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "BP-07, CP-12",
+   "record": "Arjun's invoice line FS-C04, RM 60.00",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: raise a fee-waiver request to Dr Aisyah (BP-07)"
+    }
+   ]
+  },
+  {
+   "id": "Q7.1-PD-01-01",
+   "group": "matrix",
+   "q": "7.1",
+   "category": "Policy gaps",
+   "sample": true,
+   "staff": "PD-01-01",
+   "message": "Arjun's father has an insurer's guarantee letter. Accept it instead of payment today.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "billing",
+    "patient": "Arjun",
+    "age": "9",
+    "question": "accepting an insurer's guarantee letter instead of payment today"
+   },
+   "setup": {
+    "calls": [
+     {
+      "tool": "create_request",
+      "staff": "FD-02-01",
+      "input": {
+       "action": "raise",
+       "type": "policy_question",
+       "topic": "billing",
+       "patient": "Arjun",
+       "age": "9",
+       "question": "accepting an insurer's guarantee letter instead of payment today"
+      }
+     }
+    ]
+   },
+   "faults": {},
+   "expect": {
+    "notice": "policy_question",
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: BP-01 to BP-08 define none",
+   "record": "Arjun's RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read and follow up: set the guarantee-letter rule as policy owner, outside the assistant"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q7.1-PD-02-01",
+   "group": "matrix",
+   "q": "7.1",
+   "category": "Policy gaps",
+   "sample": true,
+   "staff": "PD-02-01",
+   "message": "Arjun's father has an insurer's guarantee letter. Accept it instead of payment today.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "billing",
+    "patient": "Arjun",
+    "age": "9",
+    "question": "accepting an insurer's guarantee letter instead of payment today"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_names": [
+     "Nurul"
+    ]
+   },
+   "clause": "No rule: BP-01 to BP-08 define none",
+   "record": "Arjun's RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q7.1-PD-02-02",
+   "group": "matrix",
+   "q": "7.1",
+   "category": "Policy gaps",
+   "sample": true,
+   "staff": "PD-02-02",
+   "message": "Arjun's father has an insurer's guarantee letter. Accept it instead of payment today.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "billing",
+    "patient": "Arjun",
+    "age": "9",
+    "question": "accepting an insurer's guarantee letter instead of payment today"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_names": [
+     "Nurul"
+    ]
+   },
+   "clause": "No rule: BP-01 to BP-08 define none",
+   "record": "Arjun's RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-09); names Nurul Huda"
+    }
+   ]
+  },
+  {
+   "id": "Q7.1-FD-02-01",
+   "group": "matrix",
+   "q": "7.1",
+   "category": "Policy gaps",
+   "sample": true,
+   "staff": "FD-02-01",
+   "message": "Arjun's father has an insurer's guarantee letter. Accept it instead of payment today.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "billing",
+    "patient": "Arjun",
+    "age": "9",
+    "question": "accepting an insurer's guarantee letter instead of payment today"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: BP-01 to BP-08 define none",
+   "record": "Arjun's RM 185.00 outstanding",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: verify the letter; no rule covers it, so refer the acceptance to Dr Aisyah; nothing recorded as paid"
+    }
+   ]
+  },
+  {
+   "id": "Q7.2-PD-01-01",
+   "group": "matrix",
+   "q": "7.2",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Hana's separated parents disagree on who may see her records. Whose instruction do we follow?",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "disclosure",
+    "patient": "Hana",
+    "age": "15",
+    "question": "separated parents disagree on who may see Hana's records"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: OP-01, CL-15 cover verification and disclosure only",
+   "record": "Hana's registered guardian: mother",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read and follow up: decide with Dr Priya outside the assistant; confidential notes still need CP-08"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied (CP-04); names Dr Priya"
+    }
+   ]
+  },
+  {
+   "id": "Q7.2-PD-02-01",
+   "group": "matrix",
+   "q": "7.2",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Hana's separated parents disagree on who may see her records. Whose instruction do we follow?",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "disclosure",
+    "patient": "Hana",
+    "age": "15",
+    "question": "separated parents disagree on who may see Hana's records"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_names": [
+     "Priya"
+    ]
+   },
+   "clause": "No rule: OP-01, CL-15 cover verification and disclosure only",
+   "record": "Hana's registered guardian: mother",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied (CP-04); names Dr Priya"
+    }
+   ]
+  },
+  {
+   "id": "Q7.2-PD-02-02",
+   "group": "matrix",
+   "q": "7.2",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Hana's separated parents disagree on who may see her records. Whose instruction do we follow?",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "disclosure",
+    "patient": "Hana",
+    "age": "15",
+    "question": "separated parents disagree on who may see Hana's records"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: OP-01, CL-15 cover verification and disclosure only",
+   "record": "Hana's registered guardian: mother",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: review Hana's confidentiality; refer the disclosure question to Dr Aisyah (CL-15)"
+    }
+   ]
+  },
+  {
+   "id": "Q7.2-FD-02-01",
+   "group": "matrix",
+   "q": "7.2",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Hana's separated parents disagree on who may see her records. Whose instruction do we follow?",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "disclosure",
+    "patient": "Hana",
+    "age": "15",
+    "question": "separated parents disagree on who may see Hana's records"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: OP-01, CL-15 cover verification and disclosure only",
+   "record": "Hana's registered guardian: mother",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: verify the guardian records in the clinic system; release nothing (OP-01)"
+    }
+   ]
+  },
+  {
+   "id": "Q7.3-PD-01-01",
+   "group": "matrix",
+   "q": "7.3",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Aiman's mother asks for a video consultation for Aiman, 4.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "service",
+    "patient": "Aiman",
+    "age": "4",
+    "question": "a video consultation for Aiman"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: no video service or fee defined",
+   "record": "Aiman, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": "specialist and lead",
+     "text": "Access denied to Aiman's record (CP-05); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q7.3-PD-02-01",
+   "group": "matrix",
+   "q": "7.3",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Aiman's mother asks for a video consultation for Aiman, 4.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "service",
+    "patient": "Aiman",
+    "age": "4",
+    "question": "a video consultation for Aiman"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "any_of": [
+     {
+      "tool": "create_request",
+      "status": "pending",
+      "code": null,
+      "names": "PD-01-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 1,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: no video service or fee defined",
+   "record": "Aiman, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: decide suitability; no video service or fee is defined, so refer the service question to Dr Aisyah as policy owner (founder rule)"
+    }
+   ]
+  },
+  {
+   "id": "Q7.3-PD-02-02",
+   "group": "matrix",
+   "q": "7.3",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Aiman's mother asks for a video consultation for Aiman, 4.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "service",
+    "patient": "Aiman",
+    "age": "4",
+    "question": "a video consultation for Aiman"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_names": [
+     "Daniel"
+    ]
+   },
+   "clause": "No rule: no video service or fee defined",
+   "record": "Aiman, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied to Aiman's record (CP-05); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q7.3-FD-02-01",
+   "group": "matrix",
+   "q": "7.3",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Aiman's mother asks for a video consultation for Aiman, 4.",
+   "input": {
+    "action": "raise",
+    "type": "policy_question",
+    "topic": "service",
+    "patient": "Aiman",
+    "age": "4",
+    "question": "a video consultation for Aiman"
+   },
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_names": [
+     "Daniel"
+    ]
+   },
+   "clause": "No rule: no video service or fee defined",
+   "record": "Aiman, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: no video service defined; names Dr Daniel (founder rule)"
+    }
+   ]
+  },
+  {
+   "id": "Q7.5-PD-01-01",
+   "group": "matrix",
+   "q": "7.5",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-01-01",
+   "message": "Mei Xin's mother asks for a medical certificate for school. Issue one.",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: no certificate rule or tool (CL-14)",
+   "record": "Mei Xin, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": "lead",
+     "text": "Read and follow up: set the certificate rule as policy owner"
+    },
+    {
+     "capacity": "specialist",
+     "text": "Access denied to Mei Xin's record (CP-05); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q7.5-PD-02-01",
+   "group": "matrix",
+   "q": "7.5",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-02-01",
+   "message": "Mei Xin's mother asks for a medical certificate for school. Issue one.",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "No rule: no certificate rule or tool (CL-14)",
+   "record": "Mei Xin, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read and follow up: the clinical decision is his, outside the assistant; no certificate tool or rule (CL-14)"
+    }
+   ]
+  },
+  {
+   "id": "Q7.5-PD-02-02",
+   "group": "matrix",
+   "q": "7.5",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "PD-02-02",
+   "message": "Mei Xin's mother asks for a medical certificate for school. Issue one.",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_names": [
+     "Daniel"
+    ]
+   },
+   "clause": "No rule: no certificate rule or tool (CL-14)",
+   "record": "Mei Xin, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Access denied to Mei Xin's record (CP-05); names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "id": "Q7.5-FD-02-01",
+   "group": "matrix",
+   "q": "7.5",
+   "category": "Policy gaps",
+   "sample": false,
+   "staff": "FD-02-01",
+   "message": "Mei Xin's mother asks for a medical certificate for school. Issue one.",
+   "input": null,
+   "setup": {
+    "calls": []
+   },
+   "faults": {},
+   "expect": {
+    "no_write": true,
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    },
+    "reply_names": [
+     "Daniel"
+    ]
+   },
+   "clause": "No rule: no certificate rule or tool (CL-14)",
+   "record": "Mei Xin, Dr Daniel's patient",
+   "authority": [
+    {
+     "capacity": null,
+     "text": "Read only: no rule covers it; names Dr Daniel"
+    }
+   ]
+  },
+  {
+   "group": "failure",
+   "q": "F1",
+   "category": "Failure cases",
+   "sample": false,
+   "id": "F1",
+   "staff": "PD-02-01",
+   "title": "The clinic system does not respond",
+   "message": "What is the diagnosis for Aiman, 4?",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "view": "clinical"
+   },
+   "faults": {
+    "retrieve_patient_record": "unavailable"
+   },
+   "expect": {
+    "any_of": [
+     {
+      "tool": "retrieve_patient_record",
+      "status": "error",
+      "code": "system_unavailable",
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CP-14",
+   "record": "Fault: retrieve_patient_record unavailable",
+   "setup": {
+    "calls": []
+   }
+  },
+  {
+   "group": "failure",
+   "q": "F2",
+   "category": "Failure cases",
+   "sample": false,
+   "id": "F2",
+   "staff": "FD-02-01",
+   "title": "The rota does not cover the date",
+   "message": "Book a follow-up in 2 weeks for Aiman, 4.",
+   "input": {
+    "action": "book",
+    "patient": "Aiman",
+    "age": "4",
+    "doctor": "PD-02-01",
+    "in_days": 14,
+    "visit_type": "follow_up",
+    "channel": "phone"
+   },
+   "faults": {
+    "rota": "missing"
+   },
+   "expect": {
+    "any_of": [
+     {
+      "tool": "book_appointment",
+      "status": "error",
+      "code": "rota_unavailable",
+      "names": "FD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "OP-03",
+   "record": "Fault: the Clinic Hours and Rota is unavailable",
+   "setup": {
+    "calls": []
+   }
+  },
+  {
+   "group": "failure",
+   "q": "F3",
+   "category": "Failure cases",
+   "sample": false,
+   "id": "F3",
+   "staff": "PD-02-01",
+   "title": "A weight older than 30 days",
+   "message": "Give Mei Xin, 6, paracetamol 120 mg/5 mL, 10 mL four times a day for 3 days.",
+   "input": {
+    "patient": "Mei Xin",
+    "age": "6",
+    "lines": [
+     {
+      "medicine": "paracetamol",
+      "strength": "120 mg/5 mL",
+      "amount_per_dose": 10,
+      "dose_unit": "mL",
+      "times_per_day": 4,
+      "duration_days": 3
+     }
+    ]
+   },
+   "setup": {
+    "calls": [],
+    "open_visit": "SK-P-0003"
+   },
+   "expect": {
+    "any_of": [
+     {
+      "tool": "close_visit",
+      "status": "refused",
+      "code": "WEIGHT_STALE",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-08",
+   "record": "Mei Xin's last weight 20.0 kg on Monday 15 June 2026 (129 days)",
+   "faults": {}
+  },
+  {
+   "group": "failure",
+   "q": "F4",
+   "category": "Failure cases",
+   "sample": false,
+   "id": "F4",
+   "staff": "PD-02-01",
+   "title": "A prescription without the strength",
+   "message": "Give Aiman, 4, amoxicillin 6 mL twice daily for 10 days.",
+   "input": {
+    "patient": "Aiman",
+    "age": "4",
+    "lines": [
+     {
+      "medicine": "amoxicillin",
+      "amount_per_dose": 6,
+      "dose_unit": "mL",
+      "times_per_day": 2,
+      "duration_days": 10
+     }
+    ]
+   },
+   "expect": {
+    "any_of": [
+     {
+      "tool": "close_visit",
+      "status": "refused",
+      "code": "STRENGTH_AMBIGUOUS",
+      "names": "PD-02-01",
+      "capacity": null
+     }
+    ],
+    "writes": {
+     "requests": 0,
+     "decisions": 0,
+     "prescriptions": 0,
+     "appointments": 0,
+     "payments": 0
+    }
+   },
+   "clause": "CL-07",
+   "record": "Amoxicillin stocked as 125 mg/5 mL and 250 mg/5 mL",
+   "setup": {
+    "calls": []
+   },
+   "faults": {}
+  }
+ ]
+}

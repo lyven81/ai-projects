@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 7**
+**Total published AI projects: 8**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 8 | 2026-10-23 | Sang Kancil Specialist Clinic | [page](https://lyven81.github.io/ai-projects/sang-kancil-specialist-clinic.html) |
 | 7 | 2026-10-21 | Happy Mart Customer Desk | [page](https://lyven81.github.io/ai-projects/happy-mart-customer-desk.html) |
 | 6 | 2026-10-21 | FD Food and Drink Distributors | [page](https://lyven81.github.io/ai-projects/fd-food-and-drink-distributors.html) |
 | 5 | 2026-10-19 | Kereta Sewa Jalan-jalan Car Rental Agent | [page](https://lyven81.github.io/ai-projects/car-rental-booking-agent.html) |
@@ -30,6 +31,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-21
 
 ### Business workflow
+
+#### Sang Kancil Specialist Clinic
+- **What it does:** A staff assistant for a paediatric clinic where Claude chooses the tool and shared hooks apply who may see and do what, sending each decision to the named person.
+- **How it's built:** Claude with an MCP server (Node.js) offering the clinic's four policies, fee schedule, formulary, immunisation schedule and rota as resources, and eight tools offered by role; one shared PreToolUse hook checks who is asking, which patient and every prescription line before a tool runs, one shared PostToolUse hook keeps only the fields that person may see, and the back end checks the critical rules again. Four staff sign in by ID.
+- **Problem solved:** In a children's clinic, three doctors and a clerk each have different rights over records, prescriptions, bookings and bills. The assistant applies those rights on every request and sends work that needs a person to that named person as a notice.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/sang-kancil-specialist-clinic.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/sang-kancil-specialist-clinic/staff-desk.html)
+- **Rebuilt:** 2026-10-23
 
 #### FD Food and Drink Distributors
 - **What it does:** A staff assistant for a food and drink wholesaler where Claude chooses the tool and two shared hooks apply the written policy, naming the person on every decision that is theirs.

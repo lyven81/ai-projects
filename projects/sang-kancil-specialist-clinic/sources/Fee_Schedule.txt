@@ -1,0 +1,66 @@
+SANG KANCIL SPECIALIST CLINIC
+FEE SCHEDULE (FS)
+Version: 1.0 | Prepared: 22 October 2026 | Currency: MYR
+Effective from: 22 October 2026, Malaysia time
+Status: Fictional private-clinic prices for software demonstration only.
+Owner: Dr Aisyah Rahman, lead paediatrician
+Related policies: CP-09, BP-01 to BP-08
+
+1. PURPOSE AND PRICE BASIS
+These are proposed, plausible demo prices, not quotations from an operating clinic, verified market averages or a statement of permitted statutory charges. All amounts below are final demo charges with no additional tax calculation; this is a software assumption, not a tax ruling. Store money as integer sen. Existing invoices retain their original charges when this schedule changes.
+
+2. CONSULTATIONS
+fee_id | service | doctor | billing unit | MYR | sen
+FS-C01 | First consultation, lead | Dr Aisyah | encounter | 150.00 | 15000
+FS-C02 | Follow-up consultation, lead | Dr Aisyah | encounter | 100.00 | 10000
+FS-C03 | First consultation, associate | Dr Daniel or Dr Priya | encounter | 100.00 | 10000
+FS-C04 | Follow-up consultation, associate | Dr Daniel or Dr Priya | encounter | 60.00 | 6000
+FS-C05 | Vaccination-only clinical assessment | Any eligible doctor | encounter | 0.00 | 0
+FS-C06 | Administrative clarification call | Assigned staff | call | 0.00 | 0
+
+First means a newly registered patient's first clinical consultation with this clinic. A follow-up is a later consultation for a registered patient; referral between clinic doctors does not automatically reset the patient to first consultation. These are local billing definitions, not clinical classifications.
+FS-C05 applies only when the encounter consists of vaccination assessment and administration, with no separate illness consultation. The assessment is included in the vaccine price. If a separately documented illness consultation also occurs, charge the appropriate consultation once plus the administered vaccine. Do not add a vaccination assessment charge. Phone callbacks do not automatically create a bill; a separate booked consultation follows its actual encounter type.
+No registration charge, booking deposit, cancellation fee, missed-appointment fee, cover surcharge or overbooking surcharge is defined. An urgent visit uses the actual first or follow-up consultation rate; urgency does not change the price. These prices do not authorise a doctor outside the booking age rule.
+
+3. VACCINATION PRICES
+fee_id | vaccine_id | vaccine/service | billing unit | MYR | sen
+FS-V01 | VAC-HEX | DTaP-IPV-HepB-Hib, six-in-one | administered dose | 200.00 | 20000
+FS-V02 | VAC-PCV | Pneumococcal conjugate vaccine | administered dose | 220.00 | 22000
+FS-V03 | VAC-MMR | Measles, mumps and rubella | administered dose | 95.00 | 9500
+FS-V04 | VAC-HEPB | Hepatitis B, paediatric product | administered dose | 55.00 | 5500
+FS-V05 | VAC-DT | Diphtheria and tetanus, school booster product | administered dose | 45.00 | 4500
+FS-V06 | VAC-TT | Tetanus toxoid, school booster product | administered dose | 30.00 | 3000
+FS-V07 | VAC-HPV9 | Nine-valent HPV, private-service product | administered dose | 600.00 | 60000
+FS-V08 | VAC-FLU | Inactivated seasonal influenza, optional service | administered dose | 95.00 | 9500
+
+Each vaccine price includes the product, administration consumables and vaccination-only assessment. Prices do not establish availability, product interchangeability, eligibility, dose volume or the number of doses needed. HPV9 is a private-service product, not an assumption about the product supplied by the national programme. Influenza is an optional service and shall not appear as a compulsory NIP overdue item. The doctor confirms the exact registered product and schedule; record its actual product and antigen coverage.
+BCG, Sabah-only early measles and Sarawak JE are tracked as external vaccination history where applicable, but not offered or priced in this Selangor demo. Do not invent a charge for them.
+
+4. MEDICINES AND EQUIPMENT
+fee_id | formulary_id | item | supplied billing unit | MYR | sen
+FS-M01 | MED-PAR120 | Paracetamol 120 mg/5 mL | 60 mL bottle | 12.00 | 1200
+FS-M02 | MED-PAR250 | Paracetamol 250 mg/5 mL | 60 mL bottle | 15.00 | 1500
+FS-M03 | MED-AMX125 | Amoxicillin 125 mg/5 mL after reconstitution | 100 mL bottle | 18.00 | 1800
+FS-M04 | MED-AMX250 | Amoxicillin 250 mg/5 mL after reconstitution | 100 mL bottle | 28.00 | 2800
+FS-M05 | MED-CET1 | Cetirizine 1 mg/mL | 60 mL bottle | 18.00 | 1800
+FS-M06 | MED-CET10 | Cetirizine 10 mg | tablet | 1.00 | 100
+FS-M07 | MED-SAL100 | Salbutamol 100 micrograms/actuation pMDI | 200-actuation inhaler | 35.00 | 3500
+FS-M08 | MED-HC1 | Hydrocortisone 1% cream | 15 g tube | 15.00 | 1500
+FS-E01 | Not a medicine | Valved spacer, mask supplied if prescribed | device | 55.00 | 5500
+
+Bottle, inhaler and tube sizes are fictional stocked presentations. Verify the actual product before real procurement. Bill whole supplied bottles, tubes, devices or inhalers; tablets use the supplied whole-tablet quantity. Do not substitute a different strength to reduce a bill. For a fixed liquid course, required volume is mL per dose multiplied by doses per day multiplied by days; bottle count is the ceiling of required volume divided by stocked volume. Any product-specific reconstitution expiry or stability constraint must also be checked by the dispenser; this table does not establish it.
+For as-needed prescriptions, the doctor supplies a maximum daily frequency and intended dispensing quantity. Do not infer maximum possible consumption as the amount actually dispensed. Record the actual supplied quantity after the clerk checks the prescription; the assistant never decides the dose or duration.
+
+5. BILLING AND APPROVAL RULES
+Nurul Huda prepares invoices in the source system. Only her role and Dr Aisyah's lead capacity may retrieve this resource through the application; offering it as an MCP resource must preserve that access restriction. Associates may read the formulary without its price columns. The back end, rather than the model, joins the prices for authorised billing work.
+An approved fee waiver creates an action for the clerk to apply the exact authorised adjustment in the source billing system. A pending request changes no price or balance. Approved adjustments are separate invoice records, not edits to this schedule. Payments are separate receipt records and do not reduce the original charge lines.
+No invoice-creation, fee-change, refund or payment-processing tool is introduced by this reference file. An unpriced item returns PRICE_NOT_FOUND to Nurul Huda; it is never assigned RM 0.00 by default.
+
+6. WORKED DEMO EXAMPLES
+A. Arjun, 9, follow-up with Dr Daniel: FS-C04 = RM 60.00. His RM 185.00 outstanding benchmark balance is the sum of his existing invoice and adjustment history, not a new consultation charge or a price to overwrite.
+B. Aiman's synthetic prescription: MED-AMX250, 6 mL per dose, twice daily, 10 days. Required volume = 120 mL; two 100 mL bottles = RM 56.00. With an associate follow-up, total = RM 116.00. Clinical eligibility and checks are independent of this arithmetic.
+C. Vaccination-only visit for one MMR dose: RM 95.00 total, not RM 155.00. A separately documented associate follow-up plus that dose: RM 155.00.
+D. An RM 60.00 invoice with an RM 20.00 recorded payment has RM 40.00 outstanding. A further RM 50.00 payment entry fails the overpayment check.
+
+7. MAINTENANCE
+Change prices only through a versioned schedule update approved by the demo owner. Preserve fee IDs, effective dates and the version used by each invoice. Future and withdrawn prices shall not silently apply to existing invoices. No external source is cited for these invented prices; clinical sources in the companion files do not validate them.

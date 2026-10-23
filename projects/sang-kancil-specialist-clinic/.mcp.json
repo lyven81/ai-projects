@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sang-kancil-staff-desk": {
+      "command": "node",
+      "args": ["mcp_server.mjs"]
+    }
+  }
+}

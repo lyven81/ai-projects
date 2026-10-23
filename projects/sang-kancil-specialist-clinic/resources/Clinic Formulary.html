@@ -1,0 +1,120 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Clinic Formulary</title><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+.crumbs{font-size:12.5px;opacity:.8;margin-bottom:2px}.crumbs a{color:inherit;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../sang-kancil-specialist-clinic.html">Sang Kancil Specialist Clinic</a></div><h1>Clinic Formulary</h1><nav id="toc"></nav></div>
+<p>CLINIC FORMULARY (CF)</p><p>Version: 1.0 | Prepared and source-checked: 22 October 2026</p><p>Status: Limited software test formulary. NOT FOR CLINICAL USE.</p><p>Owner: Dr Aisyah Rahman, lead paediatrician</p><p>Related policies: CL-06 to CL-11, CL-14; BP-02</p>
+<h2>1. Purpose and limits</h2>
+<p>Eight medicine presentations support realistic record lookup, dispensing, allergy checks and prescription-validation demonstrations. Selected published dosing references inform the test profiles; age cutoffs, review triggers, supported routes and duration limits marked DEMO are local software restrictions. This is not a complete prescribing reference, a treatment recommendation or clinical approval. Only the responsible doctor selects the medicine, indication, dose, frequency and duration.</p>
+<p>Source verification means the cited material was consulted, not that a clinician has approved this file. Renal or hepatic impairment, relevant contraindications, uncertain allergies, interacting or duplicate treatment, or an unsupported indication require clinician review outside the automatic pass path. The assistant shall not guess adjustments or propose an alternative medicine.</p>
+<h2>2. Shared validation contract</h2>
+<p>Each line requires formulary_id, profile_id, route, amount_per_dose, dose_unit, times_per_day or explicit as-needed maximum, duration_days, dispensing_quantity and dispensing_unit. Where a topical amount or site is needed, record it explicitly. A medicine name alone cannot resolve a strength; request the exact presentation.</p>
+<p>All new prescription lines require an authorised doctor and valid encounter. Weight-based lines require a positive recorded weight with age 0 to 30 days inclusive at the encounter date; 31 days, a future date or missing weight fails. Non-weight-based entries have weight_required=false; an absent weight is not by itself a failure for those entries.</p>
+<p>Use decimal arithmetic and compare unrounded values. For liquids, mg_per_dose = mL_per_dose multiplied by mg_per_mL. Daily mg = mg_per_dose multiplied by maximum doses per day. Dose, frequency, duration, absolute maximum and any weight-based maximum must all pass. Do not treat a per-day range as a per-dose range.</p>
+<p>Known allergies require structured ingredient/class mapping plus the actual product's excipient information. A free-text allergy, unknown status, missing required product mapping or an uncertain cross-reaction returns ALLERGY_REVIEW_REQUIRED. Ingredient matches and recorded penicillin-class allergy block amoxicillin. Cephalosporin or other beta-lactam allergy requires clinical review rather than a blanket claim of safety or universal cross-allergy. A 'no known allergies' record must be explicitly present; an empty list is not proof.</p>
+<p>Other key errors: FORMULARY_NOT_FOUND, STRENGTH_AMBIGUOUS, PROFILE_NOT_SUPPORTED, WEIGHT_STALE, DOSE_OUTSIDE_PROFILE, FREQUENCY_INVALID, DURATION_INVALID, DUPLICATE_INGREDIENT and CLINICIAN_REVIEW_REQUIRED. Return the value, limit, source/profile and CL clause to the prescriber. A test-profile rejection means this assistant cannot record the line under that profile; it is not a declaration that every other regimen is clinically wrong.</p>
+<h2>3. Presentation register</h2>
+<table><tr><th>formulary_id</th><th>generic</th><th>form</th><th>strength</th><th>route</th><th>stocked presentation</th><th>allergy ingredient/class</th></tr>
+<tr><td>MED-PAR120</td><td>Paracetamol</td><td>oral liquid</td><td>120 mg/5 mL = 24 mg/mL</td><td>oral</td><td>60 mL</td><td>paracetamol</td></tr>
+<tr><td>MED-PAR250</td><td>Paracetamol</td><td>oral liquid</td><td>250 mg/5 mL = 50 mg/mL</td><td>oral</td><td>60 mL</td><td>paracetamol</td></tr>
+<tr><td>MED-AMX125</td><td>Amoxicillin</td><td>reconstituted suspension</td><td>125 mg/5 mL = 25 mg/mL</td><td>oral</td><td>100 mL</td><td>amoxicillin; penicillin</td></tr>
+<tr><td>MED-AMX250</td><td>Amoxicillin</td><td>reconstituted suspension</td><td>250 mg/5 mL = 50 mg/mL</td><td>oral</td><td>100 mL</td><td>amoxicillin; penicillin</td></tr>
+<tr><td>MED-CET1</td><td>Cetirizine hydrochloride</td><td>oral solution</td><td>1 mg/mL = 5 mg/5 mL</td><td>oral</td><td>60 mL</td><td>cetirizine; hydroxyzine/piperazine derivative review</td></tr>
+<tr><td>MED-CET10</td><td>Cetirizine hydrochloride</td><td>tablet</td><td>10 mg/tablet</td><td>oral</td><td>whole tablets</td><td>cetirizine; hydroxyzine/piperazine derivative review</td></tr>
+<tr><td>MED-SAL100</td><td>Salbutamol</td><td>pressurised metered-dose inhaler</td><td>100 micrograms/actuation</td><td>inhaled</td><td>200 actuations</td><td>salbutamol</td></tr>
+<tr><td>MED-HC1</td><td>Hydrocortisone</td><td>cream</td><td>1% w/w = 10 mg/g</td><td>topical</td><td>15 g</td><td>hydrocortisone; corticosteroid allergy review</td></tr>
+</table>
+<p>The generic register does not establish a brand's current Malaysian registration, excipients, stability or pack size. Those are product-specific fields to verify before real use. No medicine-price columns belong in this resource; billing joins by formulary_id through the restricted Fee Schedule.</p>
+<h2>4. Supported test profiles</h2>
+<p>CF-PAR-01: Paracetamol oral liquid</p>
+<p>Presentations: MED-PAR120 or MED-PAR250, never both in the same encounter prescription.</p>
+<p>Demo scope: age 3 months to under 18 years; weight up to 40 kg. Other ages or weights require a clinician-approved profile outside this limited demo.</p>
+<p>Published reference basis: S3 gives 10 to 15 mg/kg per dose, every 6 hours, maximum 60 mg/kg/day for non-neonatal children in its symptomatic-care context. This demo uses only that limited pattern, not the source's other regimens.</p>
+<p>Validation: 10 to 15 mg/kg/dose inclusive; maximum 4 doses in 24 hours, at least 6 hours apart; maximum 60 mg/kg/day. As-needed entries must specify that maximum. Demo duration: 1 to 3 days. Reject duplicate paracetamol ingredients, including a declared combination product; uncertainty about other medicines requires review.</p>
+<p>weight_required=true. Age scope, 40 kg scope and duration limit are DEMO restrictions, not universal treatment limits. Return unsupported clinical circumstances to the doctor.</p>
+<p>CF-AMX-GAS-BID: Amoxicillin, doctor-confirmed GAS tonsillopharyngitis</p>
+<p>Presentations: MED-AMX125 or MED-AMX250.</p>
+<p>Demo scope: age 3 years to under 18 years, a doctor-recorded confirmed GAS indication, and no identified adjustment or allergy-review trigger. A generic 'sore throat' or 'tonsillitis' label alone does not satisfy the profile.</p>
+<p>Published reference basis: S1 specifies 50 mg/kg/day in one or two doses, maximum 1,000 mg/day, for 10 days. S2 specifies the twice-daily alternative as 25 mg/kg/dose, capped at 500 mg/dose.</p>
+<p>Validation: expected per-dose amount = min(25 multiplied by weight_kg, 500) mg; exactly 2 doses/day; exactly 10 days; maximum 500 mg/dose and 1,000 mg/day. DEMO measurement tolerance: actual amount may differ from expected by at most 2%, but may not exceed either absolute cap. Tolerance is a test rounding rule, not a source recommendation. Do not accept every amount below the maximum as an effective dose.</p>
+<p>weight_required=true. No automatic once-daily, sinusitis, otitis, prophylaxis, neonatal or renal-adjusted regimen is supported here; those return PROFILE_NOT_SUPPORTED. No antibiotic is selected by the assistant.</p>
+<p>CF-CET-2TO5: Cetirizine oral solution, ages 2 to under 6</p>
+<p>Presentation: MED-CET1 only.</p>
+<p>Reference basis: S4 gives 2.5 mg twice daily for ages 2 to 5.</p>
+<p>Validation: 2.5 mg = 2.5 mL per dose; 2 doses/day; maximum 5 mg/day. DEMO duration: 1 to 14 days. A proposed different regimen or ongoing maintenance beyond that window goes to the doctor for a separately reviewed profile.</p>
+<p>weight_required=false. Renal impairment, unknown allergy mapping or an unsupported indication prevents an automatic pass.</p>
+<p>CF-CET-6TO11: Cetirizine oral solution, ages 6 to under 12</p>
+<p>Presentation: MED-CET1 only.</p>
+<p>Reference basis: S4 gives 5 mg twice daily for ages 6 to 11.</p>
+<p>Validation: 5 mg = 5 mL per dose; 2 doses/day; maximum 10 mg/day. DEMO duration: 1 to 14 days. Tablets and tablet splitting are not enabled for this age profile in the demo.</p>
+<p>weight_required=false. The same review triggers apply.</p>
+<p>CF-CET-12TO17: Cetirizine, ages 12 to under 18</p>
+<p>Presentations: MED-CET1 or MED-CET10, not both together.</p>
+<p>Reference basis: S4 gives 10 mg once daily for ages 12 and over.</p>
+<p>Validation: 10 mg once daily, supplied as 10 mL solution or one 10 mg tablet; maximum 10 mg/day. DEMO duration: 1 to 14 days. The doctor must record that the patient can use the chosen form; do not substitute automatically.</p>
+<p>weight_required=false. The same review triggers apply.</p>
+<p>CF-SAL-ROUTINE: Existing routine salbutamol plan, ages 6 to under 18</p>
+<p>Presentation: MED-SAL100.</p>
+<p>Reference basis: S5 describes routine use as 1 or 2 puffs as needed, at most four occasions in 24 hours; S6 verifies the 100 microgram/actuation presentation in a Malaysian registered-product listing.</p>
+<p>Validation: 1 or 2 whole puffs per occasion, explicit as-needed maximum of 4 occasions/24 hours and no more than 8 puffs/24 hours. A doctor-recorded plan reference, review date and intended supply quantity are required. DEMO administrative review interval: no more than 30 days from this encounter; this does not mean the inhaler must be used for 30 days or discarded then.</p>
+<p>weight_required=false. This is not an acute-attack protocol; urgent symptoms or a proposed higher-use plan leave this automatic profile for immediate clinician review. A repeat-inhaler request still becomes a request to the own doctor and never issues medicine automatically. Record spacer instructions only as supplied by the doctor.</p>
+<p>CF-HC-MANUAL: Hydrocortisone cream, clinician-reviewed entry only</p>
+<p>Presentation: MED-HC1.</p>
+<p>Reference basis: S7 identifies hydrocortisone as a topical steroid and requires medical or pharmacist advice for children under 10.</p>
+<p>No automatic dose-range pass is defined. Record the doctor's site, amount/instructions, frequency, duration, quantity and clinical-review reference; without a verified approved profile, return CLINICIAN_REVIEW_REQUIRED before prescription write. Do not invent a mg/kg rule for a topical medicine or mark the line safe because a numeric field is positive.</p>
+<p>weight_required=false. The item can appear in synthetic historical records and billing tests, but new close_visit prescriptions remain blocked until a clinician-approved profile is configured. This deliberate limitation tests correct escalation.</p>
+<h2>5. Demo fixtures and expected outcomes</h2>
+<p>A. Synthetic Aiman, 4, has weight 12.0 kg measured on 19 October 2026; encounter date 22 October 2026. The responsible doctor explicitly selects the confirmed-GAS BID profile. MED-AMX250 at 6 mL = 300 mg/dose = 25 mg/kg/dose; twice daily = 600 mg/day = 50 mg/kg/day; 10 days. Dose arithmetic passes if all other checks pass. The 12 kg weight is a proposed synthetic test value, not a clinical interpretation of the child.</p>
+<p>B. Same fixture, 15 mL = 750 mg/dose; twice daily = 1,500 mg/day. It fails the weight target, 500 mg/dose cap and 1,000 mg/day cap. Return to Dr Daniel, do not silently change 15 mL to 6 mL.</p>
+<p>C. Change the entered strength to MED-AMX125 while leaving 6 mL: 150 mg/dose, below the configured target. It fails; the strength must never be guessed from volume alone.</p>
+<p>D. Same prescription with a weight measured 31 days earlier: WEIGHT_STALE. Exactly 30 days passes only the freshness check.</p>
+<p>E. Penicillin allergy recorded: block amoxicillin; an unknown allergy status triggers review even with an arithmetically valid dose.</p>
+<p>F. Ryan, 7, asks through Nurul Huda for another inhaler: create a repeat-prescription request to Dr Daniel; do not issue it using the old plan.</p>
+<p>G. Paracetamol for a 20 kg synthetic patient: 240 mg = 10 mg/kg/dose, four times/day = 48 mg/kg/day. Arithmetic passes the profile; 240 mg equals 10 mL of MED-PAR120 but 4.8 mL of MED-PAR250. The doctor supplies the dose; the assistant reports validation only.</p>
+<h2>6. Sources and review record</h2>
+<p>All sources consulted 22 October 2026. Only the specific reference facts described above were adopted; the restrictive software profiles and fixtures are author-created.</p>
+<p>S1. Ministry of Health Malaysia, National Antimicrobial Guideline, B9: Otorhinolaryngology infections, section 1.</p>
+<p>https://sites.google.com/moh.gov.my/nag/contents/section-b-paediatrics/b9-otorhinolaryngology-infections</p>
+<p>S2. US CDC, Clinical Guidance for Group A Streptococcal Pharyngitis, dated 18 November 2025.</p>
+<p>https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html</p>
+<p>S3. WHO, Clinical management and infection prevention and control for mpox: living guideline, Annex 2, symptomatic-care paracetamol reference. Used as a bounded numerical cross-check, not a general Malaysian clinic protocol.</p>
+<p>https://www.ncbi.nlm.nih.gov/sites/books/NBK616030/</p>
+<p>S4. NHS, How and when to take cetirizine.</p>
+<p>https://www.nhs.uk/medicines/cetirizine/how-and-when-to-take-cetirizine/</p>
+<p>S5. NHS, How and when to use salbutamol inhalers; page reviewed 13 February 2025. Routine-use facts only; UK emergency-service instructions are not imported into this resource.</p>
+<p>https://www.nhs.uk/medicines/salbutamol-inhaler/how-and-when-to-use-salbutamol-inhalers/</p>
+<p>S6. Malaysia NPRA QUEST3+, SAL 100 product listing, registration shown as MAL12030002AZ. A listing does not validate the demo's pack size or patient-specific use.</p>
+<p>https://quest3plus.bpfk.gov.my/pmo2/detail.php?id=MAL12030002A&amp;type=product</p>
+<p>S7. NHS, Hydrocortisone for skin.</p>
+<p>https://www.nhs.uk/medicines/hydrocortisone-for-skin/</p>
+<p>Before real deployment, a Malaysian paediatrician and pharmacist must approve product-specific references, contraindications, interactions, adjustment rules, formulations and all profiles. Until then, every screen and exported formulary must retain NOT FOR CLINICAL USE.</p>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Clinic Formulary</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

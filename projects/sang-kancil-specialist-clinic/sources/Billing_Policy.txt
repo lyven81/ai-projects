@@ -1,0 +1,45 @@
+SANG KANCIL SPECIALIST CLINIC
+BILLING POLICY (BP)
+Version: 1.0 | Prepared: 22 October 2026 | Clauses: 8
+Status: Proposed policy for a fictional demonstration clinic; not an approved policy for clinical deployment.
+
+PURPOSE AND PRINCIPLES
+Keep money information restricted, record only payments actually received, and leave discretionary decisions with the lead. All demonstration prices are fictional and maintained in the Fee Schedule. Recording money is different from processing a financial transaction.
+
+SECTION A: BILLING RECORDS
+
+BP-01. Restrict billing information and actions
+Nurul Huda and Dr Aisyah in lead capacity may view invoices, payments and outstanding balances for all patients. Only Nurul Huda may record a payment; Dr Aisyah's billing oversight does not grant payment-entry rights. Associates shall not receive billing amounts through patient records, tool results or action lists. Clinical care requests shall not be refused merely because a balance exists unless a separate approved rule explicitly requires it; no such blocking rule is defined here.
+Enforced by: Tool distribution, role and capacity checks, and back-end field filtering.
+
+BP-02. Use the maintained Fee Schedule
+Consultation, vaccination and medicine charges shall come from the versioned Fee Schedule and the recorded service or prescription. Nurul Huda prepares the bill in the source billing system from those references; a visit closure creates her billing action but does not claim an invoice has been issued. A missing or ambiguous price shall be referred to her for resolution without an invented amount. The assistant shall not negotiate or change a fee; approved waivers follow BP-07.
+Enforced by: Fee lookup, billing-action generation and absence of invoice-writing or price-changing tools.
+
+BP-03. Validate invoice references and outstanding amounts
+Billing lookups and payment entries shall use a specific existing invoice linked to the correct patient. Calculate the outstanding amount from the invoice's recorded charges, valid adjustments and payment entries; keep money as integer sen and display it in RM. Missing, inconsistent or unavailable billing records shall return an error rather than an estimated balance. Each displayed balance shall identify the invoice and data time.
+Enforced by: Invoice integrity checks, deterministic balance calculation and shared formatter.
+
+SECTION B: PAYMENTS AND REMINDERS
+
+BP-04. Record only payments actually received
+Nurul Huda may use record_payment only after confirming receipt through the clinic's actual payment process. The entry shall include invoice ID, positive amount, recorded payment method, receipt time and a unique receipt or transaction reference for duplicate checking. Permit partial payments but reject amounts above the current outstanding balance, unknown invoices and duplicate references. Recheck the balance and write the entry atomically; the resulting status shall say 'payment recorded', not imply the assistant collected money.
+Enforced by: record_payment schema, clerk authorisation, duplicate constraints and transactional balance checks.
+
+BP-05. Do not process or alter financial transactions
+The assistant shall not charge a card, initiate a transfer, collect payment credentials, issue a refund, reverse a payment or edit or delete a payment record. Requests for refunds or corrections shall name Nurul Huda to check the source billing system and Dr Aisyah where approval is needed. No chat instruction or claimed approval unlocks a missing financial tool. An erroneous payment entry remains traceable and is corrected only through the authorised source-system process.
+Enforced by: Tool boundaries, back-end mutation restrictions and structured refusal routing.
+
+BP-06. Reminders remain owned by the clerk
+An outstanding invoice may create a reminder item for Nurul Huda using the current recorded balance and permitted guardian contact details. She verifies the recipient and amount, contacts the guardian through the clinic's approved channel and records the result. The assistant shall not automatically send a reminder or mark a bill paid because contact occurred. An unsuccessful attempt remains recorded with its follow-up owner; a settled invoice shall no longer generate an outstanding-payment reminder.
+Enforced by: Balance-based action rules, clerk-only completion transitions and reminder deduplication.
+
+SECTION C: APPROVAL AND TRACEABILITY
+
+BP-07. Fee waivers require the lead's recorded decision
+Only Nurul Huda may raise a fee-waiver request, identifying the patient, invoice or charge, requested amount and reason. Dr Aisyah in lead capacity may approve or decline; a pending request is not a waiver, and the lead shall not approve a request she raised herself. The decision shall record its exact scope and amount, and an approval creates a clerk action to apply it in the source billing system. The assistant shall not change the fee or balance itself; the balance changes only when the resulting authorised adjustment is present in source records.
+Enforced by: Request schema, owner and self-approval checks, decision log and fee-mutation restrictions.
+
+BP-08. Retain a traceable billing history
+Payment entries, waiver requests, decisions and reminder outcomes shall retain their IDs, invoice references, staff identity, time, status and originating clause. Billing replies shall state the record basis and distinguish recorded payments, outstanding amounts and pending approvals. A service failure shall not be reported as a successful payment entry or decision; retries shall use the original operation reference to prevent duplicates. Missing or disputed records go to Nurul Huda, with Dr Aisyah named for a discretionary decision, rather than being guessed or silently repaired.
+Enforced by: Append-only audit events, idempotency checks, result formatter and error routing.

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sang Kancil | Staff Desk</title>
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4f6f8;--paper:#fff;--ink:#263849;--muted:#6d7d8a;--line:#e2e8ec;--teal:#146a65;--tealsoft:#e9f4f1;--red:#a54638;--redsoft:#fff1ed;--gold:#946720;--goldsoft:#fff7e7}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #66b8ae;outline-offset:3px}button:disabled{cursor:default}header{height:92px;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 34px}.brand{display:flex;align-items:center;gap:12px}.logo{width:43px;height:43px;border-radius:13px;background:var(--teal);color:white;display:grid;place-items:center;font-size:26px;font-weight:400}.brand strong{font-size:16px;letter-spacing:-.3px;display:block}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--muted)}.topright{display:flex;align-items:center;gap:24px}.clock{font-size:12px;color:var(--muted);text-align:right}.identity label{display:block;margin-bottom:4px}.identity select{background:#f9fbfb;color:var(--ink);border:1px solid #cedbdc;border-radius:8px;padding:9px 34px 9px 12px;min-width:300px}.shell{display:grid;grid-template-columns:218px minmax(0,1fr);min-height:calc(100vh - 122px)}nav{background:#fbfcfd;border-right:1px solid var(--line);padding:30px 16px;display:flex;flex-direction:column;gap:6px}nav .eyebrow{padding:0 12px;margin-bottom:12px}.navitem{display:flex;align-items:center;gap:11px;text-align:left;border:0;background:none;color:var(--muted);padding:12px;border-radius:8px;font-size:12px}.navitem:not(:disabled):hover{background:#f1f6f5}.navitem.active{background:var(--tealsoft);color:var(--teal);font-weight:650}.navitem:disabled:not(.active){opacity:.65}.navicon{font-size:15px;width:18px;text-align:center}.navfoot{margin-top:auto;padding:40px 12px 0;font-size:11px;color:var(--muted)}main{padding:28px 32px 20px;max-width:1500px;width:100%;margin:auto}.heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.heading h1{font-size:25px;letter-spacing:-.8px;font-weight:650;margin:3px 0}.heading p{margin:0;color:var(--muted);font-size:12px}.pill{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:100px;padding:4px 10px;font-size:11px;font-weight:600;white-space:nowrap}.pill.green{color:var(--teal);background:var(--tealsoft);border-color:#cee6df}.pill.red{color:var(--red);background:var(--redsoft);border-color:#f1d3ca}.pill.amber{color:var(--gold);background:var(--goldsoft);border-color:#eedebc}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:22px;align-items:start}.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 3px 12px #26384903}.cardhead{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}.cardhead h2{font-size:14px;margin:0;font-weight:650}.conversation{padding:25px 24px;min-height:370px}.who{display:flex;gap:9px;align-items:center;font-size:11px;font-weight:650;color:var(--muted);margin-bottom:9px}.avatar{display:grid;place-items:center;background:#edf1f5;border-radius:7px;width:24px;height:24px;font-size:10px;color:#65788b}.avatar.assistant{background:var(--tealsoft);color:var(--teal)}.question{margin:0 0 27px 33px;background:#f1f4f7;padding:15px 18px;border-radius:0 10px 10px 10px;font-size:14px}.answer{margin-left:33px}.answer h3{font-size:18px;letter-spacing:-.4px;margin:0 0 10px;font-weight:650}.answer p{color:#566a7a;margin:0 0 12px;font-size:13px}.answer .pill{margin-bottom:12px}.basis{border-top:1px solid var(--line);padding-top:13px;font-size:11px;color:var(--muted);line-height:1.8;margin-top:18px}.basis strong{color:#526777}.primary{border:0;border-radius:7px;background:var(--teal);color:white;padding:10px 15px;font-size:12px;font-weight:600}.primary:hover{background:#0f5854}.secondary{border:1px solid var(--line);background:white;border-radius:7px;color:var(--ink);padding:8px 12px;font-size:12px}.record{margin-top:16px;padding:15px;background:#f6faf8;border:1px solid #dbe9e2;border-radius:8px}.record dl{display:grid;grid-template-columns:100px 1fr;gap:7px;font-size:12px;margin:12px 0 0}.record dt{color:var(--muted)}.record dd{margin:0}.composer{border-top:1px solid var(--line);padding:16px 22px;background:#fcfdfd}.composer form{display:flex;gap:9px}.composer input{min-width:0;flex:1;border:1px solid var(--line);border-radius:7px;padding:11px;background:white;color:var(--ink);font-size:12px}.helper{font-size:10px;color:var(--muted);margin:8px 0 0}.side{display:flex;flex-direction:column;gap:16px}.side .body{padding:18px}.side h2{font-size:12px;font-weight:650;margin:0 0 12px}.identitycard{display:flex;gap:11px;align-items:center;padding-bottom:15px;border-bottom:1px solid var(--line);margin-bottom:15px}.bigavatar{width:38px;height:38px;background:var(--tealsoft);color:var(--teal);border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:650}.staffname{font-size:13px;font-weight:650}.small{font-size:11px;color:var(--muted)}.keyrow{display:flex;justify-content:space-between;gap:12px;margin:8px 0;font-size:11px}.keyrow span:first-child{color:var(--muted)}.owner{border-left:3px solid #b9d7d0;padding-left:12px;margin-top:14px}.owner strong{display:block;font-size:12px}.owner p{font-size:11px;color:var(--muted);margin:4px 0}.notice{background:#fafbf7;border:1px solid #e7ebdf;padding:14px;border-radius:8px;font-size:11px;color:#69745c}.reference{font-size:11px;color:#607586;border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.reference strong{color:var(--teal)}details{background:var(--paper);border:1px solid var(--line);border-radius:9px;margin-top:20px;padding:12px 16px;font-size:11px;color:var(--muted)}summary{cursor:pointer;font-weight:600;color:#526777}.democontrol{margin:14px 0;display:flex;align-items:center;gap:9px;color:var(--ink)}.democontrol input{accent-color:var(--teal)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f7f8;border-radius:6px;padding:12px;color:#506678;font-size:11px}footer{color:var(--muted);font-size:10px;display:flex;justify-content:space-between;gap:20px;padding-top:18px}.empty{font-size:12px;color:var(--muted);padding:18px;border:1px dashed var(--line);border-radius:8px}#status{min-height:18px;font-size:11px;color:var(--muted);margin-top:8px}[hidden]{display:none!important}@media(min-width:1500px){main{padding-top:42px;padding-bottom:32px}}@media(max-width:1120px){header{padding:0 20px}.clock{display:none}.shell{grid-template-columns:185px 1fr}main{padding:24px 20px}.workspace{grid-template-columns:minmax(0,1fr) 255px}.navitem{font-size:11px;padding:10px 8px}}@media(max-width:900px){.shell{grid-template-columns:1fr}nav{display:none}.workspace{grid-template-columns:minmax(0,1fr) 265px}header{gap:12px}.brand strong{font-size:13px}.identity select{min-width:0;width:285px}}@media(max-width:680px){header{height:auto;align-items:stretch;flex-direction:column;padding:16px 20px;gap:15px}.topright,.identity,.identity select{width:100%}.shell{min-height:0}.workspace{grid-template-columns:1fr}.heading{align-items:start}.heading>.pill{display:none}main{padding:20px 14px}.conversation{padding:20px 15px;min-height:0}.cardhead{padding:15px}.question{margin-left:0}.answer{margin-left:0}.composer{padding:15px}.composer form{flex-wrap:wrap}.composer input{flex-basis:100%}.side{display:grid;grid-template-columns:1fr}.heading h1{font-size:23px}footer{flex-direction:column;gap:3px}}
+.modes{display:inline-flex;gap:6px}.modes button[aria-pressed="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.heads{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.hood{min-height:370px;max-height:560px;overflow-y:auto;background:#f8fafc;padding:16px 18px}
+.hlist{list-style:none;margin:0;padding:0;background:none;border:0}.hlist>li{margin:0 0 10px}
+.hstep{background:#fff;border:1px solid var(--line);border-left:3px solid #2f6fb0;border-radius:8px;padding:8px 12px;font-size:12.5px}
+.hstep.code{border-left-color:var(--teal)}.hstep.muted{border-left-color:var(--line);color:var(--muted)}
+.hstep h4{margin:0 0 4px;font-size:13px;color:#243b53}.hstep p{margin:3px 0}
+.chk{list-style:none;margin:4px 0;padding:0;background:none;border:0}.chk li{margin:1px 0}.chk .p b{color:var(--teal)}.chk .f b,.chk .f{color:var(--red)}
+.chatctl{padding:10px 22px;border-bottom:1px solid var(--line);background:#fcfdfd;font-size:12px}.keyline{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.keyline input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:7px;padding:8px;font-size:12px}
+.warnline{font-size:11px;color:var(--gold);background:var(--goldsoft);border:1px solid #eedebc;border-radius:7px;padding:6px 9px;margin:8px 0 0}
+.chat{min-height:370px;max-height:560px;overflow-y:auto;background:#eef2f7;padding:16px 18px}
+.day{text-align:center;font-size:11px;color:var(--muted);margin:2px 0 10px}
+.msg{max-width:78%;width:fit-content;padding:8px 12px 5px;border-radius:12px;margin:0 0 8px;font-size:13.5px;line-height:1.45;box-shadow:0 1px 0 rgba(0,0,0,.05);animation:in .25s ease;overflow-wrap:anywhere}
+.msg p{margin:0 0 5px}.msg .by{display:block;font-size:10.5px;font-weight:650;opacity:.75;margin-bottom:2px}
+.msg .tm{display:block;text-align:right;font-size:10.5px;opacity:.7;margin-top:1px}
+.msg .cites{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.msg .cites button{font:inherit;font-size:11px;color:#2f6fb0;border:1px solid var(--line);border-radius:7px;padding:0 6px;background:#f8fafc;cursor:pointer}
+.msg .cites button[aria-expanded="true"]{border-color:#2f6fb0}
+.msg .rule{font-size:11.5px;color:var(--muted);background:#f8fafc;border:1px solid var(--line);border-radius:7px;padding:4px 8px;margin-top:5px}.msg .rule b{color:#243b53}
+.me{margin-left:auto;background:#2f6fb0;color:#fff;border-bottom-right-radius:4px;white-space:pre-wrap}
+.them{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+.sys{margin:6px auto 10px;text-align:center;font-size:11.5px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:10px;padding:4px 10px;width:fit-content;max-width:90%}
+.sys.err{color:var(--red);background:var(--redsoft);border-color:#f1d3ca}
+.typing{display:inline-flex;gap:3px;padding:10px 12px}.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:b 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.msg{animation:none}.typing i{animation:none;opacity:.6}}
+.crumb{background:var(--paper);border-bottom:1px solid var(--line);padding:7px 34px;font-size:12px;color:var(--muted)}.crumb a{color:var(--teal);text-decoration:none}@media(max-width:1120px){.crumb{padding:7px 20px}}
+</style>
+</head>
+<body>
+<div class="crumb"><a href="../../index.html">AI Projects</a> / <a href="../../sang-kancil-specialist-clinic.html">Sang Kancil Specialist Clinic</a></div>
+<header>
+ <div class="brand"><div class="logo" aria-hidden="true">+</div><div><strong>Sang Kancil Specialist Clinic</strong><span class="small">Staff Desk · Internal workspace</span></div></div>
+ <div class="topright"><div class="clock">Thursday, 22 October 2026<br>10:15 AM · Malaysia time · Demo clock</div><div class="identity"><label class="eyebrow" for="staff">Demo staff identity</label><select id="staff"><option value="daniel">Dr Daniel Ong · Associate Paediatrician</option><option value="aisyah">Dr Aisyah Rahman · Lead Paediatrician</option><option value="priya">Dr Priya Nair · Associate Paediatrician</option><option value="nurul">Nurul Huda · Clinic Clerk</option></select></div></div>
+</header>
+<div class="shell">
+ <nav aria-label="Workspace categories"><div class="eyebrow">Workspace</div>
+ <button class="navitem" type="button" data-q="1.1"><span class="navicon" aria-hidden="true">▣</span>Patients & Records</button>
+ <button class="navitem" type="button" data-q="2.1"><span class="navicon" aria-hidden="true">▦</span>Appointments & Follow-ups</button>
+ <button class="navitem" type="button" data-q="3.1"><span class="navicon" aria-hidden="true">▤</span>Visits & Prescriptions</button>
+ <button class="navitem" type="button" data-q="4.1"><span class="navicon" aria-hidden="true">◈</span>Vaccinations & Recalls</button>
+ <button class="navitem" type="button" data-q="5.1"><span class="navicon" aria-hidden="true">⇄</span>Requests & Approvals</button>
+ <button class="navitem" type="button" data-q="6.1"><span class="navicon" aria-hidden="true">▥</span>Billing & Payments</button>
+ <div style="height:14px"></div><button class="navitem" disabled><span class="navicon" aria-hidden="true">☷</span>My Actions</button>
+ <button class="navitem" type="button" data-q="7.1"><span class="navicon" aria-hidden="true">?</span>Policy Clarification</button>
+ <div class="navfoot">SAMPLE RUN<br>The first selected question of each category, asked by any of the four staff.<br><br>Four staff. Seven questions.<br>Different permissions.</div>
+ </nav>
+ <main>
+ <div class="workspace">
+ <section class="card" aria-label="Assistant workspace"><div class="cardhead"><h2>Staff assistant</h2><span class="heads"><span class="modes" role="group" aria-label="View"><button type="button" class="secondary" id="v-chat" aria-pressed="true">Chat</button><button type="button" class="secondary" id="v-hood" aria-pressed="false">Under the hood</button></span><span class="modes" role="group" aria-label="Mode"><button type="button" class="secondary" id="m-replay" aria-pressed="true">Replay</button><button type="button" class="secondary" id="m-live" aria-pressed="false">Live</button></span></span></div>
+ <div class="chatctl" id="replayctl"><span class="small" id="runline"></span> <span id="passline" class="small"></span></div>
+ <div class="chatctl" id="livectl" hidden><div class="keyline"><label for="api-key" class="eyebrow">Your Anthropic API key</label><input type="password" id="api-key" placeholder="sk-ant-..." autocomplete="off" spellcheck="false"><button type="button" class="secondary" id="forget">Forget key</button><button type="button" class="secondary" id="new-chat">New chat</button></div>
+ <p class="warnline"><b>Calls are billed to the key's owner.</b> Use a key you can revoke, with a low spend limit. The key stays in this tab's session storage and goes only to api.anthropic.com. A public service would keep its key on a server.</p></div>
+ <div class="chat" id="chat" aria-live="polite"></div>
+ <div class="hood" id="hood" hidden></div>
+ <div class="composer"><form id="askform"><label for="question" class="eyebrow" hidden>Question</label><input id="question" aria-label="Question" autocomplete="off"><button class="primary" type="submit" id="askbtn">Ask assistant ↗</button></form><p class="helper" id="helper"></p><div id="status" role="status"></div></div>
+ </section>
+ <aside class="side" aria-label="Access and next step">
+ <section class="card"><div class="body"><h2>YOUR ACCESS</h2><div id="identitycard"></div><div id="accessinfo"></div></div></section>
+ <section class="card" id="nextcard" hidden><div class="body"><h2>NEXT STEP</h2><div id="nextstep"></div></div></section>
+ </aside>
+ </div>
+ <details><summary>Demo details · access check and escalation scenario</summary><p>This is a browser-only UI simulation using synthetic data. The dropdown is not authentication, and its bundled data is not protected by server-side authorisation. A real app must check identity, patient access and returned fields on the server for every request.</p><p>The displayed permissions follow the latest agreed attending-doctor / clerk / escalated-lead rule. Policy clause references must be reconciled with the revised policies before implementation.</p><label class="democontrol" id="escalationcontrol"><input id="escalation" type="checkbox">Simulate an open consult from Dr Daniel to Dr Aisyah for Aiman</label><p>Changing this fixture does not create or approve a real escalation. It changes only the lead’s simulated access.</p><pre id="trace"></pre></details>
+ <footer><span>© 2026 Lee Yih Ven · Sang Kancil Specialist Clinic</span><span>Synthetic records · Replay is recorded; Live uses your own API key</span></footer>
+ </main>
+</div>
+<script>/*__FORMAT_JS__*/</script>
+<script>/*__RULES_JS__*/</script>
+<script>/*__BACKEND_JS__*/</script>
+<script>/*__PRE_JS__*/</script>
+<script>/*__POST_JS__*/</script>
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPT_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+const DATA = /*__DATA_JSON__*/null;
+const TABLES = /*__TABLES_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CASES = /*__CASES_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+</script>
+
+<script>
+'use strict';
+// The staff desk (the founder's layout, 22 Oct). The left menu's categories pick the sample question of each
+// category; the header's staff dropdown picks who asks. The centre card is the chat from the assistant page:
+// Replay plays the recorded run, Live signs in as that staff member with the visitor's own key, on the same hooks,
+// back end and demo data as the benchmark. YOUR ACCESS shows the founder's access and authority line for that
+// question and person (Benchmark picks v2); NEXT STEP appears only for a read-and-follow-up line or when the run
+// raised an escalation or a pending item for a named person.
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const MODEL = "claude-haiku-5-5";
+const KEY_SLOT = "sangkancil-desk-key";
+const MAX_MESSAGES = 15;
+const REDUCED = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+const ID_OF = { daniel: "PD-02-01", aisyah: "PD-01-01", priya: "PD-02-02", nurul: "FD-02-01" };
+const INITIALS = { "PD-01-01": "AR", "PD-02-01": "DO", "PD-02-02": "PN", "FD-02-01": "NH" };
+const SBY = Object.fromEntries(TABLES.staff.map((s) => [s.id, s]));
+const isClause = (id) => !!(CLAUSES && CLAUSES[id]);
+const myt = (min) => new Date(DATA.meta.now * 1000 + 8 * 3600e3 + (min || 0) * 60e3);
+const pad = (n) => String(n).padStart(2, "0");
+const clockAt = (min) => { const d = myt(min); return `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`; };
+const chat = $("chat");
+const C = { hood: [], view: "chat", inbox: [], q: "1.1", mode: "replay", token: 0, busy: false, key: "", desk: null, messages: [], turns: 0, last: null };
+const staffId = () => ID_OF[$("staff").value];
+const caseOf = () => CASES.find((c) => c.q === C.q && c.staff === staffId());
+const REC = Object.fromEntries((RESULTS.results || []).map((r) => [r.id, r]));
+
+// ---------- the right-hand cards ----------
+const kind = (text) => (/^Read and follow up/.test(text) ? "follow" : /^Read only/.test(text) ? "read" : "denied");
+const PILL = { follow: ["green", "Read and follow up"], read: ["green", "Read only"], denied: ["red", "Access denied"] };
+const detail = (text) => String(text).replace(/^(Read and follow up|Read only|Access denied)\s*:?\s*/, "").replace(/^Not in specialist capacity:\s*/, "Not in specialist capacity: ");
+/** The run's last named handover: a pending item or escalation the recorded or live run created for a person. */
+function pendingOf(trace) {
+  const hits = (trace || []).filter((t) => t.type === "tool" || t.name).map((t) => (t.hook && t.hook.result) || t.result || {})
+    .filter((r) => r.status === "pending" && r.next_step && r.next_step.staff_id);
+  return hits.pop() || null;
+}
+function render() {
+  const id = staffId(), s = SBY[id], c = caseOf(), lines = (c && c.authority) || [];
+  $("identitycard").innerHTML = `<div class="identitycard"><div class="bigavatar">${INITIALS[id]}</div><div><div class="staffname">${esc(s.name)}</div><div class="small">${esc(s.title)}</div></div></div>`;
+  $("accessinfo").innerHTML = lines.map((l) => {
+    const k = kind(l.text), [col, label] = PILL[k];
+    return `<div style="margin-bottom:12px"><span class="pill ${col}">● ${label}</span>${l.capacity ? ` <span class="small">as ${esc(l.capacity)}</span>` : ""}<p class="small" style="margin:7px 0 0">${esc(detail(l.text))}</p></div>`;
+  }).join("") + `<div class="keyrow"><span>Staff ID</span><strong>${id}</strong></div><div class="keyrow"><span>Question</span><strong>${esc(C.q)} ${esc(c ? c.category : "")}</strong></div>`;
+  const follow = lines.filter((l) => kind(l.text) === "follow");
+  const p = C.last;
+  const inbox = C.inbox || [];
+  const show = follow.length || p || inbox.length;
+  $("nextcard").hidden = !show;
+  if (show) {
+    let h = inbox.map((i) => `<span class="pill amber">${esc(i.type === "dispense" ? "To dispense" : ((TYPE_LABEL[i.type] || "a request").replace(/^an? /, "").replace(/^./, (x) => x.toUpperCase())) + " to answer")}</span><div class="owner"><p>${esc(i.text)}</p><p>${esc(i.id)}</p></div>`).join("");
+    if (p) {
+      const ns = p.next_step;
+      h += `<span class="pill amber">${ns.staff_id === id ? "Your next step" : p.error && p.error.code === "doctor_assignment_requested" ? "Escalated" : "Waiting on a named person"}</span><div class="owner"><strong>${esc(ns.person)}</strong><p>${esc(ns.job_title)} · ${esc(ns.staff_id)}${ns.request_id ? ` · request ${esc(ns.request_id)}` : ""}</p>${ns.action ? `<p>${esc(ns.action)}</p>` : ""}</div>`;
+    }
+    if (follow.length) h += `${p ? '<div class="reference">' : ""}<span class="pill green">Your follow-up</span>${follow.map((l) => `<p class="small" style="margin:8px 0 0">${l.capacity ? `As ${esc(l.capacity)}: ` : ""}${esc(detail(l.text))}</p>`).join("")}${p ? "</div>" : ""}`;
+    $("nextstep").innerHTML = h;
+  }
+  $("escalationcontrol").hidden = !(C.q === "1.1" && id === "PD-01-01");
+  $("trace").textContent = JSON.stringify({ simulation: true, staff_id: id, question: C.q, authority: lines.map((l) => (l.capacity ? `as ${l.capacity}: ` : "") + l.text),
+    open_consult_to_lead: $("escalation").checked, recorded_run: c && REC[c.id] ? { id: c.id, pass: REC[c.id].score.pass } : null }, null, 2);
+  document.querySelectorAll(".navitem[data-q]").forEach((b) => { const on = b.dataset.q === C.q; b.classList.toggle("active", on); if (on) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+}
+
+// ---------- chat bubbles (as the assistant page) ----------
+function splitReply(text) {
+  let body = String(text || ""), basis = "";
+  const m = body.match(/\n*\s*Basis:\s*([\s\S]*)$/);
+  if (m) { basis = m[1].trim(); body = body.slice(0, m.index).trim(); }
+  const found = [];
+  body = body.replace(/\s*\(([A-Z]{2}-\d{2}(?:\s*(?:,|and|to)\s*[A-Z]{2}-\d{2})*)\)/g, (all, inner) => {
+    const ids = inner.split(/\s*(?:,|and|to)\s*/);
+    if (!ids.every(isClause)) return all;
+    ids.forEach((id) => { if (!found.includes(id)) found.push(id); });
+    return "";
+  });
+  return { body, basis, clauses: found };
+}
+const para = (text) => String(text || "").split("\n").map((l) => (l.trim() ? `<p>${esc(l).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")}</p>` : "")).join("");
+const scrollEnd = () => { chat.scrollTop = chat.scrollHeight; };
+function meBubble(text, at) { pushHood({ kind: "message", who: SBY[staffId()].name, text }); chat.insertAdjacentHTML("beforeend", `<div class="msg me"><span class="by">${esc(SBY[staffId()].name)}</span>${esc(text)}<span class="tm">${esc(at)}</span></div>`); scrollEnd(); }
+function aiBubble(text, at) {
+  const { body, basis, clauses } = splitReply(text);
+  const c = clauses.length ? `<div class="cites">${clauses.map((id) => `<button type="button" data-clause="${esc(id)}" aria-expanded="false" title="${esc(CLAUSES[id].title)}">${esc(id)}</button>`).join("")}</div>` : "";
+  chat.insertAdjacentHTML("beforeend", `<div class="msg them"><span class="by">Staff assistant</span>${para(body)}${c}${basis ? `<div class="rule"><b>Basis</b> ${esc(basis)}</div>` : ""}<span class="tm">${esc(at)}</span></div>`);
+  scrollEnd();
+}
+chat.addEventListener("click", (e) => {
+  const b = e.target.closest && e.target.closest("[data-clause]"); if (!b) return;
+  const msg = b.closest(".msg"), id = b.dataset.clause, open = b.getAttribute("aria-expanded") === "true";
+  msg.querySelectorAll("[data-clause]").forEach((x) => x.setAttribute("aria-expanded", "false"));
+  const old = msg.querySelector(".rule.cl"); if (old) old.remove();
+  if (!open) { b.setAttribute("aria-expanded", "true"); msg.querySelector(".cites").insertAdjacentHTML("afterend", `<div class="rule cl"><b>${esc(id)} ${esc(CLAUSES[id].title)}.</b> ${esc(CLAUSES[id].text)}</div>`); }
+});
+const typingOn = () => { typingOff(); chat.insertAdjacentHTML("beforeend", `<div class="msg them typing" data-typing><i></i><i></i><i></i></div>`); scrollEnd(); };
+const typingOff = () => chat.querySelectorAll("[data-typing]").forEach((x) => x.remove());
+const sysLine = (text, err) => { chat.insertAdjacentHTML("beforeend", `<div class="sys${err ? " err" : ""}">${esc(text)}</div>`); scrollEnd(); };
+const wait = (ms) => new Promise((r) => setTimeout(r, REDUCED ? 0 : ms));
+const toolLine = (name, r, h) => `Tool: ${name}, ${r.status}${r.error ? " (" + r.error.code + ", " + r.error.clause + ")" : ""}${h && h.capacity ? ", capacity " + h.capacity : ""}.`;
+const dayLine = () => { chat.innerHTML = `<div class="day">Today, ${esc(DATA.meta.now_label.split(",")[0])}</div>`; C.hood = []; renderHood(); };
+
+// ---------- under the hood (founder, 22 Oct): a view switched from the chat, following what the chat shows ----------
+// Empty chat, empty view; a chat, the steps behind it; a notification only, the steps that brought it.
+const hood = $("hood");
+const VIEW_TEXT = { registration: "registration", contact: "guardian contact details", clinical: "clinical record", prescriptions: "prescriptions", appointments: "appointments",
+  vaccinations: "vaccination record", confidential: "confidential notes", billing: "billing record", handover_summary: "handover summary" };
+function asked(name, inp) {
+  const who = inp.patient ? `${inp.patient}${inp.age ? ", " + inp.age : ""}` : "";
+  if (name === "retrieve_patient_record") return `Open the ${VIEW_TEXT[inp.view] || inp.view} of ${who}`;
+  if (name === "find_patients") return `List patients: ${String(inp.filter).replace(/_/g, " ")}${inp.value ? " " + inp.value : ""}`;
+  if (name === "close_visit") return `Record a prescription for ${who}`;
+  if (name === "book_appointment") return `${inp.action === "confirm" ? "Confirm" : inp.action === "release" ? "Release" : "Book"} an appointment${who ? " for " + who : ""}`;
+  if (name === "create_request") return inp.action === "decide" ? `Record a decision on ${inp.request_id || "a request"}` : inp.action === "complete" ? `Mark ${inp.item_id || "an item"} done` : `Raise ${TYPE_LABEL[inp.type] || "a request"}${who ? " for " + who : ""}`;
+  if (name === "check_schedule") return "Check the clinic schedule";
+  if (name === "list_my_actions") return "Show the action list";
+  if (name === "record_payment") return "Record a payment received";
+  return name;
+}
+const clText = (id) => (CLAUSES[id] ? `${id} ${CLAUSES[id].title}` : id);
+const CHECKED = "Checked in code: the sentence count and opening for the level, sentence length, no word pending, no he or she, the signed-in person spoken to as you.";
+function hoodStep(s) {
+  if (s.kind === "message") return `<div class="hstep"><h4>${esc(s.who)} asked</h4><p>"${esc(s.text)}"</p></div>`;
+  if (s.kind === "note") return `<div class="hstep muted"><p>${esc(s.text)}</p></div>`;
+  if (s.kind === "notice") return `<div class="hstep code"><h4>Notice written in code for ${esc(s.to)}</h4><p>"${esc(s.text)}"</p><p class="small">From ${esc(s.ids)}, waiting in the action list. Nothing is sent first.</p></div>`;
+  if (s.kind === "reply") return `<div class="hstep ${s.code ? "code" : ""}"><h4>Reply ${s.code ? "written in code" : "written by the model, checked in code"}</h4><p>"${esc(String(s.text).split(/\n*\s*Basis:/)[0])}"</p>${s.code ? "" : `<p class="small">${CHECKED}</p>`}</div>`;
+  const h = s.hook || {}, r = h.result || s.result || {}, pre = h.pre || {}, ns = r.next_step || {};
+  const checks = (pre.checks || []).map((c) => `<li class="${c.pass ? "p" : "f"}"><b>${c.pass ? "pass" : "FAIL"}</b> ${esc(c.check)} <span class="small">(${esc(String(c.clause || "").split(", ").map(clText).join(", "))})</span></li>`).join("");
+  const who = SBY[s.who] ? SBY[s.who].name : s.who;
+  let out = `<div class="hstep"><h4>${s.before ? "Earlier, " : ""}${esc(who)}: ${esc(asked(s.name, s.input || {}))}</h4><p class="small"><code>${esc(s.name)}</code>${h.capacity ? " · capacity " + esc(h.capacity) : ""} · PreToolUse ${pre.verdict === "block" ? "blocked" : "allowed"}</p><ul class="chk">${checks}</ul>`;
+  if (h.tool_ran === false) out += "<p>The tool did not run; nothing was opened or changed.</p>";
+  else if (h.post && h.post.length) out += `<p class="small"><b>PostToolUse:</b> ${esc(h.post.join("; "))}</p>`;
+  out += `<p><b>Result:</b> ${esc(r.status)}${r.error ? ` · ${esc(r.error.code)}, ${esc(clText(r.error.clause))}` : ""}${ns.staff_id ? ` · next: ${esc(ns.person)}, ${esc(ns.job_title)} (${esc(ns.staff_id)})${ns.request_id ? ", " + esc(ns.request_id) : ""}` : ""}</p>`;
+  const made = (r.data && r.data.actions_created) || [];
+  if (made.length) out += `<p class="small">Created for ${esc(made.map((a) => `${SBY[a.owner].name}: ${a.type.replace(/_/g, " ")} ${a.id}`).join("; "))}.</p>`;
+  return out + "</div>";
+}
+function renderHood() {
+  if (!hood) return;
+  hood.innerHTML = C.hood && C.hood.length ? `<ol class="hlist">${C.hood.map((s) => `<li>${hoodStep(s)}</li>`).join("")}</ol>`
+    : '<p class="empty">Nothing has happened yet. Under the hood follows the chat: ask the assistant, and each step behind the reply appears here.</p>';
+  hood.scrollTop = hood.scrollHeight;
+}
+const pushHood = (s) => { C.hood.push(s); renderHood(); };
+function setView(v) {
+  C.view = v;
+  $("v-chat").setAttribute("aria-pressed", String(v === "chat")); $("v-hood").setAttribute("aria-pressed", String(v === "hood"));
+  chat.hidden = v !== "chat"; hood.hidden = v !== "hood"; renderHood();
+}
+function setupNote() {}
+
+
+// Founder, 22 Oct (receiving, style A): when someone has sent the signed-in person a request, the assistant opens
+// their chat with one short sentence, written here from the request; the item also shows in NEXT STEP.
+const TYPE_LABEL = { consult: "a consult", cover: "a cover request", handover: "a handover", fee_waiver: "a fee-waiver request", doctor_assignment: "a doctor-assignment request",
+  overbooking: "an overbooking request", callback: "a callback request", repeat_prescription: "a repeat-prescription request", external_referral: "a referral to arrange" };
+function inboxFor(c) {
+  const store = window.SKTools.memoryStore(DATA);
+  const desk = window.SKTools.createDesk(store, TABLES, { now: DATA.meta.now });
+  const steps = [];
+  for (const s of (c && c.setup && c.setup.calls) || []) { const o = desk.call(s.tool, s.input, s.staff); steps.push({ kind: "tool", before: true, who: s.staff, name: s.tool, input: s.input, hook: o.hook, result: o.result }); }
+  const list = desk.backend.notices(SBY[staffId()]).map((n) => ({ id: n.ids.join(", "), type: n.kind, text: n.text }));
+  // Under the hood: what brought the notification, only when a notification is shown.
+  if (list.length) { steps.forEach(pushHood); list.forEach((n) => pushHood({ kind: "notice", to: SBY[staffId()].name, ids: n.id, text: n.text })); }
+  return list;
+}
+// Founder, 22 Oct: the person the work is forwarded to only receives the notification; it is the first message.
+function greet(c) { C.inbox = inboxFor(c); for (const i of C.inbox) aiBubble(i.text, clockAt(0)); }
+const noticeOnly = () => !!(caseOf() && caseOf().notice);
+
+// ---------- replay ----------
+const CHECK_TEXT = { right_tool: "right tool", right_result: "right result and named person", records: "right records written", hard_limits: "hard limits held",
+  not_offered: "tool not offered to this role", scope: "right list scope", names: "names the right person", reply: "right amount", resource: "Fee Schedule served correctly", booked: "right booking" };
+function replayHeader() {
+  const sm = RESULTS.summary || {}, c = caseOf(), r = c && REC[c.id];
+  $("runline").textContent = `Question ${C.q}, recorded on ${sm.model}, ${String(sm.ranAt || "").slice(0, 10)}, as ${SBY[staffId()].name}.`;
+  $("passline").innerHTML = r ? (r.score.pass ? `<span class="pill green">Passed: ${Object.keys(r.score.checks).map((k) => CHECK_TEXT[k] || k).join(", ")}</span>` : `<span class="pill red">Failed: ${Object.entries(r.score.checks).filter(([, v]) => !v).map(([k]) => CHECK_TEXT[k] || k).join(", ")}</span>`) : `<span class="pill amber">Not recorded yet</span>`;
+}
+async function playReplay() {
+  if (noticeOnly()) return;
+  const token = ++C.token, c = caseOf(), r = c && REC[c.id];
+  dayLine(); C.last = null;
+  setupNote(c); greet(c); render();
+  if ($("escalation").checked && !$("escalationcontrol").hidden) sysLine("The recorded run has no open consult. Switch to Live to ask with the simulated consult open.");
+  if (!r) { sysLine("No recorded run for this question and staff member yet.", true); return; }
+  meBubble(r.message, clockAt(0));
+  await wait(500); if (token !== C.token) return;
+  typingOn();
+  for (const t of r.trace) {
+    if (t.type === "note") { if (!/written in code/.test(t.text)) pushHood({ kind: "note", text: t.text }); continue; }
+    if (t.type !== "tool") continue;
+    await wait(900); if (token !== C.token) return;
+    $("status").textContent = toolLine(t.name, (t.hook && t.hook.result) || t.result || {}, t.hook);
+    pushHood({ kind: "tool", who: staffId(), name: t.name, input: t.input, hook: t.hook, result: t.result });
+  }
+  await wait(700); if (token !== C.token) return;
+  typingOff();
+  pushHood({ kind: "reply", text: r.reply, code: r.trace.some((t) => t.type === "note" && /written in code/.test(t.text)) });
+  aiBubble(r.reply, clockAt(0));
+  C.last = pendingOf(r.trace); render();
+}
+
+// ---------- live ----------
+function readKey() { try { return sessionStorage.getItem(KEY_SLOT) || ""; } catch (e) { return ""; } }
+function saveKey(v) { try { if (v) sessionStorage.setItem(KEY_SLOT, v); else sessionStorage.removeItem(KEY_SLOT); } catch (e) { /* memory only */ } }
+const resourcesFor = (id) => RESOURCES.filter((r) => !r.restricted || r.restricted.some((x) => x.split(":")[0] === id));
+function newChat(note) {
+  C.token++;
+  const store = window.SKTools.memoryStore(DATA);
+  C.desk = window.SKTools.createDesk(store, TABLES, { now: DATA.meta.now });
+  const c = caseOf();
+  // The question's earlier workflow steps, made by their owners, as in the benchmark.
+  for (const s of (c && c.setup && c.setup.calls) || []) C.desk.call(s.tool, s.input, s.staff);
+  // The founder's demo fixture: an open consult from Dr Daniel to Dr Aisyah for Aiman (CL-05).
+  if ($("escalation").checked && C.q === "1.1") C.desk.call("create_request", { action: "raise", type: "consult", patient: "Aiman", age: "4", question: "Simulated consult for the demo" }, "PD-02-01");
+  store.set("call_log", []);
+  C.messages = []; C.turns = 0; C.busy = false; C.last = null;
+  dayLine();
+  setupNote(c); greet(c);
+  sysLine(note || (C.key ? `Signed in as ${SBY[staffId()].name}, ${SBY[staffId()].title}. Ask a question.` : "Paste your Anthropic API key above, then ask a question."));
+  setInput(true); render();
+}
+function setInput(on) { $("question").disabled = !on; $("askbtn").disabled = !on; }
+async function liveSend(text) {
+  if (C.busy || !text) return;
+  if (!C.key) { sysLine("Paste your Anthropic API key above first.", true); $("api-key").focus(); return; }
+  if (C.turns >= MAX_MESSAGES) { sysLine(`This chat has reached ${MAX_MESSAGES} messages. Press New chat to start again.`, true); return; }
+  C.turns++;
+  meBubble(text, clockAt(C.turns - 1));
+  C.busy = true; setInput(false); typingOn();
+  C.messages.push({ role: "user", content: text });
+  const id = staffId(), s = SBY[id], desk = C.desk, token = C.token, trace = [];
+  const system = window.SKPrompt.buildSystem(resourcesFor(id), { staff: s.id, name: s.name, title: s.title, today: DATA.meta.now_label });
+  try {
+    const out = await window.SKAgent.runTurn({ apiKey: C.key, model: MODEL, system, tools: desk.toolsFor(id), messages: C.messages,
+      callTool: async (name, input) => {
+        const o = desk.call(name, input, id);
+        trace.push({ name, input, result: o.result, hook: o.hook });
+        if (token === C.token) pushHood({ kind: "tool", who: id, name, input, hook: o.hook, result: o.result });
+        if (token === C.token) $("status").textContent = toolLine(name, o.result, o.hook);
+        return o;
+      } });
+    if (token !== C.token) return;
+    out.trace.filter((t) => t.type === "note" && !/written in code/.test(t.text)).forEach((t) => pushHood({ kind: "note", text: t.text }));
+    pushHood({ kind: "reply", text: out.reply, code: out.stoppedBy === "fixed_reply" });
+    typingOff(); aiBubble(out.reply, clockAt(C.turns - 1));
+    C.last = pendingOf(trace) || C.last; render();
+  } catch (e) {
+    if (token !== C.token) return;
+    typingOff(); C.messages.pop();
+    sysLine("The assistant could not reply: " + (e && e.message ? e.message : String(e)) + " Check the key, or start a new chat.", true);
+  } finally { if (token === C.token) { C.busy = false; setInput(true); } }
+}
+
+// ---------- wiring ----------
+function reset(note) {
+  C.token++; C.last = null;
+  $("status").textContent = "";
+  $("question").value = noticeOnly() ? "" : caseOf() ? caseOf().message : "";
+  if (C.mode === "replay") { replayHeader(); dayLine(); greet(caseOf()); if (!noticeOnly()) sysLine("Press Ask assistant to play the recorded answer."); setInput(!noticeOnly()); render(); if (note) $("status").textContent = note; }
+  else newChat(note);
+}
+function setMode(m) {
+  C.mode = m;
+  $("m-replay").setAttribute("aria-pressed", String(m === "replay"));
+  $("m-live").setAttribute("aria-pressed", String(m === "live"));
+  $("replayctl").hidden = m !== "replay"; $("livectl").hidden = m !== "live";
+  $("question").readOnly = m === "replay";
+  $("helper").textContent = m === "replay" ? "Replay: Ask assistant plays the recorded run of this question for the staff member chosen above; where the work is forwarded to this person, the notification is all they receive. The dropdown changes identity; typing a name does not."
+    : "Live: your question goes to the assistant as the staff member chosen above, through the same hooks and checks. The dropdown changes identity; typing a name does not.";
+  reset();
+}
+$("v-chat").addEventListener("click", () => setView("chat"));
+$("v-hood").addEventListener("click", () => setView("hood"));
+$("m-replay").addEventListener("click", () => setMode("replay"));
+$("m-live").addEventListener("click", () => setMode("live"));
+document.querySelectorAll(".navitem[data-q]").forEach((b) => b.addEventListener("click", () => { if (C.busy) return; C.q = b.dataset.q; reset(`Question ${C.q}: ${caseOf().category}.`); }));
+$("askform").addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (C.mode === "replay") playReplay();
+  else { const q = $("question").value.trim(); $("question").value = ""; liveSend(q); }
+});
+$("staff").addEventListener("change", () => { if (C.busy) return; reset(C.mode === "replay" ? "Staff changed. The previous answer has been cleared." : `Staff changed: signed in as ${SBY[staffId()].name}, ${SBY[staffId()].title}. A fresh copy of the demo data.`); });
+$("escalation").addEventListener("change", () => { if (C.busy) return; reset("Demo consult fixture updated. Access checked again."); });
+C.key = readKey();
+$("api-key").value = C.key;
+$("api-key").addEventListener("input", (e) => { C.key = e.target.value.trim(); saveKey(C.key); });
+$("forget").addEventListener("click", () => { C.key = ""; $("api-key").value = ""; saveKey(""); if (!C.busy) newChat(); });
+$("new-chat").addEventListener("click", () => { if (!C.busy) newChat(); });
+setMode("replay");
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+[
+ {
+  "id": "SK-RX-00001",
+  "patient": "SK-P-0001",
+  "visit": "SK-VIS-00001",
+  "doctor": "PD-02-01",
+  "date": "2026-10-19",
+  "presentation": "MED-PAR120",
+  "profile": "CF-PAR-01",
+  "amount_per_dose": 5,
+  "dose_unit": "mL",
+  "times_per_day": 4,
+  "as_needed": true,
+  "duration_days": 3,
+  "supply_qty": 1,
+  "supply_unit": "60 mL bottle"
+ },
+ {
+  "id": "SK-RX-00002",
+  "patient": "SK-P-0004",
+  "visit": "SK-VIS-00006",
+  "doctor": "PD-02-01",
+  "date": "2026-09-15",
+  "presentation": "MED-SAL100",
+  "profile": "CF-SAL-ROUTINE",
+  "amount_per_dose": 2,
+  "dose_unit": "puff",
+  "times_per_day": 4,
+  "as_needed": true,
+  "duration_days": null,
+  "supply_qty": 1,
+  "supply_unit": "200-actuation inhaler",
+  "plan_reference": "SK-AAP-0004",
+  "review_date": "2026-10-15"
+ }
+]

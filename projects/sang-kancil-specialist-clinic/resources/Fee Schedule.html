@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fee Schedule</title><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+.crumbs{font-size:12.5px;opacity:.8;margin-bottom:2px}.crumbs a{color:inherit;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../sang-kancil-specialist-clinic.html">Sang Kancil Specialist Clinic</a></div><h1>Fee Schedule</h1><nav id="toc"></nav></div>
+<p>FEE SCHEDULE (FS)</p><p>Version: 1.0 | Prepared: 22 October 2026 | Currency: MYR</p><p>Effective from: 22 October 2026, Malaysia time</p><p>Status: Fictional private-clinic prices for software demonstration only.</p><p>Owner: Dr Aisyah Rahman, lead paediatrician</p><p>Related policies: CP-09, BP-01 to BP-08</p><p><strong>Restricted resource:</strong> served only to Nurul Huda and to Dr Aisyah Rahman in lead capacity (Fee Schedule section 5).</p>
+<h2>1. Purpose and price basis</h2>
+<p>These are proposed, plausible demo prices, not quotations from an operating clinic, verified market averages or a statement of permitted statutory charges. All amounts below are final demo charges with no additional tax calculation; this is a software assumption, not a tax ruling. Store money as integer sen. Existing invoices retain their original charges when this schedule changes.</p>
+<h2>2. Consultations</h2>
+<table><tr><th>fee_id</th><th>service</th><th>doctor</th><th>billing unit</th><th>MYR</th><th>sen</th></tr>
+<tr><td>FS-C01</td><td>First consultation, lead</td><td>Dr Aisyah</td><td>encounter</td><td>150.00</td><td>15000</td></tr>
+<tr><td>FS-C02</td><td>Follow-up consultation, lead</td><td>Dr Aisyah</td><td>encounter</td><td>100.00</td><td>10000</td></tr>
+<tr><td>FS-C03</td><td>First consultation, associate</td><td>Dr Daniel or Dr Priya</td><td>encounter</td><td>100.00</td><td>10000</td></tr>
+<tr><td>FS-C04</td><td>Follow-up consultation, associate</td><td>Dr Daniel or Dr Priya</td><td>encounter</td><td>60.00</td><td>6000</td></tr>
+<tr><td>FS-C05</td><td>Vaccination-only clinical assessment</td><td>Any eligible doctor</td><td>encounter</td><td>0.00</td><td>0</td></tr>
+<tr><td>FS-C06</td><td>Administrative clarification call</td><td>Assigned staff</td><td>call</td><td>0.00</td><td>0</td></tr>
+</table>
+<p>First means a newly registered patient's first clinical consultation with this clinic. A follow-up is a later consultation for a registered patient; referral between clinic doctors does not automatically reset the patient to first consultation. These are local billing definitions, not clinical classifications.</p>
+<p>FS-C05 applies only when the encounter consists of vaccination assessment and administration, with no separate illness consultation. The assessment is included in the vaccine price. If a separately documented illness consultation also occurs, charge the appropriate consultation once plus the administered vaccine. Do not add a vaccination assessment charge. Phone callbacks do not automatically create a bill; a separate booked consultation follows its actual encounter type.</p>
+<p>No registration charge, booking deposit, cancellation fee, missed-appointment fee, cover surcharge or overbooking surcharge is defined. An urgent visit uses the actual first or follow-up consultation rate; urgency does not change the price. These prices do not authorise a doctor outside the booking age rule.</p>
+<h2>3. Vaccination prices</h2>
+<table><tr><th>fee_id</th><th>vaccine_id</th><th>vaccine/service</th><th>billing unit</th><th>MYR</th><th>sen</th></tr>
+<tr><td>FS-V01</td><td>VAC-HEX</td><td>DTaP-IPV-HepB-Hib, six-in-one</td><td>administered dose</td><td>200.00</td><td>20000</td></tr>
+<tr><td>FS-V02</td><td>VAC-PCV</td><td>Pneumococcal conjugate vaccine</td><td>administered dose</td><td>220.00</td><td>22000</td></tr>
+<tr><td>FS-V03</td><td>VAC-MMR</td><td>Measles, mumps and rubella</td><td>administered dose</td><td>95.00</td><td>9500</td></tr>
+<tr><td>FS-V04</td><td>VAC-HEPB</td><td>Hepatitis B, paediatric product</td><td>administered dose</td><td>55.00</td><td>5500</td></tr>
+<tr><td>FS-V05</td><td>VAC-DT</td><td>Diphtheria and tetanus, school booster product</td><td>administered dose</td><td>45.00</td><td>4500</td></tr>
+<tr><td>FS-V06</td><td>VAC-TT</td><td>Tetanus toxoid, school booster product</td><td>administered dose</td><td>30.00</td><td>3000</td></tr>
+<tr><td>FS-V07</td><td>VAC-HPV9</td><td>Nine-valent HPV, private-service product</td><td>administered dose</td><td>600.00</td><td>60000</td></tr>
+<tr><td>FS-V08</td><td>VAC-FLU</td><td>Inactivated seasonal influenza, optional service</td><td>administered dose</td><td>95.00</td><td>9500</td></tr>
+</table>
+<p>Each vaccine price includes the product, administration consumables and vaccination-only assessment. Prices do not establish availability, product interchangeability, eligibility, dose volume or the number of doses needed. HPV9 is a private-service product, not an assumption about the product supplied by the national programme. Influenza is an optional service and shall not appear as a compulsory NIP overdue item. The doctor confirms the exact registered product and schedule; record its actual product and antigen coverage.</p>
+<p>BCG, Sabah-only early measles and Sarawak JE are tracked as external vaccination history where applicable, but not offered or priced in this Selangor demo. Do not invent a charge for them.</p>
+<h2>4. Medicines and equipment</h2>
+<table><tr><th>fee_id</th><th>formulary_id</th><th>item</th><th>supplied billing unit</th><th>MYR</th><th>sen</th></tr>
+<tr><td>FS-M01</td><td>MED-PAR120</td><td>Paracetamol 120 mg/5 mL</td><td>60 mL bottle</td><td>12.00</td><td>1200</td></tr>
+<tr><td>FS-M02</td><td>MED-PAR250</td><td>Paracetamol 250 mg/5 mL</td><td>60 mL bottle</td><td>15.00</td><td>1500</td></tr>
+<tr><td>FS-M03</td><td>MED-AMX125</td><td>Amoxicillin 125 mg/5 mL after reconstitution</td><td>100 mL bottle</td><td>18.00</td><td>1800</td></tr>
+<tr><td>FS-M04</td><td>MED-AMX250</td><td>Amoxicillin 250 mg/5 mL after reconstitution</td><td>100 mL bottle</td><td>28.00</td><td>2800</td></tr>
+<tr><td>FS-M05</td><td>MED-CET1</td><td>Cetirizine 1 mg/mL</td><td>60 mL bottle</td><td>18.00</td><td>1800</td></tr>
+<tr><td>FS-M06</td><td>MED-CET10</td><td>Cetirizine 10 mg</td><td>tablet</td><td>1.00</td><td>100</td></tr>
+<tr><td>FS-M07</td><td>MED-SAL100</td><td>Salbutamol 100 micrograms/actuation pMDI</td><td>200-actuation inhaler</td><td>35.00</td><td>3500</td></tr>
+<tr><td>FS-M08</td><td>MED-HC1</td><td>Hydrocortisone 1% cream</td><td>15 g tube</td><td>15.00</td><td>1500</td></tr>
+<tr><td>FS-E01</td><td>Not a medicine</td><td>Valved spacer, mask supplied if prescribed</td><td>device</td><td>55.00</td><td>5500</td></tr>
+</table>
+<p>Bottle, inhaler and tube sizes are fictional stocked presentations. Verify the actual product before real procurement. Bill whole supplied bottles, tubes, devices or inhalers; tablets use the supplied whole-tablet quantity. Do not substitute a different strength to reduce a bill. For a fixed liquid course, required volume is mL per dose multiplied by doses per day multiplied by days; bottle count is the ceiling of required volume divided by stocked volume. Any product-specific reconstitution expiry or stability constraint must also be checked by the dispenser; this table does not establish it.</p>
+<p>For as-needed prescriptions, the doctor supplies a maximum daily frequency and intended dispensing quantity. Do not infer maximum possible consumption as the amount actually dispensed. Record the actual supplied quantity after the clerk checks the prescription; the assistant never decides the dose or duration.</p>
+<h2>5. Billing and approval rules</h2>
+<p>Nurul Huda prepares invoices in the source system. Only her role and Dr Aisyah's lead capacity may retrieve this resource through the application; offering it as an MCP resource must preserve that access restriction. Associates may read the formulary without its price columns. The back end, rather than the model, joins the prices for authorised billing work.</p>
+<p>An approved fee waiver creates an action for the clerk to apply the exact authorised adjustment in the source billing system. A pending request changes no price or balance. Approved adjustments are separate invoice records, not edits to this schedule. Payments are separate receipt records and do not reduce the original charge lines.</p>
+<p>No invoice-creation, fee-change, refund or payment-processing tool is introduced by this reference file. An unpriced item returns PRICE_NOT_FOUND to Nurul Huda; it is never assigned RM 0.00 by default.</p>
+<h2>6. Worked demo examples</h2>
+<p>A. Arjun, 9, follow-up with Dr Daniel: FS-C04 = RM 60.00. His RM 185.00 outstanding benchmark balance is the sum of his existing invoice and adjustment history, not a new consultation charge or a price to overwrite.</p>
+<p>B. Aiman's synthetic prescription: MED-AMX250, 6 mL per dose, twice daily, 10 days. Required volume = 120 mL; two 100 mL bottles = RM 56.00. With an associate follow-up, total = RM 116.00. Clinical eligibility and checks are independent of this arithmetic.</p>
+<p>C. Vaccination-only visit for one MMR dose: RM 95.00 total, not RM 155.00. A separately documented associate follow-up plus that dose: RM 155.00.</p>
+<p>D. An RM 60.00 invoice with an RM 20.00 recorded payment has RM 40.00 outstanding. A further RM 50.00 payment entry fails the overpayment check.</p>
+<h2>7. Maintenance</h2>
+<p>Change prices only through a versioned schedule update approved by the demo owner. Preserve fee IDs, effective dates and the version used by each invoice. Future and withdrawn prices shall not silently apply to existing invoices. No external source is cited for these invented prices; clinical sources in the companion files do not validate them.</p>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Fee Schedule</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>
