@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FD Food and Drink Distributors | Staff Desk</title>
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4f6f8;--paper:#fff;--ink:#263849;--muted:#6d7d8a;--line:#e2e8ec;--teal:#1f4e8c;--tealsoft:#eaf1fb;--red:#a54638;--redsoft:#fff1ed;--gold:#946720;--goldsoft:#fff7e7}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #7fa6d8;outline-offset:3px}button:disabled{cursor:default}header{height:92px;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 34px}.brand{display:flex;align-items:center;gap:12px}.logo{width:43px;height:43px;border-radius:13px;background:var(--teal);color:white;display:grid;place-items:center;font-size:26px;font-weight:400}.brand strong{font-size:16px;letter-spacing:-.3px;display:block}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--muted)}.topright{display:flex;align-items:center;gap:24px}.clock{font-size:12px;color:var(--muted);text-align:right}.identity label{display:block;margin-bottom:4px}.identity select{background:#f9fbfb;color:var(--ink);border:1px solid #cedbdc;border-radius:8px;padding:9px 34px 9px 12px;min-width:300px}.shell{display:grid;grid-template-columns:218px minmax(0,1fr);min-height:calc(100vh - 122px)}nav{background:#fbfcfd;border-right:1px solid var(--line);padding:30px 16px;display:flex;flex-direction:column;gap:6px}nav .eyebrow{padding:0 12px;margin-bottom:12px}.navitem{display:flex;align-items:center;gap:11px;text-align:left;border:0;background:none;color:var(--muted);padding:12px;border-radius:8px;font-size:12px}.navitem:not(:disabled):hover{background:#f0f4fa}.navitem.active{background:var(--tealsoft);color:var(--teal);font-weight:650}.navitem:disabled:not(.active){opacity:.65}.navicon{font-size:15px;width:18px;text-align:center}.navfoot{margin-top:auto;padding:40px 12px 0;font-size:11px;color:var(--muted)}main{padding:28px 32px 20px;max-width:1500px;width:100%;margin:auto}.heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.heading h1{font-size:25px;letter-spacing:-.8px;font-weight:650;margin:3px 0}.heading p{margin:0;color:var(--muted);font-size:12px}.pill{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:100px;padding:4px 10px;font-size:11px;font-weight:600;white-space:nowrap}.pill.green{color:var(--teal);background:var(--tealsoft);border-color:#cddcf1}.pill.red{color:var(--red);background:var(--redsoft);border-color:#f1d3ca}.pill.amber{color:var(--gold);background:var(--goldsoft);border-color:#eedebc}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:22px;align-items:start}.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 3px 12px #26384903}.cardhead{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}.cardhead h2{font-size:14px;margin:0;font-weight:650}.conversation{padding:25px 24px;min-height:370px}.who{display:flex;gap:9px;align-items:center;font-size:11px;font-weight:650;color:var(--muted);margin-bottom:9px}.avatar{display:grid;place-items:center;background:#edf1f5;border-radius:7px;width:24px;height:24px;font-size:10px;color:#65788b}.avatar.assistant{background:var(--tealsoft);color:var(--teal)}.question{margin:0 0 27px 33px;background:#f1f4f7;padding:15px 18px;border-radius:0 10px 10px 10px;font-size:14px}.answer{margin-left:33px}.answer h3{font-size:18px;letter-spacing:-.4px;margin:0 0 10px;font-weight:650}.answer p{color:#566a7a;margin:0 0 12px;font-size:13px}.answer .pill{margin-bottom:12px}.basis{border-top:1px solid var(--line);padding-top:13px;font-size:11px;color:var(--muted);line-height:1.8;margin-top:18px}.basis strong{color:#526777}.primary{border:0;border-radius:7px;background:var(--teal);color:white;padding:10px 15px;font-size:12px;font-weight:600}.primary:hover{background:#183f72}.secondary{border:1px solid var(--line);background:white;border-radius:7px;color:var(--ink);padding:8px 12px;font-size:12px}.record{margin-top:16px;padding:15px;background:#f5f8fc;border:1px solid #d9e4f2;border-radius:8px}.record dl{display:grid;grid-template-columns:100px 1fr;gap:7px;font-size:12px;margin:12px 0 0}.record dt{color:var(--muted)}.record dd{margin:0}.composer{border-top:1px solid var(--line);padding:16px 22px;background:#fcfdfd}.composer form{display:flex;gap:9px}.composer input{min-width:0;flex:1;border:1px solid var(--line);border-radius:7px;padding:11px;background:white;color:var(--ink);font-size:12px}.helper{font-size:10px;color:var(--muted);margin:8px 0 0}.side{display:flex;flex-direction:column;gap:16px}.side .body{padding:18px}.side h2{font-size:12px;font-weight:650;margin:0 0 12px}.identitycard{display:flex;gap:11px;align-items:center;padding-bottom:15px;border-bottom:1px solid var(--line);margin-bottom:15px}.bigavatar{width:38px;height:38px;background:var(--tealsoft);color:var(--teal);border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:650}.staffname{font-size:13px;font-weight:650}.small{font-size:11px;color:var(--muted)}.keyrow{display:flex;justify-content:space-between;gap:12px;margin:8px 0;font-size:11px}.keyrow span:first-child{color:var(--muted)}.owner{border-left:3px solid #bcd0ea;padding-left:12px;margin-top:14px}.owner strong{display:block;font-size:12px}.owner p{font-size:11px;color:var(--muted);margin:4px 0}.notice{background:#fafbf7;border:1px solid #e7ebdf;padding:14px;border-radius:8px;font-size:11px;color:#69745c}.reference{font-size:11px;color:#607586;border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.reference strong{color:var(--teal)}details{background:var(--paper);border:1px solid var(--line);border-radius:9px;margin-top:20px;padding:12px 16px;font-size:11px;color:var(--muted)}summary{cursor:pointer;font-weight:600;color:#526777}.democontrol{margin:14px 0;display:flex;align-items:center;gap:9px;color:var(--ink)}.democontrol input{accent-color:var(--teal)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f7f8;border-radius:6px;padding:12px;color:#506678;font-size:11px}footer{color:var(--muted);font-size:10px;display:flex;justify-content:space-between;gap:20px;padding-top:18px}.empty{font-size:12px;color:var(--muted);padding:18px;border:1px dashed var(--line);border-radius:8px}#status{min-height:18px;font-size:11px;color:var(--muted);margin-top:8px}[hidden]{display:none!important}@media(min-width:1500px){main{padding-top:42px;padding-bottom:32px}}@media(max-width:1120px){header{padding:0 20px}.clock{display:none}.shell{grid-template-columns:185px 1fr}main{padding:24px 20px}.workspace{grid-template-columns:minmax(0,1fr) 255px}.navitem{font-size:11px;padding:10px 8px}}@media(max-width:900px){.shell{grid-template-columns:1fr}nav{display:none}.workspace{grid-template-columns:minmax(0,1fr) 265px}header{gap:12px}.brand strong{font-size:13px}.identity select{min-width:0;width:285px}}@media(max-width:680px){header{height:auto;align-items:stretch;flex-direction:column;padding:16px 20px;gap:15px}.topright,.identity,.identity select{width:100%}.shell{min-height:0}.workspace{grid-template-columns:1fr}.heading{align-items:start}.heading>.pill{display:none}main{padding:20px 14px}.conversation{padding:20px 15px;min-height:0}.cardhead{padding:15px}.question{margin-left:0}.answer{margin-left:0}.composer{padding:15px}.composer form{flex-wrap:wrap}.composer input{flex-basis:100%}.side{display:grid;grid-template-columns:1fr}.heading h1{font-size:23px}footer{flex-direction:column;gap:3px}}
+.modes{display:inline-flex;gap:6px}.modes button[aria-pressed="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.heads{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.hood{min-height:370px;max-height:560px;overflow-y:auto;background:#f8fafc;padding:16px 18px}
+.hlist{list-style:none;margin:0;padding:0;background:none;border:0}.hlist>li{margin:0 0 10px}
+.hstep{background:#fff;border:1px solid var(--line);border-left:3px solid #2f6fb0;border-radius:8px;padding:8px 12px;font-size:12.5px}
+.hstep.code{border-left-color:var(--teal)}.hstep.muted{border-left-color:var(--line);color:var(--muted)}
+.hstep h4{margin:0 0 4px;font-size:13px;color:#243b53}.hstep p{margin:3px 0}
+.chk{list-style:none;margin:4px 0;padding:0;background:none;border:0}.chk li{margin:1px 0}.chk .p b{color:var(--teal)}.chk .f b,.chk .f{color:var(--red)}
+.chatctl{padding:10px 22px;border-bottom:1px solid var(--line);background:#fcfdfd;font-size:12px}.keyline{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.keyline input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:7px;padding:8px;font-size:12px}
+.warnline{font-size:11px;color:var(--gold);background:var(--goldsoft);border:1px solid #eedebc;border-radius:7px;padding:6px 9px;margin:8px 0 0}
+.chat{min-height:370px;max-height:560px;overflow-y:auto;background:#eef2f7;padding:16px 18px}
+.day{text-align:center;font-size:11px;color:var(--muted);margin:2px 0 10px}
+.msg{max-width:78%;width:fit-content;padding:8px 12px 5px;border-radius:12px;margin:0 0 8px;font-size:13.5px;line-height:1.45;box-shadow:0 1px 0 rgba(0,0,0,.05);animation:in .25s ease;overflow-wrap:anywhere}
+.msg p{margin:0 0 5px}.msg .by{display:block;font-size:10.5px;font-weight:650;opacity:.75;margin-bottom:2px}
+.msg .tm{display:block;text-align:right;font-size:10.5px;opacity:.7;margin-top:1px}
+.msg .cites{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.msg .cites button{font:inherit;font-size:11px;color:#2f6fb0;border:1px solid var(--line);border-radius:7px;padding:0 6px;background:#f8fafc;cursor:pointer}
+.msg .cites button[aria-expanded="true"]{border-color:#2f6fb0}
+.msg .rule{font-size:11.5px;color:var(--muted);background:#f8fafc;border:1px solid var(--line);border-radius:7px;padding:4px 8px;margin-top:5px}.msg .rule b{color:#243b53}
+.me{margin-left:auto;background:#2f6fb0;color:#fff;border-bottom-right-radius:4px;white-space:pre-wrap}
+.them{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+.sys{margin:6px auto 10px;text-align:center;font-size:11.5px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:10px;padding:4px 10px;width:fit-content;max-width:90%}
+.sys.err{color:var(--red);background:var(--redsoft);border-color:#f1d3ca}
+.typing{display:inline-flex;gap:3px;padding:10px 12px}.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:b 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.msg{animation:none}.typing i{animation:none;opacity:.6}}
+.crumb{background:var(--paper);border-bottom:1px solid var(--line);padding:7px 34px;font-size:12px;color:var(--muted)}.crumb a{color:var(--teal);text-decoration:none}@media(max-width:1120px){.crumb{padding:7px 20px}}
+</style>
+</head>
+<body>
+<style>
+.qpick{display:flex;gap:8px;align-items:center;padding:10px 22px;border-bottom:1px solid var(--line);background:#fcfdfd}
+.qpick select{flex:1;min-width:0;border:1px solid #cedbdc;border-radius:8px;padding:8px 10px;background:#f9fbfb;color:var(--ink)}
+.side dl.sum{display:grid;grid-template-columns:92px 1fr;gap:5px;font-size:12px;margin:6px 0 12px}.side dl.sum dt{color:var(--muted)}.side dl.sum dd{margin:0}
+.side table{border-collapse:collapse;width:100%;font-size:11px;margin:4px 0 10px}.side th,.side td{border:1px solid var(--line);padding:4px 6px;text-align:left}.side th{background:#f8fafc;color:#526777}
+#asel{display:none;flex:0 0 auto;max-width:40%}@media(max-width:900px){#asel{display:block}.qpick{flex-wrap:wrap}}
+.navlinks{display:flex;flex-direction:column;gap:3px;padding:0 12px;margin-top:10px}.navlinks a{font-size:11px;color:var(--teal);text-decoration:none}.navlinks a:hover{text-decoration:underline}
+.hstep .raw{font-size:11px}.hstep details{margin:4px 0 0;padding:6px 10px;border-radius:6px}
+</style>
+<div class="crumb"><a href="../../index.html">AI Projects</a> / <a href="../../fd-food-and-drink-distributors.html">FD Food and Drink Distributors</a></div>
+<header>
+ <div class="brand"><div class="logo" aria-hidden="true">F</div><div><strong>FD Food and Drink Distributors</strong><span class="small">Staff Desk · Internal workspace</span></div></div>
+ <div class="topright"><div class="clock" id="clock"></div><div class="identity"><label class="eyebrow" for="staff">Demo staff identity</label><select id="staff"></select></div></div>
+</header>
+<div class="shell">
+ <nav aria-label="Workspace areas"><div class="eyebrow">Workspace</div>
+ <div id="areas"></div>
+ <div class="navfoot">7 staff. 15 questions.<br>Different permissions.<br><br><span class="eyebrow" style="padding:0">Policies</span></div>
+ <div class="navlinks">
+  <a href="resources/Management%20Policy.html" target="_blank" rel="noopener">Management Policy</a>
+  <a href="resources/Sales%20Policy.html" target="_blank" rel="noopener">Sales Policy</a>
+  <a href="resources/Finance%20Policy.html" target="_blank" rel="noopener">Finance Policy</a>
+  <a href="resources/Warehouse%20Policy.html" target="_blank" rel="noopener">Warehouse Policy</a>
+  <a href="resources/Product%20Catalogue.html" target="_blank" rel="noopener">Product Catalogue</a>
+  <a href="resources/Customer%20Directory.html" target="_blank" rel="noopener">Customer Directory</a>
+  <a href="benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a>
+ </div>
+ </nav>
+ <main>
+ <div class="workspace">
+ <section class="card" aria-label="Assistant workspace"><div class="cardhead"><h2>Staff assistant</h2><span class="heads"><span class="modes" role="group" aria-label="View"><button type="button" class="secondary" id="v-chat" aria-pressed="true">Chat</button><button type="button" class="secondary" id="v-hood" aria-pressed="false">Under the hood</button></span><span class="modes" role="group" aria-label="Mode"><button type="button" class="secondary" id="m-replay" aria-pressed="true">Replay</button><button type="button" class="secondary" id="m-live" aria-pressed="false">Live</button></span></span></div>
+ <div class="qpick" id="qpick"><select id="asel" aria-label="Area"></select><label class="eyebrow" for="qsel">Question</label><select id="qsel"></select></div>
+ <div class="chatctl" id="replayctl"><span class="small" id="runline"></span> <span id="passline" class="small"></span></div>
+ <div class="chatctl" id="livectl" hidden><div class="keyline"><label for="api-key" class="eyebrow">Your Anthropic API key</label><input type="password" id="api-key" placeholder="sk-ant-..." autocomplete="off" spellcheck="false"><button type="button" class="secondary" id="forget">Forget key</button><button type="button" class="secondary" id="new-chat">New chat</button></div>
+ <p class="warnline"><b>Calls are billed to the key's owner.</b> Use a key you can revoke, with a low spend limit. The key stays in this tab's session storage and goes only to api.anthropic.com. A public service would keep its key on a server.</p></div>
+ <div class="chat" id="chat" aria-live="polite"></div>
+ <div class="hood" id="hood" hidden></div>
+ <div class="composer"><form id="askform"><input id="question" aria-label="Question" autocomplete="off"><button class="primary" type="submit" id="askbtn">Ask assistant ↗</button></form><p class="helper" id="helper"></p><div id="status" role="status"></div></div>
+ </section>
+ <aside class="side" aria-label="Access and next step">
+ <section class="card"><div class="body"><h2>YOUR ACCESS</h2><div id="identitycard"></div><div id="accessinfo"></div></div></section>
+ <section class="card" id="nextcard" hidden><div class="body"><h2>NEXT STEP</h2><div id="nextstep"></div></div></section>
+ <section class="card" id="ordercard" hidden><div class="body"><h2 id="ordertitle">ORDER SUMMARY TO CONFIRM</h2><div id="orderbody"></div></div></section>
+ <section class="card" id="apprcard" hidden><div class="body"><h2>YOUR APPROVAL RECORDS</h2><div id="apprbody"></div></div></section>
+ </aside>
+ </div>
+ <details><summary>Demo details</summary><p>A browser-only simulation on sample data. The identity dropdown is not authentication, and the bundled data is not protected by server-side authorisation; a real app checks identity, department, tier and returned fields on the server for every request.</p><p>Replay plays the recorded benchmark run for the question and staff member chosen. Live sends your question to the assistant as that staff member, through the same hooks, back end and demo data.</p></details>
+ <footer><span>© 2026 Lee Yih Ven · FD Food and Drink Distributors</span><span>Sample records · Replay is recorded; Live uses your own API key</span></footer>
+ </main>
+</div>
+<script>/*__FORMAT_JS__*/</script>
+<script>/*__RULES_JS__*/</script>
+<script>/*__BACKEND_JS__*/</script>
+<script>/*__PRE_JS__*/</script>
+<script>/*__POST_JS__*/</script>
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPT_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+const DATA = /*__DATA_JSON__*/null;
+const TABLES = /*__TABLES_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CASES = /*__CASES_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+</script>
+<script>
+'use strict';
+// The FD staff desk (founder, 23 Oct): the Sang Kancil desk layout in FD's own colours, on FD's engine and recorded runs.
+// The left menu picks an area; the Question dropdown lists that area's questions, numbered within it; the header's
+// dropdown picks who asks. Replay plays the recorded run of that question for that staff member; Live signs in as
+// them with the visitor's own key. YOUR ACCESS shows the level for the question, read from the run's result by one
+// mapping (levelOf) that serves Replay and Live alike. NEXT STEP and the ORDER SUMMARY show only on Read and follow up.
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const F = window.FDFormat;
+const MODEL = "claude-sonnet-5-5";
+const KEY_SLOT = "fd-desk-key";
+const MAX_MESSAGES = 15;
+const REDUCED = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+const SBY = Object.fromEntries(TABLES.staff.map((s) => [s.id, s]));
+const INITIALS = (s) => s.name.split(" ").filter((w) => /^[A-Z]/.test(w)).slice(0, 2).map((w) => w[0]).join("");
+const REC = Object.fromEntries((RESULTS.results || []).map((r) => [r.id, r]));
+const chat = $("chat"), hood = $("hood");
+
+// The areas and their questions in benchmark order, worded as staff ask them (founder, 23 Oct). Run IDs stay internal.
+const AREAS = [
+  ["▤", "Stock & Warehouse", [[1, "What is the mineral water stock level at WH-A?"], [2, "Where is mineral water stored in WH-A, and when was it last counted?"], [8, "Is the corned beef stock figure at WH-A recent enough to use?"]]],
+  ["⌂", "Customers & Delivery", [[5, "Where is C-0001 located?"], [6, "If C-0001's order is confirmed now, which warehouse ships it and on what day?"]]],
+  ["▥", "Credit & Invoices", [[3, "How much available credit does C-0001 have?"], [4, "Does C-0001 have any overdue invoices?"], [7, "Please raise C-0001's credit limit by RM 100."], [14, "Please raise C-0001's credit limit by RM 500."]]],
+  ["▦", "Orders", [[9, "Please place a credit order for C-0001: 30 cartons of mineral water, delivery Friday 2 October."], [10, "The screen froze while I was placing C-0001's order. Please place it again."], [11, "Please place a credit order for C-0001: 10 cartons of coconut water, delivery Friday 2 October."], [15, "Please place a credit order for C-0001: 30 cartons of mineral water (the returned total does not match)."]]],
+  ["⇄", "Discounts & Exceptions", [[12, "C-0001 asks for a 10% discount. Please place its order at 10% off."], [13, "C-0001 needs its order today. Please place it for delivery today."]]],
+];
+// What each signed-in ID may do through the assistant (MP-04 to MP-07, SP-01, FP-06 to FP-08, WP-02).
+const MAY = {
+  "SL-01-01": "Opens every customer's location, delivery, credit and prices and checks stock, for supervision (MP-06, MP-07). Reads any order summary; creates no orders (SP-01). Approves discounts and orders below RM 300; raises no credit (FP-08).",
+  "SL-02": "Works on own assigned customers only (MP-06): location, delivery, credit, prices, stock, and orders after confirming the summary on screen (SP-07). Decides whether to order what is available when stock is short (WP-05). No discount without a recorded approval (SP-06); raises no credit (FP-08).",
+  "FN-01-01": "Opens every customer's location, credit and payments (MP-07, FP-02). Raises any credit limit (FP-07) and approves the prepaid route (FP-04). No stock, delivery or prices (MP-07).",
+  "FN-02": "Opens every customer's location, credit and payments (MP-07, FP-02). Raises a credit limit when the balance is above zero and stays at most RM 2,000 after the raise (FP-06). No stock, delivery or prices (MP-07).",
+  "WH-01-01": "Checks stock and where it is stored (WP-02, MP-07), and opens a customer's location and delivery (MP-07). Confirms stock counts and approves delivery-date exceptions (WP-03, WP-07).",
+  "WH-02": "Checks stock and where it is stored (WP-02, MP-07), and opens a customer's location and delivery (MP-07). No prices, orders, credit or payments.",
+};
+const mayDo = (id) => MAY[id] || MAY[id.slice(0, 5)] || "";
+
+// ---------- the level, from the result (one mapping for Replay and Live) ----------
+// Data returned: Read only. The person's own action done, or left with a next step: Read and follow up.
+// A view or customer not open to them: No access. An action that belongs to another role, tier or manager: No authority.
+const READS = new Set(["check_stock", "retrieve_customer_account", "retrieve_customer_prices"]);
+function levelOf(r) {
+  if (!r) return null;
+  const code = r.error && r.error.code;
+  if (r.status === "ok") return READS.has(r.tool) ? "read" : "follow";
+  if (code === "customer_not_assigned") return "noaccess";
+  if (code === "department_not_permitted") return READS.has(r.tool) ? "noaccess" : "noauth";
+  if (code === "tier_not_permitted" || code === "raise_beyond_tier2" || code === "raise_from_zero_or_negative") return "noauth";
+  return "follow";
+}
+const LV = { read: ["green", "Read only"], follow: ["green", "Read and follow up"], noaccess: ["red", "No access"], noauth: ["red", "No authority"] };
+const lastResult = (trace) => { const t = (trace || []).filter((x) => x.type === "tool" || x.name).pop(); return t ? (t.hook && t.hook.result) || t.result : null; };
+
+const C = { area: 3, row: 9, mode: "replay", view: "chat", token: 0, busy: false, key: "", desk: null, messages: [], turns: 0, hood: [],
+  result: null, summary: null, summaryNote: null };
+const staffId = () => $("staff").value;
+const caseOf = () => CASES.find((c) => c.group === "matrix" && c.row === C.row && c.staff === staffId());
+const myt = (min) => new Date(DATA.meta.now * 1000 + 8 * 3600e3 + (min || 0) * 60e3);
+const pad = (n) => String(n).padStart(2, "0");
+const clockAt = (min) => { const d = myt(min); return `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`; };
+const freshDesk = () => window.FDTools.createDesk(window.FDTools.memoryStore(DATA), TABLES, { now: DATA.meta.now });
+const SEEDED = freshDesk();
+
+// ---------- the right-hand cards ----------
+const PERSON_ID = /\b(?:SL|FN|WH)-0[12]-0\d\b/;
+function nextOf(r, id) {
+  if (!r) return null;
+  const d = r.data || {};
+  const named = r.next_step && (r.next_step.match(PERSON_ID) || [])[0];
+  if (r.status === "ok" && r.tool === "create_order") return { pill: "Your next step", who: id, text: d.existing ? `${d.order_id} was already placed on this request; no second order was created. Tell the customer it is on the way.` : `${d.order_id} is ${String(d.status).replace(/_/g, " ")}, delivery ${d.delivery_date}. Let the customer know.` };
+  if (r.status === "ok" && r.tool === "raise_credit_limit") return { pill: "Your next step", who: id, text: `${d.customer}'s limit is now ${d.new_limit}, with ${d.balance} available. Let Sales know.` };
+  if (r.error && r.error.code === "stock_short") return { pill: "Your call", who: id, text: `Only ${d.available} of ${d.sku} at ${d.warehouse}. Order the ${d.available} available by confirming the summary, or leave it.` };
+  if (r.error && r.error.code === "confirmation_missing") return { pill: "Your next step", who: id, text: "Check the order summary and press Confirm summary." };
+  if (named && named !== id) return { pill: r.status === "needs_reconciliation" ? "Reconciled by a named person" : "Waiting on a named person", who: named, text: r.next_step };
+  return r.next_step ? { pill: "Your next step", who: id, text: r.next_step } : null;
+}
+function render() {
+  const id = staffId(), s = SBY[id];
+  $("identitycard").innerHTML = `<div class="identitycard"><div class="bigavatar">${esc(INITIALS(s))}</div><div><div class="staffname">${esc(s.name)}</div><div class="small">${esc(s.role)}</div></div></div>`;
+  const lv = levelOf(C.result);
+  const q = AREAS[C.area][2].findIndex(([row]) => row === C.row);
+  $("accessinfo").innerHTML = `<p class="small" style="margin:0 0 12px">${esc(mayDo(id))}</p>` +
+    (lv ? `<span class="pill ${LV[lv][0]}">● ${LV[lv][1]}</span> <span class="small">for this question</span>` : `<span class="small">The level shows once the question is answered.</span>`) +
+    `<div class="keyrow"><span>Staff ID</span><strong>${esc(id)}</strong></div>` +
+    (C.mode === "replay" ? `<div class="keyrow"><span>Question</span><strong>${esc(AREAS[C.area][1])} ${q + 1}</strong></div>` : "");
+  const follow = lv === "follow";
+  const nx = follow ? nextOf(C.result, id) : null;
+  $("nextcard").hidden = !nx;
+  if (nx) { const w = SBY[nx.who]; $("nextstep").innerHTML = `<span class="pill amber">${esc(nx.pill)}</span><div class="owner"><strong>${esc(w ? w.name : nx.who)}</strong><p>${esc(w ? w.role + " · " + w.id : "")}</p><p>${esc(nx.text)}</p></div>`; }
+  renderOrder(follow);
+  renderApprovals();
+  document.querySelectorAll(".navitem[data-area]").forEach((b) => { const on = +b.dataset.area === C.area; b.classList.toggle("active", on); if (on) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+}
+function renderOrder(follow) {
+  const sm = C.summary, show = follow && !!sm && SBY[staffId()].department === "SL" && SBY[staffId()].tier === "02";
+  $("ordercard").hidden = !show;
+  if (!show) return;
+  $("ordertitle").textContent = C.summaryNote || "ORDER SUMMARY TO CONFIRM";
+  const rows = sm.lines.map((l) => `<tr><td>${esc(l.sku)}</td><td>${esc(l.qty)}</td><td>${esc(l.unit_price)}${l.promotion ? ` (${esc(l.promotion)})` : ""}</td><td>${esc(l.line_total)}</td></tr>`).join("");
+  $("orderbody").innerHTML = `<dl class="sum"><dt>Customer</dt><dd>${esc(sm.customer)}</dd><dt>Payment</dt><dd>${esc(sm.payment_route)}</dd><dt>Delivery</dt><dd>${esc(sm.delivery_date)}</dd><dt>Discount</dt><dd>${esc(sm.discount_pct)}% (${esc(sm.discount)})</dd><dt>Total</dt><dd><b>${esc(sm.total)}</b></dd></dl>
+    <table><thead><tr><th>SKU</th><th>Qty</th><th>Unit</th><th>Line</th></tr></thead><tbody>${rows}</tbody></table>
+    <button class="primary" type="button" id="confirmbtn">Confirm summary</button><p class="small" id="confirmmsg" style="margin:8px 0 0">${C.mode === "live" ? "Confirm writes a confirmation record bound to this exact summary (SP-07)." : "Replay: Confirm places it through the same hooks in your browser, with no AI call."}</p>`;
+  $("confirmbtn").onclick = C.mode === "live" ? onConfirm : onReplayConfirm;
+}
+function renderApprovals() {
+  const s = SBY[staffId()];
+  $("apprcard").hidden = s.tier !== "01";
+  if (s.tier !== "01") return;
+  const list = (C.mode === "live" && C.desk ? C.desk : SEEDED).approvalsFor(s.id);
+  const val = (a) => (a.type === "minimum_order" || a.type === "prepaid") ? F.rm(a.value) : a.type === "discount" ? a.value + "%" : a.value;
+  $("apprbody").innerHTML = list.length ? `<p class="small" style="margin:0 0 6px">Read only. The hook accepts a record only for a decision in your department's domain (MP-05, MP-09).</p><table><thead><tr><th>ID</th><th>Type</th><th>For</th><th>Value</th></tr></thead><tbody>${
+    list.map((a) => `<tr><td>${esc(a.id)}</td><td>${esc(a.label)}</td><td>${esc(a.customer)} ${esc(a.request_id)}</td><td>${esc(val(a))}</td></tr>`).join("")}</tbody></table>` : '<p class="small" style="margin:0">No approval records in your domain.</p>';
+}
+function noteSummary(r) {
+  if (!r || r.tool !== "create_order") return;
+  const code = r.error && r.error.code;
+  if ((code === "confirmation_missing" || code === "stock_short") && r.data && r.data.summary) {
+    C.summary = r.data.summary;
+    C.summaryNote = code === "stock_short" ? `ORDER THE ${r.data.available} AVAILABLE?` : null;
+  } else if (r.status === "ok") C.summary = null;
+}
+
+// ---------- chat bubbles ----------
+const isClause = (id) => !!(CLAUSES && CLAUSES[id]);
+function splitReply(text) {
+  let body = String(text || "");
+  const found = [];
+  body = body.replace(/\s*\(([A-Z]{2}-\d{2}(?:\s*(?:,|and|to)\s*[A-Z]{2}-\d{2})*)\)/g, (all, inner) => {
+    const ids = inner.split(/\s*(?:,|and|to)\s*/);
+    if (!ids.every(isClause)) return all;
+    ids.forEach((id) => { if (!found.includes(id)) found.push(id); });
+    return "";
+  });
+  return { body, clauses: found };
+}
+const para = (text) => String(text || "").split("\n").map((l) => (l.trim() ? `<p>${esc(l)}</p>` : "")).join("");
+const scrollEnd = () => { chat.scrollTop = chat.scrollHeight; };
+function meBubble(text, at) { pushHood({ kind: "message", who: SBY[staffId()].name, text }); chat.insertAdjacentHTML("beforeend", `<div class="msg me"><span class="by">${esc(SBY[staffId()].name)}</span>${esc(text)}<span class="tm">${esc(at)}</span></div>`); scrollEnd(); }
+function aiBubble(text, at) {
+  const { body, clauses } = splitReply(text);
+  const c = clauses.length ? `<div class="cites">${clauses.map((id) => `<button type="button" data-clause="${esc(id)}" aria-expanded="false" title="${esc(CLAUSES[id].section)}">${esc(id)}</button>`).join("")}</div>` : "";
+  chat.insertAdjacentHTML("beforeend", `<div class="msg them"><span class="by">Staff assistant</span>${para(body)}${c}<span class="tm">${esc(at)}</span></div>`);
+  scrollEnd();
+}
+chat.addEventListener("click", (e) => {
+  const b = e.target.closest && e.target.closest("[data-clause]"); if (!b) return;
+  const msg = b.closest(".msg"), id = b.dataset.clause, open = b.getAttribute("aria-expanded") === "true";
+  msg.querySelectorAll("[data-clause]").forEach((x) => x.setAttribute("aria-expanded", "false"));
+  const old = msg.querySelector(".rule.cl"); if (old) old.remove();
+  if (!open) { b.setAttribute("aria-expanded", "true"); msg.querySelector(".cites").insertAdjacentHTML("afterend", `<div class="rule cl"><b>${esc(id)} ${esc(CLAUSES[id].policy)}, ${esc(CLAUSES[id].section)}.</b> ${esc(CLAUSES[id].text)}</div>`); }
+});
+const typingOn = () => { typingOff(); chat.insertAdjacentHTML("beforeend", `<div class="msg them typing" data-typing><i></i><i></i><i></i></div>`); scrollEnd(); };
+const typingOff = () => chat.querySelectorAll("[data-typing]").forEach((x) => x.remove());
+const sysLine = (text, err) => { chat.insertAdjacentHTML("beforeend", `<div class="sys${err ? " err" : ""}">${esc(text)}</div>`); scrollEnd(); };
+const wait = (ms) => new Promise((r) => setTimeout(r, REDUCED ? 0 : ms));
+const toolLine = (name, r) => `Tool: ${name}, ${r.status}${r.error ? " (" + r.error.code + ", " + r.error.clause + ")" : ""}.`;
+const dayLine = () => { chat.innerHTML = `<div class="day">Today, ${esc(DATA.meta.now_label.split(",")[0])}</div>`; C.hood = []; renderHood(); };
+
+// ---------- under the hood: the steps behind what the chat shows ----------
+function asked(name, inp) {
+  if (name === "check_stock") return `${inp.detail === "storage" ? "Where" : "Stock of"} ${(inp.skus || []).join(", ")} at ${inp.warehouse}${inp.detail === "storage" ? " is stored, and its last count" : ""}`;
+  if (name === "retrieve_customer_account") return `Open the ${inp.view} view of ${inp.customer_id}`;
+  if (name === "retrieve_customer_prices") return `Open ${inp.customer_id}'s prices`;
+  if (name === "create_order") return `Place an order for ${inp.customer_id}: ${(inp.lines || []).map((l) => `${l.qty} x ${l.sku}`).join(", ")}${inp.discount_pct ? `, ${inp.discount_pct}% off` : ""}, ${inp.payment_route || "credit"}, delivery ${inp.delivery_date}`;
+  if (name === "raise_credit_limit") return `Raise ${inp.customer_id}'s credit limit by RM ${inp.amount_rm}`;
+  return name;
+}
+const clText = (id) => (CLAUSES[id] ? `${id} ${CLAUSES[id].section}` : id);
+function hoodStep(s) {
+  if (s.kind === "message") return `<div class="hstep"><h4>${esc(s.who)} asked</h4><p>"${esc(s.text)}"</p></div>`;
+  if (s.kind === "note") return `<div class="hstep muted"><p>${esc(s.text)}</p></div>`;
+  if (s.kind === "reply") return `<div class="hstep"><h4>Reply written by the model</h4><p>"${esc(s.text)}"</p></div>`;
+  const h = s.hook || {}, r = h.result || s.result || {}, pre = h.pre || {};
+  const checks = (pre.checks || []).map((c) => `<li class="${c.pass ? "p" : "f"}"><b>${c.pass ? "pass" : "FAIL"}</b> ${esc(c.check)} <span class="small">(${esc(String(c.clause || "").split(", ").map(clText).join(", "))})</span></li>`).join("");
+  let out = `<div class="hstep"><h4>${esc(SBY[s.who] ? SBY[s.who].name : s.who)}: ${esc(asked(s.name, s.input || {}))}</h4><p class="small"><code>${esc(s.name)}</code> · signed in as ${esc(s.who)} · PreToolUse ${pre.verdict === "block" ? "blocked" : "allowed"}</p><ul class="chk">${checks}</ul>`;
+  if (h.tool_ran === false) out += "<p>The tool did not run; nothing was opened or changed.</p>";
+  else if (h.raw && h.raw.backendRefusal) out += `<p>The back end refused on its own: <code>${esc(h.raw.backendRefusal.code)}</code>.</p>`;
+  if (h.post && h.post.length) out += `<p class="small"><b>PostToolUse:</b> ${esc(h.post.join("; "))}</p>`;
+  out += `<p><b>Result:</b> ${esc(r.status)}${r.error ? ` · ${esc(r.error.code)}, ${esc(clText(r.error.clause))}` : ""}</p>`;
+  if (r.next_step) out += `<p class="small"><b>Next step:</b> ${esc(r.next_step)}</p>`;
+  if (r.data) out += `<details><summary>Data the assistant saw</summary><pre>${esc(JSON.stringify(r.data, null, 2))}</pre></details>`;
+  return out + "</div>";
+}
+function renderHood() {
+  hood.innerHTML = C.hood.length ? `<ol class="hlist">${C.hood.map((s) => `<li>${hoodStep(s)}</li>`).join("")}</ol>`
+    : '<p class="empty">Nothing has happened yet. Under the hood follows the chat: ask the assistant, and each step behind the reply appears here.</p>';
+  hood.scrollTop = hood.scrollHeight;
+}
+const pushHood = (s) => { C.hood.push(s); renderHood(); };
+function setView(v) {
+  C.view = v;
+  $("v-chat").setAttribute("aria-pressed", String(v === "chat")); $("v-hood").setAttribute("aria-pressed", String(v === "hood"));
+  chat.hidden = v !== "chat"; hood.hidden = v !== "hood"; renderHood();
+}
+
+// ---------- the Confirm button ----------
+function onConfirm() {
+  const sm = C.summary; if (!sm || !C.desk) return;
+  let rec;
+  try { rec = C.desk.confirm(staffId(), { customer: sm.customer, lines: sm.lines.map((l) => ({ sku: l.sku, qty: l.qty })), discount_pct: sm.discount_pct, route: sm.payment_route, delivery_date: sm.delivery_date }); }
+  catch (e) { $("confirmmsg").textContent = `Not confirmed: ${e.code || ""} ${e.message}`; return; }
+  C.summary = null; C.summaryNote = null;
+  sysLine(`You pressed Confirm summary · ${rec.id} · request ${rec.request_id} · ${F.rm(rec.total)}`);
+  render();
+  liveSend(`Confirmed on screen: confirmation ${rec.id}, request ID ${rec.request_id}. Place the order.`);
+}
+function onReplayConfirm() {
+  const sm = C.summary; if (!sm) return;
+  const desk = freshDesk();
+  let rec;
+  try { rec = desk.confirm(staffId(), { customer: sm.customer, lines: sm.lines.map((l) => ({ sku: l.sku, qty: l.qty })), discount_pct: sm.discount_pct, route: sm.payment_route, delivery_date: sm.delivery_date }); }
+  catch (e) { $("confirmmsg").textContent = `Not confirmed: ${e.code || ""} ${e.message}`; return; }
+  C.summary = null; C.summaryNote = null;
+  sysLine(`You pressed Confirm summary · ${rec.id} · ${sm.lines.map((l) => `${l.qty} x ${l.sku}`).join(", ")} · ${sm.total}`);
+  const input = { request_id: rec.request_id, customer_id: sm.customer, lines: sm.lines.map((l) => ({ sku: l.sku, qty: l.qty })), discount_pct: sm.discount_pct, payment_route: sm.payment_route, delivery_date: sm.delivery_date, confirmation_id: rec.id };
+  const out = desk.call("create_order", input, staffId());
+  pushHood({ kind: "tool", who: staffId(), name: "create_order", input, hook: out.hook, result: out.result });
+  if (out.result.status === "ok") sysLine(`Order ${out.result.data.order_id} placed for ${out.result.data.customer}: ${out.result.data.total}, delivery ${out.result.data.delivery_date}. Placed through the same hooks, with no AI call.`);
+  else sysLine(`Not placed: ${out.result.error.code}. ${out.result.next_step || ""}`, true);
+  C.result = out.result; render();
+}
+
+// ---------- replay ----------
+const CHECK_TEXT = { right_tool: "right tool", right_result: "right result", next_step: "right person named", records: "right records written", hard_limits: "hard limits held" };
+function replayHeader() {
+  const sm = RESULTS.summary || {}, c = caseOf(), r = c && REC[c.id];
+  $("runline").textContent = `Recorded on ${sm.model}, ${String(sm.ranAt || "").slice(0, 10)}, as ${SBY[staffId()].name}.`;
+  $("passline").innerHTML = r ? (r.score.pass ? `<span class="pill green">Passed: ${Object.keys(r.score.checks).map((k) => CHECK_TEXT[k] || k).join(", ")}</span>` : `<span class="pill red">Failed: ${Object.entries(r.score.checks).filter(([, v]) => !v).map(([k]) => CHECK_TEXT[k] || k).join(", ")}</span>`) : `<span class="pill amber">Not recorded yet</span>`;
+}
+async function playReplay() {
+  const token = ++C.token, c = caseOf(), r = c && REC[c.id];
+  dayLine(); C.result = null; C.summary = null; render();
+  if (!r) { sysLine("No recorded run for this question and staff member.", true); return; }
+  meBubble(r.message, clockAt(0));
+  await wait(500); if (token !== C.token) return;
+  typingOn();
+  for (const t of r.trace) {
+    if (t.type === "note") { pushHood({ kind: "note", text: t.text }); continue; }
+    if (t.type !== "tool") continue;
+    await wait(900); if (token !== C.token) return;
+    const res = (t.hook && t.hook.result) || t.result || {};
+    $("status").textContent = toolLine(t.name, res);
+    pushHood({ kind: "tool", who: staffId(), name: t.name, input: t.input, hook: t.hook, result: t.result });
+    noteSummary(res);
+  }
+  await wait(700); if (token !== C.token) return;
+  typingOff();
+  pushHood({ kind: "reply", text: r.reply });
+  aiBubble(r.reply, clockAt(0));
+  C.result = lastResult(r.trace); render();
+}
+
+// ---------- live ----------
+function readKey() { try { return sessionStorage.getItem(KEY_SLOT) || ""; } catch (e) { return ""; } }
+function saveKey(v) { try { if (v) sessionStorage.setItem(KEY_SLOT, v); else sessionStorage.removeItem(KEY_SLOT); } catch (e) { /* memory only */ } }
+function newChat(note) {
+  C.token++;
+  C.desk = freshDesk();
+  C.messages = []; C.turns = 0; C.busy = false; C.result = null; C.summary = null;
+  dayLine();
+  sysLine(note || (C.key ? `Signed in as ${SBY[staffId()].name}, ${SBY[staffId()].role}. Ask a question, or pick one above.` : "Paste your Anthropic API key above, then ask a question."));
+  setInput(true); render();
+}
+function setInput(on) { $("question").disabled = !on; $("askbtn").disabled = !on; }
+async function liveSend(text) {
+  if (C.busy || !text) return;
+  if (!C.key) { sysLine("Paste your Anthropic API key above first.", true); $("api-key").focus(); return; }
+  if (C.turns >= MAX_MESSAGES) { sysLine(`This chat has reached ${MAX_MESSAGES} messages. Press New chat to start again.`, true); return; }
+  C.turns++;
+  meBubble(text, clockAt(C.turns - 1));
+  C.busy = true; setInput(false); typingOn();
+  C.messages.push({ role: "user", content: text });
+  const id = staffId(), s = SBY[id], desk = C.desk, token = C.token, trace = [];
+  const system = window.FDPrompt.buildSystem(RESOURCES, { staff: s.id, name: s.name, role: s.role, today: DATA.meta.now_label });
+  try {
+    const out = await window.FDAgent.runTurn({ apiKey: C.key, model: MODEL, system, tools: window.FDTools.TOOLS, messages: C.messages,
+      callTool: async (name, input) => {
+        const o = desk.call(name, input, id);  // the signed-in staff ID, never a model argument (MP-08)
+        trace.push({ name, input, result: o.result, hook: o.hook });
+        if (token === C.token) { pushHood({ kind: "tool", who: id, name, input, hook: o.hook, result: o.result }); $("status").textContent = toolLine(name, o.result); noteSummary(o.result); }
+        return o;
+      } });
+    if (token !== C.token) return;
+    out.trace.filter((t) => t.type === "note").forEach((t) => pushHood({ kind: "note", text: t.text }));
+    pushHood({ kind: "reply", text: out.reply });
+    typingOff(); aiBubble(out.reply, clockAt(C.turns - 1));
+    C.result = lastResult(trace) || C.result; render();
+  } catch (e) {
+    if (token !== C.token) return;
+    typingOff(); C.messages.pop();
+    sysLine("The assistant could not reply: " + (e && e.message ? e.message : String(e)) + " Check the key, or start a new chat.", true);
+  } finally { if (token === C.token) { C.busy = false; setInput(true); } }
+}
+
+// ---------- wiring ----------
+function fillQuestions() {
+  $("asel").value = String(C.area);
+  $("qsel").innerHTML = AREAS[C.area][2].map(([row, text], n) => `<option value="${row}">${n + 1}. ${esc(text)}</option>`).join("");
+  $("qsel").value = String(C.row);
+}
+function reset(note) {
+  C.token++; C.result = null; C.summary = null;
+  $("status").textContent = "";
+  if (C.mode === "replay") {
+    $("question").value = caseOf() ? caseOf().message : "";
+    replayHeader(); dayLine(); sysLine("Press Ask assistant to play the recorded answer."); setInput(true); render();
+    if (note) $("status").textContent = note;
+  } else { $("question").value = ""; newChat(note); }
+}
+function setMode(m) {
+  C.mode = m;
+  $("m-replay").setAttribute("aria-pressed", String(m === "replay"));
+  $("m-live").setAttribute("aria-pressed", String(m === "live"));
+  $("replayctl").hidden = m !== "replay"; $("livectl").hidden = m !== "live";
+  $("question").readOnly = m === "replay";
+  $("helper").textContent = m === "replay" ? "Replay: Ask assistant plays the recorded run of this question for the staff member chosen above. The dropdown changes identity; typing a name does not."
+    : "Live: your question goes to the assistant as the staff member chosen above, through the same hooks and checks. Picking a question fills it in. The dropdown changes identity; typing a name does not.";
+  reset();
+}
+$("clock").innerHTML = "Thursday, 1 October 2026<br>10:00 AM · Malaysia time · Demo clock";
+$("staff").innerHTML = TABLES.staff.map((s) => `<option value="${s.id}">${esc(s.name)} · ${esc(s.role)} · ${s.id}</option>`).join("");
+$("staff").value = "SL-02-01";
+$("areas").innerHTML = AREAS.map((a, i) => `<button class="navitem" type="button" data-area="${i}"><span class="navicon" aria-hidden="true">${a[0]}</span>${esc(a[1])}</button>`).join("");
+// The left menu picks an area; on a phone, where the menu is hidden, the area dropdown does the same.
+function pickArea(i) { if (C.busy) { $("asel").value = String(C.area); return; } C.area = i; C.row = AREAS[C.area][2][0][0]; fillQuestions(); reset(`${AREAS[C.area][1]}: question 1.`); if (C.mode === "live") $("question").value = AREAS[C.area][2][0][1]; }
+$("asel").innerHTML = AREAS.map((a, i) => `<option value="${i}">${esc(a[1])}</option>`).join("");
+$("asel").addEventListener("change", () => pickArea(+$("asel").value));
+document.querySelectorAll(".navitem[data-area]").forEach((b) => b.addEventListener("click", () => pickArea(+b.dataset.area)));
+$("qsel").addEventListener("change", () => { if (C.busy) { $("qsel").value = String(C.row); return; } C.row = +$("qsel").value; reset(); if (C.mode === "live") $("question").value = AREAS[C.area][2].find(([r]) => r === C.row)[1]; });
+$("v-chat").addEventListener("click", () => setView("chat"));
+$("v-hood").addEventListener("click", () => setView("hood"));
+$("m-replay").addEventListener("click", () => setMode("replay"));
+$("m-live").addEventListener("click", () => setMode("live"));
+$("askform").addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (C.mode === "replay") playReplay();
+  else { const q = $("question").value.trim(); $("question").value = ""; liveSend(q); }
+});
+$("staff").addEventListener("change", () => { if (C.busy) return; reset(C.mode === "replay" ? "Staff changed. The previous answer has been cleared." : `Staff changed: signed in as ${SBY[staffId()].name}, ${SBY[staffId()].role}. A fresh copy of the demo data.`); });
+C.key = readKey();
+$("api-key").value = C.key;
+$("api-key").addEventListener("input", (e) => { C.key = e.target.value.trim(); saveKey(C.key); });
+$("forget").addEventListener("click", () => { C.key = ""; $("api-key").value = ""; saveKey(""); if (!C.busy) newChat(); });
+$("new-chat").addEventListener("click", () => { if (!C.busy) newChat(); });
+fillQuestions();
+setMode("replay");
+</script>
+</body>
+</html>

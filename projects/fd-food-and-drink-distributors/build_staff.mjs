@@ -1,4 +1,5 @@
-// Builds staff.html (the Staff Desk) from staff.template.html.
+// Builds staff.html (the Staff Desk) from staff.template.html, and the new desk (founder, 23 Oct: the Sang Kancil
+// desk layout in FD's own colours) with: node build_staff.mjs --template staff-desk.template.html --out staff-desk.html
 //
 // Inlines the same files the MCP server and the benchmark load: lib/format.js, lib/rules.js,
 // lib/backend.js, hooks/pre_tool_use.js, hooks/post_tool_use.js, tools.js, prompt.js and agent.js;
@@ -59,10 +60,11 @@ const results = {
   })),
 };
 
-let html = read("staff.template.html");
-if (html.includes("—")) throw new Error("em-dash in staff.template.html");
+const TEMPLATE = argv.includes("--template") ? argv[argv.indexOf("--template") + 1] : "staff.template.html";
+let html = read(TEMPLATE);
+if (html.includes("—")) throw new Error(`em-dash in ${TEMPLATE}`);
 const swap = (marker, value) => {
-  if (!html.includes(marker)) throw new Error(`marker ${marker} missing in staff.template.html`);
+  if (!html.includes(marker)) throw new Error(`marker ${marker} missing in ${TEMPLATE}`);
   html = html.replace(marker, () => value); // function form: "$" in the value stays literal
 };
 swap("/*__FORMAT_JS__*/", read("lib/format.js"));
@@ -78,8 +80,10 @@ swap("/*__TABLES_JSON__*/null", json(tables));
 swap("/*__RESOURCES_JSON__*/null", json(resources));
 swap("/*__CASES_JSON__*/null", json(caseList));
 swap("/*__RESULTS_JSON__*/null", json(results));
+// The clause texts behind the cited clause buttons (the desk only).
+if (html.includes("/*__CLAUSES_JSON__*/null")) swap("/*__CLAUSES_JSON__*/null", json(JSON.parse(read("resources/clauses.json"))));
 if (html.includes("—")) console.warn("Warning: an em-dash came in with the inlined files");
 
 const outFile = argv.includes("--out") ? argv[argv.indexOf("--out") + 1] : "staff.html";
 writeFileSync(join(HERE, outFile), html);
-console.log(`Wrote staff.html (${html.length.toLocaleString()} chars): ${results.results.length} recorded runs from ${resultsFile}, ${caseList.length} cases`);
+console.log(`Wrote ${outFile} (${html.length.toLocaleString()} chars): ${results.results.length} recorded runs from ${resultsFile}, ${caseList.length} cases`);

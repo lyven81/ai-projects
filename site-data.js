@@ -49,7 +49,7 @@ window.SITE = {
       problem: "A wholesaler's Sales, Finance and Warehouse staff each have different authority over orders, prices, stock, credit and invoices. Every one of those rules has to hold on every request, whoever asks and however they ask. So each rule lives in code the conversation cannot change.",
       page: "fd-food-and-drink-distributors.html",
       cover: "images/fd-food-and-drink-distributors/cover.jpeg",
-      demo: "https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff.html" },
+      demo: "https://lyven81.github.io/ai-projects/projects/fd-food-and-drink-distributors/staff-desk.html" },
     { slug: "car-rental-booking-agent", title: "Kereta Sewa Jalan-jalan Car Rental Agent", type: "customer-service",
       valueProposition: "Customer Experience", added: "2026-10-19",
       hero: "A car rental assistant that answers price questions, prepares booking requests and records deposits under the written Rental Policy. It checks identity before sharing a booking, while staff retain confirmations, delivery charges and refunds.",
