@@ -36,7 +36,7 @@ window.SITE = {
       valueProposition: "Customer Experience", added: "2026-10-21",
       hero: "A customer desk for an online electronics store that verifies the order and routes each question to its department. Each team answers from its own policy; code checks every reply before sending. Staff retain refund, return and claim decisions.",
       short: "Routes order questions to department teams and checks every reply.",
-      tagline: "A customer service desk for an online electronics store where a router sends each question to the department team that owns it, and code checks every reply before the customer sees it.",
+      tagline: "A customer service desk for an online electronics store where an AI coordinator sends each question to the AI specialist for the department that owns it, and code checks every reply before the customer sees it.",
       problem: "An online electronics store answers the same order questions every day. A reply that sounds right but asks for photos or promises a refund date reaches the customer before anyone sees it. Each answer has to come from the store's rules and the customer's own order.",
       page: "happy-mart-customer-desk.html",
       cover: "images/happy-mart-customer-desk/cover.jpeg",

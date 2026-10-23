@@ -24,7 +24,7 @@ Live site: https://lyven81.github.io/ai-projects/
 ### Triage and routing
 
 #### Happy Mart Customer Desk
-- **What it does:** A customer service desk for an online electronics store where a router sends each question to the department team that owns it, and code checks every reply before the customer sees it.
+- **What it does:** A customer service desk for an online electronics store where an AI coordinator sends each question to the AI specialist for the department that owns it, and code checks every reply before the customer sees it.
 - **How it's built:** A Claude router with five department teams as sub-agents and a writer, behind an MCP server (Node.js) offering 13 resources (six policies with 28 clauses, the router workbook, five role sheets, the contact list) and 17 tools; one shared PreToolUse hook checks identity, order access, tool ownership and every date window before a tool runs, one shared PostToolUse hook trims each lookup to its department's fields, and a pre-send check in code reads every reply before it goes out.
 - **Problem solved:** An online electronics store answers the same order questions every day, and each answer belongs to a different department. The desk routes each question to the team that owns it, answers from the store's policies and the customer's own order, and prepares every request for a named person.
 - **Page:** [Open](https://lyven81.github.io/ai-projects/happy-mart-customer-desk.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/happy-mart-customer-desk/assistant.html)
