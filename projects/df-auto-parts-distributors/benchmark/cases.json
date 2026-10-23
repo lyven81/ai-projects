@@ -1,0 +1,2285 @@
+{
+ "timeline": [
+  {
+   "id": "1.1",
+   "tab": 1,
+   "order": "A",
+   "time": "10:00",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel asks for a credit order",
+   "message": "Please place a credit order for C-0004: 3 cartons of 5W-30 engine oil, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0004",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 3
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "confirmation_missing",
+    "writes": {},
+    "level": "follow",
+    "summary_total": "RM 1,320.00"
+   },
+   "group": "valid"
+  },
+  {
+   "id": "B1",
+   "kind": "button",
+   "time": "10:01",
+   "staff": "SL-02-02",
+   "apply": {
+    "type": "confirm",
+    "input": {
+     "customer": "C-0004",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 3
+      }
+     ],
+     "discount_pct": 0,
+     "route": "credit",
+     "delivery_date": "2026-10-02"
+    }
+   }
+  },
+  {
+   "id": "1.2",
+   "tab": 1,
+   "order": "A",
+   "time": "10:01",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel confirms; Order A placed",
+   "message": "Confirmed on screen: confirmation CF-0001, request ID RQ-0001, for C-0004. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0004",
+     "request_id": "RQ-0001",
+     "confirmation_id": "CF-0001"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow",
+    "placed": {
+     "id": "DF-SO-00249",
+     "request_id": "RQ-0001",
+     "total": 132000,
+     "route": "credit",
+     "status": "pending_dispatch",
+     "approvals": []
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "1.3",
+   "tab": 1,
+   "order": "A",
+   "time": "10:02",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks the same",
+   "message": "Please place a credit order for C-0004: 3 cartons of 5W-30 engine oil, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0004",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 3
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "writes": {},
+    "level": "noaccess"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "2.1",
+   "tab": 2,
+   "order": "B",
+   "time": "10:10",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for 10% off",
+   "message": "C-0001 wants 10 cartons of 5W-30 engine oil at 10% off. Please prepare the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 10
+      }
+     ],
+     "discount_pct": 10
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "discount_needs_approval",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1,
+     "drafts": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0001",
+     "to": "SL-01-01",
+     "type": "discount",
+     "request_id": "RQ-0002"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.2",
+   "tab": 2,
+   "order": "B",
+   "time": "10:10",
+   "staff": "SL-01-01",
+   "kind": "notice",
+   "title": "Farid receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-01-01",
+     "escalation": "ES-0001",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a 10% discount request for C-0001's order RQ-0002: RM 4,400.00 less RM 440.00, total RM 3,960.00, with RM 5,200.00 of credit available. You can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.3",
+   "tab": 2,
+   "order": "B",
+   "time": "10:13",
+   "staff": "SL-01-01",
+   "kind": "model",
+   "title": "Farid approves",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "discount",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "approvals": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "approval": {
+     "id": "AP-0105",
+     "request_id": "RQ-0002",
+     "type": "discount"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.4",
+   "tab": 2,
+   "order": "B",
+   "time": "10:13",
+   "staff": "SL-02-01",
+   "kind": "notice",
+   "title": "Chloe is told",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-02-01",
+     "escalation": "ES-0001",
+     "kind": "approved",
+     "text": "Farid Iskandar has approved your 10% discount for C-0001's order RQ-0002 (AP-0105). You can place the order when the customer's terms are settled."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.5",
+   "tab": 2,
+   "order": "B",
+   "time": "10:14",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel tries to approve",
+   "message": "Approve Chloe's 10% discount for C-0001.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "discount",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "3.1",
+   "tab": 3,
+   "order": "C",
+   "time": "10:20",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for 12 oil filters",
+   "message": "Please place a credit order for C-0001: 12 Perodua and Toyota oil filters, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-OF-012",
+       "qty": 12
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "below_minimum_order",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1,
+     "drafts": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0002",
+     "to": "SL-01-01",
+     "type": "minimum_order",
+     "request_id": "RQ-0003"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.2",
+   "tab": 3,
+   "order": "C",
+   "time": "10:20",
+   "staff": "SL-01-01",
+   "kind": "notice",
+   "title": "Farid receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-01-01",
+     "escalation": "ES-0002",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a below-minimum order for C-0001, request RQ-0003: 12 oil filters for RM 216.00 against the RM 300.00 minimum. You can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.3",
+   "tab": 3,
+   "order": "C",
+   "time": "10:22",
+   "staff": "SL-01-01",
+   "kind": "model",
+   "title": "Farid declines with a reason",
+   "message": "Declined. Make it 17 filters to reach RM 300.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "minimum_order",
+     "decision": "decline",
+     "reason": "Make it 17 filters to reach RM 300."
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "notifications": 1
+    },
+    "level": "follow",
+    "decision": {
+     "escalation": "ES-0002",
+     "status": "declined"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.4",
+   "tab": 3,
+   "order": "C",
+   "time": "10:22",
+   "staff": "SL-02-01",
+   "kind": "notice",
+   "title": "Chloe sees the decline",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-02-01",
+     "escalation": "ES-0002",
+     "kind": "declined",
+     "text": "Farid Iskandar has declined C-0001's RM 216.00 order RQ-0003: make it 17 filters to reach RM 300. Nothing was placed."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.5",
+   "tab": 3,
+   "order": "C",
+   "time": "10:26",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe revises to 17 filters",
+   "message": "Please place a credit order for C-0001: 17 Perodua and Toyota oil filters, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-OF-012",
+       "qty": 17
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "confirmation_missing",
+    "writes": {},
+    "level": "follow",
+    "summary_total": "RM 306.00"
+   },
+   "group": "valid"
+  },
+  {
+   "id": "B2",
+   "kind": "button",
+   "time": "10:26",
+   "staff": "SL-02-01",
+   "apply": {
+    "type": "confirm",
+    "input": {
+     "customer": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-OF-012",
+       "qty": 17
+      }
+     ],
+     "discount_pct": 0,
+     "route": "credit",
+     "delivery_date": "2026-10-02"
+    }
+   }
+  },
+  {
+   "id": "3.6",
+   "tab": 3,
+   "order": "C",
+   "time": "10:27",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Order C placed",
+   "message": "Confirmed on screen: confirmation CF-0002, request ID RQ-0004, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0004",
+     "confirmation_id": "CF-0002"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow",
+    "placed": {
+     "id": "DF-SO-00250",
+     "request_id": "RQ-0004",
+     "total": 30600,
+     "route": "credit",
+     "status": "pending_dispatch",
+     "approvals": [],
+     "revised_from": "RQ-0003"
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "3.7",
+   "tab": 3,
+   "order": "C",
+   "time": "10:28",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel tries to approve",
+   "message": "Approve the below-minimum order for C-0001.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "minimum_order",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "4.1",
+   "tab": 4,
+   "order": "Stock",
+   "time": "10:30",
+   "staff": "WH-01-01",
+   "kind": "model",
+   "title": "Azlan confirms the battery count",
+   "message": "I've counted NS60 batteries at WH-A: 22 pieces. Please confirm the count.",
+   "apply": {
+    "type": "call",
+    "tool": "confirm_stock_count",
+    "input": {
+     "sku": "DF-BT-030",
+     "warehouse": "WH-A",
+     "qty": 22
+    }
+   },
+   "expect": {
+    "tool": "confirm_stock_count",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "stock_counts": 1
+    },
+    "level": "follow",
+    "count": {
+     "id": "SC-0001",
+     "sku": "DF-BT-030",
+     "qty": 22
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "4.2",
+   "tab": 4,
+   "order": "Stock",
+   "time": "10:31",
+   "staff": "WH-02-01",
+   "kind": "model",
+   "title": "Jason asks the same",
+   "message": "I've counted NS60 batteries at WH-A: 22 pieces. Please confirm the count.",
+   "apply": {
+    "type": "call",
+    "tool": "confirm_stock_count",
+    "input": {
+     "sku": "DF-BT-030",
+     "warehouse": "WH-A",
+     "qty": 22
+    }
+   },
+   "expect": {
+    "tool": "confirm_stock_count",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "4.3",
+   "tab": 4,
+   "order": "Stock",
+   "time": "10:32",
+   "staff": "FN-01-01",
+   "kind": "model",
+   "title": "Nadia asks for the stock",
+   "message": "How many NS60 batteries are at WH-A?",
+   "apply": {
+    "type": "call",
+    "tool": "check_stock",
+    "input": {
+     "skus": [
+      "DF-BT-030"
+     ],
+     "warehouse": "WH-A"
+    }
+   },
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "writes": {},
+    "level": "noaccess"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "5.1",
+   "tab": 5,
+   "order": "B",
+   "time": "10:40",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for delivery today",
+   "message": "C-0001 now needs its engine oil order delivered today. Please arrange it.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "delivery_date": "2026-10-01"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "delivery_exception",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0003",
+     "to": "WH-01-01",
+     "type": "delivery_exception",
+     "request_id": "RQ-0002"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.2",
+   "tab": 5,
+   "order": "B",
+   "time": "10:40",
+   "staff": "WH-01-01",
+   "kind": "notice",
+   "title": "Azlan receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "WH-01-01",
+     "escalation": "ES-0003",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a same-day delivery request for C-0001's order RQ-0002: 10 cartons of 5W-30 engine oil today, Thursday 1 October, instead of Friday 2 October. WH-A holds 60 cartons with one delivery already out today, and you can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.3",
+   "tab": 5,
+   "order": "B",
+   "time": "10:44",
+   "staff": "WH-01-01",
+   "kind": "model",
+   "title": "Azlan approves",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "delivery_exception",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "approvals": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "approval": {
+     "id": "AP-0106",
+     "request_id": "RQ-0002",
+     "type": "delivery_exception"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.4",
+   "tab": 5,
+   "order": "B",
+   "time": "10:44",
+   "staff": "SL-02-01",
+   "kind": "notice",
+   "title": "Chloe is told",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-02-01",
+     "escalation": "ES-0003",
+     "kind": "approved",
+     "text": "Azlan Yusof has approved your same-day delivery for C-0001's order RQ-0002 (AP-0106). Both approvals are recorded, so you can confirm the summary and place the order now."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.5",
+   "tab": 5,
+   "order": "B",
+   "time": "10:45",
+   "staff": "WH-02-01",
+   "kind": "model",
+   "title": "Jason tries to approve",
+   "message": "Approve same-day delivery for C-0001's order.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "delivery_exception",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "6.1",
+   "tab": 6,
+   "order": "A",
+   "time": "11:00",
+   "staff": "WH-02-01",
+   "kind": "model",
+   "title": "Jason schedules Order A",
+   "message": "Please schedule C-0004's engine oil order for Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "schedule_delivery",
+    "input": {
+     "customer_id": "C-0004",
+     "date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "schedule_delivery",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "schedules": 1
+    },
+    "level": "follow",
+    "schedule": {
+     "order": "DF-SO-00249",
+     "date": "2026-10-02"
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "6.2",
+   "tab": 6,
+   "order": "A",
+   "time": "11:01",
+   "staff": "WH-01-01",
+   "kind": "model",
+   "title": "Azlan reads the schedule",
+   "message": "Show me Friday's deliveries from WH-B.",
+   "apply": {
+    "type": "call",
+    "tool": "check_stock",
+    "input": {
+     "warehouse": "WH-B",
+     "detail": "schedule",
+     "date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "writes": {},
+    "level": "read",
+    "schedule_lists": "DF-SO-00249"
+   },
+   "group": "valid"
+  },
+  {
+   "id": "6.3",
+   "tab": 6,
+   "order": "A",
+   "time": "11:02",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel asks to schedule",
+   "message": "Please schedule C-0004's engine oil order for Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "schedule_delivery",
+    "input": {
+     "customer_id": "C-0004",
+     "date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "schedule_delivery",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "7.1",
+   "tab": 7,
+   "order": "B",
+   "time": "11:10",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for the prepaid route",
+   "message": "C-0001 wants to pay before dispatch. Please send its engine oil order on the prepaid route.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "payment_route": "prepaid"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "prepaid_needs_approval",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0004",
+     "to": "FN-01-01",
+     "type": "prepaid",
+     "request_id": "RQ-0002"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "7.2",
+   "tab": 7,
+   "order": "B",
+   "time": "11:10",
+   "staff": "FN-01-01",
+   "kind": "notice",
+   "title": "Nadia receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "FN-01-01",
+     "escalation": "ES-0004",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a prepaid route request for C-0001's order RQ-0002: RM 3,960.00 paid before dispatch, with RM 4,894.00 of credit available and RM 2,450.00 overdue for 12 days. You can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "7.3",
+   "tab": 7,
+   "order": "B",
+   "time": "11:13",
+   "staff": "FN-01-01",
+   "kind": "model",
+   "title": "Nadia approves",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "prepaid",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "approvals": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "approval": {
+     "id": "AP-0107",
+     "request_id": "RQ-0002",
+     "type": "prepaid"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "B3",
+   "kind": "button",
+   "time": "11:14",
+   "staff": "SL-02-01",
+   "apply": {
+    "type": "confirm",
+    "input": {
+     "customer": "C-0001",
+     "request_id": "RQ-0002"
+    }
+   }
+  },
+  {
+   "id": "7.4",
+   "tab": 7,
+   "order": "B",
+   "time": "11:15",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe confirms; Order B placed once",
+   "message": "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0002",
+     "confirmation_id": "CF-0003"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow",
+    "placed": {
+     "id": "DF-SO-00251",
+     "request_id": "RQ-0002",
+     "total": 396000,
+     "route": "prepaid",
+     "status": "awaiting_payment",
+     "approvals": [
+      "AP-0105",
+      "AP-0106",
+      "AP-0107"
+     ]
+    },
+    "notification_seen": "Nadia Zulkifli has approved your prepaid route for C-0001's order RQ-0002 (AP-0107). All three approvals are recorded, so you can confirm the summary and place the order now."
+   },
+   "group": "valid"
+  },
+  {
+   "id": "7.5",
+   "tab": 7,
+   "order": "B",
+   "time": "11:16",
+   "staff": "FN-02-01",
+   "kind": "model",
+   "title": "Priya tries to approve",
+   "message": "Approve the prepaid route for C-0001's order.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "prepaid",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  }
+ ],
+ "failures": [
+  {
+   "id": "F1",
+   "tab": 0,
+   "order": "Failure",
+   "time": "10:15",
+   "staff": "SL-01-01",
+   "kind": "model",
+   "title": "Farid decides ES-0001 again",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "discount",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "escalation_already_decided",
+    "writes": {},
+    "level": "follow"
+   },
+   "after": "2.5",
+   "faults": {},
+   "group": "failure"
+  },
+  {
+   "id": "F2",
+   "tab": 0,
+   "order": "Failure",
+   "time": "11:12",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks to place it while ES-0004 is open",
+   "message": "Please place C-0001's engine oil order now.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "escalation_open",
+    "writes": {},
+    "level": "follow"
+   },
+   "after": "7.2",
+   "faults": {},
+   "group": "failure"
+  },
+  {
+   "id": "F3",
+   "tab": 0,
+   "order": "Failure",
+   "time": "10:10",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "An approval recorded for another request is cited",
+   "message": "C-0001's 10% discount was already approved as AP-0104. Please place its order for 10 cartons of 5W-30 engine oil at 10% off.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 10
+      }
+     ],
+     "discount_pct": 10
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "discount_needs_approval",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1,
+     "drafts": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0001",
+     "to": "SL-01-01",
+     "type": "discount",
+     "request_id": "RQ-0002"
+    },
+    "not_counted": "AP-0104"
+   },
+   "after": "1.3",
+   "faults": {},
+   "group": "failure"
+  },
+  {
+   "id": "F4",
+   "tab": 0,
+   "order": "Failure",
+   "time": "11:15",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "The back end is down at placement",
+   "message": "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0002",
+     "confirmation_id": "CF-0003"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "error",
+    "code": "system_unavailable",
+    "writes": {},
+    "level": "follow",
+    "draft_kept": "RQ-0002"
+   },
+   "after": "B3",
+   "faults": {
+    "create_order": "unavailable"
+   },
+   "group": "failure"
+  },
+  {
+   "id": "F5",
+   "tab": 0,
+   "order": "Failure",
+   "time": "11:15",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "The returned total does not match",
+   "message": "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0002",
+     "confirmation_id": "CF-0003"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "needs_reconciliation",
+    "code": "order_result_mismatch",
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow"
+   },
+   "after": "B3",
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "group": "failure"
+  }
+ ],
+ "cases": [
+  {
+   "id": "1.1",
+   "tab": 1,
+   "order": "A",
+   "time": "10:00",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel asks for a credit order",
+   "message": "Please place a credit order for C-0004: 3 cartons of 5W-30 engine oil, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0004",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 3
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "confirmation_missing",
+    "writes": {},
+    "level": "follow",
+    "summary_total": "RM 1,320.00"
+   },
+   "group": "valid"
+  },
+  {
+   "id": "1.2",
+   "tab": 1,
+   "order": "A",
+   "time": "10:01",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel confirms; Order A placed",
+   "message": "Confirmed on screen: confirmation CF-0001, request ID RQ-0001, for C-0004. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0004",
+     "request_id": "RQ-0001",
+     "confirmation_id": "CF-0001"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow",
+    "placed": {
+     "id": "DF-SO-00249",
+     "request_id": "RQ-0001",
+     "total": 132000,
+     "route": "credit",
+     "status": "pending_dispatch",
+     "approvals": []
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "1.3",
+   "tab": 1,
+   "order": "A",
+   "time": "10:02",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks the same",
+   "message": "Please place a credit order for C-0004: 3 cartons of 5W-30 engine oil, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0004",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 3
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "customer_not_assigned",
+    "writes": {},
+    "level": "noaccess"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "2.1",
+   "tab": 2,
+   "order": "B",
+   "time": "10:10",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for 10% off",
+   "message": "C-0001 wants 10 cartons of 5W-30 engine oil at 10% off. Please prepare the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 10
+      }
+     ],
+     "discount_pct": 10
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "discount_needs_approval",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1,
+     "drafts": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0001",
+     "to": "SL-01-01",
+     "type": "discount",
+     "request_id": "RQ-0002"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.2",
+   "tab": 2,
+   "order": "B",
+   "time": "10:10",
+   "staff": "SL-01-01",
+   "kind": "notice",
+   "title": "Farid receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-01-01",
+     "escalation": "ES-0001",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a 10% discount request for C-0001's order RQ-0002: RM 4,400.00 less RM 440.00, total RM 3,960.00, with RM 5,200.00 of credit available. You can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.3",
+   "tab": 2,
+   "order": "B",
+   "time": "10:13",
+   "staff": "SL-01-01",
+   "kind": "model",
+   "title": "Farid approves",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "discount",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "approvals": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "approval": {
+     "id": "AP-0105",
+     "request_id": "RQ-0002",
+     "type": "discount"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.4",
+   "tab": 2,
+   "order": "B",
+   "time": "10:13",
+   "staff": "SL-02-01",
+   "kind": "notice",
+   "title": "Chloe is told",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-02-01",
+     "escalation": "ES-0001",
+     "kind": "approved",
+     "text": "Farid Iskandar has approved your 10% discount for C-0001's order RQ-0002 (AP-0105). You can place the order when the customer's terms are settled."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "2.5",
+   "tab": 2,
+   "order": "B",
+   "time": "10:14",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel tries to approve",
+   "message": "Approve Chloe's 10% discount for C-0001.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "discount",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "3.1",
+   "tab": 3,
+   "order": "C",
+   "time": "10:20",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for 12 oil filters",
+   "message": "Please place a credit order for C-0001: 12 Perodua and Toyota oil filters, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-OF-012",
+       "qty": 12
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "below_minimum_order",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1,
+     "drafts": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0002",
+     "to": "SL-01-01",
+     "type": "minimum_order",
+     "request_id": "RQ-0003"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.2",
+   "tab": 3,
+   "order": "C",
+   "time": "10:20",
+   "staff": "SL-01-01",
+   "kind": "notice",
+   "title": "Farid receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-01-01",
+     "escalation": "ES-0002",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a below-minimum order for C-0001, request RQ-0003: 12 oil filters for RM 216.00 against the RM 300.00 minimum. You can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.3",
+   "tab": 3,
+   "order": "C",
+   "time": "10:22",
+   "staff": "SL-01-01",
+   "kind": "model",
+   "title": "Farid declines with a reason",
+   "message": "Declined. Make it 17 filters to reach RM 300.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "minimum_order",
+     "decision": "decline",
+     "reason": "Make it 17 filters to reach RM 300."
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "notifications": 1
+    },
+    "level": "follow",
+    "decision": {
+     "escalation": "ES-0002",
+     "status": "declined"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.4",
+   "tab": 3,
+   "order": "C",
+   "time": "10:22",
+   "staff": "SL-02-01",
+   "kind": "notice",
+   "title": "Chloe sees the decline",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-02-01",
+     "escalation": "ES-0002",
+     "kind": "declined",
+     "text": "Farid Iskandar has declined C-0001's RM 216.00 order RQ-0003: make it 17 filters to reach RM 300. Nothing was placed."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "3.5",
+   "tab": 3,
+   "order": "C",
+   "time": "10:26",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe revises to 17 filters",
+   "message": "Please place a credit order for C-0001: 17 Perodua and Toyota oil filters, delivery Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-OF-012",
+       "qty": 17
+      }
+     ],
+     "delivery_date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "confirmation_missing",
+    "writes": {},
+    "level": "follow",
+    "summary_total": "RM 306.00"
+   },
+   "group": "valid"
+  },
+  {
+   "id": "3.6",
+   "tab": 3,
+   "order": "C",
+   "time": "10:27",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Order C placed",
+   "message": "Confirmed on screen: confirmation CF-0002, request ID RQ-0004, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0004",
+     "confirmation_id": "CF-0002"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow",
+    "placed": {
+     "id": "DF-SO-00250",
+     "request_id": "RQ-0004",
+     "total": 30600,
+     "route": "credit",
+     "status": "pending_dispatch",
+     "approvals": [],
+     "revised_from": "RQ-0003"
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "3.7",
+   "tab": 3,
+   "order": "C",
+   "time": "10:28",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel tries to approve",
+   "message": "Approve the below-minimum order for C-0001.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "minimum_order",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "4.1",
+   "tab": 4,
+   "order": "Stock",
+   "time": "10:30",
+   "staff": "WH-01-01",
+   "kind": "model",
+   "title": "Azlan confirms the battery count",
+   "message": "I've counted NS60 batteries at WH-A: 22 pieces. Please confirm the count.",
+   "apply": {
+    "type": "call",
+    "tool": "confirm_stock_count",
+    "input": {
+     "sku": "DF-BT-030",
+     "warehouse": "WH-A",
+     "qty": 22
+    }
+   },
+   "expect": {
+    "tool": "confirm_stock_count",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "stock_counts": 1
+    },
+    "level": "follow",
+    "count": {
+     "id": "SC-0001",
+     "sku": "DF-BT-030",
+     "qty": 22
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "4.2",
+   "tab": 4,
+   "order": "Stock",
+   "time": "10:31",
+   "staff": "WH-02-01",
+   "kind": "model",
+   "title": "Jason asks the same",
+   "message": "I've counted NS60 batteries at WH-A: 22 pieces. Please confirm the count.",
+   "apply": {
+    "type": "call",
+    "tool": "confirm_stock_count",
+    "input": {
+     "sku": "DF-BT-030",
+     "warehouse": "WH-A",
+     "qty": 22
+    }
+   },
+   "expect": {
+    "tool": "confirm_stock_count",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "4.3",
+   "tab": 4,
+   "order": "Stock",
+   "time": "10:32",
+   "staff": "FN-01-01",
+   "kind": "model",
+   "title": "Nadia asks for the stock",
+   "message": "How many NS60 batteries are at WH-A?",
+   "apply": {
+    "type": "call",
+    "tool": "check_stock",
+    "input": {
+     "skus": [
+      "DF-BT-030"
+     ],
+     "warehouse": "WH-A"
+    }
+   },
+   "expect": {
+    "tool": "check_stock",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "writes": {},
+    "level": "noaccess"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "5.1",
+   "tab": 5,
+   "order": "B",
+   "time": "10:40",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for delivery today",
+   "message": "C-0001 now needs its engine oil order delivered today. Please arrange it.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "delivery_date": "2026-10-01"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "delivery_exception",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0003",
+     "to": "WH-01-01",
+     "type": "delivery_exception",
+     "request_id": "RQ-0002"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.2",
+   "tab": 5,
+   "order": "B",
+   "time": "10:40",
+   "staff": "WH-01-01",
+   "kind": "notice",
+   "title": "Azlan receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "WH-01-01",
+     "escalation": "ES-0003",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a same-day delivery request for C-0001's order RQ-0002: 10 cartons of 5W-30 engine oil today, Thursday 1 October, instead of Friday 2 October. WH-A holds 60 cartons with one delivery already out today, and you can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.3",
+   "tab": 5,
+   "order": "B",
+   "time": "10:44",
+   "staff": "WH-01-01",
+   "kind": "model",
+   "title": "Azlan approves",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "delivery_exception",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "approvals": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "approval": {
+     "id": "AP-0106",
+     "request_id": "RQ-0002",
+     "type": "delivery_exception"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.4",
+   "tab": 5,
+   "order": "B",
+   "time": "10:44",
+   "staff": "SL-02-01",
+   "kind": "notice",
+   "title": "Chloe is told",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "SL-02-01",
+     "escalation": "ES-0003",
+     "kind": "approved",
+     "text": "Azlan Yusof has approved your same-day delivery for C-0001's order RQ-0002 (AP-0106). Both approvals are recorded, so you can confirm the summary and place the order now."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "5.5",
+   "tab": 5,
+   "order": "B",
+   "time": "10:45",
+   "staff": "WH-02-01",
+   "kind": "model",
+   "title": "Jason tries to approve",
+   "message": "Approve same-day delivery for C-0001's order.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "delivery_exception",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "6.1",
+   "tab": 6,
+   "order": "A",
+   "time": "11:00",
+   "staff": "WH-02-01",
+   "kind": "model",
+   "title": "Jason schedules Order A",
+   "message": "Please schedule C-0004's engine oil order for Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "schedule_delivery",
+    "input": {
+     "customer_id": "C-0004",
+     "date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "schedule_delivery",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "schedules": 1
+    },
+    "level": "follow",
+    "schedule": {
+     "order": "DF-SO-00249",
+     "date": "2026-10-02"
+    }
+   },
+   "group": "valid"
+  },
+  {
+   "id": "6.2",
+   "tab": 6,
+   "order": "A",
+   "time": "11:01",
+   "staff": "WH-01-01",
+   "kind": "model",
+   "title": "Azlan reads the schedule",
+   "message": "Show me Friday's deliveries from WH-B.",
+   "apply": {
+    "type": "call",
+    "tool": "check_stock",
+    "input": {
+     "warehouse": "WH-B",
+     "detail": "schedule",
+     "date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "check_stock",
+    "status": "ok",
+    "code": null,
+    "writes": {},
+    "level": "read",
+    "schedule_lists": "DF-SO-00249"
+   },
+   "group": "valid"
+  },
+  {
+   "id": "6.3",
+   "tab": 6,
+   "order": "A",
+   "time": "11:02",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel asks to schedule",
+   "message": "Please schedule C-0004's engine oil order for Friday 2 October.",
+   "apply": {
+    "type": "call",
+    "tool": "schedule_delivery",
+    "input": {
+     "customer_id": "C-0004",
+     "date": "2026-10-02"
+    }
+   },
+   "expect": {
+    "tool": "schedule_delivery",
+    "status": "refused",
+    "code": "department_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "7.1",
+   "tab": 7,
+   "order": "B",
+   "time": "11:10",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks for the prepaid route",
+   "message": "C-0001 wants to pay before dispatch. Please send its engine oil order on the prepaid route.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "payment_route": "prepaid"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "prepaid_needs_approval",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0004",
+     "to": "FN-01-01",
+     "type": "prepaid",
+     "request_id": "RQ-0002"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "7.2",
+   "tab": 7,
+   "order": "B",
+   "time": "11:10",
+   "staff": "FN-01-01",
+   "kind": "notice",
+   "title": "Nadia receives it",
+   "message": null,
+   "apply": null,
+   "expect": {
+    "notification": {
+     "to": "FN-01-01",
+     "escalation": "ES-0004",
+     "kind": "escalation",
+     "text": "Chloe Lim has sent you a prepaid route request for C-0001's order RQ-0002: RM 3,960.00 paid before dispatch, with RM 4,894.00 of credit available and RM 2,450.00 overdue for 12 days. You can approve or decline it here."
+    },
+    "level": "follow",
+    "writes": {}
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "7.3",
+   "tab": 7,
+   "order": "B",
+   "time": "11:13",
+   "staff": "FN-01-01",
+   "kind": "model",
+   "title": "Nadia approves",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "prepaid",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "approvals": 1,
+     "notifications": 1
+    },
+    "level": "follow",
+    "approval": {
+     "id": "AP-0107",
+     "request_id": "RQ-0002",
+     "type": "prepaid"
+    }
+   },
+   "group": "escalation"
+  },
+  {
+   "id": "7.4",
+   "tab": 7,
+   "order": "B",
+   "time": "11:15",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe confirms; Order B placed once",
+   "message": "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0002",
+     "confirmation_id": "CF-0003"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "ok",
+    "code": null,
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow",
+    "placed": {
+     "id": "DF-SO-00251",
+     "request_id": "RQ-0002",
+     "total": 396000,
+     "route": "prepaid",
+     "status": "awaiting_payment",
+     "approvals": [
+      "AP-0105",
+      "AP-0106",
+      "AP-0107"
+     ]
+    },
+    "notification_seen": "Nadia Zulkifli has approved your prepaid route for C-0001's order RQ-0002 (AP-0107). All three approvals are recorded, so you can confirm the summary and place the order now."
+   },
+   "group": "valid"
+  },
+  {
+   "id": "7.5",
+   "tab": 7,
+   "order": "B",
+   "time": "11:16",
+   "staff": "FN-02-01",
+   "kind": "model",
+   "title": "Priya tries to approve",
+   "message": "Approve the prepaid route for C-0001's order.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "prepaid",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "tier_not_permitted",
+    "writes": {},
+    "level": "noauth"
+   },
+   "group": "unauthorised"
+  },
+  {
+   "id": "F1",
+   "tab": 0,
+   "order": "Failure",
+   "time": "10:15",
+   "staff": "SL-01-01",
+   "kind": "model",
+   "title": "Farid decides ES-0001 again",
+   "message": "Approved.",
+   "apply": {
+    "type": "call",
+    "tool": "decide_escalation",
+    "input": {
+     "customer_id": "C-0001",
+     "type": "discount",
+     "decision": "approve"
+    }
+   },
+   "expect": {
+    "tool": "decide_escalation",
+    "status": "refused",
+    "code": "escalation_already_decided",
+    "writes": {},
+    "level": "follow"
+   },
+   "after": "2.5",
+   "faults": {},
+   "group": "failure"
+  },
+  {
+   "id": "F2",
+   "tab": 0,
+   "order": "Failure",
+   "time": "11:12",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "Chloe asks to place it while ES-0004 is open",
+   "message": "Please place C-0001's engine oil order now.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "refused",
+    "code": "escalation_open",
+    "writes": {},
+    "level": "follow"
+   },
+   "after": "7.2",
+   "faults": {},
+   "group": "failure"
+  },
+  {
+   "id": "F3",
+   "tab": 0,
+   "order": "Failure",
+   "time": "10:10",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "An approval recorded for another request is cited",
+   "message": "C-0001's 10% discount was already approved as AP-0104. Please place its order for 10 cartons of 5W-30 engine oil at 10% off.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "lines": [
+      {
+       "sku": "DF-EO-001",
+       "qty": 10
+      }
+     ],
+     "discount_pct": 10
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "escalated",
+    "code": "discount_needs_approval",
+    "writes": {
+     "escalations": 1,
+     "notifications": 1,
+     "drafts": 1
+    },
+    "level": "follow",
+    "escalation": {
+     "id": "ES-0001",
+     "to": "SL-01-01",
+     "type": "discount",
+     "request_id": "RQ-0002"
+    },
+    "not_counted": "AP-0104"
+   },
+   "after": "1.3",
+   "faults": {},
+   "group": "failure"
+  },
+  {
+   "id": "F4",
+   "tab": 0,
+   "order": "Failure",
+   "time": "11:15",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "The back end is down at placement",
+   "message": "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0002",
+     "confirmation_id": "CF-0003"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "error",
+    "code": "system_unavailable",
+    "writes": {},
+    "level": "follow",
+    "draft_kept": "RQ-0002"
+   },
+   "after": "B3",
+   "faults": {
+    "create_order": "unavailable"
+   },
+   "group": "failure"
+  },
+  {
+   "id": "F5",
+   "tab": 0,
+   "order": "Failure",
+   "time": "11:15",
+   "staff": "SL-02-01",
+   "kind": "model",
+   "title": "The returned total does not match",
+   "message": "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order.",
+   "apply": {
+    "type": "call",
+    "tool": "create_order",
+    "input": {
+     "customer_id": "C-0001",
+     "request_id": "RQ-0002",
+     "confirmation_id": "CF-0003"
+    }
+   },
+   "expect": {
+    "tool": "create_order",
+    "status": "needs_reconciliation",
+    "code": "order_result_mismatch",
+    "writes": {
+     "orders": 1
+    },
+    "level": "follow"
+   },
+   "after": "B3",
+   "faults": {
+    "create_order": "total_mismatch"
+   },
+   "group": "failure"
+  }
+ ]
+}

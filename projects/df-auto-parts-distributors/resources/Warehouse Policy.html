@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Warehouse Policy</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+p{margin:6px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.cl td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr[id]{scroll-margin-top:110px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../df-auto-parts-distributors.html" style="color:inherit;text-decoration:none">DF Auto Parts Distributors</a></div><h1>Warehouse Policy</h1><nav id="toc"></nav></div>
+<p><strong>DF Auto Parts Distributors</strong> is an automotive spare parts distributor in Selangor supplying independent workshops and spare parts shops, the setting this staff assistant is designed for. This policy is an MCP resource: the staff assistant reads it, and the hooks around its seven tools cite these clauses when they refuse or escalate.</p>
+<p><strong>Enforced by:</strong> <b>PreToolUse</b> the hook checks before the tool runs; <b>PostToolUse</b> the hook checks or converts the result; <b>Back end</b> the data layer repeats the check on its own; <b>Policy</b> no tool exists, so the assistant answers from the clause and names who decides.</p>
+<p>The other policies: <a href="Management Policy.html">Management Policy</a>, <a href="Sales Policy.html">Sales Policy</a>, <a href="Finance Policy.html">Finance Policy</a>.</p>
+<h2>1. Stock</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="WP-01"><td>WP-01</td><td>Two warehouses, WH-A Shah Alam and WH-B Puchong. Each customer is served from the warehouse for its location, as set in the location table (WP-08).</td><td>Back end</td></tr>
+<tr id="WP-02"><td>WP-02</td><td>Stock is checked per warehouse. Sales and Warehouse may check stock; Finance may not (MP-07). Warehouse may also see the deliveries due from a warehouse on a date, without prices.</td><td>PreToolUse, Back end</td></tr>
+<tr id="WP-03"><td>WP-03</td><td>24 hours is the maximum age of a stock figure. A figure within 24 hours is recent enough to quote, not proof that the stock is still there. A figure older than 24 hours is out of date: no order is created on it until the warehouse manager confirms it by a manual count, which resets the figure to the counted quantity and time and is recorded with who counted and when.</td><td>PostToolUse, PreToolUse, Back end</td></tr>
+<tr id="WP-04"><td>WP-04</td><td>Stock is rechecked and reserved by the back end when the order is created, together with the credit.</td><td>Back end</td></tr>
+<tr id="WP-05"><td>WP-05</td><td>When stock is short, the salesperson decides whether to order the quantity available, with a new confirmation of the summary. There are no back orders. The warehouse delivers what Sales has ordered.</td><td>PreToolUse</td></tr>
+<tr id="WP-06"><td>WP-06</td><td>Transfers between the two warehouses are decided by the warehouse manager only, outside the assistant.</td><td>Policy</td></tr>
+</table></div>
+<h2>2. Delivery</h2>
+<div class="cl"><table><tr><th>Clause</th><th>Rule</th><th>Enforced by</th></tr>
+<tr id="WP-07"><td>WP-07</td><td>Delivery terms, in Malaysia time (UTC+8): an order confirmed before 3 pm on a working day is delivered the next working day; an order confirmed at or after 3 pm, or on a non-working day, is delivered on the second working day. Working days are Monday to Saturday, except Selangor public holidays listed in WP-09. An earlier or special delivery date needs the warehouse manager's recorded approval.</td><td>PreToolUse</td></tr>
+<tr id="WP-08"><td>WP-08</td><td>The location table below: each customer location and the warehouse that serves it.</td><td>Back end</td></tr>
+<tr id="WP-09"><td>WP-09</td><td>The public holiday table below: the Selangor public holidays for the period the demo covers, September to December 2026.</td><td>PreToolUse</td></tr>
+<tr id="WP-10"><td>WP-10</td><td>Warehouse staff and the warehouse manager schedule placed orders for delivery within the terms, or on a delivery date the warehouse manager approved for that order. They do not create orders or see prices or credit.</td><td>PreToolUse, Back end</td></tr>
+<tr id="WP-11"><td>WP-11</td><td>An order's delivery address cannot be changed after 3 pm Malaysia time on the working day before delivery, when routes are planned. Before that, an address change is made by the sales manager on the customer record (MP-13). After it, the order is delivered as planned, or cancelled and placed again (SP-10). No tool changes an order's address; the assistant answers such a request from this clause.</td><td>Policy</td></tr>
+</table></div>
+<h2>3. Warehouses (WP-01)</h2>
+<table><tr><th>Warehouse</th><th>Place</th></tr>
+<tr><td>WH-A</td><td>Shah Alam</td></tr>
+<tr><td>WH-B</td><td>Puchong</td></tr>
+</table>
+<h2>4. Location table (WP-08)</h2>
+<table><tr><th>Location</th><th>District</th><th>Served from</th></tr>
+<tr><td>Shah Alam</td><td>Petaling</td><td>WH-A</td></tr>
+<tr><td>Petaling Jaya</td><td>Petaling</td><td>WH-A</td></tr>
+<tr><td>Subang Jaya</td><td>Petaling</td><td>WH-A</td></tr>
+<tr><td>Klang</td><td>Klang</td><td>WH-A</td></tr>
+<tr><td>Rawang</td><td>Gombak</td><td>WH-A</td></tr>
+<tr><td>Selayang</td><td>Gombak</td><td>WH-A</td></tr>
+<tr><td>Kuala Selangor</td><td>Kuala Selangor</td><td>WH-A</td></tr>
+<tr><td>Puchong</td><td>Petaling</td><td>WH-B</td></tr>
+<tr><td>Seri Kembangan</td><td>Petaling</td><td>WH-B</td></tr>
+<tr><td>Kajang</td><td>Hulu Langat</td><td>WH-B</td></tr>
+<tr><td>Bangi</td><td>Hulu Langat</td><td>WH-B</td></tr>
+<tr><td>Cyberjaya</td><td>Sepang</td><td>WH-B</td></tr>
+<tr><td>Sepang</td><td>Sepang</td><td>WH-B</td></tr>
+<tr><td>Banting</td><td>Kuala Langat</td><td>WH-B</td></tr>
+</table>
+<h2>5. Public holiday table (WP-09)</h2>
+<table><tr><th>Date</th><th>Holiday</th></tr>
+<tr><td>2026-09-01</td><td>Selangor public holiday</td></tr>
+<tr><td>2026-09-16</td><td>Malaysia Day</td></tr>
+<tr><td>2026-10-26</td><td>Silver Jubilee of the Sultan of Selangor (replacement for Sunday 25 October)</td></tr>
+<tr><td>2026-11-08</td><td>Deepavali</td></tr>
+<tr><td>2026-11-09</td><td>Deepavali (replacement)</td></tr>
+<tr><td>2026-12-11</td><td>Birthday of the Sultan of Selangor</td></tr>
+<tr><td>2026-12-25</td><td>Christmas Day</td></tr>
+</table>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Warehouse Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

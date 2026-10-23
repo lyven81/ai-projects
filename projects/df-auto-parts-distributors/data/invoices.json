@@ -1,0 +1,1922 @@
+[
+ {
+  "id": "DF-INV-00001",
+  "customer": "C-0001",
+  "issued": "2026-08-20",
+  "due": "2026-09-19",
+  "amount": 245000,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00002",
+  "customer": "C-0001",
+  "issued": "2026-09-15",
+  "due": "2026-10-15",
+  "amount": 310000,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00003",
+  "customer": "C-0002",
+  "issued": "2026-08-05",
+  "due": "2026-09-04",
+  "amount": 424000,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00004",
+  "customer": "C-0002",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 376000,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00005",
+  "customer": "C-0003",
+  "issued": "2026-08-28",
+  "due": "2026-09-27",
+  "amount": 243600,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00006",
+  "customer": "C-0003",
+  "issued": "2026-09-19",
+  "due": "2026-10-19",
+  "amount": 176400,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00007",
+  "customer": "C-0004",
+  "issued": "2026-08-26",
+  "due": "2026-09-25",
+  "amount": 252000,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00008",
+  "customer": "C-0004",
+  "issued": "2026-09-12",
+  "due": "2026-10-12",
+  "amount": 148000,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00009",
+  "customer": "C-0005",
+  "issued": "2026-08-27",
+  "due": "2026-10-11",
+  "amount": 142274,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00010",
+  "customer": "C-0005",
+  "issued": "2026-09-15",
+  "due": "2026-10-30",
+  "amount": 103026,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00011",
+  "customer": "C-0006",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 399458,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00012",
+  "customer": "C-0006",
+  "issued": "2026-09-20",
+  "due": "2026-10-20",
+  "amount": 508402,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00013",
+  "customer": "C-0007",
+  "issued": "2026-08-06",
+  "due": "2026-08-20",
+  "amount": 82548,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00014",
+  "customer": "C-0007",
+  "issued": "2026-09-17",
+  "due": "2026-10-01",
+  "amount": 146752,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00015",
+  "customer": "C-0008",
+  "issued": "2026-08-16",
+  "due": "2026-08-30",
+  "amount": 477332,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00016",
+  "customer": "C-0008",
+  "issued": "2026-09-15",
+  "due": "2026-09-29",
+  "amount": 538268,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00017",
+  "customer": "C-0009",
+  "issued": "2026-08-27",
+  "due": "2026-09-26",
+  "amount": 243162,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00018",
+  "customer": "C-0009",
+  "issued": "2026-09-28",
+  "due": "2026-10-28",
+  "amount": 183438,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00019",
+  "customer": "C-0010",
+  "issued": "2026-08-25",
+  "due": "2026-09-08",
+  "amount": 129675,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00020",
+  "customer": "C-0010",
+  "issued": "2026-09-16",
+  "due": "2026-09-30",
+  "amount": 202825,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00021",
+  "customer": "C-0011",
+  "issued": "2026-08-12",
+  "due": "2026-09-11",
+  "amount": 202675,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00022",
+  "customer": "C-0011",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 165825,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00023",
+  "customer": "C-0012",
+  "issued": "2026-08-05",
+  "due": "2026-09-04",
+  "amount": 474480,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00024",
+  "customer": "C-0012",
+  "issued": "2026-09-16",
+  "due": "2026-10-16",
+  "amount": 843520,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00025",
+  "customer": "C-0013",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 146400,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00026",
+  "customer": "C-0013",
+  "issued": "2026-09-08",
+  "due": "2026-10-08",
+  "amount": 146400,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00027",
+  "customer": "C-0014",
+  "issued": "2026-08-11",
+  "due": "2026-09-25",
+  "amount": 167535,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00028",
+  "customer": "C-0014",
+  "issued": "2026-09-26",
+  "due": "2026-11-10",
+  "amount": 204765,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00029",
+  "customer": "C-0015",
+  "issued": "2026-08-11",
+  "due": "2026-09-10",
+  "amount": 953456,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00030",
+  "customer": "C-0015",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 749144,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00031",
+  "customer": "C-0016",
+  "issued": "2026-08-22",
+  "due": "2026-09-21",
+  "amount": 269145,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00032",
+  "customer": "C-0016",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 328955,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00033",
+  "customer": "C-0017",
+  "issued": "2026-08-21",
+  "due": "2026-09-20",
+  "amount": 248200,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00034",
+  "customer": "C-0017",
+  "issued": "2026-09-08",
+  "due": "2026-10-08",
+  "amount": 372300,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00035",
+  "customer": "C-0018",
+  "issued": "2026-08-14",
+  "due": "2026-09-28",
+  "amount": 79560,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00036",
+  "customer": "C-0018",
+  "issued": "2026-09-24",
+  "due": "2026-11-08",
+  "amount": 76440,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00037",
+  "customer": "C-0019",
+  "issued": "2026-08-21",
+  "due": "2026-09-04",
+  "amount": 258058,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00038",
+  "customer": "C-0019",
+  "issued": "2026-09-20",
+  "due": "2026-10-04",
+  "amount": 421042,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00039",
+  "customer": "C-0020",
+  "issued": "2026-08-20",
+  "due": "2026-10-04",
+  "amount": 402762,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00040",
+  "customer": "C-0020",
+  "issued": "2026-09-17",
+  "due": "2026-11-01",
+  "amount": 303838,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00041",
+  "customer": "C-0021",
+  "issued": "2026-08-07",
+  "due": "2026-09-21",
+  "amount": 128412,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00042",
+  "customer": "C-0021",
+  "issued": "2026-09-17",
+  "due": "2026-11-01",
+  "amount": 109388,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00043",
+  "customer": "C-0022",
+  "issued": "2026-08-09",
+  "due": "2026-09-08",
+  "amount": 330193,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00044",
+  "customer": "C-0022",
+  "issued": "2026-09-15",
+  "due": "2026-10-15",
+  "amount": 211107,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00045",
+  "customer": "C-0023",
+  "issued": "2026-08-16",
+  "due": "2026-08-30",
+  "amount": 212373,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00046",
+  "customer": "C-0023",
+  "issued": "2026-09-19",
+  "due": "2026-10-03",
+  "amount": 124727,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00047",
+  "customer": "C-0024",
+  "issued": "2026-08-18",
+  "due": "2026-09-17",
+  "amount": 55600,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00048",
+  "customer": "C-0024",
+  "issued": "2026-09-11",
+  "due": "2026-10-11",
+  "amount": 55600,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00049",
+  "customer": "C-0025",
+  "issued": "2026-08-05",
+  "due": "2026-09-04",
+  "amount": 387504,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00050",
+  "customer": "C-0025",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 330096,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00051",
+  "customer": "C-0026",
+  "issued": "2026-08-26",
+  "due": "2026-09-25",
+  "amount": 89285,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00052",
+  "customer": "C-0026",
+  "issued": "2026-09-12",
+  "due": "2026-10-12",
+  "amount": 165815,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00053",
+  "customer": "C-0027",
+  "issued": "2026-08-19",
+  "due": "2026-09-18",
+  "amount": 188800,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00054",
+  "customer": "C-0027",
+  "issued": "2026-09-16",
+  "due": "2026-10-16",
+  "amount": 188800,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00055",
+  "customer": "C-0028",
+  "issued": "2026-08-28",
+  "due": "2026-10-12",
+  "amount": 298554,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00056",
+  "customer": "C-0028",
+  "issued": "2026-09-19",
+  "due": "2026-11-03",
+  "amount": 286846,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00057",
+  "customer": "C-0029",
+  "issued": "2026-08-17",
+  "due": "2026-09-16",
+  "amount": 941994,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00058",
+  "customer": "C-0029",
+  "issued": "2026-09-21",
+  "due": "2026-10-21",
+  "amount": 654606,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00059",
+  "customer": "C-0030",
+  "issued": "2026-08-18",
+  "due": "2026-09-17",
+  "amount": 45210,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00060",
+  "customer": "C-0030",
+  "issued": "2026-09-17",
+  "due": "2026-10-17",
+  "amount": 36990,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00061",
+  "customer": "C-0031",
+  "issued": "2026-08-21",
+  "due": "2026-10-05",
+  "amount": 775368,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00062",
+  "customer": "C-0031",
+  "issued": "2026-09-23",
+  "due": "2026-11-07",
+  "amount": 1378432,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00063",
+  "customer": "C-0032",
+  "issued": "2026-08-25",
+  "due": "2026-09-24",
+  "amount": 612135,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00064",
+  "customer": "C-0032",
+  "issued": "2026-09-08",
+  "due": "2026-10-08",
+  "amount": 391365,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00065",
+  "customer": "C-0033",
+  "issued": "2026-08-28",
+  "due": "2026-09-27",
+  "amount": 132447,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00066",
+  "customer": "C-0033",
+  "issued": "2026-09-21",
+  "due": "2026-10-21",
+  "amount": 117453,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00067",
+  "customer": "C-0034",
+  "issued": "2026-08-23",
+  "due": "2026-10-07",
+  "amount": 145962,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00068",
+  "customer": "C-0034",
+  "issued": "2026-09-09",
+  "due": "2026-10-24",
+  "amount": 129438,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00069",
+  "customer": "C-0035",
+  "issued": "2026-08-05",
+  "due": "2026-09-19",
+  "amount": 156522,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00070",
+  "customer": "C-0035",
+  "issued": "2026-09-13",
+  "due": "2026-10-28",
+  "amount": 255378,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00071",
+  "customer": "C-0036",
+  "issued": "2026-08-20",
+  "due": "2026-09-19",
+  "amount": 398992,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00072",
+  "customer": "C-0036",
+  "issued": "2026-09-19",
+  "due": "2026-10-19",
+  "amount": 507808,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00073",
+  "customer": "C-0037",
+  "issued": "2026-08-22",
+  "due": "2026-09-21",
+  "amount": 714780,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00074",
+  "customer": "C-0037",
+  "issued": "2026-09-15",
+  "due": "2026-10-15",
+  "amount": 584820,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00075",
+  "customer": "C-0038",
+  "issued": "2026-08-07",
+  "due": "2026-08-21",
+  "amount": 293027,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00076",
+  "customer": "C-0038",
+  "issued": "2026-09-24",
+  "due": "2026-10-08",
+  "amount": 421673,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00077",
+  "customer": "C-0039",
+  "issued": "2026-08-16",
+  "due": "2026-09-15",
+  "amount": 750204,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00078",
+  "customer": "C-0039",
+  "issued": "2026-09-18",
+  "due": "2026-10-18",
+  "amount": 440596,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00079",
+  "customer": "C-0040",
+  "issued": "2026-08-07",
+  "due": "2026-09-06",
+  "amount": 133308,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00080",
+  "customer": "C-0040",
+  "issued": "2026-09-29",
+  "due": "2026-10-29",
+  "amount": 78292,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00081",
+  "customer": "C-0041",
+  "issued": "2026-08-07",
+  "due": "2026-09-06",
+  "amount": 236628,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00082",
+  "customer": "C-0041",
+  "issued": "2026-09-08",
+  "due": "2026-10-08",
+  "amount": 201572,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00083",
+  "customer": "C-0042",
+  "issued": "2026-08-10",
+  "due": "2026-09-24",
+  "amount": 116109,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00084",
+  "customer": "C-0042",
+  "issued": "2026-09-23",
+  "due": "2026-11-07",
+  "amount": 68191,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00085",
+  "customer": "C-0043",
+  "issued": "2026-08-17",
+  "due": "2026-09-16",
+  "amount": 329452,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00086",
+  "customer": "C-0043",
+  "issued": "2026-09-13",
+  "due": "2026-10-13",
+  "amount": 386748,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00087",
+  "customer": "C-0044",
+  "issued": "2026-08-21",
+  "due": "2026-09-20",
+  "amount": 164040,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00088",
+  "customer": "C-0044",
+  "issued": "2026-09-29",
+  "due": "2026-10-29",
+  "amount": 109360,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00089",
+  "customer": "C-0045",
+  "issued": "2026-08-28",
+  "due": "2026-09-27",
+  "amount": 184480,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00090",
+  "customer": "C-0045",
+  "issued": "2026-09-29",
+  "due": "2026-10-29",
+  "amount": 276720,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00091",
+  "customer": "C-0046",
+  "issued": "2026-08-15",
+  "due": "2026-09-14",
+  "amount": 119621,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00092",
+  "customer": "C-0046",
+  "issued": "2026-09-08",
+  "due": "2026-10-08",
+  "amount": 76479,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00093",
+  "customer": "C-0047",
+  "issued": "2026-08-05",
+  "due": "2026-09-04",
+  "amount": 44172,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00094",
+  "customer": "C-0047",
+  "issued": "2026-09-11",
+  "due": "2026-10-11",
+  "amount": 78528,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00095",
+  "customer": "C-0048",
+  "issued": "2026-08-27",
+  "due": "2026-10-11",
+  "amount": 137085,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00096",
+  "customer": "C-0048",
+  "issued": "2026-09-19",
+  "due": "2026-11-03",
+  "amount": 214415,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00097",
+  "customer": "C-0049",
+  "issued": "2026-08-21",
+  "due": "2026-10-05",
+  "amount": 194139,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00098",
+  "customer": "C-0049",
+  "issued": "2026-09-10",
+  "due": "2026-10-25",
+  "amount": 172161,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00099",
+  "customer": "C-0050",
+  "issued": "2026-08-07",
+  "due": "2026-08-21",
+  "amount": 228625,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00100",
+  "customer": "C-0050",
+  "issued": "2026-09-16",
+  "due": "2026-09-30",
+  "amount": 158875,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00101",
+  "customer": "C-0051",
+  "issued": "2026-08-11",
+  "due": "2026-09-10",
+  "amount": 436158,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00102",
+  "customer": "C-0051",
+  "issued": "2026-09-24",
+  "due": "2026-10-24",
+  "amount": 371542,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00103",
+  "customer": "C-0052",
+  "issued": "2026-08-10",
+  "due": "2026-09-09",
+  "amount": 902265,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00104",
+  "customer": "C-0052",
+  "issued": "2026-09-28",
+  "due": "2026-10-28",
+  "amount": 485835,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00105",
+  "customer": "C-0053",
+  "issued": "2026-08-27",
+  "due": "2026-09-26",
+  "amount": 310978,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00106",
+  "customer": "C-0053",
+  "issued": "2026-09-11",
+  "due": "2026-10-11",
+  "amount": 198822,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00107",
+  "customer": "C-0054",
+  "issued": "2026-08-05",
+  "due": "2026-09-04",
+  "amount": 387167,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00108",
+  "customer": "C-0054",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 247533,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00109",
+  "customer": "C-0055",
+  "issued": "2026-08-18",
+  "due": "2026-09-17",
+  "amount": 389116,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00110",
+  "customer": "C-0055",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 359184,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00111",
+  "customer": "C-0056",
+  "issued": "2026-08-14",
+  "due": "2026-09-13",
+  "amount": 141081,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00112",
+  "customer": "C-0056",
+  "issued": "2026-09-09",
+  "due": "2026-10-09",
+  "amount": 203019,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00113",
+  "customer": "C-0057",
+  "issued": "2026-08-26",
+  "due": "2026-10-10",
+  "amount": 434565,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00114",
+  "customer": "C-0057",
+  "issued": "2026-09-16",
+  "due": "2026-10-31",
+  "amount": 531135,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00115",
+  "customer": "C-0058",
+  "issued": "2026-08-07",
+  "due": "2026-09-06",
+  "amount": 118371,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00116",
+  "customer": "C-0058",
+  "issued": "2026-09-27",
+  "due": "2026-10-27",
+  "amount": 113729,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00117",
+  "customer": "C-0059",
+  "issued": "2026-08-17",
+  "due": "2026-09-16",
+  "amount": 86544,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00118",
+  "customer": "C-0059",
+  "issued": "2026-09-12",
+  "due": "2026-10-12",
+  "amount": 93756,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00119",
+  "customer": "C-0060",
+  "issued": "2026-08-05",
+  "due": "2026-09-04",
+  "amount": 299530,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00120",
+  "customer": "C-0060",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 556270,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00121",
+  "customer": "C-0061",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 1313046,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00122",
+  "customer": "C-0061",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 771154,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00123",
+  "customer": "C-0062",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 69120,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00124",
+  "customer": "C-0062",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 103680,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00125",
+  "customer": "C-0063",
+  "issued": "2026-08-21",
+  "due": "2026-09-20",
+  "amount": 43253,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00126",
+  "customer": "C-0063",
+  "issued": "2026-09-09",
+  "due": "2026-10-09",
+  "amount": 73647,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00127",
+  "customer": "C-0064",
+  "issued": "2026-08-07",
+  "due": "2026-09-06",
+  "amount": 156114,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00128",
+  "customer": "C-0064",
+  "issued": "2026-09-27",
+  "due": "2026-10-27",
+  "amount": 162486,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00129",
+  "customer": "C-0065",
+  "issued": "2026-08-08",
+  "due": "2026-09-22",
+  "amount": 136290,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00130",
+  "customer": "C-0065",
+  "issued": "2026-09-08",
+  "due": "2026-10-23",
+  "amount": 188210,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00131",
+  "customer": "C-0066",
+  "issued": "2026-08-22",
+  "due": "2026-10-06",
+  "amount": 130176,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00132",
+  "customer": "C-0066",
+  "issued": "2026-09-23",
+  "due": "2026-11-07",
+  "amount": 231424,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00133",
+  "customer": "C-0067",
+  "issued": "2026-08-06",
+  "due": "2026-09-05",
+  "amount": 461440,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00134",
+  "customer": "C-0067",
+  "issued": "2026-09-17",
+  "due": "2026-10-17",
+  "amount": 692160,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00135",
+  "customer": "C-0068",
+  "issued": "2026-08-10",
+  "due": "2026-09-09",
+  "amount": 664400,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00136",
+  "customer": "C-0068",
+  "issued": "2026-09-17",
+  "due": "2026-10-17",
+  "amount": 543600,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00137",
+  "customer": "C-0069",
+  "issued": "2026-08-22",
+  "due": "2026-10-06",
+  "amount": 43554,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00138",
+  "customer": "C-0069",
+  "issued": "2026-09-18",
+  "due": "2026-11-02",
+  "amount": 41846,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00139",
+  "customer": "C-0070",
+  "issued": "2026-08-07",
+  "due": "2026-09-21",
+  "amount": 1106139,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00140",
+  "customer": "C-0070",
+  "issued": "2026-09-21",
+  "due": "2026-11-05",
+  "amount": 1591761,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00141",
+  "customer": "C-0071",
+  "issued": "2026-08-12",
+  "due": "2026-08-26",
+  "amount": 458400,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00142",
+  "customer": "C-0071",
+  "issued": "2026-09-25",
+  "due": "2026-10-09",
+  "amount": 305600,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00143",
+  "customer": "C-0072",
+  "issued": "2026-08-22",
+  "due": "2026-09-21",
+  "amount": 190103,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00144",
+  "customer": "C-0072",
+  "issued": "2026-09-28",
+  "due": "2026-10-28",
+  "amount": 251997,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00145",
+  "customer": "C-0073",
+  "issued": "2026-08-25",
+  "due": "2026-09-24",
+  "amount": 266040,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00146",
+  "customer": "C-0073",
+  "issued": "2026-09-29",
+  "due": "2026-10-29",
+  "amount": 399060,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00147",
+  "customer": "C-0074",
+  "issued": "2026-08-12",
+  "due": "2026-09-11",
+  "amount": 171756,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00148",
+  "customer": "C-0074",
+  "issued": "2026-09-20",
+  "due": "2026-10-20",
+  "amount": 158544,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00149",
+  "customer": "C-0075",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 89112,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00150",
+  "customer": "C-0075",
+  "issued": "2026-09-19",
+  "due": "2026-10-19",
+  "amount": 100488,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00151",
+  "customer": "C-0076",
+  "issued": "2026-08-19",
+  "due": "2026-09-18",
+  "amount": 369284,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00152",
+  "customer": "C-0076",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 489516,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00153",
+  "customer": "C-0077",
+  "issued": "2026-08-17",
+  "due": "2026-08-31",
+  "amount": 109452,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00154",
+  "customer": "C-0077",
+  "issued": "2026-09-16",
+  "due": "2026-09-30",
+  "amount": 151148,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00155",
+  "customer": "C-0078",
+  "issued": "2026-08-25",
+  "due": "2026-09-08",
+  "amount": 345728,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00156",
+  "customer": "C-0078",
+  "issued": "2026-09-20",
+  "due": "2026-10-04",
+  "amount": 194472,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00157",
+  "customer": "C-0079",
+  "issued": "2026-08-17",
+  "due": "2026-09-16",
+  "amount": 36594,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00158",
+  "customer": "C-0079",
+  "issued": "2026-09-16",
+  "due": "2026-10-16",
+  "amount": 27606,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00159",
+  "customer": "C-0080",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 632984,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00160",
+  "customer": "C-0080",
+  "issued": "2026-09-11",
+  "due": "2026-10-11",
+  "amount": 805616,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00161",
+  "customer": "C-0081",
+  "issued": "2026-08-20",
+  "due": "2026-09-19",
+  "amount": 275691,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00162",
+  "customer": "C-0081",
+  "issued": "2026-09-19",
+  "due": "2026-10-19",
+  "amount": 431209,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00163",
+  "customer": "C-0082",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 171864,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00164",
+  "customer": "C-0082",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 305536,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00165",
+  "customer": "C-0083",
+  "issued": "2026-08-16",
+  "due": "2026-08-30",
+  "amount": 229988,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00166",
+  "customer": "C-0083",
+  "issued": "2026-09-09",
+  "due": "2026-09-23",
+  "amount": 292712,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00167",
+  "customer": "C-0084",
+  "issued": "2026-08-23",
+  "due": "2026-09-06",
+  "amount": 314776,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00168",
+  "customer": "C-0084",
+  "issued": "2026-09-09",
+  "due": "2026-09-23",
+  "amount": 327624,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00169",
+  "customer": "C-0085",
+  "issued": "2026-08-22",
+  "due": "2026-09-21",
+  "amount": 766376,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00170",
+  "customer": "C-0085",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 707424,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00171",
+  "customer": "C-0086",
+  "issued": "2026-08-06",
+  "due": "2026-09-20",
+  "amount": 362388,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00172",
+  "customer": "C-0086",
+  "issued": "2026-09-18",
+  "due": "2026-11-02",
+  "amount": 425412,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00173",
+  "customer": "C-0087",
+  "issued": "2026-08-15",
+  "due": "2026-08-29",
+  "amount": 194272,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00174",
+  "customer": "C-0087",
+  "issued": "2026-09-14",
+  "due": "2026-09-28",
+  "amount": 179328,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00175",
+  "customer": "C-0088",
+  "issued": "2026-08-18",
+  "due": "2026-09-17",
+  "amount": 532140,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00176",
+  "customer": "C-0088",
+  "issued": "2026-09-13",
+  "due": "2026-10-13",
+  "amount": 354760,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00177",
+  "customer": "C-0089",
+  "issued": "2026-08-14",
+  "due": "2026-09-13",
+  "amount": 343128,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00178",
+  "customer": "C-0089",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 329672,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00179",
+  "customer": "C-0090",
+  "issued": "2026-08-25",
+  "due": "2026-09-08",
+  "amount": 151866,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00180",
+  "customer": "C-0090",
+  "issued": "2026-09-25",
+  "due": "2026-10-09",
+  "amount": 105534,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00181",
+  "customer": "C-0091",
+  "issued": "2026-08-15",
+  "due": "2026-09-14",
+  "amount": 204084,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00182",
+  "customer": "C-0091",
+  "issued": "2026-09-19",
+  "due": "2026-10-19",
+  "amount": 362816,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00183",
+  "customer": "C-0092",
+  "issued": "2026-08-14",
+  "due": "2026-09-13",
+  "amount": 146160,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00184",
+  "customer": "C-0092",
+  "issued": "2026-09-26",
+  "due": "2026-10-26",
+  "amount": 114840,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00185",
+  "customer": "C-0093",
+  "issued": "2026-08-11",
+  "due": "2026-09-25",
+  "amount": 46585,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00186",
+  "customer": "C-0093",
+  "issued": "2026-09-26",
+  "due": "2026-11-10",
+  "amount": 86515,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00187",
+  "customer": "C-0094",
+  "issued": "2026-08-05",
+  "due": "2026-08-19",
+  "amount": 39585,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00188",
+  "customer": "C-0094",
+  "issued": "2026-09-26",
+  "due": "2026-10-10",
+  "amount": 61915,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00189",
+  "customer": "C-0095",
+  "issued": "2026-08-18",
+  "due": "2026-09-17",
+  "amount": 474048,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00190",
+  "customer": "C-0095",
+  "issued": "2026-09-18",
+  "due": "2026-10-18",
+  "amount": 266652,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00191",
+  "customer": "C-0096",
+  "issued": "2026-08-26",
+  "due": "2026-09-25",
+  "amount": 264050,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00192",
+  "customer": "C-0096",
+  "issued": "2026-09-08",
+  "due": "2026-10-08",
+  "amount": 264050,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00193",
+  "customer": "C-0097",
+  "issued": "2026-08-07",
+  "due": "2026-08-21",
+  "amount": 141329,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00194",
+  "customer": "C-0097",
+  "issued": "2026-09-14",
+  "due": "2026-09-28",
+  "amount": 159371,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00195",
+  "customer": "C-0098",
+  "issued": "2026-08-08",
+  "due": "2026-09-07",
+  "amount": 149135,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00196",
+  "customer": "C-0098",
+  "issued": "2026-09-27",
+  "due": "2026-10-27",
+  "amount": 276965,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00197",
+  "customer": "C-0099",
+  "issued": "2026-08-06",
+  "due": "2026-09-20",
+  "amount": 181720,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00198",
+  "customer": "C-0099",
+  "issued": "2026-09-25",
+  "due": "2026-11-09",
+  "amount": 337480,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00199",
+  "customer": "C-0100",
+  "issued": "2026-08-10",
+  "due": "2026-09-24",
+  "amount": 614628,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00200",
+  "customer": "C-0100",
+  "issued": "2026-09-22",
+  "due": "2026-11-06",
+  "amount": 360972,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00201",
+  "customer": "C-0101",
+  "issued": "2026-08-20",
+  "due": "2026-09-19",
+  "amount": 60620,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00202",
+  "customer": "C-0101",
+  "issued": "2026-09-21",
+  "due": "2026-10-21",
+  "amount": 112580,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00203",
+  "customer": "C-0102",
+  "issued": "2026-08-11",
+  "due": "2026-08-25",
+  "amount": 404838,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00204",
+  "customer": "C-0102",
+  "issued": "2026-09-08",
+  "due": "2026-09-22",
+  "amount": 237762,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00205",
+  "customer": "C-0103",
+  "issued": "2026-08-23",
+  "due": "2026-10-07",
+  "amount": 313814,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00206",
+  "customer": "C-0103",
+  "issued": "2026-09-10",
+  "due": "2026-10-25",
+  "amount": 415986,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00207",
+  "customer": "C-0104",
+  "issued": "2026-08-15",
+  "due": "2026-09-14",
+  "amount": 147748,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00208",
+  "customer": "C-0104",
+  "issued": "2026-09-10",
+  "due": "2026-10-10",
+  "amount": 195852,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00209",
+  "customer": "C-0105",
+  "issued": "2026-08-11",
+  "due": "2026-08-25",
+  "amount": 293496,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00210",
+  "customer": "C-0105",
+  "issued": "2026-09-09",
+  "due": "2026-09-23",
+  "amount": 230604,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00211",
+  "customer": "C-0106",
+  "issued": "2026-08-13",
+  "due": "2026-09-27",
+  "amount": 445018,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00212",
+  "customer": "C-0106",
+  "issued": "2026-09-24",
+  "due": "2026-11-08",
+  "amount": 463182,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00213",
+  "customer": "C-0107",
+  "issued": "2026-08-14",
+  "due": "2026-09-13",
+  "amount": 354780,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00214",
+  "customer": "C-0107",
+  "issued": "2026-09-29",
+  "due": "2026-10-29",
+  "amount": 630720,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00215",
+  "customer": "C-0108",
+  "issued": "2026-08-14",
+  "due": "2026-08-28",
+  "amount": 234617,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00216",
+  "customer": "C-0108",
+  "issued": "2026-09-10",
+  "due": "2026-09-24",
+  "amount": 399483,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00217",
+  "customer": "C-0109",
+  "issued": "2026-08-14",
+  "due": "2026-09-13",
+  "amount": 421872,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00218",
+  "customer": "C-0109",
+  "issued": "2026-09-18",
+  "due": "2026-10-18",
+  "amount": 457028,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00219",
+  "customer": "C-0110",
+  "issued": "2026-08-18",
+  "due": "2026-09-17",
+  "amount": 157872,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00220",
+  "customer": "C-0110",
+  "issued": "2026-09-12",
+  "due": "2026-10-12",
+  "amount": 185328,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00221",
+  "customer": "C-0111",
+  "issued": "2026-08-20",
+  "due": "2026-09-19",
+  "amount": 108192,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00222",
+  "customer": "C-0111",
+  "issued": "2026-09-22",
+  "due": "2026-10-22",
+  "amount": 85008,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00223",
+  "customer": "C-0112",
+  "issued": "2026-08-13",
+  "due": "2026-09-12",
+  "amount": 194298,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00224",
+  "customer": "C-0112",
+  "issued": "2026-09-18",
+  "due": "2026-10-18",
+  "amount": 172302,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00225",
+  "customer": "C-0113",
+  "issued": "2026-08-07",
+  "due": "2026-08-21",
+  "amount": 164101,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00226",
+  "customer": "C-0113",
+  "issued": "2026-09-28",
+  "due": "2026-10-12",
+  "amount": 170799,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00227",
+  "customer": "C-0114",
+  "issued": "2026-08-23",
+  "due": "2026-10-07",
+  "amount": 219834,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00228",
+  "customer": "C-0114",
+  "issued": "2026-09-16",
+  "due": "2026-10-31",
+  "amount": 187266,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00229",
+  "customer": "C-0115",
+  "issued": "2026-08-15",
+  "due": "2026-09-14",
+  "amount": 483717,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00230",
+  "customer": "C-0115",
+  "issued": "2026-09-16",
+  "due": "2026-10-16",
+  "amount": 756583,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00231",
+  "customer": "C-0116",
+  "issued": "2026-08-14",
+  "due": "2026-08-28",
+  "amount": 201159,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00232",
+  "customer": "C-0116",
+  "issued": "2026-09-09",
+  "due": "2026-09-23",
+  "amount": 118141,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00233",
+  "customer": "C-0117",
+  "issued": "2026-08-12",
+  "due": "2026-09-11",
+  "amount": 269328,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00234",
+  "customer": "C-0117",
+  "issued": "2026-09-15",
+  "due": "2026-10-15",
+  "amount": 291772,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00235",
+  "customer": "C-0118",
+  "issued": "2026-08-22",
+  "due": "2026-10-06",
+  "amount": 187240,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00236",
+  "customer": "C-0118",
+  "issued": "2026-09-29",
+  "due": "2026-11-13",
+  "amount": 114760,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00237",
+  "customer": "C-0119",
+  "issued": "2026-08-09",
+  "due": "2026-09-23",
+  "amount": 422656,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00238",
+  "customer": "C-0119",
+  "issued": "2026-09-13",
+  "due": "2026-10-28",
+  "amount": 390144,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00239",
+  "customer": "C-0120",
+  "issued": "2026-08-17",
+  "due": "2026-09-16",
+  "amount": 447363,
+  "paid": false
+ },
+ {
+  "id": "DF-INV-00240",
+  "customer": "C-0120",
+  "issued": "2026-09-23",
+  "due": "2026-10-23",
+  "amount": 262737,
+  "paid": false
+ }
+]

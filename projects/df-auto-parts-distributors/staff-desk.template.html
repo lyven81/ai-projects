@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DF Auto Parts Distributors | Staff Desk</title>
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+
+:root{--bg:#f3ebe0;--paper:#fffaf3;--ink:#3b2a1e;--muted:#7a6656;--line:#e6d8c6;--teal:#5c3b23;--tealsoft:#efe2d1;--red:#a54638;--redsoft:#fff1ed;--gold:#946720;--goldsoft:#fff7e7}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #b08a63;outline-offset:3px}button:disabled{cursor:default}header{height:92px;background:var(--paper);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 34px}.brand{display:flex;align-items:center;gap:12px}.logo{width:43px;height:43px;border-radius:13px;background:var(--teal);color:white;display:grid;place-items:center;font-size:26px;font-weight:400}.brand strong{font-size:16px;letter-spacing:-.3px;display:block}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--muted)}.topright{display:flex;align-items:center;gap:24px}.clock{font-size:12px;color:var(--muted);text-align:right}.identity label{display:block;margin-bottom:4px}.identity select{background:#fffaf3;color:var(--ink);border:1px solid #dcc8b0;border-radius:8px;padding:9px 34px 9px 12px;min-width:300px}.shell{display:grid;grid-template-columns:218px minmax(0,1fr);min-height:calc(100vh - 122px)}nav{background:#f8f1e7;border-right:1px solid var(--line);padding:30px 16px;display:flex;flex-direction:column;gap:6px}nav .eyebrow{padding:0 12px;margin-bottom:12px}.navitem{display:flex;align-items:center;gap:11px;text-align:left;border:0;background:none;color:var(--muted);padding:12px;border-radius:8px;font-size:12px}.navitem:not(:disabled):hover{background:#f4ebdf}.navitem.active{background:var(--tealsoft);color:var(--teal);font-weight:650}.navitem:disabled:not(.active){opacity:.65}.navicon{font-size:15px;width:18px;text-align:center}.navfoot{margin-top:auto;padding:40px 12px 0;font-size:11px;color:var(--muted)}main{padding:28px 32px 20px;max-width:1500px;width:100%;margin:auto}.heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.heading h1{font-size:25px;letter-spacing:-.8px;font-weight:650;margin:3px 0}.heading p{margin:0;color:var(--muted);font-size:12px}.pill{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:100px;padding:4px 10px;font-size:11px;font-weight:600;white-space:nowrap}.pill.green{color:var(--teal);background:var(--tealsoft);border-color:#e0ccb4}.pill.red{color:var(--red);background:var(--redsoft);border-color:#f1d3ca}.pill.amber{color:var(--gold);background:var(--goldsoft);border-color:#eedebc}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:22px;align-items:start}.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 3px 12px #3b2a1e03}.cardhead{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}.cardhead h2{font-size:14px;margin:0;font-weight:650}.conversation{padding:25px 24px;min-height:370px}.who{display:flex;gap:9px;align-items:center;font-size:11px;font-weight:650;color:var(--muted);margin-bottom:9px}.avatar{display:grid;place-items:center;background:#efe3d3;border-radius:7px;width:24px;height:24px;font-size:10px;color:#7a6656}.avatar.assistant{background:var(--tealsoft);color:var(--teal)}.question{margin:0 0 27px 33px;background:#f4ebdf;padding:15px 18px;border-radius:0 10px 10px 10px;font-size:14px}.answer{margin-left:33px}.answer h3{font-size:18px;letter-spacing:-.4px;margin:0 0 10px;font-weight:650}.answer p{color:#6e5a49;margin:0 0 12px;font-size:13px}.answer .pill{margin-bottom:12px}.basis{border-top:1px solid var(--line);padding-top:13px;font-size:11px;color:var(--muted);line-height:1.8;margin-top:18px}.basis strong{color:#6e5a49}.primary{border:0;border-radius:7px;background:var(--teal);color:white;padding:10px 15px;font-size:12px;font-weight:600}.primary:hover{background:#4a2f1c}.secondary{border:1px solid var(--line);background:var(--paper);border-radius:7px;color:var(--ink);padding:8px 12px;font-size:12px}.record{margin-top:16px;padding:15px;background:#faf3ea;border:1px solid #e6d5c0;border-radius:8px}.record dl{display:grid;grid-template-columns:100px 1fr;gap:7px;font-size:12px;margin:12px 0 0}.record dt{color:var(--muted)}.record dd{margin:0}.composer{border-top:1px solid var(--line);padding:16px 22px;background:#fbf6ef}.composer form{display:flex;gap:9px}.composer input{min-width:0;flex:1;border:1px solid var(--line);border-radius:7px;padding:11px;background:var(--paper);color:var(--ink);font-size:12px}.helper{font-size:10px;color:var(--muted);margin:8px 0 0}.side{display:flex;flex-direction:column;gap:16px}.side .body{padding:18px}.side h2{font-size:12px;font-weight:650;margin:0 0 12px}.identitycard{display:flex;gap:11px;align-items:center;padding-bottom:15px;border-bottom:1px solid var(--line);margin-bottom:15px}.bigavatar{width:38px;height:38px;background:var(--tealsoft);color:var(--teal);border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:650}.staffname{font-size:13px;font-weight:650}.small{font-size:11px;color:var(--muted)}.keyrow{display:flex;justify-content:space-between;gap:12px;margin:8px 0;font-size:11px}.keyrow span:first-child{color:var(--muted)}.owner{border-left:3px solid #cfb597;padding-left:12px;margin-top:14px}.owner strong{display:block;font-size:12px}.owner p{font-size:11px;color:var(--muted);margin:4px 0}.notice{background:#fafbf7;border:1px solid #e7ebdf;padding:14px;border-radius:8px;font-size:11px;color:#69745c}.reference{font-size:11px;color:#6e5a49;border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.reference strong{color:var(--teal)}details{background:var(--paper);border:1px solid var(--line);border-radius:9px;margin-top:20px;padding:12px 16px;font-size:11px;color:var(--muted)}summary{cursor:pointer;font-weight:600;color:#6e5a49}.democontrol{margin:14px 0;display:flex;align-items:center;gap:9px;color:var(--ink)}.democontrol input{accent-color:var(--teal)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f6eee3;border-radius:6px;padding:12px;color:#6e5a49;font-size:11px}footer{color:var(--muted);font-size:10px;display:flex;justify-content:space-between;gap:20px;padding-top:18px}.empty{font-size:12px;color:var(--muted);padding:18px;border:1px dashed var(--line);border-radius:8px}#status{min-height:18px;font-size:11px;color:var(--muted);margin-top:8px}[hidden]{display:none!important}@media(min-width:1500px){main{padding-top:42px;padding-bottom:32px}}@media(max-width:1120px){header{padding:0 20px}.clock{display:none}.shell{grid-template-columns:185px 1fr}main{padding:24px 20px}.workspace{grid-template-columns:minmax(0,1fr) 255px}.navitem{font-size:11px;padding:10px 8px}}@media(max-width:900px){.shell{grid-template-columns:1fr}nav{display:none}.workspace{grid-template-columns:minmax(0,1fr) 265px}header{gap:12px}.brand strong{font-size:13px}.identity select{min-width:0;width:285px}}@media(max-width:680px){header{height:auto;align-items:stretch;flex-direction:column;padding:16px 20px;gap:15px}.topright,.identity,.identity select{width:100%}.shell{min-height:0}.workspace{grid-template-columns:1fr}.heading{align-items:start}.heading>.pill{display:none}main{padding:20px 14px}.conversation{padding:20px 15px;min-height:0}.cardhead{padding:15px}.question{margin-left:0}.answer{margin-left:0}.composer{padding:15px}.composer form{flex-wrap:wrap}.composer input{flex-basis:100%}.side{display:grid;grid-template-columns:1fr}.heading h1{font-size:23px}footer{flex-direction:column;gap:3px}}
+.modes{display:inline-flex;gap:6px}.modes button[aria-pressed="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.heads{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.hood{min-height:370px;max-height:560px;overflow-y:auto;background:#faf4ec;padding:16px 18px}
+.hlist{list-style:none;margin:0;padding:0;background:none;border:0}.hlist>li{margin:0 0 10px}
+.hstep{background:var(--paper);border:1px solid var(--line);border-left:3px solid #7a4b2a;border-radius:8px;padding:8px 12px;font-size:12.5px}
+.hstep.code{border-left-color:var(--teal)}.hstep.muted{border-left-color:var(--line);color:var(--muted)}
+.hstep h4{margin:0 0 4px;font-size:13px;color:#4a2f1c}.hstep p{margin:3px 0}
+.chk{list-style:none;margin:4px 0;padding:0;background:none;border:0}.chk li{margin:1px 0}.chk .p b{color:var(--teal)}.chk .f b,.chk .f{color:var(--red)}
+.chatctl{padding:10px 22px;border-bottom:1px solid var(--line);background:#fbf6ef;font-size:12px}.keyline{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.keyline input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:7px;padding:8px;font-size:12px}
+.warnline{font-size:11px;color:var(--gold);background:var(--goldsoft);border:1px solid #eedebc;border-radius:7px;padding:6px 9px;margin:8px 0 0}
+.chat{min-height:370px;max-height:560px;overflow-y:auto;background:#efe5d8;padding:16px 18px}
+.day{text-align:center;font-size:11px;color:var(--muted);margin:2px 0 10px}
+.msg{max-width:78%;width:fit-content;padding:8px 12px 5px;border-radius:12px;margin:0 0 8px;font-size:13.5px;line-height:1.45;box-shadow:0 1px 0 rgba(0,0,0,.05);animation:in .25s ease;overflow-wrap:anywhere}
+.msg p{margin:0 0 5px}.msg .by{display:block;font-size:10.5px;font-weight:650;opacity:.75;margin-bottom:2px}
+.msg .tm{display:block;text-align:right;font-size:10.5px;opacity:.7;margin-top:1px}
+.msg .cites{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.msg .cites button{font:inherit;font-size:11px;color:#7a4b2a;border:1px solid var(--line);border-radius:7px;padding:0 6px;background:#faf4ec;cursor:pointer}
+.msg .cites button[aria-expanded="true"]{border-color:#7a4b2a}
+.msg .rule{font-size:11.5px;color:var(--muted);background:#faf4ec;border:1px solid var(--line);border-radius:7px;padding:4px 8px;margin-top:5px}.msg .rule b{color:#4a2f1c}
+.me{margin-left:auto;background:#7a4b2a;color:#fff;border-bottom-right-radius:4px;white-space:pre-wrap}
+.them{background:var(--paper);border:1px solid var(--line);border-bottom-left-radius:4px}
+.sys{margin:6px auto 10px;text-align:center;font-size:11.5px;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:4px 10px;width:fit-content;max-width:90%}
+.sys.err{color:var(--red);background:var(--redsoft);border-color:#f1d3ca}
+.typing{display:inline-flex;gap:3px;padding:10px 12px}.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:b 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.msg{animation:none}.typing i{animation:none;opacity:.6}}
+.crumb{background:var(--paper);border-bottom:1px solid var(--line);padding:7px 34px;font-size:12px;color:var(--muted)}.crumb a{color:var(--teal);text-decoration:none}@media(max-width:1120px){.crumb{padding:7px 20px}}
+
+
+.mockbar{background:#4a2f1c;color:#fff;font-size:12px;padding:6px 34px}.mockbar b{color:#ffd88a}
+.qchips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 22px;border-bottom:1px solid var(--line);background:#fbf6ef}
+.qchips button{border:1px solid var(--line);background:var(--paper);border-radius:100px;padding:4px 11px;font-size:11.5px;color:var(--ink)}
+.qchips button.on{background:var(--tealsoft);border-color:#e0ccb4;color:var(--teal);font-weight:650}
+.qpick{display:flex;gap:8px;align-items:center;padding:10px 22px;border-bottom:1px solid var(--line);background:#fbf6ef}
+.qpick select{flex:1;border:1px solid #dcc8b0;border-radius:8px;padding:8px 10px;background:#fffaf3;color:var(--ink)}
+.shell.nomenu{grid-template-columns:1fr}
+.confirm dl{display:grid;grid-template-columns:96px 1fr;gap:5px;font-size:12px;margin:8px 0 12px}.confirm dt{color:var(--muted)}.confirm dd{margin:0}
+
+
+.mockbar{background:#4a2f1c;color:#fff;font-size:12px;padding:6px 34px}.mockbar b{color:#ffd88a}
+.qpick{display:flex;gap:8px;align-items:center;padding:10px 22px;border-bottom:1px solid var(--line);background:#fbf6ef}
+.qpick select{flex:1;border:1px solid #dcc8b0;border-radius:8px;padding:8px 10px;background:#fffaf3;color:var(--ink)}
+.confirm dl,.rec dl{display:grid;grid-template-columns:110px 1fr;gap:5px;font-size:12px;margin:8px 0 12px}.confirm dt,.rec dt{color:var(--muted)}.confirm dd,.rec dd{margin:0}
+.casetabs{background:var(--paper);border-bottom:1px solid var(--line);padding:10px 34px 0;display:flex;flex-wrap:wrap;gap:4px}
+.casetabs button{border:1px solid var(--line);border-bottom:0;background:#f6eee3;border-radius:8px 8px 0 0;padding:8px 13px;font-size:12px;color:var(--muted)}
+.casetabs button.on{background:#4a2f1c;color:#fff;border-color:#4a2f1c;font-weight:650}
+.steps{background:#f8f1e7;border-bottom:1px solid var(--line);padding:10px 34px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.steps .lbl{font-size:11px;color:var(--muted);margin-right:4px}
+.steps button{border:1px solid var(--line);background:var(--paper);border-radius:100px;padding:4px 11px;font-size:11.5px;color:var(--ink)}
+.steps button.on{background:var(--tealsoft);border-color:#e0ccb4;color:var(--teal);font-weight:650}
+.casenote{background:#fffdf6;border-bottom:1px solid #eedebc;padding:8px 34px;font-size:12px;color:#5f5030}
+.casenote b{color:#4a2f1c}
+.notify{max-width:86%;background:#fff7e7;border:1px solid #eedebc;border-left:4px solid var(--gold);border-radius:10px;padding:8px 12px 5px;margin:0 0 10px;font-size:13.5px;line-height:1.45}
+.notify .by{display:block;font-size:10.5px;font-weight:700;color:var(--gold);margin-bottom:2px;text-transform:uppercase;letter-spacing:.6px}
+.msg .basis2{display:block;font-size:10.5px;color:var(--muted);border-top:1px solid var(--line);margin-top:5px;padding-top:3px}
+.rec h3{font-size:12px;margin:0 0 4px}.rec .btns{display:flex;gap:8px;margin-top:4px}
+.decline{border:1px solid #f1d3ca;background:var(--redsoft);color:var(--red);border-radius:7px;padding:9px 14px;font-size:12px;font-weight:600}
+.stamp{display:inline-block;margin-top:4px;font-size:11px;font-weight:650;border-radius:6px;padding:2px 8px}
+.stamp.ok{background:var(--tealsoft);color:var(--teal)}.stamp.no{background:var(--redsoft);color:var(--red)}.stamp.open{background:var(--goldsoft);color:var(--gold)}
+.who-dec{list-style:none;margin:0;padding:0;background:none;border:0}.who-dec li{display:flex;gap:9px;align-items:flex-start;margin:0 0 9px;font-size:11.5px;line-height:1.45}
+.role{flex:0 0 52px;text-align:center;font-size:9.5px;font-weight:700;letter-spacing:.6px;border-radius:5px;padding:2px 0;color:#fff}
+.role.ai{background:#7b4fb5}.role.code{background:#2f6fb0}.role.human{background:#c46a1a}
+@media(max-width:1120px){.casetabs,.steps,.casenote,.mockbar{padding-left:20px;padding-right:20px}}
+
+</style>
+</head>
+<body>
+<style>
+.side dl{display:grid;grid-template-columns:104px 1fr;gap:5px;font-size:12px;margin:8px 0 12px}.side dt{color:var(--muted)}.side dd{margin:0}
+.side table{border-collapse:collapse;width:100%;font-size:11px;margin:4px 0 10px}.side th,.side td{border:1px solid var(--line);padding:4px 6px;text-align:left}.side th{background:#faf4ec;color:#6e5a49}
+.navlinks{display:flex;flex-direction:column;gap:3px;padding:0 12px;margin-top:10px}.navlinks a{font-size:11px;color:var(--teal);text-decoration:none}.navlinks a:hover{text-decoration:underline}
+.hstep details{margin:4px 0 0;padding:6px 10px;border-radius:6px}
+.hood .who-dec{margin-top:8px}
+.livebar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+@media(max-width:680px){.workspace,.shell{grid-template-columns:minmax(0,1fr)!important}.cardhead{flex-wrap:wrap}select{max-width:100%}.qpick{flex-wrap:wrap}#qsel,#stepsel{min-width:0;width:100%}.casetabs,.steps{display:none}.casenote{padding:8px 14px}.crumb{padding:7px 14px}.workspace>*{min-width:0}.identity select{min-width:0}}
+#stepsel{display:none}@media(max-width:900px){#stepsel{display:block;flex:1;min-width:0;border:1px solid #dcc8b0;border-radius:8px;padding:8px 10px;background:#fffaf3;color:var(--ink)}}
+</style>
+<div class="crumb"><a href="../../index.html">AI Projects</a> / <a href="../../df-auto-parts-distributors.html">DF Auto Parts Distributors</a></div>
+<div class="casetabs" id="tabs" role="tablist" aria-label="Scenarios"></div>
+<div class="steps" id="steps" aria-label="Steps"></div>
+<div class="casenote" id="casenote"></div>
+<header><div class="brand"><div class="logo" aria-hidden="true">D</div><div><strong>DF Auto Parts Distributors</strong><span class="small">Staff Desk · Internal workspace</span></div></div><div class="topright"><div class="clock" id="clock"></div><div class="identity"><label class="eyebrow" for="who">Demo staff identity</label><select id="who" disabled></select></div></div></header>
+<div class="shell"><nav aria-label="Workspace areas" id="nav"><div class="eyebrow">Workspace</div><div id="areas"></div>
+<div class="navfoot">7 staff · 3 orders · 1 stock task<br>Different permissions.<br><br><span class="eyebrow" style="padding:0">Policies</span></div>
+<div class="navlinks">
+ <a href="resources/Management%20Policy.html" target="_blank" rel="noopener">Management Policy</a>
+ <a href="resources/Sales%20Policy.html" target="_blank" rel="noopener">Sales Policy</a>
+ <a href="resources/Finance%20Policy.html" target="_blank" rel="noopener">Finance Policy</a>
+ <a href="resources/Warehouse%20Policy.html" target="_blank" rel="noopener">Warehouse Policy</a>
+ <a href="resources/Product%20Catalogue.html" target="_blank" rel="noopener">Product Catalogue</a>
+ <a href="resources/Customer%20Directory.html" target="_blank" rel="noopener">Customer Directory</a>
+ <a href="benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a>
+</div></nav>
+<main><div class="workspace">
+<section class="card" aria-label="Assistant workspace"><div class="cardhead"><h2>Staff assistant</h2><span class="heads"><span class="modes" role="group" aria-label="View"><button class="secondary" type="button" id="v-chat" aria-pressed="true">Chat</button><button class="secondary" type="button" id="v-hood" aria-pressed="false">Under the hood</button></span><span class="modes" role="group" aria-label="Mode"><button class="secondary" type="button" id="m-replay" aria-pressed="true">Replay</button><button class="secondary" type="button" id="m-live" aria-pressed="false">Live</button></span></span></div>
+<div class="qpick"><select id="stepsel" aria-label="Scenario step"></select><label class="eyebrow" for="qsel">Question</label><select id="qsel" disabled></select></div>
+<div class="chatctl" id="replayctl"><span class="small" id="runline"></span> <span id="passline"></span></div>
+<div class="chatctl" id="livectl" hidden><div class="keyline"><label for="api-key" class="eyebrow">Your Anthropic API key</label><input type="password" id="api-key" placeholder="sk-ant-..." autocomplete="off" spellcheck="false"><button type="button" class="secondary" id="forget">Forget key</button><button type="button" class="secondary" id="reset">Reset to this step</button></div>
+<p class="warnline"><b>Calls are billed to the key's owner.</b> Use a key you can revoke, with a low spend limit. The key stays in this tab's session storage and goes only to api.anthropic.com. A public service would keep its key on a server.</p></div>
+<div class="chat" id="chatbox" aria-live="polite"></div>
+<div class="hood" id="hoodbox" hidden></div>
+<div class="composer"><form id="askform"><input id="question" aria-label="Question" autocomplete="off"><button class="primary" type="submit" id="askbtn">Ask assistant ↗</button></form><p class="helper" id="helper"></p><div id="status" role="status"></div></div></section>
+<aside class="side" aria-label="Access, next step and record">
+<section class="card"><div class="body"><h2>YOUR ACCESS</h2><div class="identitycard"><div class="bigavatar" id="ini"></div><div><div class="staffname" id="sname"></div><div class="small" id="srole"></div></div></div><p class="small" style="margin:0 0 12px" id="smay"></p><span id="lvline"></span><div class="keyrow"><span>Staff ID</span><strong id="sid"></strong></div></div></section>
+<section class="card" id="nextcard" hidden><div class="body"><h2>NEXT STEP</h2><span class="pill amber" id="nextpill"></span><div class="owner"><strong id="nextwho"></strong><p id="nextrole"></p><p id="nexttext"></p></div></div></section>
+<section class="card rec" id="reccard" hidden><div class="body" id="recbody"></div></section>
+</aside></div>
+<details><summary>Demo details</summary><p>A browser-only demonstration on sample records. The identity dropdown is not authentication, and the bundled data is not protected by server-side authorisation; a real app checks identity, department, tier and returned fields on the server for every request.</p><p>Replay shows the recorded benchmark run of each step, on the state the earlier steps left. Live starts from the same state and sends your question to the assistant as the staff member chosen, through the same hooks, back end and buttons.</p></details>
+<footer><span>© 2026 Lee Yih Ven · DF Auto Parts Distributors</span><span>Sample records · Replay is recorded; Live uses your own API key</span></footer></main></div>
+<script>/*__FORMAT_JS__*/</script>
+<script>/*__RULES_JS__*/</script>
+<script>/*__BACKEND_JS__*/</script>
+<script>/*__PRE_JS__*/</script>
+<script>/*__POST_JS__*/</script>
+<script>/*__TOOLS_JS__*/</script>
+<script>/*__PROMPT_JS__*/</script>
+<script>/*__AGENT_JS__*/</script>
+<script>
+const DATA = /*__DATA_JSON__*/null;
+const TABLES = /*__TABLES_JSON__*/null;
+const CLAUSES = /*__CLAUSES_JSON__*/null;
+const RESOURCES = /*__RESOURCES_JSON__*/null;
+const CASES = /*__CASES_JSON__*/null;
+const RESULTS = /*__RESULTS_JSON__*/null;
+const CONTENT = /*__CONTENT_JSON__*/null;
+</script>
+<script>
+'use strict';
+// The DF staff desk (mock-up E, founder 23 Oct) on the real engine. The tabs follow the seven scenarios on three
+// orders and a stock task; each step shows the recorded run on the state the earlier steps left (Replay), or
+// starts Live from that state with the visitor's own key. Your access shows on every step; Next step and the
+// record card only on Read and follow up. Under the hood shows who decided the step (AI, CODE, HUMAN) above the trace.
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const F = window.DFFormat;
+const MODEL = "claude-haiku-5-5";
+const KEY_SLOT = "df-desk-key";
+const SBY = Object.fromEntries(TABLES.staff.map((s) => [s.id, s]));
+const INI = (id) => SBY[id].name.split(" ").map((w) => w[0]).slice(0, 2).join("");
+const ROLE = (id) => SBY[id].role.charAt(0).toLowerCase() + SBY[id].role.slice(1);
+const CAT = Object.fromEntries(DATA.catalogue.map((c) => [c.sku, c]));
+const REC = Object.fromEntries((RESULTS.results || []).map((r) => [r.id, r]));
+const TL = CASES.timeline;
+const AREAS = [["▤", "Stock & Warehouse"], ["⌂", "Customers & Delivery"], ["▥", "Credit & Invoices"], ["▦", "Orders"], ["⇄", "Approvals & Exceptions"]];
+const LV = { read: ["green", "Read only"], follow: ["green", "Read and follow up"], noaccess: ["red", "No access"], noauth: ["red", "No authority"] };
+const READS = new Set(["check_stock", "retrieve_customer_account", "retrieve_customer_prices"]);
+const at = (hm) => DATA.meta.now + (Number(hm.slice(0, 2)) - 10) * 3600 + Number(hm.slice(3)) * 60;
+const TABS = CONTENT.tabs.map((t, i) => ({ tab: t.tab, note: t.note, steps: TL.filter((e) => e.kind !== "button" && e.tab === i + 1) }));
+TABS.forEach((t, ti) => t.steps.forEach((s, si) => { s.area = CONTENT.areas[ti][si]; s.dec = CONTENT.dec[ti][si]; }));
+const chat = $("chatbox"), hood = $("hoodbox");
+
+// ---------- the engine, replayed without a model: the state before and after every timeline entry ----------
+const freshStore = () => window.DFTools.memoryStore(DATA);
+function applyEntry(store, e) {
+  const desk = window.DFTools.createDesk(store, TABLES, { now: at(e.time) });
+  return e.apply.type === "confirm" ? desk.confirm(e.staff, e.apply.input) : desk.call(e.apply.tool, e.apply.input, e.staff).result;
+}
+const SNAP = {};  // after each entry: the records the cards read
+(function () {
+  const st = freshStore();
+  const take = () => JSON.parse(JSON.stringify({ escalations: st.get("escalations"), drafts: st.get("drafts"), notifications: st.get("notifications"), approvals: st.get("approvals"),
+    stock_counts: st.get("stock_counts"), schedules: st.get("schedules"), confirmations: st.get("confirmations"), orders: st.get("orders").slice(-4),
+    customers: st.get("customers").filter((c) => c.id === "C-0001" || c.id === "C-0004") }));
+  SNAP._seed = take();
+  for (const e of TL) { if (e.apply) applyEntry(st, e); SNAP[e.id] = take(); }
+})();
+function storeBefore(step) {
+  const st = freshStore();
+  for (const e of TL) { if (e.id === step.id) break; if (e.apply) applyEntry(st, e); }
+  st.set("call_log", []);
+  return st;
+}
+
+// ---------- state ----------
+const C = { tab: 0, step: 0, mode: "replay", view: "chat", key: "", desk: null, store: null, messages: [], busy: false, result: null, token: 0, staff: null, hood: [] };
+const cur = () => TABS[C.tab].steps[C.step];
+const staffId = () => (C.mode === "live" ? $("who").value : cur().staff);
+
+// ---------- the level, from a result (one mapping for Replay and Live) ----------
+function levelOf(r) {
+  if (!r) return null;
+  const code = r.error && r.error.code;
+  if (r.status === "ok") return READS.has(r.tool) ? "read" : "follow";
+  if (r.status === "escalated") return "follow";
+  if (code === "customer_not_assigned") return "noaccess";
+  if (code === "department_not_permitted") return READS.has(r.tool) ? "noaccess" : "noauth";
+  if (code === "tier_not_permitted" || code === "approval_wrong_department") return "noauth";
+  return "follow";
+}
+const lastResult = (trace) => { const t = (trace || []).filter((x) => x.type === "tool").pop(); return t ? (t.hook && t.hook.result) || t.result : null; };
+
+// ---------- the record cards and the next step, from the records ----------
+const nameOf = (id) => (SBY[id] ? SBY[id].name : id);
+const person = (id) => `${nameOf(id)}, ${ROLE(id)}`;
+const custLine = (id) => { const c = DATA.customers.find((x) => x.id === id); return `${id} ${c ? c.name : ""}${c ? ", " + c.location : ""}`; };
+const itemsOf = (lines) => lines.map((l) => `${l.qty} ${CAT[l.sku].unit}${l.qty === 1 ? "" : "s"} ${CAT[l.sku].name} (${l.sku})`).join("; ");
+const LABEL = { discount: "Discount (SP-06)", minimum_order: "Below-minimum order (SP-03)", delivery_exception: "Delivery-date exception (WP-07)", prepaid: "Prepaid route (FP-04)" };
+function escCard(e, viewer, withButtons) {
+  const x = e.decision_data, rows = [["Type", LABEL[e.type] + (e.type === "discount" ? ", cap 15%" : "")], [viewer === e.to ? "From" : "To", viewer === e.to ? person(e.from) : person(e.to)], ["Customer", custLine(e.customer)], ["Request", e.request_id]];
+  if (e.type === "delivery_exception") {
+    rows.push(["Order", itemsOf(x.lines)], ["Asked", F.dayLabel(x.asked_date)], ["Standard", F.dayLabel(x.standard_date)]);
+    const st = x.stock[x.lines[0].sku]; if (st) rows.push(["Stock", `${x.warehouse} ${st.qty} ${CAT[x.lines[0].sku].unit}s, updated ${Math.floor((e.sent_at - st.updated) / 3600)} hours ago`]);
+    rows.push([`Today, ${x.warehouse}`, x.out_today.length ? `${x.out_today.length} delivery already out (${x.out_today.join(", ")})` : "No delivery out"]);
+  } else {
+    rows.push(["Order", itemsOf(x.lines)]);
+    if (x.discount_pct) rows.push(["Subtotal", F.rm(x.subtotal)], ["Discount", `${x.discount_pct}% = ${F.rm(x.discount)}`]);
+    rows.push(["Total", F.rm(x.total) + (e.type === "prepaid" ? ", paid before dispatch" : "")]);
+    if (e.type === "minimum_order") rows.push(["Minimum", `${F.rm(x.minimum)} (${F.rm(x.minimum - x.total)} short)`]);
+    rows.push(["Credit", e.type === "prepaid" ? `Limit ${F.rm(x.credit_limit)}, outstanding ${F.rm(x.outstanding)}, available ${F.rm(x.balance)}` : `${F.rm(x.balance)} available of ${F.rm(x.credit_limit)}`]);
+    if (e.type === "prepaid" && x.overdue) rows.push(["Overdue", x.overdue.count ? `${F.rm(x.overdue.total)}, the oldest ${x.overdue.oldest} days` : "Nothing overdue"]);
+  }
+  if (e.status === "approved") rows.push(["Decision", `Approved, ${e.approval_id}`]);
+  if (e.status === "declined") rows.push(["Decision", "Declined"], ["Reason", e.reason || ""]);
+  const stamp = e.status === "open" ? ["open", `Open · ${viewer === e.to ? "received" : "sent"} ${F.hhmm(e.sent_at)}`] : e.status === "approved" ? ["ok", `Approved by ${e.decided_by} at ${F.hhmm(e.decided_at)}`] : ["no", `${e.status === "lapsed" ? "Lapsed" : "Declined by " + e.decided_by} at ${F.hhmm(e.decided_at)}`];
+  return { title: `ESCALATION ${e.id}`, rows, stamp, buttons: withButtons && e.status === "open" && viewer === e.to ? { esc: e.id } : null };
+}
+function draftCard(d, snap) {
+  const ap = (type) => snap.approvals.find((a) => a.request_id === d.request_id && a.type === type);
+  const prices = DATA.price_lists[d.customer] || {};
+  const sub = d.lines.reduce((a, l) => a + l.qty * (prices[l.sku] || 0), 0), total = sub - Math.round(sub * d.discount_pct / 100);
+  const rows = [["Customer", custLine(d.customer)], ["Items", itemsOf(d.lines)], ["Total", F.rm(total) + (d.discount_pct ? ` after ${d.discount_pct}% discount` : "")]];
+  if (d.discount_pct) rows.push(["Discount", ap("discount") ? `Approved, ${ap("discount").id}` : "Asked"]);
+  rows.push(["Delivery", ap("delivery_exception") ? `${F.dayLabel(d.delivery_date)}, approved, ${ap("delivery_exception").id}` : `${F.dayLabel(d.delivery_date)} (standard)`]);
+  rows.push(["Payment", d.payment_route === "prepaid" ? (ap("prepaid") ? `Prepaid, approved, ${ap("prepaid").id}` : "Prepaid, asked") : "Credit"]);
+  return { title: `ORDER DRAFT ${d.request_id}`, rows, stamp: ["open", d.status === "draft" ? "Draft · not placed" : d.status] };
+}
+function orderCard(o, snap) {
+  const c = snap.customers.find((x) => x.id === o.customer);
+  const rows = [["Order", `${o.id} (${o.request_id})`], ["Customer", custLine(o.customer)], ["Items", itemsOf(o.lines)], ["Total", `${F.rm(o.total)}, ${o.route}`]];
+  if (o.route === "credit" && c) rows.push(["Credit after", `${F.rm(c.credit_limit - c.outstanding)} available`]);
+  if (o.route === "prepaid") rows.push(["Payment", "Prepaid; no credit used. Dispatch after Finance confirms payment"]);
+  if ((o.approvals || []).length) rows.push(["Approvals", o.approvals.map((id) => { const a = snap.approvals.find((y) => y.id === id); return a ? `${id} ${nameOf(a.approver)}` : id; }).join("; ")]);
+  rows.push(["Delivery", `${F.dayLabel(o.delivery_date)}, ${o.warehouse}`]);
+  if (o.revised_from) rows.push(["History", `${o.revised_from} declined; revised as ${o.request_id}`]);
+  return { title: "ORDER PLACED", rows, stamp: ["ok", `Placed once by ${o.created_by} at ${F.hhmm(o.created_at)}`] };
+}
+function summaryCard(sm) {
+  const rows = [["Customer", custLine(sm.customer)], ["Items", sm.lines.map((l) => `${l.qty} x ${l.sku} at ${l.unit_price}`).join("; ")]];
+  if (sm.discount_pct) rows.push(["Discount", `${sm.discount_pct}% (${sm.discount})`]);
+  rows.push(["Total", sm.total], ["Payment", sm.payment_route], ["Delivery", F.dayLabel(sm.delivery_date)]);
+  if (sm.request_id) rows.push(["Request", sm.request_id]);
+  return { title: "ORDER SUMMARY TO CONFIRM", rows, confirm: sm };
+}
+/** The cards for a step in Replay: { next, card } from the recorded result and the records after the step. */
+function replayCards(s) {
+  const snap = SNAP[s.id], me = s.staff, rec = REC[s.id];
+  if (s.kind === "notice") {
+    const n = s.expect.notification, e = snap.escalations.find((x) => x.id === n.escalation);
+    if (n.kind === "escalation") return { next: ["Waiting on you", me, `Approve or decline ${e.id}, here or in the chat.`], card: escCard(e, me, true) };
+    const d = snap.drafts.find((x) => x.request_id === e.request_id);
+    if (n.kind === "approved") return { next: ["Your next step", me, "The order stays a draft until the customer's terms are settled; then confirm the summary."], card: draftCard(d, snap) };
+    return { next: ["Your next step", me, "Ask the customer about the revised quantity, then place the revised order."], card: escCard(e, me, false) };
+  }
+  const r = lastResult(rec && rec.trace);
+  if (!r || levelOf(r) !== "follow") return {};
+  const d = r.data || {};
+  if (r.status === "escalated") { const e = snap.escalations.find((x) => x.id === d.escalation_id); return { next: ["Waiting on a named person", e.to, `${e.id} sent at ${F.hhmm(e.sent_at)}. You are notified here when ${nameOf(e.to).split(" ")[0]} decides.`], card: escCard(e, me, false) }; }
+  if (r.error && r.error.code === "confirmation_missing") return { next: ["Waiting on you", me, "Check the summary and press Confirm summary."], card: summaryCard(d.summary) };
+  if (r.tool === "decide_escalation") { const e = snap.escalations.find((x) => x.id === d.escalation_id); return { next: [`Done, next with ${nameOf(e.from).split(" ")[0]}`, e.from, `${nameOf(e.from).split(" ")[0]} has been notified.`], card: escCard(e, me, false) }; }
+  if (r.tool === "create_order" && r.status === "ok") { const o = snap.orders.find((x) => x.id === d.order_id); return { next: o.route === "prepaid" ? ["Your next step", me, "Ask the customer to pay now; dispatch waits for payment."] : ["Next with Warehouse", "WH-02-01", `Schedules ${o.id} for ${F.dayLabel(o.delivery_date)}.`], card: orderCard(o, snap) }; }
+  if (r.tool === "confirm_stock_count") { const c = snap.stock_counts.find((x) => x.id === d.record); return { next: ["Done", me, "Nothing further; the figure is current for 24 hours."], card: { title: "STOCK COUNT CONFIRMED", rows: [["Item", `${CAT[c.sku].name} (${c.sku}) at ${c.warehouse}`], ["Before", `${c.before_qty} ${CAT[c.sku].unit}s, ${F.myt(c.before_updated)}`], ["After", `${c.qty} ${CAT[c.sku].unit}s, ${F.myt(c.time)}`], ["Record", c.id]], stamp: ["ok", `Confirmed by ${c.by} at ${F.hhmm(c.time)}`] } }; }
+  if (r.tool === "schedule_delivery") return { next: ["Your next step", me, `Add ${d.order_id} to the ${d.date} route from ${d.warehouse}.`], card: { title: "DELIVERY SCHEDULED", rows: [["Order", d.order_id], ["Customer", custLine(d.customer)], ["Items", d.items.map((i) => `${i.qty} ${i.name}`).join("; ")], ["Date", `${d.date}, within the terms`], ["From", d.warehouse], ["Status", "Scheduled"]], stamp: ["ok", `Scheduled by ${d.scheduled_by}`] } };
+  return {};
+}
+
+// ---------- rendering ----------
+function renderSide(level, cards) {
+  const id = staffId();
+  $("ini").textContent = INI(id); $("sname").textContent = SBY[id].name; $("srole").textContent = SBY[id].role; $("sid").textContent = id;
+  $("smay").textContent = CONTENT.may[id] || "";
+  $("lvline").innerHTML = level ? `<span class="pill ${LV[level][0]}">● ${LV[level][1]}</span> <span class="small">for this question</span>` : `<span class="small">The level shows once the question is answered.</span>`;
+  const follow = level === "follow", nx = follow && cards && cards.next, card = follow && cards && cards.card;
+  $("nextcard").hidden = !nx;
+  if (nx) { $("nextpill").textContent = nx[0]; $("nextwho").textContent = nameOf(nx[1]); $("nextrole").textContent = SBY[nx[1]] ? `${SBY[nx[1]].role} · ${nx[1]}` : ""; $("nexttext").textContent = nx[2]; }
+  $("reccard").hidden = !card;
+  if (card) {
+    $("recbody").innerHTML = `<h2>${esc(card.title)}</h2><dl>${card.rows.map(([a, b]) => `<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join("")}</dl>` +
+      (card.stamp ? `<span class="stamp ${card.stamp[0]}">${esc(card.stamp[1])}</span>` : "") +
+      (card.buttons ? `<div class="btns"><button class="primary" type="button" data-act="approve" data-esc="${esc(card.buttons.esc)}">Approve</button><button class="decline" type="button" data-act="decline" data-esc="${esc(card.buttons.esc)}">Decline with reason</button></div>` : "") +
+      (card.confirm ? `<div class="btns"><button class="primary" type="button" data-act="confirm">Confirm summary</button></div>` : "") +
+      `<p class="small" id="btnmsg" style="margin:8px 0 0">${card.buttons || card.confirm ? (C.mode === "live" ? "The button calls the same action, with the same checks, as the chat." : "Replay: the button plays the next step. In Live it acts through the same checks as the chat.") : ""}</p>`;
+    C.card = card;
+  } else C.card = null;
+}
+function splitBasis(text) { const i = String(text).indexOf("\nBasis:"); return i < 0 ? [text, null] : [text.slice(0, i), text.slice(i + 7).trim()]; }
+const scrollEnd = () => { chat.scrollTop = chat.scrollHeight; };
+function bubble(kind, text, tm, by) {
+  if (kind === "sys") return `<div class="sys">${esc(text)}</div>`;
+  if (kind === "err") return `<div class="sys err">${esc(text)}</div>`;
+  if (kind === "notify") return `<div class="notify"><span class="by">Desk notification · written by code</span>${esc(text)}<span class="tm" style="display:block;text-align:right;font-size:10.5px;opacity:.7">${esc(tm)}</span></div>`;
+  if (kind === "me") return `<div class="msg me"><span class="by">${esc(by)}</span>${esc(text)}<span class="tm">${esc(tm)}</span></div>`;
+  const [b, basis] = splitBasis(text);
+  return `<div class="msg them"><span class="by">Staff assistant</span>${esc(b)}${basis ? `<span class="basis2">Basis: ${esc(basis)}</span>` : ""}<span class="tm">${esc(tm)}</span></div>`;
+}
+const day = () => '<div class="day">Thursday 1 October 2026</div>';
+
+// Under the hood: the AI, CODE and HUMAN split for the step, then the trace.
+const ROLE_LBL = { ai: "AI", code: "CODE", human: "HUMAN" };
+function asked(name, i) {
+  if (name === "check_stock") return i.detail === "schedule" ? `Deliveries from ${i.warehouse} on ${i.date || "the next delivery day"}` : `${i.detail === "storage" ? "Storage of" : "Stock of"} ${(i.skus || []).join(", ")} at ${i.warehouse}`;
+  if (name === "create_order") return `Order for ${i.customer_id}${i.lines ? ": " + i.lines.map((l) => `${l.qty} x ${l.sku}`).join(", ") : ""}${i.discount_pct ? `, ${i.discount_pct}% off` : ""}${i.payment_route ? `, ${i.payment_route}` : ""}${i.delivery_date ? `, delivery ${i.delivery_date}` : ""}${i.confirmation_id ? `, confirmation ${i.confirmation_id}` : ""}`;
+  if (name === "decide_escalation") return `${i.decision === "decline" ? "Decline" : "Approve"} ${i.customer_id}'s ${i.type}${i.reason ? `: "${i.reason}"` : ""}`;
+  if (name === "schedule_delivery") return `Schedule ${i.order_id || i.customer_id + "'s placed order"} for ${i.date}`;
+  if (name === "confirm_stock_count") return `Confirm ${i.sku} at ${i.warehouse}: ${i.qty}`;
+  return `${name} ${JSON.stringify(i)}`;
+}
+const clText = (id) => (CLAUSES[id] ? `${id} ${CLAUSES[id].section}` : id);
+function hoodStep(s) {
+  if (s.kind === "message") return `<div class="hstep"><h4>${esc(s.who)} asked</h4><p>"${esc(s.text)}"</p></div>`;
+  if (s.kind === "note") return `<div class="hstep muted"><p>${esc(s.text)}</p></div>`;
+  if (s.kind === "reply") return `<div class="hstep"><h4>Reply shown</h4><p>"${esc(s.text)}"</p></div>`;
+  const h = s.hook || {}, r = h.result || s.result || {}, pre = h.pre || {};
+  const checks = (pre.checks || []).map((c) => `<li class="${c.pass ? "p" : "f"}"><b>${c.pass ? "pass" : "FAIL"}</b> ${esc(c.check)} <span class="small">(${esc(String(c.clause || "").split(", ").map(clText).join(", "))})</span></li>`).join("");
+  let out = `<div class="hstep code"><h4>${esc(asked(s.name, s.input || {}))}</h4><p class="small"><code>${esc(s.name)}</code> · signed in as ${esc(s.who)} · PreToolUse ${pre.verdict === "block" ? "blocked" : "allowed"}${pre.plan ? ` (${esc(pre.plan)})` : ""}</p><ul class="chk">${checks}</ul>`;
+  if (h.tool_ran === false) out += "<p>The tool did not run; nothing was opened or changed.</p>";
+  if (h.post && h.post.length) out += `<p class="small"><b>PostToolUse:</b> ${esc(h.post.join("; "))}</p>`;
+  out += `<p><b>Result:</b> ${esc(r.status)}${r.error ? ` · ${esc(r.error.code)}, ${esc(clText(r.error.clause))}` : ""}</p>`;
+  if (r.next_step && r.next_step.text) out += `<p class="small"><b>Next step:</b> ${esc(r.next_step.text)}</p>`;
+  if (r.data) out += `<details><summary>Data the assistant saw</summary><pre>${esc(JSON.stringify(r.data, null, 2))}</pre></details>`;
+  return out + "</div>";
+}
+function renderHood() {
+  const dec = C.mode === "replay" ? cur().dec : null;
+  const card = dec ? `<div class="hstep"><h4>Who decides in this step</h4><ul class="who-dec">${dec.map(([r, x]) => `<li><span class="role ${r}">${ROLE_LBL[r]}</span><span>${esc(x)}</span></li>`).join("")}</ul></div>` : "";
+  const steps = C.hood.length ? `<ol class="hlist">${C.hood.map((s) => `<li>${hoodStep(s)}</li>`).join("")}</ol>` : '<p class="empty">Nothing has happened yet in this chat. Each step behind a reply appears here.</p>';
+  hood.innerHTML = card + steps;
+}
+
+function renderTabs() {
+  document.querySelectorAll("#tabs button").forEach((b, i) => b.classList.toggle("on", i === C.tab));
+  const t = TABS[C.tab];
+  $("steps").innerHTML = '<span class="lbl">Step</span>' + t.steps.map((s, i) => `<button type="button" data-i="${i}" class="${i === C.step ? "on" : ""}">${esc(s.id)} · ${esc(s.title)}</button>`).join("");
+  $("casenote").innerHTML = t.note;
+  $("stepsel").innerHTML = TABS.map((tt, ti) => tt.steps.map((s, si) => `<option value="${ti}:${si}"${ti === C.tab && si === C.step ? " selected" : ""}>${esc(tt.tab)} · ${esc(s.id)} ${esc(s.title)}</option>`).join("")).join("");
+  const s = cur();
+  document.querySelectorAll(".navitem").forEach((b) => b.classList.toggle("active", +b.dataset.area === s.area));
+  const inArea = TL.filter((e) => e.kind === "model" && e.area === s.area);
+  $("qsel").innerHTML = s.kind === "notice" ? `<option>A notification for ${esc(nameOf(s.staff))}, written by code</option>`
+    : inArea.map((e, n) => `<option${e.id === s.id ? " selected" : ""}>${n + 1}. ${esc(e.message)}</option>`).join("");
+  $("clock").innerHTML = `Thursday, 1 October 2026<br>${s.time} · Malaysia time · Demo clock`;
+}
+
+// ---------- replay ----------
+function replayChat(s) {
+  const t = TABS[C.tab], items = [], hoodItems = [];
+  for (const e of t.steps.slice(0, C.step + 1)) {
+    if (e.staff !== s.staff) continue;
+    if (e.kind === "notice") { items.push(bubble("notify", e.expect.notification.text, e.time)); if (e === s) hoodItems.push({ kind: "note", text: `No model call. The notification was written by code when the step before it ran (${e.expect.notification.escalation}), and is the first message of ${nameOf(e.staff)}'s chat.` }); continue; }
+    const r = REC[e.id];
+    if (e.expect.notification_seen) items.push(bubble("notify", e.expect.notification_seen, F.hhmm(at(e.time) - 120)));
+    const idx = TL.indexOf(e), prev = TL[idx - 1];
+    if (prev && prev.kind === "button" && prev.staff === e.staff) { const cf = SNAP[prev.id].confirmations.slice(-1)[0]; items.push(bubble("sys", `${nameOf(e.staff).split(" ")[0]} pressed Confirm summary · ${cf.id} · request ${cf.request_id}`)); }
+    items.push(bubble("me", e.message, e.time, nameOf(e.staff)));
+    if (r && r.reply) items.push(bubble("them", r.reply, e.time));
+    else items.push(bubble("err", "Not recorded yet."));
+    if (e === s && r) {
+      hoodItems.push({ kind: "message", who: nameOf(e.staff), text: e.message });
+      for (const x of r.trace || []) {
+        if (x.type === "tool") hoodItems.push({ kind: "tool", who: e.staff, name: x.name, input: x.input, hook: x.hook, result: x.result });
+        else if (x.type === "note") hoodItems.push({ kind: "note", text: x.text });
+        else if (x.type === "reply") hoodItems.push({ kind: "reply", text: x.text });
+      }
+    }
+  }
+  return { html: day() + items.join(""), hood: hoodItems };
+}
+function showReplay() {
+  const s = cur(), r = REC[s.id];
+  const out = replayChat(s);
+  chat.innerHTML = out.html; C.hood = out.hood; renderHood(); scrollEnd();
+  const sm = RESULTS.summary || {};
+  $("runline").textContent = s.kind === "notice" ? "A notification written by code; no model call." : r ? `Recorded on ${sm.model || MODEL}, ${String(sm.ranAt || "").slice(0, 10)}.` : "";
+  $("passline").innerHTML = r ? (r.score.pass ? `<span class="pill green">Passed</span>` : `<span class="pill red">Failed</span>`) : `<span class="pill amber">Not recorded yet</span>`;
+  $("who").value = s.staff;
+  $("question").value = s.message || "";
+  const level = s.kind === "notice" ? "follow" : levelOf(lastResult(r && r.trace));
+  renderSide(level, replayCards(s));
+}
+
+// ---------- live ----------
+function readKey() { try { return sessionStorage.getItem(KEY_SLOT) || ""; } catch (e) { return ""; } }
+function saveKey(v) { try { if (v) sessionStorage.setItem(KEY_SLOT, v); else sessionStorage.removeItem(KEY_SLOT); } catch (e) { /* memory only */ } }
+function startLive(note) {
+  C.token++;
+  const s = cur();
+  C.store = storeBefore(s);
+  C.desk = window.DFTools.createDesk(C.store, TABLES, { now: at(s.time) });
+  C.messages = []; C.busy = false; C.result = null; C.hood = [];
+  const id = staffId(), notes = C.desk.notificationsFor(id);
+  chat.innerHTML = day() + (notes.length ? bubble("notify", notes[notes.length - 1].text, F.hhmm(notes[notes.length - 1].time)) : "") +
+    bubble("sys", note || (C.key ? `Signed in as ${nameOf(id)}, ${ROLE(id)}, at ${s.time}, on the state step ${s.id} starts from. Ask a question, or use the one filled in.` : "Paste your Anthropic API key above, then ask a question."));
+  $("question").value = s.message && s.staff === id ? s.message : "";
+  renderHood(); liveSide(); setInput(true);
+}
+function liveCards() {
+  const id = staffId(), r = C.result, st = C.store;
+  const snap = { escalations: st.get("escalations"), drafts: st.get("drafts"), approvals: st.get("approvals"), orders: st.get("orders"), customers: st.get("customers"), stock_counts: st.get("stock_counts") };
+  const open = st.get("escalations").filter((e) => e.to === id && e.status === "open");
+  if (!r && open.length) return { level: "follow", cards: { next: ["Waiting on you", id, `Approve or decline ${open[0].id}, here or in the chat.`], card: escCard(open[0], id, true) } };
+  if (!r) return { level: null, cards: {} };
+  const level = levelOf(r), d = r.data || {};
+  if (level !== "follow") return { level, cards: {} };
+  if (r.error && r.error.code === "confirmation_missing") return { level, cards: { next: ["Waiting on you", id, "Check the summary and press Confirm summary."], card: summaryCard(d.summary) } };
+  if (r.status === "escalated") { const e = snap.escalations.find((x) => x.id === d.escalation_id); return { level, cards: { next: ["Waiting on a named person", e.to, `${e.id} sent. Switch the identity to ${nameOf(e.to)} to decide it.`], card: escCard(e, id, false) } }; }
+  if (r.tool === "decide_escalation") { const e = snap.escalations.find((x) => x.id === d.escalation_id); return { level, cards: { next: ["Done", e.from, `${nameOf(e.from).split(" ")[0]} has been notified.`], card: escCard(e, id, false) } }; }
+  if (r.tool === "create_order" && r.status === "ok") { const o = snap.orders.find((x) => x.id === d.order_id); return { level, cards: { next: ["Your next step", id, r.next_step && r.next_step.text || ""], card: orderCard(o, snap) } }; }
+  return { level, cards: { next: r.next_step && r.next_step.text ? ["Your next step", id, r.next_step.text] : null } };
+}
+function liveSide() { const x = liveCards(); renderSide(x.level, x.cards); }
+function setInput(on) { $("question").disabled = !on; $("askbtn").disabled = !on; }
+const meNow = () => cur().time;
+async function liveSend(text) {
+  if (C.busy || !text) return;
+  if (!C.key) { chat.insertAdjacentHTML("beforeend", bubble("err", "Paste your Anthropic API key above first.")); $("api-key").focus(); return; }
+  const id = staffId(), s = SBY[id], token = C.token, trace = [];
+  chat.insertAdjacentHTML("beforeend", bubble("me", text, meNow(), s.name)); scrollEnd();
+  C.hood.push({ kind: "message", who: s.name, text }); renderHood();
+  C.busy = true; setInput(false);
+  chat.insertAdjacentHTML("beforeend", `<div class="msg them typing" data-typing><i></i><i></i><i></i></div>`); scrollEnd();
+  C.messages.push({ role: "user", content: text });
+  const notices = C.desk.notificationsFor(id).slice(-3).map((n) => n.text);  // shown at the top of the chat
+  const system = window.DFPrompt.buildSystem(RESOURCES, { staff: id, name: s.name, role: s.role, today: `Thursday 1 October 2026, ${cur().time} Malaysia time (2026-10-01)`, date: "2026-10-01", notices });
+  try {
+    const out = await window.DFAgent.runTurn({ apiKey: C.key, model: MODEL, system, tools: window.DFTools.TOOLS, messages: C.messages, self: s.name,
+      callTool: async (name, input) => {
+        const o = C.desk.call(name, input, id);  // the signed-in staff ID, never a model argument (MP-08)
+        trace.push({ type: "tool", name, input, result: o.result, hook: o.hook });
+        if (token === C.token) { C.hood.push({ kind: "tool", who: id, name, input, hook: o.hook, result: o.result }); renderHood(); $("status").textContent = `Tool: ${name}, ${o.result.status}${o.result.error ? " (" + o.result.error.code + ")" : ""}.`; }
+        return o;
+      } });
+    if (token !== C.token) return;
+    out.trace.filter((t) => t.type === "note").forEach((t) => C.hood.push({ kind: "note", text: t.text }));
+    C.hood.push({ kind: "reply", text: out.reply }); renderHood();
+    chat.querySelectorAll("[data-typing]").forEach((x) => x.remove());
+    chat.insertAdjacentHTML("beforeend", bubble("them", out.reply, meNow())); scrollEnd();
+    C.result = lastResult(trace) || C.result; liveSide();
+  } catch (e) {
+    if (token !== C.token) return;
+    chat.querySelectorAll("[data-typing]").forEach((x) => x.remove()); C.messages.pop();
+    chat.insertAdjacentHTML("beforeend", bubble("err", "The assistant could not reply: " + (e && e.message ? e.message : String(e)) + " Check the key, or reset."));
+  } finally { if (token === C.token) { C.busy = false; setInput(true); } }
+}
+
+// ---------- the buttons: Replay plays the next step; Live acts through the same checks as the chat ----------
+$("recbody").addEventListener("click", (ev) => {
+  const b = ev.target.closest && ev.target.closest("[data-act]"); if (!b || C.busy) return;
+  const act = b.dataset.act;
+  if (C.mode === "replay") {
+    const t = TABS[C.tab];
+    let next = C.step + 1;
+    if (act === "decline") { const k = t.steps.findIndex((s, i) => i > C.step && s.kind === "model" && /decline/i.test(s.message || "")); if (k >= 0) next = k; else { $("btnmsg").textContent = "No decline is recorded in this scenario; try it in Live."; return; } }
+    if (act === "approve") { const k = t.steps.findIndex((s, i) => i > C.step && s.expect.tool === "decide_escalation" && s.staff === cur().staff); if (k >= 0) next = k; }
+    if (act === "confirm") { const k = t.steps.findIndex((s, i) => i > C.step && s.staff === cur().staff && /^Confirmed on screen/.test(s.message || "")); if (k >= 0) next = k; else next = C.step + 1; }
+    if (next < t.steps.length) { C.step = next; show(); }
+    return;
+  }
+  const id = staffId();
+  if (act === "confirm") {
+    const sm = C.card && C.card.confirm; if (!sm) return;
+    let rec;
+    try { rec = C.desk.confirm(id, sm.request_id ? { customer: sm.customer, request_id: sm.request_id } : { customer: sm.customer, lines: sm.lines.map((l) => ({ sku: l.sku, qty: l.qty })), discount_pct: sm.discount_pct, route: sm.payment_route, delivery_date: sm.delivery_date }); }
+    catch (e) { $("btnmsg").textContent = `Not confirmed: ${e.code || ""} ${e.message}`; return; }
+    chat.insertAdjacentHTML("beforeend", bubble("sys", `You pressed Confirm summary · ${rec.id} · request ${rec.request_id} · ${F.rm(rec.total)}`));
+    C.result = null; liveSide();
+    liveSend(`Confirmed on screen: confirmation ${rec.id}, request ID ${rec.request_id}, for ${rec.customer}. Place the order.`);
+    return;
+  }
+  const reason = act === "decline" ? (window.prompt("Reason for the decline (optional):") || "") : undefined;
+  const o = C.desk.decide(id, b.dataset.esc, act, reason);
+  C.hood.push({ kind: "tool", who: id, name: "decide_escalation", input: o.hook.input, hook: o.hook, result: o.result }); renderHood();
+  chat.insertAdjacentHTML("beforeend", bubble("sys", `You pressed ${act === "approve" ? "Approve" : "Decline with reason"} on ${b.dataset.esc}`));
+  const say = o.result.next_step && o.result.next_step.say;
+  chat.insertAdjacentHTML("beforeend", say ? bubble("them", `${say}\nBasis: ${o.result.next_step.basis}`, meNow()) : bubble("err", `${o.result.status}: ${o.result.error ? o.result.error.message : ""}`));
+  scrollEnd(); C.result = o.result; liveSide();
+});
+
+// ---------- wiring ----------
+function show() { renderTabs(); if (C.mode === "replay") showReplay(); else { $("who").value = cur().staff; startLive(); } }
+function setView(v) { C.view = v; $("v-chat").setAttribute("aria-pressed", String(v === "chat")); $("v-hood").setAttribute("aria-pressed", String(v === "hood")); chat.hidden = v !== "chat"; hood.hidden = v !== "hood"; renderHood(); }
+function setMode(m) {
+  C.mode = m;
+  $("m-replay").setAttribute("aria-pressed", String(m === "replay")); $("m-live").setAttribute("aria-pressed", String(m === "live"));
+  $("replayctl").hidden = m !== "replay"; $("livectl").hidden = m !== "live";
+  $("who").disabled = m !== "live"; $("question").readOnly = m === "replay"; $("askbtn").disabled = m === "replay";
+  $("helper").textContent = m === "replay" ? "Replay shows the recorded run of each step, on the state the earlier steps left. Switch to Live to ask your own question from the same state."
+    : "Live starts from the state this step starts from. The identity dropdown signs you in as another staff member; typing a name does not.";
+  show();
+}
+$("tabs").innerHTML = TABS.map((t, i) => `<button type="button" role="tab" data-i="${i}">${esc(t.tab)}</button>`).join("");
+$("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b && !C.busy) { C.tab = +b.dataset.i; C.step = 0; show(); } });
+$("steps").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b && !C.busy) { C.step = +b.dataset.i; show(); } });
+$("stepsel").addEventListener("change", () => { if (C.busy) return; const [t, s] = $("stepsel").value.split(":").map(Number); C.tab = t; C.step = s; show(); });
+$("areas").innerHTML = AREAS.map((a, i) => `<button class="navitem" type="button" data-area="${i}" disabled><span class="navicon" aria-hidden="true">${a[0]}</span>${esc(a[1])}</button>`).join("");
+$("who").innerHTML = TABLES.staff.map((s) => `<option value="${s.id}">${esc(s.name)} · ${esc(s.role)} · ${s.id}</option>`).join("");
+$("who").addEventListener("change", () => { if (!C.busy && C.mode === "live") startLive(`Signed in as ${nameOf(staffId())}, ${ROLE(staffId())}. The same state, a new chat.`); });
+$("v-chat").addEventListener("click", () => setView("chat"));
+$("v-hood").addEventListener("click", () => setView("hood"));
+$("m-replay").addEventListener("click", () => setMode("replay"));
+$("m-live").addEventListener("click", () => setMode("live"));
+$("askform").addEventListener("submit", (e) => { e.preventDefault(); if (C.mode === "live") { const q = $("question").value.trim(); $("question").value = ""; liveSend(q); } });
+C.key = readKey(); $("api-key").value = C.key;
+$("api-key").addEventListener("input", (e) => { C.key = e.target.value.trim(); saveKey(C.key); });
+$("forget").addEventListener("click", () => { C.key = ""; $("api-key").value = ""; saveKey(""); if (!C.busy) startLive(); });
+$("reset").addEventListener("click", () => { if (!C.busy) startLive(); });
+setMode("replay");
+</script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+{
+ "dec": [
+  [
+   [
+    [
+     "ai",
+     "Reads Daniel's request and picks the order tool."
+    ],
+    [
+     "code",
+     "Checks C-0004 is Daniel's customer, takes the price from the list, checks RM 2,000.00 of credit covers RM 1,320.00 and WH-B has stock, then builds the summary."
+    ],
+    [
+     "human",
+     "Daniel decides whether to confirm."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Writes the reply and the next step."
+    ],
+    [
+     "code",
+     "Rechecks the confirmed summary, places the order once, takes RM 1,320.00 off the credit and records it."
+    ],
+    [
+     "human",
+     "Daniel pressed Confirm summary."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: C-0004 is not Chloe's customer. Writes the no-access sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ]
+  ],
+  [
+   [
+    [
+     "ai",
+     "Reads Chloe's request and picks the order tool with a 10% discount."
+    ],
+    [
+     "code",
+     "Finds a discount needs the sales manager (SP-06). Writes ES-0001 to Farid and the \"Sent to\" sentence."
+    ],
+    [
+     "human",
+     "No one yet. Farid decides next."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Nothing. No model call."
+    ],
+    [
+     "code",
+     "Writes Farid's notification with the order total and credit position."
+    ],
+    [
+     "human",
+     "Farid decides: approve or decline."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads Farid's instruction and picks the decide tool."
+    ],
+    [
+     "code",
+     "Checks Farid owns discount decisions and 10% is within the 15% cap. Records AP-0105 against RQ-0002."
+    ],
+    [
+     "human",
+     "Farid approved the discount."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Nothing. No model call."
+    ],
+    [
+     "code",
+     "Writes Chloe's notification. Keeps the order a draft."
+    ],
+    [
+     "human",
+     "Chloe decides when to place the order."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: Daniel is not the sales manager. Writes the no-authority sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ]
+  ],
+  [
+   [
+    [
+     "ai",
+     "Reads Chloe's request and picks the order tool."
+    ],
+    [
+     "code",
+     "Finds RM 216.00 is below the RM 300.00 minimum (SP-03). Writes ES-0002 to Farid and the \"Sent to\" sentence."
+    ],
+    [
+     "human",
+     "No one yet. Farid decides next."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Nothing. No model call."
+    ],
+    [
+     "code",
+     "Writes Farid's notification with the total and the shortfall."
+    ],
+    [
+     "human",
+     "Farid decides: approve or decline."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads Farid's instruction and picks the decide tool, with Farid's reason."
+    ],
+    [
+     "code",
+     "Checks Farid owns this decision. Records the decline and the reason."
+    ],
+    [
+     "human",
+     "Farid declined and set the reason: 17 filters."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Nothing. No model call."
+    ],
+    [
+     "code",
+     "Writes Chloe's notification with Farid's reason. Places nothing."
+    ],
+    [
+     "human",
+     "Chloe decides to ask the customer about 17 filters."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the revised request and picks the order tool."
+    ],
+    [
+     "code",
+     "Finds RM 306.00 meets the minimum, so no approval is needed. Checks credit and stock, then builds the summary."
+    ],
+    [
+     "human",
+     "Chloe decides whether to confirm."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Writes the reply and the next step."
+    ],
+    [
+     "code",
+     "Rechecks the summary, places the order once and keeps the decline in its history."
+    ],
+    [
+     "human",
+     "Chloe pressed Confirm summary."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: Daniel is not the sales manager. Writes the no-authority sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ]
+  ],
+  [
+   [
+    [
+     "ai",
+     "Reads Azlan's message and picks the stock count tool."
+    ],
+    [
+     "code",
+     "Checks Azlan is the warehouse manager (WP-03). Updates the figure to 22 and writes SC-0001."
+    ],
+    [
+     "human",
+     "Azlan counted the batteries and confirms the figure."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: only the warehouse manager confirms a count. Writes the no-authority sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: Finance has no access to stock. Writes the no-access sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ]
+  ],
+  [
+   [
+    [
+     "ai",
+     "Reads Chloe's request and picks the delivery change."
+    ],
+    [
+     "code",
+     "Finds today is earlier than the terms (WP-07). Writes ES-0003 to Azlan and the \"Sent to\" sentence."
+    ],
+    [
+     "human",
+     "No one yet. Azlan decides next."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Nothing. No model call."
+    ],
+    [
+     "code",
+     "Writes Azlan's notification with stock and today's deliveries. Leaves out prices."
+    ],
+    [
+     "human",
+     "Azlan decides: approve or decline."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads Azlan's instruction and picks the decide tool."
+    ],
+    [
+     "code",
+     "Checks Azlan owns delivery exceptions. Records AP-0106 against RQ-0002."
+    ],
+    [
+     "human",
+     "Azlan approved same-day delivery."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Nothing. No model call."
+    ],
+    [
+     "code",
+     "Writes Chloe's notification. Keeps the order a draft."
+    ],
+    [
+     "human",
+     "Chloe decides when to place the order."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: Jason cannot approve a date outside the terms. Writes the no-authority sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ]
+  ],
+  [
+   [
+    [
+     "ai",
+     "Reads Jason's request and picks the schedule tool."
+    ],
+    [
+     "code",
+     "Checks Jason may schedule, the order is placed and Friday is within the terms (WP-10). Records it. Shows no prices."
+    ],
+    [
+     "human",
+     "Jason scheduled the order and keeps the route."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Picks the read tool and writes the \"Here it is\" reply."
+    ],
+    [
+     "code",
+     "Returns the schedule with prices left out."
+    ],
+    [
+     "human",
+     "No one. Reading needs no decision."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: Sales cannot schedule deliveries. Writes the no-authority sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ]
+  ],
+  [
+   [
+    [
+     "ai",
+     "Reads Chloe's request and picks the prepaid route."
+    ],
+    [
+     "code",
+     "Finds the prepaid route needs the finance manager (FP-04). Writes ES-0004 to Nadia and the \"Sent to\" sentence."
+    ],
+    [
+     "human",
+     "No one yet. Nadia decides next."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Nothing. No model call."
+    ],
+    [
+     "code",
+     "Writes Nadia's notification with credit, overdue and upcoming invoices."
+    ],
+    [
+     "human",
+     "Nadia decides: approve or decline."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads Nadia's instruction and picks the decide tool."
+    ],
+    [
+     "code",
+     "Checks Nadia owns prepaid decisions. Records AP-0107 against RQ-0002."
+    ],
+    [
+     "human",
+     "Nadia approved the prepaid route."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Writes the reply and the next step."
+    ],
+    [
+     "code",
+     "Finds AP-0105, AP-0106 and AP-0107 for RQ-0002. Places the order once, uses no credit and holds dispatch until payment."
+    ],
+    [
+     "human",
+     "Chloe pressed Confirm summary."
+    ]
+   ],
+   [
+    [
+     "ai",
+     "Reads the request and picks the tool."
+    ],
+    [
+     "code",
+     "Refuses: only the finance manager approves the prepaid route. Writes the no-authority sentence."
+    ],
+    [
+     "human",
+     "No one. A refusal needs no decision."
+    ]
+   ]
+  ]
+ ],
+ "tabs": [
+  {
+   "tab": "1. Daniel places Order A",
+   "note": "<b>Order A, part 1 of 2.</b> A direct action, no escalation. Daniel places a credit order for Daniel's own customer C-0004 (RM 2,000.00 available). Chloe is refused: C-0004 is not Chloe's customer. Jason schedules this order in tab 6."
+  },
+  {
+   "tab": "2. Order B: discount",
+   "note": "<b>Order B, decision 1 of 3.</b> Chloe's customer C-0001 asks for 10% off 10 cartons of engine oil. It goes to Farid with the order and credit data; Farid approves. The order stays a draft: the customer's other requests follow in tabs 5 and 7, and it is placed once, in tab 7. Daniel is refused."
+  },
+  {
+   "tab": "3. Order C: below minimum",
+   "note": "<b>Order C.</b> 12 oil filters come to RM 216.00, below the RM 300 minimum, so it goes to Farid. Farid declines and says how many to add. Chloe revises to 17 filters (RM 306.00). That meets the minimum, so no approval is needed and Chloe places it. The decline stays on record. Daniel is refused."
+  },
+  {
+   "tab": "4. Stock count",
+   "note": "<b>Stock task.</b> A direct action, the warehouse manager's own call. The WH-A figure for NS60 batteries is 30 hours old. Azlan's count corrects it from 24 to 22 pieces and records the confirmation. Jason has no authority; Nadia has no access to stock."
+  },
+  {
+   "tab": "5. Order B: same day",
+   "note": "<b>Order B, decision 2 of 3.</b> The customer now needs the engine oil today, earlier than the terms (Friday 2 October). It goes to Azlan with the stock and delivery data, without prices. Azlan approves. Jason is refused."
+  },
+  {
+   "tab": "6. Order A: schedule",
+   "note": "<b>Order A, part 2 of 2.</b> A direct action within the terms. Jason schedules Daniel's order DF-SO-00249 for Friday 2 October. Azlan reads the schedule. Warehouse sees no prices. Daniel is refused."
+  },
+  {
+   "tab": "7. Order B: prepaid, placed",
+   "note": "<b>Order B, decision 3 of 3.</b> The customer wants to pay before dispatch. It goes to Nadia with the credit and invoice data. Nadia approves. All three approvals are now recorded, so Chloe confirms and the order is placed once. Priya is refused."
+  }
+ ],
+ "areas": [
+  [
+   3,
+   3,
+   3
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   3,
+   4,
+   4,
+   3,
+   3,
+   3,
+   4
+  ],
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   1,
+   1,
+   1
+  ],
+  [
+   4,
+   2,
+   2,
+   4,
+   2
+  ]
+ ],
+ "may": {
+  "SL-01-01": "Reads every Sales customer for supervision; approves discounts up to 15% and orders below RM 300 (SP-03, SP-06). Creates no orders (SP-01).",
+  "SL-02-01": "Works on own assigned customers only (MP-06): location, delivery, credit, prices, stock, and orders after confirming the summary on screen (SP-07). Sends discounts, small orders, same-day delivery and prepaid to the manager who decides.",
+  "SL-02-02": "Works on own assigned customers only (MP-06): location, delivery, credit, prices, stock, and orders after confirming the summary on screen (SP-07).",
+  "FN-01-01": "Opens credit, invoices, payments and order totals; approves the prepaid route (FP-04). No stock or catalogue prices.",
+  "FN-02-01": "Opens credit, invoices and payments for Finance work. No stock or catalogue prices. Approves nothing.",
+  "WH-01-01": "Stock, storage and deliveries; confirms stock counts (WP-03) and approves delivery-date exceptions (WP-07). No prices, credit or invoices.",
+  "WH-02-01": "Stock, storage and deliveries; schedules deliveries within the terms (WP-10). No prices, credit or invoices."
+ },
+ "source": "Mock-up E (founder, 23 Oct): tab notes, the AI, CODE and HUMAN split per step, the area of each step and what each person may do. Record IDs follow the engine (Build List section 17)."
+}

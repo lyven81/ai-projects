@@ -1,0 +1,10025 @@
+[
+ {
+  "id": "DF-SO-00001",
+  "request_id": "RQ-H00001",
+  "customer": "C-0093",
+  "created_by": "SL-02-01",
+  "created_at": 1788317100,
+  "lines": [
+   {
+    "sku": "DF-OF-022",
+    "qty": 1,
+    "unit_price": 3570
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 1,
+    "unit_price": 44230
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 1,
+    "unit_price": 15730
+   }
+  ],
+  "discount_pct": 0,
+  "total": 63530,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00002",
+  "request_id": "RQ-H00002",
+  "customer": "C-0045",
+  "created_by": "SL-02-02",
+  "created_at": 1788318000,
+  "lines": [
+   {
+    "sku": "DF-EO-003",
+    "qty": 1,
+    "unit_price": 31610
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 3,
+    "unit_price": 6700
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 6,
+    "unit_price": 21530
+   }
+  ],
+  "discount_pct": 0,
+  "total": 180890,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00003",
+  "request_id": "RQ-H00003",
+  "customer": "C-0035",
+  "created_by": "SL-02-02",
+  "created_at": 1788320700,
+  "lines": [
+   {
+    "sku": "DF-EO-006",
+    "qty": 1,
+    "unit_price": 25390
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 3,
+    "unit_price": 2430
+   }
+  ],
+  "discount_pct": 0,
+  "total": 32680,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00004",
+  "request_id": "RQ-H00004",
+  "customer": "C-0036",
+  "created_by": "SL-02-01",
+  "created_at": 1788321600,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 5,
+    "unit_price": 2110
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 8,
+    "unit_price": 2680
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 2,
+    "unit_price": 32010
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 10,
+    "unit_price": 30530
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 6,
+    "unit_price": 42870
+   }
+  ],
+  "discount_pct": 0,
+  "total": 658530,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00005",
+  "request_id": "RQ-H00005",
+  "customer": "C-0116",
+  "created_by": "SL-02-01",
+  "created_at": 1788322500,
+  "lines": [
+   {
+    "sku": "DF-BP-012",
+    "qty": 2,
+    "unit_price": 15700
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 2,
+    "unit_price": 6790
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 4,
+    "unit_price": 2760
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 4,
+    "unit_price": 5490
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 1,
+    "unit_price": 29890
+   }
+  ],
+  "discount_pct": 0,
+  "total": 107870,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00006",
+  "request_id": "RQ-H00006",
+  "customer": "C-0063",
+  "created_by": "SL-02-01",
+  "created_at": 1788326100,
+  "lines": [
+   {
+    "sku": "DF-EO-011",
+    "qty": 6,
+    "unit_price": 29990
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 4,
+    "unit_price": 17290
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 1,
+    "unit_price": 44070
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 2,
+    "unit_price": 44950
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 6,
+    "unit_price": 7110
+   }
+  ],
+  "discount_pct": 0,
+  "total": 425730,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00007",
+  "request_id": "RQ-H00007",
+  "customer": "C-0110",
+  "created_by": "SL-02-01",
+  "created_at": 1788327000,
+  "lines": [
+   {
+    "sku": "DF-EO-002",
+    "qty": 6,
+    "unit_price": 45380
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 3,
+    "unit_price": 36670
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 5,
+    "unit_price": 17160
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 4,
+    "unit_price": 15780
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 6,
+    "unit_price": 13430
+   }
+  ],
+  "discount_pct": 0,
+  "total": 611790,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00008",
+  "request_id": "RQ-H00008",
+  "customer": "C-0001",
+  "created_by": "SL-02-01",
+  "created_at": 1788329700,
+  "lines": [
+   {
+    "sku": "DF-BP-009",
+    "qty": 4,
+    "unit_price": 12380
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 3,
+    "unit_price": 2870
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 4,
+    "unit_price": 30240
+   }
+  ],
+  "discount_pct": 0,
+  "total": 179090,
+  "route": "credit",
+  "delivery_date": "2026-09-03",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00009",
+  "request_id": "RQ-H00009",
+  "customer": "C-0015",
+  "created_by": "SL-02-02",
+  "created_at": 1788333300,
+  "lines": [
+   {
+    "sku": "DF-EO-008",
+    "qty": 9,
+    "unit_price": 50160
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 8,
+    "unit_price": 25350
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 9,
+    "unit_price": 40300
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 9,
+    "unit_price": 1940
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 6,
+    "unit_price": 8080
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 8,
+    "unit_price": 26110
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1291760,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00010",
+  "request_id": "RQ-H00010",
+  "customer": "C-0115",
+  "created_by": "SL-02-02",
+  "created_at": 1788337800,
+  "lines": [
+   {
+    "sku": "DF-OF-011",
+    "qty": 6,
+    "unit_price": 1560
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 6,
+    "unit_price": 2450
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 4,
+    "unit_price": 36660
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 4,
+    "unit_price": 40450
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 7,
+    "unit_price": 30400
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 4,
+    "unit_price": 27300
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 3,
+    "unit_price": 44570
+   }
+  ],
+  "discount_pct": 0,
+  "total": 788210,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00011",
+  "request_id": "RQ-H00011",
+  "customer": "C-0006",
+  "created_by": "SL-02-01",
+  "created_at": 1788340500,
+  "lines": [
+   {
+    "sku": "DF-BT-027",
+    "qty": 8,
+    "unit_price": 44830
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 9,
+    "unit_price": 46300
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 7,
+    "unit_price": 1720
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 9,
+    "unit_price": 7390
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 3,
+    "unit_price": 29810
+   }
+  ],
+  "discount_pct": 0,
+  "total": 943320,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00012",
+  "request_id": "RQ-H00012",
+  "customer": "C-0120",
+  "created_by": "SL-02-01",
+  "created_at": 1788342300,
+  "lines": [
+   {
+    "sku": "DF-BT-026",
+    "qty": 6,
+    "unit_price": 42890
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 4,
+    "unit_price": 2000
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 4,
+    "unit_price": 17550
+   }
+  ],
+  "discount_pct": 0,
+  "total": 335540,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00013",
+  "request_id": "RQ-H00013",
+  "customer": "C-0017",
+  "created_by": "SL-02-02",
+  "created_at": 1788397200,
+  "lines": [
+   {
+    "sku": "DF-BP-002",
+    "qty": 9,
+    "unit_price": 7530
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 10,
+    "unit_price": 12130
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 4,
+    "unit_price": 7330
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 5,
+    "unit_price": 3560
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 3,
+    "unit_price": 20780
+   }
+  ],
+  "discount_pct": 0,
+  "total": 298530,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00014",
+  "request_id": "RQ-H00014",
+  "customer": "C-0085",
+  "created_by": "SL-02-02",
+  "created_at": 1788399000,
+  "lines": [
+   {
+    "sku": "DF-BT-025",
+    "qty": 8,
+    "unit_price": 25750
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 5,
+    "unit_price": 25860
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 3,
+    "unit_price": 18130
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 2,
+    "unit_price": 2520
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 7,
+    "unit_price": 20950
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 2,
+    "unit_price": 6510
+   }
+  ],
+  "discount_pct": 0,
+  "total": 554400,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00015",
+  "request_id": "RQ-H00015",
+  "customer": "C-0037",
+  "created_by": "SL-02-01",
+  "created_at": 1788399900,
+  "lines": [
+   {
+    "sku": "DF-BP-007",
+    "qty": 10,
+    "unit_price": 17930
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 2,
+    "unit_price": 57110
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 3,
+    "unit_price": 43480
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 10,
+    "unit_price": 15110
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 8,
+    "unit_price": 46560
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 9,
+    "unit_price": 2820
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 9,
+    "unit_price": 8020
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 6,
+    "unit_price": 3330
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1065080,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00016",
+  "request_id": "RQ-H00016",
+  "customer": "C-0074",
+  "created_by": "SL-02-01",
+  "created_at": 1788406200,
+  "lines": [
+   {
+    "sku": "DF-EO-015",
+    "qty": 2,
+    "unit_price": 27420
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 2,
+    "unit_price": 38040
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 6,
+    "unit_price": 25380
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 5,
+    "unit_price": 57500
+   }
+  ],
+  "discount_pct": 0,
+  "total": 570700,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00017",
+  "request_id": "RQ-H00017",
+  "customer": "C-0071",
+  "created_by": "SL-02-02",
+  "created_at": 1788408900,
+  "lines": [
+   {
+    "sku": "DF-BP-001",
+    "qty": 3,
+    "unit_price": 8560
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 2,
+    "unit_price": 1960
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 6,
+    "unit_price": 25920
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 5,
+    "unit_price": 1770
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 9,
+    "unit_price": 3300
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 8,
+    "unit_price": 21180
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 10,
+    "unit_price": 16410
+   }
+  ],
+  "discount_pct": 0,
+  "total": 557210,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00018",
+  "request_id": "RQ-H00018",
+  "customer": "C-0041",
+  "created_by": "SL-02-01",
+  "created_at": 1788408900,
+  "lines": [
+   {
+    "sku": "DF-BP-014",
+    "qty": 6,
+    "unit_price": 16310
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 2,
+    "unit_price": 52660
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 4,
+    "unit_price": 6910
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 3,
+    "unit_price": 17440
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 3,
+    "unit_price": 46920
+   }
+  ],
+  "discount_pct": 0,
+  "total": 423900,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00019",
+  "request_id": "RQ-H00019",
+  "customer": "C-0084",
+  "created_by": "SL-02-01",
+  "created_at": 1788412500,
+  "lines": [
+   {
+    "sku": "DF-OF-012",
+    "qty": 3,
+    "unit_price": 1720
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 3,
+    "unit_price": 7450
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 9,
+    "unit_price": 20810
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 9,
+    "unit_price": 41750
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 4,
+    "unit_price": 49040
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 8,
+    "unit_price": 1950
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 6,
+    "unit_price": 21030
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 10,
+    "unit_price": 7640
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 3,
+    "unit_price": 13100
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1044190,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00020",
+  "request_id": "RQ-H00020",
+  "customer": "C-0019",
+  "created_by": "SL-02-02",
+  "created_at": 1788413400,
+  "lines": [
+   {
+    "sku": "DF-EO-003",
+    "qty": 2,
+    "unit_price": 30680
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 3,
+    "unit_price": 3150
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 6,
+    "unit_price": 12250
+   }
+  ],
+  "discount_pct": 0,
+  "total": 144310,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00021",
+  "request_id": "RQ-H00021",
+  "customer": "C-0030",
+  "created_by": "SL-02-01",
+  "created_at": 1788416100,
+  "lines": [
+   {
+    "sku": "DF-EO-004",
+    "qty": 1,
+    "unit_price": 37870
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 1,
+    "unit_price": 39020
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 4,
+    "unit_price": 18200
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 1,
+    "unit_price": 33410
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 4,
+    "unit_price": 17700
+   }
+  ],
+  "discount_pct": 0,
+  "total": 253900,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00022",
+  "request_id": "RQ-H00022",
+  "customer": "C-0028",
+  "created_by": "SL-02-02",
+  "created_at": 1788417900,
+  "lines": [
+   {
+    "sku": "DF-EO-009",
+    "qty": 2,
+    "unit_price": 32990
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 2,
+    "unit_price": 43380
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 3,
+    "unit_price": 20230
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 8,
+    "unit_price": 17990
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 5,
+    "unit_price": 40520
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 7,
+    "unit_price": 55300
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 8,
+    "unit_price": 2560
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 6,
+    "unit_price": 7520
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 2,
+    "unit_price": 8240
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1029130,
+  "route": "credit",
+  "delivery_date": "2026-09-04",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00023",
+  "request_id": "RQ-H00023",
+  "customer": "C-0118",
+  "created_by": "SL-02-01",
+  "created_at": 1788419700,
+  "lines": [
+   {
+    "sku": "DF-BP-009",
+    "qty": 2,
+    "unit_price": 12410
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 3,
+    "unit_price": 21600
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 2,
+    "unit_price": 6680
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 3,
+    "unit_price": 34180
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 5,
+    "unit_price": 38760
+   }
+  ],
+  "discount_pct": 0,
+  "total": 399320,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00024",
+  "request_id": "RQ-H00024",
+  "customer": "C-0069",
+  "created_by": "SL-02-02",
+  "created_at": 1788424200,
+  "lines": [
+   {
+    "sku": "DF-BT-034",
+    "qty": 2,
+    "unit_price": 8450
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 3,
+    "unit_price": 31100
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 6,
+    "unit_price": 7720
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 6,
+    "unit_price": 2850
+   }
+  ],
+  "discount_pct": 0,
+  "total": 173620,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00025",
+  "request_id": "RQ-H00025",
+  "customer": "C-0023",
+  "created_by": "SL-02-01",
+  "created_at": 1788426900,
+  "lines": [
+   {
+    "sku": "DF-EO-010",
+    "qty": 4,
+    "unit_price": 39660
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 5,
+    "unit_price": 48950
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 4,
+    "unit_price": 30060
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 2,
+    "unit_price": 19810
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 2,
+    "unit_price": 8160
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 3,
+    "unit_price": 41920
+   }
+  ],
+  "discount_pct": 0,
+  "total": 705330,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00026",
+  "request_id": "RQ-H00026",
+  "customer": "C-0046",
+  "created_by": "SL-02-02",
+  "created_at": 1788484500,
+  "lines": [
+   {
+    "sku": "DF-OF-024",
+    "qty": 6,
+    "unit_price": 2500
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 6,
+    "unit_price": 16730
+   }
+  ],
+  "discount_pct": 0,
+  "total": 115380,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00027",
+  "request_id": "RQ-H00027",
+  "customer": "C-0060",
+  "created_by": "SL-02-01",
+  "created_at": 1788487200,
+  "lines": [
+   {
+    "sku": "DF-OF-021",
+    "qty": 5,
+    "unit_price": 2820
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 2,
+    "unit_price": 16170
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 9,
+    "unit_price": 44570
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 7,
+    "unit_price": 7600
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 5,
+    "unit_price": 2110
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 10,
+    "unit_price": 29220
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 6,
+    "unit_price": 38480
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1034400,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00028",
+  "request_id": "RQ-H00028",
+  "customer": "C-0064",
+  "created_by": "SL-02-01",
+  "created_at": 1788493500,
+  "lines": [
+   {
+    "sku": "DF-BT-034",
+    "qty": 5,
+    "unit_price": 8250
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 2,
+    "unit_price": 7850
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 2,
+    "unit_price": 1630
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 4,
+    "unit_price": 25660
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 6,
+    "unit_price": 53480
+   }
+  ],
+  "discount_pct": 0,
+  "total": 483730,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00029",
+  "request_id": "RQ-H00029",
+  "customer": "C-0088",
+  "created_by": "SL-02-01",
+  "created_at": 1788493500,
+  "lines": [
+   {
+    "sku": "DF-OF-025",
+    "qty": 8,
+    "unit_price": 6250
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 10,
+    "unit_price": 3320
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 5,
+    "unit_price": 49550
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 10,
+    "unit_price": 8430
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 6,
+    "unit_price": 12400
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 7,
+    "unit_price": 16220
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 9,
+    "unit_price": 6670
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 4,
+    "unit_price": 2670
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 2,
+    "unit_price": 12110
+   }
+  ],
+  "discount_pct": 0,
+  "total": 698120,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00030",
+  "request_id": "RQ-H00030",
+  "customer": "C-0055",
+  "created_by": "SL-02-02",
+  "created_at": 1788504300,
+  "lines": [
+   {
+    "sku": "DF-BP-008",
+    "qty": 7,
+    "unit_price": 19270
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 6,
+    "unit_price": 2160
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 4,
+    "unit_price": 5430
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 8,
+    "unit_price": 28900
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 10,
+    "unit_price": 20800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 608770,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00031",
+  "request_id": "RQ-H00031",
+  "customer": "C-0106",
+  "created_by": "SL-02-01",
+  "created_at": 1788504300,
+  "lines": [
+   {
+    "sku": "DF-OF-012",
+    "qty": 3,
+    "unit_price": 1740
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 3,
+    "unit_price": 12050
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 8,
+    "unit_price": 12960
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 6,
+    "unit_price": 18750
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 5,
+    "unit_price": 25660
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 8,
+    "unit_price": 2550
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 2,
+    "unit_price": 37570
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 4,
+    "unit_price": 44720
+   }
+  ],
+  "discount_pct": 0,
+  "total": 660270,
+  "route": "credit",
+  "delivery_date": "2026-09-05",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00032",
+  "request_id": "RQ-H00032",
+  "customer": "C-0062",
+  "created_by": "SL-02-01",
+  "created_at": 1788507000,
+  "lines": [
+   {
+    "sku": "DF-EO-005",
+    "qty": 6,
+    "unit_price": 45360
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 3,
+    "unit_price": 18210
+   }
+  ],
+  "discount_pct": 0,
+  "total": 326790,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00033",
+  "request_id": "RQ-H00033",
+  "customer": "C-0080",
+  "created_by": "SL-02-02",
+  "created_at": 1788507000,
+  "lines": [
+   {
+    "sku": "DF-EO-006",
+    "qty": 4,
+    "unit_price": 24540
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 4,
+    "unit_price": 39560
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 6,
+    "unit_price": 51260
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 3,
+    "unit_price": 7000
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 3,
+    "unit_price": 32640
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 7,
+    "unit_price": 46880
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 8,
+    "unit_price": 16740
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 5,
+    "unit_price": 2520
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 2,
+    "unit_price": 18170
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1193900,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00034",
+  "request_id": "RQ-H00034",
+  "customer": "C-0048",
+  "created_by": "SL-02-02",
+  "created_at": 1788507900,
+  "lines": [
+   {
+    "sku": "DF-EO-010",
+    "qty": 2,
+    "unit_price": 41410
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 1,
+    "unit_price": 18230
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 4,
+    "unit_price": 25360
+   }
+  ],
+  "discount_pct": 0,
+  "total": 202490,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00035",
+  "request_id": "RQ-H00035",
+  "customer": "C-0020",
+  "created_by": "SL-02-02",
+  "created_at": 1788509700,
+  "lines": [
+   {
+    "sku": "DF-BT-024",
+    "qty": 6,
+    "unit_price": 28530
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 6,
+    "unit_price": 39710
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 6,
+    "unit_price": 12190
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 6,
+    "unit_price": 50590
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 6,
+    "unit_price": 44120
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1050840,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00036",
+  "request_id": "RQ-H00036",
+  "customer": "C-0030",
+  "created_by": "SL-02-01",
+  "created_at": 1788514200,
+  "lines": [
+   {
+    "sku": "DF-BP-015",
+    "qty": 6,
+    "unit_price": 14730
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 2,
+    "unit_price": 2030
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 5,
+    "unit_price": 28030
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 5,
+    "unit_price": 52370
+   }
+  ],
+  "discount_pct": 0,
+  "total": 494440,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00037",
+  "request_id": "RQ-H00037",
+  "customer": "C-0115",
+  "created_by": "SL-02-02",
+  "created_at": 1788571800,
+  "lines": [
+   {
+    "sku": "DF-BT-034",
+    "qty": 3,
+    "unit_price": 8230
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 9,
+    "unit_price": 28100
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 3,
+    "unit_price": 50300
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 4,
+    "unit_price": 2150
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 10,
+    "unit_price": 42020
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 3,
+    "unit_price": 2450
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 9,
+    "unit_price": 38320
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1209520,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00038",
+  "request_id": "RQ-H00038",
+  "customer": "C-0118",
+  "created_by": "SL-02-01",
+  "created_at": 1788572700,
+  "lines": [
+   {
+    "sku": "DF-BP-010",
+    "qty": 1,
+    "unit_price": 7180
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 4,
+    "unit_price": 20200
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 3,
+    "unit_price": 18680
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 1,
+    "unit_price": 34180
+   }
+  ],
+  "discount_pct": 0,
+  "total": 178200,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00039",
+  "request_id": "RQ-H00039",
+  "customer": "C-0041",
+  "created_by": "SL-02-01",
+  "created_at": 1788575400,
+  "lines": [
+   {
+    "sku": "DF-OF-011",
+    "qty": 5,
+    "unit_price": 1590
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 1,
+    "unit_price": 21100
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 2,
+    "unit_price": 27270
+   }
+  ],
+  "discount_pct": 0,
+  "total": 83590,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00040",
+  "request_id": "RQ-H00040",
+  "customer": "C-0004",
+  "created_by": "SL-02-02",
+  "created_at": 1788576300,
+  "lines": [
+   {
+    "sku": "DF-BT-029",
+    "qty": 6,
+    "unit_price": 39300
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 6,
+    "unit_price": 29760
+   }
+  ],
+  "discount_pct": 0,
+  "total": 414360,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00041",
+  "request_id": "RQ-H00041",
+  "customer": "C-0018",
+  "created_by": "SL-02-02",
+  "created_at": 1788578100,
+  "lines": [
+   {
+    "sku": "DF-BT-035",
+    "qty": 3,
+    "unit_price": 57600
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 5,
+    "unit_price": 16730
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 5,
+    "unit_price": 2490
+   }
+  ],
+  "discount_pct": 0,
+  "total": 268900,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00042",
+  "request_id": "RQ-H00042",
+  "customer": "C-0011",
+  "created_by": "SL-02-02",
+  "created_at": 1788582600,
+  "lines": [
+   {
+    "sku": "DF-OF-023",
+    "qty": 3,
+    "unit_price": 3390
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 5,
+    "unit_price": 16530
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 4,
+    "unit_price": 3560
+   }
+  ],
+  "discount_pct": 0,
+  "total": 107060,
+  "route": "credit",
+  "delivery_date": "2026-09-07",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00043",
+  "request_id": "RQ-H00043",
+  "customer": "C-0043",
+  "created_by": "SL-02-02",
+  "created_at": 1788591600,
+  "lines": [
+   {
+    "sku": "DF-BT-027",
+    "qty": 3,
+    "unit_price": 45960
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 2,
+    "unit_price": 51690
+   }
+  ],
+  "discount_pct": 0,
+  "total": 241260,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00044",
+  "request_id": "RQ-H00044",
+  "customer": "C-0033",
+  "created_by": "SL-02-02",
+  "created_at": 1788597900,
+  "lines": [
+   {
+    "sku": "DF-BP-009",
+    "qty": 1,
+    "unit_price": 12510
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 2,
+    "unit_price": 16090
+   }
+  ],
+  "discount_pct": 0,
+  "total": 44690,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00045",
+  "request_id": "RQ-H00045",
+  "customer": "C-0059",
+  "created_by": "SL-02-01",
+  "created_at": 1788599700,
+  "lines": [
+   {
+    "sku": "DF-OF-020",
+    "qty": 1,
+    "unit_price": 3250
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 4,
+    "unit_price": 31650
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 1,
+    "unit_price": 30030
+   }
+  ],
+  "discount_pct": 0,
+  "total": 159880,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00046",
+  "request_id": "RQ-H00046",
+  "customer": "C-0087",
+  "created_by": "SL-02-02",
+  "created_at": 1788599700,
+  "lines": [
+   {
+    "sku": "DF-BT-034",
+    "qty": 5,
+    "unit_price": 8420
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 6,
+    "unit_price": 26740
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 1,
+    "unit_price": 6450
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 5,
+    "unit_price": 28450
+   }
+  ],
+  "discount_pct": 0,
+  "total": 351240,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00047",
+  "request_id": "RQ-H00047",
+  "customer": "C-0094",
+  "created_by": "SL-02-02",
+  "created_at": 1788745500,
+  "lines": [
+   {
+    "sku": "DF-OF-014",
+    "qty": 4,
+    "unit_price": 2030
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 3,
+    "unit_price": 16420
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 2,
+    "unit_price": 2760
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 3,
+    "unit_price": 2500
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 1,
+    "unit_price": 18630
+   }
+  ],
+  "discount_pct": 0,
+  "total": 89030,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00048",
+  "request_id": "RQ-H00048",
+  "customer": "C-0018",
+  "created_by": "SL-02-02",
+  "created_at": 1788747300,
+  "lines": [
+   {
+    "sku": "DF-BT-032",
+    "qty": 3,
+    "unit_price": 45450
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 1,
+    "unit_price": 1810
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 1,
+    "unit_price": 2600
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 6,
+    "unit_price": 45910
+   }
+  ],
+  "discount_pct": 0,
+  "total": 416220,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00049",
+  "request_id": "RQ-H00049",
+  "customer": "C-0017",
+  "created_by": "SL-02-02",
+  "created_at": 1788747300,
+  "lines": [
+   {
+    "sku": "DF-EO-015",
+    "qty": 9,
+    "unit_price": 27190
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 7,
+    "unit_price": 7330
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 5,
+    "unit_price": 2140
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 8,
+    "unit_price": 1520
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 7,
+    "unit_price": 27750
+   }
+  ],
+  "discount_pct": 0,
+  "total": 513130,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00050",
+  "request_id": "RQ-H00050",
+  "customer": "C-0078",
+  "created_by": "SL-02-02",
+  "created_at": 1788750000,
+  "lines": [
+   {
+    "sku": "DF-EO-013",
+    "qty": 3,
+    "unit_price": 17780
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 5,
+    "unit_price": 2870
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 6,
+    "unit_price": 16800
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 4,
+    "unit_price": 2420
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 2,
+    "unit_price": 20150
+   }
+  ],
+  "discount_pct": 0,
+  "total": 218470,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00051",
+  "request_id": "RQ-H00051",
+  "customer": "C-0054",
+  "created_by": "SL-02-01",
+  "created_at": 1788755400,
+  "lines": [
+   {
+    "sku": "DF-OF-014",
+    "qty": 4,
+    "unit_price": 2000
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 1,
+    "unit_price": 17800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 25800,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00052",
+  "request_id": "RQ-H00052",
+  "customer": "C-0070",
+  "created_by": "SL-02-02",
+  "created_at": 1788760800,
+  "lines": [
+   {
+    "sku": "DF-BT-026",
+    "qty": 8,
+    "unit_price": 41450
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 7,
+    "unit_price": 50410
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 10,
+    "unit_price": 20870
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 8,
+    "unit_price": 17090
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 5,
+    "unit_price": 6140
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 7,
+    "unit_price": 2360
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1077110,
+  "route": "credit",
+  "delivery_date": "2026-09-08",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00053",
+  "request_id": "RQ-H00053",
+  "customer": "C-0103",
+  "created_by": "SL-02-02",
+  "created_at": 1788764400,
+  "lines": [
+   {
+    "sku": "DF-BT-023",
+    "qty": 10,
+    "unit_price": 17070
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 4,
+    "unit_price": 49410
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 9,
+    "unit_price": 8250
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 6,
+    "unit_price": 17730
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 4,
+    "unit_price": 1550
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 7,
+    "unit_price": 41580
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 7,
+    "unit_price": 18840
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 3,
+    "unit_price": 24650
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 5,
+    "unit_price": 41950
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 8,
+    "unit_price": 30030
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1502050,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00054",
+  "request_id": "RQ-H00054",
+  "customer": "C-0027",
+  "created_by": "SL-02-02",
+  "created_at": 1788769800,
+  "lines": [
+   {
+    "sku": "DF-BP-009",
+    "qty": 5,
+    "unit_price": 12150
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 6,
+    "unit_price": 26760
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 6,
+    "unit_price": 42150
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 5,
+    "unit_price": 44890
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 2,
+    "unit_price": 29200
+   }
+  ],
+  "discount_pct": 0,
+  "total": 757060,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00055",
+  "request_id": "RQ-H00055",
+  "customer": "C-0075",
+  "created_by": "SL-02-01",
+  "created_at": 1788773400,
+  "lines": [
+   {
+    "sku": "DF-EO-005",
+    "qty": 1,
+    "unit_price": 45930
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 1,
+    "unit_price": 47150
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 4,
+    "unit_price": 19760
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 6,
+    "unit_price": 17170
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 2,
+    "unit_price": 8390
+   }
+  ],
+  "discount_pct": 0,
+  "total": 291920,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00056",
+  "request_id": "RQ-H00056",
+  "customer": "C-0103",
+  "created_by": "SL-02-02",
+  "created_at": 1788774300,
+  "lines": [
+   {
+    "sku": "DF-BP-008",
+    "qty": 7,
+    "unit_price": 18840
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 10,
+    "unit_price": 20970
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 10,
+    "unit_price": 26320
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 2,
+    "unit_price": 50430
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 9,
+    "unit_price": 41580
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 2,
+    "unit_price": 2520
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 7,
+    "unit_price": 24650
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 5,
+    "unit_price": 6680
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1290850,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00057",
+  "request_id": "RQ-H00057",
+  "customer": "C-0034",
+  "created_by": "SL-02-01",
+  "created_at": 1788829200,
+  "lines": [
+   {
+    "sku": "DF-EO-013",
+    "qty": 3,
+    "unit_price": 17790
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 5,
+    "unit_price": 6490
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 3,
+    "unit_price": 8500
+   }
+  ],
+  "discount_pct": 0,
+  "total": 111320,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00058",
+  "request_id": "RQ-H00058",
+  "customer": "C-0082",
+  "created_by": "SL-02-01",
+  "created_at": 1788836400,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 6,
+    "unit_price": 20670
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 3,
+    "unit_price": 46300
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 5,
+    "unit_price": 2900
+   }
+  ],
+  "discount_pct": 0,
+  "total": 277420,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00059",
+  "request_id": "RQ-H00059",
+  "customer": "C-0072",
+  "created_by": "SL-02-01",
+  "created_at": 1788838200,
+  "lines": [
+   {
+    "sku": "DF-OF-022",
+    "qty": 4,
+    "unit_price": 3490
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 5,
+    "unit_price": 2760
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 5,
+    "unit_price": 17320
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 4,
+    "unit_price": 6230
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 10,
+    "unit_price": 25740
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 4,
+    "unit_price": 8260
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 5,
+    "unit_price": 16820
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 2,
+    "unit_price": 30150
+   }
+  ],
+  "discount_pct": 0,
+  "total": 574120,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00060",
+  "request_id": "RQ-H00060",
+  "customer": "C-0075",
+  "created_by": "SL-02-01",
+  "created_at": 1788838200,
+  "lines": [
+   {
+    "sku": "DF-BT-032",
+    "qty": 1,
+    "unit_price": 44530
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 4,
+    "unit_price": 2640
+   }
+  ],
+  "discount_pct": 0,
+  "total": 55090,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00061",
+  "request_id": "RQ-H00061",
+  "customer": "C-0077",
+  "created_by": "SL-02-02",
+  "created_at": 1788839100,
+  "lines": [
+   {
+    "sku": "DF-BT-024",
+    "qty": 4,
+    "unit_price": 28920
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1770
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 2,
+    "unit_price": 1580
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 1,
+    "unit_price": 28030
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 3,
+    "unit_price": 18220
+   }
+  ],
+  "discount_pct": 0,
+  "total": 205070,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00062",
+  "request_id": "RQ-H00062",
+  "customer": "C-0006",
+  "created_by": "SL-02-01",
+  "created_at": 1788842700,
+  "lines": [
+   {
+    "sku": "DF-EO-006",
+    "qty": 4,
+    "unit_price": 24420
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 10,
+    "unit_price": 3710
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 9,
+    "unit_price": 12030
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 6,
+    "unit_price": 2830
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 4,
+    "unit_price": 56980
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 8,
+    "unit_price": 27420
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 10,
+    "unit_price": 14980
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 10,
+    "unit_price": 16610
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 4,
+    "unit_price": 30230
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1144130,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00063",
+  "request_id": "RQ-H00063",
+  "customer": "C-0017",
+  "created_by": "SL-02-02",
+  "created_at": 1788849900,
+  "lines": [
+   {
+    "sku": "DF-BT-028",
+    "qty": 8,
+    "unit_price": 51900
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 6,
+    "unit_price": 1970
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 4,
+    "unit_price": 6290
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 8,
+    "unit_price": 40350
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 3,
+    "unit_price": 20780
+   }
+  ],
+  "discount_pct": 0,
+  "total": 837320,
+  "route": "credit",
+  "delivery_date": "2026-09-09",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00064",
+  "request_id": "RQ-H00064",
+  "customer": "C-0090",
+  "created_by": "SL-02-02",
+  "created_at": 1788851700,
+  "lines": [
+   {
+    "sku": "DF-EO-003",
+    "qty": 10,
+    "unit_price": 29870
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 4,
+    "unit_price": 3470
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 6,
+    "unit_price": 8050
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 10,
+    "unit_price": 3650
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 6,
+    "unit_price": 18130
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 7,
+    "unit_price": 7010
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 10,
+    "unit_price": 37580
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 3,
+    "unit_price": 46750
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1071280,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00065",
+  "request_id": "RQ-H00065",
+  "customer": "C-0030",
+  "created_by": "SL-02-01",
+  "created_at": 1788854400,
+  "lines": [
+   {
+    "sku": "DF-OF-016",
+    "qty": 4,
+    "unit_price": 5500
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 1,
+    "unit_price": 26390
+   }
+  ],
+  "discount_pct": 0,
+  "total": 48390,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00066",
+  "request_id": "RQ-H00066",
+  "customer": "C-0044",
+  "created_by": "SL-02-02",
+  "created_at": 1788855300,
+  "lines": [
+   {
+    "sku": "DF-EO-004",
+    "qty": 6,
+    "unit_price": 37200
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 10,
+    "unit_price": 25970
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 4,
+    "unit_price": 17710
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 5,
+    "unit_price": 21280
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 4,
+    "unit_price": 6570
+   }
+  ],
+  "discount_pct": 0,
+  "total": 686420,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00067",
+  "request_id": "RQ-H00067",
+  "customer": "C-0083",
+  "created_by": "SL-02-02",
+  "created_at": 1788860700,
+  "lines": [
+   {
+    "sku": "DF-BP-013",
+    "qty": 3,
+    "unit_price": 17180
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 5,
+    "unit_price": 16980
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 3,
+    "unit_price": 7760
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 6,
+    "unit_price": 1800
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 4,
+    "unit_price": 31220
+   }
+  ],
+  "discount_pct": 0,
+  "total": 295400,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00068",
+  "request_id": "RQ-H00068",
+  "customer": "C-0078",
+  "created_by": "SL-02-02",
+  "created_at": 1788916500,
+  "lines": [
+   {
+    "sku": "DF-OF-015",
+    "qty": 1,
+    "unit_price": 3870
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 3,
+    "unit_price": 5690
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 5,
+    "unit_price": 6490
+   }
+  ],
+  "discount_pct": 0,
+  "total": 53390,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00069",
+  "request_id": "RQ-H00069",
+  "customer": "C-0093",
+  "created_by": "SL-02-01",
+  "created_at": 1788917400,
+  "lines": [
+   {
+    "sku": "DF-OF-014",
+    "qty": 5,
+    "unit_price": 2000
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 2,
+    "unit_price": 30160
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 4,
+    "unit_price": 16640
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 5,
+    "unit_price": 1800
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 6,
+    "unit_price": 26790
+   }
+  ],
+  "discount_pct": 0,
+  "total": 306620,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00070",
+  "request_id": "RQ-H00070",
+  "customer": "C-0096",
+  "created_by": "SL-02-01",
+  "created_at": 1788920100,
+  "lines": [
+   {
+    "sku": "DF-BT-029",
+    "qty": 4,
+    "unit_price": 37540
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 3,
+    "unit_price": 31050
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 3,
+    "unit_price": 6540
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 9,
+    "unit_price": 12060
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 5,
+    "unit_price": 37080
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 4,
+    "unit_price": 41890
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 9,
+    "unit_price": 16660
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 9,
+    "unit_price": 1550
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 4,
+    "unit_price": 2860
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 8,
+    "unit_price": 33110
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1164640,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00071",
+  "request_id": "RQ-H00071",
+  "customer": "C-0071",
+  "created_by": "SL-02-02",
+  "created_at": 1788931800,
+  "lines": [
+   {
+    "sku": "DF-OF-021",
+    "qty": 2,
+    "unit_price": 2760
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 5,
+    "unit_price": 26360
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 6,
+    "unit_price": 24430
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 4,
+    "unit_price": 45010
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 5,
+    "unit_price": 8030
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 8,
+    "unit_price": 16230
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 4,
+    "unit_price": 17600
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 4,
+    "unit_price": 2540
+   }
+  ],
+  "discount_pct": 0,
+  "total": 714490,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00072",
+  "request_id": "RQ-H00072",
+  "customer": "C-0052",
+  "created_by": "SL-02-02",
+  "created_at": 1788934500,
+  "lines": [
+   {
+    "sku": "DF-OF-019",
+    "qty": 10,
+    "unit_price": 2530
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 8,
+    "unit_price": 17780
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 3,
+    "unit_price": 8650
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 8,
+    "unit_price": 19770
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 5,
+    "unit_price": 2100
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 6,
+    "unit_price": 2800
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 4,
+    "unit_price": 3140
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 3,
+    "unit_price": 21040
+   }
+  ],
+  "discount_pct": 0,
+  "total": 454630,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00073",
+  "request_id": "RQ-H00073",
+  "customer": "C-0060",
+  "created_by": "SL-02-01",
+  "created_at": 1788936300,
+  "lines": [
+   {
+    "sku": "DF-EO-009",
+    "qty": 4,
+    "unit_price": 32170
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 10,
+    "unit_price": 40060
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 2,
+    "unit_price": 20720
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 3,
+    "unit_price": 6530
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 6,
+    "unit_price": 14210
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 6,
+    "unit_price": 8130
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 4,
+    "unit_price": 19550
+   }
+  ],
+  "discount_pct": 0,
+  "total": 802550,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00074",
+  "request_id": "RQ-H00074",
+  "customer": "C-0024",
+  "created_by": "SL-02-01",
+  "created_at": 1788936300,
+  "lines": [
+   {
+    "sku": "DF-OF-014",
+    "qty": 6,
+    "unit_price": 2040
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 2,
+    "unit_price": 38220
+   }
+  ],
+  "discount_pct": 0,
+  "total": 88680,
+  "route": "credit",
+  "delivery_date": "2026-09-10",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00075",
+  "request_id": "RQ-H00075",
+  "customer": "C-0050",
+  "created_by": "SL-02-02",
+  "created_at": 1788938100,
+  "lines": [
+   {
+    "sku": "DF-BP-013",
+    "qty": 3,
+    "unit_price": 17270
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 6,
+    "unit_price": 18360
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 2,
+    "unit_price": 16400
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 1,
+    "unit_price": 2410
+   }
+  ],
+  "discount_pct": 0,
+  "total": 197180,
+  "route": "credit",
+  "delivery_date": "2026-09-11",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00076",
+  "request_id": "RQ-H00076",
+  "customer": "C-0086",
+  "created_by": "SL-02-02",
+  "created_at": 1788943500,
+  "lines": [
+   {
+    "sku": "DF-EO-007",
+    "qty": 8,
+    "unit_price": 28380
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 4,
+    "unit_price": 12410
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 8,
+    "unit_price": 2690
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 9,
+    "unit_price": 15210
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 3,
+    "unit_price": 31980
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 5,
+    "unit_price": 43580
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 8,
+    "unit_price": 16570
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 10,
+    "unit_price": 51690
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 6,
+    "unit_price": 26350
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 3,
+    "unit_price": 41820
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1681950,
+  "route": "credit",
+  "delivery_date": "2026-09-11",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00077",
+  "request_id": "RQ-H00077",
+  "customer": "C-0117",
+  "created_by": "SL-02-01",
+  "created_at": 1788943500,
+  "lines": [
+   {
+    "sku": "DF-EO-001",
+    "qty": 5,
+    "unit_price": 43120
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 3,
+    "unit_price": 12730
+   }
+  ],
+  "discount_pct": 0,
+  "total": 253790,
+  "route": "credit",
+  "delivery_date": "2026-09-11",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00078",
+  "request_id": "RQ-H00078",
+  "customer": "C-0100",
+  "created_by": "SL-02-01",
+  "created_at": 1789002900,
+  "lines": [
+   {
+    "sku": "DF-BT-021",
+    "qty": 10,
+    "unit_price": 15730
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 6,
+    "unit_price": 2370
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 6,
+    "unit_price": 28530
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 4,
+    "unit_price": 28700
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 6,
+    "unit_price": 55480
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 8,
+    "unit_price": 24370
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 6,
+    "unit_price": 7370
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 10,
+    "unit_price": 12200
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 10,
+    "unit_price": 3510
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 6,
+    "unit_price": 16460
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1285420,
+  "route": "credit",
+  "delivery_date": "2026-09-11",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00079",
+  "request_id": "RQ-H00079",
+  "customer": "C-0120",
+  "created_by": "SL-02-01",
+  "created_at": 1789005600,
+  "lines": [
+   {
+    "sku": "DF-BP-004",
+    "qty": 5,
+    "unit_price": 12830
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 1,
+    "unit_price": 18450
+   }
+  ],
+  "discount_pct": 0,
+  "total": 82600,
+  "route": "credit",
+  "delivery_date": "2026-09-11",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00080",
+  "request_id": "RQ-H00080",
+  "customer": "C-0001",
+  "created_by": "SL-02-01",
+  "created_at": 1789011900,
+  "lines": [
+   {
+    "sku": "DF-EO-003",
+    "qty": 3,
+    "unit_price": 31420
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 4,
+    "unit_price": 37770
+   }
+  ],
+  "discount_pct": 0,
+  "total": 245340,
+  "route": "credit",
+  "delivery_date": "2026-09-11",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00081",
+  "request_id": "RQ-H00081",
+  "customer": "C-0051",
+  "created_by": "SL-02-02",
+  "created_at": 1789017300,
+  "lines": [
+   {
+    "sku": "DF-BT-028",
+    "qty": 2,
+    "unit_price": 51630
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 1,
+    "unit_price": 16230
+   }
+  ],
+  "discount_pct": 0,
+  "total": 119490,
+  "route": "credit",
+  "delivery_date": "2026-09-11",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00082",
+  "request_id": "RQ-H00082",
+  "customer": "C-0111",
+  "created_by": "SL-02-01",
+  "created_at": 1789030800,
+  "lines": [
+   {
+    "sku": "DF-BP-011",
+    "qty": 4,
+    "unit_price": 6620
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 4,
+    "unit_price": 7530
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 6,
+    "unit_price": 20810
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 10,
+    "unit_price": 5370
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 9,
+    "unit_price": 29000
+   }
+  ],
+  "discount_pct": 0,
+  "total": 496160,
+  "route": "credit",
+  "delivery_date": "2026-09-12",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00083",
+  "request_id": "RQ-H00083",
+  "customer": "C-0027",
+  "created_by": "SL-02-02",
+  "created_at": 1789094700,
+  "lines": [
+   {
+    "sku": "DF-OF-023",
+    "qty": 2,
+    "unit_price": 3450
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 2,
+    "unit_price": 2210
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 5,
+    "unit_price": 26760
+   }
+  ],
+  "discount_pct": 0,
+  "total": 145120,
+  "route": "credit",
+  "delivery_date": "2026-09-12",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00084",
+  "request_id": "RQ-H00084",
+  "customer": "C-0006",
+  "created_by": "SL-02-01",
+  "created_at": 1789103700,
+  "lines": [
+   {
+    "sku": "DF-BT-024",
+    "qty": 10,
+    "unit_price": 27420
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 5,
+    "unit_price": 49170
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 9,
+    "unit_price": 2440
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 10,
+    "unit_price": 42850
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 7,
+    "unit_price": 2700
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 9,
+    "unit_price": 12290
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1100020,
+  "route": "credit",
+  "delivery_date": "2026-09-12",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00085",
+  "request_id": "RQ-H00085",
+  "customer": "C-0102",
+  "created_by": "SL-02-01",
+  "created_at": 1789106400,
+  "lines": [
+   {
+    "sku": "DF-BT-026",
+    "qty": 4,
+    "unit_price": 42350
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 2,
+    "unit_price": 57280
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 5,
+    "unit_price": 21910
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 4,
+    "unit_price": 3440
+   }
+  ],
+  "discount_pct": 0,
+  "total": 407270,
+  "route": "credit",
+  "delivery_date": "2026-09-12",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00086",
+  "request_id": "RQ-H00086",
+  "customer": "C-0020",
+  "created_by": "SL-02-02",
+  "created_at": 1789108200,
+  "lines": [
+   {
+    "sku": "DF-BP-001",
+    "qty": 2,
+    "unit_price": 8780
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 5,
+    "unit_price": 38840
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 3,
+    "unit_price": 31200
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 6,
+    "unit_price": 19320
+   }
+  ],
+  "discount_pct": 0,
+  "total": 421280,
+  "route": "credit",
+  "delivery_date": "2026-09-12",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00087",
+  "request_id": "RQ-H00087",
+  "customer": "C-0022",
+  "created_by": "SL-02-02",
+  "created_at": 1789110900,
+  "lines": [
+   {
+    "sku": "DF-BT-028",
+    "qty": 6,
+    "unit_price": 51970
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 5,
+    "unit_price": 25880
+   }
+  ],
+  "discount_pct": 0,
+  "total": 441220,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00088",
+  "request_id": "RQ-H00088",
+  "customer": "C-0082",
+  "created_by": "SL-02-01",
+  "created_at": 1789117200,
+  "lines": [
+   {
+    "sku": "DF-EO-007",
+    "qty": 1,
+    "unit_price": 29170
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 2,
+    "unit_price": 21420
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 6,
+    "unit_price": 27930
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 5,
+    "unit_price": 43020
+   }
+  ],
+  "discount_pct": 0,
+  "total": 454690,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00089",
+  "request_id": "RQ-H00089",
+  "customer": "C-0096",
+  "created_by": "SL-02-01",
+  "created_at": 1789118100,
+  "lines": [
+   {
+    "sku": "DF-OF-018",
+    "qty": 4,
+    "unit_price": 2730
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 6,
+    "unit_price": 16400
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 4,
+    "unit_price": 5420
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 7,
+    "unit_price": 16080
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 4,
+    "unit_price": 15750
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 7,
+    "unit_price": 6540
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 3,
+    "unit_price": 8040
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 8,
+    "unit_price": 19980
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 3,
+    "unit_price": 28850
+   }
+  ],
+  "discount_pct": 0,
+  "total": 622850,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00090",
+  "request_id": "RQ-H00090",
+  "customer": "C-0076",
+  "created_by": "SL-02-02",
+  "created_at": 1789119900,
+  "lines": [
+   {
+    "sku": "DF-BT-027",
+    "qty": 8,
+    "unit_price": 45110
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 3,
+    "unit_price": 49090
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 4,
+    "unit_price": 30640
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 6,
+    "unit_price": 7490
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 2,
+    "unit_price": 16370
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 8,
+    "unit_price": 15310
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 7,
+    "unit_price": 20910
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 10,
+    "unit_price": 13320
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 5,
+    "unit_price": 2360
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 10,
+    "unit_price": 2150
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1143740,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00091",
+  "request_id": "RQ-H00091",
+  "customer": "C-0014",
+  "created_by": "SL-02-01",
+  "created_at": 1789119900,
+  "lines": [
+   {
+    "sku": "DF-BP-003",
+    "qty": 4,
+    "unit_price": 13590
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 3,
+    "unit_price": 3540
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 2,
+    "unit_price": 38160
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 1,
+    "unit_price": 5600
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 3,
+    "unit_price": 51840
+   }
+  ],
+  "discount_pct": 0,
+  "total": 302420,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00092",
+  "request_id": "RQ-H00092",
+  "customer": "C-0003",
+  "created_by": "SL-02-02",
+  "created_at": 1789177500,
+  "lines": [
+   {
+    "sku": "DF-BP-007",
+    "qty": 2,
+    "unit_price": 18110
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 3,
+    "unit_price": 2170
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 4,
+    "unit_price": 1590
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 2,
+    "unit_price": 27060
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 2,
+    "unit_price": 38660
+   }
+  ],
+  "discount_pct": 0,
+  "total": 180530,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00093",
+  "request_id": "RQ-H00093",
+  "customer": "C-0009",
+  "created_by": "SL-02-02",
+  "created_at": 1789179300,
+  "lines": [
+   {
+    "sku": "DF-BP-010",
+    "qty": 4,
+    "unit_price": 6850
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 5,
+    "unit_price": 45700
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 8,
+    "unit_price": 25690
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 3,
+    "unit_price": 1540
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 5,
+    "unit_price": 2510
+   }
+  ],
+  "discount_pct": 0,
+  "total": 478590,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00094",
+  "request_id": "RQ-H00094",
+  "customer": "C-0039",
+  "created_by": "SL-02-01",
+  "created_at": 1789181100,
+  "lines": [
+   {
+    "sku": "DF-OF-012",
+    "qty": 4,
+    "unit_price": 1770
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 5,
+    "unit_price": 25950
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 5,
+    "unit_price": 19240
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 6,
+    "unit_price": 36570
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 7,
+    "unit_price": 6550
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 3,
+    "unit_price": 8160
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 3,
+    "unit_price": 17010
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 2,
+    "unit_price": 17560
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 2,
+    "unit_price": 14090
+   }
+  ],
+  "discount_pct": 0,
+  "total": 637110,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00095",
+  "request_id": "RQ-H00095",
+  "customer": "C-0051",
+  "created_by": "SL-02-02",
+  "created_at": 1789181100,
+  "lines": [
+   {
+    "sku": "DF-OF-011",
+    "qty": 2,
+    "unit_price": 1580
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 2,
+    "unit_price": 17950
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 6,
+    "unit_price": 18330
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 3,
+    "unit_price": 2800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 157440,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00096",
+  "request_id": "RQ-H00096",
+  "customer": "C-0049",
+  "created_by": "SL-02-01",
+  "created_at": 1789191000,
+  "lines": [
+   {
+    "sku": "DF-BP-012",
+    "qty": 4,
+    "unit_price": 15480
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 2,
+    "unit_price": 31630
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 6,
+    "unit_price": 2510
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 3,
+    "unit_price": 3400
+   }
+  ],
+  "discount_pct": 0,
+  "total": 150440,
+  "route": "credit",
+  "delivery_date": "2026-09-14",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00097",
+  "request_id": "RQ-H00097",
+  "customer": "C-0084",
+  "created_by": "SL-02-01",
+  "created_at": 1789198200,
+  "lines": [
+   {
+    "sku": "DF-EO-008",
+    "qty": 4,
+    "unit_price": 49040
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 8,
+    "unit_price": 11830
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 4,
+    "unit_price": 3240
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 4,
+    "unit_price": 21030
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 3,
+    "unit_price": 32710
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 5,
+    "unit_price": 20810
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 4,
+    "unit_price": 1950
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 2,
+    "unit_price": 16670
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 6,
+    "unit_price": 25740
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 3,
+    "unit_price": 55450
+   }
+  ],
+  "discount_pct": 0,
+  "total": 951990,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00098",
+  "request_id": "RQ-H00098",
+  "customer": "C-0112",
+  "created_by": "SL-02-01",
+  "created_at": 1789199100,
+  "lines": [
+   {
+    "sku": "DF-BP-015",
+    "qty": 2,
+    "unit_price": 14860
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 1,
+    "unit_price": 3210
+   }
+  ],
+  "discount_pct": 0,
+  "total": 32930,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00099",
+  "request_id": "RQ-H00099",
+  "customer": "C-0010",
+  "created_by": "SL-02-02",
+  "created_at": 1789200900,
+  "lines": [
+   {
+    "sku": "DF-EO-008",
+    "qty": 5,
+    "unit_price": 49680
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 6,
+    "unit_price": 6990
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 6,
+    "unit_price": 28450
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 2,
+    "unit_price": 3240
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 8,
+    "unit_price": 5360
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 8,
+    "unit_price": 15050
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 3,
+    "unit_price": 30430
+   }
+  ],
+  "discount_pct": 0,
+  "total": 722090,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00100",
+  "request_id": "RQ-H00100",
+  "customer": "C-0066",
+  "created_by": "SL-02-02",
+  "created_at": 1789201800,
+  "lines": [
+   {
+    "sku": "DF-EO-002",
+    "qty": 5,
+    "unit_price": 46750
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 4,
+    "unit_price": 17260
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 4,
+    "unit_price": 45200
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 3,
+    "unit_price": 41880
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 3,
+    "unit_price": 2480
+   }
+  ],
+  "discount_pct": 0,
+  "total": 616670,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00101",
+  "request_id": "RQ-H00101",
+  "customer": "C-0097",
+  "created_by": "SL-02-01",
+  "created_at": 1789201800,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 4,
+    "unit_price": 20840
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 1,
+    "unit_price": 46740
+   }
+  ],
+  "discount_pct": 0,
+  "total": 130100,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00102",
+  "request_id": "RQ-H00102",
+  "customer": "C-0034",
+  "created_by": "SL-02-01",
+  "created_at": 1789202700,
+  "lines": [
+   {
+    "sku": "DF-BP-015",
+    "qty": 2,
+    "unit_price": 14880
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 2,
+    "unit_price": 16760
+   }
+  ],
+  "discount_pct": 0,
+  "total": 63280,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00103",
+  "request_id": "RQ-H00103",
+  "customer": "C-0090",
+  "created_by": "SL-02-02",
+  "created_at": 1789203600,
+  "lines": [
+   {
+    "sku": "DF-OF-015",
+    "qty": 10,
+    "unit_price": 3650
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 8,
+    "unit_price": 2300
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 2,
+    "unit_price": 42180
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 7,
+    "unit_price": 51640
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 4,
+    "unit_price": 7010
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 3,
+    "unit_price": 29050
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 2,
+    "unit_price": 14630
+   }
+  ],
+  "discount_pct": 0,
+  "total": 645190,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00104",
+  "request_id": "RQ-H00104",
+  "customer": "C-0095",
+  "created_by": "SL-02-01",
+  "created_at": 1789205400,
+  "lines": [
+   {
+    "sku": "DF-BT-028",
+    "qty": 5,
+    "unit_price": 50300
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 10,
+    "unit_price": 2730
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 5,
+    "unit_price": 2830
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 7,
+    "unit_price": 6530
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1730
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 9,
+    "unit_price": 43030
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 3,
+    "unit_price": 6250
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 4,
+    "unit_price": 8120
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 6,
+    "unit_price": 16830
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 7,
+    "unit_price": 33000
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1112600,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00105",
+  "request_id": "RQ-H00105",
+  "customer": "C-0016",
+  "created_by": "SL-02-02",
+  "created_at": 1789353900,
+  "lines": [
+   {
+    "sku": "DF-EO-007",
+    "qty": 2,
+    "unit_price": 29180
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 3,
+    "unit_price": 25410
+   }
+  ],
+  "discount_pct": 0,
+  "total": 134590,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00106",
+  "request_id": "RQ-H00106",
+  "customer": "C-0085",
+  "created_by": "SL-02-02",
+  "created_at": 1789356600,
+  "lines": [
+   {
+    "sku": "DF-BT-034",
+    "qty": 7,
+    "unit_price": 8000
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 10,
+    "unit_price": 16060
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 4,
+    "unit_price": 1720
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 8,
+    "unit_price": 18980
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 4,
+    "unit_price": 16760
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 2,
+    "unit_price": 43460
+   }
+  ],
+  "discount_pct": 0,
+  "total": 529280,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00107",
+  "request_id": "RQ-H00107",
+  "customer": "C-0053",
+  "created_by": "SL-02-01",
+  "created_at": 1789362000,
+  "lines": [
+   {
+    "sku": "DF-EO-012",
+    "qty": 2,
+    "unit_price": 25990
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 3,
+    "unit_price": 28730
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 3,
+    "unit_price": 2850
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 5,
+    "unit_price": 12530
+   }
+  ],
+  "discount_pct": 0,
+  "total": 209370,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00108",
+  "request_id": "RQ-H00108",
+  "customer": "C-0055",
+  "created_by": "SL-02-02",
+  "created_at": 1789362900,
+  "lines": [
+   {
+    "sku": "DF-BT-031",
+    "qty": 2,
+    "unit_price": 31050
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 2,
+    "unit_price": 37120
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 10,
+    "unit_price": 2410
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 3,
+    "unit_price": 11960
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 9,
+    "unit_price": 3430
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 10,
+    "unit_price": 27120
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 7,
+    "unit_price": 14230
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 4,
+    "unit_price": 6280
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 4,
+    "unit_price": 38050
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 3,
+    "unit_price": 28330
+   }
+  ],
+  "discount_pct": 0,
+  "total": 860310,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00109",
+  "request_id": "RQ-H00109",
+  "customer": "C-0053",
+  "created_by": "SL-02-01",
+  "created_at": 1789363800,
+  "lines": [
+   {
+    "sku": "DF-BP-005",
+    "qty": 1,
+    "unit_price": 7450
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 5,
+    "unit_price": 14830
+   }
+  ],
+  "discount_pct": 0,
+  "total": 81600,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00110",
+  "request_id": "RQ-H00110",
+  "customer": "C-0109",
+  "created_by": "SL-02-02",
+  "created_at": 1789365600,
+  "lines": [
+   {
+    "sku": "DF-OF-011",
+    "qty": 3,
+    "unit_price": 1530
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 9,
+    "unit_price": 37360
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 6,
+    "unit_price": 8120
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 5,
+    "unit_price": 25950
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 2,
+    "unit_price": 2290
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 8,
+    "unit_price": 7300
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 10,
+    "unit_price": 16980
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 10,
+    "unit_price": 6260
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 3,
+    "unit_price": 33010
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 3,
+    "unit_price": 7690
+   }
+  ],
+  "discount_pct": 0,
+  "total": 936780,
+  "route": "credit",
+  "delivery_date": "2026-09-15",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00111",
+  "request_id": "RQ-H00111",
+  "customer": "C-0062",
+  "created_by": "SL-02-01",
+  "created_at": 1789371000,
+  "lines": [
+   {
+    "sku": "DF-BP-007",
+    "qty": 6,
+    "unit_price": 18210
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 1,
+    "unit_price": 56840
+   }
+  ],
+  "discount_pct": 0,
+  "total": 166100,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00112",
+  "request_id": "RQ-H00112",
+  "customer": "C-0028",
+  "created_by": "SL-02-02",
+  "created_at": 1789376400,
+  "lines": [
+   {
+    "sku": "DF-EO-004",
+    "qty": 6,
+    "unit_price": 37410
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 4,
+    "unit_price": 44710
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 3,
+    "unit_price": 16060
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 10,
+    "unit_price": 44130
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 7,
+    "unit_price": 1760
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 6,
+    "unit_price": 20600
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 7,
+    "unit_price": 20230
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 9,
+    "unit_price": 2560
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1193350,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00113",
+  "request_id": "RQ-H00113",
+  "customer": "C-0026",
+  "created_by": "SL-02-02",
+  "created_at": 1789435800,
+  "lines": [
+   {
+    "sku": "DF-OF-023",
+    "qty": 2,
+    "unit_price": 3240
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 5,
+    "unit_price": 25790
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 4,
+    "unit_price": 2490
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 2,
+    "unit_price": 6100
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 3,
+    "unit_price": 30510
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 4,
+    "unit_price": 44700
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 8,
+    "unit_price": 17960
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 7,
+    "unit_price": 43080
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 9,
+    "unit_price": 3060
+   }
+  ],
+  "discount_pct": 0,
+  "total": 900700,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00114",
+  "request_id": "RQ-H00114",
+  "customer": "C-0058",
+  "created_by": "SL-02-01",
+  "created_at": 1789436700,
+  "lines": [
+   {
+    "sku": "DF-EO-006",
+    "qty": 1,
+    "unit_price": 25550
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 5,
+    "unit_price": 59070
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 2,
+    "unit_price": 38850
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 4,
+    "unit_price": 18560
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 5,
+    "unit_price": 6470
+   }
+  ],
+  "discount_pct": 0,
+  "total": 505190,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00115",
+  "request_id": "RQ-H00115",
+  "customer": "C-0014",
+  "created_by": "SL-02-01",
+  "created_at": 1789436700,
+  "lines": [
+   {
+    "sku": "DF-EO-001",
+    "qty": 6,
+    "unit_price": 43690
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 5,
+    "unit_price": 38160
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 3,
+    "unit_price": 47650
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 2,
+    "unit_price": 7110
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 3,
+    "unit_price": 17520
+   }
+  ],
+  "discount_pct": 0,
+  "total": 662670,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00116",
+  "request_id": "RQ-H00116",
+  "customer": "C-0057",
+  "created_by": "SL-02-01",
+  "created_at": 1789443900,
+  "lines": [
+   {
+    "sku": "DF-BT-024",
+    "qty": 9,
+    "unit_price": 27780
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 5,
+    "unit_price": 46920
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 7,
+    "unit_price": 6520
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 4,
+    "unit_price": 16010
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 7,
+    "unit_price": 26090
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 7,
+    "unit_price": 11910
+   }
+  ],
+  "discount_pct": 0,
+  "total": 860300,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00117",
+  "request_id": "RQ-H00117",
+  "customer": "C-0056",
+  "created_by": "SL-02-01",
+  "created_at": 1789443900,
+  "lines": [
+   {
+    "sku": "DF-EO-002",
+    "qty": 3,
+    "unit_price": 47070
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 6,
+    "unit_price": 3260
+   }
+  ],
+  "discount_pct": 0,
+  "total": 160770,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00118",
+  "request_id": "RQ-H00118",
+  "customer": "C-0065",
+  "created_by": "SL-02-02",
+  "created_at": 1789445700,
+  "lines": [
+   {
+    "sku": "DF-EO-013",
+    "qty": 6,
+    "unit_price": 17870
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 4,
+    "unit_price": 51310
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 3,
+    "unit_price": 12330
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 3,
+    "unit_price": 26060
+   }
+  ],
+  "discount_pct": 0,
+  "total": 427630,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00119",
+  "request_id": "RQ-H00119",
+  "customer": "C-0097",
+  "created_by": "SL-02-01",
+  "created_at": 1789451100,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 5,
+    "unit_price": 2210
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 2,
+    "unit_price": 3760
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 1,
+    "unit_price": 31100
+   }
+  ],
+  "discount_pct": 0,
+  "total": 49670,
+  "route": "credit",
+  "delivery_date": "2026-09-17",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00120",
+  "request_id": "RQ-H00120",
+  "customer": "C-0079",
+  "created_by": "SL-02-02",
+  "created_at": 1789457400,
+  "lines": [
+   {
+    "sku": "DF-BP-010",
+    "qty": 3,
+    "unit_price": 7140
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 2,
+    "unit_price": 27010
+   }
+  ],
+  "discount_pct": 0,
+  "total": 75440,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00121",
+  "request_id": "RQ-H00121",
+  "customer": "C-0117",
+  "created_by": "SL-02-01",
+  "created_at": 1789464600,
+  "lines": [
+   {
+    "sku": "DF-OF-021",
+    "qty": 2,
+    "unit_price": 2880
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 1,
+    "unit_price": 30800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 36560,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00122",
+  "request_id": "RQ-H00122",
+  "customer": "C-0064",
+  "created_by": "SL-02-01",
+  "created_at": 1789609500,
+  "lines": [
+   {
+    "sku": "DF-BT-021",
+    "qty": 5,
+    "unit_price": 16370
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 4,
+    "unit_price": 19640
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 6,
+    "unit_price": 7580
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 5,
+    "unit_price": 16870
+   }
+  ],
+  "discount_pct": 0,
+  "total": 290240,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00123",
+  "request_id": "RQ-H00123",
+  "customer": "C-0094",
+  "created_by": "SL-02-02",
+  "created_at": 1789614900,
+  "lines": [
+   {
+    "sku": "DF-OF-017",
+    "qty": 3,
+    "unit_price": 2440
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 5,
+    "unit_price": 56950
+   }
+  ],
+  "discount_pct": 0,
+  "total": 292070,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00124",
+  "request_id": "RQ-H00124",
+  "customer": "C-0038",
+  "created_by": "SL-02-02",
+  "created_at": 1789615800,
+  "lines": [
+   {
+    "sku": "DF-EO-001",
+    "qty": 9,
+    "unit_price": 42330
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 5,
+    "unit_price": 21120
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 8,
+    "unit_price": 28900
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 7,
+    "unit_price": 16540
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 6,
+    "unit_price": 2700
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 4,
+    "unit_price": 55720
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 8,
+    "unit_price": 43670
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1421990,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00125",
+  "request_id": "RQ-H00125",
+  "customer": "C-0110",
+  "created_by": "SL-02-01",
+  "created_at": 1789615800,
+  "lines": [
+   {
+    "sku": "DF-BT-028",
+    "qty": 5,
+    "unit_price": 50310
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 3,
+    "unit_price": 25380
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 2,
+    "unit_price": 30830
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 7,
+    "unit_price": 2090
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 9,
+    "unit_price": 24450
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 9,
+    "unit_price": 16760
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 4,
+    "unit_price": 8060
+   }
+  ],
+  "discount_pct": 0,
+  "total": 807110,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00126",
+  "request_id": "RQ-H00126",
+  "customer": "C-0050",
+  "created_by": "SL-02-02",
+  "created_at": 1789616700,
+  "lines": [
+   {
+    "sku": "DF-EO-007",
+    "qty": 2,
+    "unit_price": 29850
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 3,
+    "unit_price": 3790
+   }
+  ],
+  "discount_pct": 0,
+  "total": 71070,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00127",
+  "request_id": "RQ-H00127",
+  "customer": "C-0068",
+  "created_by": "SL-02-02",
+  "created_at": 1789618500,
+  "lines": [
+   {
+    "sku": "DF-BT-031",
+    "qty": 6,
+    "unit_price": 30450
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1770
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 10,
+    "unit_price": 2160
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 10,
+    "unit_price": 19280
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 4,
+    "unit_price": 2390
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 4,
+    "unit_price": 1960
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 5,
+    "unit_price": 26770
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 2,
+    "unit_price": 17750
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 7,
+    "unit_price": 6600
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 10,
+    "unit_price": 3490
+   }
+  ],
+  "discount_pct": 0,
+  "total": 668490,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00128",
+  "request_id": "RQ-H00128",
+  "customer": "C-0048",
+  "created_by": "SL-02-02",
+  "created_at": 1789620300,
+  "lines": [
+   {
+    "sku": "DF-EO-006",
+    "qty": 4,
+    "unit_price": 25360
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 3,
+    "unit_price": 18230
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 3,
+    "unit_price": 13490
+   }
+  ],
+  "discount_pct": 0,
+  "total": 196600,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00129",
+  "request_id": "RQ-H00129",
+  "customer": "C-0109",
+  "created_by": "SL-02-02",
+  "created_at": 1789621200,
+  "lines": [
+   {
+    "sku": "DF-OF-015",
+    "qty": 3,
+    "unit_price": 3750
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 10,
+    "unit_price": 20820
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 9,
+    "unit_price": 18990
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 5,
+    "unit_price": 12950
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 10,
+    "unit_price": 27100
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 9,
+    "unit_price": 12380
+   }
+  ],
+  "discount_pct": 0,
+  "total": 837530,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00130",
+  "request_id": "RQ-H00130",
+  "customer": "C-0107",
+  "created_by": "SL-02-02",
+  "created_at": 1789623000,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 2,
+    "unit_price": 20030
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 3,
+    "unit_price": 20850
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 9,
+    "unit_price": 14260
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 7,
+    "unit_price": 3350
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 5,
+    "unit_price": 24600
+   }
+  ],
+  "discount_pct": 0,
+  "total": 377400,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00131",
+  "request_id": "RQ-H00131",
+  "customer": "C-0054",
+  "created_by": "SL-02-01",
+  "created_at": 1789623900,
+  "lines": [
+   {
+    "sku": "DF-EO-009",
+    "qty": 1,
+    "unit_price": 34020
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 4,
+    "unit_price": 31840
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 3,
+    "unit_price": 1780
+   }
+  ],
+  "discount_pct": 0,
+  "total": 166720,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00132",
+  "request_id": "RQ-H00132",
+  "customer": "C-0032",
+  "created_by": "SL-02-02",
+  "created_at": 1789623900,
+  "lines": [
+   {
+    "sku": "DF-BP-006",
+    "qty": 3,
+    "unit_price": 17100
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 1,
+    "unit_price": 37630
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 4,
+    "unit_price": 2420
+   }
+  ],
+  "discount_pct": 0,
+  "total": 98610,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00133",
+  "request_id": "RQ-H00133",
+  "customer": "C-0117",
+  "created_by": "SL-02-01",
+  "created_at": 1789623900,
+  "lines": [
+   {
+    "sku": "DF-BP-002",
+    "qty": 5,
+    "unit_price": 7900
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 6,
+    "unit_price": 18600
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 4,
+    "unit_price": 2510
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 2,
+    "unit_price": 52220
+   }
+  ],
+  "discount_pct": 0,
+  "total": 265580,
+  "route": "credit",
+  "delivery_date": "2026-09-18",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00134",
+  "request_id": "RQ-H00134",
+  "customer": "C-0001",
+  "created_by": "SL-02-01",
+  "created_at": 1789629300,
+  "lines": [
+   {
+    "sku": "DF-OF-018",
+    "qty": 1,
+    "unit_price": 2770
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 5,
+    "unit_price": 19520
+   }
+  ],
+  "discount_pct": 0,
+  "total": 100370,
+  "route": "credit",
+  "delivery_date": "2026-09-19",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00135",
+  "request_id": "RQ-H00135",
+  "customer": "C-0100",
+  "created_by": "SL-02-01",
+  "created_at": 1789630200,
+  "lines": [
+   {
+    "sku": "DF-EO-004",
+    "qty": 2,
+    "unit_price": 37570
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 3,
+    "unit_price": 7080
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 2,
+    "unit_price": 19100
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 10,
+    "unit_price": 18100
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 10,
+    "unit_price": 6540
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 7,
+    "unit_price": 40740
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 9,
+    "unit_price": 45980
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1079980,
+  "route": "credit",
+  "delivery_date": "2026-09-19",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00136",
+  "request_id": "RQ-H00136",
+  "customer": "C-0066",
+  "created_by": "SL-02-02",
+  "created_at": 1789695000,
+  "lines": [
+   {
+    "sku": "DF-EO-004",
+    "qty": 3,
+    "unit_price": 37640
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 3,
+    "unit_price": 31110
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 6,
+    "unit_price": 2480
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1780
+   }
+  ],
+  "discount_pct": 0,
+  "total": 224690,
+  "route": "credit",
+  "delivery_date": "2026-09-19",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00137",
+  "request_id": "RQ-H00137",
+  "customer": "C-0042",
+  "created_by": "SL-02-02",
+  "created_at": 1789700400,
+  "lines": [
+   {
+    "sku": "DF-EO-005",
+    "qty": 5,
+    "unit_price": 46030
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 1,
+    "unit_price": 2640
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 5,
+    "unit_price": 58300
+   }
+  ],
+  "discount_pct": 0,
+  "total": 524290,
+  "route": "credit",
+  "delivery_date": "2026-09-19",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00138",
+  "request_id": "RQ-H00138",
+  "customer": "C-0119",
+  "created_by": "SL-02-02",
+  "created_at": 1789701300,
+  "lines": [
+   {
+    "sku": "DF-EO-011",
+    "qty": 2,
+    "unit_price": 30450
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 2,
+    "unit_price": 44900
+   }
+  ],
+  "discount_pct": 0,
+  "total": 150700,
+  "route": "credit",
+  "delivery_date": "2026-09-19",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00139",
+  "request_id": "RQ-H00139",
+  "customer": "C-0068",
+  "created_by": "SL-02-02",
+  "created_at": 1789703100,
+  "lines": [
+   {
+    "sku": "DF-EO-014",
+    "qty": 3,
+    "unit_price": 21270
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 5,
+    "unit_price": 17750
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 4,
+    "unit_price": 16660
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 3,
+    "unit_price": 50210
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 2,
+    "unit_price": 7450
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 9,
+    "unit_price": 15300
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 4,
+    "unit_price": 25720
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 2,
+    "unit_price": 12520
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 4,
+    "unit_price": 19280
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 3,
+    "unit_price": 2160
+   }
+  ],
+  "discount_pct": 0,
+  "total": 733950,
+  "route": "credit",
+  "delivery_date": "2026-09-19",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00140",
+  "request_id": "RQ-H00140",
+  "customer": "C-0069",
+  "created_by": "SL-02-02",
+  "created_at": 1789713000,
+  "lines": [
+   {
+    "sku": "DF-BT-028",
+    "qty": 2,
+    "unit_price": 52110
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 1,
+    "unit_price": 12630
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 2,
+    "unit_price": 33350
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 1,
+    "unit_price": 31100
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 1,
+    "unit_price": 43300
+   }
+  ],
+  "discount_pct": 0,
+  "total": 257950,
+  "route": "credit",
+  "delivery_date": "2026-09-19",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00141",
+  "request_id": "RQ-H00141",
+  "customer": "C-0001",
+  "created_by": "SL-02-01",
+  "created_at": 1789714800,
+  "lines": [
+   {
+    "sku": "DF-OF-017",
+    "qty": 1,
+    "unit_price": 2380
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 1,
+    "unit_price": 6740
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 1,
+    "unit_price": 19520
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 4,
+    "unit_price": 47070
+   }
+  ],
+  "discount_pct": 0,
+  "total": 216920,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00142",
+  "request_id": "RQ-H00142",
+  "customer": "C-0056",
+  "created_by": "SL-02-01",
+  "created_at": 1789716600,
+  "lines": [
+   {
+    "sku": "DF-EO-014",
+    "qty": 1,
+    "unit_price": 21740
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 6,
+    "unit_price": 8720
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 1,
+    "unit_price": 44770
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 6,
+    "unit_price": 34140
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 6,
+    "unit_price": 2000
+   }
+  ],
+  "discount_pct": 0,
+  "total": 335670,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00143",
+  "request_id": "RQ-H00143",
+  "customer": "C-0073",
+  "created_by": "SL-02-02",
+  "created_at": 1789721100,
+  "lines": [
+   {
+    "sku": "DF-BT-023",
+    "qty": 1,
+    "unit_price": 17320
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 6,
+    "unit_price": 16600
+   }
+  ],
+  "discount_pct": 0,
+  "total": 116920,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00144",
+  "request_id": "RQ-H00144",
+  "customer": "C-0025",
+  "created_by": "SL-02-02",
+  "created_at": 1789722900,
+  "lines": [
+   {
+    "sku": "DF-OF-017",
+    "qty": 3,
+    "unit_price": 2320
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 2,
+    "unit_price": 5400
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 2,
+    "unit_price": 3250
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 5,
+    "unit_price": 44430
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 2,
+    "unit_price": 11970
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 9,
+    "unit_price": 55810
+   }
+  ],
+  "discount_pct": 0,
+  "total": 772640,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00145",
+  "request_id": "RQ-H00145",
+  "customer": "C-0031",
+  "created_by": "SL-02-01",
+  "created_at": 1789722900,
+  "lines": [
+   {
+    "sku": "DF-OF-018",
+    "qty": 8,
+    "unit_price": 2720
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 3,
+    "unit_price": 32800
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 10,
+    "unit_price": 7080
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 4,
+    "unit_price": 1750
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 9,
+    "unit_price": 2160
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 5,
+    "unit_price": 8660
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 6,
+    "unit_price": 40750
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 10,
+    "unit_price": 50300
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1008200,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00146",
+  "request_id": "RQ-H00146",
+  "customer": "C-0021",
+  "created_by": "SL-02-02",
+  "created_at": 1789722900,
+  "lines": [
+   {
+    "sku": "DF-OF-015",
+    "qty": 4,
+    "unit_price": 3810
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 5,
+    "unit_price": 5550
+   }
+  ],
+  "discount_pct": 0,
+  "total": 42990,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00147",
+  "request_id": "RQ-H00147",
+  "customer": "C-0028",
+  "created_by": "SL-02-02",
+  "created_at": 1789787700,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 4,
+    "unit_price": 2110
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 10,
+    "unit_price": 20230
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 7,
+    "unit_price": 31080
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 6,
+    "unit_price": 8430
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 2,
+    "unit_price": 25660
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 2,
+    "unit_price": 13250
+   }
+  ],
+  "discount_pct": 0,
+  "total": 556700,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00148",
+  "request_id": "RQ-H00148",
+  "customer": "C-0051",
+  "created_by": "SL-02-02",
+  "created_at": 1789788600,
+  "lines": [
+   {
+    "sku": "DF-OF-020",
+    "qty": 2,
+    "unit_price": 3180
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 2,
+    "unit_price": 16600
+   }
+  ],
+  "discount_pct": 0,
+  "total": 39560,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00149",
+  "request_id": "RQ-H00149",
+  "customer": "C-0076",
+  "created_by": "SL-02-02",
+  "created_at": 1789789500,
+  "lines": [
+   {
+    "sku": "DF-EO-011",
+    "qty": 7,
+    "unit_price": 29280
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 8,
+    "unit_price": 2660
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 8,
+    "unit_price": 12350
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 10,
+    "unit_price": 44160
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 6,
+    "unit_price": 16830
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 6,
+    "unit_price": 56980
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 10,
+    "unit_price": 2360
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 4,
+    "unit_price": 6910
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 5,
+    "unit_price": 30760
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 9,
+    "unit_price": 12020
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1522720,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00150",
+  "request_id": "RQ-H00150",
+  "customer": "C-0032",
+  "created_by": "SL-02-02",
+  "created_at": 1789794000,
+  "lines": [
+   {
+    "sku": "DF-OF-019",
+    "qty": 1,
+    "unit_price": 2610
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 3,
+    "unit_price": 2500
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 4,
+    "unit_price": 6830
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 2,
+    "unit_price": 2420
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 2,
+    "unit_price": 2800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 47870,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00151",
+  "request_id": "RQ-H00151",
+  "customer": "C-0118",
+  "created_by": "SL-02-01",
+  "created_at": 1789794000,
+  "lines": [
+   {
+    "sku": "DF-OF-024",
+    "qty": 5,
+    "unit_price": 2450
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 1,
+    "unit_price": 52560
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 5,
+    "unit_price": 17340
+   }
+  ],
+  "discount_pct": 0,
+  "total": 151510,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00152",
+  "request_id": "RQ-H00152",
+  "customer": "C-0055",
+  "created_by": "SL-02-02",
+  "created_at": 1789795800,
+  "lines": [
+   {
+    "sku": "DF-BP-014",
+    "qty": 2,
+    "unit_price": 15680
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 10,
+    "unit_price": 16080
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 8,
+    "unit_price": 7550
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 7,
+    "unit_price": 37120
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 4,
+    "unit_price": 49180
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 5,
+    "unit_price": 6650
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 9,
+    "unit_price": 16950
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 9,
+    "unit_price": 56600
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 9,
+    "unit_price": 28900
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 4,
+    "unit_price": 40960
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1828260,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00153",
+  "request_id": "RQ-H00153",
+  "customer": "C-0092",
+  "created_by": "SL-02-02",
+  "created_at": 1789797600,
+  "lines": [
+   {
+    "sku": "DF-EO-001",
+    "qty": 1,
+    "unit_price": 43190
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 6,
+    "unit_price": 21720
+   }
+  ],
+  "discount_pct": 0,
+  "total": 173510,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00154",
+  "request_id": "RQ-H00154",
+  "customer": "C-0074",
+  "created_by": "SL-02-01",
+  "created_at": 1789797600,
+  "lines": [
+   {
+    "sku": "DF-BT-031",
+    "qty": 5,
+    "unit_price": 31660
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 5,
+    "unit_price": 2450
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 3,
+    "unit_price": 42280
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 3,
+    "unit_price": 42420
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 2,
+    "unit_price": 7930
+   }
+  ],
+  "discount_pct": 0,
+  "total": 440510,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00155",
+  "request_id": "RQ-H00155",
+  "customer": "C-0109",
+  "created_by": "SL-02-02",
+  "created_at": 1789798500,
+  "lines": [
+   {
+    "sku": "DF-EO-015",
+    "qty": 5,
+    "unit_price": 26320
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 2,
+    "unit_price": 20820
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 2,
+    "unit_price": 2790
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 3,
+    "unit_price": 1960
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 7,
+    "unit_price": 27100
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 5,
+    "unit_price": 8550
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 10,
+    "unit_price": 2430
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 8,
+    "unit_price": 43300
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1730
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 4,
+    "unit_price": 28180
+   }
+  ],
+  "discount_pct": 0,
+  "total": 904030,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00156",
+  "request_id": "RQ-H00156",
+  "customer": "C-0027",
+  "created_by": "SL-02-02",
+  "created_at": 1789799400,
+  "lines": [
+   {
+    "sku": "DF-EO-008",
+    "qty": 6,
+    "unit_price": 51390
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 1,
+    "unit_price": 6330
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 6,
+    "unit_price": 7840
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 6,
+    "unit_price": 2040
+   }
+  ],
+  "discount_pct": 0,
+  "total": 373950,
+  "route": "credit",
+  "delivery_date": "2026-09-21",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00157",
+  "request_id": "RQ-H00157",
+  "customer": "C-0099",
+  "created_by": "SL-02-02",
+  "created_at": 1789802100,
+  "lines": [
+   {
+    "sku": "DF-BP-008",
+    "qty": 2,
+    "unit_price": 19670
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 4,
+    "unit_price": 58860
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 2,
+    "unit_price": 45800
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 5,
+    "unit_price": 3800
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 5,
+    "unit_price": 27450
+   }
+  ],
+  "discount_pct": 0,
+  "total": 522630,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00158",
+  "request_id": "RQ-H00158",
+  "customer": "C-0086",
+  "created_by": "SL-02-02",
+  "created_at": 1789803900,
+  "lines": [
+   {
+    "sku": "DF-BT-029",
+    "qty": 4,
+    "unit_price": 38490
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 10,
+    "unit_price": 8690
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 5,
+    "unit_price": 26350
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 10,
+    "unit_price": 2410
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 8,
+    "unit_price": 1740
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 5,
+    "unit_price": 1530
+   }
+  ],
+  "discount_pct": 0,
+  "total": 418280,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00159",
+  "request_id": "RQ-H00159",
+  "customer": "C-0101",
+  "created_by": "SL-02-01",
+  "created_at": 1789804800,
+  "lines": [
+   {
+    "sku": "DF-OF-015",
+    "qty": 2,
+    "unit_price": 3870
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 6,
+    "unit_price": 12840
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 5,
+    "unit_price": 7620
+   }
+  ],
+  "discount_pct": 0,
+  "total": 122880,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00160",
+  "request_id": "RQ-H00160",
+  "customer": "C-0046",
+  "created_by": "SL-02-02",
+  "created_at": 1789807500,
+  "lines": [
+   {
+    "sku": "DF-OF-023",
+    "qty": 5,
+    "unit_price": 3340
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 5,
+    "unit_price": 57140
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 2,
+    "unit_price": 7330
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 2,
+    "unit_price": 51020
+   }
+  ],
+  "discount_pct": 0,
+  "total": 419100,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00161",
+  "request_id": "RQ-H00161",
+  "customer": "C-0112",
+  "created_by": "SL-02-01",
+  "created_at": 1789953300,
+  "lines": [
+   {
+    "sku": "DF-OF-024",
+    "qty": 2,
+    "unit_price": 2530
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 1,
+    "unit_price": 14860
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 1,
+    "unit_price": 15740
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 5,
+    "unit_price": 30440
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 3,
+    "unit_price": 38590
+   }
+  ],
+  "discount_pct": 0,
+  "total": 303630,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00162",
+  "request_id": "RQ-H00162",
+  "customer": "C-0011",
+  "created_by": "SL-02-02",
+  "created_at": 1789956900,
+  "lines": [
+   {
+    "sku": "DF-BP-012",
+    "qty": 5,
+    "unit_price": 15800
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 6,
+    "unit_price": 19480
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 1,
+    "unit_price": 7270
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 5,
+    "unit_price": 45930
+   }
+  ],
+  "discount_pct": 0,
+  "total": 432800,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00163",
+  "request_id": "RQ-H00163",
+  "customer": "C-0019",
+  "created_by": "SL-02-02",
+  "created_at": 1789958700,
+  "lines": [
+   {
+    "sku": "DF-BT-033",
+    "qty": 2,
+    "unit_price": 6920
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 6,
+    "unit_price": 27230
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 3,
+    "unit_price": 2940
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 6,
+    "unit_price": 28920
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 6,
+    "unit_price": 21180
+   }
+  ],
+  "discount_pct": 0,
+  "total": 486640,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00164",
+  "request_id": "RQ-H00164",
+  "customer": "C-0036",
+  "created_by": "SL-02-01",
+  "created_at": 1789958700,
+  "lines": [
+   {
+    "sku": "DF-EO-013",
+    "qty": 7,
+    "unit_price": 17180
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 2,
+    "unit_price": 19620
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 5,
+    "unit_price": 32010
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 3,
+    "unit_price": 6240
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 2,
+    "unit_price": 12000
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 2,
+    "unit_price": 16360
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 8,
+    "unit_price": 36760
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 6,
+    "unit_price": 2680
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 5,
+    "unit_price": 15690
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 6,
+    "unit_price": 16650
+   }
+  ],
+  "discount_pct": 0,
+  "total": 883500,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00165",
+  "request_id": "RQ-H00165",
+  "customer": "C-0013",
+  "created_by": "SL-02-02",
+  "created_at": 1789958700,
+  "lines": [
+   {
+    "sku": "DF-EO-015",
+    "qty": 5,
+    "unit_price": 27410
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 5,
+    "unit_price": 39350
+   }
+  ],
+  "discount_pct": 0,
+  "total": 333800,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00166",
+  "request_id": "RQ-H00166",
+  "customer": "C-0119",
+  "created_by": "SL-02-02",
+  "created_at": 1789959600,
+  "lines": [
+   {
+    "sku": "DF-BT-033",
+    "qty": 2,
+    "unit_price": 6930
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 2,
+    "unit_price": 2410
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 1,
+    "unit_price": 43760
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 1,
+    "unit_price": 45660
+   }
+  ],
+  "discount_pct": 0,
+  "total": 108100,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00167",
+  "request_id": "RQ-H00167",
+  "customer": "C-0105",
+  "created_by": "SL-02-02",
+  "created_at": 1789965900,
+  "lines": [
+   {
+    "sku": "DF-EO-010",
+    "qty": 3,
+    "unit_price": 42040
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 5,
+    "unit_price": 8700
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 6,
+    "unit_price": 25870
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 5,
+    "unit_price": 27970
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 4,
+    "unit_price": 21860
+   }
+  ],
+  "discount_pct": 0,
+  "total": 552130,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00168",
+  "request_id": "RQ-H00168",
+  "customer": "C-0047",
+  "created_by": "SL-02-01",
+  "created_at": 1789969500,
+  "lines": [
+   {
+    "sku": "DF-BT-034",
+    "qty": 5,
+    "unit_price": 8560
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 6,
+    "unit_price": 26000
+   }
+  ],
+  "discount_pct": 0,
+  "total": 198800,
+  "route": "credit",
+  "delivery_date": "2026-09-22",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00169",
+  "request_id": "RQ-H00169",
+  "customer": "C-0010",
+  "created_by": "SL-02-02",
+  "created_at": 1789974000,
+  "lines": [
+   {
+    "sku": "DF-EO-012",
+    "qty": 3,
+    "unit_price": 25730
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 8,
+    "unit_price": 1560
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 7,
+    "unit_price": 30430
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1740
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 4,
+    "unit_price": 5360
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 7,
+    "unit_price": 16170
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 6,
+    "unit_price": 13110
+   }
+  ],
+  "discount_pct": 0,
+  "total": 519450,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00170",
+  "request_id": "RQ-H00170",
+  "customer": "C-0102",
+  "created_by": "SL-02-01",
+  "created_at": 1790042400,
+  "lines": [
+   {
+    "sku": "DF-BT-022",
+    "qty": 1,
+    "unit_price": 21640
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 2,
+    "unit_price": 21910
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 5,
+    "unit_price": 6780
+   }
+  ],
+  "discount_pct": 0,
+  "total": 99360,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00171",
+  "request_id": "RQ-H00171",
+  "customer": "C-0099",
+  "created_by": "SL-02-02",
+  "created_at": 1790044200,
+  "lines": [
+   {
+    "sku": "DF-BP-014",
+    "qty": 4,
+    "unit_price": 16190
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 4,
+    "unit_price": 8770
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 1,
+    "unit_price": 17520
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 6,
+    "unit_price": 2020
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 4,
+    "unit_price": 2210
+   }
+  ],
+  "discount_pct": 0,
+  "total": 138320,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00172",
+  "request_id": "RQ-H00172",
+  "customer": "C-0041",
+  "created_by": "SL-02-01",
+  "created_at": 1790046000,
+  "lines": [
+   {
+    "sku": "DF-BP-001",
+    "qty": 5,
+    "unit_price": 8680
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 2,
+    "unit_price": 6910
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 1,
+    "unit_price": 31400
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 4,
+    "unit_price": 16290
+   }
+  ],
+  "discount_pct": 0,
+  "total": 153780,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00173",
+  "request_id": "RQ-H00173",
+  "customer": "C-0020",
+  "created_by": "SL-02-02",
+  "created_at": 1790047800,
+  "lines": [
+   {
+    "sku": "DF-OF-019",
+    "qty": 3,
+    "unit_price": 2620
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 1,
+    "unit_price": 6800
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 1,
+    "unit_price": 1610
+   }
+  ],
+  "discount_pct": 0,
+  "total": 16270,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00174",
+  "request_id": "RQ-H00174",
+  "customer": "C-0047",
+  "created_by": "SL-02-01",
+  "created_at": 1790049600,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 6,
+    "unit_price": 2220
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 5,
+    "unit_price": 1790
+   }
+  ],
+  "discount_pct": 0,
+  "total": 22270,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00175",
+  "request_id": "RQ-H00175",
+  "customer": "C-0106",
+  "created_by": "SL-02-01",
+  "created_at": 1790052300,
+  "lines": [
+   {
+    "sku": "DF-EO-012",
+    "qty": 8,
+    "unit_price": 25660
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 8,
+    "unit_price": 8690
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 2,
+    "unit_price": 47040
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 7,
+    "unit_price": 30920
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 5,
+    "unit_price": 29480
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 6,
+    "unit_price": 16520
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 4,
+    "unit_price": 7050
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 10,
+    "unit_price": 3340
+   }
+  ],
+  "discount_pct": 0,
+  "total": 893440,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00176",
+  "request_id": "RQ-H00176",
+  "customer": "C-0102",
+  "created_by": "SL-02-01",
+  "created_at": 1790059500,
+  "lines": [
+   {
+    "sku": "DF-BT-025",
+    "qty": 5,
+    "unit_price": 27310
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 2,
+    "unit_price": 25170
+   }
+  ],
+  "discount_pct": 0,
+  "total": 186890,
+  "route": "credit",
+  "delivery_date": "2026-09-23",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00177",
+  "request_id": "RQ-H00177",
+  "customer": "C-0024",
+  "created_by": "SL-02-01",
+  "created_at": 1790063100,
+  "lines": [
+   {
+    "sku": "DF-OF-020",
+    "qty": 5,
+    "unit_price": 3240
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 6,
+    "unit_price": 51600
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 5,
+    "unit_price": 31060
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 6,
+    "unit_price": 8470
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 5,
+    "unit_price": 47150
+   }
+  ],
+  "discount_pct": 0,
+  "total": 767670,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00178",
+  "request_id": "RQ-H00178",
+  "customer": "C-0043",
+  "created_by": "SL-02-02",
+  "created_at": 1790064900,
+  "lines": [
+   {
+    "sku": "DF-OF-019",
+    "qty": 1,
+    "unit_price": 2560
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 6,
+    "unit_price": 57080
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 1,
+    "unit_price": 2380
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 5,
+    "unit_price": 8530
+   }
+  ],
+  "discount_pct": 0,
+  "total": 390070,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00179",
+  "request_id": "RQ-H00179",
+  "customer": "C-0078",
+  "created_by": "SL-02-02",
+  "created_at": 1790065800,
+  "lines": [
+   {
+    "sku": "DF-OF-014",
+    "qty": 1,
+    "unit_price": 2040
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 2,
+    "unit_price": 8630
+   }
+  ],
+  "discount_pct": 0,
+  "total": 19300,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00180",
+  "request_id": "RQ-H00180",
+  "customer": "C-0027",
+  "created_by": "SL-02-02",
+  "created_at": 1790068500,
+  "lines": [
+   {
+    "sku": "DF-EO-001",
+    "qty": 1,
+    "unit_price": 43830
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 5,
+    "unit_price": 3780
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 3,
+    "unit_price": 25150
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 2,
+    "unit_price": 16540
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 1,
+    "unit_price": 20180
+   }
+  ],
+  "discount_pct": 0,
+  "total": 191440,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00181",
+  "request_id": "RQ-H00181",
+  "customer": "C-0083",
+  "created_by": "SL-02-02",
+  "created_at": 1790127900,
+  "lines": [
+   {
+    "sku": "DF-OF-016",
+    "qty": 6,
+    "unit_price": 5650
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 1,
+    "unit_price": 43250
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 1,
+    "unit_price": 33600
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 4,
+    "unit_price": 31220
+   }
+  ],
+  "discount_pct": 0,
+  "total": 235630,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00182",
+  "request_id": "RQ-H00182",
+  "customer": "C-0011",
+  "created_by": "SL-02-02",
+  "created_at": 1790127900,
+  "lines": [
+   {
+    "sku": "DF-BT-032",
+    "qty": 1,
+    "unit_price": 44800
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 4,
+    "unit_price": 12460
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 3,
+    "unit_price": 41390
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 4,
+    "unit_price": 29420
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 5,
+    "unit_price": 2000
+   }
+  ],
+  "discount_pct": 0,
+  "total": 346490,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00183",
+  "request_id": "RQ-H00183",
+  "customer": "C-0008",
+  "created_by": "SL-02-01",
+  "created_at": 1790132400,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 5,
+    "unit_price": 2220
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 6,
+    "unit_price": 16620
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 5,
+    "unit_price": 2910
+   }
+  ],
+  "discount_pct": 0,
+  "total": 125370,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00184",
+  "request_id": "RQ-H00184",
+  "customer": "C-0007",
+  "created_by": "SL-02-01",
+  "created_at": 1790136900,
+  "lines": [
+   {
+    "sku": "DF-OF-014",
+    "qty": 7,
+    "unit_price": 1910
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 8,
+    "unit_price": 15650
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 7,
+    "unit_price": 6640
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 3,
+    "unit_price": 44500
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 9,
+    "unit_price": 14090
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 8,
+    "unit_price": 16480
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 4,
+    "unit_price": 20130
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 6,
+    "unit_price": 26580
+   }
+  ],
+  "discount_pct": 0,
+  "total": 817200,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00185",
+  "request_id": "RQ-H00185",
+  "customer": "C-0032",
+  "created_by": "SL-02-02",
+  "created_at": 1790137800,
+  "lines": [
+   {
+    "sku": "DF-BP-006",
+    "qty": 3,
+    "unit_price": 17100
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 2,
+    "unit_price": 12790
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 3,
+    "unit_price": 17380
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 2,
+    "unit_price": 18700
+   }
+  ],
+  "discount_pct": 0,
+  "total": 166420,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00186",
+  "request_id": "RQ-H00186",
+  "customer": "C-0024",
+  "created_by": "SL-02-01",
+  "created_at": 1790141400,
+  "lines": [
+   {
+    "sku": "DF-BP-012",
+    "qty": 5,
+    "unit_price": 15670
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 1,
+    "unit_price": 25360
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 4,
+    "unit_price": 19900
+   }
+  ],
+  "discount_pct": 0,
+  "total": 183310,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00187",
+  "request_id": "RQ-H00187",
+  "customer": "C-0074",
+  "created_by": "SL-02-01",
+  "created_at": 1790142300,
+  "lines": [
+   {
+    "sku": "DF-OF-012",
+    "qty": 3,
+    "unit_price": 1810
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 6,
+    "unit_price": 47390
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 2,
+    "unit_price": 27420
+   }
+  ],
+  "discount_pct": 0,
+  "total": 344610,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00188",
+  "request_id": "RQ-H00188",
+  "customer": "C-0008",
+  "created_by": "SL-02-01",
+  "created_at": 1790143200,
+  "lines": [
+   {
+    "sku": "DF-EO-010",
+    "qty": 2,
+    "unit_price": 42000
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 6,
+    "unit_price": 29900
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 4,
+    "unit_price": 2820
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 3,
+    "unit_price": 12520
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 5,
+    "unit_price": 26530
+   }
+  ],
+  "discount_pct": 0,
+  "total": 444890,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00189",
+  "request_id": "RQ-H00189",
+  "customer": "C-0105",
+  "created_by": "SL-02-02",
+  "created_at": 1790145900,
+  "lines": [
+   {
+    "sku": "DF-OF-021",
+    "qty": 3,
+    "unit_price": 2880
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 4,
+    "unit_price": 17180
+   }
+  ],
+  "discount_pct": 0,
+  "total": 77360,
+  "route": "credit",
+  "delivery_date": "2026-09-24",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00190",
+  "request_id": "RQ-H00190",
+  "customer": "C-0026",
+  "created_by": "SL-02-02",
+  "created_at": 1790147700,
+  "lines": [
+   {
+    "sku": "DF-BP-009",
+    "qty": 10,
+    "unit_price": 11850
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 10,
+    "unit_price": 6100
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 10,
+    "unit_price": 44370
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 3,
+    "unit_price": 42130
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 9,
+    "unit_price": 12440
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 10,
+    "unit_price": 26650
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 9,
+    "unit_price": 7270
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 3,
+    "unit_price": 3240
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1203200,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00191",
+  "request_id": "RQ-H00191",
+  "customer": "C-0066",
+  "created_by": "SL-02-02",
+  "created_at": 1790149500,
+  "lines": [
+   {
+    "sku": "DF-OF-016",
+    "qty": 1,
+    "unit_price": 5710
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 4,
+    "unit_price": 12440
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 2,
+    "unit_price": 8780
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 4,
+    "unit_price": 7090
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 3,
+    "unit_price": 8250
+   }
+  ],
+  "discount_pct": 0,
+  "total": 126140,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00192",
+  "request_id": "RQ-H00192",
+  "customer": "C-0091",
+  "created_by": "SL-02-01",
+  "created_at": 1790154900,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 5,
+    "unit_price": 2200
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 3,
+    "unit_price": 20870
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 4,
+    "unit_price": 31380
+   },
+   {
+    "sku": "DF-BT-024",
+    "qty": 2,
+    "unit_price": 28480
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 1,
+    "unit_price": 51100
+   }
+  ],
+  "discount_pct": 0,
+  "total": 307190,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00193",
+  "request_id": "RQ-H00193",
+  "customer": "C-0005",
+  "created_by": "SL-02-02",
+  "created_at": 1790155800,
+  "lines": [
+   {
+    "sku": "DF-BT-029",
+    "qty": 1,
+    "unit_price": 38470
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 5,
+    "unit_price": 45170
+   }
+  ],
+  "discount_pct": 0,
+  "total": 264320,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00194",
+  "request_id": "RQ-H00194",
+  "customer": "C-0104",
+  "created_by": "SL-02-01",
+  "created_at": 1790213400,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 6,
+    "unit_price": 20220
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 1,
+    "unit_price": 13570
+   }
+  ],
+  "discount_pct": 0,
+  "total": 134890,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00195",
+  "request_id": "RQ-H00195",
+  "customer": "C-0114",
+  "created_by": "SL-02-01",
+  "created_at": 1790214300,
+  "lines": [
+   {
+    "sku": "DF-BP-012",
+    "qty": 4,
+    "unit_price": 15700
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 2,
+    "unit_price": 3240
+   }
+  ],
+  "discount_pct": 0,
+  "total": 69280,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00196",
+  "request_id": "RQ-H00196",
+  "customer": "C-0065",
+  "created_by": "SL-02-02",
+  "created_at": 1790217000,
+  "lines": [
+   {
+    "sku": "DF-BT-026",
+    "qty": 4,
+    "unit_price": 41930
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 4,
+    "unit_price": 2800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 178920,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00197",
+  "request_id": "RQ-H00197",
+  "customer": "C-0032",
+  "created_by": "SL-02-02",
+  "created_at": 1790218800,
+  "lines": [
+   {
+    "sku": "DF-BP-006",
+    "qty": 3,
+    "unit_price": 17100
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 1,
+    "unit_price": 2420
+   }
+  ],
+  "discount_pct": 0,
+  "total": 53720,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00198",
+  "request_id": "RQ-H00198",
+  "customer": "C-0105",
+  "created_by": "SL-02-02",
+  "created_at": 1790223300,
+  "lines": [
+   {
+    "sku": "DF-OF-012",
+    "qty": 6,
+    "unit_price": 1780
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 1,
+    "unit_price": 38770
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 6,
+    "unit_price": 15560
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 3,
+    "unit_price": 38890
+   }
+  ],
+  "discount_pct": 0,
+  "total": 259480,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00199",
+  "request_id": "RQ-H00199",
+  "customer": "C-0089",
+  "created_by": "SL-02-02",
+  "created_at": 1790226000,
+  "lines": [
+   {
+    "sku": "DF-BP-007",
+    "qty": 9,
+    "unit_price": 17810
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 6,
+    "unit_price": 6940
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 9,
+    "unit_price": 2760
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 6,
+    "unit_price": 7660
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 10,
+    "unit_price": 45930
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 7,
+    "unit_price": 16250
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 6,
+    "unit_price": 42920
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 8,
+    "unit_price": 20160
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1264580,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00200",
+  "request_id": "RQ-H00200",
+  "customer": "C-0030",
+  "created_by": "SL-02-01",
+  "created_at": 1790229600,
+  "lines": [
+   {
+    "sku": "DF-BP-001",
+    "qty": 6,
+    "unit_price": 8670
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 6,
+    "unit_price": 1820
+   }
+  ],
+  "discount_pct": 0,
+  "total": 62940,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00201",
+  "request_id": "RQ-H00201",
+  "customer": "C-0081",
+  "created_by": "SL-02-01",
+  "created_at": 1790231400,
+  "lines": [
+   {
+    "sku": "DF-EO-015",
+    "qty": 6,
+    "unit_price": 27370
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 2,
+    "unit_price": 3400
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 6,
+    "unit_price": 1590
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 4,
+    "unit_price": 6460
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 2,
+    "unit_price": 17360
+   }
+  ],
+  "discount_pct": 0,
+  "total": 241120,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00202",
+  "request_id": "RQ-H00202",
+  "customer": "C-0070",
+  "created_by": "SL-02-02",
+  "created_at": 1790232300,
+  "lines": [
+   {
+    "sku": "DF-BP-006",
+    "qty": 5,
+    "unit_price": 16480
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 3,
+    "unit_price": 3240
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 6,
+    "unit_price": 51430
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 7,
+    "unit_price": 24710
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 10,
+    "unit_price": 17800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 751670,
+  "route": "credit",
+  "delivery_date": "2026-09-25",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00203",
+  "request_id": "RQ-H00203",
+  "customer": "C-0018",
+  "created_by": "SL-02-02",
+  "created_at": 1790233200,
+  "lines": [
+   {
+    "sku": "DF-BP-006",
+    "qty": 3,
+    "unit_price": 16800
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 3,
+    "unit_price": 2780
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 5,
+    "unit_price": 52360
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 2,
+    "unit_price": 6790
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 3,
+    "unit_price": 30540
+   }
+  ],
+  "discount_pct": 0,
+  "total": 425740,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00204",
+  "request_id": "RQ-H00204",
+  "customer": "C-0062",
+  "created_by": "SL-02-01",
+  "created_at": 1790234100,
+  "lines": [
+   {
+    "sku": "DF-OF-024",
+    "qty": 2,
+    "unit_price": 2470
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 1,
+    "unit_price": 16540
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 4,
+    "unit_price": 7680
+   },
+   {
+    "sku": "DF-OF-018",
+    "qty": 1,
+    "unit_price": 2810
+   }
+  ],
+  "discount_pct": 0,
+  "total": 55010,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00205",
+  "request_id": "RQ-H00205",
+  "customer": "C-0042",
+  "created_by": "SL-02-02",
+  "created_at": 1790236800,
+  "lines": [
+   {
+    "sku": "DF-BP-008",
+    "qty": 1,
+    "unit_price": 19660
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 5,
+    "unit_price": 29830
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 4,
+    "unit_price": 2480
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 2,
+    "unit_price": 42260
+   }
+  ],
+  "discount_pct": 0,
+  "total": 263250,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00206",
+  "request_id": "RQ-H00206",
+  "customer": "C-0023",
+  "created_by": "SL-02-01",
+  "created_at": 1790237700,
+  "lines": [
+   {
+    "sku": "DF-OF-011",
+    "qty": 10,
+    "unit_price": 1560
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 9,
+    "unit_price": 55260
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 2,
+    "unit_price": 11990
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 8,
+    "unit_price": 50790
+   },
+   {
+    "sku": "DF-EO-007",
+    "qty": 4,
+    "unit_price": 28310
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 5,
+    "unit_price": 39660
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 4,
+    "unit_price": 48950
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 10,
+    "unit_price": 16100
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 10,
+    "unit_price": 14080
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1752380,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00207",
+  "request_id": "RQ-H00207",
+  "customer": "C-0077",
+  "created_by": "SL-02-02",
+  "created_at": 1790298000,
+  "lines": [
+   {
+    "sku": "DF-BT-031",
+    "qty": 3,
+    "unit_price": 31250
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 6,
+    "unit_price": 37680
+   },
+   {
+    "sku": "DF-BT-032",
+    "qty": 1,
+    "unit_price": 44320
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 6,
+    "unit_price": 38340
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 2,
+    "unit_price": 13330
+   }
+  ],
+  "discount_pct": 0,
+  "total": 620850,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00208",
+  "request_id": "RQ-H00208",
+  "customer": "C-0040",
+  "created_by": "SL-02-02",
+  "created_at": 1790299800,
+  "lines": [
+   {
+    "sku": "DF-BT-035",
+    "qty": 5,
+    "unit_price": 58290
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 5,
+    "unit_price": 8380
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 5,
+    "unit_price": 6520
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 4,
+    "unit_price": 2390
+   }
+  ],
+  "discount_pct": 0,
+  "total": 375510,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00209",
+  "request_id": "RQ-H00209",
+  "customer": "C-0009",
+  "created_by": "SL-02-02",
+  "created_at": 1790300700,
+  "lines": [
+   {
+    "sku": "DF-OF-012",
+    "qty": 9,
+    "unit_price": 1760
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 3,
+    "unit_price": 3430
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 8,
+    "unit_price": 7450
+   },
+   {
+    "sku": "DF-EO-010",
+    "qty": 2,
+    "unit_price": 40140
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 3,
+    "unit_price": 45700
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 3,
+    "unit_price": 7240
+   }
+  ],
+  "discount_pct": 0,
+  "total": 324830,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00210",
+  "request_id": "RQ-H00210",
+  "customer": "C-0012",
+  "created_by": "SL-02-02",
+  "created_at": 1790306100,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 5,
+    "unit_price": 19730
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 8,
+    "unit_price": 15810
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 2,
+    "unit_price": 26000
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 7,
+    "unit_price": 8680
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 3,
+    "unit_price": 2560
+   }
+  ],
+  "discount_pct": 0,
+  "total": 345570,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00211",
+  "request_id": "RQ-H00211",
+  "customer": "C-0077",
+  "created_by": "SL-02-02",
+  "created_at": 1790307000,
+  "lines": [
+   {
+    "sku": "DF-BP-009",
+    "qty": 5,
+    "unit_price": 12290
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 3,
+    "unit_price": 6940
+   }
+  ],
+  "discount_pct": 0,
+  "total": 82270,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00212",
+  "request_id": "RQ-H00212",
+  "customer": "C-0049",
+  "created_by": "SL-02-01",
+  "created_at": 1790309700,
+  "lines": [
+   {
+    "sku": "DF-OF-018",
+    "qty": 4,
+    "unit_price": 2840
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 2,
+    "unit_price": 43930
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 4,
+    "unit_price": 3730
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 2,
+    "unit_price": 15480
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 2,
+    "unit_price": 12270
+   }
+  ],
+  "discount_pct": 0,
+  "total": 169640,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00213",
+  "request_id": "RQ-H00213",
+  "customer": "C-0057",
+  "created_by": "SL-02-01",
+  "created_at": 1790313300,
+  "lines": [
+   {
+    "sku": "DF-BT-022",
+    "qty": 3,
+    "unit_price": 20750
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 9,
+    "unit_price": 51320
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 4,
+    "unit_price": 49970
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 2,
+    "unit_price": 44550
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 5,
+    "unit_price": 20730
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 3,
+    "unit_price": 41860
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 5,
+    "unit_price": 2830
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 8,
+    "unit_price": 16570
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 7,
+    "unit_price": 16910
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1307420,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00214",
+  "request_id": "RQ-H00214",
+  "customer": "C-0113",
+  "created_by": "SL-02-02",
+  "created_at": 1790316000,
+  "lines": [
+   {
+    "sku": "DF-EO-007",
+    "qty": 2,
+    "unit_price": 28590
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 2,
+    "unit_price": 7590
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 9,
+    "unit_price": 1550
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 5,
+    "unit_price": 33170
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 9,
+    "unit_price": 2350
+   }
+  ],
+  "discount_pct": 0,
+  "total": 273310,
+  "route": "credit",
+  "delivery_date": "2026-09-26",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00215",
+  "request_id": "RQ-H00215",
+  "customer": "C-0094",
+  "created_by": "SL-02-02",
+  "created_at": 1790322300,
+  "lines": [
+   {
+    "sku": "DF-OF-017",
+    "qty": 2,
+    "unit_price": 2440
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 2,
+    "unit_price": 2500
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 2,
+    "unit_price": 41830
+   }
+  ],
+  "discount_pct": 0,
+  "total": 93540,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00216",
+  "request_id": "RQ-H00216",
+  "customer": "C-0100",
+  "created_by": "SL-02-01",
+  "created_at": 1790325000,
+  "lines": [
+   {
+    "sku": "DF-EO-011",
+    "qty": 7,
+    "unit_price": 28530
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 10,
+    "unit_price": 16160
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 4,
+    "unit_price": 6540
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 10,
+    "unit_price": 2500
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 3,
+    "unit_price": 49970
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 2,
+    "unit_price": 26600
+   },
+   {
+    "sku": "DF-BP-002",
+    "qty": 4,
+    "unit_price": 7700
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 4,
+    "unit_price": 2370
+   }
+  ],
+  "discount_pct": 0,
+  "total": 655860,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00217",
+  "request_id": "RQ-H00217",
+  "customer": "C-0007",
+  "created_by": "SL-02-01",
+  "created_at": 1790387100,
+  "lines": [
+   {
+    "sku": "DF-BP-011",
+    "qty": 8,
+    "unit_price": 6510
+   },
+   {
+    "sku": "DF-OF-014",
+    "qty": 2,
+    "unit_price": 1910
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 6,
+    "unit_price": 37520
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 9,
+    "unit_price": 7070
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 10,
+    "unit_price": 3080
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 6,
+    "unit_price": 30040
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 4,
+    "unit_price": 7230
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 3,
+    "unit_price": 1540
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 9,
+    "unit_price": 20550
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1730
+   }
+  ],
+  "discount_pct": 0,
+  "total": 777640,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00218",
+  "request_id": "RQ-H00218",
+  "customer": "C-0034",
+  "created_by": "SL-02-01",
+  "created_at": 1790387100,
+  "lines": [
+   {
+    "sku": "DF-BT-035",
+    "qty": 3,
+    "unit_price": 57380
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 6,
+    "unit_price": 1620
+   },
+   {
+    "sku": "DF-OF-017",
+    "qty": 1,
+    "unit_price": 2400
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 6,
+    "unit_price": 38360
+   }
+  ],
+  "discount_pct": 0,
+  "total": 414420,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00219",
+  "request_id": "RQ-H00219",
+  "customer": "C-0002",
+  "created_by": "SL-02-02",
+  "created_at": 1790388900,
+  "lines": [
+   {
+    "sku": "DF-BP-008",
+    "qty": 10,
+    "unit_price": 19290
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 6,
+    "unit_price": 2420
+   },
+   {
+    "sku": "DF-BP-014",
+    "qty": 3,
+    "unit_price": 15630
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 8,
+    "unit_price": 49640
+   },
+   {
+    "sku": "DF-BT-028",
+    "qty": 8,
+    "unit_price": 51100
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 3,
+    "unit_price": 3530
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 4,
+    "unit_price": 3060
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 5,
+    "unit_price": 11810
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1142110,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00220",
+  "request_id": "RQ-H00220",
+  "customer": "C-0059",
+  "created_by": "SL-02-01",
+  "created_at": 1790391600,
+  "lines": [
+   {
+    "sku": "DF-BP-014",
+    "qty": 6,
+    "unit_price": 16560
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 3,
+    "unit_price": 46990
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 5,
+    "unit_price": 20640
+   },
+   {
+    "sku": "DF-BP-011",
+    "qty": 3,
+    "unit_price": 6770
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 4,
+    "unit_price": 3450
+   }
+  ],
+  "discount_pct": 0,
+  "total": 377640,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00221",
+  "request_id": "RQ-H00221",
+  "customer": "C-0084",
+  "created_by": "SL-02-01",
+  "created_at": 1790392500,
+  "lines": [
+   {
+    "sku": "DF-BT-023",
+    "qty": 8,
+    "unit_price": 16700
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 8,
+    "unit_price": 16270
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 8,
+    "unit_price": 45630
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 2,
+    "unit_price": 37690
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 4,
+    "unit_price": 26340
+   }
+  ],
+  "discount_pct": 0,
+  "total": 809540,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00222",
+  "request_id": "RQ-H00222",
+  "customer": "C-0093",
+  "created_by": "SL-02-01",
+  "created_at": 1790397900,
+  "lines": [
+   {
+    "sku": "DF-BT-032",
+    "qty": 2,
+    "unit_price": 44230
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 3,
+    "unit_price": 15030
+   },
+   {
+    "sku": "DF-EO-008",
+    "qty": 3,
+    "unit_price": 50640
+   },
+   {
+    "sku": "DF-EO-004",
+    "qty": 3,
+    "unit_price": 38220
+   }
+  ],
+  "discount_pct": 0,
+  "total": 400130,
+  "route": "credit",
+  "delivery_date": "2026-09-28",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00223",
+  "request_id": "RQ-H00223",
+  "customer": "C-0072",
+  "created_by": "SL-02-01",
+  "created_at": 1790412300,
+  "lines": [
+   {
+    "sku": "DF-EO-006",
+    "qty": 7,
+    "unit_price": 24370
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 2,
+    "unit_price": 8560
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 4,
+    "unit_price": 2120
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 5,
+    "unit_price": 20710
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 10,
+    "unit_price": 29880
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 7,
+    "unit_price": 5410
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 2,
+    "unit_price": 26470
+   }
+  ],
+  "discount_pct": 0,
+  "total": 689350,
+  "route": "credit",
+  "delivery_date": "2026-09-29",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00224",
+  "request_id": "RQ-H00224",
+  "customer": "C-0004",
+  "created_by": "SL-02-02",
+  "created_at": 1790559000,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 5,
+    "unit_price": 20140
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 1,
+    "unit_price": 58620
+   }
+  ],
+  "discount_pct": 0,
+  "total": 159320,
+  "route": "credit",
+  "delivery_date": "2026-09-29",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00225",
+  "request_id": "RQ-H00225",
+  "customer": "C-0002",
+  "created_by": "SL-02-02",
+  "created_at": 1790562600,
+  "lines": [
+   {
+    "sku": "DF-EO-003",
+    "qty": 6,
+    "unit_price": 30050
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 9,
+    "unit_price": 1750
+   },
+   {
+    "sku": "DF-BP-010",
+    "qty": 8,
+    "unit_price": 7080
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 10,
+    "unit_price": 11810
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 9,
+    "unit_price": 13110
+   },
+   {
+    "sku": "DF-BT-035",
+    "qty": 5,
+    "unit_price": 56530
+   }
+  ],
+  "discount_pct": 0,
+  "total": 771430,
+  "route": "credit",
+  "delivery_date": "2026-09-29",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00226",
+  "request_id": "RQ-H00226",
+  "customer": "C-0082",
+  "created_by": "SL-02-01",
+  "created_at": 1790562600,
+  "lines": [
+   {
+    "sku": "DF-BT-035",
+    "qty": 4,
+    "unit_price": 57170
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 5,
+    "unit_price": 6280
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 4,
+    "unit_price": 18190
+   }
+  ],
+  "discount_pct": 0,
+  "total": 332840,
+  "route": "credit",
+  "delivery_date": "2026-09-29",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00227",
+  "request_id": "RQ-H00227",
+  "customer": "C-0019",
+  "created_by": "SL-02-02",
+  "created_at": 1790564400,
+  "lines": [
+   {
+    "sku": "DF-OF-018",
+    "qty": 1,
+    "unit_price": 2830
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 1,
+    "unit_price": 16810
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 5,
+    "unit_price": 44550
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 4,
+    "unit_price": 15490
+   },
+   {
+    "sku": "DF-BP-005",
+    "qty": 2,
+    "unit_price": 7520
+   }
+  ],
+  "discount_pct": 0,
+  "total": 319390,
+  "route": "credit",
+  "delivery_date": "2026-09-29",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00228",
+  "request_id": "RQ-H00228",
+  "customer": "C-0019",
+  "created_by": "SL-02-02",
+  "created_at": 1790567100,
+  "lines": [
+   {
+    "sku": "DF-EO-002",
+    "qty": 5,
+    "unit_price": 47210
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 5,
+    "unit_price": 17290
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 4,
+    "unit_price": 31520
+   }
+  ],
+  "discount_pct": 0,
+  "total": 448580,
+  "route": "credit",
+  "delivery_date": "2026-09-29",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00229",
+  "request_id": "RQ-H00229",
+  "customer": "C-0061",
+  "created_by": "SL-02-02",
+  "created_at": 1790579700,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 6,
+    "unit_price": 19640
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 9,
+    "unit_price": 16920
+   },
+   {
+    "sku": "DF-BP-001",
+    "qty": 2,
+    "unit_price": 8400
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 7,
+    "unit_price": 16490
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 7,
+    "unit_price": 2560
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 6,
+    "unit_price": 3130
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 3,
+    "unit_price": 43890
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 4,
+    "unit_price": 5400
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 3,
+    "unit_price": 8010
+   }
+  ],
+  "discount_pct": 0,
+  "total": 616350,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00230",
+  "request_id": "RQ-H00230",
+  "customer": "C-0025",
+  "created_by": "SL-02-02",
+  "created_at": 1790581500,
+  "lines": [
+   {
+    "sku": "DF-EO-006",
+    "qty": 3,
+    "unit_price": 24500
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 3,
+    "unit_price": 44390
+   },
+   {
+    "sku": "DF-EO-001",
+    "qty": 5,
+    "unit_price": 42690
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 6,
+    "unit_price": 16870
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 2,
+    "unit_price": 3510
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 9,
+    "unit_price": 3120
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 10,
+    "unit_price": 5400
+   }
+  ],
+  "discount_pct": 0,
+  "total": 610440,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00231",
+  "request_id": "RQ-H00231",
+  "customer": "C-0002",
+  "created_by": "SL-02-02",
+  "created_at": 1790582400,
+  "lines": [
+   {
+    "sku": "DF-EO-003",
+    "qty": 10,
+    "unit_price": 30050
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 10,
+    "unit_price": 46230
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 3,
+    "unit_price": 17310
+   },
+   {
+    "sku": "DF-BP-012",
+    "qty": 6,
+    "unit_price": 14930
+   },
+   {
+    "sku": "DF-OF-012",
+    "qty": 2,
+    "unit_price": 1750
+   },
+   {
+    "sku": "DF-BP-008",
+    "qty": 7,
+    "unit_price": 19290
+   },
+   {
+    "sku": "DF-OF-011",
+    "qty": 5,
+    "unit_price": 1560
+   }
+  ],
+  "discount_pct": 0,
+  "total": 1050640,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00232",
+  "request_id": "RQ-H00232",
+  "customer": "C-0079",
+  "created_by": "SL-02-02",
+  "created_at": 1790585100,
+  "lines": [
+   {
+    "sku": "DF-BP-010",
+    "qty": 4,
+    "unit_price": 7140
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 4,
+    "unit_price": 15040
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 6,
+    "unit_price": 6800
+   },
+   {
+    "sku": "DF-EO-012",
+    "qty": 6,
+    "unit_price": 26830
+   }
+  ],
+  "discount_pct": 0,
+  "total": 290500,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00233",
+  "request_id": "RQ-H00233",
+  "customer": "C-0016",
+  "created_by": "SL-02-02",
+  "created_at": 1790647200,
+  "lines": [
+   {
+    "sku": "DF-BT-035",
+    "qty": 3,
+    "unit_price": 56870
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 5,
+    "unit_price": 31340
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 5,
+    "unit_price": 12780
+   },
+   {
+    "sku": "DF-BT-029",
+    "qty": 6,
+    "unit_price": 38580
+   }
+  ],
+  "discount_pct": 0,
+  "total": 622690,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00234",
+  "request_id": "RQ-H00234",
+  "customer": "C-0020",
+  "created_by": "SL-02-02",
+  "created_at": 1790647200,
+  "lines": [
+   {
+    "sku": "DF-BP-002",
+    "qty": 4,
+    "unit_price": 7840
+   },
+   {
+    "sku": "DF-BP-004",
+    "qty": 3,
+    "unit_price": 12980
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 2,
+    "unit_price": 16860
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 3,
+    "unit_price": 5670
+   },
+   {
+    "sku": "DF-EO-005",
+    "qty": 3,
+    "unit_price": 44910
+   }
+  ],
+  "discount_pct": 0,
+  "total": 255760,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00235",
+  "request_id": "RQ-H00235",
+  "customer": "C-0045",
+  "created_by": "SL-02-02",
+  "created_at": 1790648100,
+  "lines": [
+   {
+    "sku": "DF-BT-021",
+    "qty": 2,
+    "unit_price": 16600
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 5,
+    "unit_price": 17920
+   },
+   {
+    "sku": "DF-EO-003",
+    "qty": 1,
+    "unit_price": 31610
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 4,
+    "unit_price": 6880
+   }
+  ],
+  "discount_pct": 0,
+  "total": 181930,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00236",
+  "request_id": "RQ-H00236",
+  "customer": "C-0045",
+  "created_by": "SL-02-02",
+  "created_at": 1790651700,
+  "lines": [
+   {
+    "sku": "DF-EO-009",
+    "qty": 4,
+    "unit_price": 33170
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 3,
+    "unit_price": 16600
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 2,
+    "unit_price": 2480
+   }
+  ],
+  "discount_pct": 0,
+  "total": 187440,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00237",
+  "request_id": "RQ-H00237",
+  "customer": "C-0021",
+  "created_by": "SL-02-02",
+  "created_at": 1790653500,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 4,
+    "unit_price": 2160
+   },
+   {
+    "sku": "DF-BT-031",
+    "qty": 6,
+    "unit_price": 32030
+   }
+  ],
+  "discount_pct": 0,
+  "total": 200820,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00238",
+  "request_id": "RQ-H00238",
+  "customer": "C-0088",
+  "created_by": "SL-02-01",
+  "created_at": 1790653500,
+  "lines": [
+   {
+    "sku": "DF-OF-019",
+    "qty": 7,
+    "unit_price": 2490
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 3,
+    "unit_price": 16220
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 4,
+    "unit_price": 20150
+   },
+   {
+    "sku": "DF-OF-022",
+    "qty": 7,
+    "unit_price": 3450
+   },
+   {
+    "sku": "DF-BP-006",
+    "qty": 9,
+    "unit_price": 16410
+   },
+   {
+    "sku": "DF-OF-021",
+    "qty": 5,
+    "unit_price": 2810
+   },
+   {
+    "sku": "DF-BT-026",
+    "qty": 6,
+    "unit_price": 41470
+   },
+   {
+    "sku": "DF-EO-011",
+    "qty": 10,
+    "unit_price": 28530
+   }
+  ],
+  "discount_pct": 0,
+  "total": 866700,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00239",
+  "request_id": "RQ-H00239",
+  "customer": "C-0058",
+  "created_by": "SL-02-01",
+  "created_at": 1790655300,
+  "lines": [
+   {
+    "sku": "DF-OF-014",
+    "qty": 4,
+    "unit_price": 1980
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 6,
+    "unit_price": 2620
+   }
+  ],
+  "discount_pct": 0,
+  "total": 23640,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00240",
+  "request_id": "RQ-H00240",
+  "customer": "C-0058",
+  "created_by": "SL-02-01",
+  "created_at": 1790656200,
+  "lines": [
+   {
+    "sku": "DF-EO-009",
+    "qty": 4,
+    "unit_price": 34060
+   },
+   {
+    "sku": "DF-EO-015",
+    "qty": 1,
+    "unit_price": 27450
+   },
+   {
+    "sku": "DF-OF-023",
+    "qty": 5,
+    "unit_price": 3450
+   }
+  ],
+  "discount_pct": 0,
+  "total": 180940,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00241",
+  "request_id": "RQ-H00241",
+  "customer": "C-0038",
+  "created_by": "SL-02-02",
+  "created_at": 1790657100,
+  "lines": [
+   {
+    "sku": "DF-OF-013",
+    "qty": 6,
+    "unit_price": 2140
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 6,
+    "unit_price": 20470
+   },
+   {
+    "sku": "DF-BT-021",
+    "qty": 7,
+    "unit_price": 16160
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 5,
+    "unit_price": 33110
+   },
+   {
+    "sku": "DF-BT-023",
+    "qty": 2,
+    "unit_price": 16850
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 2,
+    "unit_price": 21120
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 8,
+    "unit_price": 14390
+   },
+   {
+    "sku": "DF-EO-013",
+    "qty": 9,
+    "unit_price": 17230
+   },
+   {
+    "sku": "DF-BP-009",
+    "qty": 9,
+    "unit_price": 11800
+   }
+  ],
+  "discount_pct": 0,
+  "total": 866660,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00242",
+  "request_id": "RQ-H00242",
+  "customer": "C-0003",
+  "created_by": "SL-02-02",
+  "created_at": 1790658900,
+  "lines": [
+   {
+    "sku": "DF-BT-030",
+    "qty": 4,
+    "unit_price": 20420
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 1,
+    "unit_price": 17360
+   },
+   {
+    "sku": "DF-EO-009",
+    "qty": 5,
+    "unit_price": 33210
+   },
+   {
+    "sku": "DF-EO-002",
+    "qty": 4,
+    "unit_price": 48430
+   },
+   {
+    "sku": "DF-EO-014",
+    "qty": 5,
+    "unit_price": 22020
+   }
+  ],
+  "discount_pct": 0,
+  "total": 568910,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00243",
+  "request_id": "RQ-H00243",
+  "customer": "C-0052",
+  "created_by": "SL-02-02",
+  "created_at": 1790664300,
+  "lines": [
+   {
+    "sku": "DF-EO-002",
+    "qty": 8,
+    "unit_price": 46020
+   },
+   {
+    "sku": "DF-OF-019",
+    "qty": 6,
+    "unit_price": 2530
+   },
+   {
+    "sku": "DF-BT-022",
+    "qty": 9,
+    "unit_price": 21040
+   },
+   {
+    "sku": "DF-OF-013",
+    "qty": 7,
+    "unit_price": 2100
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 9,
+    "unit_price": 8040
+   },
+   {
+    "sku": "DF-OF-025",
+    "qty": 8,
+    "unit_price": 6140
+   },
+   {
+    "sku": "DF-BT-025",
+    "qty": 6,
+    "unit_price": 26630
+   },
+   {
+    "sku": "DF-BT-033",
+    "qty": 7,
+    "unit_price": 6490
+   }
+  ],
+  "discount_pct": 0,
+  "total": 914090,
+  "route": "credit",
+  "delivery_date": "2026-09-30",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00244",
+  "request_id": "RQ-H00244",
+  "customer": "C-0071",
+  "created_by": "SL-02-02",
+  "created_at": 1790665200,
+  "lines": [
+   {
+    "sku": "DF-BP-007",
+    "qty": 4,
+    "unit_price": 17600
+   },
+   {
+    "sku": "DF-BT-027",
+    "qty": 6,
+    "unit_price": 45720
+   },
+   {
+    "sku": "DF-BT-034",
+    "qty": 8,
+    "unit_price": 8030
+   },
+   {
+    "sku": "DF-BP-013",
+    "qty": 2,
+    "unit_price": 16410
+   },
+   {
+    "sku": "DF-OF-016",
+    "qty": 4,
+    "unit_price": 5430
+   }
+  ],
+  "discount_pct": 0,
+  "total": 463500,
+  "route": "credit",
+  "delivery_date": "2026-10-01",
+  "status": "delivered",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00245",
+  "request_id": "RQ-H00245",
+  "customer": "C-0012",
+  "created_by": "SL-02-02",
+  "created_at": 1790667900,
+  "lines": [
+   {
+    "sku": "DF-BT-035",
+    "qty": 7,
+    "unit_price": 56400
+   },
+   {
+    "sku": "DF-BP-003",
+    "qty": 7,
+    "unit_price": 12990
+   },
+   {
+    "sku": "DF-OF-020",
+    "qty": 6,
+    "unit_price": 3150
+   },
+   {
+    "sku": "DF-BP-007",
+    "qty": 7,
+    "unit_price": 17880
+   },
+   {
+    "sku": "DF-OF-015",
+    "qty": 2,
+    "unit_price": 3650
+   },
+   {
+    "sku": "DF-BP-015",
+    "qty": 3,
+    "unit_price": 14520
+   },
+   {
+    "sku": "DF-EO-006",
+    "qty": 3,
+    "unit_price": 24700
+   }
+  ],
+  "discount_pct": 0,
+  "total": 754750,
+  "route": "credit",
+  "delivery_date": "2026-10-01",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00246",
+  "request_id": "RQ-H00246",
+  "customer": "C-0003",
+  "created_by": "SL-02-02",
+  "created_at": 1790674200,
+  "lines": [
+   {
+    "sku": "DF-BP-010",
+    "qty": 1,
+    "unit_price": 7320
+   },
+   {
+    "sku": "DF-OF-024",
+    "qty": 1,
+    "unit_price": 2450
+   }
+  ],
+  "discount_pct": 0,
+  "total": 9770,
+  "route": "credit",
+  "delivery_date": "2026-10-01",
+  "status": "delivered",
+  "warehouse": "WH-B",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00247",
+  "request_id": "RQ-H00247",
+  "customer": "C-0006",
+  "created_by": "SL-02-01",
+  "created_at": 1790738400,
+  "lines": [
+   {
+    "sku": "DF-EO-003",
+    "qty": 4,
+    "unit_price": 29810
+   }
+  ],
+  "discount_pct": 0,
+  "total": 119240,
+  "route": "credit",
+  "delivery_date": "2026-10-01",
+  "status": "out_for_delivery",
+  "warehouse": "WH-A",
+  "approvals": []
+ },
+ {
+  "id": "DF-SO-00248",
+  "request_id": "RQ-H00248",
+  "customer": "C-0001",
+  "created_by": "SL-02-01",
+  "created_at": 1790755800,
+  "lines": [
+   {
+    "sku": "DF-EO-001",
+    "qty": 5,
+    "unit_price": 44000
+   },
+   {
+    "sku": "DF-BT-030",
+    "qty": 10,
+    "unit_price": 20500
+   }
+  ],
+  "discount_pct": 0,
+  "total": 425000,
+  "route": "credit",
+  "delivery_date": "2026-10-02",
+  "status": "pending_dispatch",
+  "warehouse": "WH-A",
+  "approvals": []
+ }
+]

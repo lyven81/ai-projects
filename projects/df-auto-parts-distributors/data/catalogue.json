@@ -1,0 +1,602 @@
+[
+ {
+  "sku": "DF-EO-001",
+  "name": "5W-30 Engine Oil",
+  "brand": "Lumba",
+  "part_no": "LB-5W30-4L",
+  "spec": "Fully synthetic, API SP",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of 5W-30 engine oil"
+ },
+ {
+  "sku": "DF-EO-002",
+  "name": "0W-20 Engine Oil",
+  "brand": "Lumba",
+  "part_no": "LB-0W20-4L",
+  "spec": "Fully synthetic, API SP, ILSAC GF-6",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of 0W-20 engine oil"
+ },
+ {
+  "sku": "DF-EO-003",
+  "name": "10W-40 Engine Oil",
+  "brand": "Lumba",
+  "part_no": "LB-10W40-4L",
+  "spec": "Semi-synthetic, API SN",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of 10W-40 engine oil"
+ },
+ {
+  "sku": "DF-EO-004",
+  "name": "15W-40 Diesel Engine Oil",
+  "brand": "Tenaga",
+  "part_no": "TG-15W40-6L",
+  "spec": "Mineral, API CK-4",
+  "unit": "carton",
+  "contains": "4 x 6L",
+  "plural": "cartons of 15W-40 diesel engine oil"
+ },
+ {
+  "sku": "DF-EO-005",
+  "name": "5W-40 Engine Oil",
+  "brand": "Tenaga",
+  "part_no": "TG-5W40-4L",
+  "spec": "Fully synthetic, API SP",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of 5W-40 engine oil"
+ },
+ {
+  "sku": "DF-EO-006",
+  "name": "20W-50 Engine Oil",
+  "brand": "Tenaga",
+  "part_no": "TG-20W50-4L",
+  "spec": "Mineral, API SL",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of 20W-50 engine oil"
+ },
+ {
+  "sku": "DF-EO-007",
+  "name": "10W-30 Engine Oil",
+  "brand": "Pantas",
+  "part_no": "PT-10W30-4L",
+  "spec": "Semi-synthetic, API SN",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of 10W-30 engine oil"
+ },
+ {
+  "sku": "DF-EO-008",
+  "name": "0W-16 Hybrid Engine Oil",
+  "brand": "Pantas",
+  "part_no": "PT-0W16-4L",
+  "spec": "Fully synthetic, API SP",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of 0W-16 hybrid engine oil"
+ },
+ {
+  "sku": "DF-EO-009",
+  "name": "ATF Dexron VI",
+  "brand": "Pantas",
+  "part_no": "PT-ATF6-1L",
+  "spec": "Automatic transmission fluid",
+  "unit": "carton",
+  "contains": "12 x 1L",
+  "plural": "cartons of ATF Dexron VI"
+ },
+ {
+  "sku": "DF-EO-010",
+  "name": "CVT Fluid",
+  "brand": "Lumba",
+  "part_no": "LB-CVT-4L",
+  "spec": "Continuously variable transmission fluid",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of CVT fluid"
+ },
+ {
+  "sku": "DF-EO-011",
+  "name": "Gear Oil 75W-90",
+  "brand": "Tenaga",
+  "part_no": "TG-7590-1L",
+  "spec": "API GL-5",
+  "unit": "carton",
+  "contains": "12 x 1L",
+  "plural": "cartons of 75W-90 gear oil"
+ },
+ {
+  "sku": "DF-EO-012",
+  "name": "Brake Fluid DOT 4",
+  "brand": "Pantas",
+  "part_no": "PT-DOT4-500",
+  "spec": "DOT 4",
+  "unit": "carton",
+  "contains": "24 x 500ml",
+  "plural": "cartons of DOT 4 brake fluid"
+ },
+ {
+  "sku": "DF-EO-013",
+  "name": "Coolant, long life",
+  "brand": "Sejuk",
+  "part_no": "SJ-LLC-4L",
+  "spec": "Pre-mixed 50/50, green",
+  "unit": "carton",
+  "contains": "4 x 4L",
+  "plural": "cartons of long-life coolant"
+ },
+ {
+  "sku": "DF-EO-014",
+  "name": "Power Steering Fluid",
+  "brand": "Pantas",
+  "part_no": "PT-PSF-1L",
+  "spec": "Universal",
+  "unit": "carton",
+  "contains": "12 x 1L",
+  "plural": "cartons of power steering fluid"
+ },
+ {
+  "sku": "DF-EO-015",
+  "name": "Motorcycle Oil 10W-40",
+  "brand": "Lumba",
+  "part_no": "LB-MC1040-1L",
+  "spec": "Semi-synthetic, JASO MA2",
+  "unit": "carton",
+  "contains": "12 x 1L",
+  "plural": "cartons of 10W-40 motorcycle oil"
+ },
+ {
+  "sku": "DF-OF-011",
+  "name": "Oil Filter, Proton Saga and Persona",
+  "brand": "Saring",
+  "part_no": "SR-OF-PR01",
+  "spec": "Spin-on, M20 x 1.5",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Proton oil filters"
+ },
+ {
+  "sku": "DF-OF-012",
+  "name": "Oil Filter, Perodua and Toyota",
+  "brand": "Saring",
+  "part_no": "SR-OF-PD02",
+  "spec": "Spin-on, M20 x 1.5",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "oil filters"
+ },
+ {
+  "sku": "DF-OF-013",
+  "name": "Oil Filter, Honda",
+  "brand": "Saring",
+  "part_no": "SR-OF-HD03",
+  "spec": "Spin-on, M20 x 1.5",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Honda oil filters"
+ },
+ {
+  "sku": "DF-OF-014",
+  "name": "Oil Filter, Nissan",
+  "brand": "Saring",
+  "part_no": "SR-OF-NS04",
+  "spec": "Spin-on, 3/4-16 UNF",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Nissan oil filters"
+ },
+ {
+  "sku": "DF-OF-015",
+  "name": "Oil Filter, diesel pick-up",
+  "brand": "Saring",
+  "part_no": "SR-OF-DP05",
+  "spec": "Spin-on, M26 x 1.5",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "diesel oil filters"
+ },
+ {
+  "sku": "DF-OF-016",
+  "name": "Fuel Filter, diesel pick-up",
+  "brand": "Saring",
+  "part_no": "SR-FF-DP06",
+  "spec": "Inline, water separator",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "diesel fuel filters"
+ },
+ {
+  "sku": "DF-OF-017",
+  "name": "Cabin Air Filter, Perodua Myvi",
+  "brand": "Udara",
+  "part_no": "UD-CF-PD07",
+  "spec": "Activated carbon",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Myvi cabin filters"
+ },
+ {
+  "sku": "DF-OF-018",
+  "name": "Cabin Air Filter, Honda City",
+  "brand": "Udara",
+  "part_no": "UD-CF-HD08",
+  "spec": "Activated carbon",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "City cabin filters"
+ },
+ {
+  "sku": "DF-OF-019",
+  "name": "Cabin Air Filter, Toyota Vios",
+  "brand": "Udara",
+  "part_no": "UD-CF-TY09",
+  "spec": "Activated carbon",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Vios cabin filters"
+ },
+ {
+  "sku": "DF-OF-020",
+  "name": "Cabin Air Filter, Proton X50",
+  "brand": "Udara",
+  "part_no": "UD-CF-PR10",
+  "spec": "Activated carbon",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "X50 cabin filters"
+ },
+ {
+  "sku": "DF-OF-021",
+  "name": "Engine Air Filter, Perodua Axia and Bezza",
+  "brand": "Udara",
+  "part_no": "UD-AF-PD11",
+  "spec": "Panel, paper element",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Axia air filters"
+ },
+ {
+  "sku": "DF-OF-022",
+  "name": "Engine Air Filter, Honda City and Jazz",
+  "brand": "Udara",
+  "part_no": "UD-AF-HD12",
+  "spec": "Panel, paper element",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "City air filters"
+ },
+ {
+  "sku": "DF-OF-023",
+  "name": "Engine Air Filter, Toyota Vios",
+  "brand": "Udara",
+  "part_no": "UD-AF-TY13",
+  "spec": "Panel, paper element",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Vios air filters"
+ },
+ {
+  "sku": "DF-OF-024",
+  "name": "Engine Air Filter, Proton Saga",
+  "brand": "Udara",
+  "part_no": "UD-AF-PR14",
+  "spec": "Panel, paper element",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "Saga air filters"
+ },
+ {
+  "sku": "DF-OF-025",
+  "name": "Engine Air Filter, diesel pick-up",
+  "brand": "Udara",
+  "part_no": "UD-AF-DP15",
+  "spec": "Panel, heavy duty",
+  "unit": "piece",
+  "contains": "1 filter",
+  "plural": "diesel air filters"
+ },
+ {
+  "sku": "DF-BP-001",
+  "name": "Front Brake Pads, Perodua Myvi",
+  "brand": "Cengkam",
+  "part_no": "CK-FP-PD01",
+  "spec": "Semi-metallic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Myvi front pads"
+ },
+ {
+  "sku": "DF-BP-002",
+  "name": "Front Brake Pads, Proton Saga",
+  "brand": "Cengkam",
+  "part_no": "CK-FP-PR02",
+  "spec": "Semi-metallic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Saga front pads"
+ },
+ {
+  "sku": "DF-BP-003",
+  "name": "Front Brake Pads, Honda City",
+  "brand": "Cengkam",
+  "part_no": "CK-FP-HD03",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of City front pads"
+ },
+ {
+  "sku": "DF-BP-004",
+  "name": "Front Brake Pads, Toyota Vios",
+  "brand": "Cengkam",
+  "part_no": "CK-FP-TY04",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Vios front pads"
+ },
+ {
+  "sku": "DF-BP-005",
+  "name": "Front Brake Pads, Perodua Axia and Bezza",
+  "brand": "Cengkam",
+  "part_no": "CK-FP-PD05",
+  "spec": "Semi-metallic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Axia front pads"
+ },
+ {
+  "sku": "DF-BP-006",
+  "name": "Front Brake Pads, Proton X50",
+  "brand": "Cengkam",
+  "part_no": "CK-FP-PR06",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of X50 front pads"
+ },
+ {
+  "sku": "DF-BP-007",
+  "name": "Front Brake Pads, Honda Civic",
+  "brand": "Henti",
+  "part_no": "HT-FP-HD07",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Civic front pads"
+ },
+ {
+  "sku": "DF-BP-008",
+  "name": "Front Brake Pads, Toyota Hilux",
+  "brand": "Henti",
+  "part_no": "HT-FP-TY08",
+  "spec": "Semi-metallic, heavy duty",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Hilux front pads"
+ },
+ {
+  "sku": "DF-BP-009",
+  "name": "Front Brake Pads, Nissan Almera",
+  "brand": "Henti",
+  "part_no": "HT-FP-NS09",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Almera front pads"
+ },
+ {
+  "sku": "DF-BP-010",
+  "name": "Rear Brake Shoes, Perodua Myvi",
+  "brand": "Cengkam",
+  "part_no": "CK-RS-PD10",
+  "spec": "Drum, bonded",
+  "unit": "set",
+  "contains": "4 shoes, one axle",
+  "plural": "sets of Myvi rear shoes"
+ },
+ {
+  "sku": "DF-BP-011",
+  "name": "Rear Brake Shoes, Proton Saga",
+  "brand": "Cengkam",
+  "part_no": "CK-RS-PR11",
+  "spec": "Drum, bonded",
+  "unit": "set",
+  "contains": "4 shoes, one axle",
+  "plural": "sets of Saga rear shoes"
+ },
+ {
+  "sku": "DF-BP-012",
+  "name": "Rear Brake Pads, Honda Civic",
+  "brand": "Henti",
+  "part_no": "HT-RP-HD12",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Civic rear pads"
+ },
+ {
+  "sku": "DF-BP-013",
+  "name": "Rear Brake Pads, Toyota Camry",
+  "brand": "Henti",
+  "part_no": "HT-RP-TY13",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of Camry rear pads"
+ },
+ {
+  "sku": "DF-BP-014",
+  "name": "Rear Brake Pads, Proton X70",
+  "brand": "Henti",
+  "part_no": "HT-RP-PR14",
+  "spec": "Ceramic",
+  "unit": "set",
+  "contains": "4 pads, one axle",
+  "plural": "sets of X70 rear pads"
+ },
+ {
+  "sku": "DF-BP-015",
+  "name": "Rear Brake Shoes, Toyota Hilux",
+  "brand": "Henti",
+  "part_no": "HT-RS-TY15",
+  "spec": "Drum, heavy duty",
+  "unit": "set",
+  "contains": "4 shoes, one axle",
+  "plural": "sets of Hilux rear shoes"
+ },
+ {
+  "sku": "DF-BT-021",
+  "name": "NS40 Battery",
+  "brand": "Kuasa",
+  "part_no": "KS-NS40ZL",
+  "spec": "12V 35Ah, maintenance free",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "NS40 batteries"
+ },
+ {
+  "sku": "DF-BT-022",
+  "name": "NS40 Battery, enhanced",
+  "brand": "Kuasa",
+  "part_no": "KS-NS40ZL-E",
+  "spec": "12V 38Ah, EFB",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "enhanced NS40 batteries"
+ },
+ {
+  "sku": "DF-BT-023",
+  "name": "NS50 Battery",
+  "brand": "Kuasa",
+  "part_no": "KS-NS50L",
+  "spec": "12V 40Ah, low maintenance",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "NS50 batteries"
+ },
+ {
+  "sku": "DF-BT-024",
+  "name": "NS70 Battery",
+  "brand": "Kuasa",
+  "part_no": "KS-NS70L",
+  "spec": "12V 65Ah, maintenance free",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "NS70 batteries"
+ },
+ {
+  "sku": "DF-BT-025",
+  "name": "N50Z Battery",
+  "brand": "Kuasa",
+  "part_no": "KS-N50ZL",
+  "spec": "12V 60Ah, maintenance free",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "N50Z batteries"
+ },
+ {
+  "sku": "DF-BT-026",
+  "name": "DIN55 Battery",
+  "brand": "Arus",
+  "part_no": "AR-DIN55",
+  "spec": "12V 55Ah, AGM",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "DIN55 batteries"
+ },
+ {
+  "sku": "DF-BT-027",
+  "name": "DIN65 Battery",
+  "brand": "Arus",
+  "part_no": "AR-DIN65",
+  "spec": "12V 65Ah, AGM",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "DIN65 batteries"
+ },
+ {
+  "sku": "DF-BT-028",
+  "name": "DIN75 Battery",
+  "brand": "Arus",
+  "part_no": "AR-DIN75",
+  "spec": "12V 75Ah, AGM",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "DIN75 batteries"
+ },
+ {
+  "sku": "DF-BT-029",
+  "name": "Q85 Start-Stop Battery",
+  "brand": "Arus",
+  "part_no": "AR-Q85",
+  "spec": "12V 65Ah, EFB start-stop",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "Q85 batteries"
+ },
+ {
+  "sku": "DF-BT-030",
+  "name": "NS60 Battery",
+  "brand": "Kuasa",
+  "part_no": "KS-NS60LS",
+  "spec": "12V 45Ah, maintenance free",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "NS60 batteries"
+ },
+ {
+  "sku": "DF-BT-031",
+  "name": "N70Z Battery, commercial",
+  "brand": "Kuasa",
+  "part_no": "KS-N70ZL",
+  "spec": "12V 75Ah, low maintenance",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "N70Z batteries"
+ },
+ {
+  "sku": "DF-BT-032",
+  "name": "N100 Battery, truck",
+  "brand": "Kuasa",
+  "part_no": "KS-N100",
+  "spec": "12V 100Ah, low maintenance",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "N100 batteries"
+ },
+ {
+  "sku": "DF-BT-033",
+  "name": "Motorcycle Battery 5Ah",
+  "brand": "Arus",
+  "part_no": "AR-MC5",
+  "spec": "12V 5Ah, sealed",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "5Ah motorcycle batteries"
+ },
+ {
+  "sku": "DF-BT-034",
+  "name": "Motorcycle Battery 7Ah",
+  "brand": "Arus",
+  "part_no": "AR-MC7",
+  "spec": "12V 7Ah, sealed",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "7Ah motorcycle batteries"
+ },
+ {
+  "sku": "DF-BT-035",
+  "name": "Hybrid Auxiliary Battery",
+  "brand": "Arus",
+  "part_no": "AR-HAUX",
+  "spec": "12V 35Ah, AGM",
+  "unit": "piece",
+  "contains": "1 battery",
+  "plural": "hybrid auxiliary batteries"
+ }
+]

@@ -1,0 +1,19 @@
+{
+ "seed": 42,
+ "now": 1790820000,
+ "now_label": "Thursday 1 October 2026, 10:00 Malaysia time",
+ "next_order": 249,
+ "next_request": 1,
+ "next_approval": 105,
+ "named": {
+  "C-0001": "Chloe's workshop",
+  "C-0004": "Daniel's workshop",
+  "credit_incomplete": "C-0003",
+  "stock_30h": [
+   "DF-BT-030",
+   "WH-A"
+  ],
+  "out_today": "DF-SO-00247",
+  "open_order": "DF-SO-00248"
+ }
+}

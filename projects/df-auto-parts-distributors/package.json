@@ -1,0 +1,16 @@
+{
+  "name": "df-auto-parts-distributors",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DF Auto Parts Distributors staff assistant. MCP server, PreToolUse and PostToolUse hooks, escalations and drafts, tool tests, chained benchmark",
+  "type": "commonjs",
+  "scripts": {
+    "mcp": "node mcp_server.mjs",
+    "test:tools": "node benchmark/test_tools.js",
+    "test:mcp": "node benchmark/test_mcp.mjs",
+    "benchmark": "node benchmark/run_benchmark.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.0"
+  }
+}

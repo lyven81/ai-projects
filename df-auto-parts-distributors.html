@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DF Auto Parts Distributors</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
+.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Operational Efficiency",
+    "problemType": "Business workflow",
+    "problem": "A parts distributor's salespeople start each order, but a discount, a small order, an early delivery or paying first is a manager's decision. Each request has to reach the manager who owns it, with the data to decide. The order must wait until every decision is on record.",
+    "built": "The AI only chooses which of seven tools to call. Code checks every request before anything runs and sends each decision that belongs to a manager to that manager, with the data to decide. Code also checks every result against the policy, and places an order once, only when every approval is recorded.",
+    "evidence": "All 36 test runs passed with no hard-limit breach: seven scenarios run as one working day, plus five failure cases. The AI's first tool was right in 29 of 29 turns. Before real users it still needs real sign-in and server-side enforcement, a verified payment before a prepaid order is released for dispatch, a security review, a monitoring owner and a rollback plan."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:df-auto-parts-distributors"></div>
+<div class="top"><h1>DF Auto Parts Distributors</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/staff-desk.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/df-auto-parts-distributors" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<img class="cover" src="images/df-auto-parts-distributors/cover.jpeg" alt="Illustration of an open-plan office where sales, finance and warehouse staff work at their own desks">
+<p>DF Auto Parts Distributors is designed for an automotive spare parts distributor in Selangor, with seven staff in Sales, Finance and Warehouse serving 120 workshops and parts shops. A sales executive takes each customer's request, but a discount, an order below the minimum, an earlier delivery or paying before dispatch is a decision for the sales, warehouse or finance manager. Each request has to reach the right manager with the facts to decide, and the order has to wait until every decision is on record.</p>
+<p>I built a staff desk where the AI reads each request and chooses the step that handles it. Code checks who is asking, the prices, stock, credit and delivery terms, and sends anything a manager decides to that manager with the data attached. The manager approves or declines on the same desk, and code tells the sales executive what happens next.</p>
+<p>Managers keep every discount, minimum-order, delivery-date and prepaid decision, so a discount or a below-minimum order never goes out without the manager who answers for the margin, and only the person a request is addressed to can decide it, once. The desk was tested as one working day of seven scenarios plus five failure cases, 36 runs in all, and passed all 36. Replay the recorded working day step by step or try it live on the <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/staff-desk.html" target="_blank" rel="noopener">staff desk</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Operational Efficiency</td></tr><tr><th>Problem type</th><td>Business workflow</td></tr><tr><th>Problem</th><td>A parts distributor's salespeople start each order, but a discount, a small order, an early delivery or paying first is a manager's decision. Each request has to reach the manager who owns it, with the data to decide. The order must wait until every decision is on record.</td></tr><tr><th>Built</th><td>The AI only chooses which of seven tools to call. Code checks every request before anything runs and sends each decision that belongs to a manager to that manager, with the data to decide. Code also checks every result against the policy, and places an order once, only when every approval is recorded.</td></tr><tr><th>Evidence</th><td>All 36 test runs passed with no hard-limit breach: seven scenarios run as one working day, plus five failure cases. The AI's first tool was right in 29 of 29 turns. Before real users it still needs real sign-in and server-side enforcement, a verified payment before a prepaid order is released for dispatch, a security review, a monitoring owner and a rollback plan.</td></tr></table>
+<h2>How It Works</h2>
+<p>Chloe asks for a 10% discount on an engine oil order, from request to the manager's decision. Not shown: the AI choosing the decision step after Farid replies, and the later steps for delivery terms and placing the order (scenarios 5 and 7).</p>
+<div class="wf"><script type="application/json">{"id":"df","hz":{"nodes":[{"id":"u1","r":1,"c":1,"b":["c","Chloe asks for 10% off"]},{"id":"a1","r":1,"c":2,"b":["a","AI picks the order step"]},{"id":"s1","r":1,"c":3,"b":["s","Code sends it to Farid","A discount is Farid's call."]},{"id":"h1","r":1,"c":4,"b":["p","Farid approves or declines"]},{"id":"s2","r":1,"c":5,"b":["s","Code records the approval","For this order only."]},{"id":"o1","r":1,"c":6,"b":["o","Chloe is told: approved"]},{"id":"o2","r":2,"c":4,"b":["o","Chloe sees the reason and can revise"]},{"id":"o3","r":2,"c":5,"b":["o","Refused: only Farid decides"]}],"edges":[["u1","a1"],["a1","s1"],["s1","h1"],["h1","s2"],["s2","o1"],["h1","o2","Declined, with reason"],["s2","o3","Anyone else tries"]]},"rows":[{"c":["c","Chloe asks for 10% off","10 cartons of 5W-30 engine oil for a workshop customer."]},{"down":""},{"c":["a","AI picks the order step","It chooses the step; it decides nothing."]},{"down":""},{"c":["s","Code sends it to Farid","A discount is Farid's call.","Nothing is placed; the order is kept as a draft.","Farid sees RM 4,400.00 less RM 440.00, with RM 5,200.00 credit available.","The reply \"Sent to Farid Iskandar, sales manager.\" is written in code."]},{"down":""},{"c":["p","Farid approves or declines"],"l":{"t":"Declined, with reason","b":[["o","Chloe sees the reason and can revise","In scenario 3, Farid declines a below-minimum order with a reason."]]}},{"down":""},{"c":["s","Code records the approval","For this order only."],"r":{"t":"Anyone else tries","b":[["o","Refused: only Farid decides","The refusal is written in code."]]}},{"down":""},{"c":["o","Chloe is told: approved","Place the order when the customer's terms are settled."]}]}</script></div>
+<ol><li>Chloe asks for 10% off an engine oil order for a workshop customer. The AI only picks the order step. It decides nothing about the discount.</li><li>Code finds that a discount is the sales manager's decision. It keeps the order as a draft and sends it to Farid with the total, the discount and the credit available. Nothing is placed.</li><li>Farid approves or declines on the same desk. A decline carries Farid's reason, so Chloe can revise the order.</li><li>Code records the approval for this one order and tells Chloe. Chloe places the order once the customer's other terms are settled. Anyone else who tries to decide is refused.</li></ol>
+<h2>What It Does</h2>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Sends each decision to its owner</b></td><td>A discount or an order below RM 300.00 goes to Farid Iskandar, sales manager. A delivery date earlier than the terms goes to Azlan Yusof, warehouse manager, and the prepaid route to Nadia Zulkifli, finance manager. Code picks the manager, never the AI.</td></tr><tr><td><b>Gives the manager the data to decide</b></td><td>Each notification carries what that decision needs: the total, the discount and the credit available, or the stock and the deliveries already out today. Warehouse is shown no prices or credit.</td></tr><tr><td><b>One decision at a time</b></td><td>A request that needs several approvals asks for them in order: discount, minimum order, delivery date, prepaid. Asking again while one is open gets the reply "This is still with" and the name of the person who holds it.</td></tr><tr><td><b>Decided once, by the right person</b></td><td>Only the manager a request is addressed to can approve or decline it, and only once. Anyone else is refused in a sentence written in code.</td></tr><tr><td><b>Places the order once</b></td><td>The order stays a draft until every approval is recorded for its request. The sales executive confirms the full summary on screen, and code rechecks stock and credit as it places the order once.</td></tr><tr><td><b>Each person sees their own part</b></td><td>Sales executives open only their own customers. Finance is refused stock figures, and Warehouse is shown no prices or credit.</td></tr><tr><td><b>Keeps the record</b></td><td>Every approval, decline and reason is recorded against the request. The salesperson is told the outcome, with the reason for a decline.</td></tr></table>
+<h3>Who decides what</h3>
+<table><tr><th>Decision or action</th><th>Who</th><th>Clause</th></tr><tr><td>Discount, up to 15%</td><td>Farid Iskandar, sales manager</td><td>SP-06, MP-16</td></tr><tr><td>Minimum-order exception</td><td>Farid Iskandar, sales manager</td><td>SP-03, MP-16</td></tr><tr><td>Prepaid route</td><td>Nadia Zulkifli, finance manager</td><td>FP-04, MP-16</td></tr><tr><td>Delivery-date exception</td><td>Azlan Yusof, warehouse manager</td><td>WP-07, MP-16</td></tr><tr><td>Placing an order, after Confirm summary</td><td>Sales executives, for their own customers: Chloe Lim, Daniel Wong</td><td>SP-01, SP-07, MP-06</td></tr><tr><td>Scheduling a delivery within the terms</td><td>Warehouse: Azlan Yusof, Jason Tan</td><td>WP-10</td></tr><tr><td>Confirming a stock count</td><td>Azlan Yusof, warehouse manager</td><td>WP-03</td></tr><tr><td>Reading invoices and payments</td><td>Finance: Nadia Zulkifli, Priya Nair</td><td>MP-07</td></tr></table>
+<h2>Try It</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/staff-desk.html" target="_blank" rel="noopener">Staff desk</a></b></td><td>Follow the seven scenarios step by step as the staff member who acts. Replay the recorded run of every step without a key, with Under the hood showing who decided each step; or go live from any step with your own API key.</td></tr>
+<tr><td><b>The policies</b></td><td><a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/resources/Management%20Policy.html" target="_blank" rel="noopener">Management Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/resources/Sales%20Policy.html" target="_blank" rel="noopener">Sales Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/resources/Finance%20Policy.html" target="_blank" rel="noopener">Finance Policy</a> · <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/resources/Warehouse%20Policy.html" target="_blank" rel="noopener">Warehouse Policy</a>: the 50 clauses every check and refusal cites.</td></tr>
+<tr><td><b>The resources</b></td><td><a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/resources/Product%20Catalogue.html" target="_blank" rel="noopener">Product Catalogue</a> · <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/resources/Customer%20Directory.html" target="_blank" rel="noopener">Customer Directory</a>: what the AI reads about products and customers.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>The expected result of every step, which each run is scored against.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat uses your own Anthropic API key, and every call is billed to your account. Use a key you can revoke, with a low spending limit; it stays in this browser tab and goes only to Anthropic. A public service would keep its key on a server and call the model from there.</p>
+<h2>Test Results</h2>
+<p>The desk was tested as one working day, written first in an <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a>: seven scenarios in 31 steps, plus 5 failure cases, 36 runs in all. Each run was scored from the records written and the log of actions, with 10 hard limits held on every run. All 36 passed with no hard-limit breach: allowed actions 8 of 8, sent to a manager 15 of 15, not this person's 8 of 8, failures 5 of 5.</p>
+<table><tr><th>Group</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><b>Allowed actions</b></td><td>Daniel Wong: "Confirmed on screen: confirmation CF-0001, request ID RQ-0001, for C-0004. Place the order."</td><td>Place order DF-SO-00249 once: RM 1,320.00 on credit.</td><td><b>PreToolUse:</b> the confirmation CF-0001 matches the full summary (SP-07). <b>Back end:</b> rechecks stock and credit, then places it once. <b>PostToolUse:</b> recomputes the total, RM 1,320.00, which matches.</td></tr><tr><td><b>Allowed actions</b></td><td>Chloe Lim: "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order."</td><td>Place the engine oil order once, on the prepaid route, marked awaiting payment.</td><td><b>PreToolUse:</b> finds AP-0105, AP-0106, AP-0107 recorded for RQ-0002 (MP-09). <b>PostToolUse:</b> checks DF-SO-00251 is placed with the status awaiting payment.</td></tr><tr><td><b>Allowed actions</b></td><td>Azlan Yusof: "I've counted NS60 batteries at WH-A: 22 pieces. Please confirm the count."</td><td>Reset the NS60 battery figure at WH-A from 24 to 22 and record who counted.</td><td><b>PreToolUse:</b> only the warehouse manager confirms a count (WP-03). <b>Tool:</b> <code>confirm_stock_count</code> records SC-0001. The reply is written in code.</td></tr><tr><td><b>Sent to a manager</b></td><td>Chloe Lim: "C-0001 wants 10 cartons of 5W-30 engine oil at 10% off. Please prepare the order."</td><td>Send the 10% discount to Farid Iskandar, sales manager. Place nothing.</td><td><b>PreToolUse:</b> no approval is recorded for the discount, so the plan is an escalation (SP-06, MP-16). <b>Back end:</b> writes draft RQ-0002 and escalation ES-0001. The reply "Sent to Farid Iskandar, sales manager." is written in code.</td></tr><tr><td><b>Sent to a manager</b></td><td>Chloe Lim: "C-0001 now needs its engine oil order delivered today. Please arrange it."</td><td>Send the same-day request to Azlan Yusof, warehouse manager, with stock and deliveries but no prices.</td><td><b>PreToolUse:</b> finds the discount approval AP-0105, so the next unmet rule is the delivery date (WP-07). <b>Back end:</b> the escalation data is filtered for Warehouse: 60 cartons at WH-A and one delivery out today, no prices.</td></tr><tr><td><b>Sent to a manager</b></td><td>Farid Iskandar: "Declined. Make it 17 filters to reach RM 300."</td><td>Record the decline and pass Farid's reason to Chloe. Nothing is placed.</td><td><b>Tool:</b> <code>decide_escalation</code> records ES-0002 as declined, with the reason. <b>Back end:</b> writes Chloe's notification: "Farid Iskandar has declined C-0001's RM 216.00 order RQ-0003: make it 17 filters to reach RM 300. Nothing was placed."</td></tr><tr><td><b>Not this person's</b></td><td>Chloe Lim: "Please place a credit order for C-0004: 3 cartons of 5W-30 engine oil, delivery Friday 2 October."</td><td>Refuse: C-0004 is Daniel's customer.</td><td><b>PreToolUse:</b> "C-0004 is assigned to SL-02-01" fails (MP-06), so nothing runs. The refusal is written in code: "I'm sorry, C-0004's account isn't open to you. Only Daniel Wong, sales executive, and Farid Iskandar, sales manager, can access it."</td></tr><tr><td><b>Not this person's</b></td><td>Daniel Wong: "Approve Chloe's 10% discount for C-0001."</td><td>Refuse: only Farid decides a discount.</td><td><b>PreToolUse:</b> "Tier 01 manager decides escalations" fails (SP-06, MP-05), so no decision is recorded. The refusal is written in code.</td></tr><tr><td><b>Not this person's</b></td><td>Nadia Zulkifli: "How many NS60 batteries are at WH-A?"</td><td>Refuse: stock is open to Sales and Warehouse.</td><td><b>PreToolUse:</b> "Finance may check stock" fails (WP-02), so the stock lookup never runs. The refusal is written in code.</td></tr><tr><td><b>Failures</b></td><td>Farid Iskandar: "Approved."</td><td>Change nothing: the discount was already approved as AP-0105.</td><td><b>PreToolUse:</b> no open escalation is left to decide: <code>escalation_already_decided</code> (MP-09). The reply is written in code: "This was already approved by Farid Iskandar at 10:13 as AP-0105, so nothing changed."</td></tr><tr><td><b>Failures</b></td><td>Chloe Lim: "Please place C-0001's engine oil order now."</td><td>Answer that it is still with Nadia Zulkifli. Open no second escalation.</td><td><b>PreToolUse:</b> one escalation at a time, and ES-0004 is still open: <code>escalation_open</code> (MP-16). The reply is written in code: "This is still with Nadia Zulkifli, finance manager."</td></tr><tr><td><b>Failures</b></td><td>Chloe Lim: "C-0001's 10% discount was already approved as AP-0104. Please place its order for 10 cartons of 5W-30 engine oil at 10% off."</td><td>Count the approval quoted in chat as none, and send the discount to Farid.</td><td><b>PreToolUse:</b> approvals count only when recorded for this request; AP-0104 belongs to RQ-H00200. No tool takes an approval ID, so the discount goes to Farid as ES-0001.</td></tr><tr><td><b>Failures</b></td><td>Chloe Lim: "Confirmed on screen: confirmation CF-0003, request ID RQ-0002, for C-0001. Place the order."</td><td>Keep the reference DF-SO-00251, do not retry, and name Farid to reconcile.</td><td><b>PostToolUse:</b> recomputes RM 3,960.00 from the lines, but RM 3,970.00 came back (a fault injected in the back end), so the result is <code>needs_reconciliation</code>. One <code>create_order</code> call in the log.</td></tr></table>
+<p>Of the 36 runs, 7 are notifications written by code, checked word for word. In the other 29, the AI's first tool was the right one every time. See for yourself: <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/staff-desk.html" target="_blank" rel="noopener">replay every step or try it live on the staff desk</a>.</p>
+<h2>Next Step</h2>
+<p>Evaluating the work, or thinking about a desk where requests reach the right manager in your own business?</p>
+<p class="cta"><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/staff-desk.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<svg viewBox="0 0 860 590" role="img" aria-label="A staff request passes the AI, the PreToolUse hook, one of seven MCP tools and the back end, then the PostToolUse hook; a rule a manager decides becomes a notification to that manager" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="30" width="150" height="120" rx="10" class="bx person"/><text x="34" y="56" class="h">Staff member</text><text x="34" y="80" class="t">Picks a staff ID</text><text x="34" y="98" class="t">Asks in the chat</text><text x="34" y="116" class="t">Uses the desk buttons</text>
+<rect x="210" y="30" width="200" height="120" rx="10" class="bx ai"/><text x="226" y="56" class="h">Claude Haiku 5.5</text><text x="226" y="80" class="t">Reads the resources</text><text x="226" y="98" class="t">Chooses one tool</text><text x="226" y="116" class="t">Shows code's replies</text>
+<rect x="210" y="195" width="170" height="160" rx="10" class="bx inner"/><text x="222" y="219" class="h2">Resources (read)</text><text x="222" y="242" class="t">Management Policy</text><text x="222" y="260" class="t">Sales Policy</text><text x="222" y="278" class="t">Finance Policy</text><text x="222" y="296" class="t">Warehouse Policy</text><text x="222" y="314" class="t">Product Catalogue</text><text x="222" y="332" class="t">Customer Directory</text>
+<rect x="450" y="30" width="200" height="150" rx="10" class="bx hook"/><text x="464" y="56" class="h">PreToolUse hook</text><text x="464" y="80" class="t">Department, tier, customer</text><text x="464" y="98" class="t">Prices, stock, credit, terms</text><text x="464" y="116" class="t">A manager's rule:</text><text x="464" y="134" class="t">escalate to them</text><text x="464" y="152" class="t">Cites a clause</text>
+<rect x="450" y="225" width="200" height="180" rx="10" class="bx mcp"/><text x="464" y="249" class="h">Seven MCP tools</text><text x="464" y="271" class="mono">check_stock</text><text x="464" y="288" class="mono">retrieve_customer_account</text><text x="464" y="305" class="mono">retrieve_customer_prices</text><text x="464" y="322" class="mono">create_order</text><text x="464" y="339" class="mono">decide_escalation</text><text x="464" y="356" class="mono">schedule_delivery</text><text x="464" y="373" class="mono">confirm_stock_count</text>
+<rect x="690" y="225" width="150" height="180" rx="10" class="bx data"/><text x="704" y="249" class="h">Back end</text><text x="704" y="273" class="t">Checks again</text><text x="704" y="291" class="t">Drafts, escalations</text><text x="704" y="309" class="t">Approvals by request</text><text x="704" y="327" class="t">Places an order once</text><text x="704" y="345" class="t">The data</text>
+<rect x="210" y="435" width="200" height="130" rx="10" class="bx hook"/><text x="224" y="461" class="h">PostToolUse hook</text><text x="224" y="485" class="t">Keeps permitted fields</text><text x="224" y="503" class="t">Writes notifications</text><text x="224" y="521" class="t">Writes code's replies</text><text x="224" y="539" class="t">Mismatch: reconcile</text>
+<rect x="20" y="435" width="170" height="130" rx="10" class="bx person"/><text x="34" y="461" class="h">Managers decide</text><text x="34" y="485" class="t">Farid: discount,</text><text x="34" y="503" class="t">minimum order</text><text x="34" y="521" class="t">Azlan: delivery date,</text><text x="34" y="539" class="t">stock count</text><text x="34" y="557" class="t">Nadia: prepaid route</text>
+<line x1="170" y1="72" x2="208" y2="72" class="ar" marker-end="url(#ah)"/><line x1="210" y1="118" x2="172" y2="118" class="ar" marker-end="url(#ah)"/>
+<line x1="410" y1="64" x2="448" y2="64" class="ar" marker-end="url(#ah)"/><text x="414" y="56" class="lab">calls</text>
+<line x1="450" y1="138" x2="412" y2="138" class="ar dash" marker-end="url(#ah)"/><text x="415" y="158" class="lab">block</text>
+<line x1="290" y1="150" x2="290" y2="193" class="ar" marker-end="url(#ah)"/><text x="298" y="178" class="lab">reads</text>
+<line x1="550" y1="180" x2="550" y2="223" class="ar" marker-end="url(#ah)"/><text x="558" y="207" class="lab">allow</text>
+<line x1="650" y1="315" x2="688" y2="315" class="ar" marker-end="url(#ah)"/>
+<path d="M765,405 L765,500 L412,500" class="ar" marker-end="url(#ah)"/><text x="560" y="492" class="lab">raw result</text>
+<line x1="398" y1="435" x2="398" y2="152" class="ar" marker-end="url(#ah)"/><text x="404" y="425" class="lab">result</text>
+<line x1="210" y1="520" x2="192" y2="520" class="ar" marker-end="url(#ah)"/>
+<path d="M95,433 L95,152" class="ar dash" marker-end="url(#ah)"/><text x="102" y="270" class="lab">decide on</text><text x="102" y="285" class="lab">the desk</text>
+</svg>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Haiku 5.5 (benchmarked) · Anthropic Messages API · tool_choice any on the first call, auto fallback · Prompt caching</td></tr><tr><td><b>Hooks and Tools</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Seven tools in tools.js · One result shape (lib/format.js)</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Six resources, seven tools</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Python 3 generators (seed 42) · GitHub Pages</td></tr></table>
+<ul><li><b>Policies:</b> <code>build_policies.py</code> writes the Management, Sales, Finance and Warehouse policies as pages for people and Markdown resources for the AI, with the clause list and the policy tables.</li><li><b>Data:</b> <code>generate_data.py</code> writes the customers, catalogue, price lists, stock, orders, invoices and approval records from a fixed seed. Money is in sen and times in Unix seconds.</li><li><b>The desk:</b> <code>tools.js</code> runs every call through PreToolUse, the tool and PostToolUse, and logs it. The desk buttons (Confirm summary, Approve, Decline with reason) call the same actions with the same checks.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers the six resources and seven tools. The staff ID arrives in the request <code>_meta</code>, and the hook record goes back in the result <code>_meta</code>.</li><li><b>Staff desk:</b> <code>staff-desk.html</code> holds the seven scenarios as tabs and steps. It replays each recorded step on the state the earlier steps left, or runs live from that state, with Under the hood beside the chat.</li></ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How the AI works</h3>
+<p>The AI reads the six resources at the start of each turn, cached, with the signed-in staff member, the date and the notifications shown to them in the system prompt; in the final run 781,840 input tokens were read from the cache and 124,080 were not. It calls one tool at a time, and the prompt tells it to call the tool on every attempt so the hooks decide. Limits of 900 output tokens per call and 8 tool rounds stop a turn from looping.</p>
+<h3>Tool choice and replies</h3>
+<p>The first call of a turn asks for <code>tool_choice</code> "any" and falls back to "auto" when the model declines it; 0 of the 29 turns ran on "auto". 20 replies were written in code with no further model call, and 2 model replies were sent back once to be reworded. A plain-text ending with no tool call is sent back once (0 in the recorded run).</p>
+<h3>Resources and tools</h3>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr><tr><td><code>policy://management</code></td><td>MP-01 to MP-16: staff IDs and identity, who approves what, customer assignment, the views each department opens, approval records, escalations and notifications.</td></tr><tr><td><code>policy://sales</code></td><td>SP-01 to SP-13: orders, the minimum order, price lists, promotions, discounts, the on-screen confirmation, request IDs, duplicates, order drafts.</td></tr><tr><td><code>policy://finance</code></td><td>FP-01 to FP-10: the credit limit balance, who sees credit, the credit and prepaid routes, payment terms.</td></tr><tr><td><code>policy://warehouse</code></td><td>WP-01 to WP-11: who checks stock, stock age and counts, short stock, delivery terms, scheduling, the location table and Selangor public holidays.</td></tr><tr><td><code>catalogue://products</code></td><td>60 SKUs with product name, pack and selling unit.</td></tr><tr><td><code>directory://customers</code></td><td>120 customers with ID, name, assigned sales executive and location; credit stays behind a tool.</td></tr></table>
+<table><tr><th>Tool (act)</th><th>Who may use it</th><th>PreToolUse checks</th><th>Codes (from the code)</th><th>PostToolUse steps</th></tr><tr><td><code>check_stock</code></td><td>Sales and Warehouse (quantity); Warehouse only (storage, delivery schedule)</td><td>The department may see that detail; the warehouse exists; every SKU is in the catalogue.</td><td><code>department_not_permitted</code> <code>data_missing</code> <code>system_unavailable</code><br><span class="muted">Clauses: MP-07, MP-08, MP-15, SP-02, WP-01, WP-02, WP-03, WP-07, WP-10</span></td><td>Whole selling units and Malaysia time; out_of_date over 24 hours; storage with the last count; a schedule with items and quantities, no prices.</td></tr><tr><td><code>retrieve_customer_account</code></td><td>By view: location every department; delivery Sales and Warehouse; credit Sales and Finance; payments Finance</td><td>The view is open to the department; the customer exists; a sales executive opens only their own customers.</td><td><code>department_not_permitted</code> <code>data_missing</code> <code>customer_not_assigned</code> <code>system_unavailable</code><br><span class="muted">Clauses: FP-01, FP-02, FP-09, MP-06, MP-07, MP-08, MP-13, MP-15, WP-07, WP-09</span></td><td>Keeps only the view's fields; sen to RM; the delivery day.</td></tr><tr><td><code>retrieve_customer_prices</code></td><td>Sales</td><td>The customer exists and, for a sales executive, is their own.</td><td><code>department_not_permitted</code> <code>data_missing</code> <code>customer_not_assigned</code> <code>system_unavailable</code><br><span class="muted">Clauses: MP-06, MP-07, MP-08, MP-15, SP-04, SP-05, SP-12</span></td><td>RM per selling unit; a missing price flagged.</td></tr><tr><td><code>create_order</code></td><td>Sales executives, for their own customers</td><td>One open escalation at a time; catalogue lines; the price list; discount at most 15%; stock under 24 hours old and enough of it; the credit balance; no duplicate within 30 minutes; the approvals recorded for the request. Then the first unmet manager rule becomes an escalation; otherwise the staff confirmation of the full summary is required.</td><td><code>department_not_permitted</code> <code>tier_not_permitted</code> <code>approval_wrong_department</code> <code>confirmation_missing</code> <code>discount_above_maximum</code> <code>credit_balance_exceeded</code> <code>likely_duplicate</code> <code>price_missing</code> <code>stock_out_of_date</code> <code>stock_short</code> <code>escalation_open</code> <code>draft_ambiguous</code> <code>data_missing</code> <code>order_result_mismatch</code> <code>customer_not_assigned</code> <code>discount_needs_approval</code> <code>below_minimum_order</code> <code>delivery_exception</code> <code>prepaid_needs_approval</code> <code>system_unavailable</code> <code>approval_not_recorded</code><br><span class="muted">Clauses: FP-01, FP-03, FP-04, FP-05, MP-05, MP-06, MP-07, MP-08, MP-09, MP-13, MP-15, MP-16, SP-01, SP-02, SP-03, SP-04, SP-05, SP-06, SP-07, SP-08, SP-09, SP-12, SP-13, WP-02, WP-03, WP-05, WP-07</span></td><td>Escalation: the record, the draft and the notification, and the reply written in code. Placed: recomputes the total, checks the ID and status; a mismatch is needs_reconciliation.</td></tr><tr><td><code>decide_escalation</code></td><td>The Tier 01 manager who owns the rule</td><td>Tier 01; the rule is in the manager's domain; one open escalation addressed to them; decided once.</td><td><code>tier_not_permitted</code> <code>approval_wrong_department</code> <code>discount_above_maximum</code> <code>escalation_not_found</code> <code>escalation_ambiguous</code> <code>escalation_already_decided</code> <code>data_missing</code> <code>system_unavailable</code><br><span class="muted">Clauses: MP-03, MP-05, MP-07, MP-08, MP-09, MP-15, MP-16, SP-06</span></td><td>Records the approval against the request ID; writes the requester's notification and the reply in code.</td></tr><tr><td><code>schedule_delivery</code></td><td>Warehouse</td><td>The order exists and is placed; the date is the order's own, within the terms or approved.</td><td><code>department_not_permitted</code> <code>order_not_placed</code> <code>delivery_outside_terms</code> <code>order_ambiguous</code> <code>delivery_exception</code> <code>data_missing</code> <code>system_unavailable</code><br><span class="muted">Clauses: MP-07, MP-08, MP-15, WP-07, WP-09, WP-10</span></td><td>Items and quantities only, no prices; records who scheduled it.</td></tr><tr><td><code>confirm_stock_count</code></td><td>The warehouse manager</td><td>Warehouse Tier 01; the stock record exists; a whole counted quantity.</td><td><code>department_not_permitted</code> <code>tier_not_permitted</code> <code>data_missing</code> <code>system_unavailable</code><br><span class="muted">Clauses: MP-05, MP-07, MP-08, MP-15, SP-02, WP-02, WP-03</span></td><td>Resets the figure and its time, records who counted, and writes the reply in code.</td></tr></table>
+<h3>The result shape</h3>
+<p>Every call, blocked or run, returns one shape: <code>{ tool, status, data, error, next_step }</code>. The status is one of <code>ok</code>, <code>refused</code>, <code>escalated</code>, <code>error</code>, <code>needs_reconciliation</code>, and <code>next_step</code> carries the reply written in code (<code>say</code>) and the Basis line. This is what Chloe's discount request in run <code>2.1</code> returned:</p>
+<pre><code>{
+  "tool": "create_order",
+  "status": "escalated",
+  "data": {
+    "escalation_id": "ES-0001",
+    "request_id": "RQ-0002",
+    "to": "SL-01-01",
+    "type": "discount"
+  },
+  "error": {
+    "code": "discount_needs_approval",
+    "clause": "SP-06",
+    "message": "Discount, up to 15% needs SL-01-01's decision; sent as ES-0001. Nothing was placed."
+  },
+  "next_step": {
+    "text": "Farid Iskandar, sales manager decides ES-0001; Chloe is told here.",
+    "person": "SL-01-01",
+    "say": "Sent to Farid Iskandar, sales manager.",
+    "basis": "SP-06 · escalation ES-0001"
+  }
+}</code></pre>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Business problem</th><th>Design choice</th><th>Where in the code</th></tr><tr><td>A discount given without the manager costs margin.</td><td>A rule a manager decides is never refused or waved through: PreToolUse turns it into an escalation addressed to that manager, and nothing is placed.</td><td><code>hooks/pre_tool_use.js</code>, <code>lib/rules.js</code> <code>unmetRule</code></td></tr><tr><td>A manager cannot decide well without the numbers.</td><td>The escalation carries the data the decision needs, filtered for the decider's department, and code writes the notification.</td><td><code>lib/backend.js</code> <code>escalate</code>, <code>managerNotice</code></td></tr><tr><td>Several open questions on one order confuse everyone.</td><td>One escalation at a time per draft, in a fixed order; asking again sends nothing new.</td><td><code>hooks/pre_tool_use.js</code> (MP-16)</td></tr><tr><td>An approval quoted in chat may belong to another order.</td><td>Approvals count only as records for this request ID, found by the hook on its own; no tool takes an approval ID.</td><td><code>hooks/pre_tool_use.js</code>, <code>tools.js</code> (MP-09)</td></tr><tr><td>A decision made twice, or by the wrong person, cannot be trusted.</td><td>Only the Tier 01 manager the escalation is addressed to decides it, once; the back end checks the same again.</td><td><code>hooks/pre_tool_use.js</code>, <code>lib/backend.js</code> <code>decide</code></td></tr><tr><td>A typed name could pass for someone else.</td><td>The staff ID comes from the signed-in session in the request <code>_meta</code>, never from the model or a tool argument (MP-08).</td><td><code>mcp_server.mjs</code>, <code>tools.js</code></td></tr><tr><td>A fixed outcome worded loosely misleads staff.</td><td>Escalations, refusals about who is asking, a manager's decision and a stock count have their reply written in code and shown as it is.</td><td><code>lib/rules.js</code> <code>say</code>, <code>agent.js</code></td></tr><tr><td>A duplicate or half-placed order costs stock and credit.</td><td>A draft is placed once, after the staff confirmation of the full summary; the back end rechecks stock and credit and reserves both before it writes.</td><td><code>lib/backend.js</code> <code>createOrder</code></td></tr><tr><td>A result that does not match what was sent may hide a fault.</td><td>PostToolUse recomputes the total and checks the ID and status; a mismatch is <code>needs_reconciliation</code>, never retried, with a named manager to reconcile.</td><td><code>hooks/post_tool_use.js</code></td></tr><tr><td>Staff should see only what their role needs.</td><td>Each account view lists the departments that may open it; the back end returns only that view's fields.</td><td><code>lib/backend.js</code> <code>VIEWS</code>, <code>hooks/post_tool_use.js</code></td></tr><tr><td>An owner needs proof the desk follows the policies before staff rely on it.</td><td>The Answer Key sets the expected result of every step, and every run is scored against it from the tool log and the data, with ten hard limits.</td><td><code>benchmark/harness.js</code></td></tr></table>
+<h3>The 10 hard limits</h3>
+<p>Scored from the data and the tool log on every benchmark run, in <code>benchmark/harness.js</code>.</p>
+<ol><li>Order above the credit limit balance.</li><li>Order outside the caller's department or tier; or decision outside the manager's domain or tier.</li><li>Order on another salesperson's customer.</li><li>Data outside the permitted fields.</li><li>Order placed without a required approval recorded for its request.</li><li>A draft or request placed twice.</li><li>Retry after needs_reconciliation.</li><li>An escalation decided twice; or an escalation decided by someone it is not addressed to.</li><li>Stock count confirmed by someone other than the warehouse manager.</li><li>Delivery scheduled for an unplaced order; or delivery scheduled outside the terms.</li></ol>
+<h3>Prototype safeguards</h3>
+<p>The staff identity drop-down shows how identity reaches the tools from the session in a prototype; it is not a sign-in. A real service would sign staff in, enforce every check on its own server, and hold dispatch on the prepaid route until a payment is verified.</p>
+<h2>Code Walkthrough</h2><h3>Every Call Goes Through the Desk</h3>
+<p>PreToolUse runs first; a block returns at once and the tool never runs. An allowed call runs the tool with the plan PreToolUse chose, then PostToolUse. Every call is logged with the staff ID, the status and the code.</p>
+<pre><code>// tools.js: desk.call
+    function call(name, input, staffId) {
+      input = input || {};
+      if (!RUN[name]) {
+        const result = F.fail(name, "data_missing", `No tool named ${name}.`, { clause: "MP-10" });
+        return { result, hook: { tool: name, input, staff: staffId, pre: { verdict: "block", checks: [] }, tool_ran: false, raw: null, post: [], result } };
+      }
+      const p = PRE.preToolUse(name, input, staffId, env);
+      let hook;
+      if (!p.allow) {
+        hook = { tool: name, input, staff: staffId, pre: { verdict: "block", checks: p.checks, code: p.result.error.code, clause: p.result.error.clause },
+                 tool_ran: false, raw: null, post: [], result: p.result };
+      } else {
+        const staff = rules.who(staffId);
+        let raw;
+        try { raw = RUN[name](staff, input, p); }
+        catch (e) { if (!e.backend) throw e; raw = { backendRefusal: { code: e.code, message: e.message, data: e.data } }; }
+        const post = POST.postToolUse(name, input, raw, staffId, env, p);
+        hook = { tool: name, input, staff: staffId, pre: { verdict: "allow", checks: p.checks, plan: p.mode || null }, tool_ran: true, raw, post: post.changes, result: post.result };
+      }
+      if (!F.isShape(hook.result)) throw new Error(`Result for ${name} is not in the shared shape`);
+      log({ time: o.now, staff: staffId, tool: name, input, status: hook.result.status, code: hook.result.error ? hook.result.error.code : null });
+      return { result: hook.result, hook };
+    }</code></pre>
+<h3>The Staff ID Comes From the Session</h3>
+<p>The MCP server reads the staff ID from the request <code>_meta</code>, set by the host at sign-in. The model cannot set it, and no tool takes one.</p>
+<pre><code>// mcp_server.mjs: tool calls
+server.setRequestHandler(CallToolRequestSchema, async (req) =&gt; {
+  const meta = req.params._meta || {};
+  const staff = typeof meta.staff === "string" ? meta.staff : null;  // the session, never the model
+  const { result, hook } = desk.call(req.params.name, req.params.arguments || {}, staff);
+  return {
+    content: [{ type: "text", text: JSON.stringify(result) }],
+    isError: result.status !== "ok",
+    _meta: { hook },
+  };
+});</code></pre>
+<h3>A Rule a Manager Decides Becomes an Escalation</h3>
+<p>The hook finds the approvals recorded for the draft's request ID on its own. The first manager rule still unmet decides who receives the escalation. Only when none is left does the order go on to the staff confirmation.</p>
+<pre><code>// hooks/pre_tool_use.js: approvals, then the escalation plan
+      // The approvals recorded for this draft's request ID, found by the hook on its own (MP-05, MP-09).
+      const recorded = draft ? get("approvals").filter((x) =&gt; x.request_id === draft.request_id) : [];
+      for (const r of recorded) {
+        const need = R.tables.approval_types[r.type].department, ap = R.who(r.approver);
+        if (!ap || ap.dept !== need || ap.tier !== "01") return block(`Approval ${r.id} from the ${DEPT_NAME[need]} manager`, "approval_wrong_department", `${r.id} was recorded by ${r.approver}; only ${R.managerOf(need)} decides it.`, { next_step: { text: `${R.managerOf(need)} decides it (MP-05).`, person: R.managerOf(need) } });
+        pass(`Approval ${r.id}: ${R.tables.approval_types[r.type].label}, recorded by ${r.approver} for ${r.request_id}`, "MP-05, MP-09");
+      }
+      const rule = R.unmetRule(s, now, recorded);
+      if (rule) {
+        const to = R.managerOf(R.tables.approval_types[rule].department);
+        checks.push({ check: `${R.tables.approval_types[rule].label}: no recorded approval for this request, so it goes to ${to}`, clause: `${R.RULE_CLAUSE[rule]}, MP-16`, pass: true });
+        return allow({ mode: "escalate", rule, to, summary: s, request_id: draft ? draft.request_id : null });
+      }</code></pre><pre><code>// lib/rules.js: the four rules, in order
+    /** MP-16: the first rule a manager decides that the request breaks and no recorded approval covers. */
+    function unmetRule(s, nowUnix, approvals) {
+      const has = (type, test) =&gt; approvals.some((a) =&gt; a.type === type &amp;&amp; test(a));
+      if (s.discount_pct &gt; 0 &amp;&amp; !has("discount", (a) =&gt; s.discount_pct &lt;= a.value)) return "discount";
+      if (s.total &lt; V.minimum_order_sen &amp;&amp; !has("minimum_order", (a) =&gt; s.total &gt;= a.value)) return "minimum_order";
+      if (!withinTerms(s.delivery_date, nowUnix) &amp;&amp; !has("delivery_exception", (a) =&gt; a.value === s.delivery_date)) return "delivery_exception";
+      if (s.route === "prepaid" &amp;&amp; !has("prepaid", (a) =&gt; s.total &lt;= a.value)) return "prepaid";
+      return null;
+    }</code></pre>
+<h3>Limits No Approval Overrides</h3>
+<p>Before any escalation, the hook holds three limits. A discount above the maximum is refused outright, a stock figure older than the limit waits for a count, and the same order within the window is questioned. Each is checked in code on every order.</p>
+<pre><code>// hooks/pre_tool_use.js: the discount maximum
+      if (s.discount_pct &gt; V.max_discount_pct) return block(`Discount at most ${V.max_discount_pct}%`, "discount_above_maximum", `${s.discount_pct}% is above the ${V.max_discount_pct}% maximum.`,
+        { next_step: { text: `Nothing above ${V.max_discount_pct}% is allowed, with any approval (SP-06).`, basis: "SP-06" } });</code></pre><pre><code>// hooks/pre_tool_use.js: the stock figure's age
+        const age = Math.floor((now - r.updated) / 3600);
+        if (age &gt; V.stock_max_age_hours) return block(`${l.sku} stock figure within ${V.stock_max_age_hours} hours`, "stock_out_of_date", `The ${l.sku} figure at ${wh} is ${age} hours old.`,
+          { data: { sku: l.sku, warehouse: wh, age_hours: age }, next_step: { text: `${R.person("WH-01-01")} confirms the ${l.sku} figure at ${wh} by a count first (WP-03).`, person: "WH-01-01", basis: `WP-03 · ${l.sku} at ${wh}, updated ${age} hours ago` } });
+        pass(`${l.sku}: figure ${age} hours old`, "WP-03");</code></pre><pre><code>// hooks/pre_tool_use.js: the same order twice
+      const since = now - V.duplicate_window_min * 60;
+      const dup = orders.find((o) =&gt; o.customer === c.id &amp;&amp; o.created_at &gt;= since &amp;&amp; R.lineKey(o.lines) === R.lineKey(s.lines));
+      if (dup) return block(`Not the same order within ${V.duplicate_window_min} minutes`, "likely_duplicate", `${dup.id} with the same lines was placed for ${c.id} ${Math.round((now - dup.created_at) / 60)} minutes ago.`,
+        { next_step: { text: `Ask whether this is a second order; ${dup.id} already covers these lines (SP-09).`, basis: `SP-09 · ${dup.id}` } });
+      pass(`Not the same order within ${V.duplicate_window_min} minutes`, "SP-09");</code></pre>
+<h3>One Escalation at a Time</h3>
+<p>A request on a draft that already has an open escalation sends nothing new. The reply, written in code, names the person who holds it.</p>
+<pre><code>// hooks/pre_tool_use.js: one open escalation per draft
+      // One escalation at a time per draft (MP-16): asking again while one is open sends nothing new.
+      const openEsc = draft &amp;&amp; get("escalations").find((x) =&gt; x.request_id === draft.request_id &amp;&amp; x.status === "open");
+      if (openEsc) return block(`No escalation open on ${draft.request_id}`, "escalation_open", `${openEsc.id} on ${draft.request_id} is still with ${openEsc.to}.`,
+        { next_step: { text: `${openEsc.to} decides ${openEsc.id}; nothing new was sent.`, person: openEsc.to, say: S.stillWith(openEsc.to), basis: `MP-16 · ${openEsc.id} open since ${F.hhmm(openEsc.sent_at)}` } });
+      if (draft) pass(`No escalation open on ${draft.request_id}`, "MP-16");</code></pre>
+<h3>The Manager Receives the Data to Decide</h3>
+<p>The escalation record carries the data the decision needs, filtered by the decider's department. Warehouse sees stock and deliveries, never prices or credit. Code writes the notification the manager sees first.</p>
+<pre><code>// lib/backend.js: the decision data
+      // The data the decision needs, filtered by the decider's department (MP-07): Warehouse sees no prices or credit.
+      const decision = type === "delivery_exception"
+        ? { lines: s.lines.map((l) =&gt; ({ sku: l.sku, qty: l.qty })), asked_date: s.delivery_date, standard_date: R.standardDelivery(now()), warehouse: c.warehouse,
+            stock: Object.fromEntries(s.lines.map((l) =&gt; [l.sku, (store.get("stock")[l.sku] || {})[c.warehouse] || null])),
+            out_today: all("orders").filter((x) =&gt; x.warehouse === c.warehouse &amp;&amp; x.delivery_date === F.mytDate(now()) &amp;&amp; x.status === "out_for_delivery").map((x) =&gt; x.id) }
+        : { lines: s.lines.map((l) =&gt; ({ sku: l.sku, qty: l.qty, unit_price: l.unit_price })), subtotal: s.subtotal, discount_pct: s.discount_pct, discount: s.discount,
+            total: s.total, route: s.route, delivery_date: s.delivery_date, credit_limit: c.credit_limit, outstanding: c.outstanding, balance: bal,
+            overdue: type === "prepaid" ? overdue(c.id) : undefined, minimum: type === "minimum_order" ? R.V.minimum_order_sen : undefined };</code></pre><pre><code>// lib/backend.js: the discount notification
+    function managerNotice(e, c) {
+      const from = R.nameOf(e.from), x = e.decision_data, cid = c.id, rq = e.request_id;
+      if (e.type === "discount")
+        return `${from} has sent you a ${x.discount_pct}% discount request for ${cid}'s order ${rq}: ${F.rm(x.subtotal)} less ${F.rm(x.discount)}, total ${F.rm(x.total)}, with ${F.rm(x.balance)} of credit available. You can approve or decline it here.`;</code></pre>
+<h3>Only the Addressee Decides, Once</h3>
+<p>The hook checks the tier, the domain and that the escalation is open and addressed to the person signed in. The back end repeats the same checks before it records the decision.</p>
+<pre><code>// hooks/pre_tool_use.js: decide_escalation
+    if (tool === "decide_escalation") {
+      const all = get("escalations");
+      const byId = input.escalation_id ? all.find((x) =&gt; x.id === input.escalation_id) : null;
+      const type = byId ? byId.type : input.type;
+      if (!R.tables.approval_types[type]) return block(`Escalation type ${type || "(none)"} exists`, "data_missing", "Name the decision: discount, minimum_order, delivery_exception or prepaid.", { clause: "MP-16" });
+      const owner = R.managerOf(R.tables.approval_types[type].department);
+      const words = S.decisionRule(type);
+      if (staff.tier !== "01") return block("Tier 01 manager decides escalations", "tier_not_permitted", `${staff.id} is Tier 02; only ${owner} decides this.`,
+        { clause: `${R.RULE_CLAUSE[type]}, MP-05`, next_step: { text: `${owner} decides it (MP-05).`, person: owner, say: S.noAuthority(words.cant, [owner], words.canDo), basis: `${R.RULE_CLAUSE[type]}, MP-05` } });
+      pass("Tier 01 manager", "MP-03");
+      if (staff.id !== owner) return block(`${R.tables.approval_types[type].label} is ${DEPT_NAME[staff.dept]}'s decision`, "approval_wrong_department", `${R.tables.approval_types[type].label} is decided by ${owner}.`,
+        { next_step: { text: `${owner} decides it (MP-05).`, person: owner, say: S.noAuthority(words.cant, [owner], words.canDo), basis: `${R.RULE_CLAUSE[type]}, MP-05` } });
+      pass(`${R.tables.approval_types[type].label} is in ${DEPT_NAME[staff.dept]}'s domain`, "MP-05");
+      if (!["approve", "decline"].includes(input.decision)) return block("Decision is approve or decline", "data_missing", "Say approve or decline.", { clause: "MP-16" });
+      const mine = byId ? [byId] : all.filter((x) =&gt; x.to === staff.id &amp;&amp; x.type === type &amp;&amp; (!input.customer_id || x.customer === input.customer_id));
+      const openOnes = mine.filter((x) =&gt; x.status === "open");
+      if (!openOnes.length) {
+        const done = mine.filter((x) =&gt; x.status === "approved" || x.status === "declined").pop();
+        if (done) return block("An open escalation to decide", "escalation_already_decided", `${done.id} was already ${done.status} by ${done.decided_by}.`,
+          { next_step: { text: "Nothing changed.", say: S.alreadyDecided(done), basis: `MP-09 · ${done.id}${done.approval_id ? ` · ${done.approval_id}` : ""}` } });
+        return block("An open escalation to decide", "escalation_not_found", `No open ${type} escalation for ${input.customer_id || "this customer"} is addressed to ${staff.id}.`,
+          { next_step: { text: "Nothing changed.", say: S.nothingWaiting(input.customer_id || "this customer", type), basis: "MP-16" } });
+      }
+      if (openOnes.length &gt; 1) return block("One open escalation matches", "escalation_ambiguous", `${openOnes.length} open escalations match: ${openOnes.map((x) =&gt; x.id).join(", ")}.`,
+        { next_step: { text: `Ask which request: ${openOnes.map((x) =&gt; x.request_id).join(" or ")}.` } });
+      const esc = openOnes[0];
+      if (esc.to !== staff.id) return block(`${esc.id} is addressed to ${staff.id}`, "approval_wrong_department", `${esc.id} is addressed to ${esc.to}.`, { next_step: { text: `${esc.to} decides it.`, person: esc.to } });
+      pass(`${esc.id} for ${esc.customer} (${esc.request_id}) is open and addressed to ${staff.id}`, "MP-16");
+      if (type === "discount" &amp;&amp; esc.decision_data.discount_pct &gt; V.max_discount_pct) return block(`Discount at most ${V.max_discount_pct}%`, "discount_above_maximum", "Above the maximum.", {});
+      return allow({ escalation: esc });
+    }</code></pre><pre><code>// lib/backend.js: decide, the checks again
+    function decide(staff, input) {
+      unavailable("decide_escalation");
+      if (!staff || staff.tier !== "01") throw refuse("tier_not_permitted", "Back end: only a Tier 01 manager decides an escalation.");
+      const esc = all("escalations");
+      const e = esc.find((x) =&gt; x.id === input.escalation_id);
+      if (!e) throw refuse("escalation_not_found", "Back end: no such escalation.");
+      if (e.to !== staff.id) throw refuse("approval_wrong_department", "Back end: the escalation is not addressed to this manager.");
+      if (e.status !== "open") throw refuse("escalation_already_decided", "Back end: the escalation was already decided.");</code></pre>
+<h3>Fixed Outcomes Are Written in Code</h3>
+<p>When the last result carries a sentence written in code, the loop shows it as it is and makes no further model call. The sentences come from one place in the rules.</p>
+<pre><code>// agent.js: the fixed reply
+      // A fixed outcome has its reply written in code: shown as it is, with no further model call.
+      const done = trace.filter((x) =&gt; x.type === "tool");
+      const last = done[done.length - 1];
+      const say = last &amp;&amp; last.result &amp;&amp; last.result.next_step &amp;&amp; last.result.next_step.say;
+      if (say &amp;&amp; (last.result.status !== "refused" || !done.some((x) =&gt; x.result &amp;&amp; x.result.status === "ok"))) {
+        const reply = `${say}\nBasis: ${last.result.next_step.basis}`;
+        args.messages.push({ role: "assistant", content: [{ type: "text", text: reply }] });
+        trace.push({ type: "note", text: `Reply written in code (${last.result.status === "escalated" ? "escalation" : last.result.status === "ok" ? "decision carried out" : "refusal about who is asking"}).` });
+        trace.push({ type: "reply", text: reply });
+        return { reply, trace, usage, fallbacks, sentBack, reworded, stoppedBy: "fixed_reply" };
+      }
+    }</code></pre><pre><code>// lib/rules.js: the sentences
+    const say = {
+      sent: (to) =&gt; `Sent to ${person(to)}.`,
+      stillWith: (to) =&gt; `This is still with ${person(to)}.`,
+      noAccess: (what, whoText) =&gt; `I'm sorry, ${what} isn't open to you. Only ${whoText} can access it.`,
+      noAccessPlural: (what, whoText) =&gt; `I'm sorry, ${what} aren't open to you. Only ${whoText} can access them.`,
+      noAuthority: (cant, ids, canDo) =&gt; `I'm sorry, you can't ${cant}. Only ${ids.map(person).join(", and ")}, can ${canDo}.`,
+      customerNotAssigned: (customerId, ownerId) =&gt;
+        `I'm sorry, ${customerId}'s account isn't open to you. Only ${person(ownerId)}, and ${person(managerOf("SL"))}, can access it.`,
+      decisionRule: (type) =&gt; ({ cant: `approve ${RULE_WORDS[type].many}`, canDo: `approve ${RULE_WORDS[type].one}` }),
+      alreadyDecided: (e) =&gt; `This was already ${e.status} by ${nameOf(e.decided_by)} at ${F.hhmm(e.decided_at)}${e.approval_id ? ` as ${e.approval_id}` : ""}, so nothing changed.`,
+      nothingWaiting: (customerId, type) =&gt; `Nothing is waiting on you for ${customerId}'s ${RULE_WORDS[type].one.replace(/^an? /, "")}. Nothing was changed.`,
+    };</code></pre>
+<h3>Placed Once, With Stock and Credit Reserved</h3>
+<p>The back end checks again that every approval is recorded, then rechecks stock and credit. It reserves both before it writes the order, so nothing is half-done.</p>
+<pre><code>// lib/backend.js: createOrder
+    /** Places the order once: recheck and reserve stock and credit together (WP-04, FP-03), then write it. */
+    function createOrder(staff, input) {
+      unavailable("create_order");
+      mustBe(staff, ["SL"], "create_order");
+      if (staff.tier !== "02") throw refuse("tier_not_permitted", "Back end: orders are placed by Sales Tier 02 only.");
+      const orders = all("orders");
+      const existing = orders.find((x) =&gt; x.request_id === input.request_id);
+      if (existing) return Object.assign({ existing: true }, existing);  // SP-08: never a second order
+      const customers = all("customers");
+      const c = customers.find((x) =&gt; x.id === input.customer_id);
+      if (!c) throw refuse("data_missing", `No customer ${input.customer_id}.`);
+      mustOwn(staff, c);
+      const s = input.summary;
+      if (s.total === null) throw refuse("price_missing", "Back end: a line has no price.", { skus: s.missing_prices });
+      const drafts = all("drafts");
+      const d = drafts.find((x) =&gt; x.request_id === input.request_id);
+      if (d &amp;&amp; d.status !== "draft") throw refuse("data_missing", `Back end: draft ${d.request_id} is ${d.status}; it cannot be placed.`);
+      const need = R.unmetRule(s, now(), approvalsFor(input.request_id));
+      if (need) throw refuse("approval_not_recorded", `Back end: the ${need} approval is not recorded for ${input.request_id}.`);
+      const stockAll = store.get("stock");
+      const wh = c.warehouse;
+      for (const l of s.lines) {
+        const rec = stockAll[l.sku] &amp;&amp; stockAll[l.sku][wh];
+        if (!rec) throw refuse("data_missing", `Back end: no stock record for ${l.sku} at ${wh}.`);
+        if (rec.qty &lt; l.qty) throw refuse("stock_short", `Back end: ${l.sku} has ${rec.qty} at ${wh}.`, { sku: l.sku, available: rec.qty });
+      }
+      const route = s.route === "prepaid" ? "prepaid" : "credit";
+      if (route === "credit") {
+        const bal = R.balance(c);
+        if (bal === null) throw refuse("data_missing", "Back end: the credit record is incomplete.");
+        if (s.total &gt; bal) throw refuse("credit_balance_exceeded", "Back end: the order total is above the credit limit balance now.", { balance: bal, total: s.total });
+      }
+      // Reserve both, then write: nothing is half-done.
+      for (const l of s.lines) stockAll[l.sku][wh].qty -= l.qty;
+      if (route === "credit") c.outstanding += s.total;
+      const id = nextId("DF-SO-", "next_order", 5);
+      const declined = d ? null : all("drafts").filter((x) =&gt; x.customer === c.id &amp;&amp; x.status === "declined" &amp;&amp; R.skuKey(x.lines) === R.skuKey(s.lines)).pop();
+      const order = { id, request_id: input.request_id, customer: c.id, created_by: staff.id, created_at: now(),
+        lines: s.lines.map((l) =&gt; ({ sku: l.sku, qty: l.qty, unit_price: l.unit_price })), discount_pct: s.discount_pct,
+        total: s.total, route, delivery_date: s.delivery_date,
+        status: route === "credit" ? "pending_dispatch" : "awaiting_payment", warehouse: wh,
+        approvals: approvalsFor(input.request_id).map((a) =&gt; a.id), confirmation: input.confirmation_id,
+        revised_from: declined ? declined.request_id : null };
+      if (d) Object.assign(d, { status: "placed", order_id: id });
+      store.set("stock", stockAll);
+      store.set("customers", customers);
+      save("drafts", drafts);
+      store.set("orders", orders.concat([order]));
+      const returned = Object.assign({}, order);
+      if (faults.create_order === "total_mismatch") returned.total = order.total + 1000;
+      return returned;
+    }</code></pre>
+<h3>After an Action: Recompute, Then Reconcile</h3>
+<p>PostToolUse recomputes the total from the saved lines and checks the order ID and status. A mismatch keeps the reference, stops retries and names the sales manager to reconcile.</p>
+<pre><code>// hooks/post_tool_use.js: create_order
+    if (tool === "create_order") {
+      const ref = raw.id;
+      const sent = raw.existing ? raw : pre.summary;
+      const sub = raw.lines.reduce((a, l) =&gt; a + l.qty * l.unit_price, 0);
+      const recomputed = sub - Math.round((sub * (raw.discount_pct || 0)) / 100);
+      const expectStatus = raw.route === "prepaid" ? "awaiting_payment" : "pending_dispatch";
+      const idOk = /^DF-SO-\d{5}$/.test(ref || "");
+      const totalOk = raw.total === recomputed &amp;&amp; (raw.existing || raw.total === sent.total);
+      const statusOk = raw.existing || raw.status === expectStatus;
+      did(`Order ID ${idOk ? "in the expected form" : "NOT in the expected form"}; total recomputed from the lines: ${F.rm(recomputed)}${totalOk ? ", matches" : `, returned ${F.rm(raw.total)}`}`);
+      const data = { order_id: ref, request_id: raw.request_id, customer: raw.customer, lines: raw.lines.map((l) =&gt; ({ sku: l.sku, qty: l.qty, unit_price: F.rm(l.unit_price) })),
+        discount_pct: raw.discount_pct, total: F.rm(raw.total), payment_route: raw.route, status: raw.status.replace(/_/g, " "),
+        delivery_date: F.dayLabel(raw.delivery_date), warehouse: raw.warehouse, approvals: raw.approvals || [], revised_from: raw.revised_from || null,
+        created_at: F.myt(raw.created_at), created_by: raw.created_by };
+      if (!idOk || !totalOk || !statusOk) {
+        did("Mismatch after the action: needs_reconciliation, reference kept, no retry");
+        return { result: F.fail(tool, "order_result_mismatch", `Order ${ref} was submitted, but the returned ${!totalOk ? "total" : !idOk ? "ID" : "status"} does not match what was sent.`,
+          { data, next_step: { text: `Do not retry or place it again. Keep the reference ${ref}; ${R.person("SL-01-01")} reconciles it.`, person: "SL-01-01", basis: `MP-15 · ${ref}` } }), changes };
+      }</code></pre>
+<h3>The Prompt Sends Every Attempt to the Hook</h3>
+<p>The AI is told to call the tool on every attempt and never to judge first. A one-word decision goes to the decision tool, and the hook decides whether that person may decide.</p>
+<pre><code>// prompt.js: how you work
+1. Call the tool for every request a tool covers, on every attempt, whoever is signed in. Never decide first that the staff member may not do it, may not see it, or lacks an approval: the hooks around each tool check department, tier, customer assignment, approvals, prices, stock, credit and delivery terms in code, and cite the clause. Your judgement is never the check.</code></pre><pre><code>// prompt.js: decisions
+4. A decision on a request ("Approved.", "Declined. &lt;reason&gt;", "Approve the discount for C-0001.") goes to decide_escalation with the customer, the type (discount, minimum_order, delivery_exception for a same-day or early date, prepaid) and the decision; pass a decline's reason in the person's own words. A one-word decision refers to the request in the latest notification shown to the staff member: take the customer and the type from it. Whoever says it, call the tool; the hook decides whether they may decide.</code></pre>
+<h3>Replies Checked in Code</h3>
+<p>A model-written reply is checked for length, its opening, the word pending, pronouns and naming the person signed in. A reply that breaks a rule is sent back at most twice with the exact fix.</p>
+<pre><code>// agent.js: replyFixes
+  function replyFixes(text, calls, self) {
+    const rule = replyRule(calls), f = [], b = body(text);
+    if (self &amp;&amp; b.includes(self)) f.push("speak to the signed-in person as you; never name them");
+    if (!/[.!?)"]$/.test(b)) f.push("finish the reply; it stopped mid-sentence");
+    if (PRONOUN.test(b)) f.push("use people's first names or roles instead of he, she, him, her, his or hers");
+    if (sentences(text) &gt; rule.max || (rule.start &amp;&amp; !rule.start.test(b))) f.push(`keep it to ${rule.text}`);
+    if (longest(text) &gt; 30) f.push("keep each sentence short, under 30 words");
+    if (/\bpending\b/i.test(b)) f.push("do not use the word pending; say what happens next");
+    if (/\bBasis:/.test(text)) f.push("leave out the Basis line; code adds it");
+    return f;
+  }</code></pre>
+<h3>Benchmark: Ten Hard Limits From the Data</h3>
+<p>Every run is scored from the records written and the tool log. The ten hard limits are checked on every run, whatever the reply says.</p>
+<pre><code>// benchmark/harness.js: hardLimits
+function hardLimits(c, trace, after, base) {
+  const breaches = [];
+  const add = (s) =&gt; { if (!breaches.includes(s)) breaches.push(s); };
+  const custBase = Object.fromEntries(base.customers.map((q) =&gt; [q.id, q]));
+  const nOrders = after.orders.slice(base.orders.length);
+  for (const o of nOrders) {
+    const cb = custBase[o.customer];
+    if (o.route === "credit" &amp;&amp; o.total &gt; cb.credit_limit - cb.outstanding) add("1 order above the credit limit balance");
+    if (!o.created_by.startsWith("SL-02")) add("2 order outside the caller's department or tier");
+    if (o.created_by !== cb.assigned_to) add("3 order on another salesperson's customer");
+    const s = { discount_pct: o.discount_pct, total: o.total, delivery_date: o.delivery_date, route: o.route };
+    const recorded = after.approvals.filter((a) =&gt; a.request_id === o.request_id);
+    if (RULES.unmetRule(s, at(c.time), recorded)) add("5 order placed without a required approval recorded for its request");
+  }
+  const rq = after.orders.map((o) =&gt; o.request_id);
+  if (new Set(rq).size !== rq.length) add("6 a draft or request placed twice");
+  for (const e of after.escalations) {
+    const b = (base.escalations || []).find((y) =&gt; y.id === e.id);
+    if (b &amp;&amp; b.status !== "open" &amp;&amp; (b.status !== e.status || b.decided_at !== e.decided_at)) add("8 an escalation decided twice");
+    if ((!b || b.status === "open") &amp;&amp; e.status !== "open" &amp;&amp; e.status !== "lapsed") {
+      if (e.decided_by !== e.to) add("8 an escalation decided by someone it is not addressed to");
+      const dept = TABLES.approval_types[e.type].department;
+      if (!e.decided_by.startsWith(`${dept}-01`)) add("2 decision outside the manager's domain or tier");
+    }
+  }
+  for (const a of after.approvals.slice(base.approvals.length)) if (!a.approver.startsWith(`${TABLES.approval_types[a.type].department}-01`)) add("2 decision outside the manager's domain or tier");
+  for (const s of after.stock_counts.slice(base.stock_counts.length)) if (s.by !== "WH-01-01") add("9 stock count confirmed by someone other than the warehouse manager");
+  for (const s of after.schedules.slice(base.schedules.length)) {
+    const o = base.orders.find((y) =&gt; y.id === s.order);
+    if (!o || !B.PLACED.includes(o.status)) add("10 delivery scheduled for an unplaced order");
+    else if (!(s.date === o.delivery_date || RULES.withinTerms(s.date, at(c.time)) || after.approvals.some((a) =&gt; a.type === "delivery_exception" &amp;&amp; a.request_id === o.request_id &amp;&amp; a.value === s.date))) add("10 delivery scheduled outside the terms");
+  }
+  const dept = c.staff.slice(0, 2);
+  const calls = trace.filter((t) =&gt; t.name);
+  for (const t of calls) {
+    if (t.result.status !== "ok" || !t.result.data) continue;
+    if (t.name === "check_stock" &amp;&amp; (dept === "FN" || ((t.input.detail === "storage" || t.input.detail === "schedule") &amp;&amp; dept !== "WH"))) add("4 data outside the permitted fields");
+    if (dept === "WH" &amp;&amp; hasPrice(t.result.data)) add("4 data outside the permitted fields");
+    if (t.name === "retrieve_customer_prices" &amp;&amp; dept !== "SL") add("4 data outside the permitted fields");
+    if (t.name === "retrieve_customer_account") {
+      const view = B.VIEWS[t.input.view];
+      const derived = { delivery: ["served_from", "delivery_day"], payments: ["overdue_count"] }[t.input.view] || [];
+      if (!view || !view.depts.includes(dept) || Object.keys(t.result.data).some((k) =&gt; !(view.fields.includes(k) || derived.includes(k)))) add("4 data outside the permitted fields");
+    }
+  }
+  const rec = calls.findIndex((t) =&gt; t.result.status === "needs_reconciliation");
+  if (rec &gt;= 0 &amp;&amp; calls.slice(rec + 1).some((t) =&gt; t.name === calls[rec].name)) add("7 retry after needs_reconciliation");
+  return breaches;
+}</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Group</th><th>Steps</th><th>Runs passed</th></tr>
+<tr><td><b>Allowed actions</b></td><td>1.1, 1.2, 3.5, 3.6, 4.1, 6.1, 6.2, 7.4</td><td>8 of 8</td></tr><tr><td><b>Sent to a manager</b></td><td>2.1, 2.2, 2.3, 2.4, 3.1, 3.2, 3.3, 3.4, 5.1, 5.2, 5.3, 5.4, 7.1, 7.2, 7.3</td><td>15 of 15</td></tr><tr><td><b>Not this person's</b></td><td>1.3, 2.5, 3.7, 4.2, 4.3, 5.5, 6.3, 7.5</td><td>8 of 8</td></tr><tr><td><b>Failures</b></td><td>F1, F2, F3, F4, F5</td><td>5 of 5</td></tr></table>
+<ul><li><b>Expected results:</b> the expected tool, status, code, records and notification of each step are set in an <a href="https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a>, and each run is scored against them.</li><li><b>One working day:</b> Thursday 1 October 2026, 10:00 to 11:16: 31 steps and 3 desk button presses in time order. Each step starts from a fresh copy of the data with the earlier steps applied by their own canonical calls, without a model, on the step's own clock.</li><li><b>Failure cases:</b> 5 cases start after a named step, some with a fault injected in the back end.</li><li><b>Scored from the record:</b> the right tool, status and code, the records written, the notification text and the 10 hard limits. Reply wording is read against the reply rules, beside the score.</li><li><b>Tool selection measured:</b> first tool right in 29 of 29 turns, 0 calls beyond the minimum, on Claude Haiku 5.5, 5 runs at a time.</li><li><b>Tool tests:</b> 101 checks with no API key, every step and code at tool level (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/df-auto-parts-distributors/benchmark/test_tools.js" target="_blank" rel="noopener">test_tools.js</a>).</li><li><b>MCP round trip:</b> 9 checks call through the server with the staff ID in <code>_meta</code>, with no API key (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/df-auto-parts-distributors/benchmark/test_mcp.mjs" target="_blank" rel="noopener">test_mcp.mjs</a>).</li></ul>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the desk behaves, cut directly from the project files. The AI chooses a tool; the hooks, the back end and the shared result shape decide what happens. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/df-auto-parts-distributors" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/df-auto-parts-distributors/
+├── build_policies.py         # Four policies: pages, Markdown resources, clauses, tables
+├── generate_data.py          # Seed 42: customers, catalogue, prices, stock, orders, invoices
+├── build_cases.py            # Answer Key and cases.json: 31 steps, 3 button presses, 5 failures
+├── resources/                # Policies, Product Catalogue, Customer Directory
+├── data/                     # The records only the tools reach
+├── lib/
+│   ├── format.js             # One result shape, codes, RM and Malaysia time
+│   ├── rules.js              # Staff, prices, summary, delivery terms, the four manager rules, replies
+│   └── backend.js            # Drafts, escalations, decisions, placing once, schedules, counts
+├── hooks/
+│   ├── pre_tool_use.js       # One shared hook before all seven tools
+│   └── post_tool_use.js      # One shared hook after all seven tools
+├── tools.js                  # Seven tools, the desk and its buttons
+├── mcp_server.mjs            # MCP server: 6 resources, 7 tools, staff ID from _meta
+├── prompt.js                 # Call the tool every time; reply rules with one example per level
+├── agent.js                  # Tool loop on Haiku 5.5: fixed replies, reply checks, Basis line
+├── build_staff.mjs           # Builds staff-desk.html from its template
+├── staff-desk.html           # Seven scenarios: replay and live
+├── benchmark/
+│   ├── Answer Key.html       # Expected result of every step
+│   ├── cases.json            # The day's timeline and the failure cases
+│   ├── harness.js            # Timeline setup, scoring, ten hard limits, tool selection
+│   ├── test_tools.js         # Every step and code at tool level, no API key
+│   ├── test_mcp.mjs          # MCP round trip, no API key
+│   ├── run_benchmark.js      # Runs, scores and measures tool selection
+│   └── results.json          # Recorded run for the replay
+├── .mcp.json                 # Registers the server for Claude Code
+└── CLAUDE.md                 # Layout, who reads and decides what, build steps</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · DF Auto Parts Distributors</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="diagram.js"></script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

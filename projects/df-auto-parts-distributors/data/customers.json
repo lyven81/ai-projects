@@ -1,0 +1,2766 @@
+[
+ {
+  "id": "C-0001",
+  "name": "Bengkel Seri Mawar Auto",
+  "kind": "workshop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1500000,
+  "outstanding": 980000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0001-1",
+    "name": "Encik Hafizi",
+    "channel": "whatsapp",
+    "value": "+60 12-418 7702",
+    "approved": true
+   },
+   {
+    "id": "CT-0001-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts@serimawarauto.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0002",
+  "name": "Bunga Raya Auto Parts",
+  "kind": "parts_shop",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 800000,
+  "outstanding": 800000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0002-1",
+    "name": "Mr Ravi",
+    "channel": "whatsapp",
+    "value": "+60 13-552 0914",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0003",
+  "name": "Pelangi Jaya Auto Service",
+  "kind": "workshop",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": null,
+  "outstanding": 420000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0003-1",
+    "name": "Ms Wong",
+    "channel": "whatsapp",
+    "value": "+60 16-730 2281",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0004",
+  "name": "Bengkel Gemilang Motor",
+  "kind": "workshop",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 600000,
+  "outstanding": 400000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0004-1",
+    "name": "Encik Azmi",
+    "channel": "whatsapp",
+    "value": "+60 19-260 4418",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0005",
+  "name": "Bengkel Cempaka Motor",
+  "kind": "workshop",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 320000,
+  "outstanding": 245300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0005-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-570 8532",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0006",
+  "name": "Kedai Alat Ganti Pantas",
+  "kind": "parts_shop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1660000,
+  "outstanding": 1027100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0006-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-317 9922",
+    "approved": true
+   },
+   {
+    "id": "CT-0006-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts6@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0007",
+  "name": "Kedai Alat Ganti Seri Mawar",
+  "kind": "parts_shop",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1290000,
+  "outstanding": 229300,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0007-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 12-650 2633",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0008",
+  "name": "Mesra Auto Service",
+  "kind": "workshop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 940000,
+  "outstanding": 1015600,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0008-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-888 5295",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0009",
+  "name": "Puncak Auto Parts",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1110000,
+  "outstanding": 426600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0009-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-356 8770",
+    "approved": true
+   },
+   {
+    "id": "CT-0009-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts9@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0010",
+  "name": "Cempaka Auto Parts",
+  "kind": "parts_shop",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1280000,
+  "outstanding": 332500,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0010-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-816 3504",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0011",
+  "name": "Bengkel Bahagia Auto",
+  "kind": "workshop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1020000,
+  "outstanding": 368500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0011-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-365 4271",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0012",
+  "name": "Kedai Alat Ganti Tiara",
+  "kind": "parts_shop",
+  "location": "Kajang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2190000,
+  "outstanding": 1318000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0012-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-528 2680",
+    "approved": true
+   },
+   {
+    "id": "CT-0012-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts12@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0013",
+  "name": "Bengkel Selasih Auto",
+  "kind": "workshop",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 340000,
+  "outstanding": 292800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0013-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 13-985 7825",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0014",
+  "name": "Jaya Baru Auto Service",
+  "kind": "workshop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 810000,
+  "outstanding": 372300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0014-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-713 8726",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0015",
+  "name": "Bahagia Auto Parts",
+  "kind": "parts_shop",
+  "location": "Bangi",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1610000,
+  "outstanding": 1702600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0015-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-537 5947",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0016",
+  "name": "Permata Auto Service",
+  "kind": "workshop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 820000,
+  "outstanding": 598100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0016-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 13-509 3347",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0017",
+  "name": "Teratai Auto Parts",
+  "kind": "parts_shop",
+  "location": "Kajang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1700000,
+  "outstanding": 620500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0017-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-309 2578",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0018",
+  "name": "Bengkel Tiara Motor",
+  "kind": "workshop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 620000,
+  "outstanding": 156000,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0018-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-540 7224",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0019",
+  "name": "Mutiara Auto Service",
+  "kind": "workshop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1040000,
+  "outstanding": 679100,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0019-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-811 7367",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0020",
+  "name": "Bengkel Teguh Motor",
+  "kind": "workshop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1050000,
+  "outstanding": 706600,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0020-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-423 8039",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0021",
+  "name": "Bengkel Anggerik Auto",
+  "kind": "workshop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 430000,
+  "outstanding": 237800,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0021-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-285 6077",
+    "approved": true
+   },
+   {
+    "id": "CT-0021-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts21@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0022",
+  "name": "Bengkel Berkat Motor",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 940000,
+  "outstanding": 541300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0022-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-442 5778",
+    "approved": true
+   },
+   {
+    "id": "CT-0022-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts22@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0023",
+  "name": "Kedai Alat Ganti Anggerik",
+  "kind": "parts_shop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1970000,
+  "outstanding": 337100,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0023-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 13-776 4084",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0024",
+  "name": "Bengkel Kasih Auto",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 300000,
+  "outstanding": 111200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0024-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-299 1421",
+    "approved": true
+   },
+   {
+    "id": "CT-0024-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts24@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0025",
+  "name": "Kedai Alat Ganti Aman",
+  "kind": "parts_shop",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 890000,
+  "outstanding": 717600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0025-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-455 1541",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0026",
+  "name": "Lembah Auto Parts",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 970000,
+  "outstanding": 255100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0026-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-619 8496",
+    "approved": true
+   },
+   {
+    "id": "CT-0026-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts26@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0027",
+  "name": "Bengkel Jaya Baru Motor",
+  "kind": "workshop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 370000,
+  "outstanding": 377600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0027-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-566 8171",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0028",
+  "name": "Kedai Alat Ganti Teguh",
+  "kind": "parts_shop",
+  "location": "Kajang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1200000,
+  "outstanding": 585400,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0028-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-204 9689",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0029",
+  "name": "Sejahtera Auto Parts",
+  "kind": "parts_shop",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1840000,
+  "outstanding": 1596600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0029-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-625 9897",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0030",
+  "name": "Bengkel Damai Motor",
+  "kind": "workshop",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 410000,
+  "outstanding": 82200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0030-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-943 8982",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0031",
+  "name": "Melati Auto Parts",
+  "kind": "parts_shop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 2140000,
+  "outstanding": 2153800,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0031-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-844 9399",
+    "approved": true
+   },
+   {
+    "id": "CT-0031-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts31@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0032",
+  "name": "Bengkel Ehsan Auto",
+  "kind": "workshop",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1150000,
+  "outstanding": 1003500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0032-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-855 9099",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0033",
+  "name": "Bengkel Nusa Auto",
+  "kind": "workshop",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 720000,
+  "outstanding": 249900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0033-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 19-827 6621",
+    "approved": true
+   },
+   {
+    "id": "CT-0033-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts33@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0034",
+  "name": "Bengkel Indah Auto",
+  "kind": "workshop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 860000,
+  "outstanding": 275400,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0034-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-515 6992",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0035",
+  "name": "Tiara Auto Service",
+  "kind": "workshop",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 860000,
+  "outstanding": 411900,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0035-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-905 7189",
+    "approved": true
+   },
+   {
+    "id": "CT-0035-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts35@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0036",
+  "name": "Kedai Alat Ganti Sakura",
+  "kind": "parts_shop",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1700000,
+  "outstanding": 906800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0036-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-238 8542",
+    "approved": true
+   },
+   {
+    "id": "CT-0036-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts36@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0037",
+  "name": "Setia Auto Parts",
+  "kind": "parts_shop",
+  "location": "Puchong",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1150000,
+  "outstanding": 1299600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0037-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-589 9331",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0038",
+  "name": "Kedai Alat Ganti Lembah",
+  "kind": "parts_shop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1600000,
+  "outstanding": 714700,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0038-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-728 1807",
+    "approved": true
+   },
+   {
+    "id": "CT-0038-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts38@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0039",
+  "name": "Aman Auto Parts",
+  "kind": "parts_shop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1950000,
+  "outstanding": 1190800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0039-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-704 3947",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0040",
+  "name": "Sinar Pagi Auto Service",
+  "kind": "workshop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 760000,
+  "outstanding": 211600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0040-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-753 8268",
+    "approved": true
+   },
+   {
+    "id": "CT-0040-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts40@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0041",
+  "name": "Bengkel Kenanga Motor",
+  "kind": "workshop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 920000,
+  "outstanding": 438200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0041-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-686 3278",
+    "approved": true
+   },
+   {
+    "id": "CT-0041-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts41@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0042",
+  "name": "Sejahtera Auto Service",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1160000,
+  "outstanding": 184300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0042-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-894 6172",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0043",
+  "name": "Sentosa Auto Service",
+  "kind": "workshop",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 880000,
+  "outstanding": 716200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0043-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-343 1584",
+    "approved": true
+   },
+   {
+    "id": "CT-0043-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts43@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0044",
+  "name": "Kedai Alat Ganti Nusa",
+  "kind": "parts_shop",
+  "location": "Klang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 970000,
+  "outstanding": 273400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0044-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-727 2901",
+    "approved": true
+   },
+   {
+    "id": "CT-0044-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts44@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0045",
+  "name": "Bengkel Sinar Pagi Motor",
+  "kind": "workshop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 640000,
+  "outstanding": 461200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0045-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-473 9250",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0046",
+  "name": "Puncak Auto Service",
+  "kind": "workshop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 440000,
+  "outstanding": 196100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0046-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-817 9381",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0047",
+  "name": "Indah Auto Service",
+  "kind": "workshop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 320000,
+  "outstanding": 122700,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0047-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 13-652 9570",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0048",
+  "name": "Bunga Raya Auto Service",
+  "kind": "workshop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1040000,
+  "outstanding": 351500,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0048-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-843 3205",
+    "approved": true
+   },
+   {
+    "id": "CT-0048-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts48@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0049",
+  "name": "Lembah Auto Service",
+  "kind": "workshop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 590000,
+  "outstanding": 366300,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0049-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-418 8656",
+    "approved": true
+   },
+   {
+    "id": "CT-0049-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts49@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0050",
+  "name": "Bengkel Nusa Motor",
+  "kind": "workshop",
+  "location": "Kajang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 970000,
+  "outstanding": 387500,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0050-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-364 5275",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0051",
+  "name": "Bengkel Seroja Auto",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1000000,
+  "outstanding": 807700,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0051-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-646 3703",
+    "approved": true
+   },
+   {
+    "id": "CT-0051-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts51@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0052",
+  "name": "Mutiara Auto Parts",
+  "kind": "parts_shop",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2150000,
+  "outstanding": 1388100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0052-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-460 2339",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0053",
+  "name": "Bengkel Bahagia Motor",
+  "kind": "workshop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 980000,
+  "outstanding": 509800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0053-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-770 1770",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0054",
+  "name": "Lestari Auto Service",
+  "kind": "workshop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 560000,
+  "outstanding": 634700,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0054-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 13-992 5979",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0055",
+  "name": "Sentosa Auto Parts",
+  "kind": "parts_shop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1420000,
+  "outstanding": 748300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0055-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-874 9713",
+    "approved": true
+   },
+   {
+    "id": "CT-0055-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts55@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0056",
+  "name": "Bengkel Ceria Motor",
+  "kind": "workshop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 420000,
+  "outstanding": 344100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0056-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-561 7166",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0057",
+  "name": "Cahaya Auto Parts",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 2050000,
+  "outstanding": 965700,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0057-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-866 1425",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0058",
+  "name": "Bengkel Rimba Motor",
+  "kind": "workshop",
+  "location": "Puchong",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1100000,
+  "outstanding": 232100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0058-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-371 9333",
+    "approved": true
+   },
+   {
+    "id": "CT-0058-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts58@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0059",
+  "name": "Bengkel Murni Motor",
+  "kind": "workshop",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 790000,
+  "outstanding": 180300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0059-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-905 9005",
+    "approved": true
+   },
+   {
+    "id": "CT-0059-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts59@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0060",
+  "name": "Seri Mawar Auto Parts",
+  "kind": "parts_shop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 810000,
+  "outstanding": 855800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0060-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-583 4908",
+    "approved": true
+   },
+   {
+    "id": "CT-0060-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts60@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0061",
+  "name": "Kedai Alat Ganti Taman Baru",
+  "kind": "parts_shop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2370000,
+  "outstanding": 2084200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0061-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-371 8712",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0062",
+  "name": "Kilat Auto Service",
+  "kind": "workshop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 340000,
+  "outstanding": 172800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0062-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-262 5359",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0063",
+  "name": "Bengkel Rimba Auto",
+  "kind": "workshop",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 400000,
+  "outstanding": 116900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0063-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-527 6980",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0064",
+  "name": "Selasih Auto Service",
+  "kind": "workshop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 400000,
+  "outstanding": 318600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0064-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-917 1323",
+    "approved": true
+   },
+   {
+    "id": "CT-0064-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts64@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0065",
+  "name": "Murni Auto Service",
+  "kind": "workshop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 700000,
+  "outstanding": 324500,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0065-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-649 6799",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0066",
+  "name": "Bengkel Damai Auto",
+  "kind": "workshop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 500000,
+  "outstanding": 361600,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0066-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-334 2797",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0067",
+  "name": "Kedai Alat Ganti Jasmin",
+  "kind": "parts_shop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 2100000,
+  "outstanding": 1153600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0067-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-648 9344",
+    "approved": true
+   },
+   {
+    "id": "CT-0067-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts67@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0068",
+  "name": "Permata Auto Parts",
+  "kind": "parts_shop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1200000,
+  "outstanding": 1208000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0068-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 12-723 7804",
+    "approved": true
+   },
+   {
+    "id": "CT-0068-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts68@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0069",
+  "name": "Suria Auto Service",
+  "kind": "workshop",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 320000,
+  "outstanding": 85400,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0069-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-715 3627",
+    "approved": true
+   },
+   {
+    "id": "CT-0069-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts69@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0070",
+  "name": "Kedai Alat Ganti Mesra",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2390000,
+  "outstanding": 2697900,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0070-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-834 3113",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0071",
+  "name": "Kedai Alat Ganti Mutiara",
+  "kind": "parts_shop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1200000,
+  "outstanding": 764000,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0071-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-620 6762",
+    "approved": true
+   },
+   {
+    "id": "CT-0071-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts71@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0072",
+  "name": "Kedai Alat Ganti Harmoni",
+  "kind": "parts_shop",
+  "location": "Puchong",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1050000,
+  "outstanding": 442100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0072-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-303 9045",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0073",
+  "name": "Bengkel Taman Baru Motor",
+  "kind": "workshop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 760000,
+  "outstanding": 665100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0073-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-545 1266",
+    "approved": true
+   },
+   {
+    "id": "CT-0073-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts73@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0074",
+  "name": "Bengkel Harmoni Auto",
+  "kind": "workshop",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 380000,
+  "outstanding": 330300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0074-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-254 1584",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0075",
+  "name": "Bengkel Kilat Motor",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 500000,
+  "outstanding": 189600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0075-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-876 1010",
+    "approved": true
+   },
+   {
+    "id": "CT-0075-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts75@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0076",
+  "name": "Kedai Alat Ganti Suria",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2410000,
+  "outstanding": 858800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0076-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-675 7830",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0077",
+  "name": "Orkid Auto Service",
+  "kind": "workshop",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 770000,
+  "outstanding": 260600,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0077-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 12-361 5719",
+    "approved": true
+   },
+   {
+    "id": "CT-0077-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts77@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0078",
+  "name": "Bengkel Gemilang Auto",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 480000,
+  "outstanding": 540200,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0078-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-802 7294",
+    "approved": true
+   },
+   {
+    "id": "CT-0078-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts78@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0079",
+  "name": "Aman Auto Service",
+  "kind": "workshop",
+  "location": "Sepang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 350000,
+  "outstanding": 64200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0079-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-308 4464",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0080",
+  "name": "Kedai Alat Ganti Cahaya",
+  "kind": "parts_shop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1260000,
+  "outstanding": 1438600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0080-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-731 5558",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0081",
+  "name": "Bengkel Wangi Motor",
+  "kind": "workshop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 970000,
+  "outstanding": 706900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0081-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-621 7412",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0082",
+  "name": "Seroja Auto Service",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 640000,
+  "outstanding": 477400,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0082-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 16-867 4862",
+    "approved": true
+   },
+   {
+    "id": "CT-0082-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts82@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0083",
+  "name": "Bengkel Bunga Raya Auto",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1010000,
+  "outstanding": 522700,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0083-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 12-771 8133",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0084",
+  "name": "Kedai Alat Ganti Kenanga",
+  "kind": "parts_shop",
+  "location": "Seri Kembangan",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1100000,
+  "outstanding": 642400,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0084-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 19-846 3793",
+    "approved": true
+   },
+   {
+    "id": "CT-0084-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts84@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0085",
+  "name": "Kedai Alat Ganti Indah",
+  "kind": "parts_shop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1410000,
+  "outstanding": 1473800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0085-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 16-593 3947",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0086",
+  "name": "Kedai Alat Ganti Permata",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1730000,
+  "outstanding": 787800,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0086-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-872 3126",
+    "approved": true
+   },
+   {
+    "id": "CT-0086-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts86@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0087",
+  "name": "Nusa Auto Service",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 480000,
+  "outstanding": 373600,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0087-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-673 2144",
+    "approved": true
+   },
+   {
+    "id": "CT-0087-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts87@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0088",
+  "name": "Kedai Alat Ganti Seroja",
+  "kind": "parts_shop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1390000,
+  "outstanding": 886900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0088-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-906 8472",
+    "approved": true
+   },
+   {
+    "id": "CT-0088-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts88@workshop.example",
+    "approved": false
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0089",
+  "name": "Kedai Alat Ganti Sentosa",
+  "kind": "parts_shop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1320000,
+  "outstanding": 672800,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0089-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-999 7390",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0090",
+  "name": "Ceria Auto Parts",
+  "kind": "parts_shop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1510000,
+  "outstanding": 257400,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0090-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-584 1416",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0091",
+  "name": "Laju Auto Service",
+  "kind": "workshop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1050000,
+  "outstanding": 566900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0091-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 13-535 7914",
+    "approved": true
+   },
+   {
+    "id": "CT-0091-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts91@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0092",
+  "name": "Bengkel Taman Baru Auto",
+  "kind": "workshop",
+  "location": "Cyberjaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1150000,
+  "outstanding": 261000,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0092-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-876 8180",
+    "approved": true
+   },
+   {
+    "id": "CT-0092-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts92@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0093",
+  "name": "Bengkel Teratai Auto",
+  "kind": "workshop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 570000,
+  "outstanding": 133100,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0093-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 16-974 9818",
+    "approved": true
+   },
+   {
+    "id": "CT-0093-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts93@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0094",
+  "name": "Rezeki Auto Service",
+  "kind": "workshop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 590000,
+  "outstanding": 101500,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0094-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-539 2459",
+    "approved": true
+   },
+   {
+    "id": "CT-0094-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts94@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0095",
+  "name": "Lestari Auto Parts",
+  "kind": "parts_shop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1790000,
+  "outstanding": 740700,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0095-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-956 9329",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0096",
+  "name": "Pantas Auto Parts",
+  "kind": "parts_shop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1350000,
+  "outstanding": 528100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0096-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-306 4828",
+    "approved": true
+   },
+   {
+    "id": "CT-0096-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts96@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0097",
+  "name": "Bengkel Mutiara Auto",
+  "kind": "workshop",
+  "location": "Bangi",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 490000,
+  "outstanding": 300700,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0097-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-916 5607",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0098",
+  "name": "Tiara Auto Parts",
+  "kind": "parts_shop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1430000,
+  "outstanding": 426100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0098-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-680 5719",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0099",
+  "name": "Bengkel Ros Motor",
+  "kind": "workshop",
+  "location": "Puchong",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1070000,
+  "outstanding": 519200,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0099-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 13-414 6344",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0100",
+  "name": "Kenanga Auto Parts",
+  "kind": "parts_shop",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1540000,
+  "outstanding": 975600,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0100-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-858 4694",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0101",
+  "name": "Bengkel Kemboja Auto",
+  "kind": "workshop",
+  "location": "Shah Alam",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 400000,
+  "outstanding": 173200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0101-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-642 8630",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0102",
+  "name": "Bengkel Laju Motor",
+  "kind": "workshop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1080000,
+  "outstanding": 642600,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0102-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-711 6236",
+    "approved": true
+   },
+   {
+    "id": "CT-0102-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts102@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0103",
+  "name": "Taman Baru Auto Parts",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2350000,
+  "outstanding": 729800,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0103-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-766 9870",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0104",
+  "name": "Bengkel Pelangi Jaya Auto",
+  "kind": "workshop",
+  "location": "Banting",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 730000,
+  "outstanding": 343600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0104-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 12-687 8162",
+    "approved": true
+   },
+   {
+    "id": "CT-0104-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts104@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0105",
+  "name": "Cempaka Auto Service",
+  "kind": "workshop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 970000,
+  "outstanding": 524100,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0105-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-835 1854",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0106",
+  "name": "Kedai Alat Ganti Puncak",
+  "kind": "parts_shop",
+  "location": "Sepang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 2300000,
+  "outstanding": 908200,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0106-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 12-729 3020",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0107",
+  "name": "Pelangi Jaya Auto Parts",
+  "kind": "parts_shop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 960000,
+  "outstanding": 985500,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0107-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-575 6853",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0108",
+  "name": "Kasih Auto Parts",
+  "kind": "parts_shop",
+  "location": "Banting",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 920000,
+  "outstanding": 634100,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0108-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 19-245 5661",
+    "approved": true
+   },
+   {
+    "id": "CT-0108-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts108@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-B"
+ },
+ {
+  "id": "C-0109",
+  "name": "Kedai Alat Ganti Lily",
+  "kind": "parts_shop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2060000,
+  "outstanding": 878900,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0109-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 12-663 4081",
+    "approved": true
+   },
+   {
+    "id": "CT-0109-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts109@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0110",
+  "name": "Ehsan Auto Parts",
+  "kind": "parts_shop",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1170000,
+  "outstanding": 343200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0110-1",
+    "name": "Workshop manager",
+    "channel": "whatsapp",
+    "value": "+60 13-790 4020",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0111",
+  "name": "Delima Auto Parts",
+  "kind": "parts_shop",
+  "location": "Selayang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 850000,
+  "outstanding": 193200,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0111-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 13-620 1718",
+    "approved": true
+   },
+   {
+    "id": "CT-0111-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts111@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0112",
+  "name": "Bengkel Seroja Motor",
+  "kind": "workshop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 690000,
+  "outstanding": 366600,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0112-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-751 2369",
+    "approved": true
+   },
+   {
+    "id": "CT-0112-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts112@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0113",
+  "name": "Kedai Alat Ganti Jaya Baru",
+  "kind": "parts_shop",
+  "location": "Subang Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1010000,
+  "outstanding": 334900,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0113-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-913 7554",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0114",
+  "name": "Bengkel Jasmin Motor",
+  "kind": "workshop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 490000,
+  "outstanding": 407100,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0114-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 13-601 7027",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0115",
+  "name": "Kedai Alat Ganti Kemboja",
+  "kind": "parts_shop",
+  "location": "Petaling Jaya",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 2290000,
+  "outstanding": 1240300,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0115-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 16-793 7293",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0116",
+  "name": "Gemilang Auto Service",
+  "kind": "workshop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 590000,
+  "outstanding": 319300,
+  "terms": 14,
+  "contacts": [
+   {
+    "id": "CT-0116-1",
+    "name": "Purchasing",
+    "channel": "whatsapp",
+    "value": "+60 19-842 3353",
+    "approved": true
+   },
+   {
+    "id": "CT-0116-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts116@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0117",
+  "name": "Bengkel Sentosa Motor",
+  "kind": "workshop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1190000,
+  "outstanding": 561100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0117-1",
+    "name": "Owner",
+    "channel": "whatsapp",
+    "value": "+60 19-689 2000",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0118",
+  "name": "Bengkel Ros Auto",
+  "kind": "workshop",
+  "location": "Klang",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 860000,
+  "outstanding": 302000,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0118-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-671 7456",
+    "approved": true
+   },
+   {
+    "id": "CT-0118-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts118@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0119",
+  "name": "Ehsan Auto Service",
+  "kind": "workshop",
+  "location": "Rawang",
+  "assigned_to": "SL-02-02",
+  "credit_limit": 1020000,
+  "outstanding": 812800,
+  "terms": 45,
+  "contacts": [
+   {
+    "id": "CT-0119-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 19-923 6535",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ },
+ {
+  "id": "C-0120",
+  "name": "Bengkel Sri Muda Auto",
+  "kind": "workshop",
+  "location": "Kuala Selangor",
+  "assigned_to": "SL-02-01",
+  "credit_limit": 1020000,
+  "outstanding": 710100,
+  "terms": 30,
+  "contacts": [
+   {
+    "id": "CT-0120-1",
+    "name": "Manager",
+    "channel": "whatsapp",
+    "value": "+60 12-533 3978",
+    "approved": true
+   },
+   {
+    "id": "CT-0120-2",
+    "name": "Accounts",
+    "channel": "email",
+    "value": "accounts120@workshop.example",
+    "approved": true
+   }
+  ],
+  "warehouse": "WH-A"
+ }
+]

@@ -1,0 +1,617 @@
+{
+ "summary": {
+  "model": "claude-haiku-5-5",
+  "ranAt": "2026-10-23T08:36:48.642Z",
+  "seconds": 4,
+  "total": {
+   "pass": 3,
+   "total": 3
+  },
+  "groups": {
+   "valid": {
+    "pass": 1,
+    "total": 1
+   },
+   "escalation": {
+    "pass": 1,
+    "total": 1
+   },
+   "unauthorised": {
+    "pass": 1,
+    "total": 1
+   },
+   "failure": {
+    "pass": 0,
+    "total": 0
+   }
+  },
+  "hard_limit_breaches": 0,
+  "tool_selection": {
+   "first_right": 3,
+   "beyond_minimum": 0,
+   "runs": 3
+  },
+  "tool_choice_fallbacks": 0,
+  "sent_back": 0,
+  "reworded": 0,
+  "fixed_replies": 2,
+  "usage": {
+   "input_tokens": 11081,
+   "output_tokens": 554,
+   "cache_read_input_tokens": 19551,
+   "cache_creation_input_tokens": 58653
+  },
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 11081,
+    "output_tokens": 554,
+    "cache_read_input_tokens": 19551,
+    "cache_creation_input_tokens": 58653
+   }
+  }
+ },
+ "results": [
+  {
+   "id": "1.1",
+   "group": "valid",
+   "tab": 1,
+   "order": "A",
+   "time": "10:00",
+   "staff": "SL-02-02",
+   "kind": "model",
+   "title": "Daniel asks for a credit order",
+   "message": "Please place a credit order for C-0004: 3 cartons of 5W-30 engine oil, delivery Friday 2 October.",
+   "trace": [
+    {
+     "type": "tool",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-0004",
+      "lines": [
+       {
+        "sku": "DF-EO-001",
+        "qty": 3
+       }
+      ],
+      "delivery_date": "2026-10-02",
+      "payment_route": "credit"
+     },
+     "result": {
+      "tool": "create_order",
+      "status": "refused",
+      "data": {
+       "summary": {
+        "customer": "C-0004",
+        "request_id": null,
+        "lines": [
+         {
+          "sku": "DF-EO-001",
+          "qty": 3,
+          "unit_price": "RM 440.00",
+          "line_total": "RM 1,320.00",
+          "promotion": null
+         }
+        ],
+        "subtotal": "RM 1,320.00",
+        "discount_pct": 0,
+        "discount": "RM 0.00",
+        "total": "RM 1,320.00",
+        "payment_route": "credit",
+        "delivery_date": "2026-10-02"
+       }
+      },
+      "error": {
+       "code": "confirmation_missing",
+       "clause": "SP-07",
+       "message": "No staff confirmation for this summary."
+      },
+      "next_step": {
+       "text": "The summary waits on the staff page; the staff member confirms it, then the order is placed with the confirmation ID and request ID shown.",
+       "person": "SL-02-02",
+       "say": null,
+       "basis": "SP-07 · C-0004 price list · WH-B 48 cartons, updated 16 hours ago"
+      }
+     },
+     "hook": {
+      "tool": "create_order",
+      "input": {
+       "customer_id": "C-0004",
+       "lines": [
+        {
+         "sku": "DF-EO-001",
+         "qty": 3
+        }
+       ],
+       "delivery_date": "2026-10-02",
+       "payment_route": "credit"
+      },
+      "staff": "SL-02-02",
+      "pre": {
+       "verdict": "block",
+       "checks": [
+        {
+         "check": "Signed in as SL-02-02, Daniel Wong, sales executive (Sales, tier 02)",
+         "clause": "MP-08",
+         "pass": true
+        },
+        {
+         "check": "Sales Tier 02 places orders",
+         "clause": "SP-01",
+         "pass": true
+        },
+        {
+         "check": "Customer C-0004 exists",
+         "clause": "MP-07",
+         "pass": true
+        },
+        {
+         "check": "C-0004 is assigned to SL-02-02",
+         "clause": "MP-06",
+         "pass": true
+        },
+        {
+         "check": "A request of its own (no open draft for these lines)",
+         "clause": "SP-13",
+         "pass": true
+        },
+        {
+         "check": "Lines: catalogue SKUs in whole selling units",
+         "clause": "SP-02",
+         "pass": true
+        },
+        {
+         "check": "Every line is on the customer's price list",
+         "clause": "SP-04",
+         "pass": true
+        },
+        {
+         "check": "DF-EO-001: figure 16 hours old",
+         "clause": "WP-03",
+         "pass": true
+        },
+        {
+         "check": "DF-EO-001: 3 of 48 at WH-B",
+         "clause": "WP-05",
+         "pass": true
+        },
+        {
+         "check": "Credit route: RM 1,320.00 within the balance RM 2,000.00",
+         "clause": "FP-03",
+         "pass": true
+        },
+        {
+         "check": "Not the same order within 30 minutes",
+         "clause": "SP-09",
+         "pass": true
+        },
+        {
+         "check": "No approval needed",
+         "clause": "MP-09",
+         "pass": true
+        },
+        {
+         "check": "Staff confirmation matches the full summary",
+         "clause": "SP-07",
+         "pass": false
+        }
+       ],
+       "code": "confirmation_missing",
+       "clause": "SP-07"
+      },
+      "tool_ran": false,
+      "raw": null,
+      "post": [],
+      "result": {
+       "tool": "create_order",
+       "status": "refused",
+       "data": {
+        "summary": {
+         "customer": "C-0004",
+         "request_id": null,
+         "lines": [
+          {
+           "sku": "DF-EO-001",
+           "qty": 3,
+           "unit_price": "RM 440.00",
+           "line_total": "RM 1,320.00",
+           "promotion": null
+          }
+         ],
+         "subtotal": "RM 1,320.00",
+         "discount_pct": 0,
+         "discount": "RM 0.00",
+         "total": "RM 1,320.00",
+         "payment_route": "credit",
+         "delivery_date": "2026-10-02"
+        }
+       },
+       "error": {
+        "code": "confirmation_missing",
+        "clause": "SP-07",
+        "message": "No staff confirmation for this summary."
+       },
+       "next_step": {
+        "text": "The summary waits on the staff page; the staff member confirms it, then the order is placed with the confirmation ID and request ID shown.",
+        "person": "SL-02-02",
+        "say": null,
+        "basis": "SP-07 · C-0004 price list · WH-B 48 cartons, updated 16 hours ago"
+       }
+      }
+     }
+    },
+    {
+     "type": "reply",
+     "text": "The summary for C-0004 is ready: 3 cartons of 5W-30 engine oil at RM 440.00 each, total RM 1,320.00 on credit, delivery Friday 2 October 2026. Please check it on the staff page and press Confirm summary.\nBasis: SP-07 · C-0004 price list · WH-B 48 cartons, updated 16 hours ago"
+    }
+   ],
+   "reply": "The summary for C-0004 is ready: 3 cartons of 5W-30 engine oil at RM 440.00 each, total RM 1,320.00 on credit, delivery Friday 2 October 2026. Please check it on the staff page and press Confirm summary.\nBasis: SP-07 · C-0004 price list · WH-B 48 cartons, updated 16 hours ago",
+   "score": {
+    "pass": true,
+    "checks": {
+     "right_tool": true,
+     "right_result": true,
+     "records": true,
+     "summary": true,
+     "hard_limits": true
+    },
+    "breaches": [],
+    "added": {
+     "orders": 0,
+     "escalations": 0,
+     "approvals": 0,
+     "notifications": 0,
+     "drafts": 0,
+     "stock_counts": 0,
+     "schedules": 0,
+     "confirmations": 0
+    }
+   },
+   "selection": {
+    "first_right": true,
+    "calls": 1,
+    "beyond_minimum": 0
+   },
+   "fallbacks": 0,
+   "sentBack": false,
+   "reworded": 0,
+   "usage": {
+    "input_tokens": 5743,
+    "output_tokens": 359,
+    "cache_read_input_tokens": 19551,
+    "cache_creation_input_tokens": 19551
+   },
+   "stoppedBy": "end_turn"
+  },
+  {
+   "id": "2.3",
+   "group": "escalation",
+   "tab": 2,
+   "order": "B",
+   "time": "10:13",
+   "staff": "SL-01-01",
+   "kind": "model",
+   "title": "Farid approves",
+   "message": "Please approve Chloe's 10% discount for C-0001.",
+   "trace": [
+    {
+     "type": "tool",
+     "name": "decide_escalation",
+     "input": {
+      "customer_id": "C-0001",
+      "type": "discount",
+      "decision": "approve"
+     },
+     "result": {
+      "tool": "decide_escalation",
+      "status": "ok",
+      "data": {
+       "escalation_id": "ES-0001",
+       "request_id": "RQ-0002",
+       "customer": "C-0001",
+       "decision": "approved",
+       "reason": null,
+       "approval_id": "AP-0105",
+       "approvals_recorded": 1,
+       "requester": "SL-02-01"
+      },
+      "error": null,
+      "next_step": {
+       "text": "Chloe has been told.",
+       "person": "SL-02-01",
+       "say": "OK. Chloe's 10% discount on C-0001's order RQ-0002 is approved as AP-0105, and Chloe will place the order.",
+       "basis": "SP-06, MP-05, MP-09 · AP-0105 recorded by SL-01-01, 10:13"
+      }
+     },
+     "hook": {
+      "tool": "decide_escalation",
+      "input": {
+       "customer_id": "C-0001",
+       "type": "discount",
+       "decision": "approve"
+      },
+      "staff": "SL-01-01",
+      "pre": {
+       "verdict": "allow",
+       "checks": [
+        {
+         "check": "Signed in as SL-01-01, Farid Iskandar, sales manager (Sales, tier 01)",
+         "clause": "MP-08",
+         "pass": true
+        },
+        {
+         "check": "Tier 01 manager",
+         "clause": "MP-03",
+         "pass": true
+        },
+        {
+         "check": "Discount, up to 15% is in Sales's domain",
+         "clause": "MP-05",
+         "pass": true
+        },
+        {
+         "check": "ES-0001 for C-0001 (RQ-0002) is open and addressed to SL-01-01",
+         "clause": "MP-16",
+         "pass": true
+        }
+       ],
+       "plan": null
+      },
+      "tool_ran": true,
+      "raw": {
+       "escalation": {
+        "id": "ES-0001",
+        "type": "discount",
+        "from": "SL-02-01",
+        "to": "SL-01-01",
+        "customer": "C-0001",
+        "request_id": "RQ-0002",
+        "decision_data": {
+         "lines": [
+          {
+           "sku": "DF-EO-001",
+           "qty": 10,
+           "unit_price": 44000
+          }
+         ],
+         "subtotal": 440000,
+         "discount_pct": 10,
+         "discount": 44000,
+         "total": 396000,
+         "route": "credit",
+         "delivery_date": "2026-10-02",
+         "credit_limit": 1500000,
+         "outstanding": 980000,
+         "balance": 520000
+        },
+        "sent_at": 1790820600,
+        "status": "approved",
+        "decision": "approve",
+        "reason": null,
+        "decided_by": "SL-01-01",
+        "decided_at": 1790820780,
+        "approval_id": "AP-0105"
+       },
+       "approval": {
+        "id": "AP-0105",
+        "approver": "SL-01-01",
+        "type": "discount",
+        "customer": "C-0001",
+        "request_id": "RQ-0002",
+        "value": 10,
+        "time": 1790820780,
+        "escalation": "ES-0001"
+       },
+       "approvals_recorded": 1,
+       "notification": "Farid Iskandar has approved your 10% discount for C-0001's order RQ-0002 (AP-0105). You can place the order when the customer's terms are settled.",
+       "say": "OK. Chloe's 10% discount on C-0001's order RQ-0002 is approved as AP-0105, and Chloe will place the order."
+      },
+      "post": [
+       "ES-0001 approved by SL-01-01 at Thu 1 Oct 2026, 10:13 MYT; approval AP-0105 recorded against RQ-0002 (MP-09, MP-15)",
+       "Notification written by code to SL-02-01: \"Farid Iskandar has approved your 10% discount for C-0001's order RQ-0002 (AP-0105). You can place the order when the customer's terms are settled.\"",
+       "Reply written by code (the decider's instruction, carried out)"
+      ],
+      "result": {
+       "tool": "decide_escalation",
+       "status": "ok",
+       "data": {
+        "escalation_id": "ES-0001",
+        "request_id": "RQ-0002",
+        "customer": "C-0001",
+        "decision": "approved",
+        "reason": null,
+        "approval_id": "AP-0105",
+        "approvals_recorded": 1,
+        "requester": "SL-02-01"
+       },
+       "error": null,
+       "next_step": {
+        "text": "Chloe has been told.",
+        "person": "SL-02-01",
+        "say": "OK. Chloe's 10% discount on C-0001's order RQ-0002 is approved as AP-0105, and Chloe will place the order.",
+        "basis": "SP-06, MP-05, MP-09 · AP-0105 recorded by SL-01-01, 10:13"
+       }
+      }
+     }
+    },
+    {
+     "type": "note",
+     "text": "Reply written in code (decision carried out)."
+    },
+    {
+     "type": "reply",
+     "text": "OK. Chloe's 10% discount on C-0001's order RQ-0002 is approved as AP-0105, and Chloe will place the order.\nBasis: SP-06, MP-05, MP-09 · AP-0105 recorded by SL-01-01, 10:13"
+    }
+   ],
+   "reply": "OK. Chloe's 10% discount on C-0001's order RQ-0002 is approved as AP-0105, and Chloe will place the order.\nBasis: SP-06, MP-05, MP-09 · AP-0105 recorded by SL-01-01, 10:13",
+   "score": {
+    "pass": true,
+    "checks": {
+     "right_tool": true,
+     "right_result": true,
+     "records": true,
+     "decision": true,
+     "hard_limits": true
+    },
+    "breaches": [],
+    "added": {
+     "orders": 0,
+     "escalations": 0,
+     "approvals": 1,
+     "notifications": 1,
+     "drafts": 0,
+     "stock_counts": 0,
+     "schedules": 0,
+     "confirmations": 0
+    }
+   },
+   "selection": {
+    "first_right": true,
+    "calls": 1,
+    "beyond_minimum": 0
+   },
+   "fallbacks": 0,
+   "sentBack": false,
+   "reworded": 0,
+   "usage": {
+    "input_tokens": 2670,
+    "output_tokens": 89,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 19551
+   },
+   "stoppedBy": "fixed_reply"
+  },
+  {
+   "id": "4.3",
+   "group": "unauthorised",
+   "tab": 4,
+   "order": "Stock",
+   "time": "10:32",
+   "staff": "FN-01-01",
+   "kind": "model",
+   "title": "Nadia asks for the stock",
+   "message": "How many NS60 batteries are at WH-A?",
+   "trace": [
+    {
+     "type": "tool",
+     "name": "check_stock",
+     "input": {
+      "warehouse": "WH-A",
+      "detail": "quantity",
+      "skus": [
+       "DF-BT-023",
+       "DF-BT-030"
+      ]
+     },
+     "result": {
+      "tool": "check_stock",
+      "status": "refused",
+      "data": null,
+      "error": {
+       "code": "department_not_permitted",
+       "clause": "WP-02",
+       "message": "Finance does not check stock."
+      },
+      "next_step": {
+       "text": "Stock is open to Sales and Warehouse (WP-02, MP-07).",
+       "person": null,
+       "say": "I'm sorry, stock figures aren't open to you. Only Sales and Warehouse staff can access them.",
+       "basis": "MP-07, WP-02"
+      }
+     },
+     "hook": {
+      "tool": "check_stock",
+      "input": {
+       "warehouse": "WH-A",
+       "detail": "quantity",
+       "skus": [
+        "DF-BT-023",
+        "DF-BT-030"
+       ]
+      },
+      "staff": "FN-01-01",
+      "pre": {
+       "verdict": "block",
+       "checks": [
+        {
+         "check": "Signed in as FN-01-01, Nadia Zulkifli, finance manager (Finance, tier 01)",
+         "clause": "MP-08",
+         "pass": true
+        },
+        {
+         "check": "Finance may check stock",
+         "clause": "WP-02",
+         "pass": false
+        }
+       ],
+       "code": "department_not_permitted",
+       "clause": "WP-02"
+      },
+      "tool_ran": false,
+      "raw": null,
+      "post": [],
+      "result": {
+       "tool": "check_stock",
+       "status": "refused",
+       "data": null,
+       "error": {
+        "code": "department_not_permitted",
+        "clause": "WP-02",
+        "message": "Finance does not check stock."
+       },
+       "next_step": {
+        "text": "Stock is open to Sales and Warehouse (WP-02, MP-07).",
+        "person": null,
+        "say": "I'm sorry, stock figures aren't open to you. Only Sales and Warehouse staff can access them.",
+        "basis": "MP-07, WP-02"
+       }
+      }
+     }
+    },
+    {
+     "type": "note",
+     "text": "Reply written in code (refusal about who is asking)."
+    },
+    {
+     "type": "reply",
+     "text": "I'm sorry, stock figures aren't open to you. Only Sales and Warehouse staff can access them.\nBasis: MP-07, WP-02"
+    }
+   ],
+   "reply": "I'm sorry, stock figures aren't open to you. Only Sales and Warehouse staff can access them.\nBasis: MP-07, WP-02",
+   "score": {
+    "pass": true,
+    "checks": {
+     "right_tool": true,
+     "right_result": true,
+     "records": true,
+     "hard_limits": true
+    },
+    "breaches": [],
+    "added": {
+     "orders": 0,
+     "escalations": 0,
+     "approvals": 0,
+     "notifications": 0,
+     "drafts": 0,
+     "stock_counts": 0,
+     "schedules": 0,
+     "confirmations": 0
+    }
+   },
+   "selection": {
+    "first_right": true,
+    "calls": 1,
+    "beyond_minimum": 0
+   },
+   "fallbacks": 0,
+   "sentBack": false,
+   "reworded": 0,
+   "usage": {
+    "input_tokens": 2668,
+    "output_tokens": 106,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 19551
+   },
+   "stoppedBy": "fixed_reply"
+  }
+ ]
+}

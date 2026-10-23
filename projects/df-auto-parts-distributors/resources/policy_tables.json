@@ -1,0 +1,224 @@
+{
+ "staff": [
+  {
+   "id": "SL-01-01",
+   "name": "Farid Iskandar",
+   "department": "SL",
+   "tier": "01",
+   "role": "Sales manager"
+  },
+  {
+   "id": "SL-02-01",
+   "name": "Chloe Lim",
+   "department": "SL",
+   "tier": "02",
+   "role": "Sales executive"
+  },
+  {
+   "id": "SL-02-02",
+   "name": "Daniel Wong",
+   "department": "SL",
+   "tier": "02",
+   "role": "Sales executive"
+  },
+  {
+   "id": "FN-01-01",
+   "name": "Nadia Zulkifli",
+   "department": "FN",
+   "tier": "01",
+   "role": "Finance manager"
+  },
+  {
+   "id": "FN-02-01",
+   "name": "Priya Nair",
+   "department": "FN",
+   "tier": "02",
+   "role": "Finance officer"
+  },
+  {
+   "id": "WH-01-01",
+   "name": "Azlan Yusof",
+   "department": "WH",
+   "tier": "01",
+   "role": "Warehouse manager"
+  },
+  {
+   "id": "WH-02-01",
+   "name": "Jason Tan",
+   "department": "WH",
+   "tier": "02",
+   "role": "Warehouse coordinator"
+  }
+ ],
+ "departments": {
+  "SL": "Sales",
+  "FN": "Finance",
+  "WH": "Warehouse"
+ },
+ "approval_types": {
+  "discount": {
+   "department": "SL",
+   "label": "Discount, up to 15%",
+   "value": "Discount in percent, the most the order may carry",
+   "clause": "SP-06"
+  },
+  "minimum_order": {
+   "department": "SL",
+   "label": "Minimum-order exception",
+   "value": "The lowest order total allowed, in sen",
+   "clause": "SP-03"
+  },
+  "prepaid": {
+   "department": "FN",
+   "label": "Prepaid route",
+   "value": "The highest prepaid order total allowed, in sen",
+   "clause": "FP-04"
+  },
+  "delivery_exception": {
+   "department": "WH",
+   "label": "Delivery-date exception",
+   "value": "The delivery date approved (YYYY-MM-DD)",
+   "clause": "WP-07"
+  }
+ },
+ "promotions": [
+  {
+   "id": "PR-01",
+   "name": "Merdeka month air filters",
+   "skus": [
+    "DF-OF-021",
+    "DF-OF-022"
+   ],
+   "percent": 8,
+   "start": "2026-08-25",
+   "end": "2026-09-15"
+  },
+  {
+   "id": "PR-02",
+   "name": "October brake pad service",
+   "skus": [
+    "DF-BP-003",
+    "DF-BP-004"
+   ],
+   "percent": 10,
+   "start": "2026-09-25",
+   "end": "2026-10-15"
+  },
+  {
+   "id": "PR-03",
+   "name": "Deepavali long-trip batteries",
+   "skus": [
+    "DF-BT-024",
+    "DF-BT-025"
+   ],
+   "percent": 12,
+   "start": "2026-10-20",
+   "end": "2026-11-08"
+  }
+ ],
+ "locations": {
+  "Shah Alam": {
+   "district": "Petaling",
+   "warehouse": "WH-A"
+  },
+  "Petaling Jaya": {
+   "district": "Petaling",
+   "warehouse": "WH-A"
+  },
+  "Subang Jaya": {
+   "district": "Petaling",
+   "warehouse": "WH-A"
+  },
+  "Klang": {
+   "district": "Klang",
+   "warehouse": "WH-A"
+  },
+  "Rawang": {
+   "district": "Gombak",
+   "warehouse": "WH-A"
+  },
+  "Selayang": {
+   "district": "Gombak",
+   "warehouse": "WH-A"
+  },
+  "Kuala Selangor": {
+   "district": "Kuala Selangor",
+   "warehouse": "WH-A"
+  },
+  "Puchong": {
+   "district": "Petaling",
+   "warehouse": "WH-B"
+  },
+  "Seri Kembangan": {
+   "district": "Petaling",
+   "warehouse": "WH-B"
+  },
+  "Kajang": {
+   "district": "Hulu Langat",
+   "warehouse": "WH-B"
+  },
+  "Bangi": {
+   "district": "Hulu Langat",
+   "warehouse": "WH-B"
+  },
+  "Cyberjaya": {
+   "district": "Sepang",
+   "warehouse": "WH-B"
+  },
+  "Sepang": {
+   "district": "Sepang",
+   "warehouse": "WH-B"
+  },
+  "Banting": {
+   "district": "Kuala Langat",
+   "warehouse": "WH-B"
+  }
+ },
+ "warehouses": {
+  "WH-A": "Shah Alam",
+  "WH-B": "Puchong"
+ },
+ "holidays": {
+  "2026-09-01": "Selangor public holiday",
+  "2026-09-16": "Malaysia Day",
+  "2026-10-26": "Silver Jubilee of the Sultan of Selangor (replacement for Sunday 25 October)",
+  "2026-11-08": "Deepavali",
+  "2026-11-09": "Deepavali (replacement)",
+  "2026-12-11": "Birthday of the Sultan of Selangor",
+  "2026-12-25": "Christmas Day"
+ },
+ "values": {
+  "minimum_order_sen": 30000,
+  "max_discount_pct": 15,
+  "duplicate_window_min": 30,
+  "default_terms_days": 30,
+  "draft_lapse_days": 90,
+  "stock_max_age_hours": 24,
+  "tier2_raise_cap_sen": 200000,
+  "delivery_cutoff_hour": 15,
+  "address_cutoff_hour": 15,
+  "utc_offset_hours": 8
+ },
+ "resources": [
+  {
+   "uri": "policy://management",
+   "name": "Management Policy",
+   "file": "Management Policy.md"
+  },
+  {
+   "uri": "policy://sales",
+   "name": "Sales Policy",
+   "file": "Sales Policy.md"
+  },
+  {
+   "uri": "policy://finance",
+   "name": "Finance Policy",
+   "file": "Finance Policy.md"
+  },
+  {
+   "uri": "policy://warehouse",
+   "name": "Warehouse Policy",
+   "file": "Warehouse Policy.md"
+  }
+ ]
+}

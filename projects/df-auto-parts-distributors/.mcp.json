@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "df-staff-desk": {
+      "command": "node",
+      "args": ["mcp_server.mjs"]
+    }
+  }
+}

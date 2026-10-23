@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 8**
+**Total published AI projects: 9**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 9 | 2026-10-23 | DF Auto Parts Distributors | [page](https://lyven81.github.io/ai-projects/df-auto-parts-distributors.html) |
 | 8 | 2026-10-23 | Sang Kancil Specialist Clinic | [page](https://lyven81.github.io/ai-projects/sang-kancil-specialist-clinic.html) |
 | 7 | 2026-10-21 | Happy Mart Customer Desk | [page](https://lyven81.github.io/ai-projects/happy-mart-customer-desk.html) |
 | 6 | 2026-10-21 | FD Food and Drink Distributors | [page](https://lyven81.github.io/ai-projects/fd-food-and-drink-distributors.html) |
@@ -31,6 +32,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-21
 
 ### Business workflow
+
+#### DF Auto Parts Distributors
+- **What it does:** A staff desk for an automotive spare parts distributor where a salesperson starts the work, the manager who owns the decision receives it with the data to decide, and code or a named person carries it out.
+- **How it's built:** Claude Haiku 5.5 with an MCP server (Node.js) offering six resources (four policies with 50 clauses, the product catalogue and the customer directory) and seven tools; one shared PreToolUse hook checks every request before a tool runs and turns a rule a manager decides into an escalation to that manager, one shared PostToolUse hook applies policy to the result of every tool that runs, and the back end places an order once, only when every approval is recorded. A staff desk carries Approve, Decline and Confirm buttons on the same checks as the chat.
+- **Problem solved:** In a parts distributor, a salesperson starts each order but a discount, a small order, an early delivery or paying first is a manager's decision. The desk sends each one to the manager who owns it with the data to decide, records the decision, and tells the salesperson what happens next.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/df-auto-parts-distributors.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/staff-desk.html)
+- **Rebuilt:** 2026-10-23
 
 #### Sang Kancil Specialist Clinic
 - **What it does:** A staff assistant for a paediatric clinic where Claude chooses the tool and shared hooks apply who may see and do what, sending each decision to the named person.
