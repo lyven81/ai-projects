@@ -28,7 +28,7 @@ window.SITE = {
       hero: "A parts distributor's staff desk that prepares orders and routes each exception to the manager who owns it. Managers approve or decline with the data attached. Code places each order once, only when every approval is recorded.",
       short: "Routes each order exception to the manager who decides it.",
       tagline: "A staff desk for an automotive spare parts distributor where a salesperson starts the work, the manager who owns the decision receives it with the data to decide, and code or a named person carries it out.",
-      problem: "A parts distributor's salespeople start each order, but a discount, a small order, an early delivery or paying first is a manager's decision. Each request has to reach the manager who owns it, with the data to decide. The order must wait until every decision is on record.",
+      problem: "Staff at a parts distributor chase approvals by calls and messages when an order needs a manager's decision. Managers may decide without the facts, and a decision can be remembered with no clear record. Each request has to reach the manager who owns it with the data, and the order must wait until every decision is on record.",
       page: "df-auto-parts-distributors.html",
       cover: "images/df-auto-parts-distributors/cover.jpeg",
       demo: "https://lyven81.github.io/ai-projects/projects/df-auto-parts-distributors/staff-desk.html" },

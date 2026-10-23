@@ -1,6 +1,6 @@
 # DF Auto Parts Distributors staff assistant
 
-A staff assistant designed for an automotive spare parts distributor in Selangor. Seven staff across Sales, Finance and Warehouse use one desk: a salesperson starts a request, code sends anything a manager must decide to that manager with the facts attached, the manager approves or declines, and the requester is told and carries it out.
+An order approval assistant designed for an automotive spare parts distributor in Selangor, where staff would otherwise chase approvals through calls and messages. Seven staff across Sales, Finance and Warehouse use one desk: a salesperson starts a request, code sends anything a manager must decide to that manager with the facts attached, the manager approves or declines, and the requester is told and carries it out.
 
 - **The AI** (Claude Haiku 5.5) reads each request and picks one of seven tools.
 - **Code** checks who is asking, what they may see and do, prices, stock, credit and delivery terms; turns a discount, an order below RM 300, a same-day delivery or the prepaid route into an escalation to the right manager; writes the notifications; and places an order once, only when every approval is recorded.
