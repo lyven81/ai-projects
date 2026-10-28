@@ -1,0 +1,340 @@
+[
+ {
+  "id": "CN-0001",
+  "patient": "PS-P-0024",
+  "date": "2026-06-02",
+  "at": 1780362300,
+  "by": "GP-01",
+  "diagnosis": "Acute tonsillitis",
+  "case_note": "Acute tonsillitis. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0002",
+  "patient": "PS-P-0026",
+  "date": "2026-06-02",
+  "at": 1780362900,
+  "by": "GP-01",
+  "diagnosis": "Viral upper respiratory tract infection",
+  "case_note": "Viral upper respiratory tract infection. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0003",
+  "patient": "PS-P-0018",
+  "date": "2026-06-02",
+  "at": 1780363500,
+  "by": "GP-01",
+  "diagnosis": "Tension headache",
+  "case_note": "Tension headache. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 10,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0004",
+  "patient": "PS-P-0017",
+  "date": "2026-06-02",
+  "at": 1780364100,
+  "by": "GP-01",
+  "diagnosis": "Allergic rhinitis",
+  "case_note": "Allergic rhinitis. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0005",
+  "patient": "PS-P-0014",
+  "date": "2026-06-02",
+  "at": 1780364400,
+  "by": "GP-01",
+  "diagnosis": "Acute pharyngitis",
+  "case_note": "Acute pharyngitis. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course.",
+    "as_needed": false
+   },
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 10,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain.",
+    "as_needed": false
+   },
+   {
+    "medicine": "vitamin-c-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 10,
+    "quantity": 10,
+    "instructions": "Take 1 tablet once a day after food.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0006",
+  "patient": "PS-P-0005",
+  "date": "2026-06-02",
+  "at": 1780364700,
+  "by": "GP-01",
+  "diagnosis": "Acute otitis media",
+  "case_note": "Acute otitis media. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course.",
+    "as_needed": false
+   },
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0007",
+  "patient": "PS-P-0002",
+  "date": "2026-06-02",
+  "at": 1780365000,
+  "by": "GP-01",
+  "diagnosis": "Mechanical low back pain",
+  "case_note": "Mechanical low back pain. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "ibuprofen-400-mg",
+    "dose": 400,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 tablet three times a day after food.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0008",
+  "patient": "PS-P-0013",
+  "date": "2026-06-02",
+  "at": 1780365120,
+  "by": "GP-01",
+  "diagnosis": "Allergic urticaria",
+  "case_note": "Allergic urticaria. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0009",
+  "patient": "PS-P-0063",
+  "date": "2026-06-02",
+  "at": 1780365300,
+  "by": "GP-01",
+  "diagnosis": "Ankle sprain",
+  "case_note": "Ankle sprain. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "ibuprofen-400-mg",
+    "dose": 400,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 tablet three times a day after food.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0010",
+  "patient": "PS-P-0048",
+  "date": "2026-06-02",
+  "at": 1780365420,
+  "by": "GP-01",
+  "diagnosis": "Gastritis",
+  "case_note": "Gastritis. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ },
+ {
+  "id": "CN-0011",
+  "patient": "PS-P-0047",
+  "date": "2026-06-02",
+  "at": 1780363800,
+  "by": "GP-01",
+  "diagnosis": "Dyspepsia",
+  "case_note": "Dyspepsia. Examined; plan as prescribed.",
+  "services": [
+   "gp-consultation"
+  ],
+  "prescription": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast.",
+    "as_needed": false
+   }
+  ],
+  "return_in_days": null,
+  "mc": null,
+  "referral": null,
+  "amended": []
+ }
+]

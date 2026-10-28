@@ -1,0 +1,1695 @@
+[
+ {
+  "id": "PS-P-0001",
+  "name": "Hafiz",
+  "dob": "1948-12-09",
+  "phone": "013-2458591",
+  "ic_last4": "1631",
+  "registered": "2025-08-17",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)",
+   "Hypertension"
+  ],
+  "current_medicines": [
+   "amlodipine-5-mg",
+   "atorvastatin-20-mg",
+   "cetirizine-10-mg",
+   "metformin-500-mg",
+   "oral-rehydration-salts-ors",
+   "salbutamol-inhaler-100-mcg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0002",
+  "name": "Hidayah",
+  "dob": "1954-09-08",
+  "phone": "015-3219824",
+  "ic_last4": "5687",
+  "registered": "2024-05-26",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0003",
+  "name": "Chan Mei Yee",
+  "dob": "1976-05-06",
+  "phone": "018-1649691",
+  "ic_last4": "3358",
+  "registered": "2023-12-11",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)",
+   "Gastritis"
+  ],
+  "current_medicines": [
+   "amoxicillin-500-mg",
+   "atorvastatin-20-mg",
+   "cetirizine-10-mg",
+   "metformin-500-mg",
+   "omeprazole-20-mg",
+   "salbutamol-inhaler-100-mcg"
+  ],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-327040"
+  }
+ },
+ {
+  "id": "PS-P-0004",
+  "name": "Suresh Kumar",
+  "dob": "1966-08-05",
+  "phone": "018-1454696",
+  "ic_last4": "8578",
+  "registered": "2023-12-26",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0005",
+  "name": "Teoh Boon Hock",
+  "dob": "1945-07-15",
+  "phone": "016-1547605",
+  "ic_last4": "7060",
+  "registered": "2025-05-17",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0006",
+  "name": "Ng Chee Keong",
+  "dob": "1967-08-17",
+  "phone": "014-8312936",
+  "ic_last4": "2577",
+  "registered": "2026-01-10",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0007",
+  "name": "Goh Jia Hui",
+  "dob": "1953-05-25",
+  "phone": "017-9518424",
+  "ic_last4": "8425",
+  "registered": "2025-06-27",
+  "allergies": [],
+  "conditions": [
+   "High Cholesterol"
+  ],
+  "current_medicines": [
+   "atorvastatin-20-mg",
+   "omeprazole-20-mg"
+  ],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-625764"
+  }
+ },
+ {
+  "id": "PS-P-0008",
+  "name": "Ong Kar Mun",
+  "dob": "2008-01-05",
+  "phone": "017-2683838",
+  "ic_last4": "9163",
+  "registered": "2025-05-26",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Asthma"
+  ],
+  "current_medicines": [
+   "atorvastatin-20-mg",
+   "omeprazole-20-mg"
+  ],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-128527"
+  }
+ },
+ {
+  "id": "PS-P-0009",
+  "name": "Mohan Das",
+  "dob": "1954-08-12",
+  "phone": "018-5195951",
+  "ic_last4": "1313",
+  "registered": "2025-05-14",
+  "allergies": [],
+  "conditions": [
+   "Asthma"
+  ],
+  "current_medicines": [
+   "atorvastatin-20-mg",
+   "cetirizine-10-mg",
+   "metformin-500-mg"
+  ],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-743038"
+  }
+ },
+ {
+  "id": "PS-P-0010",
+  "name": "Lee Hui Shan",
+  "dob": "2004-02-05",
+  "phone": "018-7136687",
+  "ic_last4": "9422",
+  "registered": "2025-08-10",
+  "allergies": [],
+  "conditions": [
+   "Eczema"
+  ],
+  "current_medicines": [
+   "amlodipine-5-mg",
+   "atorvastatin-20-mg",
+   "cetirizine-10-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0011",
+  "name": "Kavitha Raj",
+  "dob": "1951-06-08",
+  "phone": "013-4475523",
+  "ic_last4": "8084",
+  "registered": "2026-02-18",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0012",
+  "name": "Tan Wei Ming",
+  "dob": "2011-05-15",
+  "phone": "012-9035982",
+  "ic_last4": "7100",
+  "registered": "2026-01-04",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0013",
+  "name": "Aisyah",
+  "dob": "1981-10-10",
+  "phone": "014-9089795",
+  "ic_last4": "9961",
+  "registered": "2025-12-18",
+  "allergies": [],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0014",
+  "name": "Liyana",
+  "dob": "2003-06-06",
+  "phone": "013-1882629",
+  "ic_last4": "8111",
+  "registered": "2023-11-25",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-462340"
+  }
+ },
+ {
+  "id": "PS-P-0015",
+  "name": "Chua Siew Lan",
+  "dob": "2009-09-27",
+  "phone": "013-7661748",
+  "ic_last4": "7454",
+  "registered": "2024-12-17",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)",
+   "Hypertension"
+  ],
+  "current_medicines": [
+   "cetirizine-10-mg",
+   "salbutamol-inhaler-100-mcg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0016",
+  "name": "Chua Siew Lan",
+  "dob": "2001-09-17",
+  "phone": "017-5746166",
+  "ic_last4": "3886",
+  "registered": "2023-10-19",
+  "allergies": [],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-901340"
+  }
+ },
+ {
+  "id": "PS-P-0017",
+  "name": "Ong Kar Mun",
+  "dob": "1965-03-27",
+  "phone": "014-8342941",
+  "ic_last4": "1945",
+  "registered": "2025-05-22",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0018",
+  "name": "Nurul",
+  "dob": "1962-12-16",
+  "phone": "013-1318832",
+  "ic_last4": "2758",
+  "registered": "2023-08-09",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0019",
+  "name": "Siti Aminah",
+  "dob": "1977-12-01",
+  "phone": "017-5045421",
+  "ic_last4": "3040",
+  "registered": "2024-02-28",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-330198"
+  }
+ },
+ {
+  "id": "PS-P-0020",
+  "name": "Hafiz",
+  "dob": "1991-07-19",
+  "phone": "019-7223751",
+  "ic_last4": "7158",
+  "registered": "2024-03-13",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-752681"
+  }
+ },
+ {
+  "id": "PS-P-0021",
+  "name": "Iskandar",
+  "dob": "1961-06-21",
+  "phone": "017-3153097",
+  "ic_last4": "3514",
+  "registered": "2025-11-02",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0022",
+  "name": "Ahmad",
+  "dob": "1979-08-08",
+  "phone": "016-7444964",
+  "ic_last4": "2568",
+  "registered": "2025-07-26",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0023",
+  "name": "Siti Aminah",
+  "dob": "2005-01-12",
+  "phone": "018-6161977",
+  "ic_last4": "3631",
+  "registered": "2024-07-28",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-295916"
+  }
+ },
+ {
+  "id": "PS-P-0024",
+  "name": "Hidayah",
+  "dob": "1974-01-04",
+  "phone": "013-3306314",
+  "ic_last4": "9395",
+  "registered": "2024-12-26",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0025",
+  "name": "Amirul",
+  "dob": "1945-05-13",
+  "phone": "017-6065810",
+  "ic_last4": "9126",
+  "registered": "2024-11-10",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0026",
+  "name": "Suresh Kumar",
+  "dob": "2012-03-24",
+  "phone": "012-6005700",
+  "ic_last4": "3108",
+  "registered": "2024-01-19",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0027",
+  "name": "Devi Anandan",
+  "dob": "1983-01-07",
+  "phone": "019-5070038",
+  "ic_last4": "7338",
+  "registered": "2024-05-21",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-703608"
+  }
+ },
+ {
+  "id": "PS-P-0028",
+  "name": "Sandra Yip",
+  "dob": "1946-01-17",
+  "phone": "016-1287605",
+  "ic_last4": "9301",
+  "registered": "2023-12-12",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-354320"
+  }
+ },
+ {
+  "id": "PS-P-0029",
+  "name": "Chan Mei Yee",
+  "dob": "1968-11-19",
+  "phone": "016-5134741",
+  "ic_last4": "5455",
+  "registered": "2023-10-31",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [
+   "Type 2 Diabetes"
+  ],
+  "current_medicines": [
+   "atorvastatin-20-mg",
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-145979"
+  }
+ },
+ {
+  "id": "PS-P-0030",
+  "name": "Siti Aminah",
+  "dob": "1994-01-10",
+  "phone": "015-9742683",
+  "ic_last4": "3979",
+  "registered": "2024-06-07",
+  "allergies": [],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-602136"
+  }
+ },
+ {
+  "id": "PS-P-0031",
+  "name": "Ong Kar Mun",
+  "dob": "1990-03-21",
+  "phone": "018-6563269",
+  "ic_last4": "7175",
+  "registered": "2024-11-10",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Hypertension"
+  ],
+  "current_medicines": [
+   "atorvastatin-20-mg",
+   "oral-rehydration-salts-ors",
+   "paracetamol-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0032",
+  "name": "Sandra Yip",
+  "dob": "1953-10-04",
+  "phone": "014-7136988",
+  "ic_last4": "2040",
+  "registered": "2024-09-09",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0033",
+  "name": "Suresh Kumar",
+  "dob": "2002-10-02",
+  "phone": "019-3290672",
+  "ic_last4": "1801",
+  "registered": "2024-06-27",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0034",
+  "name": "Rajesh Pillai",
+  "dob": "1962-07-02",
+  "phone": "014-5188889",
+  "ic_last4": "2002",
+  "registered": "2025-09-19",
+  "allergies": [],
+  "conditions": [
+   "Type 2 Diabetes"
+  ],
+  "current_medicines": [
+   "amoxicillin-500-mg",
+   "metformin-500-mg",
+   "paracetamol-500-mg"
+  ],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-837503"
+  }
+ },
+ {
+  "id": "PS-P-0035",
+  "name": "Siti Aminah",
+  "dob": "2006-02-08",
+  "phone": "013-6257165",
+  "ic_last4": "4057",
+  "registered": "2025-07-06",
+  "allergies": [],
+  "conditions": [
+   "Gastritis"
+  ],
+  "current_medicines": [
+   "omeprazole-20-mg",
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0036",
+  "name": "Arun Krishnan",
+  "dob": "1985-03-13",
+  "phone": "017-3898604",
+  "ic_last4": "2006",
+  "registered": "2024-03-24",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0037",
+  "name": "Ng Chee Keong",
+  "dob": "1960-01-11",
+  "phone": "013-5411563",
+  "ic_last4": "3715",
+  "registered": "2024-09-29",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-317578"
+  }
+ },
+ {
+  "id": "PS-P-0038",
+  "name": "Goh Jia Hui",
+  "dob": "1946-06-01",
+  "phone": "016-2743975",
+  "ic_last4": "5852",
+  "registered": "2024-04-23",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0039",
+  "name": "Lee Hui Shan",
+  "dob": "1946-01-27",
+  "phone": "014-4324120",
+  "ic_last4": "5510",
+  "registered": "2025-07-28",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0040",
+  "name": "Syafiq",
+  "dob": "1986-07-09",
+  "phone": "015-1491630",
+  "ic_last4": "2262",
+  "registered": "2023-06-09",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Asthma"
+  ],
+  "current_medicines": [
+   "metformin-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0041",
+  "name": "Farah",
+  "dob": "2020-02-11",
+  "phone": "014-8329435",
+  "ic_last4": "9556",
+  "registered": "2024-01-13",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0042",
+  "name": "Razak",
+  "dob": "1981-05-08",
+  "phone": "019-3576811",
+  "ic_last4": "2688",
+  "registered": "2024-10-06",
+  "allergies": [],
+  "conditions": [
+   "Hypertension"
+  ],
+  "current_medicines": [
+   "paracetamol-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0043",
+  "name": "Nurul",
+  "dob": "2005-05-03",
+  "phone": "014-3017994",
+  "ic_last4": "2000",
+  "registered": "2024-12-06",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Type 2 Diabetes"
+  ],
+  "current_medicines": [
+   "amlodipine-5-mg",
+   "amoxicillin-500-mg",
+   "metformin-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0044",
+  "name": "Ong Kar Mun",
+  "dob": "2001-06-09",
+  "phone": "013-4153037",
+  "ic_last4": "2541",
+  "registered": "2024-07-26",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0045",
+  "name": "Devi Anandan",
+  "dob": "1989-03-27",
+  "phone": "016-1460542",
+  "ic_last4": "8494",
+  "registered": "2024-04-16",
+  "allergies": [],
+  "conditions": [
+   "Eczema"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0046",
+  "name": "Chua Siew Lan",
+  "dob": "2019-02-01",
+  "phone": "016-6007595",
+  "ic_last4": "6427",
+  "registered": "2024-01-10",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0047",
+  "name": "Iskandar",
+  "dob": "1988-12-23",
+  "phone": "017-9511330",
+  "ic_last4": "6409",
+  "registered": "2025-03-10",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0048",
+  "name": "Farah",
+  "dob": "2017-08-05",
+  "phone": "013-9180249",
+  "ic_last4": "9665",
+  "registered": "2023-12-16",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0049",
+  "name": "Zarina",
+  "dob": "1959-07-15",
+  "phone": "019-3569046",
+  "ic_last4": "8189",
+  "registered": "2025-12-25",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0050",
+  "name": "Razak",
+  "dob": "2017-11-15",
+  "phone": "017-1483456",
+  "ic_last4": "3733",
+  "registered": "2023-07-19",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0051",
+  "name": "Tan Wei Ming",
+  "dob": "2015-09-12",
+  "phone": "014-9261472",
+  "ic_last4": "3069",
+  "registered": "2024-08-13",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0052",
+  "name": "Amirul",
+  "dob": "1977-03-27",
+  "phone": "015-1542011",
+  "ic_last4": "2313",
+  "registered": "2024-08-24",
+  "allergies": [],
+  "conditions": [
+   "Gastritis"
+  ],
+  "current_medicines": [
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0053",
+  "name": "Goh Jia Hui",
+  "dob": "2009-03-14",
+  "phone": "013-6862008",
+  "ic_last4": "6235",
+  "registered": "2025-11-14",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0054",
+  "name": "Lee Hui Shan",
+  "dob": "1953-04-22",
+  "phone": "018-2743602",
+  "ic_last4": "1820",
+  "registered": "2026-03-18",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0055",
+  "name": "Ng Chee Keong",
+  "dob": "1965-03-08",
+  "phone": "015-2923047",
+  "ic_last4": "5392",
+  "registered": "2025-06-15",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0056",
+  "name": "Syafiq",
+  "dob": "1973-08-08",
+  "phone": "015-1718206",
+  "ic_last4": "7030",
+  "registered": "2026-01-10",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0057",
+  "name": "Lee Hui Shan",
+  "dob": "1991-10-23",
+  "phone": "018-6540252",
+  "ic_last4": "4047",
+  "registered": "2025-05-15",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0058",
+  "name": "Ong Kar Mun",
+  "dob": "2006-03-08",
+  "phone": "014-4051509",
+  "ic_last4": "2152",
+  "registered": "2023-08-11",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-213422"
+  }
+ },
+ {
+  "id": "PS-P-0059",
+  "name": "Wong Kok Wai",
+  "dob": "2018-06-25",
+  "phone": "013-4854922",
+  "ic_last4": "2856",
+  "registered": "2024-07-13",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0060",
+  "name": "Mohd Faiz",
+  "dob": "2003-10-28",
+  "phone": "016-2133372",
+  "ic_last4": "5866",
+  "registered": "2023-09-06",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0061",
+  "name": "Hidayah",
+  "dob": "1992-06-28",
+  "phone": "014-3200150",
+  "ic_last4": "9108",
+  "registered": "2023-11-26",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [
+   "Hypertension"
+  ],
+  "current_medicines": [
+   "amoxicillin-500-mg",
+   "metformin-500-mg",
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-907421"
+  }
+ },
+ {
+  "id": "PS-P-0062",
+  "name": "Chan Mei Yee",
+  "dob": "1948-07-17",
+  "phone": "013-5403218",
+  "ic_last4": "6923",
+  "registered": "2025-12-13",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [
+   "Asthma"
+  ],
+  "current_medicines": [
+   "salbutamol-inhaler-100-mcg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0063",
+  "name": "Wong Kok Wai",
+  "dob": "1946-01-17",
+  "phone": "017-5811072",
+  "ic_last4": "8110",
+  "registered": "2024-07-20",
+  "allergies": [],
+  "conditions": [
+   "Asthma",
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [
+   "atorvastatin-20-mg",
+   "paracetamol-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0064",
+  "name": "Suraya",
+  "dob": "1968-04-27",
+  "phone": "012-3046175",
+  "ic_last4": "1677",
+  "registered": "2023-08-14",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Dengue (suspected)",
+   "Gastritis"
+  ],
+  "current_medicines": [
+   "amlodipine-5-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0065",
+  "name": "Hidayah",
+  "dob": "2017-03-18",
+  "phone": "016-3690116",
+  "ic_last4": "8750",
+  "registered": "2025-03-10",
+  "allergies": [],
+  "conditions": [
+   "High Cholesterol"
+  ],
+  "current_medicines": [
+   "atorvastatin-20-mg",
+   "omeprazole-20-mg",
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0066",
+  "name": "Siti Aminah",
+  "dob": "2016-12-18",
+  "phone": "017-8696054",
+  "ic_last4": "7798",
+  "registered": "2025-04-01",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0067",
+  "name": "Ahmad",
+  "dob": "1986-09-23",
+  "phone": "018-8476199",
+  "ic_last4": "2370",
+  "registered": "2025-05-31",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0068",
+  "name": "Wong Kok Wai",
+  "dob": "2015-08-20",
+  "phone": "012-7318411",
+  "ic_last4": "6867",
+  "registered": "2024-10-20",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0069",
+  "name": "Mohd Faiz",
+  "dob": "2017-03-11",
+  "phone": "014-6328403",
+  "ic_last4": "3083",
+  "registered": "2025-06-09",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0070",
+  "name": "Lee Hui Shan",
+  "dob": "1997-04-24",
+  "phone": "015-2109583",
+  "ic_last4": "2412",
+  "registered": "2024-09-27",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0071",
+  "name": "Farah",
+  "dob": "1955-09-23",
+  "phone": "018-7385526",
+  "ic_last4": "3524",
+  "registered": "2024-03-20",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0072",
+  "name": "Sandra Yip",
+  "dob": "1976-09-09",
+  "phone": "015-1820721",
+  "ic_last4": "6038",
+  "registered": "2026-03-20",
+  "allergies": [],
+  "conditions": [
+   "High Cholesterol"
+  ],
+  "current_medicines": [
+   "metformin-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0073",
+  "name": "Sandra Yip",
+  "dob": "1952-02-19",
+  "phone": "013-9114518",
+  "ic_last4": "2784",
+  "registered": "2025-01-29",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0074",
+  "name": "Nurul",
+  "dob": "1984-12-28",
+  "phone": "016-7943579",
+  "ic_last4": "9768",
+  "registered": "2025-08-06",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0075",
+  "name": "Amirul",
+  "dob": "2015-06-09",
+  "phone": "015-3873517",
+  "ic_last4": "7959",
+  "registered": "2024-04-15",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-943422"
+  }
+ },
+ {
+  "id": "PS-P-0076",
+  "name": "Mohan Das",
+  "dob": "1989-08-15",
+  "phone": "017-3137316",
+  "ic_last4": "8259",
+  "registered": "2025-08-14",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0077",
+  "name": "Teoh Boon Hock",
+  "dob": "2018-08-04",
+  "phone": "017-2638360",
+  "ic_last4": "1622",
+  "registered": "2025-10-25",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Asthma"
+  ],
+  "current_medicines": [
+   "paracetamol-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0078",
+  "name": "Rajesh Pillai",
+  "dob": "2007-11-14",
+  "phone": "013-3302174",
+  "ic_last4": "3401",
+  "registered": "2025-06-12",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-506481"
+  }
+ },
+ {
+  "id": "PS-P-0079",
+  "name": "Amirul",
+  "dob": "2019-03-19",
+  "phone": "012-5811968",
+  "ic_last4": "1041",
+  "registered": "2023-08-07",
+  "allergies": [],
+  "conditions": [
+   "Dengue (suspected)",
+   "Hypertension"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0080",
+  "name": "Chua Siew Lan",
+  "dob": "1966-04-19",
+  "phone": "012-5435820",
+  "ic_last4": "2732",
+  "registered": "2023-10-14",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Asthma"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0081",
+  "name": "Lee Hui Shan",
+  "dob": "2019-07-15",
+  "phone": "015-9723352",
+  "ic_last4": "3036",
+  "registered": "2024-10-27",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0082",
+  "name": "Tan Wei Ming",
+  "dob": "2008-03-21",
+  "phone": "018-5470062",
+  "ic_last4": "3064",
+  "registered": "2026-02-23",
+  "allergies": [],
+  "conditions": [
+   "Asthma"
+  ],
+  "current_medicines": [
+   "amoxicillin-500-mg",
+   "atorvastatin-20-mg",
+   "paracetamol-500-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0083",
+  "name": "Lee Hui Shan",
+  "dob": "1959-08-20",
+  "phone": "013-4399754",
+  "ic_last4": "1279",
+  "registered": "2025-08-28",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0084",
+  "name": "Zulkifli",
+  "dob": "1983-06-14",
+  "phone": "015-2971454",
+  "ic_last4": "6531",
+  "registered": "2025-10-04",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0085",
+  "name": "Hafiz",
+  "dob": "1950-02-24",
+  "phone": "014-1487633",
+  "ic_last4": "2942",
+  "registered": "2023-09-17",
+  "allergies": [],
+  "conditions": [
+   "Type 2 Diabetes"
+  ],
+  "current_medicines": [
+   "amlodipine-5-mg",
+   "cetirizine-10-mg",
+   "metformin-500-mg",
+   "omeprazole-20-mg"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0086",
+  "name": "Ahmad",
+  "dob": "2002-08-08",
+  "phone": "018-4657541",
+  "ic_last4": "9721",
+  "registered": "2025-09-14",
+  "allergies": [],
+  "conditions": [
+   "Migraine"
+  ],
+  "current_medicines": [
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0087",
+  "name": "Ong Kar Mun",
+  "dob": "1975-09-04",
+  "phone": "015-4782209",
+  "ic_last4": "9161",
+  "registered": "2024-05-17",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0088",
+  "name": "Sandra Yip",
+  "dob": "1986-08-19",
+  "phone": "019-8684083",
+  "ic_last4": "5243",
+  "registered": "2024-04-30",
+  "allergies": [],
+  "conditions": [
+   "Gastritis"
+  ],
+  "current_medicines": [
+   "cetirizine-10-mg",
+   "metformin-500-mg",
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0089",
+  "name": "Teoh Boon Hock",
+  "dob": "1970-01-03",
+  "phone": "013-9586369",
+  "ic_last4": "8474",
+  "registered": "2024-09-10",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0090",
+  "name": "Ng Chee Keong",
+  "dob": "1956-01-14",
+  "phone": "018-3934217",
+  "ic_last4": "6570",
+  "registered": "2024-02-23",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-290335"
+  }
+ },
+ {
+  "id": "PS-P-0091",
+  "name": "Ng Chee Keong",
+  "dob": "2005-02-21",
+  "phone": "018-4009367",
+  "ic_last4": "7317",
+  "registered": "2024-07-27",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0092",
+  "name": "Kavitha Raj",
+  "dob": "1982-09-21",
+  "phone": "014-2585592",
+  "ic_last4": "2427",
+  "registered": "2024-08-17",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-263586"
+  }
+ },
+ {
+  "id": "PS-P-0093",
+  "name": "Rajesh Pillai",
+  "dob": "2007-07-11",
+  "phone": "013-4655356",
+  "ic_last4": "1547",
+  "registered": "2024-02-29",
+  "allergies": [],
+  "conditions": [
+   "Type 2 Diabetes"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0094",
+  "name": "Sandra Yip",
+  "dob": "1970-02-02",
+  "phone": "012-8869895",
+  "ic_last4": "2522",
+  "registered": "2026-01-05",
+  "allergies": [],
+  "conditions": [
+   "High Cholesterol"
+  ],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-773198"
+  }
+ },
+ {
+  "id": "PS-P-0095",
+  "name": "Latha Menon",
+  "dob": "1957-04-17",
+  "phone": "017-4105895",
+  "ic_last4": "4376",
+  "registered": "2026-03-25",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0096",
+  "name": "Siti Aminah",
+  "dob": "1967-01-22",
+  "phone": "018-8349399",
+  "ic_last4": "7629",
+  "registered": "2024-03-11",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0097",
+  "name": "Wong Kok Wai",
+  "dob": "1951-02-16",
+  "phone": "018-6485409",
+  "ic_last4": "4178",
+  "registered": "2025-09-11",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0098",
+  "name": "Razak",
+  "dob": "1966-08-14",
+  "phone": "019-2835125",
+  "ic_last4": "7610",
+  "registered": "2024-07-21",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0099",
+  "name": "Syafiq",
+  "dob": "1959-06-06",
+  "phone": "012-8732776",
+  "ic_last4": "5265",
+  "registered": "2024-07-17",
+  "allergies": [
+   "NSAID sensitivity"
+  ],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0100",
+  "name": "Zarina",
+  "dob": "2013-04-10",
+  "phone": "018-4789737",
+  "ic_last4": "7696",
+  "registered": "2025-10-30",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0101",
+  "name": "Amirul",
+  "dob": "1991-08-05",
+  "phone": "018-7883025",
+  "ic_last4": "6363",
+  "registered": "2025-02-16",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-367063"
+  }
+ },
+ {
+  "id": "PS-P-0102",
+  "name": "Arun Krishnan",
+  "dob": "2004-08-18",
+  "phone": "012-4388838",
+  "ic_last4": "7519",
+  "registered": "2024-07-06",
+  "allergies": [],
+  "conditions": [
+   "High Cholesterol"
+  ],
+  "current_medicines": [
+   "oral-rehydration-salts-ors"
+  ],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0103",
+  "name": "Chua Siew Lan",
+  "dob": "2008-02-08",
+  "phone": "017-7542286",
+  "ic_last4": "6685",
+  "registered": "2024-11-03",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-882705"
+  }
+ },
+ {
+  "id": "PS-P-0104",
+  "name": "Nurul",
+  "dob": "2013-04-28",
+  "phone": "018-5287143",
+  "ic_last4": "1849",
+  "registered": "2025-07-27",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0105",
+  "name": "Priya Subramaniam",
+  "dob": "2005-12-14",
+  "phone": "018-2684358",
+  "ic_last4": "4044",
+  "registered": "2023-07-01",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": {
+   "panel": "cempaka",
+   "member_id": "CMP-973735"
+  }
+ },
+ {
+  "id": "PS-P-0106",
+  "name": "Siti Aminah",
+  "dob": "1996-04-21",
+  "phone": "013-3647821",
+  "ic_last4": "9807",
+  "registered": "2026-03-27",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0107",
+  "name": "Siti Aminah",
+  "dob": "1999-12-20",
+  "phone": "012-1874304",
+  "ic_last4": "3913",
+  "registered": "2024-02-07",
+  "allergies": [],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0108",
+  "name": "Priya Subramaniam",
+  "dob": "2011-06-14",
+  "phone": "019-3537801",
+  "ic_last4": "4076",
+  "registered": "2024-10-09",
+  "allergies": [
+   "Penicillin allergy"
+  ],
+  "conditions": [],
+  "current_medicines": [],
+  "panel": null
+ },
+ {
+  "id": "PS-P-0109",
+  "name": "Wong Kok Wai",
+  "dob": "1994-07-10",
+  "phone": "013-6008781",
+  "ic_last4": "1837",
+  "registered": "2025-05-04",
+  "allergies": [],
+  "conditions": [
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [],
+  "panel": {
+   "panel": "teratai",
+   "member_id": "TRT-698521"
+  }
+ },
+ {
+  "id": "PS-P-0110",
+  "name": "Teoh Boon Hock",
+  "dob": "2009-01-04",
+  "phone": "014-4056945",
+  "ic_last4": "4824",
+  "registered": "2025-10-17",
+  "allergies": [
+   "Sulfa allergy"
+  ],
+  "conditions": [
+   "Asthma",
+   "Dengue (suspected)"
+  ],
+  "current_medicines": [
+   "cetirizine-10-mg",
+   "metformin-500-mg"
+  ],
+  "panel": null
+ }
+]

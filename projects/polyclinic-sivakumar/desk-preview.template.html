@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clinic Desk Option D</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6f5;color:#213d3b;font:14px Arial,sans-serif}
+.top{background:#153f3c;color:#fff;padding:14px 26px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-size:18px;font-weight:700}.sub{font-size:11px;opacity:.7;margin-top:4px}.meta{font-size:12px}
+.shell{max-width:1500px;margin:auto;padding:0 26px 30px}
+.eyebrow{text-transform:uppercase;letter-spacing:1.3px;color:#67827d;font-size:10px;font-weight:bold;margin-top:18px}
+h1{font-size:22px;margin:6px 0}h3{font-size:14px;margin:0 0 12px}p{line-height:1.5;color:#70837f;margin:4px 0}
+.tabs{display:flex;gap:6px;margin:14px 0 0;border-bottom:1px solid #dbe6e2;flex-wrap:wrap}
+.tabs button{border:0;background:transparent;padding:11px 16px;color:#657b77;font-weight:bold;cursor:pointer}
+.tabs button.active{color:#12685b;border-bottom:3px solid #26927e}
+.subtabs{display:flex;gap:8px;margin:12px 0}.subtabs button{border:1px solid #dbe6e2;background:#fff;border-radius:18px;padding:7px 14px;font-size:12px;color:#4d6862;cursor:pointer}
+.subtabs button.active{background:#137b69;color:#fff;border-color:#137b69}
+.sample{background:#fff;border:1px solid #cfe3dc;border-radius:12px;padding:12px 16px;margin:14px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.sample .runs{display:flex;gap:6px;flex-wrap:wrap}.sample .runs button{border:1px solid #cfe3dc;background:#f2faf6;border-radius:16px;padding:6px 12px;font-size:12px;cursor:pointer;color:#176c5d}
+.sample .runs button.active{background:#137b69;color:#fff}.sample .now{flex:1;min-width:260px;font-size:12px;color:#49635d}
+.grid{display:grid;grid-template-columns:300px minmax(380px,1fr) 360px;gap:14px}
+.card{background:#fff;border:1px solid #e0eae6;border-radius:12px;padding:16px;box-shadow:0 4px 15px #163f3c08}.card+.card{margin-top:14px}
+.label{font-size:10px;color:#839691;text-transform:uppercase;letter-spacing:1px;font-weight:bold;margin:12px 0 6px}
+.small{font-size:12px;color:#788c86;line-height:1.5}
+.pill{display:inline-block;border-radius:20px;background:#e7f5ed;color:#26745e;font-size:11px;padding:4px 9px;font-weight:bold}
+.pill.warn{background:#fff2df;color:#a96b1f}.pill.blue{background:#eaf1fc;color:#426b9b}.pill.grey{background:#eef2f1;color:#6b7f7a}
+.btn{border:0;background:#137b69;color:#fff;border-radius:7px;padding:9px 13px;font-size:12px;font-weight:bold;cursor:pointer;margin:4px 6px 0 0}
+.btn.secondary{background:#e8f3ef;color:#176c5d}.btn:disabled{opacity:.45;cursor:default}
+.task{padding:11px;border:1px solid #e5eeea;border-radius:9px;margin:8px 0;cursor:pointer}.task.selected{border-color:#68ae99;background:#f2faf6}
+.task strong{display:block;margin:5px 0 3px;font-size:13px}.tag{font-size:10px;font-weight:bold;letter-spacing:.6px;color:#6d8d82}.tag.ready{color:#137b69}.tag.wait{color:#a96b1f}
+.item{padding:9px 0;border-bottom:1px solid #edf1ef;font-size:13px;cursor:pointer}.item:last-child{border:0}
+.strip{display:flex;gap:5px;margin:4px 0 12px;flex-wrap:wrap}.st{flex:1;min-width:92px;padding:9px 6px;background:#eef2f1;color:#8a9b96;font-size:11px;border-radius:7px;text-align:center;line-height:1.35}
+.st b{display:block;font-size:12px;margin-bottom:2px}.st.done{background:#e3f3ec;color:#26745e}.st.on{background:#cfeee2;color:#0f5f51;outline:2px solid #26927e}.st.held{background:#fff2df;color:#a96b1f;outline:2px solid #e0a95a}
+.patient{display:flex;gap:12px;align-items:center}.avatar{width:40px;height:40px;border-radius:50%;background:#e0f1eb;color:#277a66;display:grid;place-items:center;font-weight:bold}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:7px}.field{background:#f7faf8;border:1px solid #e4ede9;border-radius:7px;padding:9px;color:#49635d;font-size:12px}
+.field b{display:block;font-size:10px;color:#839691;text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+.note{background:#f4f8f6;border-left:3px solid #7cb9a7;padding:10px;border-radius:5px;font-size:12px;line-height:1.55;margin:8px 0}
+.warning{background:#fff5e7;border:1px solid #f6dfbd;padding:10px;border-radius:8px;font-size:12px;color:#936021;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:12px}th,td{border-bottom:1px solid #edf1ef;padding:7px 6px;text-align:left;vertical-align:top}th{color:#839691;font-size:10px;text-transform:uppercase;letter-spacing:.8px}
+.chatlog{max-height:520px;overflow:auto}.msg{padding:9px 11px;border-radius:10px;margin:8px 0;font-size:13px;line-height:1.5}
+.msg.me{background:#137b69;color:#fff;margin-left:30px}.msg.ai{background:#f2f6f5;border:1px solid #e2ebe8;margin-right:20px}.msg.notice{background:#eaf1fc;color:#2f4f78;font-size:12px}
+.msg .basis{display:block;font-size:11px;color:#8aa09a;margin-top:6px}.msg.me .basis{color:#d6efe8}
+.toggle{display:flex;gap:6px;margin-bottom:8px}.toggle button{border:1px solid #dbe6e2;background:#fff;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer}.toggle button.active{background:#153f3c;color:#fff}
+pre{white-space:pre-wrap;word-break:break-word;background:#f7faf8;border:1px solid #e4ede9;border-radius:7px;padding:9px;font-size:11px;max-height:420px;overflow:auto}
+.check{font-size:12px;padding:3px 0}.check.ok:before{content:"✓ ";color:#26745e}.check.no:before{content:"✗ ";color:#b6542f}
+input,select{border:1px solid #dbe6e2;border-radius:6px;padding:7px;font-size:12px}
+.footer{text-align:center;padding:14px;color:#8fa19b;font-size:11px}
+.form{background:#f7faf8;border:1px solid #e4ede9;border-radius:8px;padding:8px;margin-top:6px}.rx{display:flex;gap:4px;flex-wrap:wrap;margin:3px 0;align-items:center}.rx input,.rx select,.form input,.form select{font-size:11.5px;padding:5px}
+@media(max-width:1100px){.grid{grid-template-columns:1fr}.top{padding:12px 16px}.shell{padding:0 16px 24px}}
+</style></head>
+<body>
+<header class="top"><div><div class="brand">✚ &nbsp; Polyclinic Sivakumar</div><div class="sub">CLINIC DESK · STAFF WORKSPACE</div></div><div class="meta" id="signed"></div></header>
+<main class="shell">
+<div class="eyebrow">UI CONCEPT D · WORKING PREVIEW ON THE REAL TOOLS</div>
+<h1>Workstation with Inbox and Visit Strip</h1>
+<p>Each person's own workspace, the hand-offs as tasks, and where the visit is across the team. Buttons and the sample replay call the same seven tools and hooks as the chat.</p>
+<div class="sample" style="flex-direction:column;align-items:stretch">
+ <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><b style="font-size:12px">Question category</b>
+  <select id="cat" onchange="pickCat(this.value)"><option value="own_job">A. Own job</option><option value="unauthorised">B. Unauthorised</option><option value="handover">C. Handover loop</option><option value="workflow">D. Workflow across the team</option><option value="failure">Failure runs</option></select>
+  <button class="btn" id="stepBtn">Next step ▶</button><button class="btn secondary" id="resetBtn">Restart question</button><button class="btn secondary" onclick="clearRun();reset();render()">Free play</button></div>
+ <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px"><b style="font-size:12px">Question</b><div class="runs" id="runs"></div></div>
+ <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px" id="senderRow"><b style="font-size:12px">Sent as</b><div class="runs" id="senders"></div></div>
+ <div class="now" id="now" style="margin-top:8px">Choose a category and a question, then press Next step.</div></div>
+<nav class="tabs" id="roles"></nav>
+<div class="subtabs" id="views"></div>
+<div id="screen"></div>
+</main>
+<div class="footer">© 2026 Lee Yih Ven · Working preview · Sample data at the test calendar, Tuesday 2 June 2026 · Replies in the sample come from the recorded Haiku 5.5 run; every tool call is replayed live</div>
+<script>/*__MODULES__*/</script>
+<script>
+const DATA = /*__DATA__*/null;
+const TABLES = /*__TABLES__*/null;
+const SAMPLE = /*__SAMPLE__*/null;
+const CASES = /*__CASES__*/null;
+const F = PSFormat;
+const STAFF = { "FD-01": { tab: "Front desk", view2: "End of day" }, "GP-01": { tab: "Doctor", view2: "Owner" }, "PH-01": { tab: "Pharmacist", view2: "Stock" } };
+let faults = {}, store, desk, now, role = "FD-01", view = "work", selected = {}, chats = {}, hood = [], runId = null, stepIdx = 0, hoodMode = {};
+
+function reset(setup) {
+  store = PSTools.memoryStore(DATA);
+  now = DATA.meta.now;
+  applySetup(setup || []);
+  desk = PSTools.createDesk(store, TABLES, { now, faults: faults });
+  chats = { "FD-01": [], "GP-01": [], "PH-01": [] }; hood = []; selected = {};
+}
+function applySetup(ops) {
+  for (const op of ops) {
+    if (op.op === "clear_queue") store.set("queue", store.get("queue").map((q) => (q.status === "waiting" || q.status === "with_gp" ? Object.assign({}, q, { status: "seen" }) : q)));
+    if (op.op === "with_gp") { const q = store.get("queue").map((x) => (x.status === "with_gp" ? Object.assign({}, x, { status: "seen" }) : x));
+      q.push({ id: "QU-S1", patient: DATA.meta.who[op.who], date: DATA.meta.today, kind: "walk_in", arrived: DATA.meta.now - 600, appointment_time: null, status: "with_gp", called: DATA.meta.now - 120 }); store.set("queue", q); }
+    if (op.op === "call") PSTools.createDesk(store, TABLES, { now: DATA.meta.now - 60 }).call(op.tool, op.input, op.staff);
+  }
+}
+function call(tool, input, staff) {
+  desk = PSTools.createDesk(store, TABLES, { now, faults: faults });
+  const out = desk.call(tool, input, staff || role);
+  hood.unshift({ staff: staff || role, tool, input, hook: out.hook });
+  return out.result;
+}
+const P = () => store.get("patients");
+const pat = (id) => P().find((p) => p.id === id);
+const today = () => DATA.meta.today;
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+const initials = (n) => n.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+const med = (k) => (TABLES.medicines[k] ? TABLES.medicines[k].name : k);
+
+// ---------------------------------------------------------------- the visit strip (from Option B)
+function strip(pid) {
+  const q = store.get("queue").filter((x) => x.patient === pid && x.date === today()).pop();
+  const c = store.get("consultations").filter((x) => x.patient === pid && x.date === today()).pop();
+  const d = c && store.get("dispensed").find((x) => x.consultation === c.id);
+  const qOpen = c && store.get("tasks").some((t) => t.kind === "query" && t.consultation === c.id && t.status === "open");
+  const b = c && store.get("bills").find((x) => x.consultation === c.id);
+  const docs = c ? store.get("documents").filter((x) => x.consultation === c.id) : [];
+  const S = [];
+  S.push({ n: "Check-in", who: "Siti", s: q ? "done" : "on", t: q ? (q.kind === "appointment" ? "Appointment" : "Walk-in") : "Not yet" });
+  S.push({ n: "Consultation", who: "Dr Sivakumar", s: c ? "done" : q && q.status === "with_gp" ? "on" : "", t: c ? "Recorded" : q && q.status === "with_gp" ? "With the GP now" : q ? "Waiting" : "" });
+  if (!c || c.prescription.length) S.push({ n: "Pharmacy", who: "Ms Yong", s: d ? "done" : qOpen ? "held" : c ? "on" : "", t: d ? "Dispensed" : qOpen ? "Held: query with Dr Sivakumar" : c ? "To check" : "" });
+  S.push({ n: "Billing", who: "Siti", s: b ? (b.status === "paid" ? "done" : "on") : c && (!c.prescription.length || d) ? "on" : "", t: b ? (b.status === "paid" ? "Paid" : `Collect ${F.rm(b.patient_share)}`) : c && (!c.prescription.length || d) ? "Bill to prepare" : "" });
+  if (c && (c.mc && !c.mc.declined || c.referral)) {
+    const want = [c.mc && !c.mc.declined ? "mc" : null, c.referral ? "referral" : null].filter(Boolean);
+    const st = want.map((w) => { const x = docs.find((y) => y.type === w); return x ? x.status : "to_prepare"; });
+    const all = st.every((x) => x === "issued");
+    S.push({ n: "Documents", who: "Siti, then Dr Sivakumar signs", s: all ? "done" : "on", t: want.map((w, i) => `${w === "mc" ? "MC" : "Referral"}: ${st[i] === "issued" ? "issued" : st[i] === "ready_for_signature" ? "ready for signature" : "to prepare"}`).join(" · ") });
+  }
+  if (b && b.panel) S.push({ n: "Owner read", who: "Dr Sivakumar", s: b.panel.acknowledged ? "done" : "on", t: b.panel.acknowledged ? "Acknowledged" : "To acknowledge" });
+  return `<div class="strip">${S.map((x) => `<div class="st ${x.s}"><b>${x.n}</b>${esc(x.t || x.who)}</div>`).join("")}</div>`;
+}
+
+// ---------------------------------------------------------------- the inbox (from Option C)
+function inbox() {
+  const tasks = store.get("tasks").filter((t) => t.to === role && t.status === "open");
+  const WORD = { check: "Prescription to check", query: "Query from Ms Yong", handover: "Handover from Siti", bill: "Bill to prepare", document: "Document to prepare", follow_up: "Follow-up to book" };
+  const rows = tasks.slice().reverse().map((t) => {
+    const p = pat(t.patient), held = t.kind === "check" && store.get("tasks").some((x) => x.kind === "query" && x.consultation === t.consultation && x.status === "open");
+    return `<div class="task ${selected[role] === t.patient ? "selected" : ""}" onclick="pick('${t.patient}')"><span class="tag ${held ? "wait" : "ready"}">${held ? "WAITING ON DR SIVAKUMAR" : "READY NOW"}</span>
+      <strong>${WORD[t.kind] || t.kind}${t.reason ? " · " + t.reason : ""}${t.document ? " · " + (t.document === "mc" ? "MC" : "referral") : ""}</strong><div class="small">${esc(p ? p.name : t.patient)} · ${F.hhmm(t.created)}</div></div>`;
+  }).join("");
+  const notes = store.get("notices").filter((n) => n.to === role).slice(-4).reverse().map((n) => `<div class="msg notice">${esc(n.text)}</div>`).join("");
+  if (!rows && !notes) return `<div class="card" style="padding:11px 16px"><span class="small"><b>Inbox</b> · Nothing waiting on you.</span></div>`;
+  return `<div class="card"><h3>Your inbox <span class="pill" style="float:right">${tasks.length} open</span></h3>${rows || '<div class="small">Nothing waiting on you.</div>'}${notes ? `<div class="label">Latest notices</div>${notes}` : ""}</div>`;
+}
+function queueCard() {
+  const q = store.get("queue").filter((x) => x.date === today() && (x.status === "waiting" || x.status === "with_gp"));
+  const rows = q.map((x) => { const p = pat(x.patient); return `<div class="item" onclick="pick('${x.patient}')"><b>${esc(p.name)}</b> <span class="pill ${x.status === "with_gp" ? "" : "grey"}">${x.status === "with_gp" ? "With the GP" : "Waiting"}</span><div class="small">${x.kind === "appointment" ? "Appointment " + x.appointment_time : "Walk-in"} · arrived ${F.hhmm(x.arrived)}</div></div>`; }).join("");
+  return `<div class="card"><h3>Today's queue</h3>${rows || '<div class="small">Nobody waiting.</div>'}${role === "GP-01" ? `<button class="btn" onclick="act('schedule',{action:'call_next'})">Call next</button>` : ""}</div>`;
+}
+
+// ---------------------------------------------------------------- the centre (from Option A), by role
+function centre() {
+  const pid = selected[role];
+  if (!pid) return `<div class="card"><h3>Select a patient</h3><div class="small">Choose a task in your inbox${role !== "PH-01" ? " or a patient in the queue" : ""}.</div></div>`;
+  const r = call("patient", { action: "find", patient_id: pid }, role);
+  hood.shift();
+  const d = r.data || {};
+  const c = store.get("consultations").filter((x) => x.patient === pid && x.date === today()).pop();
+  let head = `<div class="row" style="display:flex;justify-content:space-between;align-items:center"><div class="patient"><div class="avatar">${initials(d.name || "?")}</div><div><strong>${esc(d.name)}</strong><div class="small">${esc(d.patient_id)} · ${d.age} years${d.ic_last4 ? " · IC ending " + d.ic_last4 : ""}</div></div></div><span class="pill blue">${esc(d.today || "")}</span></div>`;
+  let body = "";
+  if (role === "FD-01") {
+    body += `<div class="fields"><div class="field"><b>Phone</b>${esc(d.phone)}</div><div class="field"><b>Panel</b>${esc(d.panel)}</div><div class="field"><b>Allergy flags</b>${esc((d.allergy_flags || []).join(", "))}</div><div class="field"><b>Bookings</b>${esc((d.bookings || []).join("; ") || "none")}</div></div>`;
+    const b = c && store.get("bills").find((x) => x.consultation === c.id);
+    if (b) body += `<div class="label">Bill ${b.id} · ${b.status}</div><table><tr><th>Item</th><th>Qty</th><th>Amount</th>${b.panel ? "<th>Panel</th>" : ""}</tr>${b.lines.map((l) => `<tr><td>${esc(l.name)}</td><td>${l.qty}</td><td>${F.rm(l.amount)}</td>${b.panel ? `<td>${l.covered ? "covered" : "patient pays"}</td>` : ""}</tr>`).join("")}</table>
+      <div class="note">${b.panel ? `${esc(b.panel.name)}: panel share ${F.rm(b.panel_share)} awaiting claim · ` : ""}Patient's share <b>${F.rm(b.patient_share)}</b></div>`;
+    const docs = c ? store.get("documents").filter((x) => x.consultation === c.id) : [];
+    docs.forEach((x) => { body += `<div class="note"><b>${x.type === "mc" ? "MC" : "Referral letter"} ${x.id}</b> · ${x.status.replace(/_/g, " ")}<br>${x.type === "mc" ? `${x.content.days} day(s), ${F.dayLabel(x.content.start_date)} to ${F.dayLabel(x.content.end_date)}` : `To ${esc(x.content.to)} (${x.content.urgency}): ${esc(x.content.reason)}`}</div>`; });
+    const q = store.get("queue").find((x) => x.patient === pid && x.date === today() && (x.status === "waiting" || x.status === "with_gp"));
+    body += `<div style="margin-top:10px">${!q && !c ? `<button class="btn" onclick="act('schedule',{action:'check_in',patient_id:'${pid}'})">Check in</button>` : ""}
+      ${c && !b ? `<button class="btn" onclick="act('billing',{action:'prepare_bill',patient_id:'${pid}',name:'${esc(d.name)}',ic_last4:'${d.ic_last4}'})">Prepare bill</button>` : ""}
+      ${b && b.status === "unpaid" ? `<select id="method"><option>cash</option><option>card</option><option>e-wallet</option></select> <button class="btn" onclick="act('billing',{action:'record_payment',bill_id:'${b.id}',amount_rm:${b.patient_share / 100},method:document.getElementById('method').value})">Record ${F.rm(b.patient_share)}</button>` : ""}
+      ${c && c.mc && !c.mc.declined && !docs.some((x) => x.type === "mc") ? `<button class="btn" onclick="act('documents',{action:'prepare',type:'mc',patient_id:'${pid}'})">Prepare MC</button>` : ""}
+      ${c && c.referral && !docs.some((x) => x.type === "referral") ? `<button class="btn" onclick="act('documents',{action:'prepare',type:'referral',patient_id:'${pid}'})">Prepare referral letter</button>` : ""}
+      ${docs.filter((x) => x.status === "ready_for_signature").map((x) => `<button class="btn secondary" onclick="act('documents',{action:'mark_issued',document_id:'${x.id}'})">Signed: mark ${x.id} issued</button>`).join("")}</div>`;
+    body += bookingsForm(pid);
+  }
+  if (role === "GP-01") {
+    body += `<div class="fields"><div class="field"><b>Allergies</b>${esc((d.allergies || []).join(", "))}</div><div class="field"><b>Conditions</b>${esc((d.conditions || []).join(", ") || "none")}</div><div class="field"><b>Current medicines</b>${esc((d.current_medicines || []).join(", ") || "none")}</div><div class="field"><b>Panel</b>${esc(d.panel)}</div></div>`;
+    if (c) body += `<div class="label">Today's consultation ${c.id}</div><div class="note"><b>${esc(c.diagnosis)}</b><br>${c.prescription.map((l) => `${med(l.medicine)} ${l.dose} ${l.dose_unit}, ${l.times_per_day} times a day${l.days ? " for " + l.days + " days" : ""} (${l.quantity})`).join("<br>") || "No prescription"}${c.mc ? `<br>MC: ${c.mc.declined ? "declined" : c.mc.days + " day(s)"}` : ""}${c.referral ? `<br>Referral: ${esc(c.referral.to)}, ${c.referral.urgency}` : ""}</div>`;
+    else if (d.today === "with the GP now") body += consultForm(pid);
+    else body += `<div class="small" style="margin-top:8px">The consultation form opens when ${esc(d.name)} is with you: call the patient from the queue.</div>`;
+    if (c && c.prescription.length && !store.get("dispensed").some((x) => x.consultation === c.id)) body += amendForm(pid, c);
+    const open = store.get("tasks").filter((t) => t.to === "GP-01" && t.status === "open" && t.patient === pid && (t.kind === "query" || t.kind === "handover"));
+    // A keep cannot override a medicine out of stock or an incomplete line (PS-AC-03): only Amend is offered.
+    const noKeep = (t) => t.kind === "query" && (t.reason === "P3" || /missing/.test(t.question || ""));
+    open.forEach((t) => { body += `<div class="warning"><b>${t.kind === "query" ? "Query from Ms Yong" : "Handover from Siti"} · ${t.reason}</b><br>${esc(t.question)}<br>${noKeep(t) ? `<div class="small" style="margin-top:6px">It can't be dispensed as written: change it with Amend prescription above.</div>` : `<input id="ans" placeholder="Your answer" style="width:70%;margin-top:6px"> <button class="btn" onclick="act('tasks',{action:'answer',task_id:'${t.id}',answer:document.getElementById('ans').value||'Keep as written'})">${t.kind === "query" ? "Keep as written" : "Answer"}</button>`}</div>`; });
+  }
+  if (role === "PH-01") {
+    body += `<div class="fields"><div class="field"><b>Allergies</b>${esc((d.allergies || []).join(", "))}</div><div class="field"><b>Conditions</b>${esc((d.conditions || []).join(", ") || "none")}</div><div class="field" style="grid-column:span 2"><b>Current medicines</b>${esc((d.current_medicines || []).join(", ") || "none")}</div></div>`;
+    if (c && c.prescription.length) {
+      body += `<div class="label">Prescription from Dr Sivakumar</div><div class="note">${c.prescription.map((l) => `<b>${med(l.medicine)}</b> ${l.dose} ${l.dose_unit}, ${l.times_per_day} times a day${l.days ? " for " + l.days + " days" : ""}, quantity ${l.quantity}<br><span class="small">${esc(l.instructions)}</span>`).join("<br>")}</div>`;
+      const ck = store.get("checks").filter((x) => x.consultation === c.id).pop();
+      if (ck) body += `<div class="label">Last check ${ck.id}: ${ck.result}</div>${["complete", "allergy", "dose", "stock"].map((k) => { const f = ck.failed.filter((x) => x.check === k); return `<div class="check ${f.length ? "no" : "ok"}">${k}${f.length ? ": " + esc(f.map((x) => x.detail).join("; ")) : ""}</div>`; }).join("")}`;
+      const dd = store.get("dispensed").find((x) => x.consultation === c.id);
+      body += dd ? `<div class="note">Dispensed at ${F.hhmm(dd.at)}.</div>` : `<div style="margin-top:10px"><button class="btn" onclick="act('dispense',{action:'check_and_dispense',patient_id:'${pid}'})">Check and dispense</button>
+        <div style="margin-top:8px"><input id="qtext" placeholder="Your own concern" style="width:60%"> <button class="btn secondary" onclick="act('dispense',{action:'query_gp',patient_id:'${pid}',question:document.getElementById('qtext').value})">Query Dr Sivakumar</button></div></div>`;
+    }
+    store.get("tasks").filter((t) => t.to === "PH-01" && t.status === "open" && t.patient === pid && t.kind === "handover").forEach((t) => {
+      body += `<div class="warning"><b>Medicine use question from Siti · D5</b><br>${esc(t.question)}<br><input id="ans" placeholder="Your answer" style="width:70%;margin-top:6px"> <button class="btn" onclick="act('tasks',{action:'answer',task_id:'${t.id}',answer:document.getElementById('ans').value})">Answer</button></div>`; });
+  }
+  return `<div class="card">${strip(pid)}${head}<div style="height:10px"></div>${body}</div>`;
+}
+
+// ---------------------------------------------------------------- forms: the same tools and hooks as the chat
+const val = (id) => { const el = document.getElementById(id); return el ? el.value.trim() : ""; };
+const num = (id) => (val(id) === "" ? undefined : Number(val(id)));
+const MED_OPTS = () => Object.entries(TABLES.medicines).map(([k, m]) => `<option value="${k}">${esc(m.name)}</option>`).join("");
+const UNIT_OPTS = '<option>mg</option><option>tablet</option><option>capsule</option><option>puff</option><option>sachet</option>';
+function rxRow(i, prefix) {
+  return `<div class="rx"><select id="${prefix}m${i}"><option value="">Medicine</option>${MED_OPTS()}</select><input id="${prefix}d${i}" placeholder="Dose" size="4"><select id="${prefix}u${i}">${UNIT_OPTS}</select>
+    <input id="${prefix}t${i}" placeholder="Times a day" size="5"><input id="${prefix}days${i}" placeholder="Days" size="3"><input id="${prefix}q${i}" placeholder="Qty" size="3"><label class="small"><input type="checkbox" id="${prefix}n${i}"> when needed</label></div>`;
+}
+function rxLine(i, prefix) {
+  if (!val(`${prefix}m${i}`)) return null;
+  return { medicine: val(`${prefix}m${i}`), dose: num(`${prefix}d${i}`), dose_unit: val(`${prefix}u${i}`), times_per_day: num(`${prefix}t${i}`), days: num(`${prefix}days${i}`),
+           quantity: num(`${prefix}q${i}`), as_needed: document.getElementById(`${prefix}n${i}`).checked };
+}
+function consultForm(pid) {
+  return `<div class="label">Consultation form (no prices)</div><div class="form">
+    <input id="f_dx" placeholder="Diagnosis" style="width:100%">
+    <div class="small" style="margin:6px 0 2px">Services: GP consultation, plus <label><input type="checkbox" id="f_neb"> nebuliser</label> <label><input type="checkbox" id="f_wd"> wound dressing</label> <label><input type="checkbox" id="f_bg"> blood glucose test</label></div>
+    <div class="small" style="margin:6px 0 2px">Prescription</div>${[0, 1, 2].map((i) => rxRow(i, "f_")).join("")}
+    <div class="small" style="margin:6px 0 2px">Return in <input id="f_ret" size="3"> days · MC <input id="f_mc" size="3"> days from today <label><input type="checkbox" id="f_mcno"> MC declined</label></div>
+    <div class="small" style="margin:6px 0 2px">Referral: <input id="f_rto" placeholder="To (hospital or specialist)" size="22"> <select id="f_rurg"><option value="">urgency</option><option>routine</option><option>soon</option><option>urgent</option></select></div>
+    <input id="f_rreason" placeholder="Referral reason" style="width:100%;margin-top:4px"><input id="f_rsum" placeholder="Clinical summary for the letter" style="width:100%;margin-top:4px">
+    <button class="btn" onclick="submitConsult('${pid}')">Record consultation</button></div>`;
+}
+function submitConsult(pid) {
+  const input = { action: "record", patient_id: pid, diagnosis: val("f_dx"), services: ["gp-consultation"].concat(document.getElementById("f_neb").checked ? ["nebuliser-treatment"] : [], document.getElementById("f_wd").checked ? ["wound-dressing"] : [], document.getElementById("f_bg").checked ? ["blood-glucose-test"] : []),
+                  prescription: [0, 1, 2].map((i) => rxLine(i, "f_")).filter(Boolean) };
+  if (num("f_ret")) input.return_in_days = num("f_ret");
+  if (document.getElementById("f_mcno").checked) input.mc = { declined: true }; else if (num("f_mc")) input.mc = { days: num("f_mc") };
+  if (val("f_rto")) input.referral = { to: val("f_rto"), reason: val("f_rreason"), urgency: val("f_rurg"), summary: val("f_rsum") };
+  act("record_consultation", input);
+}
+function amendForm(pid, c) {
+  return `<div class="label">Amend prescription</div><div class="form"><div class="small">Replace <select id="a_old">${c.prescription.map((l) => `<option value="${l.medicine}">${esc(med(l.medicine))}</option>`).join("")}</select> with:</div>${rxRow(0, "a_")}
+    <button class="btn secondary" onclick="act('record_consultation',{action:'amend_prescription',patient_id:'${pid}',replace_medicine:val('a_old'),prescription:[rxLine(0,'a_')].filter(Boolean)})">Amend prescription</button></div>`;
+}
+function bookingsForm(pid) {
+  const list = store.get("appointments").filter((a) => a.patient === pid && a.status === "booked" && a.start.slice(0, 10) >= today());
+  return `<div class="label">Bookings</div>${list.map((a) => `<div class="small" style="padding:3px 0">${a.id} · ${F.dayLabel(a.start.slice(0, 10))} ${a.start.slice(11, 16)}
+      <button class="btn secondary" onclick="act('schedule',{action:'cancel',patient_id:'${pid}',appointment_id:'${a.id}'})">Cancel</button></div>`).join("") || '<div class="small">No upcoming booking.</div>'}
+    <div class="form"><input id="b_date" type="date" value="${F.addDays(today(), 1)}"> <input id="b_time" placeholder="HH:MM" size="5" value="10:00">
+    <button class="btn secondary" onclick="act('schedule',{action:'book',patient_id:'${pid}',date:val('b_date'),time:val('b_time')})">Book</button>
+    ${list.length === 1 ? `<button class="btn secondary" onclick="act('schedule',{action:'change',patient_id:'${pid}',appointment_id:'${list[0].id}',date:val('b_date'),time:val('b_time')})">Change ${list[0].id} to this</button>` : ""}</div>`;
+}
+
+// ---------------------------------------------------------------- the day tabs (new in D)
+function dayView() {
+  if (role === "FD-01") {
+    const r = call("billing", { action: "view_payments" }, "FD-01"); hood.shift();
+    const rows = (r.data.payments || []).filter((x) => x.receipt).map((x) => `<tr><td>${x.receipt}</td><td>${x.bill}</td><td>${x.amount}</td><td>${x.method}</td><td>${x.time}</td></tr>`).join("");
+    const rc = r.data.reconcile;
+    return `<div class="card"><h3>End of day · ${r.data.date}</h3><table><tr><th>Receipt</th><th>Bill</th><th>Amount</th><th>Method</th><th>Time</th></tr>${rows}</table>
+      <div class="label">Reconcile</div>${typeof rc === "string" ? `<input id="counted" placeholder="Cash counted, RM"> <button class="btn" onclick="act('billing',{action:'reconcile_day',counted_cash_rm:Number(document.getElementById('counted').value)})">Reconcile</button>` : `<div class="note">Cash recorded ${rc.cash_recorded}, counted ${rc.cash_counted}, difference ${rc.difference}.</div>`}</div>`;
+  }
+  if (role === "GP-01") {
+    const o = call("billing", { action: "view_owner_review" }, "GP-01"); hood.shift();
+    const pb = call("billing", { action: "view_panel_bills" }, "GP-01"); hood.shift();
+    return `<div class="card"><h3>Owner · read only</h3><div class="label">Owner review list</div>${o.data.items.map((x) => `<div class="note">${x.date}: ${esc(x.text)}</div>`).join("") || '<div class="small">Nothing on the list.</div>'}
+      <div class="label">Panel bills today</div>${pb.data.panel_bills.map((b) => `<div class="note"><b>${b.bill_id}</b> · ${esc(b.patient)} · ${esc(b.panel)}<br>Covered ${b.covered_items}, excluded ${b.excluded_items}, panel ${b.panel_share}, patient ${b.patient_share} · acknowledged: ${b.acknowledged}<br>${b.acknowledged === "not yet" ? `<button class="btn" onclick="act('billing',{action:'acknowledge_panel_bill',bill_id:'${b.bill_id}'})">Acknowledge</button>` : ""}</div>`).join("") || '<div class="small">No panel bills yet today.</div>'}</div>`;
+  }
+  const s = call("dispense", { action: "view_stock" }, "PH-01"); hood.shift();
+  return `<div class="card"><h3>Stock · view only</h3><table><tr><th>Medicine</th><th>Unit</th><th>In stock</th></tr>${s.data.items.map((x) => `<tr><td>${esc(x.medicine)}</td><td>${x.unit}</td><td>${x.in_stock === 0 ? '<span class="pill warn">0</span>' : x.in_stock}</td></tr>`).join("")}</table></div>`;
+}
+
+// ---------------------------------------------------------------- chat with Under the hood
+function chatCard() {
+  const mode = hoodMode[role] || "chat";
+  const log = (chats[role] || []).map((m) => `<div class="msg ${m.who}">${esc(m.text).replace(/\n/g, "<br>")}${m.basis ? `<span class="basis">Basis: ${esc(m.basis)}</span>` : ""}</div>`).join("");
+  const h = hood.filter((x) => x.staff === role).slice(0, 4).map((x) => `<div class="label">${x.tool} · ${x.input.action} · ${x.hook.result.status}${x.hook.result.error ? " " + x.hook.result.error.code : ""}</div>${(x.hook.pre.checks || []).map((c) => `<div class="check ${c.pass ? "ok" : "no"}">${esc(c.check)} (${c.clause})</div>`).join("")}${(x.hook.post || []).map((c) => `<div class="small">PostToolUse: ${esc(c)}</div>`).join("")}<pre>${esc(JSON.stringify(x.hook.result, null, 1))}</pre>`).join("");
+  return `<div class="card"><h3>Clinic assistant</h3><div class="toggle"><button class="${mode === "chat" ? "active" : ""}" onclick="setHood('chat')">Chat</button><button class="${mode === "hood" ? "active" : ""}" onclick="setHood('hood')">Under the hood</button></div>
+    ${mode === "chat" ? `<div class="chatlog">${log || '<div class="small">The sample replay types its messages here. A live chat uses your own API key in the published demo.</div>'}</div>` : `<div class="chatlog">${h || '<div class="small">No tool calls yet for this person.</div>'}</div>`}</div>`;
+}
+
+function render() {
+  document.getElementById("signed").textContent = `Signed in: ${TABLES.staff.find((s) => s.id === role).name} · ${TABLES.staff.find((s) => s.id === role).job}`;
+  document.getElementById("roles").innerHTML = Object.entries(STAFF).map(([id, s]) => `<button class="${id === role ? "active" : ""}" onclick="setRole('${id}')">${s.tab}</button>`).join("");
+  document.getElementById("views").innerHTML = `<button class="${view === "work" ? "active" : ""}" onclick="view='work';render()">Workspace</button><button class="${view === "day" ? "active" : ""}" onclick="view='day';render()">${STAFF[role].view2}</button>`;
+  const left = (role !== "PH-01" ? queueCard() : "") + inbox();
+  document.getElementById("screen").innerHTML = `<div class="grid"><div>${left}</div><div>${view === "work" ? centre() : dayView()}</div><div>${chatCard()}</div></div>`;
+}
+function pick(pid) { selected[role] = pid; view = "work"; render(); }
+
+/** A short, warm sentence from a tool result, for questions with no recorded reply yet. */
+// Who does the work a question asks for (category B names the job's owner, not the person refused).
+const DOES = { B1: "GP-01", B2: "FD-01", B3: "FD-01", B4: "FD-01" };
+const WHO_DOES = { "FD-01": "Siti Kasim, clinic assistant", "GP-01": "Dr Sivakumar, the doctor", "PH-01": "Ms Yong, pharmacist" };
+function friendly(tool, input, r) {
+  const ns = r.next_step || {}, d = r.data || {};
+  if (ns.say) return ns.say;
+  const first = (m) => { const s = String(m || "").split(";")[0].replace(/\.$/, ""); return s.charAt(0).toLowerCase() + s.slice(1); };
+  if (r.status === "error") return `Sorry, something went wrong, so nothing was changed: ${first(r.error.message)}.`;
+  if (r.status === "refused") return `Sorry, that can't go ahead yet: ${first(r.error.message)}. Nothing was changed.`;
+  const k = `${tool}.${input.action}`;
+  const pn = String(d.patient || d.name || "the patient").replace(/ \(PS-P-\d{4}.*\)$/, "");
+  if (k === "patient.find") return `Here it is: ${d.name}'s record is open in Current work.`;
+  if (k === "dispense.view_stock") { const x = (d.items || [])[0]; return x ? `Here it is: ${x.in_stock} ${x.medicine} ${x.unit}s in stock.` : "Here it is: the stock list is open."; }
+  if (k === "billing.view_owner_review") return `Here it is: ${d.items.length} item${d.items.length === 1 ? "" : "s"} on the owner review list.`;
+  if (k === "billing.view_payments") return `Here it is: the payments for ${d.date}, ${typeof d.reconcile === "string" ? "not reconciled yet" : d.reconcile.difference === "none" ? "with the cash matching" : "with " + d.reconcile.difference}.`;
+  if (k === "billing.view_panel_bills") return `Here it is: ${d.panel_bills.length} panel bill${d.panel_bills.length === 1 ? "" : "s"} today.`;
+  if (k === "record_consultation.record") return `The consultation for ${pn} is recorded. ${(d.prescription || []).length ? "Ms Yong will check the prescription next." : "Siti will prepare the bill next."}`;
+  if (k === "record_consultation.amend_prescription") return "The prescription is updated as you asked. Ms Yong will check it again before dispensing.";
+  if (k === "dispense.check_and_dispense") return "All four checks passed and it is dispensed. Please counsel the patient, and Siti will prepare the bill.";
+  if (k === "billing.prepare_bill") return `The bill for ${pn} is ready: the patient pays ${d.patient_share}${d.panel ? `, with ${String(d.panel_share).replace(" awaiting claim", "")} awaiting the panel claim` : ""}. Please collect it and record the payment.`;
+  if (k === "billing.record_payment") return `Thank you, ${d.amount} ${d.method === "cash" ? "in cash" : "by " + d.method} is recorded and the visit is closed. Please hand over the receipt${d.change_due && d.change_due !== "RM 0.00" ? ` and ${d.change_due} change` : ""}.`;
+  if (k === "billing.reconcile_day") return d.difference === "none" ? "Thank you, the cash matches and the day is reconciled." : `The day is reconciled with ${d.difference}, and it is on Dr Sivakumar's owner review list.`;
+  if (k === "billing.acknowledge_panel_bill") return "Thank you, the panel bill is acknowledged, and nothing on it changed.";
+  if (k === "documents.prepare") return `The ${d.type} is ready. Please print it for Dr Sivakumar to sign, then mark it issued.`;
+  if (k === "documents.mark_issued") return `The ${d.type} is issued. Please hand it to the patient.`;
+  if (k === "schedule.check_in") return `Thanks, ${pn} is checked in for Dr Sivakumar.`;
+  if (k === "schedule.call_next") return `${String(d.called || "").replace(/ \(.*\)$/, "")} is with you now.`;
+  return ns.text ? `Done. ${ns.text}` : "Done, thank you.";
+}
+// Inline handlers resolve names on the element first, and every element has an ARIA "role" property, so a
+// handler that assigns role would set the element's ARIA role. Handlers call these instead.
+function setRole(id) { role = id; view = "work"; render(); }
+function setHood(m) { hoodMode[role] = m; render(); }
+function act(tool, input) { const r = call(tool, input, role); const ns = r.next_step || {};
+  chats[role].push({ who: "ai", text: friendly(tool, input, r), basis: ns.basis }); render(); }
+
+// ---------------------------------------------------------------- the sample replay
+// ---------------------------------------------------------------- the question picker and replay
+const RUNS = /*__RUNS__*/null;
+const REC = Object.fromEntries(SAMPLE.results.map((r) => [r.id, r]));
+const NAMES = { "FD-01": "Siti", "GP-01": "Dr Sivakumar", "PH-01": "Ms Yong" };
+let cat = "own_job", caseSel = null, senderSel = null;
+const runOf = () => RUNS.find((r) => r.case === caseSel && (r.staff === null || r.group === "failure" || r.staff === senderSel));
+const mainRun = (c) => { const r = RUNS.find((x) => x.case === c); return RUNS.find((x) => x.case === c && (x.staff === null || r.group === "failure" || x.staff === r.sender)); };
+function pickCat(c) {
+  cat = c;
+  document.getElementById("cat").value = c;
+  pickCase(RUNS.find((r) => r.group === c).case);
+}
+function pickCase(cid) {
+  caseSel = cid;
+  const any = RUNS.find((r) => r.case === cid);
+  senderSel = any.sender || any.staff;
+  const cases = [...new Set(RUNS.filter((r) => r.group === cat).map((r) => r.case))];
+  document.getElementById("runs").innerHTML = cases.map((c) => `<button class="${c === cid ? "active" : ""}" onclick="pickCase('${c}')" title="${esc(RUNS.find((x) => x.case === c).title)}">${c}${REC[mainRun(c).id] ? " ●" : ""}</button>`).join("");
+  const multi = ["own_job", "unauthorised", "handover"].includes(any.group);
+  document.getElementById("senderRow").style.display = multi ? "flex" : "none";
+  if (multi) document.getElementById("senders").innerHTML = ["FD-01", "GP-01", "PH-01"].filter((u) => RUNS.some((r) => r.case === cid && r.staff === u)).map((u) => `<button data-u="${u}" onclick="senderSel='${u}';startRun()">${NAMES[u]}${u === any.sender ? " (right sender)" : " (may do it)"}</button>`).join("");
+  startRun();
+}
+function startRun() {
+  const run = runOf();
+  runId = run.id; stepIdx = 0; faults = run.faults || {};
+  reset(run.setup);
+  document.querySelectorAll("#senders button").forEach((b) => b.classList.toggle("active", b.dataset.u === senderSel));
+  const rec = REC[run.id];
+  document.getElementById("now").innerHTML = `<b>${run.case}. ${esc(run.title)}</b> · ${run.steps.length} step${run.steps.length > 1 ? "s" : ""} · ${rec ? "recorded Haiku 5.5 run (●)" : "expected tool calls, replayed live; the Haiku reply comes from the full run"}${Object.keys(faults).length ? " · fault injected: " + esc(JSON.stringify(faults)) : ""}. Press Next step.`;
+  role = run.steps[0].staff; view = "work"; render();
+}
+function nextStep() {
+  if (!runId) { pickCat(cat); return nextStep(); }
+  const run = RUNS.find((r) => r.id === runId), rec = REC[run.id];
+  const s = run.steps[stepIdx];
+  if (!s) { document.getElementById("now").innerHTML = `<b>${run.case}</b> finished${rec ? `: ${rec.pass ? "passed" : "failed"} in the recorded run` : ""}. Choose another question.`; return; }
+  now = s.time; role = s.staff; view = "work";
+  chats[role].push({ who: "me", text: s.message });
+  const calls = rec ? rec.steps[stepIdx].trace.filter((x) => x.type === "tool").map((x) => [x.name, x.input]) : (run.canon[stepIdx] || []);
+  let pid = null, last = null;
+  for (const [name, input] of calls) {
+    last = call(name, input, s.staff);
+    const id = input.patient_id || (last.data && (String(last.data.patient || last.data.called || "").match(/PS-P-\d{4}/) || [])[0]) || (last.data && last.data.patient_id);
+    if (id) pid = id;
+  }
+  if (!pid) pid = (s.message.match(/PS-P-\d{4}/) || [])[0] || null;
+  if (!pid) { const n = P().find((p) => s.message.includes(p.name) && s.message.includes(p.ic_last4)); pid = n ? n.id : null; }
+  if (pid) selected[role] = pid;
+  if (rec) { const [text, basis] = rec.steps[stepIdx].reply.split(/\nBasis: /); chats[role].push({ who: "ai", text, basis }); }
+  else if (!calls.length) chats[role].push({ who: "ai", text: `Sorry, that isn't part of your role, so nothing was changed. ${WHO_DOES[DOES[run.case] || run.sender || ""] ? WHO_DOES[DOES[run.case] || run.sender] + ", can help with it." : "The right colleague can help with it."}`, basis: "reply written by the preview; the Haiku reply comes from the full run" });
+  else { const f = friendly(calls[calls.length - 1][0], calls[calls.length - 1][1], last); chats[role].push({ who: "ai", text: f, basis: [(last.next_step || {}).basis, "reply written by the preview; the Haiku reply comes from the full run"].filter(Boolean).join(" · ") }); }
+  stepIdx++;
+  document.getElementById("now").innerHTML = `<b>${run.case}</b> step ${stepIdx} of ${run.steps.length}: ${TABLES.staff.find((x) => x.id === s.staff).name}. ${stepIdx < run.steps.length ? "Press Next step." : "Last step."}`;
+  render();
+}
+document.getElementById("stepBtn").onclick = nextStep;
+document.getElementById("resetBtn").onclick = () => (runId ? startRun() : (reset(), render()));
+function clearRun() { runId = null; stepIdx = 0; faults = {}; document.getElementById("now").textContent = "Free play: use the buttons on each screen, or choose a question."; }
+reset(); pickCat("own_job");
+</script></body></html>

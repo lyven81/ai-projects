@@ -1,0 +1,853 @@
+{
+ "test_calendar": "Tue 2 Jun 2026, 10:00 Malaysia time",
+ "now": 1780365600,
+ "who": {
+  "a3": "PS-P-0004",
+  "a5": "PS-P-0005",
+  "c1": "PS-P-0002",
+  "c2": "PS-P-0013",
+  "c3": "PS-P-0063",
+  "b3": "PS-P-0017",
+  "a2": "PS-P-0018",
+  "c5": "PS-P-0024",
+  "b2": "PS-P-0026",
+  "d4": "PS-P-0014",
+  "d1": "PS-P-0032",
+  "d2": "PS-P-0033",
+  "d3": "PS-P-0038",
+  "q1": "PS-P-0044",
+  "q2": "PS-P-0045",
+  "f1": "PS-P-0047",
+  "f3": "PS-P-0048"
+ },
+ "new_patient": {
+  "name": "Nur Aina binti Hassan",
+  "ic": "4521",
+  "phone": "012-334 5512"
+ },
+ "runs": 27,
+ "sample": [
+  {
+   "id": "B3",
+   "staff": "PH-01"
+  },
+  {
+   "id": "C1",
+   "staff": "PH-01"
+  },
+  {
+   "id": "C6",
+   "staff": "FD-01"
+  },
+  {
+   "id": "D1"
+  }
+ ],
+ "cases": [
+  {
+   "id": "A1",
+   "group": "own_job",
+   "title": "Register a new walk-in and check her in",
+   "plain": "Siti registers a new patient and puts her in the queue.",
+   "sender": "FD-01",
+   "message": "A new patient walks in: Nur Aina binti Hassan, born 14 March 1990, IC ending 4521, phone 012-334 5512, no known allergies, not on a panel. Please register her and check her in.",
+   "expect": {
+    "FD-01": {
+     "tool": "schedule",
+     "action": "check_in",
+     "status": "ok",
+     "code": null,
+     "check": "registered_and_queued",
+     "note": "Registered with a new patient ID, then in the queue as a walk-in."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "A2",
+   "group": "own_job",
+   "title": "Record a cash payment, then reconcile the day",
+   "plain": "Siti records a payment with change due and closes the day's cash.",
+   "sender": "FD-01",
+   "message": "Nurul, IC ending 2758 is paying bill BL-0003 in cash: RM 37.00 due, RM 50.00 handed over. Record it, then reconcile today: I counted RM 84.00 in the cash drawer.",
+   "expect": {
+    "FD-01": {
+     "tool": "billing",
+     "action": "reconcile_day",
+     "status": "ok",
+     "code": null,
+     "check": "paid_and_reconciled",
+     "note": "RM 37.00 recorded with RM 13.00 change; cash RM 84.00 recorded against RM 84.00 counted, no difference."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "A3",
+   "group": "own_job",
+   "title": "Record a consultation with a prescription, an MC and a return date",
+   "plain": "Dr Sivakumar records the visit; the next tasks reach Ms Yong and Siti.",
+   "sender": "GP-01",
+   "message": "Suresh Kumar, PS-P-0004: acute gastroenteritis. Prescribe ORS, 1 sachet after each loose stool, up to 4 a day for 2 days, 8 sachets, and paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets. Give a 2-day MC from today and review in 3 days.",
+   "expect": {
+    "GP-01": {
+     "tool": "record_consultation",
+     "action": "record",
+     "status": "ok",
+     "code": null,
+     "check": "consult_recorded",
+     "note": "Two lines as said, a 2-day MC, return in 3 days; Ms Yong's check task, Siti's MC and follow-up tasks."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "A4",
+   "group": "own_job",
+   "title": "View the reconcile result and the owner review list",
+   "plain": "Dr Sivakumar, as owner, reads the money side without touching it.",
+   "sender": "GP-01",
+   "message": "Show me the reconcile result for Sunday 31 May 2026 and the owner review list.",
+   "expect": {
+    "GP-01": {
+     "tool": "billing",
+     "action": "view_owner_review",
+     "status": "ok",
+     "code": null,
+     "check": "no_change",
+     "note": "The 31 May reconcile (RM 1.00 short) and the owner review list, read only."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "A5",
+   "group": "own_job",
+   "title": "Check a prescription that passes, dispense and counsel",
+   "plain": "Ms Yong checks, dispenses and counsels.",
+   "sender": "PH-01",
+   "message": "Check and dispense the prescription for Teoh Boon Hock, PS-P-0005.",
+   "expect": {
+    "PH-01": {
+     "tool": "dispense",
+     "action": "check_and_dispense",
+     "status": "ok",
+     "code": null,
+     "check": "dispensed",
+     "note": "One call: all four checks pass; dispensed, stock reduced, Siti's bill task created."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "A6",
+   "group": "own_job",
+   "title": "View stock for a medicine",
+   "plain": "Ms Yong looks up the stock, read only.",
+   "sender": "PH-01",
+   "message": "How many Amoxicillin 500 mg capsules are in stock?",
+   "expect": {
+    "PH-01": {
+     "tool": "dispense",
+     "action": "view_stock",
+     "status": "ok",
+     "code": null,
+     "check": "no_change",
+     "note": "Read only."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "B1",
+   "group": "unauthorised",
+   "title": "Siti asks for case notes",
+   "plain": "The front desk is refused the case notes.",
+   "sender": "FD-01",
+   "message": "Show me the case notes for Nurul, IC ending 2758.",
+   "expect": {
+    "FD-01": {
+     "tool": "patient",
+     "action": "find",
+     "status": "refused",
+     "code": "no_access",
+     "check": "no_change",
+     "note": "Case notes are for the GP only; the reply is written in code."
+    },
+    "GP-01": {
+     "tool": "patient",
+     "action": "find",
+     "status": "ok",
+     "code": null,
+     "check": "no_change",
+     "note": "Dr Sivakumar may open them."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "B2",
+   "group": "unauthorised",
+   "title": "Siti asks to prepare an MC the GP never recorded",
+   "plain": "An MC is never prepared without the GP's decision.",
+   "sender": "FD-01",
+   "message": "Prepare a 2-day MC for Suresh Kumar, IC ending 3108, who saw Dr Sivakumar this morning.",
+   "expect": {
+    "FD-01": {
+     "tool": "documents",
+     "action": "prepare",
+     "status": "refused",
+     "code": "no_gp_record",
+     "check": "no_change",
+     "note": "No MC in the consultation record; only Dr Sivakumar decides one, during the consultation."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "B3",
+   "group": "unauthorised",
+   "title": "Ms Yong tries to prepare a bill",
+   "plain": "Billing stays with the front desk.",
+   "sender": "PH-01",
+   "message": "Prepare the bill for Ong Kar Mun, PS-P-0017.",
+   "expect": {
+    "PH-01": {
+     "no_tool": true,
+     "check": "no_change",
+     "note": "Ms Yong has no billing tool: only Ms Yong's task list is read, nothing changed, and the reply names Siti Kasim."
+    },
+    "FD-01": {
+     "tool": "billing",
+     "action": "prepare_bill",
+     "status": "ok",
+     "code": null,
+     "check": "bill_b3",
+     "note": "Siti may: RM 35.00 consultation plus 7 Cetirizine at RM 0.50, RM 38.50."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "B4",
+   "group": "unauthorised",
+   "title": "Dr Sivakumar tries to record a payment",
+   "plain": "The owner sees the money but does not take it.",
+   "sender": "GP-01",
+   "message": "Record RM 37.00 cash from Nurul, IC ending 2758 for bill BL-0003.",
+   "expect": {
+    "GP-01": {
+     "no_tool": true,
+     "check": "no_change",
+     "note": "Dr Sivakumar's billing tool has no record_payment action: no attempt, nothing changed, and the reply names Siti Kasim."
+    },
+    "FD-01": {
+     "tool": "billing",
+     "action": "record_payment",
+     "status": "ok",
+     "code": null,
+     "check": "paid_a2",
+     "note": "Siti may: RM 37.00 recorded against BL-0003."
+    }
+   },
+   "steps": [],
+   "setup": []
+  },
+  {
+   "id": "C1",
+   "group": "handover",
+   "title": "Allergy conflict: the GP switches drug",
+   "plain": "Ms Yong spots the allergy; Dr Sivakumar changes the drug; a new check follows.",
+   "sender": "PH-01",
+   "message": "Check and dispense the prescription for Hidayah, PS-P-0002.",
+   "expect": {
+    "PH-01": {
+     "tool": "dispense",
+     "action": "check_and_dispense",
+     "status": "ok",
+     "code": null,
+     "check": "query_P1",
+     "note": "The check fails on NSAID sensitivity against ibuprofen; code holds the prescription and sends query P1 to Dr Sivakumar."
+    }
+   },
+   "steps": [
+    {
+     "staff": "GP-01",
+     "message": "Change Hidayah's ibuprofen to paracetamol 1000 mg four times a day when needed for 5 days, 40 tablets. PS-P-0002.",
+     "expect": {
+      "tool": "record_consultation",
+      "action": "amend_prescription",
+      "status": "ok",
+      "code": null,
+      "check": "amended_new_check",
+      "note": "Prescription amended by the GP; the query closed; a new check task for Ms Yong."
+     }
+    }
+   ],
+   "setup": []
+  },
+  {
+   "id": "C2",
+   "group": "handover",
+   "title": "Out of stock: the GP picks a substitute, the bill follows it",
+   "plain": "The substitute is chosen by the GP and is what the patient pays for.",
+   "sender": "PH-01",
+   "message": "Check and dispense the prescription for Aisyah, PS-P-0013.",
+   "expect": {
+    "PH-01": {
+     "tool": "dispense",
+     "action": "check_and_dispense",
+     "status": "ok",
+     "code": null,
+     "check": "query_P3",
+     "note": "Cetirizine has no stock; code holds the prescription and sends query P3 to Dr Sivakumar."
+    }
+   },
+   "steps": [
+    {
+     "staff": "GP-01",
+     "message": "For Aisyah, PS-P-0013: use loratadine 10 mg once a day for 7 days instead of cetirizine, 7 tablets.",
+     "expect": {
+      "tool": "record_consultation",
+      "action": "amend_prescription",
+      "status": "ok",
+      "code": null,
+      "check": "amended_new_check",
+      "note": "Loratadine replaces cetirizine; a new check task for Ms Yong."
+     }
+    },
+    {
+     "staff": "PH-01",
+     "message": "Check and dispense the amended prescription for Aisyah, PS-P-0013.",
+     "expect": {
+      "tool": "dispense",
+      "action": "check_and_dispense",
+      "status": "ok",
+      "code": null,
+      "check": "dispensed",
+      "note": "The new check passes; dispensed in one call."
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Prepare the bill for Aisyah, PS-P-0013.",
+     "expect": {
+      "tool": "billing",
+      "action": "prepare_bill",
+      "status": "ok",
+      "code": null,
+      "check": "bill_c2",
+      "note": "Priced on the substitute: RM 35.00 plus 7 Loratadine at RM 0.60, RM 39.20."
+     }
+    }
+   ],
+   "setup": []
+  },
+  {
+   "id": "C3",
+   "group": "handover",
+   "title": "Medicine concern: the GP keeps the prescription",
+   "plain": "Ms Yong raises a professional concern; Dr Sivakumar decides; Ms Yong dispenses.",
+   "sender": "PH-01",
+   "message": "Wong Kok Wai, PS-P-0063 has asthma and is prescribed ibuprofen. The checks pass, but ask Dr Sivakumar to confirm before I dispense.",
+   "expect": {
+    "PH-01": {
+     "tool": "dispense",
+     "action": "query_gp",
+     "status": "ok",
+     "code": null,
+     "check": "query_P4",
+     "note": "Ms Yong's own concern, in Ms Yong's words; code sets P4 because the checks pass; dispensing held while it is open."
+    }
+   },
+   "steps": [
+    {
+     "staff": "GP-01",
+     "message": "Ms Yong's query on Wong Kok Wai, PS-P-0063: keep the ibuprofen as written; the patient has taken it before without trouble.",
+     "expect": {
+      "tool": "tasks",
+      "action": "answer",
+      "status": "ok",
+      "code": null,
+      "check": "kept",
+      "note": "Answer recorded as keep; the hold lifted; notice back to Ms Yong."
+     }
+    },
+    {
+     "staff": "PH-01",
+     "message": "Dr Sivakumar confirmed. Dispense the prescription for Wong Kok Wai, PS-P-0063.",
+     "expect": {
+      "tool": "dispense",
+      "action": "check_and_dispense",
+      "status": "ok",
+      "code": null,
+      "check": "dispensed",
+      "note": "Dispensed in one call after the query was answered to keep it."
+     }
+    }
+   ],
+   "setup": []
+  },
+  {
+   "id": "C4",
+   "group": "handover",
+   "title": "A clinical issue no policy covers: the GP decides",
+   "plain": "A matter no policy covers goes to the doctor, and the answer comes back to the desk.",
+   "sender": "FD-01",
+   "message": "Ong Kar Mun, IC ending 2541 brought a prescription from a hospital specialist and asks us to supply the same medicines.",
+   "expect": {
+    "FD-01": {
+     "tool": "tasks",
+     "action": "hand_over",
+     "status": "ok",
+     "code": null,
+     "check": "handover_D4",
+     "note": "Matter outside_policy before the consultation: code sends it to Dr Sivakumar as D4; the reply is written in code."
+    }
+   },
+   "steps": [
+    {
+     "staff": "GP-01",
+     "message": "Answer Siti on Ong Kar Mun, PS-P-0044: I will review the specialist's prescription when I see the patient, so keep the patient in the queue.",
+     "expect": {
+      "tool": "tasks",
+      "action": "answer",
+      "status": "ok",
+      "code": null,
+      "check": "answered_to_desk",
+      "note": "The decision goes back to Siti as a notice written in code."
+     }
+    }
+   ],
+   "setup": []
+  },
+  {
+   "id": "C5",
+   "group": "handover",
+   "title": "Medicine use question: Ms Yong answers behind the scene",
+   "plain": "The pharmacist answers; the desk passes it on.",
+   "sender": "FD-01",
+   "message": "Hidayah, IC ending 9395 is at the counter and asks whether to take the amoxicillin before or after food, and whether to finish all of it.",
+   "expect": {
+    "FD-01": {
+     "tool": "tasks",
+     "action": "hand_over",
+     "status": "ok",
+     "code": null,
+     "check": "handover_D5",
+     "note": "After dispensing, code sends the patient's question to Ms Yong as D5."
+    }
+   },
+   "steps": [
+    {
+     "staff": "PH-01",
+     "message": "Answer Siti on Hidayah, PS-P-0024: take it with or after food, three times a day, and finish the whole course even when feeling better.",
+     "expect": {
+      "tool": "tasks",
+      "action": "answer",
+      "status": "ok",
+      "code": null,
+      "check": "answered_to_desk",
+      "note": "The answer goes back to Siti to pass on."
+     }
+    }
+   ],
+   "setup": []
+  },
+  {
+   "id": "C6",
+   "group": "handover",
+   "title": "The same question, routed by the stage of the visit",
+   "plain": "Siti passes the same question twice; code sends it to the doctor before the consultation and to the pharmacist after dispensing.",
+   "sender": "FD-01",
+   "message": "Devi Anandan, IC ending 8494 asks whether the medicine is safe to use with the eczema cream the patient already uses.",
+   "expect": {
+    "FD-01": {
+     "tool": "tasks",
+     "action": "hand_over",
+     "status": "ok",
+     "code": null,
+     "check": "handover_D1_q2",
+     "note": "Before the consultation: code sends the question to Dr Sivakumar as D1; Siti names no colleague."
+    }
+   },
+   "steps": [
+    {
+     "staff": "GP-01",
+     "message": "Devi Anandan, PS-P-0045: eczema flare with itch. Prescribe loratadine 10 mg once a day for 7 days, 7 tablets.",
+     "expect": {
+      "tool": "record_consultation",
+      "action": "record",
+      "status": "ok",
+      "code": null,
+      "check": "consult_q2",
+      "note": "Recorded; code sends the prescription to Ms Yong."
+     }
+    },
+    {
+     "staff": "PH-01",
+     "message": "Check and dispense the prescription for Devi Anandan, PS-P-0045.",
+     "expect": {
+      "tool": "dispense",
+      "action": "check_and_dispense",
+      "status": "ok",
+      "code": null,
+      "check": "dispensed",
+      "note": "Dispensed in one call; Siti's bill task created."
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Devi Anandan, IC ending 8494 asks again whether the loratadine is safe to use with the eczema cream the patient already uses.",
+     "expect": {
+      "tool": "tasks",
+      "action": "hand_over",
+      "status": "ok",
+      "code": null,
+      "check": "handover_D5_q2",
+      "note": "After dispensing: the same call, and code sends it to Ms Yong as D5."
+     }
+    }
+   ],
+   "setup": [
+    {
+     "op": "with_gp",
+     "who": "q2"
+    }
+   ]
+  },
+  {
+   "id": "D1",
+   "group": "workflow",
+   "title": "Standard visit, the process most patients follow",
+   "plain": "Check-in, consultation, check and dispense, bill and payment: the visit closes.",
+   "steps": [
+    {
+     "staff": "FD-01",
+     "message": "Sandra Yip, IC ending 2040 walks in and is not on a panel. Please check the patient in.",
+     "expect": {
+      "tool": "schedule",
+      "action": "check_in",
+      "status": "ok",
+      "code": null,
+      "check": "queued_d1",
+      "note": ""
+     }
+    },
+    {
+     "staff": "GP-01",
+     "message": "Call the next patient.",
+     "expect": {
+      "tool": "schedule",
+      "action": "call_next",
+      "status": "ok",
+      "code": null,
+      "check": "called_d1",
+      "note": ""
+     }
+    },
+    {
+     "staff": "GP-01",
+     "message": "Sandra Yip, PS-P-0032: viral fever. Prescribe paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets.",
+     "expect": {
+      "tool": "record_consultation",
+      "action": "record",
+      "status": "ok",
+      "code": null,
+      "check": "consult_d1",
+      "note": ""
+     }
+    },
+    {
+     "staff": "PH-01",
+     "message": "Check and dispense the prescription for Sandra Yip, PS-P-0032.",
+     "expect": {
+      "tool": "dispense",
+      "action": "check_and_dispense",
+      "status": "ok",
+      "code": null,
+      "check": "dispensed",
+      "note": ""
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Prepare the bill for Sandra Yip, IC ending 2040.",
+     "expect": {
+      "tool": "billing",
+      "action": "prepare_bill",
+      "status": "ok",
+      "code": null,
+      "check": "bill_d1",
+      "note": ""
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Sandra Yip, IC ending 2040 paid RM 37.40 by card. Record it.",
+     "expect": {
+      "tool": "billing",
+      "action": "record_payment",
+      "status": "ok",
+      "code": null,
+      "check": "closed_d1",
+      "note": ""
+     }
+    }
+   ],
+   "setup": [
+    {
+     "op": "clear_queue"
+    }
+   ]
+  },
+  {
+   "id": "D2",
+   "group": "workflow",
+   "title": "Referral letter decided in the consultation",
+   "plain": "The GP decides; Siti prepares it word for word; the GP signs; Siti issues it.",
+   "steps": [
+    {
+     "staff": "GP-01",
+     "message": "Suresh Kumar, PS-P-0033: right knee pain after a fall, possible meniscal tear. No medicines today. Refer soon to the orthopaedic clinic at the general hospital for an MRI and specialist assessment; summary: swelling and locking for 2 weeks, positive McMurray test.",
+     "expect": {
+      "tool": "record_consultation",
+      "action": "record",
+      "status": "ok",
+      "code": null,
+      "check": "consult_d2",
+      "note": ""
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Prepare the referral letter for Suresh Kumar, PS-P-0033.",
+     "expect": {
+      "tool": "documents",
+      "action": "prepare",
+      "status": "ok",
+      "code": null,
+      "check": "doc_prepared_referral",
+      "note": ""
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Dr Sivakumar has signed the referral letter for Suresh Kumar, PS-P-0033. Mark it issued.",
+     "expect": {
+      "tool": "documents",
+      "action": "mark_issued",
+      "status": "ok",
+      "code": null,
+      "check": "doc_issued_referral",
+      "note": ""
+     }
+    }
+   ],
+   "setup": [
+    {
+     "op": "with_gp",
+     "who": "d2"
+    }
+   ]
+  },
+  {
+   "id": "D3",
+   "group": "workflow",
+   "title": "MC decided in the consultation",
+   "plain": "The MC is the GP's decision in the consultation, prepared exactly as recorded.",
+   "steps": [
+    {
+     "staff": "GP-01",
+     "message": "Goh Jia Hui, PS-P-0038: acute gastroenteritis. Prescribe ORS, 1 sachet after each loose stool, up to 4 a day for 2 days, 8 sachets. MC for 2 days from today.",
+     "expect": {
+      "tool": "record_consultation",
+      "action": "record",
+      "status": "ok",
+      "code": null,
+      "check": "consult_d3",
+      "note": ""
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Prepare the MC for Goh Jia Hui, PS-P-0038.",
+     "expect": {
+      "tool": "documents",
+      "action": "prepare",
+      "status": "ok",
+      "code": null,
+      "check": "doc_prepared_mc",
+      "note": ""
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Dr Sivakumar has signed the MC for Goh Jia Hui, PS-P-0038. Mark it issued.",
+     "expect": {
+      "tool": "documents",
+      "action": "mark_issued",
+      "status": "ok",
+      "code": null,
+      "check": "doc_issued_mc",
+      "note": ""
+     }
+    }
+   ],
+   "setup": [
+    {
+     "op": "with_gp",
+     "who": "d3"
+    }
+   ]
+  },
+  {
+   "id": "D4",
+   "group": "workflow",
+   "title": "Panel billing, acknowledged at the end of the day",
+   "plain": "Siti bills from the fixed panel schedule; Dr Sivakumar reads and acknowledges it.",
+   "steps": [
+    {
+     "staff": "FD-01",
+     "message": "Prepare the bill for Liyana, IC ending 8111, who is on Panel Cempaka.",
+     "expect": {
+      "tool": "billing",
+      "action": "prepare_bill",
+      "status": "ok",
+      "code": null,
+      "check": "bill_d4",
+      "note": ""
+     }
+    },
+    {
+     "staff": "FD-01",
+     "message": "Liyana, IC ending 8111 paid RM 9.00 in cash, the exact amount. Record it.",
+     "expect": {
+      "tool": "billing",
+      "action": "record_payment",
+      "status": "ok",
+      "code": null,
+      "check": "paid_d4",
+      "note": ""
+     }
+    },
+    {
+     "staff": "GP-01",
+     "message": "Show me today's panel bills and acknowledge the one for Liyana, PS-P-0014.",
+     "expect": {
+      "tool": "billing",
+      "action": "acknowledge_panel_bill",
+      "status": "ok",
+      "code": null,
+      "check": "acked_d4",
+      "note": ""
+     }
+    }
+   ],
+   "setup": []
+  },
+  {
+   "id": "F1",
+   "group": "failure",
+   "title": "A missing price stops the bill",
+   "staff": "FD-01",
+   "message": "Prepare the bill for Iskandar, PS-P-0047.",
+   "expect": {
+    "tool": "billing",
+    "action": "prepare_bill",
+    "status": "error",
+    "code": "missing_price",
+    "check": "no_bill_f1",
+    "note": "No price for omeprazole: no bill, nothing estimated."
+   },
+   "faults": {
+    "missing_price": "omeprazole-20-mg"
+   },
+   "setup": []
+  },
+  {
+   "id": "F2",
+   "group": "failure",
+   "title": "A missing template stops the MC",
+   "staff": "FD-01",
+   "message": "Prepare the MC for Goh Jia Hui, PS-P-0038.",
+   "expect": {
+    "tool": "documents",
+    "action": "prepare",
+    "status": "error",
+    "code": "template_missing",
+    "check": "no_document",
+    "note": "Nothing improvised; reported to Siti."
+   },
+   "faults": {
+    "template_missing": true
+   },
+   "setup": [
+    {
+     "op": "with_gp",
+     "who": "d3"
+    },
+    {
+     "op": "call",
+     "staff": "GP-01",
+     "tool": "record_consultation",
+     "input": {
+      "action": "record",
+      "patient_id": "PS-P-0038",
+      "diagnosis": "Acute gastroenteritis",
+      "mc": {
+       "days": 2
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "F3",
+   "group": "failure",
+   "title": "A missing stock record stops the check",
+   "staff": "PH-01",
+   "message": "Check and dispense the prescription for Farah, PS-P-0048.",
+   "expect": {
+    "tool": "dispense",
+    "action": "check_and_dispense",
+    "status": "error",
+    "code": "stock_record_missing",
+    "check": "not_dispensed_f3",
+    "note": "No check recorded, nothing dispensed."
+   },
+   "faults": {
+    "stock_record_missing": "omeprazole-20-mg"
+   },
+   "setup": []
+  },
+  {
+   "id": "F4",
+   "group": "failure",
+   "title": "A data fault when recording a consultation",
+   "staff": "GP-01",
+   "message": "Suresh Kumar, PS-P-0004: tension headache. Prescribe paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets.",
+   "expect": {
+    "tool": "record_consultation",
+    "action": "record",
+    "status": "error",
+    "code": "system_unavailable",
+    "check": "no_consult_a3",
+    "note": "Nothing recorded; no task created."
+   },
+   "faults": {
+    "record_consultation": "unavailable"
+   },
+   "setup": []
+  }
+ ]
+}

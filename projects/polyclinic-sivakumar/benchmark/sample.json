@@ -1,0 +1,3120 @@
+{
+ "summary": {
+  "model": "claude-haiku-5-5",
+  "ranAt": "2026-10-27T23:07:47.299Z",
+  "seconds": 31,
+  "total": {
+   "pass": 4,
+   "total": 4
+  },
+  "groups": {
+   "own_job": {
+    "pass": 0,
+    "total": 0
+   },
+   "unauthorised": {
+    "pass": 1,
+    "total": 1
+   },
+   "handover": {
+    "pass": 2,
+    "total": 2
+   },
+   "workflow": {
+    "pass": 1,
+    "total": 1
+   },
+   "failure": {
+    "pass": 0,
+    "total": 0
+   }
+  },
+  "steps_scored": {
+   "right_tool": 13,
+   "right_action": 13,
+   "right_result": 13,
+   "data": 13
+  },
+  "hard_limit_breaches": 0,
+  "tool_selection": {
+   "steps": 13,
+   "first_tool": 11,
+   "first_action": 11,
+   "outside_role": 0
+  },
+  "enabler": {
+   "consultations_recorded": 2,
+   "each_created_next_tasks": 2
+  },
+  "tool_choice_fallbacks": 0,
+  "sent_back": 0,
+  "reworded": 3,
+  "fixed_replies": 3,
+  "usage": {
+   "input_tokens": 67817,
+   "output_tokens": 3789,
+   "cache_read_input_tokens": 233427,
+   "cache_creation_input_tokens": 55408
+  },
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 67817,
+    "output_tokens": 3789,
+    "cache_read_input_tokens": 233427,
+    "cache_creation_input_tokens": 55408
+   }
+  }
+ },
+ "results": [
+  {
+   "id": "B3-PH",
+   "case": "B3",
+   "group": "unauthorised",
+   "title": "Ms Yong tries to prepare a bill",
+   "staff": "PH-01",
+   "steps": [
+    {
+     "step": 1,
+     "staff": "PH-01",
+     "message": "Prepare the bill for Ong Kar Mun, PS-P-0017.",
+     "notices": [],
+     "trace": [
+      {
+       "staff": "PH-01",
+       "type": "tool",
+       "name": "tasks",
+       "input": {
+        "action": "list"
+       },
+       "result": {
+        "tool": "tasks",
+        "status": "ok",
+        "data": {
+         "tasks": [
+          {
+           "task_id": "TK-0008",
+           "kind": "check",
+           "patient": "Teoh Boon Hock (PS-P-0005)",
+           "reason": null,
+           "text": "Check and dispense.",
+           "since": "09:46"
+          },
+          {
+           "task_id": "TK-0009",
+           "kind": "check",
+           "patient": "Hidayah (PS-P-0002)",
+           "reason": null,
+           "text": "Check and dispense.",
+           "since": "09:51"
+          },
+          {
+           "task_id": "TK-0010",
+           "kind": "check",
+           "patient": "Aisyah (PS-P-0013)",
+           "reason": null,
+           "text": "Check and dispense.",
+           "since": "09:53"
+          },
+          {
+           "task_id": "TK-0011",
+           "kind": "check",
+           "patient": "Wong Kok Wai (PS-P-0063)",
+           "reason": null,
+           "text": "Check and dispense.",
+           "since": "09:56"
+          },
+          {
+           "task_id": "TK-0012",
+           "kind": "check",
+           "patient": "Farah (PS-P-0048)",
+           "reason": null,
+           "text": "Check and dispense.",
+           "since": "09:58"
+          }
+         ],
+         "notices": []
+        },
+        "error": null,
+        "next_step": {
+         "text": null,
+         "person": null,
+         "say": null,
+         "basis": "PS-RP-06 · Ms Yong's list at 10:00"
+        }
+       },
+       "hook": {
+        "tool": "tasks",
+        "input": {
+         "action": "list"
+        },
+        "staff": "PH-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as PH-01, Ms Yong, pharmacist",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "tasks is offered to Ms Yong",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Ms Yong may tasks list",
+           "clause": "PS-RP-01",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "tasks": [
+          {
+           "id": "TK-0008",
+           "kind": "check",
+           "to": "PH-01",
+           "patient": "PS-P-0005",
+           "consultation": "CN-0006",
+           "created": 1780364760,
+           "status": "open",
+           "text": "Check and dispense."
+          },
+          {
+           "id": "TK-0009",
+           "kind": "check",
+           "to": "PH-01",
+           "patient": "PS-P-0002",
+           "consultation": "CN-0007",
+           "created": 1780365060,
+           "status": "open",
+           "text": "Check and dispense."
+          },
+          {
+           "id": "TK-0010",
+           "kind": "check",
+           "to": "PH-01",
+           "patient": "PS-P-0013",
+           "consultation": "CN-0008",
+           "created": 1780365180,
+           "status": "open",
+           "text": "Check and dispense."
+          },
+          {
+           "id": "TK-0011",
+           "kind": "check",
+           "to": "PH-01",
+           "patient": "PS-P-0063",
+           "consultation": "CN-0009",
+           "created": 1780365360,
+           "status": "open",
+           "text": "Check and dispense."
+          },
+          {
+           "id": "TK-0012",
+           "kind": "check",
+           "to": "PH-01",
+           "patient": "PS-P-0048",
+           "consultation": "CN-0010",
+           "created": 1780365480,
+           "status": "open",
+           "text": "Check and dispense."
+          }
+         ],
+         "notices": []
+        },
+        "post": [],
+        "result": {
+         "tool": "tasks",
+         "status": "ok",
+         "data": {
+          "tasks": [
+           {
+            "task_id": "TK-0008",
+            "kind": "check",
+            "patient": "Teoh Boon Hock (PS-P-0005)",
+            "reason": null,
+            "text": "Check and dispense.",
+            "since": "09:46"
+           },
+           {
+            "task_id": "TK-0009",
+            "kind": "check",
+            "patient": "Hidayah (PS-P-0002)",
+            "reason": null,
+            "text": "Check and dispense.",
+            "since": "09:51"
+           },
+           {
+            "task_id": "TK-0010",
+            "kind": "check",
+            "patient": "Aisyah (PS-P-0013)",
+            "reason": null,
+            "text": "Check and dispense.",
+            "since": "09:53"
+           },
+           {
+            "task_id": "TK-0011",
+            "kind": "check",
+            "patient": "Wong Kok Wai (PS-P-0063)",
+            "reason": null,
+            "text": "Check and dispense.",
+            "since": "09:56"
+           },
+           {
+            "task_id": "TK-0012",
+            "kind": "check",
+            "patient": "Farah (PS-P-0048)",
+            "reason": null,
+            "text": "Check and dispense.",
+            "since": "09:58"
+           }
+          ],
+          "notices": []
+         },
+         "error": null,
+         "next_step": {
+          "text": null,
+          "person": null,
+          "say": null,
+          "basis": "PS-RP-06 · Ms Yong's list at 10:00"
+         }
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "I'm sorry, you can't prepare bills. Only Siti Kasim, clinic assistant, can prepare a bill.\nBasis: PS-RP-06 · Ms Yong's list at 10:00"
+      }
+     ],
+     "reply": "I'm sorry, you can't prepare bills. Only Siti Kasim, clinic assistant, can prepare a bill.\nBasis: PS-RP-06 · Ms Yong's list at 10:00",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 4096,
+      "output_tokens": 78,
+      "cache_read_input_tokens": 6624,
+      "cache_creation_input_tokens": 6624
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "end_turn"
+    }
+   ],
+   "breaches": [],
+   "pass": true,
+   "usage": {
+    "input_tokens": 4096,
+    "output_tokens": 78,
+    "cache_read_input_tokens": 6624,
+    "cache_creation_input_tokens": 6624
+   }
+  },
+  {
+   "id": "C1-PH",
+   "case": "C1",
+   "group": "handover",
+   "title": "Allergy conflict: the GP switches drug",
+   "staff": "PH-01",
+   "steps": [
+    {
+     "step": 1,
+     "staff": "PH-01",
+     "message": "Check and dispense the prescription for Hidayah, PS-P-0002.",
+     "notices": [],
+     "trace": [
+      {
+       "staff": "PH-01",
+       "type": "tool",
+       "name": "dispense",
+       "input": {
+        "action": "check_and_dispense",
+        "patient_id": "PS-P-0002"
+       },
+       "result": {
+        "tool": "dispense",
+        "status": "ok",
+        "data": {
+         "patient": "Hidayah (PS-P-0002, 71)",
+         "allergies": [
+          "NSAID sensitivity"
+         ],
+         "prescription": [
+          {
+           "medicine": "Ibuprofen 400 mg",
+           "dose": "400 mg",
+           "times_per_day": 3,
+           "as_needed": false,
+           "days": 5,
+           "quantity": 15,
+           "instructions": "Take 1 tablet three times a day after food."
+          }
+         ],
+         "check": "failed",
+         "failed": [
+          {
+           "reason": "P1",
+           "check": "allergy",
+           "medicine": "Ibuprofen 400 mg",
+           "detail": "NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class"
+          }
+         ],
+         "query_id": "TK-0015",
+         "reason": "P1",
+         "status": "held, with Dr Sivakumar"
+        },
+        "error": null,
+        "next_step": {
+         "text": "Dr Sivakumar amends the prescription or answers to keep it.",
+         "person": "GP-01",
+         "say": "The check failed on an allergy conflict, so the prescription is held. Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.",
+         "basis": "PS-AC-02, PS-AC-03 · CK-0007 · TK-0015"
+        }
+       },
+       "hook": {
+        "tool": "dispense",
+        "input": {
+         "action": "check_and_dispense",
+         "patient_id": "PS-P-0002"
+        },
+        "staff": "PH-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as PH-01, Ms Yong, pharmacist",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "dispense is offered to Ms Yong",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Ms Yong may dispense check_and_dispense",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "check": {
+          "id": "CK-0007",
+          "consultation": "CN-0007",
+          "patient": "PS-P-0002",
+          "by": "PH-01",
+          "at": 1780365600,
+          "result": "failed",
+          "failed": [
+           {
+            "reason": "P1",
+            "check": "allergy",
+            "medicine": "ibuprofen-400-mg",
+            "detail": "NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class"
+           }
+          ],
+          "version": 0
+         },
+         "patient": {
+          "id": "PS-P-0002",
+          "name": "Hidayah",
+          "dob": "1954-09-08",
+          "phone": "015-3219824",
+          "ic_last4": "5687",
+          "registered": "2024-05-26",
+          "allergies": [
+           "NSAID sensitivity"
+          ],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         },
+         "prescription": [
+          {
+           "medicine": "ibuprofen-400-mg",
+           "dose": 400,
+           "dose_unit": "mg",
+           "times_per_day": 3,
+           "days": 5,
+           "quantity": 15,
+           "instructions": "Take 1 tablet three times a day after food.",
+           "as_needed": false
+          }
+         ],
+         "held": true,
+         "task": {
+          "id": "TK-0015",
+          "kind": "query",
+          "to": "GP-01",
+          "patient": "PS-P-0002",
+          "consultation": "CN-0007",
+          "created": 1780365600,
+          "status": "open",
+          "text": "Query from Ms Yong: Ibuprofen 400 mg, NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class",
+          "reason": "P1",
+          "question": "Ibuprofen 400 mg, NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class",
+          "from": "PH-01",
+          "auto": true
+         },
+         "notice": {
+          "id": "NT-0001",
+          "to": "GP-01",
+          "text": "Ms Yong's check of the prescription for Hidayah (PS-P-0002, 71) failed on an allergy conflict: Ibuprofen 400 mg, NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class. The prescription is held until you amend it or answer to keep it.",
+          "ref": "TK-0015",
+          "at": 1780365600
+         }
+        },
+        "post": [
+         "Check failed: the query (P1) and the notice for Dr Sivakumar written in code; dispensing held (PS-AC-03)"
+        ],
+        "result": {
+         "tool": "dispense",
+         "status": "ok",
+         "data": {
+          "patient": "Hidayah (PS-P-0002, 71)",
+          "allergies": [
+           "NSAID sensitivity"
+          ],
+          "prescription": [
+           {
+            "medicine": "Ibuprofen 400 mg",
+            "dose": "400 mg",
+            "times_per_day": 3,
+            "as_needed": false,
+            "days": 5,
+            "quantity": 15,
+            "instructions": "Take 1 tablet three times a day after food."
+           }
+          ],
+          "check": "failed",
+          "failed": [
+           {
+            "reason": "P1",
+            "check": "allergy",
+            "medicine": "Ibuprofen 400 mg",
+            "detail": "NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class"
+           }
+          ],
+          "query_id": "TK-0015",
+          "reason": "P1",
+          "status": "held, with Dr Sivakumar"
+         },
+         "error": null,
+         "next_step": {
+          "text": "Dr Sivakumar amends the prescription or answers to keep it.",
+          "person": "GP-01",
+          "say": "The check failed on an allergy conflict, so the prescription is held. Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.",
+          "basis": "PS-AC-02, PS-AC-03 · CK-0007 · TK-0015"
+         }
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover sent or answer recorded)."
+      },
+      {
+       "type": "reply",
+       "text": "The check failed on an allergy conflict, so the prescription is held. Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.\nBasis: PS-AC-02, PS-AC-03 · CK-0007 · TK-0015"
+      }
+     ],
+     "reply": "The check failed on an allergy conflict, so the prescription is held. Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.\nBasis: PS-AC-02, PS-AC-03 · CK-0007 · TK-0015",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 1877,
+      "output_tokens": 71,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 6624
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "fixed_reply"
+    },
+    {
+     "step": 2,
+     "staff": "GP-01",
+     "message": "Change Hidayah's ibuprofen to paracetamol 1000 mg four times a day when needed for 5 days, 40 tablets. PS-P-0002.",
+     "notices": [
+      "Ms Yong's check of the prescription for Hidayah (PS-P-0002, 71) failed on an allergy conflict: Ibuprofen 400 mg, NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class. The prescription is held until you amend it or answer to keep it."
+     ],
+     "trace": [
+      {
+       "staff": "GP-01",
+       "type": "tool",
+       "name": "record_consultation",
+       "input": {
+        "action": "amend_prescription",
+        "patient_id": "PS-P-0002",
+        "replace_medicine": "Ibuprofen 400 mg",
+        "prescription": [
+         {
+          "medicine": "Paracetamol 500 mg",
+          "dose": 1000,
+          "dose_unit": "mg",
+          "times_per_day": 4,
+          "as_needed": true,
+          "days": 5,
+          "quantity": 40
+         }
+        ]
+       },
+       "result": {
+        "tool": "record_consultation",
+        "status": "ok",
+        "data": {
+         "patient": "Hidayah (PS-P-0002)",
+         "prescription_now": [
+          {
+           "medicine": "Paracetamol 500 mg",
+           "dose": "1000 mg",
+           "times_per_day": 4,
+           "as_needed": true,
+           "days": 5,
+           "quantity": 40,
+           "instructions": "Take 1000 mg 4 times a day when needed for 5 days."
+          }
+         ],
+         "prescription_before": [
+          {
+           "medicine": "Ibuprofen 400 mg",
+           "dose": "400 mg",
+           "times_per_day": 3,
+           "as_needed": false,
+           "days": 5,
+           "quantity": 15,
+           "instructions": "Take 1 tablet three times a day after food."
+          }
+         ],
+         "next": "Ms Yong checks it again before dispensing"
+        },
+        "error": null,
+        "next_step": {
+         "text": "Ms Yong checks the amended prescription before dispensing.",
+         "person": "PH-01",
+         "say": null,
+         "basis": "PS-AC-03 · CN-0007 amended 10:05"
+        }
+       },
+       "hook": {
+        "tool": "record_consultation",
+        "input": {
+         "action": "amend_prescription",
+         "patient_id": "PS-P-0002",
+         "replace_medicine": "Ibuprofen 400 mg",
+         "prescription": [
+          {
+           "medicine": "Paracetamol 500 mg",
+           "dose": 1000,
+           "dose_unit": "mg",
+           "times_per_day": 4,
+           "as_needed": true,
+           "days": 5,
+           "quantity": 40
+          }
+         ]
+        },
+        "staff": "GP-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as GP-01, Dr Sivakumar a/l Ramachandran, general practitioner and owner",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "record_consultation is offered to Dr Sivakumar",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Dr Sivakumar may record_consultation amend_prescription",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "consultation": {
+          "id": "CN-0007",
+          "patient": "PS-P-0002",
+          "date": "2026-06-02",
+          "at": 1780365000,
+          "by": "GP-01",
+          "diagnosis": "Mechanical low back pain",
+          "case_note": "Mechanical low back pain. Examined; plan as prescribed.",
+          "services": [
+           "gp-consultation"
+          ],
+          "prescription": [
+           {
+            "medicine": "paracetamol-500-mg",
+            "dose": 1000,
+            "dose_unit": "mg",
+            "times_per_day": 4,
+            "days": 5,
+            "quantity": 40,
+            "as_needed": true,
+            "instructions": "Take 1000 mg 4 times a day when needed for 5 days."
+           }
+          ],
+          "return_in_days": null,
+          "mc": null,
+          "referral": null,
+          "amended": []
+         },
+         "patient": {
+          "id": "PS-P-0002",
+          "name": "Hidayah",
+          "dob": "1954-09-08",
+          "phone": "015-3219824",
+          "ic_last4": "5687",
+          "registered": "2024-05-26",
+          "allergies": [
+           "NSAID sensitivity"
+          ],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         },
+         "before": [
+          {
+           "medicine": "ibuprofen-400-mg",
+           "dose": 400,
+           "dose_unit": "mg",
+           "times_per_day": 3,
+           "days": 5,
+           "quantity": 15,
+           "instructions": "Take 1 tablet three times a day after food.",
+           "as_needed": false
+          }
+         ],
+         "task": {
+          "id": "TK-0016",
+          "kind": "check",
+          "to": "PH-01",
+          "patient": "PS-P-0002",
+          "consultation": "CN-0007",
+          "created": 1780365900,
+          "status": "open",
+          "text": "Check the amended prescription."
+         },
+         "answered": [
+          "TK-0015"
+         ]
+        },
+        "post": [
+         "Old check replaced; a new check task for Ms Yong; the query closed by the amendment (PS-AC-03)"
+        ],
+        "result": {
+         "tool": "record_consultation",
+         "status": "ok",
+         "data": {
+          "patient": "Hidayah (PS-P-0002)",
+          "prescription_now": [
+           {
+            "medicine": "Paracetamol 500 mg",
+            "dose": "1000 mg",
+            "times_per_day": 4,
+            "as_needed": true,
+            "days": 5,
+            "quantity": 40,
+            "instructions": "Take 1000 mg 4 times a day when needed for 5 days."
+           }
+          ],
+          "prescription_before": [
+           {
+            "medicine": "Ibuprofen 400 mg",
+            "dose": "400 mg",
+            "times_per_day": 3,
+            "as_needed": false,
+            "days": 5,
+            "quantity": 15,
+            "instructions": "Take 1 tablet three times a day after food."
+           }
+          ],
+          "next": "Ms Yong checks it again before dispensing"
+         },
+         "error": null,
+         "next_step": {
+          "text": "Ms Yong checks the amended prescription before dispensing.",
+          "person": "PH-01",
+          "say": null,
+          "basis": "PS-AC-03 · CN-0007 amended 10:05"
+         }
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Hidayah's ibuprofen is changed to paracetamol 1000 mg four times a day when needed for 5 days, 40 tablets. Ms Yong will check the amended prescription again before dispensing.\nBasis: PS-AC-03 · CN-0007 amended 10:05"
+      }
+     ],
+     "reply": "Hidayah's ibuprofen is changed to paracetamol 1000 mg four times a day when needed for 5 days, 40 tablets. Ms Yong will check the amended prescription again before dispensing.\nBasis: PS-AC-03 · CN-0007 amended 10:05",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 4517,
+      "output_tokens": 273,
+      "cache_read_input_tokens": 10587,
+      "cache_creation_input_tokens": 10587
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "end_turn"
+    }
+   ],
+   "breaches": [],
+   "pass": true,
+   "usage": {
+    "input_tokens": 6394,
+    "output_tokens": 344,
+    "cache_read_input_tokens": 10587,
+    "cache_creation_input_tokens": 17211
+   }
+  },
+  {
+   "id": "C6-FD",
+   "case": "C6",
+   "group": "handover",
+   "title": "The same question, routed by the stage of the visit",
+   "staff": "FD-01",
+   "steps": [
+    {
+     "step": 1,
+     "staff": "FD-01",
+     "message": "Devi Anandan, IC ending 8494 asks whether the medicine is safe to use with the eczema cream the patient already uses.",
+     "notices": [],
+     "trace": [
+      {
+       "staff": "FD-01",
+       "type": "tool",
+       "name": "tasks",
+       "input": {
+        "action": "hand_over",
+        "matter": "question",
+        "name": "Devi Anandan",
+        "ic_last4": "8494",
+        "question": "asks whether the medicine is safe to use with the eczema cream the patient already uses"
+       },
+       "result": {
+        "tool": "tasks",
+        "status": "ok",
+        "data": {
+         "handover_id": "TK-0015",
+         "patient": "Devi Anandan (PS-P-0045)",
+         "reason": "D1",
+         "to": "Dr Sivakumar a/l Ramachandran"
+        },
+        "error": null,
+        "next_step": {
+         "text": "Dr Sivakumar a/l Ramachandran answers; the answer comes back to you.",
+         "person": "GP-01",
+         "say": "Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.",
+         "basis": "PS-RP-06 · TK-0015"
+        }
+       },
+       "hook": {
+        "tool": "tasks",
+        "input": {
+         "action": "hand_over",
+         "matter": "question",
+         "name": "Devi Anandan",
+         "ic_last4": "8494",
+         "question": "asks whether the medicine is safe to use with the eczema cream the patient already uses"
+        },
+        "staff": "FD-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as FD-01, Siti Kasim, clinic assistant",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "tasks is offered to Siti",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may tasks hand_over",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Receiver set by code from the stage of the visit",
+           "clause": "PS-RP-06",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "task": {
+          "id": "TK-0015",
+          "kind": "handover",
+          "to": "GP-01",
+          "patient": "PS-P-0045",
+          "consultation": null,
+          "created": 1780365600,
+          "status": "open",
+          "text": "Handover from Siti Kasim: asks whether the medicine is safe to use with the eczema cream the patient already uses",
+          "reason": "D1",
+          "matter": "question",
+          "stage": "before_consultation",
+          "question": "asks whether the medicine is safe to use with the eczema cream the patient already uses",
+          "from": "FD-01"
+         },
+         "patient": {
+          "id": "PS-P-0045",
+          "name": "Devi Anandan",
+          "dob": "1989-03-27",
+          "phone": "016-1460542",
+          "ic_last4": "8494",
+          "registered": "2024-04-16",
+          "allergies": [],
+          "conditions": [
+           "Eczema"
+          ],
+          "current_medicines": [],
+          "panel": null
+         },
+         "notice": {
+          "id": "NT-0001",
+          "to": "GP-01",
+          "text": "Siti Kasim has handed Devi Anandan (PS-P-0045, 37) over to you: a clinical question, asks whether the medicine is safe to use with the eczema cream the patient already uses. Your answer goes back to Siti Kasim.",
+          "ref": "TK-0015",
+          "at": 1780365600
+         }
+        },
+        "post": [
+         "Receiver set by code from the stage of the visit (before consultation): Dr Sivakumar a/l Ramachandran, reason D1; task and notice written in code (PS-RP-06)"
+        ],
+        "result": {
+         "tool": "tasks",
+         "status": "ok",
+         "data": {
+          "handover_id": "TK-0015",
+          "patient": "Devi Anandan (PS-P-0045)",
+          "reason": "D1",
+          "to": "Dr Sivakumar a/l Ramachandran"
+         },
+         "error": null,
+         "next_step": {
+          "text": "Dr Sivakumar a/l Ramachandran answers; the answer comes back to you.",
+          "person": "GP-01",
+          "say": "Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.",
+          "basis": "PS-RP-06 · TK-0015"
+         }
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover sent or answer recorded)."
+      },
+      {
+       "type": "reply",
+       "text": "Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.\nBasis: PS-RP-06 · TK-0015"
+      }
+     ],
+     "reply": "Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.\nBasis: PS-RP-06 · TK-0015",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 2031,
+      "output_tokens": 159,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 10493
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "fixed_reply"
+    },
+    {
+     "step": 2,
+     "staff": "GP-01",
+     "message": "Devi Anandan, PS-P-0045: eczema flare with itch. Prescribe loratadine 10 mg once a day for 7 days, 7 tablets.",
+     "notices": [
+      "Siti Kasim has handed Devi Anandan (PS-P-0045, 37) over to you: a clinical question, asks whether the medicine is safe to use with the eczema cream the patient already uses. Your answer goes back to Siti Kasim."
+     ],
+     "trace": [
+      {
+       "staff": "GP-01",
+       "type": "tool",
+       "name": "patient",
+       "input": {
+        "action": "find",
+        "patient_id": "PS-P-0045"
+       },
+       "result": {
+        "tool": "patient",
+        "status": "ok",
+        "data": {
+         "patient_id": "PS-P-0045",
+         "name": "Devi Anandan",
+         "age": 37,
+         "allergies": [
+          "none recorded"
+         ],
+         "conditions": [
+          "Eczema"
+         ],
+         "current_medicines": [],
+         "panel": "not on a panel",
+         "last_visits": [
+          {
+           "date": "2025-07-04",
+           "complaint": "sore throat and cough"
+          },
+          {
+           "date": "2026-02-07",
+           "complaint": "fever with headache behind eyes"
+          }
+         ],
+         "today": "with the GP now"
+        },
+        "error": null,
+        "next_step": {
+         "text": null,
+         "person": null,
+         "say": null,
+         "basis": "PS-HS-04 · PS-P-0045, data at Tue 2 Jun 2026, 10:05"
+        }
+       },
+       "hook": {
+        "tool": "patient",
+        "input": {
+         "action": "find",
+         "patient_id": "PS-P-0045"
+        },
+        "staff": "GP-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as GP-01, Dr Sivakumar a/l Ramachandran, general practitioner and owner",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "patient is offered to Dr Sivakumar",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Dr Sivakumar may patient find",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Dr Sivakumar may open the summary view",
+           "clause": "PS-RP-03",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "patient": {
+          "id": "PS-P-0045",
+          "name": "Devi Anandan",
+          "dob": "1989-03-27",
+          "phone": "016-1460542",
+          "ic_last4": "8494",
+          "registered": "2024-04-16",
+          "allergies": [],
+          "conditions": [
+           "Eczema"
+          ],
+          "current_medicines": [],
+          "panel": null
+         },
+         "verified": false,
+         "view": "summary",
+         "queue": {
+          "id": "QU-S15",
+          "patient": "PS-P-0045",
+          "date": "2026-06-02",
+          "kind": "walk_in",
+          "arrived": 1780365000,
+          "appointment_time": null,
+          "status": "with_gp",
+          "called": 1780365480
+         },
+         "bookings": [],
+         "last_visits": [
+          {
+           "date": "2025-07-04",
+           "complaint": "sore throat and cough"
+          },
+          {
+           "date": "2026-02-07",
+           "complaint": "fever with headache behind eyes"
+          }
+         ],
+         "notes": null
+        },
+        "post": [],
+        "result": {
+         "tool": "patient",
+         "status": "ok",
+         "data": {
+          "patient_id": "PS-P-0045",
+          "name": "Devi Anandan",
+          "age": 37,
+          "allergies": [
+           "none recorded"
+          ],
+          "conditions": [
+           "Eczema"
+          ],
+          "current_medicines": [],
+          "panel": "not on a panel",
+          "last_visits": [
+           {
+            "date": "2025-07-04",
+            "complaint": "sore throat and cough"
+           },
+           {
+            "date": "2026-02-07",
+            "complaint": "fever with headache behind eyes"
+           }
+          ],
+          "today": "with the GP now"
+         },
+         "error": null,
+         "next_step": {
+          "text": null,
+          "person": null,
+          "say": null,
+          "basis": "PS-HS-04 · PS-P-0045, data at Tue 2 Jun 2026, 10:05"
+         }
+        }
+       }
+      },
+      {
+       "staff": "GP-01",
+       "type": "tool",
+       "name": "record_consultation",
+       "input": {
+        "action": "record",
+        "patient_id": "PS-P-0045",
+        "name": "Devi Anandan",
+        "diagnosis": "Eczema flare with itch",
+        "services": [
+         "gp-consultation"
+        ],
+        "prescription": [
+         {
+          "medicine": "loratadine",
+          "dose": 10,
+          "dose_unit": "mg",
+          "times_per_day": 1,
+          "days": 7,
+          "quantity": 7
+         }
+        ]
+       },
+       "result": {
+        "tool": "record_consultation",
+        "status": "ok",
+        "data": {
+         "consultation_id": "CN-0012",
+         "patient": "Devi Anandan (PS-P-0045)",
+         "diagnosis": "Eczema flare with itch",
+         "services": [
+          "GP consultation"
+         ],
+         "prescription": [
+          {
+           "medicine": "Loratadine 10 mg",
+           "dose": "10 mg",
+           "times_per_day": 1,
+           "as_needed": false,
+           "days": 7,
+           "quantity": 7,
+           "instructions": "Take 10 mg once a day for 7 days."
+          }
+         ],
+         "mc": "none",
+         "referral": "none",
+         "return": "none",
+         "sent_to": [
+          "Ms Yong: Check and dispense the prescription."
+         ]
+        },
+        "error": null,
+        "next_step": {
+         "text": "Ms Yong checks and dispenses the prescription; Siti Kasim bills after dispensing.",
+         "person": null,
+         "say": null,
+         "basis": "PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:05"
+        }
+       },
+       "hook": {
+        "tool": "record_consultation",
+        "input": {
+         "action": "record",
+         "patient_id": "PS-P-0045",
+         "name": "Devi Anandan",
+         "diagnosis": "Eczema flare with itch",
+         "services": [
+          "gp-consultation"
+         ],
+         "prescription": [
+          {
+           "medicine": "loratadine",
+           "dose": 10,
+           "dose_unit": "mg",
+           "times_per_day": 1,
+           "days": 7,
+           "quantity": 7
+          }
+         ]
+        },
+        "staff": "GP-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as GP-01, Dr Sivakumar a/l Ramachandran, general practitioner and owner",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "record_consultation is offered to Dr Sivakumar",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Dr Sivakumar may record_consultation record",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "consultation": {
+          "id": "CN-0012",
+          "patient": "PS-P-0045",
+          "date": "2026-06-02",
+          "at": 1780365900,
+          "by": "GP-01",
+          "diagnosis": "Eczema flare with itch",
+          "case_note": "Eczema flare with itch.",
+          "services": [
+           "gp-consultation"
+          ],
+          "prescription": [
+           {
+            "medicine": "loratadine-10-mg",
+            "dose": 10,
+            "dose_unit": "mg",
+            "times_per_day": 1,
+            "days": 7,
+            "quantity": 7,
+            "as_needed": false,
+            "instructions": "Take 10 mg once a day for 7 days."
+           }
+          ],
+          "return_in_days": null,
+          "mc": null,
+          "referral": null,
+          "amended": []
+         },
+         "patient": {
+          "id": "PS-P-0045",
+          "name": "Devi Anandan",
+          "dob": "1989-03-27",
+          "phone": "016-1460542",
+          "ic_last4": "8494",
+          "registered": "2024-04-16",
+          "allergies": [],
+          "conditions": [
+           "Eczema"
+          ],
+          "current_medicines": [],
+          "panel": null
+         },
+         "tasks": [
+          {
+           "id": "TK-0016",
+           "kind": "check",
+           "to": "PH-01",
+           "patient": "PS-P-0045",
+           "consultation": "CN-0012",
+           "created": 1780365900,
+           "status": "open",
+           "text": "Check and dispense the prescription."
+          }
+         ]
+        },
+        "post": [
+         "Tasks and notices written in code for the next people (PS-RP-06)"
+        ],
+        "result": {
+         "tool": "record_consultation",
+         "status": "ok",
+         "data": {
+          "consultation_id": "CN-0012",
+          "patient": "Devi Anandan (PS-P-0045)",
+          "diagnosis": "Eczema flare with itch",
+          "services": [
+           "GP consultation"
+          ],
+          "prescription": [
+           {
+            "medicine": "Loratadine 10 mg",
+            "dose": "10 mg",
+            "times_per_day": 1,
+            "as_needed": false,
+            "days": 7,
+            "quantity": 7,
+            "instructions": "Take 10 mg once a day for 7 days."
+           }
+          ],
+          "mc": "none",
+          "referral": "none",
+          "return": "none",
+          "sent_to": [
+           "Ms Yong: Check and dispense the prescription."
+          ]
+         },
+         "error": null,
+         "next_step": {
+          "text": "Ms Yong checks and dispenses the prescription; Siti Kasim bills after dispensing.",
+          "person": null,
+          "say": null,
+          "basis": "PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:05"
+         }
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply sent back: use people's first names or roles instead of he, she, him, her, his or hers; keep it to at most two short sentences: what was done or found, then the next step."
+      },
+      {
+       "type": "reply",
+       "text": "Consultation CN-0012 is recorded for Devi Anandan: loratadine 10 mg once a day for 7 days, quantity 7. Ms Yong will check and dispense it, then Siti Kasim will bill; Siti Kasim's question about the eczema cream is still open, so give Dr Sivakumar's answer to send back.\nBasis: PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:05"
+      }
+     ],
+     "reply": "Consultation CN-0012 is recorded for Devi Anandan: loratadine 10 mg once a day for 7 days, quantity 7. Ms Yong will check and dispense it, then Siti Kasim will bill; Siti Kasim's question about the eczema cream is still open, so give Dr Sivakumar's answer to send back.\nBasis: PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:05",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": false,
+      "first_action": false,
+      "outside_role": 0,
+      "calls": 2
+     },
+     "usage": {
+      "input_tokens": 10925,
+      "output_tokens": 1163,
+      "cache_read_input_tokens": 31761,
+      "cache_creation_input_tokens": 10587
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 1,
+     "stoppedBy": "end_turn"
+    },
+    {
+     "step": 3,
+     "staff": "PH-01",
+     "message": "Check and dispense the prescription for Devi Anandan, PS-P-0045.",
+     "notices": [
+      "Dr Sivakumar has prescribed Loratadine 10 mg 10 mg once a day for 7 days (7) for Devi Anandan (PS-P-0045). Please check and dispense it exactly as written."
+     ],
+     "trace": [
+      {
+       "staff": "PH-01",
+       "type": "tool",
+       "name": "dispense",
+       "input": {
+        "action": "check_and_dispense",
+        "patient_id": "PS-P-0045"
+       },
+       "result": {
+        "tool": "dispense",
+        "status": "ok",
+        "data": {
+         "patient": "Devi Anandan (PS-P-0045, 37)",
+         "allergies": [
+          "none recorded"
+         ],
+         "prescription": [
+          {
+           "medicine": "Loratadine 10 mg",
+           "dose": "10 mg",
+           "times_per_day": 1,
+           "as_needed": false,
+           "days": 7,
+           "quantity": 7,
+           "instructions": "Take 10 mg once a day for 7 days."
+          }
+         ],
+         "check": "passed",
+         "failed": [],
+         "dispensed": [
+          {
+           "medicine": "Loratadine 10 mg",
+           "dose": "10 mg",
+           "times_per_day": 1,
+           "as_needed": false,
+           "days": 7,
+           "quantity": 7,
+           "instructions": "Take 10 mg once a day for 7 days."
+          }
+         ],
+         "counsel": [
+          "Loratadine 10 mg: Take 10 mg once a day for 7 days."
+         ]
+        },
+        "error": null,
+        "next_step": {
+         "text": "Counsel the patient on each medicine; Siti Kasim prepares the bill.",
+         "person": "FD-01",
+         "say": null,
+         "basis": "PS-AC-04 · CK-0007 · dispensed 10:10"
+        }
+       },
+       "hook": {
+        "tool": "dispense",
+        "input": {
+         "action": "check_and_dispense",
+         "patient_id": "PS-P-0045"
+        },
+        "staff": "PH-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as PH-01, Ms Yong, pharmacist",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "dispense is offered to Ms Yong",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Ms Yong may dispense check_and_dispense",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "check": {
+          "id": "CK-0007",
+          "consultation": "CN-0012",
+          "patient": "PS-P-0045",
+          "by": "PH-01",
+          "at": 1780366200,
+          "result": "passed",
+          "failed": [],
+          "version": 0
+         },
+         "patient": {
+          "id": "PS-P-0045",
+          "name": "Devi Anandan",
+          "dob": "1989-03-27",
+          "phone": "016-1460542",
+          "ic_last4": "8494",
+          "registered": "2024-04-16",
+          "allergies": [],
+          "conditions": [
+           "Eczema"
+          ],
+          "current_medicines": [],
+          "panel": null
+         },
+         "prescription": [
+          {
+           "medicine": "loratadine-10-mg",
+           "dose": 10,
+           "dose_unit": "mg",
+           "times_per_day": 1,
+           "days": 7,
+           "quantity": 7,
+           "as_needed": false,
+           "instructions": "Take 10 mg once a day for 7 days."
+          }
+         ],
+         "held": false,
+         "dispensed": {
+          "consultation": "CN-0012",
+          "patient": "PS-P-0045",
+          "by": "PH-01",
+          "at": 1780366200,
+          "lines": [
+           {
+            "medicine": "loratadine-10-mg",
+            "dose": 10,
+            "dose_unit": "mg",
+            "times_per_day": 1,
+            "days": 7,
+            "quantity": 7,
+            "as_needed": false,
+            "instructions": "Take 10 mg once a day for 7 days."
+           }
+          ],
+          "check": "CK-0007"
+         },
+         "bill_task": {
+          "id": "TK-0017",
+          "kind": "bill",
+          "to": "FD-01",
+          "patient": "PS-P-0045",
+          "consultation": "CN-0012",
+          "created": 1780366200,
+          "status": "open",
+          "text": "Prepare the bill."
+         }
+        },
+        "post": [
+         "Four checks passed (or kept by Dr Sivakumar); stock reduced; Siti Kasim's bill task created (PS-AC-04)"
+        ],
+        "result": {
+         "tool": "dispense",
+         "status": "ok",
+         "data": {
+          "patient": "Devi Anandan (PS-P-0045, 37)",
+          "allergies": [
+           "none recorded"
+          ],
+          "prescription": [
+           {
+            "medicine": "Loratadine 10 mg",
+            "dose": "10 mg",
+            "times_per_day": 1,
+            "as_needed": false,
+            "days": 7,
+            "quantity": 7,
+            "instructions": "Take 10 mg once a day for 7 days."
+           }
+          ],
+          "check": "passed",
+          "failed": [],
+          "dispensed": [
+           {
+            "medicine": "Loratadine 10 mg",
+            "dose": "10 mg",
+            "times_per_day": 1,
+            "as_needed": false,
+            "days": 7,
+            "quantity": 7,
+            "instructions": "Take 10 mg once a day for 7 days."
+           }
+          ],
+          "counsel": [
+           "Loratadine 10 mg: Take 10 mg once a day for 7 days."
+          ]
+         },
+         "error": null,
+         "next_step": {
+          "text": "Counsel the patient on each medicine; Siti Kasim prepares the bill.",
+          "person": "FD-01",
+          "say": null,
+          "basis": "PS-AC-04 · CK-0007 · dispensed 10:10"
+         }
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Devi Anandan's Loratadine 10 mg, 7 tablets, is dispensed. Please counsel the patient: take 10 mg once a day for 7 days.\nBasis: PS-AC-04 · CK-0007 · dispensed 10:10"
+      }
+     ],
+     "reply": "Devi Anandan's Loratadine 10 mg, 7 tablets, is dispensed. Please counsel the patient: take 10 mg once a day for 7 days.\nBasis: PS-AC-04 · CK-0007 · dispensed 10:10",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 4275,
+      "output_tokens": 129,
+      "cache_read_input_tokens": 13248,
+      "cache_creation_input_tokens": 0
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "end_turn"
+    },
+    {
+     "step": 4,
+     "staff": "FD-01",
+     "message": "Devi Anandan, IC ending 8494 asks again whether the loratadine is safe to use with the eczema cream the patient already uses.",
+     "notices": [
+      "Ms Yong has dispensed Devi Anandan's medicines (PS-P-0045). The bill is ready to prepare."
+     ],
+     "trace": [
+      {
+       "staff": "FD-01",
+       "type": "tool",
+       "name": "tasks",
+       "input": {
+        "action": "hand_over",
+        "matter": "question",
+        "name": "Devi Anandan",
+        "ic_last4": "8494",
+        "patient_id": "PS-P-0045",
+        "question": "asks again whether the loratadine is safe to use with the eczema cream the patient already uses"
+       },
+       "result": {
+        "tool": "tasks",
+        "status": "ok",
+        "data": {
+         "handover_id": "TK-0018",
+         "patient": "Devi Anandan (PS-P-0045)",
+         "reason": "D5",
+         "to": "Ms Yong"
+        },
+        "error": null,
+        "next_step": {
+         "text": "Ms Yong answers; the answer comes back to you.",
+         "person": "PH-01",
+         "say": "Sent to Ms Yong, pharmacist.",
+         "basis": "PS-RP-06 · TK-0018"
+        }
+       },
+       "hook": {
+        "tool": "tasks",
+        "input": {
+         "action": "hand_over",
+         "matter": "question",
+         "name": "Devi Anandan",
+         "ic_last4": "8494",
+         "patient_id": "PS-P-0045",
+         "question": "asks again whether the loratadine is safe to use with the eczema cream the patient already uses"
+        },
+        "staff": "FD-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as FD-01, Siti Kasim, clinic assistant",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "tasks is offered to Siti",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may tasks hand_over",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Receiver set by code from the stage of the visit",
+           "clause": "PS-RP-06",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "task": {
+          "id": "TK-0018",
+          "kind": "handover",
+          "to": "PH-01",
+          "patient": "PS-P-0045",
+          "consultation": "CN-0012",
+          "created": 1780366500,
+          "status": "open",
+          "text": "Handover from Siti Kasim: asks again whether the loratadine is safe to use with the eczema cream the patient already uses",
+          "reason": "D5",
+          "matter": "question",
+          "stage": "after_dispensing",
+          "question": "asks again whether the loratadine is safe to use with the eczema cream the patient already uses",
+          "from": "FD-01"
+         },
+         "patient": {
+          "id": "PS-P-0045",
+          "name": "Devi Anandan",
+          "dob": "1989-03-27",
+          "phone": "016-1460542",
+          "ic_last4": "8494",
+          "registered": "2024-04-16",
+          "allergies": [],
+          "conditions": [
+           "Eczema"
+          ],
+          "current_medicines": [],
+          "panel": null
+         },
+         "notice": {
+          "id": "NT-0004",
+          "to": "PH-01",
+          "text": "Siti Kasim has handed over a question from Devi Anandan (PS-P-0045, 37) to you: asks again whether the loratadine is safe to use with the eczema cream the patient already uses. Your answer goes back to Siti Kasim to pass on.",
+          "ref": "TK-0018",
+          "at": 1780366500
+         }
+        },
+        "post": [
+         "Receiver set by code from the stage of the visit (after dispensing): Ms Yong, reason D5; task and notice written in code (PS-RP-06)"
+        ],
+        "result": {
+         "tool": "tasks",
+         "status": "ok",
+         "data": {
+          "handover_id": "TK-0018",
+          "patient": "Devi Anandan (PS-P-0045)",
+          "reason": "D5",
+          "to": "Ms Yong"
+         },
+         "error": null,
+         "next_step": {
+          "text": "Ms Yong answers; the answer comes back to you.",
+          "person": "PH-01",
+          "say": "Sent to Ms Yong, pharmacist.",
+          "basis": "PS-RP-06 · TK-0018"
+         }
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover sent or answer recorded)."
+      },
+      {
+       "type": "reply",
+       "text": "Sent to Ms Yong, pharmacist.\nBasis: PS-RP-06 · TK-0018"
+      }
+     ],
+     "reply": "Sent to Ms Yong, pharmacist.\nBasis: PS-RP-06 · TK-0018",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 2100,
+      "output_tokens": 191,
+      "cache_read_input_tokens": 10493,
+      "cache_creation_input_tokens": 0
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "fixed_reply"
+    }
+   ],
+   "breaches": [],
+   "pass": true,
+   "usage": {
+    "input_tokens": 19331,
+    "output_tokens": 1642,
+    "cache_read_input_tokens": 55502,
+    "cache_creation_input_tokens": 21080
+   }
+  },
+  {
+   "id": "D1",
+   "case": "D1",
+   "group": "workflow",
+   "title": "Standard visit, the process most patients follow",
+   "staff": null,
+   "steps": [
+    {
+     "step": 1,
+     "staff": "FD-01",
+     "message": "Sandra Yip, IC ending 2040 walks in and is not on a panel. Please check the patient in.",
+     "notices": [],
+     "trace": [
+      {
+       "staff": "FD-01",
+       "type": "tool",
+       "name": "patient",
+       "input": {
+        "action": "find",
+        "name": "Sandra Yip",
+        "ic_last4": "2040"
+       },
+       "result": {
+        "tool": "patient",
+        "status": "ok",
+        "data": {
+         "patient_id": "PS-P-0032",
+         "name": "Sandra Yip",
+         "age": 72,
+         "date_of_birth": "1953-10-04",
+         "phone": "014-7136988",
+         "ic_last4": "2040",
+         "allergy_flags": [
+          "none recorded"
+         ],
+         "panel": "not on a panel"
+        },
+        "error": null,
+        "next_step": {
+         "text": null,
+         "person": null,
+         "say": null,
+         "basis": "PS-HS-04 · PS-P-0032, data at Tue 2 Jun 2026, 10:00"
+        }
+       },
+       "hook": {
+        "tool": "patient",
+        "input": {
+         "action": "find",
+         "name": "Sandra Yip",
+         "ic_last4": "2040"
+        },
+        "staff": "FD-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as FD-01, Siti Kasim, clinic assistant",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "patient is offered to Siti",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may patient find",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may open the summary view",
+           "clause": "PS-RP-03",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "patient": {
+          "id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "dob": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "registered": "2024-09-09",
+          "allergies": [],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         },
+         "verified": true,
+         "view": "summary",
+         "queue": null,
+         "bookings": [],
+         "last_visits": [
+          {
+           "date": "2025-09-23",
+           "complaint": "fever and cough"
+          },
+          {
+           "date": "2026-01-17",
+           "complaint": "fever with headache behind eyes"
+          },
+          {
+           "date": "2026-05-28",
+           "complaint": "high fever, body ache and cough"
+          }
+         ],
+         "notes": null
+        },
+        "post": [
+         "Desk view: contact, panel and allergy flags; no conditions, medicines or case notes (PS-RP-04)"
+        ],
+        "result": {
+         "tool": "patient",
+         "status": "ok",
+         "data": {
+          "patient_id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "age": 72,
+          "date_of_birth": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "allergy_flags": [
+           "none recorded"
+          ],
+          "panel": "not on a panel"
+         },
+         "error": null,
+         "next_step": {
+          "text": null,
+          "person": null,
+          "say": null,
+          "basis": "PS-HS-04 · PS-P-0032, data at Tue 2 Jun 2026, 10:00"
+         }
+        }
+       }
+      },
+      {
+       "staff": "FD-01",
+       "type": "tool",
+       "name": "schedule",
+       "input": {
+        "action": "check_in",
+        "name": "Sandra Yip",
+        "ic_last4": "2040",
+        "patient_id": "PS-P-0032"
+       },
+       "result": {
+        "tool": "schedule",
+        "status": "ok",
+        "data": {
+         "patient_id": "PS-P-0032",
+         "name": "Sandra Yip",
+         "kind": "walk-in",
+         "arrived": "10:00",
+         "ahead_in_queue": 0
+        },
+        "error": null,
+        "next_step": {
+         "text": "Sandra Yip is in the queue for Dr Sivakumar.",
+         "person": null,
+         "say": null,
+         "basis": "PS-HS-06 · QU-0015"
+        }
+       },
+       "hook": {
+        "tool": "schedule",
+        "input": {
+         "action": "check_in",
+         "name": "Sandra Yip",
+         "ic_last4": "2040",
+         "patient_id": "PS-P-0032"
+        },
+        "staff": "FD-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as FD-01, Siti Kasim, clinic assistant",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "schedule is offered to Siti",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may schedule check_in",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "entry": {
+          "id": "QU-0015",
+          "patient": "PS-P-0032",
+          "date": "2026-06-02",
+          "kind": "walk_in",
+          "arrived": 1780365600,
+          "appointment_time": null,
+          "status": "waiting",
+          "by": "FD-01"
+         },
+         "patient": {
+          "id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "dob": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "registered": "2024-09-09",
+          "allergies": [],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         },
+         "ahead": 0
+        },
+        "post": [],
+        "result": {
+         "tool": "schedule",
+         "status": "ok",
+         "data": {
+          "patient_id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "kind": "walk-in",
+          "arrived": "10:00",
+          "ahead_in_queue": 0
+         },
+         "error": null,
+         "next_step": {
+          "text": "Sandra Yip is in the queue for Dr Sivakumar.",
+          "person": null,
+          "say": null,
+          "basis": "PS-HS-06 · QU-0015"
+         }
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Sandra Yip is checked in as a walk-in at 10:00 and is first in the queue for Dr Sivakumar. Please tell Sandra Yip to wait to be called.\nBasis: PS-HS-06 · QU-0015"
+      }
+     ],
+     "reply": "Sandra Yip is checked in as a walk-in at 10:00 and is first in the queue for Dr Sivakumar. Please tell Sandra Yip to wait to be called.\nBasis: PS-HS-06 · QU-0015",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": false,
+      "first_action": false,
+      "outside_role": 0,
+      "calls": 2
+     },
+     "usage": {
+      "input_tokens": 6672,
+      "output_tokens": 278,
+      "cache_read_input_tokens": 20986,
+      "cache_creation_input_tokens": 10493
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "end_turn"
+    },
+    {
+     "step": 2,
+     "staff": "GP-01",
+     "message": "Call the next patient.",
+     "notices": [],
+     "trace": [
+      {
+       "staff": "GP-01",
+       "type": "tool",
+       "name": "schedule",
+       "input": {
+        "action": "call_next"
+       },
+       "result": {
+        "tool": "schedule",
+        "status": "ok",
+        "data": {
+         "called": "Sandra Yip (PS-P-0032, 72)",
+         "allergies": [
+          "none recorded"
+         ],
+         "still_waiting": 0
+        },
+        "error": null,
+        "next_step": {
+         "text": "Sandra Yip is with you now.",
+         "person": null,
+         "say": null,
+         "basis": "PS-HS-06 · QU-0015"
+        }
+       },
+       "hook": {
+        "tool": "schedule",
+        "input": {
+         "action": "call_next"
+        },
+        "staff": "GP-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as GP-01, Dr Sivakumar a/l Ramachandran, general practitioner and owner",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "schedule is offered to Dr Sivakumar",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Dr Sivakumar may schedule call_next",
+           "clause": "PS-RP-01",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "called": {
+          "id": "QU-0015",
+          "patient": "PS-P-0032",
+          "date": "2026-06-02",
+          "kind": "walk_in",
+          "arrived": 1780365600,
+          "appointment_time": null,
+          "status": "with_gp",
+          "by": "FD-01"
+         },
+         "patient": {
+          "id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "dob": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "registered": "2024-09-09",
+          "allergies": [],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         },
+         "still_waiting": 0
+        },
+        "post": [],
+        "result": {
+         "tool": "schedule",
+         "status": "ok",
+         "data": {
+          "called": "Sandra Yip (PS-P-0032, 72)",
+          "allergies": [
+           "none recorded"
+          ],
+          "still_waiting": 0
+         },
+         "error": null,
+         "next_step": {
+          "text": "Sandra Yip is with you now.",
+          "person": null,
+          "say": null,
+          "basis": "PS-HS-06 · QU-0015"
+         }
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Sandra Yip, 72, is with you now. Allergy flags: none recorded.\nBasis: PS-HS-06 · QU-0015"
+      }
+     ],
+     "reply": "Sandra Yip, 72, is with you now. Allergy flags: none recorded.\nBasis: PS-HS-06 · QU-0015",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 3789,
+      "output_tokens": 67,
+      "cache_read_input_tokens": 21174,
+      "cache_creation_input_tokens": 0
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "end_turn"
+    },
+    {
+     "step": 3,
+     "staff": "GP-01",
+     "message": "Sandra Yip, PS-P-0032: viral fever. Prescribe paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets.",
+     "notices": [],
+     "trace": [
+      {
+       "staff": "GP-01",
+       "type": "tool",
+       "name": "record_consultation",
+       "input": {
+        "action": "record",
+        "patient_id": "PS-P-0032",
+        "name": "Sandra Yip",
+        "diagnosis": "viral fever",
+        "prescription": [
+         {
+          "medicine": "paracetamol",
+          "dose": 1000,
+          "dose_unit": "mg",
+          "times_per_day": 4,
+          "as_needed": true,
+          "days": 3,
+          "quantity": 12
+         }
+        ]
+       },
+       "result": {
+        "tool": "record_consultation",
+        "status": "ok",
+        "data": {
+         "consultation_id": "CN-0012",
+         "patient": "Sandra Yip (PS-P-0032)",
+         "diagnosis": "viral fever",
+         "services": [
+          "GP consultation"
+         ],
+         "prescription": [
+          {
+           "medicine": "Paracetamol 500 mg",
+           "dose": "1000 mg",
+           "times_per_day": 4,
+           "as_needed": true,
+           "days": 3,
+           "quantity": 12,
+           "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+          }
+         ],
+         "mc": "none",
+         "referral": "none",
+         "return": "none",
+         "sent_to": [
+          "Ms Yong: Check and dispense the prescription."
+         ]
+        },
+        "error": null,
+        "next_step": {
+         "text": "Ms Yong checks and dispenses the prescription; Siti Kasim bills after dispensing.",
+         "person": null,
+         "say": null,
+         "basis": "PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:10"
+        }
+       },
+       "hook": {
+        "tool": "record_consultation",
+        "input": {
+         "action": "record",
+         "patient_id": "PS-P-0032",
+         "name": "Sandra Yip",
+         "diagnosis": "viral fever",
+         "prescription": [
+          {
+           "medicine": "paracetamol",
+           "dose": 1000,
+           "dose_unit": "mg",
+           "times_per_day": 4,
+           "as_needed": true,
+           "days": 3,
+           "quantity": 12
+          }
+         ]
+        },
+        "staff": "GP-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as GP-01, Dr Sivakumar a/l Ramachandran, general practitioner and owner",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "record_consultation is offered to Dr Sivakumar",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Dr Sivakumar may record_consultation record",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "consultation": {
+          "id": "CN-0012",
+          "patient": "PS-P-0032",
+          "date": "2026-06-02",
+          "at": 1780366200,
+          "by": "GP-01",
+          "diagnosis": "viral fever",
+          "case_note": "viral fever.",
+          "services": [
+           "gp-consultation"
+          ],
+          "prescription": [
+           {
+            "medicine": "paracetamol-500-mg",
+            "dose": 1000,
+            "dose_unit": "mg",
+            "times_per_day": 4,
+            "days": 3,
+            "quantity": 12,
+            "as_needed": true,
+            "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+           }
+          ],
+          "return_in_days": null,
+          "mc": null,
+          "referral": null,
+          "amended": []
+         },
+         "patient": {
+          "id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "dob": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "registered": "2024-09-09",
+          "allergies": [],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         },
+         "tasks": [
+          {
+           "id": "TK-0015",
+           "kind": "check",
+           "to": "PH-01",
+           "patient": "PS-P-0032",
+           "consultation": "CN-0012",
+           "created": 1780366200,
+           "status": "open",
+           "text": "Check and dispense the prescription."
+          }
+         ]
+        },
+        "post": [
+         "Tasks and notices written in code for the next people (PS-RP-06)"
+        ],
+        "result": {
+         "tool": "record_consultation",
+         "status": "ok",
+         "data": {
+          "consultation_id": "CN-0012",
+          "patient": "Sandra Yip (PS-P-0032)",
+          "diagnosis": "viral fever",
+          "services": [
+           "GP consultation"
+          ],
+          "prescription": [
+           {
+            "medicine": "Paracetamol 500 mg",
+            "dose": "1000 mg",
+            "times_per_day": 4,
+            "as_needed": true,
+            "days": 3,
+            "quantity": 12,
+            "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+           }
+          ],
+          "mc": "none",
+          "referral": "none",
+          "return": "none",
+          "sent_to": [
+           "Ms Yong: Check and dispense the prescription."
+          ]
+         },
+         "error": null,
+         "next_step": {
+          "text": "Ms Yong checks and dispenses the prescription; Siti Kasim bills after dispensing.",
+          "person": null,
+          "say": null,
+          "basis": "PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:10"
+         }
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply sent back: keep each sentence short, under 30 words."
+      },
+      {
+       "type": "note",
+       "text": "Reply sent back: keep it to at most two short sentences: what was done or found, then the next step."
+      },
+      {
+       "type": "reply",
+       "text": "Sandra Yip's consultation is recorded as CN-0012 for viral fever, with paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets. Ms Yong checks and dispenses it next, then Siti Kasim bills.\nBasis: PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:10"
+      }
+     ],
+     "reply": "Sandra Yip's consultation is recorded as CN-0012 for viral fever, with paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets. Ms Yong checks and dispenses it next, then Siti Kasim bills.\nBasis: PS-AC-07 · CN-0012, Tue 2 Jun 2026, 10:10",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 9319,
+      "output_tokens": 492,
+      "cache_read_input_tokens": 42348,
+      "cache_creation_input_tokens": 0
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 2,
+     "stoppedBy": "end_turn"
+    },
+    {
+     "step": 4,
+     "staff": "PH-01",
+     "message": "Check and dispense the prescription for Sandra Yip, PS-P-0032.",
+     "notices": [
+      "Dr Sivakumar has prescribed Paracetamol 500 mg 1000 mg 4 times a day for 3 days (12) for Sandra Yip (PS-P-0032). Please check and dispense it exactly as written."
+     ],
+     "trace": [
+      {
+       "staff": "PH-01",
+       "type": "tool",
+       "name": "dispense",
+       "input": {
+        "action": "check_and_dispense",
+        "patient_id": "PS-P-0032"
+       },
+       "result": {
+        "tool": "dispense",
+        "status": "ok",
+        "data": {
+         "patient": "Sandra Yip (PS-P-0032, 72)",
+         "allergies": [
+          "none recorded"
+         ],
+         "prescription": [
+          {
+           "medicine": "Paracetamol 500 mg",
+           "dose": "1000 mg",
+           "times_per_day": 4,
+           "as_needed": true,
+           "days": 3,
+           "quantity": 12,
+           "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+          }
+         ],
+         "check": "passed",
+         "failed": [],
+         "dispensed": [
+          {
+           "medicine": "Paracetamol 500 mg",
+           "dose": "1000 mg",
+           "times_per_day": 4,
+           "as_needed": true,
+           "days": 3,
+           "quantity": 12,
+           "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+          }
+         ],
+         "counsel": [
+          "Paracetamol 500 mg: Take 1000 mg 4 times a day when needed for 3 days."
+         ]
+        },
+        "error": null,
+        "next_step": {
+         "text": "Counsel the patient on each medicine; Siti Kasim prepares the bill.",
+         "person": "FD-01",
+         "say": null,
+         "basis": "PS-AC-04 · CK-0007 · dispensed 10:15"
+        }
+       },
+       "hook": {
+        "tool": "dispense",
+        "input": {
+         "action": "check_and_dispense",
+         "patient_id": "PS-P-0032"
+        },
+        "staff": "PH-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as PH-01, Ms Yong, pharmacist",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "dispense is offered to Ms Yong",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Ms Yong may dispense check_and_dispense",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "check": {
+          "id": "CK-0007",
+          "consultation": "CN-0012",
+          "patient": "PS-P-0032",
+          "by": "PH-01",
+          "at": 1780366500,
+          "result": "passed",
+          "failed": [],
+          "version": 0
+         },
+         "patient": {
+          "id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "dob": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "registered": "2024-09-09",
+          "allergies": [],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         },
+         "prescription": [
+          {
+           "medicine": "paracetamol-500-mg",
+           "dose": 1000,
+           "dose_unit": "mg",
+           "times_per_day": 4,
+           "days": 3,
+           "quantity": 12,
+           "as_needed": true,
+           "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+          }
+         ],
+         "held": false,
+         "dispensed": {
+          "consultation": "CN-0012",
+          "patient": "PS-P-0032",
+          "by": "PH-01",
+          "at": 1780366500,
+          "lines": [
+           {
+            "medicine": "paracetamol-500-mg",
+            "dose": 1000,
+            "dose_unit": "mg",
+            "times_per_day": 4,
+            "days": 3,
+            "quantity": 12,
+            "as_needed": true,
+            "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+           }
+          ],
+          "check": "CK-0007"
+         },
+         "bill_task": {
+          "id": "TK-0016",
+          "kind": "bill",
+          "to": "FD-01",
+          "patient": "PS-P-0032",
+          "consultation": "CN-0012",
+          "created": 1780366500,
+          "status": "open",
+          "text": "Prepare the bill."
+         }
+        },
+        "post": [
+         "Four checks passed (or kept by Dr Sivakumar); stock reduced; Siti Kasim's bill task created (PS-AC-04)"
+        ],
+        "result": {
+         "tool": "dispense",
+         "status": "ok",
+         "data": {
+          "patient": "Sandra Yip (PS-P-0032, 72)",
+          "allergies": [
+           "none recorded"
+          ],
+          "prescription": [
+           {
+            "medicine": "Paracetamol 500 mg",
+            "dose": "1000 mg",
+            "times_per_day": 4,
+            "as_needed": true,
+            "days": 3,
+            "quantity": 12,
+            "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+           }
+          ],
+          "check": "passed",
+          "failed": [],
+          "dispensed": [
+           {
+            "medicine": "Paracetamol 500 mg",
+            "dose": "1000 mg",
+            "times_per_day": 4,
+            "as_needed": true,
+            "days": 3,
+            "quantity": 12,
+            "instructions": "Take 1000 mg 4 times a day when needed for 3 days."
+           }
+          ],
+          "counsel": [
+           "Paracetamol 500 mg: Take 1000 mg 4 times a day when needed for 3 days."
+          ]
+         },
+         "error": null,
+         "next_step": {
+          "text": "Counsel the patient on each medicine; Siti Kasim prepares the bill.",
+          "person": "FD-01",
+          "say": null,
+          "basis": "PS-AC-04 · CK-0007 · dispensed 10:15"
+         }
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Sandra Yip's Paracetamol 500 mg is dispensed: 1000 mg four times a day when needed for 3 days, quantity 12. Please counsel the patient on this medicine before handing it over; Siti Kasim will prepare the bill next.\nBasis: PS-AC-04 · CK-0007 · dispensed 10:15"
+      }
+     ],
+     "reply": "Sandra Yip's Paracetamol 500 mg is dispensed: 1000 mg four times a day when needed for 3 days, quantity 12. Please counsel the patient on this medicine before handing it over; Siti Kasim will prepare the bill next.\nBasis: PS-AC-04 · CK-0007 · dispensed 10:15",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 4311,
+      "output_tokens": 158,
+      "cache_read_input_tokens": 13248,
+      "cache_creation_input_tokens": 0
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "end_turn"
+    },
+    {
+     "step": 5,
+     "staff": "FD-01",
+     "message": "Prepare the bill for Sandra Yip, IC ending 2040.",
+     "notices": [
+      "Ms Yong has dispensed Sandra Yip's medicines (PS-P-0032). The bill is ready to prepare."
+     ],
+     "trace": [
+      {
+       "staff": "FD-01",
+       "type": "tool",
+       "name": "billing",
+       "input": {
+        "action": "prepare_bill",
+        "name": "Sandra Yip",
+        "ic_last4": "2040",
+        "patient_id": "PS-P-0032"
+       },
+       "result": {
+        "tool": "billing",
+        "status": "ok",
+        "data": {
+         "bill_id": "BL-0004",
+         "patient": "Sandra Yip (PS-P-0032)",
+         "lines": [
+          {
+           "item": "GP consultation",
+           "qty": 1,
+           "unit_price": "RM 35.00",
+           "amount": "RM 35.00"
+          },
+          {
+           "item": "Paracetamol 500 mg",
+           "qty": 12,
+           "unit_price": "RM 0.20",
+           "amount": "RM 2.40"
+          }
+         ],
+         "total": "RM 37.40",
+         "patient_share": "RM 37.40",
+         "status": "unpaid"
+        },
+        "error": null,
+        "next_step": {
+         "text": "Collect RM 37.40 from Sandra Yip and record it.",
+         "person": null,
+         "say": null,
+         "basis": "PS-PL-02 · BL-0004"
+        }
+       },
+       "hook": {
+        "tool": "billing",
+        "input": {
+         "action": "prepare_bill",
+         "name": "Sandra Yip",
+         "ic_last4": "2040",
+         "patient_id": "PS-P-0032"
+        },
+        "staff": "FD-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as FD-01, Siti Kasim, clinic assistant",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "billing is offered to Siti",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may billing prepare_bill",
+           "clause": "PS-RP-05",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "bill": {
+          "id": "BL-0004",
+          "patient": "PS-P-0032",
+          "consultation": "CN-0012",
+          "date": "2026-06-02",
+          "by": "FD-01",
+          "at": 1780366800,
+          "panel": null,
+          "lines": [
+           {
+            "item": "gp-consultation",
+            "name": "GP consultation",
+            "qty": 1,
+            "unit": 3500,
+            "amount": 3500,
+            "covered": null
+           },
+           {
+            "item": "paracetamol-500-mg",
+            "name": "Paracetamol 500 mg",
+            "qty": 12,
+            "unit": 20,
+            "amount": 240,
+            "covered": null
+           }
+          ],
+          "total": 3740,
+          "panel_share": 0,
+          "patient_share": 3740,
+          "status": "unpaid"
+         },
+         "patient": {
+          "id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "dob": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "registered": "2024-09-09",
+          "allergies": [],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         }
+        },
+        "post": [
+         "Priced from the Price List (PS-PL-01, PS-PL-02)"
+        ],
+        "result": {
+         "tool": "billing",
+         "status": "ok",
+         "data": {
+          "bill_id": "BL-0004",
+          "patient": "Sandra Yip (PS-P-0032)",
+          "lines": [
+           {
+            "item": "GP consultation",
+            "qty": 1,
+            "unit_price": "RM 35.00",
+            "amount": "RM 35.00"
+           },
+           {
+            "item": "Paracetamol 500 mg",
+            "qty": 12,
+            "unit_price": "RM 0.20",
+            "amount": "RM 2.40"
+           }
+          ],
+          "total": "RM 37.40",
+          "patient_share": "RM 37.40",
+          "status": "unpaid"
+         },
+         "error": null,
+         "next_step": {
+          "text": "Collect RM 37.40 from Sandra Yip and record it.",
+          "person": null,
+          "say": null,
+          "basis": "PS-PL-02 · BL-0004"
+         }
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Here it is: Sandra Yip's bill BL-0004 is RM 37.40 (GP consultation RM 35.00, Paracetamol 500 mg ×12 RM 2.40), unpaid. Please collect RM 37.40 from Sandra Yip and record the payment.\nBasis: PS-PL-02 · BL-0004"
+      }
+     ],
+     "reply": "Here it is: Sandra Yip's bill BL-0004 is RM 37.40 (GP consultation RM 35.00, Paracetamol 500 mg ×12 RM 2.40), unpaid. Please collect RM 37.40 from Sandra Yip and record the payment.\nBasis: PS-PL-02 · BL-0004",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 4423,
+      "output_tokens": 218,
+      "cache_read_input_tokens": 20986,
+      "cache_creation_input_tokens": 0
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "end_turn"
+    },
+    {
+     "step": 6,
+     "staff": "FD-01",
+     "message": "Sandra Yip, IC ending 2040 paid RM 37.40 by card. Record it.",
+     "notices": [
+      "Ms Yong has dispensed Sandra Yip's medicines (PS-P-0032). The bill is ready to prepare."
+     ],
+     "trace": [
+      {
+       "staff": "FD-01",
+       "type": "tool",
+       "name": "billing",
+       "input": {
+        "action": "record_payment",
+        "name": "Sandra Yip",
+        "ic_last4": "2040",
+        "amount_rm": 37.4,
+        "method": "card",
+        "patient_id": "PS-P-0032"
+       },
+       "result": {
+        "tool": "billing",
+        "status": "ok",
+        "data": {
+         "receipt": "RC-0003",
+         "bill_id": "BL-0004",
+         "patient": "Sandra Yip (PS-P-0032)",
+         "amount": "RM 37.40",
+         "method": "card",
+         "tendered": null,
+         "change_due": "RM 0.00",
+         "visit": "closed"
+        },
+        "error": null,
+        "next_step": {
+         "text": "Give the receipt.",
+         "person": null,
+         "say": null,
+         "basis": "PS-PL-04 · RC-0003, 10:25"
+        }
+       },
+       "hook": {
+        "tool": "billing",
+        "input": {
+         "action": "record_payment",
+         "name": "Sandra Yip",
+         "ic_last4": "2040",
+         "amount_rm": 37.4,
+         "method": "card",
+         "patient_id": "PS-P-0032"
+        },
+        "staff": "FD-01",
+        "pre": {
+         "verdict": "allow",
+         "checks": [
+          {
+           "check": "Signed in as FD-01, Siti Kasim, clinic assistant",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "billing is offered to Siti",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may billing record_payment",
+           "clause": "PS-RP-05",
+           "pass": true
+          },
+          {
+           "check": "Patient identification given",
+           "clause": "PS-HS-04",
+           "pass": true
+          }
+         ]
+        },
+        "tool_ran": true,
+        "raw": {
+         "payment": {
+          "id": "RC-0003",
+          "bill": "BL-0004",
+          "patient": "PS-P-0032",
+          "amount": 3740,
+          "method": "card",
+          "tendered": null,
+          "change": 0,
+          "by": "FD-01",
+          "at": 1780367100
+         },
+         "bill": {
+          "id": "BL-0004",
+          "patient": "PS-P-0032",
+          "consultation": "CN-0012",
+          "date": "2026-06-02",
+          "by": "FD-01",
+          "at": 1780366800,
+          "panel": null,
+          "lines": [
+           {
+            "item": "gp-consultation",
+            "name": "GP consultation",
+            "qty": 1,
+            "unit": 3500,
+            "amount": 3500,
+            "covered": null
+           },
+           {
+            "item": "paracetamol-500-mg",
+            "name": "Paracetamol 500 mg",
+            "qty": 12,
+            "unit": 20,
+            "amount": 240,
+            "covered": null
+           }
+          ],
+          "total": 3740,
+          "panel_share": 0,
+          "patient_share": 3740,
+          "status": "paid"
+         },
+         "patient": {
+          "id": "PS-P-0032",
+          "name": "Sandra Yip",
+          "dob": "1953-10-04",
+          "phone": "014-7136988",
+          "ic_last4": "2040",
+          "registered": "2024-09-09",
+          "allergies": [],
+          "conditions": [],
+          "current_medicines": [],
+          "panel": null
+         }
+        },
+        "post": [],
+        "result": {
+         "tool": "billing",
+         "status": "ok",
+         "data": {
+          "receipt": "RC-0003",
+          "bill_id": "BL-0004",
+          "patient": "Sandra Yip (PS-P-0032)",
+          "amount": "RM 37.40",
+          "method": "card",
+          "tendered": null,
+          "change_due": "RM 0.00",
+          "visit": "closed"
+         },
+         "error": null,
+         "next_step": {
+          "text": "Give the receipt.",
+          "person": null,
+          "say": null,
+          "basis": "PS-PL-04 · RC-0003, 10:25"
+         }
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply sent back: use people's first names or roles instead of he, she, him, her, his or hers."
+      },
+      {
+       "type": "note",
+       "text": "Reply sent back: use people's first names or roles instead of he, she, him, her, his or hers."
+      },
+      {
+       "type": "reply",
+       "text": "Sandra Yip's card payment of RM 37.40 is recorded under receipt RC-0003, and Sandra's visit is now closed. Please give Sandra the receipt.\nBasis: PS-PL-04 · RC-0003, 10:25"
+      }
+     ],
+     "reply": "Sandra Yip's card payment of RM 37.40 is recorded under receipt RC-0003, and Sandra's visit is now closed. Please give Sandra the receipt.\nBasis: PS-PL-04 · RC-0003, 10:25",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 9482,
+      "output_tokens": 512,
+      "cache_read_input_tokens": 41972,
+      "cache_creation_input_tokens": 0
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 2,
+     "stoppedBy": "end_turn"
+    }
+   ],
+   "breaches": [],
+   "pass": true,
+   "usage": {
+    "input_tokens": 37996,
+    "output_tokens": 1725,
+    "cache_read_input_tokens": 160714,
+    "cache_creation_input_tokens": 10493
+   }
+  }
+ ]
+}

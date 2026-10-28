@@ -1,0 +1,19 @@
+{
+  "name": "polyclinic-sivakumar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Polyclinic Sivakumar Clinic Desk: one agent for the front desk, the GP and the pharmacist. MCP server, PreToolUse and PostToolUse hooks, tool tests, benchmark",
+  "type": "commonjs",
+  "scripts": {
+    "policies": "python build_policies.py",
+    "data": "python generate_data.py",
+    "cases": "python benchmark/build_cases.py",
+    "mcp": "node mcp_server.mjs",
+    "test:tools": "node benchmark/test_tools.js",
+    "test:mcp": "node benchmark/test_mcp.mjs",
+    "benchmark": "node benchmark/run_benchmark.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.0"
+  }
+}

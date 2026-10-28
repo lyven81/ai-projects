@@ -1,0 +1,142 @@
+{
+ "PS-HS-01": {
+  "title": "Opening hours",
+  "resource": "clinic://hours-and-services"
+ },
+ "PS-HS-02": {
+  "title": "Public holidays",
+  "resource": "clinic://hours-and-services"
+ },
+ "PS-HS-03": {
+  "title": "Services offered",
+  "resource": "clinic://hours-and-services"
+ },
+ "PS-HS-04": {
+  "title": "Identify the patient first",
+  "resource": "clinic://hours-and-services"
+ },
+ "PS-HS-05": {
+  "title": "Booking, changing and cancelling",
+  "resource": "clinic://hours-and-services"
+ },
+ "PS-HS-06": {
+  "title": "Check-in and queue order",
+  "resource": "clinic://hours-and-services"
+ },
+ "PS-HS-07": {
+  "title": "Registration",
+  "resource": "clinic://hours-and-services"
+ },
+ "PS-PL-01": {
+  "title": "Services",
+  "resource": "reference://price-list"
+ },
+ "PS-PL-02": {
+  "title": "Medicines, per unit dispensed",
+  "resource": "reference://price-list"
+ },
+ "PS-PL-03": {
+  "title": "A missing price stops the bill",
+  "resource": "reference://price-list"
+ },
+ "PS-PL-04": {
+  "title": "Payment methods",
+  "resource": "reference://price-list"
+ },
+ "PS-PL-05": {
+  "title": "End-of-day reconcile",
+  "resource": "reference://price-list"
+ },
+ "PS-PN-01": {
+  "title": "The two sample panels",
+  "resource": "policy://panel"
+ },
+ "PS-PN-02": {
+  "title": "Verify the patient's ID before a panel bill",
+  "resource": "policy://panel"
+ },
+ "PS-PN-03": {
+  "title": "How a panel bill is split",
+  "resource": "policy://panel"
+ },
+ "PS-PN-04": {
+  "title": "The panel share awaits claim",
+  "resource": "policy://panel"
+ },
+ "PS-PN-05": {
+  "title": "Outside the schedule's period",
+  "resource": "policy://panel"
+ },
+ "PS-PN-06": {
+  "title": "Every panel bill is filed and acknowledged",
+  "resource": "policy://panel"
+ },
+ "PS-AC-01": {
+  "title": "The formulary",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-02": {
+  "title": "What Ms Yong checks before dispensing",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-03": {
+  "title": "A failed check or a concern goes to the GP",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-04": {
+  "title": "Dispensing and counselling",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-05": {
+  "title": "Medicine use questions at the desk",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-06": {
+  "title": "Bill after dispensing",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-07": {
+  "title": "Decided by the GP during the consultation only",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-08": {
+  "title": "Copied exactly",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-09": {
+  "title": "Signature, serial number and issue",
+  "resource": "policy://after-consultation"
+ },
+ "PS-AC-10": {
+  "title": "A missing template stops the document",
+  "resource": "policy://after-consultation"
+ },
+ "PS-RP-01": {
+  "title": "Staff and identity",
+  "resource": "policy://roles-and-privacy"
+ },
+ "PS-RP-02": {
+  "title": "Case notes are for the GP only",
+  "resource": "policy://roles-and-privacy"
+ },
+ "PS-RP-03": {
+  "title": "What the pharmacist sees",
+  "resource": "policy://roles-and-privacy"
+ },
+ "PS-RP-04": {
+  "title": "What the front desk sees",
+  "resource": "policy://roles-and-privacy"
+ },
+ "PS-RP-05": {
+  "title": "Money",
+  "resource": "policy://roles-and-privacy"
+ },
+ "PS-RP-06": {
+  "title": "The fixed handover lists",
+  "resource": "policy://roles-and-privacy"
+ },
+ "PS-RP-07": {
+  "title": "No clinical advice; the no-rule reply",
+  "resource": "policy://roles-and-privacy"
+ }
+}

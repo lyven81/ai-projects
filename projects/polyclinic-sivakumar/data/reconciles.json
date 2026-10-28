@@ -1,0 +1,20 @@
+[
+ {
+  "id": "RCN-2026-05-31",
+  "date": "2026-05-31",
+  "by": "FD-01",
+  "at": 1780221900,
+  "by_method": {
+   "cash": 18433,
+   "card": 0,
+   "e-wallet": 0
+  },
+  "expected_cash": 18433,
+  "counted_cash": 18333,
+  "difference": -100,
+  "bills": [
+   "IV-0347",
+   "IV-0509"
+  ]
+ }
+]

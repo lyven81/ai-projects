@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 9**
+**Total published AI projects: 10**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 10 | 2026-10-28 | Polyclinic Sivakumar Clinic Desk | [page](https://lyven81.github.io/ai-projects/polyclinic-sivakumar.html) |
 | 9 | 2026-10-23 | DF Auto Parts Distributors | [page](https://lyven81.github.io/ai-projects/df-auto-parts-distributors.html) |
 | 8 | 2026-10-23 | Sang Kancil Specialist Clinic | [page](https://lyven81.github.io/ai-projects/sang-kancil-specialist-clinic.html) |
 | 7 | 2026-10-21 | Happy Mart Customer Desk | [page](https://lyven81.github.io/ai-projects/happy-mart-customer-desk.html) |
@@ -32,6 +33,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-21
 
 ### Business workflow
+
+#### Polyclinic Sivakumar Clinic Desk
+- **What it does:** A clinic desk for a one-doctor GP clinic where the clinic assistant, the GP and the pharmacist each see only their own work, and code carries each visit from one person to the next.
+- **How it's built:** One Claude agent with seven tools over an MCP server; each person gets only their own actions and prompt, and shared hooks and the back end check every call, run the pharmacist's four checks and route every hand-off in code.
+- **Problem solved:** Each visit waits on three people in turn; the desk keeps each person on their own work, holds a prescription that fails a check, and sends every query or patient question to the person who decides it.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/polyclinic-sivakumar.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/clinic-desk.html)
+- **Rebuilt:** 2026-10-28
 
 #### DF Auto Parts Distributors
 - **What it does:** A staff desk for an automotive spare parts distributor where a salesperson starts the work, the manager who owns the decision receives it with the data to decide, and code or a named person carries it out.

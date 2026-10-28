@@ -1,0 +1,14 @@
+[
+ {
+  "id": "OR-0001",
+  "date": "2026-05-31",
+  "kind": "cash_difference",
+  "amount": -100,
+  "reconcile": "RCN-2026-05-31",
+  "text": "Cash counted RM 183.33 against RM 184.33 recorded: RM 1.00 short.",
+  "bills": [
+   "IV-0347",
+   "IV-0509"
+  ]
+ }
+]

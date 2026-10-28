@@ -1,0 +1,3761 @@
+[
+ {
+  "id": "CS-0001",
+  "patient": "PS-P-0001",
+  "date": "2025-05-30",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0002",
+  "patient": "PS-P-0001",
+  "date": "2025-06-06",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0003",
+  "patient": "PS-P-0001",
+  "date": "2025-07-03",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0004",
+  "patient": "PS-P-0001",
+  "date": "2025-07-27",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0005",
+  "patient": "PS-P-0001",
+  "date": "2025-08-03",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0006",
+  "patient": "PS-P-0001",
+  "date": "2025-08-17",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0007",
+  "patient": "PS-P-0001",
+  "date": "2025-08-25",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0008",
+  "patient": "PS-P-0001",
+  "date": "2025-09-15",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0009",
+  "patient": "PS-P-0001",
+  "date": "2025-10-14",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0010",
+  "patient": "PS-P-0001",
+  "date": "2025-10-29",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0011",
+  "patient": "PS-P-0001",
+  "date": "2026-02-01",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0012",
+  "patient": "PS-P-0001",
+  "date": "2026-02-08",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0013",
+  "patient": "PS-P-0001",
+  "date": "2026-02-19",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0014",
+  "patient": "PS-P-0001",
+  "date": "2026-05-18",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0015",
+  "patient": "PS-P-0002",
+  "date": "2025-04-13",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0016",
+  "patient": "PS-P-0002",
+  "date": "2025-04-25",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0017",
+  "patient": "PS-P-0002",
+  "date": "2025-05-23",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0018",
+  "patient": "PS-P-0002",
+  "date": "2025-06-28",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0019",
+  "patient": "PS-P-0002",
+  "date": "2025-10-01",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0020",
+  "patient": "PS-P-0002",
+  "date": "2025-10-04",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0021",
+  "patient": "PS-P-0002",
+  "date": "2025-10-23",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0022",
+  "patient": "PS-P-0002",
+  "date": "2025-10-27",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0023",
+  "patient": "PS-P-0002",
+  "date": "2025-11-02",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0024",
+  "patient": "PS-P-0002",
+  "date": "2025-11-04",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0025",
+  "patient": "PS-P-0002",
+  "date": "2025-12-01",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0026",
+  "patient": "PS-P-0002",
+  "date": "2026-02-23",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0027",
+  "patient": "PS-P-0002",
+  "date": "2026-04-12",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0028",
+  "patient": "PS-P-0002",
+  "date": "2026-04-13",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0029",
+  "patient": "PS-P-0003",
+  "date": "2025-04-19",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0030",
+  "patient": "PS-P-0003",
+  "date": "2025-05-01",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0031",
+  "patient": "PS-P-0003",
+  "date": "2025-06-28",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0032",
+  "patient": "PS-P-0003",
+  "date": "2025-11-08",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0033",
+  "patient": "PS-P-0003",
+  "date": "2025-12-03",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0034",
+  "patient": "PS-P-0003",
+  "date": "2025-12-14",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0035",
+  "patient": "PS-P-0003",
+  "date": "2025-12-26",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0036",
+  "patient": "PS-P-0003",
+  "date": "2026-01-09",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0037",
+  "patient": "PS-P-0003",
+  "date": "2026-01-09",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0038",
+  "patient": "PS-P-0003",
+  "date": "2026-02-04",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0039",
+  "patient": "PS-P-0003",
+  "date": "2026-02-06",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0040",
+  "patient": "PS-P-0003",
+  "date": "2026-02-22",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0041",
+  "patient": "PS-P-0003",
+  "date": "2026-04-26",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0042",
+  "patient": "PS-P-0003",
+  "date": "2026-05-19",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0043",
+  "patient": "PS-P-0004",
+  "date": "2025-05-07",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0044",
+  "patient": "PS-P-0004",
+  "date": "2025-05-11",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0045",
+  "patient": "PS-P-0004",
+  "date": "2025-10-07",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0046",
+  "patient": "PS-P-0004",
+  "date": "2025-10-11",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0047",
+  "patient": "PS-P-0004",
+  "date": "2025-10-28",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0048",
+  "patient": "PS-P-0004",
+  "date": "2025-11-18",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0049",
+  "patient": "PS-P-0004",
+  "date": "2025-11-18",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0050",
+  "patient": "PS-P-0004",
+  "date": "2025-12-10",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0051",
+  "patient": "PS-P-0004",
+  "date": "2025-12-15",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0052",
+  "patient": "PS-P-0004",
+  "date": "2025-12-15",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0053",
+  "patient": "PS-P-0004",
+  "date": "2026-01-09",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0054",
+  "patient": "PS-P-0004",
+  "date": "2026-01-18",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0055",
+  "patient": "PS-P-0004",
+  "date": "2026-01-22",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0056",
+  "patient": "PS-P-0004",
+  "date": "2026-02-12",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0057",
+  "patient": "PS-P-0004",
+  "date": "2026-02-27",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0058",
+  "patient": "PS-P-0004",
+  "date": "2026-05-06",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0059",
+  "patient": "PS-P-0005",
+  "date": "2025-06-06",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0060",
+  "patient": "PS-P-0005",
+  "date": "2025-06-14",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0061",
+  "patient": "PS-P-0006",
+  "date": "2025-10-03",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0062",
+  "patient": "PS-P-0006",
+  "date": "2025-11-03",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0063",
+  "patient": "PS-P-0006",
+  "date": "2025-12-04",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0064",
+  "patient": "PS-P-0006",
+  "date": "2025-12-12",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0065",
+  "patient": "PS-P-0006",
+  "date": "2025-12-18",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0066",
+  "patient": "PS-P-0007",
+  "date": "2025-06-28",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0067",
+  "patient": "PS-P-0007",
+  "date": "2025-08-08",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0068",
+  "patient": "PS-P-0008",
+  "date": "2025-05-27",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0069",
+  "patient": "PS-P-0008",
+  "date": "2025-11-03",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0070",
+  "patient": "PS-P-0008",
+  "date": "2026-03-13",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0071",
+  "patient": "PS-P-0008",
+  "date": "2026-03-19",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0072",
+  "patient": "PS-P-0009",
+  "date": "2025-08-12",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0073",
+  "patient": "PS-P-0009",
+  "date": "2025-11-17",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0074",
+  "patient": "PS-P-0009",
+  "date": "2026-01-30",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0075",
+  "patient": "PS-P-0009",
+  "date": "2026-04-07",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0076",
+  "patient": "PS-P-0010",
+  "date": "2025-05-13",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0077",
+  "patient": "PS-P-0010",
+  "date": "2025-06-21",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0078",
+  "patient": "PS-P-0010",
+  "date": "2025-06-21",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0079",
+  "patient": "PS-P-0010",
+  "date": "2025-10-11",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0080",
+  "patient": "PS-P-0010",
+  "date": "2025-11-24",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0081",
+  "patient": "PS-P-0011",
+  "date": "2025-04-30",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0082",
+  "patient": "PS-P-0011",
+  "date": "2026-02-01",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0083",
+  "patient": "PS-P-0012",
+  "date": "2025-06-01",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0084",
+  "patient": "PS-P-0012",
+  "date": "2025-09-22",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0085",
+  "patient": "PS-P-0012",
+  "date": "2025-10-16",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0086",
+  "patient": "PS-P-0012",
+  "date": "2026-04-24",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0087",
+  "patient": "PS-P-0013",
+  "date": "2025-08-20",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0088",
+  "patient": "PS-P-0013",
+  "date": "2025-11-24",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0089",
+  "patient": "PS-P-0014",
+  "date": "2025-06-20",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0090",
+  "patient": "PS-P-0014",
+  "date": "2026-04-20",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0091",
+  "patient": "PS-P-0014",
+  "date": "2026-05-06",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0092",
+  "patient": "PS-P-0015",
+  "date": "2025-06-02",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0093",
+  "patient": "PS-P-0015",
+  "date": "2025-08-10",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0094",
+  "patient": "PS-P-0015",
+  "date": "2025-08-11",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0095",
+  "patient": "PS-P-0015",
+  "date": "2025-10-24",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0096",
+  "patient": "PS-P-0015",
+  "date": "2025-11-05",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0097",
+  "patient": "PS-P-0015",
+  "date": "2025-12-22",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0098",
+  "patient": "PS-P-0015",
+  "date": "2026-04-22",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0099",
+  "patient": "PS-P-0016",
+  "date": "2025-04-22",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0100",
+  "patient": "PS-P-0016",
+  "date": "2025-06-18",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0101",
+  "patient": "PS-P-0016",
+  "date": "2025-07-12",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0102",
+  "patient": "PS-P-0016",
+  "date": "2025-07-29",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0103",
+  "patient": "PS-P-0017",
+  "date": "2025-05-28",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0104",
+  "patient": "PS-P-0017",
+  "date": "2025-07-23",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0105",
+  "patient": "PS-P-0017",
+  "date": "2025-10-16",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0106",
+  "patient": "PS-P-0017",
+  "date": "2026-01-06",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0107",
+  "patient": "PS-P-0017",
+  "date": "2026-01-30",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0108",
+  "patient": "PS-P-0018",
+  "date": "2025-05-24",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0109",
+  "patient": "PS-P-0018",
+  "date": "2025-07-24",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0110",
+  "patient": "PS-P-0018",
+  "date": "2025-08-24",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0111",
+  "patient": "PS-P-0019",
+  "date": "2025-05-01",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0112",
+  "patient": "PS-P-0019",
+  "date": "2025-05-09",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0113",
+  "patient": "PS-P-0019",
+  "date": "2025-05-20",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0114",
+  "patient": "PS-P-0019",
+  "date": "2025-08-07",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0115",
+  "patient": "PS-P-0019",
+  "date": "2025-12-12",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0116",
+  "patient": "PS-P-0019",
+  "date": "2026-03-24",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0117",
+  "patient": "PS-P-0019",
+  "date": "2026-05-09",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0118",
+  "patient": "PS-P-0020",
+  "date": "2025-08-11",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0119",
+  "patient": "PS-P-0020",
+  "date": "2025-09-02",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0120",
+  "patient": "PS-P-0020",
+  "date": "2025-11-09",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0121",
+  "patient": "PS-P-0020",
+  "date": "2025-11-25",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0122",
+  "patient": "PS-P-0020",
+  "date": "2026-03-22",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0123",
+  "patient": "PS-P-0021",
+  "date": "2025-05-03",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0124",
+  "patient": "PS-P-0021",
+  "date": "2025-09-16",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0125",
+  "patient": "PS-P-0021",
+  "date": "2025-10-22",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0126",
+  "patient": "PS-P-0021",
+  "date": "2026-03-26",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0127",
+  "patient": "PS-P-0021",
+  "date": "2026-05-03",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0128",
+  "patient": "PS-P-0022",
+  "date": "2025-04-10",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0129",
+  "patient": "PS-P-0022",
+  "date": "2025-05-27",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0130",
+  "patient": "PS-P-0022",
+  "date": "2025-08-09",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0131",
+  "patient": "PS-P-0022",
+  "date": "2025-12-15",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0132",
+  "patient": "PS-P-0022",
+  "date": "2025-12-22",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0133",
+  "patient": "PS-P-0022",
+  "date": "2026-03-11",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0134",
+  "patient": "PS-P-0023",
+  "date": "2025-04-26",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0135",
+  "patient": "PS-P-0023",
+  "date": "2025-06-30",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0136",
+  "patient": "PS-P-0023",
+  "date": "2025-07-13",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0137",
+  "patient": "PS-P-0023",
+  "date": "2025-07-30",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0138",
+  "patient": "PS-P-0023",
+  "date": "2025-10-01",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0139",
+  "patient": "PS-P-0023",
+  "date": "2026-01-16",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0140",
+  "patient": "PS-P-0023",
+  "date": "2026-05-18",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0141",
+  "patient": "PS-P-0024",
+  "date": "2025-07-01",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0142",
+  "patient": "PS-P-0024",
+  "date": "2025-07-02",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0143",
+  "patient": "PS-P-0024",
+  "date": "2025-09-29",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0144",
+  "patient": "PS-P-0024",
+  "date": "2025-09-30",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0145",
+  "patient": "PS-P-0024",
+  "date": "2026-03-12",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0146",
+  "patient": "PS-P-0025",
+  "date": "2025-06-11",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0147",
+  "patient": "PS-P-0025",
+  "date": "2025-06-24",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0148",
+  "patient": "PS-P-0025",
+  "date": "2025-07-01",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0149",
+  "patient": "PS-P-0025",
+  "date": "2025-11-28",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0150",
+  "patient": "PS-P-0025",
+  "date": "2026-01-18",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0151",
+  "patient": "PS-P-0025",
+  "date": "2026-01-31",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0152",
+  "patient": "PS-P-0025",
+  "date": "2026-04-30",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0153",
+  "patient": "PS-P-0026",
+  "date": "2025-09-01",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0154",
+  "patient": "PS-P-0026",
+  "date": "2025-10-08",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0155",
+  "patient": "PS-P-0026",
+  "date": "2025-10-26",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0156",
+  "patient": "PS-P-0026",
+  "date": "2025-11-18",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0157",
+  "patient": "PS-P-0026",
+  "date": "2025-12-05",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0158",
+  "patient": "PS-P-0026",
+  "date": "2026-01-25",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0159",
+  "patient": "PS-P-0026",
+  "date": "2026-02-03",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0160",
+  "patient": "PS-P-0027",
+  "date": "2025-04-29",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0161",
+  "patient": "PS-P-0027",
+  "date": "2025-08-22",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0162",
+  "patient": "PS-P-0027",
+  "date": "2025-11-09",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0163",
+  "patient": "PS-P-0027",
+  "date": "2025-12-18",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0164",
+  "patient": "PS-P-0027",
+  "date": "2026-01-07",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0165",
+  "patient": "PS-P-0027",
+  "date": "2026-01-29",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0166",
+  "patient": "PS-P-0028",
+  "date": "2025-04-14",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0167",
+  "patient": "PS-P-0028",
+  "date": "2025-09-05",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0168",
+  "patient": "PS-P-0028",
+  "date": "2026-01-28",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0169",
+  "patient": "PS-P-0028",
+  "date": "2026-03-01",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0170",
+  "patient": "PS-P-0028",
+  "date": "2026-03-16",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0171",
+  "patient": "PS-P-0028",
+  "date": "2026-04-07",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0172",
+  "patient": "PS-P-0028",
+  "date": "2026-04-12",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0173",
+  "patient": "PS-P-0029",
+  "date": "2025-04-25",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0174",
+  "patient": "PS-P-0029",
+  "date": "2025-06-01",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0175",
+  "patient": "PS-P-0030",
+  "date": "2025-09-21",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0176",
+  "patient": "PS-P-0030",
+  "date": "2026-01-14",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0177",
+  "patient": "PS-P-0030",
+  "date": "2026-01-14",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0178",
+  "patient": "PS-P-0030",
+  "date": "2026-03-18",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0179",
+  "patient": "PS-P-0030",
+  "date": "2026-03-21",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0180",
+  "patient": "PS-P-0030",
+  "date": "2026-04-29",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0181",
+  "patient": "PS-P-0031",
+  "date": "2025-05-14",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0182",
+  "patient": "PS-P-0031",
+  "date": "2025-08-19",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0183",
+  "patient": "PS-P-0031",
+  "date": "2025-09-08",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0184",
+  "patient": "PS-P-0031",
+  "date": "2025-09-12",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0185",
+  "patient": "PS-P-0031",
+  "date": "2026-02-07",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0186",
+  "patient": "PS-P-0032",
+  "date": "2025-06-22",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0187",
+  "patient": "PS-P-0032",
+  "date": "2025-09-23",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0188",
+  "patient": "PS-P-0032",
+  "date": "2026-01-17",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0189",
+  "patient": "PS-P-0033",
+  "date": "2025-06-15",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0190",
+  "patient": "PS-P-0033",
+  "date": "2025-07-01",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0191",
+  "patient": "PS-P-0033",
+  "date": "2025-09-15",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0192",
+  "patient": "PS-P-0033",
+  "date": "2025-09-20",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0193",
+  "patient": "PS-P-0033",
+  "date": "2025-11-03",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0194",
+  "patient": "PS-P-0034",
+  "date": "2025-06-19",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0195",
+  "patient": "PS-P-0034",
+  "date": "2025-07-12",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0196",
+  "patient": "PS-P-0034",
+  "date": "2025-08-09",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0197",
+  "patient": "PS-P-0034",
+  "date": "2025-11-11",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0198",
+  "patient": "PS-P-0034",
+  "date": "2026-01-14",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0199",
+  "patient": "PS-P-0035",
+  "date": "2025-06-19",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0200",
+  "patient": "PS-P-0035",
+  "date": "2025-07-07",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0201",
+  "patient": "PS-P-0035",
+  "date": "2026-03-19",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0202",
+  "patient": "PS-P-0035",
+  "date": "2026-03-24",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0203",
+  "patient": "PS-P-0036",
+  "date": "2025-08-04",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0204",
+  "patient": "PS-P-0036",
+  "date": "2026-04-24",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0205",
+  "patient": "PS-P-0036",
+  "date": "2026-04-27",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0206",
+  "patient": "PS-P-0036",
+  "date": "2026-05-23",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0207",
+  "patient": "PS-P-0037",
+  "date": "2025-09-12",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0208",
+  "patient": "PS-P-0037",
+  "date": "2025-09-18",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0209",
+  "patient": "PS-P-0037",
+  "date": "2025-09-19",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0210",
+  "patient": "PS-P-0037",
+  "date": "2025-10-10",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0211",
+  "patient": "PS-P-0037",
+  "date": "2025-11-28",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0212",
+  "patient": "PS-P-0038",
+  "date": "2025-06-01",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0213",
+  "patient": "PS-P-0038",
+  "date": "2025-09-22",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0214",
+  "patient": "PS-P-0038",
+  "date": "2025-10-29",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0215",
+  "patient": "PS-P-0038",
+  "date": "2026-01-08",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0216",
+  "patient": "PS-P-0038",
+  "date": "2026-03-20",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0217",
+  "patient": "PS-P-0038",
+  "date": "2026-05-01",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0218",
+  "patient": "PS-P-0039",
+  "date": "2025-07-05",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0219",
+  "patient": "PS-P-0039",
+  "date": "2025-07-13",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0220",
+  "patient": "PS-P-0039",
+  "date": "2025-08-04",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0221",
+  "patient": "PS-P-0039",
+  "date": "2025-08-06",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0222",
+  "patient": "PS-P-0039",
+  "date": "2026-04-18",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0223",
+  "patient": "PS-P-0040",
+  "date": "2025-05-04",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0224",
+  "patient": "PS-P-0040",
+  "date": "2025-08-05",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0225",
+  "patient": "PS-P-0040",
+  "date": "2025-11-29",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0226",
+  "patient": "PS-P-0040",
+  "date": "2026-02-01",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0227",
+  "patient": "PS-P-0041",
+  "date": "2025-06-03",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0228",
+  "patient": "PS-P-0041",
+  "date": "2025-06-10",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0229",
+  "patient": "PS-P-0041",
+  "date": "2025-07-03",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0230",
+  "patient": "PS-P-0041",
+  "date": "2025-07-21",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0231",
+  "patient": "PS-P-0041",
+  "date": "2025-08-17",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0232",
+  "patient": "PS-P-0041",
+  "date": "2025-12-20",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0233",
+  "patient": "PS-P-0041",
+  "date": "2026-03-03",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0234",
+  "patient": "PS-P-0042",
+  "date": "2025-07-15",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0235",
+  "patient": "PS-P-0042",
+  "date": "2025-07-28",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0236",
+  "patient": "PS-P-0042",
+  "date": "2025-09-28",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0237",
+  "patient": "PS-P-0043",
+  "date": "2025-04-13",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0238",
+  "patient": "PS-P-0043",
+  "date": "2025-10-27",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0239",
+  "patient": "PS-P-0043",
+  "date": "2026-02-22",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0240",
+  "patient": "PS-P-0043",
+  "date": "2026-03-28",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0241",
+  "patient": "PS-P-0043",
+  "date": "2026-05-10",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0242",
+  "patient": "PS-P-0044",
+  "date": "2025-05-17",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0243",
+  "patient": "PS-P-0044",
+  "date": "2025-09-25",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0244",
+  "patient": "PS-P-0044",
+  "date": "2025-11-04",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0245",
+  "patient": "PS-P-0045",
+  "date": "2025-07-04",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0246",
+  "patient": "PS-P-0045",
+  "date": "2026-02-07",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0247",
+  "patient": "PS-P-0046",
+  "date": "2025-12-10",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0248",
+  "patient": "PS-P-0046",
+  "date": "2026-01-10",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0249",
+  "patient": "PS-P-0047",
+  "date": "2025-08-19",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0250",
+  "patient": "PS-P-0047",
+  "date": "2026-01-01",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0251",
+  "patient": "PS-P-0047",
+  "date": "2026-02-28",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0252",
+  "patient": "PS-P-0048",
+  "date": "2025-07-11",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0253",
+  "patient": "PS-P-0048",
+  "date": "2025-12-22",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0254",
+  "patient": "PS-P-0048",
+  "date": "2026-01-11",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0255",
+  "patient": "PS-P-0048",
+  "date": "2026-02-13",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0256",
+  "patient": "PS-P-0048",
+  "date": "2026-05-02",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0257",
+  "patient": "PS-P-0049",
+  "date": "2025-06-26",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0258",
+  "patient": "PS-P-0049",
+  "date": "2025-06-27",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0259",
+  "patient": "PS-P-0049",
+  "date": "2025-09-07",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0260",
+  "patient": "PS-P-0049",
+  "date": "2025-10-28",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0261",
+  "patient": "PS-P-0049",
+  "date": "2025-12-28",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0262",
+  "patient": "PS-P-0049",
+  "date": "2026-04-10",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0263",
+  "patient": "PS-P-0049",
+  "date": "2026-05-27",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0264",
+  "patient": "PS-P-0050",
+  "date": "2025-05-24",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0265",
+  "patient": "PS-P-0050",
+  "date": "2025-09-24",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0266",
+  "patient": "PS-P-0050",
+  "date": "2025-09-26",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0267",
+  "patient": "PS-P-0050",
+  "date": "2025-10-18",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0268",
+  "patient": "PS-P-0050",
+  "date": "2025-11-02",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0269",
+  "patient": "PS-P-0050",
+  "date": "2026-03-26",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0270",
+  "patient": "PS-P-0050",
+  "date": "2026-04-04",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0271",
+  "patient": "PS-P-0051",
+  "date": "2025-07-23",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0272",
+  "patient": "PS-P-0051",
+  "date": "2025-11-03",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0273",
+  "patient": "PS-P-0051",
+  "date": "2026-01-21",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0274",
+  "patient": "PS-P-0051",
+  "date": "2026-02-20",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0275",
+  "patient": "PS-P-0051",
+  "date": "2026-02-24",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0276",
+  "patient": "PS-P-0051",
+  "date": "2026-03-31",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0277",
+  "patient": "PS-P-0051",
+  "date": "2026-04-07",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0278",
+  "patient": "PS-P-0052",
+  "date": "2025-05-16",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0279",
+  "patient": "PS-P-0052",
+  "date": "2025-05-18",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0280",
+  "patient": "PS-P-0052",
+  "date": "2025-07-04",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0281",
+  "patient": "PS-P-0052",
+  "date": "2026-02-06",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0282",
+  "patient": "PS-P-0053",
+  "date": "2025-11-28",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0283",
+  "patient": "PS-P-0053",
+  "date": "2025-12-13",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0284",
+  "patient": "PS-P-0053",
+  "date": "2026-01-01",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0285",
+  "patient": "PS-P-0054",
+  "date": "2025-04-08",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0286",
+  "patient": "PS-P-0054",
+  "date": "2025-04-30",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0287",
+  "patient": "PS-P-0054",
+  "date": "2025-05-17",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0288",
+  "patient": "PS-P-0054",
+  "date": "2025-07-04",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0289",
+  "patient": "PS-P-0054",
+  "date": "2025-10-21",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0290",
+  "patient": "PS-P-0054",
+  "date": "2026-04-25",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0291",
+  "patient": "PS-P-0055",
+  "date": "2025-05-12",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0292",
+  "patient": "PS-P-0055",
+  "date": "2025-07-05",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0293",
+  "patient": "PS-P-0055",
+  "date": "2025-08-23",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0294",
+  "patient": "PS-P-0055",
+  "date": "2025-08-23",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0295",
+  "patient": "PS-P-0055",
+  "date": "2025-10-07",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0296",
+  "patient": "PS-P-0055",
+  "date": "2026-04-24",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0297",
+  "patient": "PS-P-0055",
+  "date": "2026-05-04",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0298",
+  "patient": "PS-P-0056",
+  "date": "2025-04-21",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0299",
+  "patient": "PS-P-0056",
+  "date": "2025-11-14",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0300",
+  "patient": "PS-P-0056",
+  "date": "2025-11-28",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0301",
+  "patient": "PS-P-0057",
+  "date": "2025-09-28",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0302",
+  "patient": "PS-P-0057",
+  "date": "2025-09-28",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0303",
+  "patient": "PS-P-0058",
+  "date": "2025-06-14",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0304",
+  "patient": "PS-P-0058",
+  "date": "2025-07-30",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0305",
+  "patient": "PS-P-0058",
+  "date": "2025-08-02",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0306",
+  "patient": "PS-P-0058",
+  "date": "2025-10-11",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0307",
+  "patient": "PS-P-0058",
+  "date": "2025-12-07",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0308",
+  "patient": "PS-P-0058",
+  "date": "2026-03-07",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0309",
+  "patient": "PS-P-0059",
+  "date": "2025-04-16",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0310",
+  "patient": "PS-P-0059",
+  "date": "2025-04-24",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0311",
+  "patient": "PS-P-0059",
+  "date": "2025-09-13",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0312",
+  "patient": "PS-P-0059",
+  "date": "2025-11-07",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0313",
+  "patient": "PS-P-0059",
+  "date": "2025-12-09",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0314",
+  "patient": "PS-P-0059",
+  "date": "2026-02-11",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0315",
+  "patient": "PS-P-0059",
+  "date": "2026-04-10",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0316",
+  "patient": "PS-P-0060",
+  "date": "2025-04-17",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0317",
+  "patient": "PS-P-0060",
+  "date": "2025-06-06",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0318",
+  "patient": "PS-P-0060",
+  "date": "2025-06-19",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0319",
+  "patient": "PS-P-0060",
+  "date": "2025-11-01",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0320",
+  "patient": "PS-P-0060",
+  "date": "2025-12-21",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0321",
+  "patient": "PS-P-0060",
+  "date": "2026-02-03",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0322",
+  "patient": "PS-P-0060",
+  "date": "2026-02-08",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0323",
+  "patient": "PS-P-0061",
+  "date": "2025-04-15",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0324",
+  "patient": "PS-P-0061",
+  "date": "2025-08-20",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0325",
+  "patient": "PS-P-0061",
+  "date": "2025-10-22",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0326",
+  "patient": "PS-P-0061",
+  "date": "2025-11-17",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0327",
+  "patient": "PS-P-0061",
+  "date": "2026-01-13",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0328",
+  "patient": "PS-P-0061",
+  "date": "2026-01-31",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0329",
+  "patient": "PS-P-0061",
+  "date": "2026-02-20",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0330",
+  "patient": "PS-P-0062",
+  "date": "2025-05-19",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0331",
+  "patient": "PS-P-0062",
+  "date": "2026-01-25",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0332",
+  "patient": "PS-P-0062",
+  "date": "2026-02-03",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0333",
+  "patient": "PS-P-0063",
+  "date": "2025-04-18",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0334",
+  "patient": "PS-P-0063",
+  "date": "2025-05-04",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0335",
+  "patient": "PS-P-0063",
+  "date": "2025-09-29",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0336",
+  "patient": "PS-P-0063",
+  "date": "2025-12-29",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0337",
+  "patient": "PS-P-0063",
+  "date": "2026-05-27",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0338",
+  "patient": "PS-P-0064",
+  "date": "2025-05-02",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0339",
+  "patient": "PS-P-0064",
+  "date": "2025-05-19",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0340",
+  "patient": "PS-P-0064",
+  "date": "2026-01-25",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0341",
+  "patient": "PS-P-0064",
+  "date": "2026-02-19",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0342",
+  "patient": "PS-P-0065",
+  "date": "2025-04-29",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0343",
+  "patient": "PS-P-0065",
+  "date": "2025-07-09",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0344",
+  "patient": "PS-P-0065",
+  "date": "2025-08-27",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0345",
+  "patient": "PS-P-0065",
+  "date": "2025-10-11",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0346",
+  "patient": "PS-P-0065",
+  "date": "2025-11-25",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0347",
+  "patient": "PS-P-0065",
+  "date": "2026-05-31",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0348",
+  "patient": "PS-P-0066",
+  "date": "2025-04-21",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0349",
+  "patient": "PS-P-0066",
+  "date": "2025-08-23",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0350",
+  "patient": "PS-P-0066",
+  "date": "2025-09-15",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0351",
+  "patient": "PS-P-0066",
+  "date": "2025-11-07",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0352",
+  "patient": "PS-P-0066",
+  "date": "2026-02-28",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0353",
+  "patient": "PS-P-0066",
+  "date": "2026-03-07",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0354",
+  "patient": "PS-P-0066",
+  "date": "2026-04-08",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0355",
+  "patient": "PS-P-0067",
+  "date": "2025-04-24",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0356",
+  "patient": "PS-P-0067",
+  "date": "2025-10-22",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0357",
+  "patient": "PS-P-0067",
+  "date": "2025-11-11",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0358",
+  "patient": "PS-P-0067",
+  "date": "2026-01-03",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0359",
+  "patient": "PS-P-0067",
+  "date": "2026-02-07",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0360",
+  "patient": "PS-P-0068",
+  "date": "2025-04-22",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0361",
+  "patient": "PS-P-0068",
+  "date": "2025-06-09",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0362",
+  "patient": "PS-P-0068",
+  "date": "2026-01-21",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0363",
+  "patient": "PS-P-0068",
+  "date": "2026-02-18",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0364",
+  "patient": "PS-P-0068",
+  "date": "2026-03-05",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0365",
+  "patient": "PS-P-0068",
+  "date": "2026-05-01",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0366",
+  "patient": "PS-P-0069",
+  "date": "2025-05-05",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0367",
+  "patient": "PS-P-0069",
+  "date": "2025-11-01",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0368",
+  "patient": "PS-P-0069",
+  "date": "2025-12-19",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0369",
+  "patient": "PS-P-0070",
+  "date": "2025-06-13",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0370",
+  "patient": "PS-P-0070",
+  "date": "2025-09-23",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0371",
+  "patient": "PS-P-0070",
+  "date": "2025-10-09",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0372",
+  "patient": "PS-P-0070",
+  "date": "2025-12-16",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0373",
+  "patient": "PS-P-0070",
+  "date": "2026-01-25",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0374",
+  "patient": "PS-P-0071",
+  "date": "2025-06-28",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0375",
+  "patient": "PS-P-0071",
+  "date": "2026-03-16",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0376",
+  "patient": "PS-P-0072",
+  "date": "2025-06-24",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0377",
+  "patient": "PS-P-0072",
+  "date": "2026-03-18",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0378",
+  "patient": "PS-P-0072",
+  "date": "2026-05-15",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0379",
+  "patient": "PS-P-0073",
+  "date": "2025-04-23",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0380",
+  "patient": "PS-P-0073",
+  "date": "2025-06-04",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0381",
+  "patient": "PS-P-0073",
+  "date": "2025-07-24",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0382",
+  "patient": "PS-P-0073",
+  "date": "2025-10-25",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0383",
+  "patient": "PS-P-0073",
+  "date": "2025-12-20",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0384",
+  "patient": "PS-P-0073",
+  "date": "2026-01-04",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0385",
+  "patient": "PS-P-0073",
+  "date": "2026-01-19",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0386",
+  "patient": "PS-P-0074",
+  "date": "2025-09-05",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0387",
+  "patient": "PS-P-0074",
+  "date": "2025-10-12",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0388",
+  "patient": "PS-P-0074",
+  "date": "2025-11-22",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0389",
+  "patient": "PS-P-0074",
+  "date": "2025-12-28",
+  "complaint": "itchy rash on arms",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0390",
+  "patient": "PS-P-0074",
+  "date": "2026-02-10",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0391",
+  "patient": "PS-P-0075",
+  "date": "2025-08-28",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0392",
+  "patient": "PS-P-0075",
+  "date": "2025-10-16",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0393",
+  "patient": "PS-P-0075",
+  "date": "2025-12-09",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0394",
+  "patient": "PS-P-0075",
+  "date": "2026-05-06",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0395",
+  "patient": "PS-P-0076",
+  "date": "2025-04-19",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0396",
+  "patient": "PS-P-0076",
+  "date": "2025-05-31",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0397",
+  "patient": "PS-P-0077",
+  "date": "2025-04-10",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0398",
+  "patient": "PS-P-0077",
+  "date": "2025-06-15",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0399",
+  "patient": "PS-P-0077",
+  "date": "2025-07-29",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0400",
+  "patient": "PS-P-0077",
+  "date": "2025-07-30",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0401",
+  "patient": "PS-P-0077",
+  "date": "2026-04-06",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0402",
+  "patient": "PS-P-0078",
+  "date": "2025-04-23",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0403",
+  "patient": "PS-P-0078",
+  "date": "2025-06-09",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0404",
+  "patient": "PS-P-0078",
+  "date": "2025-07-16",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0405",
+  "patient": "PS-P-0078",
+  "date": "2025-07-26",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0406",
+  "patient": "PS-P-0078",
+  "date": "2025-10-26",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0407",
+  "patient": "PS-P-0079",
+  "date": "2026-01-22",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0408",
+  "patient": "PS-P-0079",
+  "date": "2026-03-25",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0409",
+  "patient": "PS-P-0080",
+  "date": "2025-09-30",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0410",
+  "patient": "PS-P-0080",
+  "date": "2025-12-28",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0411",
+  "patient": "PS-P-0081",
+  "date": "2025-08-24",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0412",
+  "patient": "PS-P-0081",
+  "date": "2025-12-22",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0413",
+  "patient": "PS-P-0081",
+  "date": "2026-02-28",
+  "complaint": "shoulder pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0414",
+  "patient": "PS-P-0081",
+  "date": "2026-05-26",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0415",
+  "patient": "PS-P-0081",
+  "date": "2026-05-27",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0416",
+  "patient": "PS-P-0082",
+  "date": "2025-05-02",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0417",
+  "patient": "PS-P-0082",
+  "date": "2025-06-03",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0418",
+  "patient": "PS-P-0082",
+  "date": "2025-09-10",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0419",
+  "patient": "PS-P-0082",
+  "date": "2025-09-22",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0420",
+  "patient": "PS-P-0082",
+  "date": "2025-09-29",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0421",
+  "patient": "PS-P-0082",
+  "date": "2025-10-20",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0422",
+  "patient": "PS-P-0082",
+  "date": "2026-05-30",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0423",
+  "patient": "PS-P-0083",
+  "date": "2025-05-19",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0424",
+  "patient": "PS-P-0083",
+  "date": "2025-06-18",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0425",
+  "patient": "PS-P-0083",
+  "date": "2025-11-07",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0426",
+  "patient": "PS-P-0083",
+  "date": "2025-12-16",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0427",
+  "patient": "PS-P-0084",
+  "date": "2025-05-07",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0428",
+  "patient": "PS-P-0084",
+  "date": "2025-08-28",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0429",
+  "patient": "PS-P-0085",
+  "date": "2025-08-01",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0430",
+  "patient": "PS-P-0085",
+  "date": "2025-08-08",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0431",
+  "patient": "PS-P-0085",
+  "date": "2025-10-16",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0432",
+  "patient": "PS-P-0085",
+  "date": "2025-10-29",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0433",
+  "patient": "PS-P-0085",
+  "date": "2025-12-16",
+  "complaint": "cholesterol follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0434",
+  "patient": "PS-P-0085",
+  "date": "2026-02-19",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0435",
+  "patient": "PS-P-0086",
+  "date": "2025-06-23",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0436",
+  "patient": "PS-P-0086",
+  "date": "2025-12-26",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0437",
+  "patient": "PS-P-0086",
+  "date": "2026-05-23",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0438",
+  "patient": "PS-P-0087",
+  "date": "2025-06-17",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0439",
+  "patient": "PS-P-0087",
+  "date": "2025-09-16",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0440",
+  "patient": "PS-P-0087",
+  "date": "2025-10-27",
+  "complaint": "headache and dizziness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0441",
+  "patient": "PS-P-0087",
+  "date": "2026-01-10",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0442",
+  "patient": "PS-P-0088",
+  "date": "2025-04-22",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0443",
+  "patient": "PS-P-0088",
+  "date": "2025-09-26",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0444",
+  "patient": "PS-P-0088",
+  "date": "2025-11-22",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0445",
+  "patient": "PS-P-0088",
+  "date": "2026-01-18",
+  "complaint": "hypertension review",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0446",
+  "patient": "PS-P-0088",
+  "date": "2026-02-04",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0447",
+  "patient": "PS-P-0088",
+  "date": "2026-03-05",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0448",
+  "patient": "PS-P-0089",
+  "date": "2025-07-26",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0449",
+  "patient": "PS-P-0089",
+  "date": "2025-07-27",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0450",
+  "patient": "PS-P-0089",
+  "date": "2025-09-12",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0451",
+  "patient": "PS-P-0090",
+  "date": "2024-01-20",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0452",
+  "patient": "PS-P-0091",
+  "date": "2024-04-06",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0453",
+  "patient": "PS-P-0091",
+  "date": "2025-04-18",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0454",
+  "patient": "PS-P-0092",
+  "date": "2024-02-11",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0455",
+  "patient": "PS-P-0093",
+  "date": "2024-03-03",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0456",
+  "patient": "PS-P-0093",
+  "date": "2024-05-14",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0457",
+  "patient": "PS-P-0093",
+  "date": "2024-06-22",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0458",
+  "patient": "PS-P-0094",
+  "date": "2024-04-11",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0459",
+  "patient": "PS-P-0094",
+  "date": "2025-04-27",
+  "complaint": "knee pain after a fall",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0460",
+  "patient": "PS-P-0095",
+  "date": "2024-03-01",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0461",
+  "patient": "PS-P-0095",
+  "date": "2024-11-02",
+  "complaint": "stomach pain and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0462",
+  "patient": "PS-P-0095",
+  "date": "2025-01-30",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0463",
+  "patient": "PS-P-0096",
+  "date": "2024-10-12",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0464",
+  "patient": "PS-P-0096",
+  "date": "2025-02-18",
+  "complaint": "neck stiffness and pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0465",
+  "patient": "PS-P-0096",
+  "date": "2025-03-02",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0466",
+  "patient": "PS-P-0097",
+  "date": "2024-04-08",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0467",
+  "patient": "PS-P-0097",
+  "date": "2025-03-14",
+  "complaint": "loose stools and abdominal cramps",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0468",
+  "patient": "PS-P-0098",
+  "date": "2024-05-17",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0469",
+  "patient": "PS-P-0098",
+  "date": "2024-07-23",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0470",
+  "patient": "PS-P-0098",
+  "date": "2024-07-30",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0471",
+  "patient": "PS-P-0099",
+  "date": "2024-01-27",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0472",
+  "patient": "PS-P-0099",
+  "date": "2024-09-29",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0473",
+  "patient": "PS-P-0100",
+  "date": "2024-02-25",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0474",
+  "patient": "PS-P-0100",
+  "date": "2024-04-30",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0475",
+  "patient": "PS-P-0100",
+  "date": "2024-07-10",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0476",
+  "patient": "PS-P-0101",
+  "date": "2024-02-24",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0477",
+  "patient": "PS-P-0102",
+  "date": "2024-05-30",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0478",
+  "patient": "PS-P-0102",
+  "date": "2024-07-25",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0479",
+  "patient": "PS-P-0103",
+  "date": "2024-01-10",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0480",
+  "patient": "PS-P-0103",
+  "date": "2024-09-28",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0481",
+  "patient": "PS-P-0103",
+  "date": "2025-01-11",
+  "complaint": "food poisoning with vomiting",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0482",
+  "patient": "PS-P-0104",
+  "date": "2024-04-10",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0483",
+  "patient": "PS-P-0105",
+  "date": "2024-08-16",
+  "complaint": "lower back pain",
+  "note": "Musculoskeletal pain, analgesia and rest advised."
+ },
+ {
+  "id": "CS-0484",
+  "patient": "PS-P-0106",
+  "date": "2025-05-03",
+  "complaint": "stomach upset and diarrhea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0485",
+  "patient": "PS-P-0106",
+  "date": "2025-05-06",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0486",
+  "patient": "PS-P-0106",
+  "date": "2025-06-14",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0487",
+  "patient": "PS-P-0106",
+  "date": "2025-07-03",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0488",
+  "patient": "PS-P-0106",
+  "date": "2025-07-31",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0489",
+  "patient": "PS-P-0106",
+  "date": "2026-03-26",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0490",
+  "patient": "PS-P-0107",
+  "date": "2025-06-22",
+  "complaint": "allergic skin reaction",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0491",
+  "patient": "PS-P-0107",
+  "date": "2025-07-25",
+  "complaint": "eczema flare up",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0492",
+  "patient": "PS-P-0107",
+  "date": "2025-12-01",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0493",
+  "patient": "PS-P-0108",
+  "date": "2025-10-18",
+  "complaint": "eye irritation and redness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0494",
+  "patient": "PS-P-0108",
+  "date": "2026-02-03",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0495",
+  "patient": "PS-P-0108",
+  "date": "2026-02-24",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0496",
+  "patient": "PS-P-0108",
+  "date": "2026-03-16",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0497",
+  "patient": "PS-P-0108",
+  "date": "2026-05-04",
+  "complaint": "fatigue and tiredness",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0498",
+  "patient": "PS-P-0108",
+  "date": "2026-05-04",
+  "complaint": "vomiting and nausea",
+  "note": "Acute gastroenteritis, hydration advised, ORS given."
+ },
+ {
+  "id": "CS-0499",
+  "patient": "PS-P-0109",
+  "date": "2025-06-15",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0500",
+  "patient": "PS-P-0109",
+  "date": "2025-07-27",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0501",
+  "patient": "PS-P-0109",
+  "date": "2025-11-29",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0502",
+  "patient": "PS-P-0109",
+  "date": "2025-12-24",
+  "complaint": "skin rash and itching",
+  "note": "Dermatitis / allergic reaction, topical treatment prescribed."
+ },
+ {
+  "id": "CS-0503",
+  "patient": "PS-P-0110",
+  "date": "2025-05-26",
+  "complaint": "diabetes follow up",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0504",
+  "patient": "PS-P-0110",
+  "date": "2025-10-11",
+  "complaint": "ear pain",
+  "note": "Reviewed, symptomatic management, advised follow up if persists."
+ },
+ {
+  "id": "CS-0505",
+  "patient": "PS-P-0110",
+  "date": "2025-12-22",
+  "complaint": "sore throat and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0506",
+  "patient": "PS-P-0110",
+  "date": "2025-12-30",
+  "complaint": "blood pressure check",
+  "note": "Chronic disease review, medication continued, vitals recorded."
+ },
+ {
+  "id": "CS-0507",
+  "patient": "PS-P-0063",
+  "date": "2026-05-24",
+  "complaint": "dry cough and mild fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0508",
+  "patient": "PS-P-0032",
+  "date": "2026-05-28",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0509",
+  "patient": "PS-P-0051",
+  "date": "2026-05-31",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0510",
+  "patient": "PS-P-0109",
+  "date": "2026-05-20",
+  "complaint": "cough with phlegm",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0511",
+  "patient": "PS-P-0095",
+  "date": "2026-05-22",
+  "complaint": "runny nose and fever",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0512",
+  "patient": "PS-P-0052",
+  "date": "2026-05-24",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0513",
+  "patient": "PS-P-0087",
+  "date": "2026-05-24",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0514",
+  "patient": "PS-P-0003",
+  "date": "2026-05-25",
+  "complaint": "high fever, body ache and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0515",
+  "patient": "PS-P-0083",
+  "date": "2026-05-25",
+  "complaint": "fever and cough",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0516",
+  "patient": "PS-P-0083",
+  "date": "2026-05-26",
+  "complaint": "blocked nose and sore throat",
+  "note": "URTI symptoms, advised rest and fluids, symptomatic treatment."
+ },
+ {
+  "id": "CS-0517",
+  "patient": "PS-P-0021",
+  "date": "2025-12-04",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0518",
+  "patient": "PS-P-0030",
+  "date": "2025-12-27",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0519",
+  "patient": "PS-P-0110",
+  "date": "2025-12-29",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0520",
+  "patient": "PS-P-0050",
+  "date": "2026-01-29",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0521",
+  "patient": "PS-P-0109",
+  "date": "2026-02-06",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0522",
+  "patient": "PS-P-0012",
+  "date": "2026-01-27",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0523",
+  "patient": "PS-P-0078",
+  "date": "2026-02-26",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0524",
+  "patient": "PS-P-0064",
+  "date": "2026-03-04",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0525",
+  "patient": "PS-P-0003",
+  "date": "2026-03-02",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0526",
+  "patient": "PS-P-0023",
+  "date": "2026-02-25",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0527",
+  "patient": "PS-P-0015",
+  "date": "2026-03-24",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0528",
+  "patient": "PS-P-0063",
+  "date": "2026-04-04",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0529",
+  "patient": "PS-P-0099",
+  "date": "2026-03-26",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0530",
+  "patient": "PS-P-0066",
+  "date": "2026-03-24",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0531",
+  "patient": "PS-P-0057",
+  "date": "2026-03-29",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0532",
+  "patient": "PS-P-0079",
+  "date": "2026-05-09",
+  "complaint": "high fever and severe body ache",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0533",
+  "patient": "PS-P-0022",
+  "date": "2026-04-22",
+  "complaint": "fever with headache behind eyes",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0534",
+  "patient": "PS-P-0021",
+  "date": "2026-05-03",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0535",
+  "patient": "PS-P-0013",
+  "date": "2026-05-08",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0536",
+  "patient": "PS-P-0016",
+  "date": "2026-05-06",
+  "complaint": "persistent high fever and fatigue",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ },
+ {
+  "id": "CS-0537",
+  "patient": "PS-P-0001",
+  "date": "2026-05-05",
+  "complaint": "fever, joint pain and rash",
+  "note": "Febrile illness, dengue cannot be excluded, advised monitoring and FBC."
+ }
+]

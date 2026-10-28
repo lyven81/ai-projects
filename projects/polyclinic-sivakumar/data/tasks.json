@@ -1,0 +1,148 @@
+[
+ {
+  "id": "TK-0001",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0024",
+  "consultation": "CN-0001",
+  "created": 1780362600,
+  "status": "done",
+  "text": "Check and dispense.",
+  "closed": 1780363200
+ },
+ {
+  "id": "TK-0002",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0026",
+  "consultation": "CN-0002",
+  "created": 1780363080,
+  "status": "done",
+  "text": "Check and dispense.",
+  "closed": 1780363680
+ },
+ {
+  "id": "TK-0003",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0018",
+  "consultation": "CN-0003",
+  "created": 1780363680,
+  "status": "done",
+  "text": "Check and dispense.",
+  "closed": 1780364280
+ },
+ {
+  "id": "TK-0004",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0017",
+  "consultation": "CN-0004",
+  "created": 1780364280,
+  "status": "done",
+  "text": "Check and dispense.",
+  "closed": 1780364880
+ },
+ {
+  "id": "TK-0005",
+  "kind": "bill",
+  "to": "FD-01",
+  "patient": "PS-P-0017",
+  "consultation": "CN-0004",
+  "created": 1780364880,
+  "status": "open",
+  "text": "Prepare the bill."
+ },
+ {
+  "id": "TK-0006",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0014",
+  "consultation": "CN-0005",
+  "created": 1780364700,
+  "status": "done",
+  "text": "Check and dispense.",
+  "closed": 1780365300
+ },
+ {
+  "id": "TK-0007",
+  "kind": "bill",
+  "to": "FD-01",
+  "patient": "PS-P-0014",
+  "consultation": "CN-0005",
+  "created": 1780365300,
+  "status": "open",
+  "text": "Prepare the bill."
+ },
+ {
+  "id": "TK-0008",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0005",
+  "consultation": "CN-0006",
+  "created": 1780364760,
+  "status": "open",
+  "text": "Check and dispense."
+ },
+ {
+  "id": "TK-0009",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0002",
+  "consultation": "CN-0007",
+  "created": 1780365060,
+  "status": "open",
+  "text": "Check and dispense."
+ },
+ {
+  "id": "TK-0010",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0013",
+  "consultation": "CN-0008",
+  "created": 1780365180,
+  "status": "open",
+  "text": "Check and dispense."
+ },
+ {
+  "id": "TK-0011",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0063",
+  "consultation": "CN-0009",
+  "created": 1780365360,
+  "status": "open",
+  "text": "Check and dispense."
+ },
+ {
+  "id": "TK-0012",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0048",
+  "consultation": "CN-0010",
+  "created": 1780365480,
+  "status": "open",
+  "text": "Check and dispense."
+ },
+ {
+  "id": "TK-0013",
+  "kind": "check",
+  "to": "PH-01",
+  "patient": "PS-P-0047",
+  "consultation": "CN-0011",
+  "created": 1780363980,
+  "status": "done",
+  "text": "Check and dispense.",
+  "closed": 1780364520
+ },
+ {
+  "id": "TK-0014",
+  "kind": "bill",
+  "to": "FD-01",
+  "patient": "PS-P-0047",
+  "consultation": "CN-0011",
+  "created": 1780364520,
+  "status": "open",
+  "text": "Prepare the bill."
+ }
+]

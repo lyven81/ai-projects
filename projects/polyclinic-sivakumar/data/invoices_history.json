@@ -1,0 +1,10180 @@
+[
+ {
+  "id": "IV-0001",
+  "patient": "PS-P-0001",
+  "date": "2025-05-30",
+  "amount": 4307,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 807
+   }
+  ]
+ },
+ {
+  "id": "IV-0002",
+  "patient": "PS-P-0001",
+  "date": "2025-06-06",
+  "amount": 12380,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8880
+   }
+  ]
+ },
+ {
+  "id": "IV-0003",
+  "patient": "PS-P-0001",
+  "date": "2025-07-03",
+  "amount": 4140,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 640
+   }
+  ]
+ },
+ {
+  "id": "IV-0004",
+  "patient": "PS-P-0001",
+  "date": "2025-07-27",
+  "amount": 13687,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10187
+   }
+  ]
+ },
+ {
+  "id": "IV-0005",
+  "patient": "PS-P-0001",
+  "date": "2025-08-03",
+  "amount": 7703,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4203
+   }
+  ]
+ },
+ {
+  "id": "IV-0006",
+  "patient": "PS-P-0001",
+  "date": "2025-08-17",
+  "amount": 4795,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1295
+   }
+  ]
+ },
+ {
+  "id": "IV-0007",
+  "patient": "PS-P-0001",
+  "date": "2025-08-25",
+  "amount": 5481,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1981
+   }
+  ]
+ },
+ {
+  "id": "IV-0008",
+  "patient": "PS-P-0001",
+  "date": "2025-09-15",
+  "amount": 4754,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1254
+   }
+  ]
+ },
+ {
+  "id": "IV-0009",
+  "patient": "PS-P-0001",
+  "date": "2025-10-14",
+  "amount": 5361,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1861
+   }
+  ]
+ },
+ {
+  "id": "IV-0010",
+  "patient": "PS-P-0001",
+  "date": "2025-10-29",
+  "amount": 6122,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2622
+   }
+  ]
+ },
+ {
+  "id": "IV-0011",
+  "patient": "PS-P-0001",
+  "date": "2026-02-01",
+  "amount": 4718,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1218
+   }
+  ]
+ },
+ {
+  "id": "IV-0012",
+  "patient": "PS-P-0001",
+  "date": "2026-02-08",
+  "amount": 4495,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 995
+   }
+  ]
+ },
+ {
+  "id": "IV-0013",
+  "patient": "PS-P-0001",
+  "date": "2026-02-19",
+  "amount": 6699,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3199
+   }
+  ]
+ },
+ {
+  "id": "IV-0014",
+  "patient": "PS-P-0001",
+  "date": "2026-05-18",
+  "amount": 4202,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 702
+   }
+  ]
+ },
+ {
+  "id": "IV-0015",
+  "patient": "PS-P-0002",
+  "date": "2025-04-13",
+  "amount": 5571,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2071
+   }
+  ]
+ },
+ {
+  "id": "IV-0016",
+  "patient": "PS-P-0002",
+  "date": "2025-04-25",
+  "amount": 18498,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14998
+   }
+  ]
+ },
+ {
+  "id": "IV-0017",
+  "patient": "PS-P-0002",
+  "date": "2025-05-23",
+  "amount": 3494,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3494
+   }
+  ]
+ },
+ {
+  "id": "IV-0018",
+  "patient": "PS-P-0002",
+  "date": "2025-06-28",
+  "amount": 5890,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2390
+   }
+  ]
+ },
+ {
+  "id": "IV-0019",
+  "patient": "PS-P-0002",
+  "date": "2025-10-01",
+  "amount": 11740,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8240
+   }
+  ]
+ },
+ {
+  "id": "IV-0020",
+  "patient": "PS-P-0002",
+  "date": "2025-10-04",
+  "amount": 11746,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8246
+   }
+  ]
+ },
+ {
+  "id": "IV-0021",
+  "patient": "PS-P-0002",
+  "date": "2025-10-23",
+  "amount": 17437,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13937
+   }
+  ]
+ },
+ {
+  "id": "IV-0022",
+  "patient": "PS-P-0002",
+  "date": "2025-10-27",
+  "amount": 6897,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3397
+   }
+  ]
+ },
+ {
+  "id": "IV-0023",
+  "patient": "PS-P-0002",
+  "date": "2025-11-02",
+  "amount": 5004,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1504
+   }
+  ]
+ },
+ {
+  "id": "IV-0024",
+  "patient": "PS-P-0002",
+  "date": "2025-11-04",
+  "amount": 8314,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4814
+   }
+  ]
+ },
+ {
+  "id": "IV-0025",
+  "patient": "PS-P-0002",
+  "date": "2025-12-01",
+  "amount": 16771,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13271
+   }
+  ]
+ },
+ {
+  "id": "IV-0026",
+  "patient": "PS-P-0002",
+  "date": "2026-02-23",
+  "amount": 11608,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8108
+   }
+  ]
+ },
+ {
+  "id": "IV-0027",
+  "patient": "PS-P-0002",
+  "date": "2026-04-12",
+  "amount": 7046,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3546
+   }
+  ]
+ },
+ {
+  "id": "IV-0028",
+  "patient": "PS-P-0002",
+  "date": "2026-04-13",
+  "amount": 3538,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 38
+   }
+  ]
+ },
+ {
+  "id": "IV-0029",
+  "patient": "PS-P-0003",
+  "date": "2025-04-19",
+  "amount": 5742,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2242
+   }
+  ]
+ },
+ {
+  "id": "IV-0030",
+  "patient": "PS-P-0003",
+  "date": "2025-05-01",
+  "amount": 6633,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3133
+   }
+  ]
+ },
+ {
+  "id": "IV-0031",
+  "patient": "PS-P-0003",
+  "date": "2025-06-28",
+  "amount": 5990,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2490
+   }
+  ]
+ },
+ {
+  "id": "IV-0032",
+  "patient": "PS-P-0003",
+  "date": "2025-11-08",
+  "amount": 18321,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14821
+   }
+  ]
+ },
+ {
+  "id": "IV-0033",
+  "patient": "PS-P-0003",
+  "date": "2025-12-03",
+  "amount": 6357,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2857
+   }
+  ]
+ },
+ {
+  "id": "IV-0034",
+  "patient": "PS-P-0003",
+  "date": "2025-12-14",
+  "amount": 5455,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1955
+   }
+  ]
+ },
+ {
+  "id": "IV-0035",
+  "patient": "PS-P-0003",
+  "date": "2025-12-26",
+  "amount": 5366,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1866
+   }
+  ]
+ },
+ {
+  "id": "IV-0036",
+  "patient": "PS-P-0003",
+  "date": "2026-01-09",
+  "amount": 6335,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2835
+   }
+  ]
+ },
+ {
+  "id": "IV-0037",
+  "patient": "PS-P-0003",
+  "date": "2026-01-09",
+  "amount": 17093,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13593
+   }
+  ]
+ },
+ {
+  "id": "IV-0038",
+  "patient": "PS-P-0003",
+  "date": "2026-02-04",
+  "amount": 8755,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5255
+   }
+  ]
+ },
+ {
+  "id": "IV-0039",
+  "patient": "PS-P-0003",
+  "date": "2026-02-06",
+  "amount": 7459,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3959
+   }
+  ]
+ },
+ {
+  "id": "IV-0040",
+  "patient": "PS-P-0003",
+  "date": "2026-02-22",
+  "amount": 3621,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 121
+   }
+  ]
+ },
+ {
+  "id": "IV-0041",
+  "patient": "PS-P-0003",
+  "date": "2026-04-26",
+  "amount": 6260,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2760
+   }
+  ]
+ },
+ {
+  "id": "IV-0042",
+  "patient": "PS-P-0003",
+  "date": "2026-05-19",
+  "amount": 4087,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 587
+   }
+  ]
+ },
+ {
+  "id": "IV-0043",
+  "patient": "PS-P-0004",
+  "date": "2025-05-07",
+  "amount": 5849,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2349
+   }
+  ]
+ },
+ {
+  "id": "IV-0044",
+  "patient": "PS-P-0004",
+  "date": "2025-05-11",
+  "amount": 16269,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12769
+   }
+  ]
+ },
+ {
+  "id": "IV-0045",
+  "patient": "PS-P-0004",
+  "date": "2025-10-07",
+  "amount": 13532,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10032
+   }
+  ]
+ },
+ {
+  "id": "IV-0046",
+  "patient": "PS-P-0004",
+  "date": "2025-10-11",
+  "amount": 13848,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10348
+   }
+  ]
+ },
+ {
+  "id": "IV-0047",
+  "patient": "PS-P-0004",
+  "date": "2025-10-28",
+  "amount": 11382,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7882
+   }
+  ]
+ },
+ {
+  "id": "IV-0048",
+  "patient": "PS-P-0004",
+  "date": "2025-11-18",
+  "amount": 10977,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7477
+   }
+  ]
+ },
+ {
+  "id": "IV-0049",
+  "patient": "PS-P-0004",
+  "date": "2025-11-18",
+  "amount": 6586,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3086
+   }
+  ]
+ },
+ {
+  "id": "IV-0050",
+  "patient": "PS-P-0004",
+  "date": "2025-12-10",
+  "amount": 4550,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1050
+   }
+  ]
+ },
+ {
+  "id": "IV-0051",
+  "patient": "PS-P-0004",
+  "date": "2025-12-15",
+  "amount": 3279,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3279
+   }
+  ]
+ },
+ {
+  "id": "IV-0052",
+  "patient": "PS-P-0004",
+  "date": "2025-12-15",
+  "amount": 16861,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13361
+   }
+  ]
+ },
+ {
+  "id": "IV-0053",
+  "patient": "PS-P-0004",
+  "date": "2026-01-09",
+  "amount": 8674,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5174
+   }
+  ]
+ },
+ {
+  "id": "IV-0054",
+  "patient": "PS-P-0004",
+  "date": "2026-01-18",
+  "amount": 5124,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1624
+   }
+  ]
+ },
+ {
+  "id": "IV-0055",
+  "patient": "PS-P-0004",
+  "date": "2026-01-22",
+  "amount": 9936,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6436
+   }
+  ]
+ },
+ {
+  "id": "IV-0056",
+  "patient": "PS-P-0004",
+  "date": "2026-02-12",
+  "amount": 5448,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1948
+   }
+  ]
+ },
+ {
+  "id": "IV-0057",
+  "patient": "PS-P-0004",
+  "date": "2026-02-27",
+  "amount": 9392,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5892
+   }
+  ]
+ },
+ {
+  "id": "IV-0058",
+  "patient": "PS-P-0004",
+  "date": "2026-05-06",
+  "amount": 5720,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2220
+   }
+  ]
+ },
+ {
+  "id": "IV-0059",
+  "patient": "PS-P-0005",
+  "date": "2025-06-06",
+  "amount": 5214,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1714
+   }
+  ]
+ },
+ {
+  "id": "IV-0060",
+  "patient": "PS-P-0005",
+  "date": "2025-06-14",
+  "amount": 8001,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4501
+   }
+  ]
+ },
+ {
+  "id": "IV-0061",
+  "patient": "PS-P-0006",
+  "date": "2025-10-03",
+  "amount": 4364,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 864
+   }
+  ]
+ },
+ {
+  "id": "IV-0062",
+  "patient": "PS-P-0006",
+  "date": "2025-11-03",
+  "amount": 8368,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4868
+   }
+  ]
+ },
+ {
+  "id": "IV-0063",
+  "patient": "PS-P-0006",
+  "date": "2025-12-04",
+  "amount": 5919,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2419
+   }
+  ]
+ },
+ {
+  "id": "IV-0064",
+  "patient": "PS-P-0006",
+  "date": "2025-12-12",
+  "amount": 11341,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7841
+   }
+  ]
+ },
+ {
+  "id": "IV-0065",
+  "patient": "PS-P-0006",
+  "date": "2025-12-18",
+  "amount": 10154,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6654
+   }
+  ]
+ },
+ {
+  "id": "IV-0066",
+  "patient": "PS-P-0007",
+  "date": "2025-06-28",
+  "amount": 6799,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3299
+   }
+  ]
+ },
+ {
+  "id": "IV-0067",
+  "patient": "PS-P-0007",
+  "date": "2025-08-08",
+  "amount": 5158,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1658
+   }
+  ]
+ },
+ {
+  "id": "IV-0068",
+  "patient": "PS-P-0008",
+  "date": "2025-05-27",
+  "amount": 17656,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14156
+   }
+  ]
+ },
+ {
+  "id": "IV-0069",
+  "patient": "PS-P-0008",
+  "date": "2025-11-03",
+  "amount": 8888,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5388
+   }
+  ]
+ },
+ {
+  "id": "IV-0070",
+  "patient": "PS-P-0008",
+  "date": "2026-03-13",
+  "amount": 5859,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2359
+   }
+  ]
+ },
+ {
+  "id": "IV-0071",
+  "patient": "PS-P-0008",
+  "date": "2026-03-19",
+  "amount": 6704,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3204
+   }
+  ]
+ },
+ {
+  "id": "IV-0072",
+  "patient": "PS-P-0009",
+  "date": "2025-08-12",
+  "amount": 6499,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2999
+   }
+  ]
+ },
+ {
+  "id": "IV-0073",
+  "patient": "PS-P-0009",
+  "date": "2025-11-17",
+  "amount": 17439,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13939
+   }
+  ]
+ },
+ {
+  "id": "IV-0074",
+  "patient": "PS-P-0009",
+  "date": "2026-01-30",
+  "amount": 4602,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1102
+   }
+  ]
+ },
+ {
+  "id": "IV-0075",
+  "patient": "PS-P-0009",
+  "date": "2026-04-07",
+  "amount": 6240,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2740
+   }
+  ]
+ },
+ {
+  "id": "IV-0076",
+  "patient": "PS-P-0010",
+  "date": "2025-05-13",
+  "amount": 15690,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12190
+   }
+  ]
+ },
+ {
+  "id": "IV-0077",
+  "patient": "PS-P-0010",
+  "date": "2025-06-21",
+  "amount": 6988,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3488
+   }
+  ]
+ },
+ {
+  "id": "IV-0078",
+  "patient": "PS-P-0010",
+  "date": "2025-06-21",
+  "amount": 10465,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6965
+   }
+  ]
+ },
+ {
+  "id": "IV-0079",
+  "patient": "PS-P-0010",
+  "date": "2025-10-11",
+  "amount": 6566,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3066
+   }
+  ]
+ },
+ {
+  "id": "IV-0080",
+  "patient": "PS-P-0010",
+  "date": "2025-11-24",
+  "amount": 4275,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 775
+   }
+  ]
+ },
+ {
+  "id": "IV-0081",
+  "patient": "PS-P-0011",
+  "date": "2025-04-30",
+  "amount": 4983,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1483
+   }
+  ]
+ },
+ {
+  "id": "IV-0082",
+  "patient": "PS-P-0011",
+  "date": "2026-02-01",
+  "amount": 11827,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8327
+   }
+  ]
+ },
+ {
+  "id": "IV-0083",
+  "patient": "PS-P-0012",
+  "date": "2025-06-01",
+  "amount": 16476,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12976
+   }
+  ]
+ },
+ {
+  "id": "IV-0084",
+  "patient": "PS-P-0012",
+  "date": "2025-09-22",
+  "amount": 11164,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7664
+   }
+  ]
+ },
+ {
+  "id": "IV-0085",
+  "patient": "PS-P-0012",
+  "date": "2025-10-16",
+  "amount": 7060,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3560
+   }
+  ]
+ },
+ {
+  "id": "IV-0086",
+  "patient": "PS-P-0012",
+  "date": "2026-04-24",
+  "amount": 18323,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14823
+   }
+  ]
+ },
+ {
+  "id": "IV-0087",
+  "patient": "PS-P-0013",
+  "date": "2025-08-20",
+  "amount": 5820,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2320
+   }
+  ]
+ },
+ {
+  "id": "IV-0088",
+  "patient": "PS-P-0013",
+  "date": "2025-11-24",
+  "amount": 5238,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1738
+   }
+  ]
+ },
+ {
+  "id": "IV-0089",
+  "patient": "PS-P-0014",
+  "date": "2025-06-20",
+  "amount": 7790,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4290
+   }
+  ]
+ },
+ {
+  "id": "IV-0090",
+  "patient": "PS-P-0014",
+  "date": "2026-04-20",
+  "amount": 3613,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 113
+   }
+  ]
+ },
+ {
+  "id": "IV-0091",
+  "patient": "PS-P-0014",
+  "date": "2026-05-06",
+  "amount": 5388,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1888
+   }
+  ]
+ },
+ {
+  "id": "IV-0092",
+  "patient": "PS-P-0015",
+  "date": "2025-06-02",
+  "amount": 4264,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 764
+   }
+  ]
+ },
+ {
+  "id": "IV-0093",
+  "patient": "PS-P-0015",
+  "date": "2025-08-10",
+  "amount": 5229,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1729
+   }
+  ]
+ },
+ {
+  "id": "IV-0094",
+  "patient": "PS-P-0015",
+  "date": "2025-08-11",
+  "amount": 4592,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1092
+   }
+  ]
+ },
+ {
+  "id": "IV-0095",
+  "patient": "PS-P-0015",
+  "date": "2025-10-24",
+  "amount": 16448,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12948
+   }
+  ]
+ },
+ {
+  "id": "IV-0096",
+  "patient": "PS-P-0015",
+  "date": "2025-11-05",
+  "amount": 4106,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 606
+   }
+  ]
+ },
+ {
+  "id": "IV-0097",
+  "patient": "PS-P-0015",
+  "date": "2025-12-22",
+  "amount": 13456,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9956
+   }
+  ]
+ },
+ {
+  "id": "IV-0098",
+  "patient": "PS-P-0015",
+  "date": "2026-04-22",
+  "amount": 16018,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12518
+   }
+  ]
+ },
+ {
+  "id": "IV-0099",
+  "patient": "PS-P-0016",
+  "date": "2025-04-22",
+  "amount": 6745,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3245
+   }
+  ]
+ },
+ {
+  "id": "IV-0100",
+  "patient": "PS-P-0016",
+  "date": "2025-06-18",
+  "amount": 7010,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3510
+   }
+  ]
+ },
+ {
+  "id": "IV-0101",
+  "patient": "PS-P-0016",
+  "date": "2025-07-12",
+  "amount": 7041,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3541
+   }
+  ]
+ },
+ {
+  "id": "IV-0102",
+  "patient": "PS-P-0016",
+  "date": "2025-07-29",
+  "amount": 13813,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10313
+   }
+  ]
+ },
+ {
+  "id": "IV-0103",
+  "patient": "PS-P-0017",
+  "date": "2025-05-28",
+  "amount": 8535,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5035
+   }
+  ]
+ },
+ {
+  "id": "IV-0104",
+  "patient": "PS-P-0017",
+  "date": "2025-07-23",
+  "amount": 4924,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1424
+   }
+  ]
+ },
+ {
+  "id": "IV-0105",
+  "patient": "PS-P-0017",
+  "date": "2025-10-16",
+  "amount": 11216,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7716
+   }
+  ]
+ },
+ {
+  "id": "IV-0106",
+  "patient": "PS-P-0017",
+  "date": "2026-01-06",
+  "amount": 10006,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6506
+   }
+  ]
+ },
+ {
+  "id": "IV-0107",
+  "patient": "PS-P-0017",
+  "date": "2026-01-30",
+  "amount": 5115,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1615
+   }
+  ]
+ },
+ {
+  "id": "IV-0108",
+  "patient": "PS-P-0018",
+  "date": "2025-05-24",
+  "amount": 17882,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14382
+   }
+  ]
+ },
+ {
+  "id": "IV-0109",
+  "patient": "PS-P-0018",
+  "date": "2025-07-24",
+  "amount": 4844,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1344
+   }
+  ]
+ },
+ {
+  "id": "IV-0110",
+  "patient": "PS-P-0018",
+  "date": "2025-08-24",
+  "amount": 8631,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5131
+   }
+  ]
+ },
+ {
+  "id": "IV-0111",
+  "patient": "PS-P-0019",
+  "date": "2025-05-01",
+  "amount": 17829,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14329
+   }
+  ]
+ },
+ {
+  "id": "IV-0112",
+  "patient": "PS-P-0019",
+  "date": "2025-05-09",
+  "amount": 9260,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5760
+   }
+  ]
+ },
+ {
+  "id": "IV-0113",
+  "patient": "PS-P-0019",
+  "date": "2025-05-20",
+  "amount": 10730,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7230
+   }
+  ]
+ },
+ {
+  "id": "IV-0114",
+  "patient": "PS-P-0019",
+  "date": "2025-08-07",
+  "amount": 16773,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13273
+   }
+  ]
+ },
+ {
+  "id": "IV-0115",
+  "patient": "PS-P-0019",
+  "date": "2025-12-12",
+  "amount": 7838,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4338
+   }
+  ]
+ },
+ {
+  "id": "IV-0116",
+  "patient": "PS-P-0019",
+  "date": "2026-03-24",
+  "amount": 18440,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14940
+   }
+  ]
+ },
+ {
+  "id": "IV-0117",
+  "patient": "PS-P-0019",
+  "date": "2026-05-09",
+  "amount": 3379,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3379
+   }
+  ]
+ },
+ {
+  "id": "IV-0118",
+  "patient": "PS-P-0020",
+  "date": "2025-08-11",
+  "amount": 3785,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 285
+   }
+  ]
+ },
+ {
+  "id": "IV-0119",
+  "patient": "PS-P-0020",
+  "date": "2025-09-02",
+  "amount": 9018,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5518
+   }
+  ]
+ },
+ {
+  "id": "IV-0120",
+  "patient": "PS-P-0020",
+  "date": "2025-11-09",
+  "amount": 7135,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3635
+   }
+  ]
+ },
+ {
+  "id": "IV-0121",
+  "patient": "PS-P-0020",
+  "date": "2025-11-25",
+  "amount": 8579,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5079
+   }
+  ]
+ },
+ {
+  "id": "IV-0122",
+  "patient": "PS-P-0020",
+  "date": "2026-03-22",
+  "amount": 12732,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9232
+   }
+  ]
+ },
+ {
+  "id": "IV-0123",
+  "patient": "PS-P-0021",
+  "date": "2025-05-03",
+  "amount": 14185,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10685
+   }
+  ]
+ },
+ {
+  "id": "IV-0124",
+  "patient": "PS-P-0021",
+  "date": "2025-09-16",
+  "amount": 16006,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12506
+   }
+  ]
+ },
+ {
+  "id": "IV-0125",
+  "patient": "PS-P-0021",
+  "date": "2025-10-22",
+  "amount": 16132,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12632
+   }
+  ]
+ },
+ {
+  "id": "IV-0126",
+  "patient": "PS-P-0021",
+  "date": "2026-03-26",
+  "amount": 9747,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6247
+   }
+  ]
+ },
+ {
+  "id": "IV-0127",
+  "patient": "PS-P-0021",
+  "date": "2026-05-03",
+  "amount": 11819,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8319
+   }
+  ]
+ },
+ {
+  "id": "IV-0128",
+  "patient": "PS-P-0022",
+  "date": "2025-04-10",
+  "amount": 5836,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2336
+   }
+  ]
+ },
+ {
+  "id": "IV-0129",
+  "patient": "PS-P-0022",
+  "date": "2025-05-27",
+  "amount": 8110,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4610
+   }
+  ]
+ },
+ {
+  "id": "IV-0130",
+  "patient": "PS-P-0022",
+  "date": "2025-08-09",
+  "amount": 6088,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2588
+   }
+  ]
+ },
+ {
+  "id": "IV-0131",
+  "patient": "PS-P-0022",
+  "date": "2025-12-15",
+  "amount": 8885,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5385
+   }
+  ]
+ },
+ {
+  "id": "IV-0132",
+  "patient": "PS-P-0022",
+  "date": "2025-12-22",
+  "amount": 10058,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6558
+   }
+  ]
+ },
+ {
+  "id": "IV-0133",
+  "patient": "PS-P-0022",
+  "date": "2026-03-11",
+  "amount": 13985,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10485
+   }
+  ]
+ },
+ {
+  "id": "IV-0134",
+  "patient": "PS-P-0023",
+  "date": "2025-04-26",
+  "amount": 7465,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3965
+   }
+  ]
+ },
+ {
+  "id": "IV-0135",
+  "patient": "PS-P-0023",
+  "date": "2025-06-30",
+  "amount": 16112,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12612
+   }
+  ]
+ },
+ {
+  "id": "IV-0136",
+  "patient": "PS-P-0023",
+  "date": "2025-07-13",
+  "amount": 9441,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5941
+   }
+  ]
+ },
+ {
+  "id": "IV-0137",
+  "patient": "PS-P-0023",
+  "date": "2025-07-30",
+  "amount": 12395,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8895
+   }
+  ]
+ },
+ {
+  "id": "IV-0138",
+  "patient": "PS-P-0023",
+  "date": "2025-10-01",
+  "amount": 4720,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1220
+   }
+  ]
+ },
+ {
+  "id": "IV-0139",
+  "patient": "PS-P-0023",
+  "date": "2026-01-16",
+  "amount": 9272,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5772
+   }
+  ]
+ },
+ {
+  "id": "IV-0140",
+  "patient": "PS-P-0023",
+  "date": "2026-05-18",
+  "amount": 5152,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1652
+   }
+  ]
+ },
+ {
+  "id": "IV-0141",
+  "patient": "PS-P-0024",
+  "date": "2025-07-01",
+  "amount": 13716,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10216
+   }
+  ]
+ },
+ {
+  "id": "IV-0142",
+  "patient": "PS-P-0024",
+  "date": "2025-07-02",
+  "amount": 7810,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4310
+   }
+  ]
+ },
+ {
+  "id": "IV-0143",
+  "patient": "PS-P-0024",
+  "date": "2025-09-29",
+  "amount": 11467,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7967
+   }
+  ]
+ },
+ {
+  "id": "IV-0144",
+  "patient": "PS-P-0024",
+  "date": "2025-09-30",
+  "amount": 7193,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3693
+   }
+  ]
+ },
+ {
+  "id": "IV-0145",
+  "patient": "PS-P-0024",
+  "date": "2026-03-12",
+  "amount": 7945,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4445
+   }
+  ]
+ },
+ {
+  "id": "IV-0146",
+  "patient": "PS-P-0025",
+  "date": "2025-06-11",
+  "amount": 12163,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8663
+   }
+  ]
+ },
+ {
+  "id": "IV-0147",
+  "patient": "PS-P-0025",
+  "date": "2025-06-24",
+  "amount": 17764,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14264
+   }
+  ]
+ },
+ {
+  "id": "IV-0148",
+  "patient": "PS-P-0025",
+  "date": "2025-07-01",
+  "amount": 6718,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3218
+   }
+  ]
+ },
+ {
+  "id": "IV-0149",
+  "patient": "PS-P-0025",
+  "date": "2025-11-28",
+  "amount": 4360,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 860
+   }
+  ]
+ },
+ {
+  "id": "IV-0150",
+  "patient": "PS-P-0025",
+  "date": "2026-01-18",
+  "amount": 11719,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8219
+   }
+  ]
+ },
+ {
+  "id": "IV-0151",
+  "patient": "PS-P-0025",
+  "date": "2026-01-31",
+  "amount": 7297,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3797
+   }
+  ]
+ },
+ {
+  "id": "IV-0152",
+  "patient": "PS-P-0025",
+  "date": "2026-04-30",
+  "amount": 18081,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14581
+   }
+  ]
+ },
+ {
+  "id": "IV-0153",
+  "patient": "PS-P-0026",
+  "date": "2025-09-01",
+  "amount": 5202,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1702
+   }
+  ]
+ },
+ {
+  "id": "IV-0154",
+  "patient": "PS-P-0026",
+  "date": "2025-10-08",
+  "amount": 7263,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3763
+   }
+  ]
+ },
+ {
+  "id": "IV-0155",
+  "patient": "PS-P-0026",
+  "date": "2025-10-26",
+  "amount": 6241,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2741
+   }
+  ]
+ },
+ {
+  "id": "IV-0156",
+  "patient": "PS-P-0026",
+  "date": "2025-11-18",
+  "amount": 12456,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8956
+   }
+  ]
+ },
+ {
+  "id": "IV-0157",
+  "patient": "PS-P-0026",
+  "date": "2025-12-05",
+  "amount": 11244,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7744
+   }
+  ]
+ },
+ {
+  "id": "IV-0158",
+  "patient": "PS-P-0026",
+  "date": "2026-01-25",
+  "amount": 11041,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7541
+   }
+  ]
+ },
+ {
+  "id": "IV-0159",
+  "patient": "PS-P-0026",
+  "date": "2026-02-03",
+  "amount": 6438,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2938
+   }
+  ]
+ },
+ {
+  "id": "IV-0160",
+  "patient": "PS-P-0027",
+  "date": "2025-04-29",
+  "amount": 5408,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1908
+   }
+  ]
+ },
+ {
+  "id": "IV-0161",
+  "patient": "PS-P-0027",
+  "date": "2025-08-22",
+  "amount": 3782,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 282
+   }
+  ]
+ },
+ {
+  "id": "IV-0162",
+  "patient": "PS-P-0027",
+  "date": "2025-11-09",
+  "amount": 10152,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6652
+   }
+  ]
+ },
+ {
+  "id": "IV-0163",
+  "patient": "PS-P-0027",
+  "date": "2025-12-18",
+  "amount": 5420,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1920
+   }
+  ]
+ },
+ {
+  "id": "IV-0164",
+  "patient": "PS-P-0027",
+  "date": "2026-01-07",
+  "amount": 8912,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5412
+   }
+  ]
+ },
+ {
+  "id": "IV-0165",
+  "patient": "PS-P-0027",
+  "date": "2026-01-29",
+  "amount": 16964,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13464
+   }
+  ]
+ },
+ {
+  "id": "IV-0166",
+  "patient": "PS-P-0028",
+  "date": "2025-04-14",
+  "amount": 12230,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8730
+   }
+  ]
+ },
+ {
+  "id": "IV-0167",
+  "patient": "PS-P-0028",
+  "date": "2025-09-05",
+  "amount": 8668,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5168
+   }
+  ]
+ },
+ {
+  "id": "IV-0168",
+  "patient": "PS-P-0028",
+  "date": "2026-01-28",
+  "amount": 7704,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4204
+   }
+  ]
+ },
+ {
+  "id": "IV-0169",
+  "patient": "PS-P-0028",
+  "date": "2026-03-01",
+  "amount": 5884,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2384
+   }
+  ]
+ },
+ {
+  "id": "IV-0170",
+  "patient": "PS-P-0028",
+  "date": "2026-03-16",
+  "amount": 18190,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14690
+   }
+  ]
+ },
+ {
+  "id": "IV-0171",
+  "patient": "PS-P-0028",
+  "date": "2026-04-07",
+  "amount": 8316,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4816
+   }
+  ]
+ },
+ {
+  "id": "IV-0172",
+  "patient": "PS-P-0028",
+  "date": "2026-04-12",
+  "amount": 6067,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2567
+   }
+  ]
+ },
+ {
+  "id": "IV-0173",
+  "patient": "PS-P-0029",
+  "date": "2025-04-25",
+  "amount": 5080,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1580
+   }
+  ]
+ },
+ {
+  "id": "IV-0174",
+  "patient": "PS-P-0029",
+  "date": "2025-06-01",
+  "amount": 4279,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 779
+   }
+  ]
+ },
+ {
+  "id": "IV-0175",
+  "patient": "PS-P-0030",
+  "date": "2025-09-21",
+  "amount": 13350,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9850
+   }
+  ]
+ },
+ {
+  "id": "IV-0176",
+  "patient": "PS-P-0030",
+  "date": "2026-01-14",
+  "amount": 9443,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5943
+   }
+  ]
+ },
+ {
+  "id": "IV-0177",
+  "patient": "PS-P-0030",
+  "date": "2026-01-14",
+  "amount": 5796,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2296
+   }
+  ]
+ },
+ {
+  "id": "IV-0178",
+  "patient": "PS-P-0030",
+  "date": "2026-03-18",
+  "amount": 8994,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5494
+   }
+  ]
+ },
+ {
+  "id": "IV-0179",
+  "patient": "PS-P-0030",
+  "date": "2026-03-21",
+  "amount": 16769,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13269
+   }
+  ]
+ },
+ {
+  "id": "IV-0180",
+  "patient": "PS-P-0030",
+  "date": "2026-04-29",
+  "amount": 13415,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9915
+   }
+  ]
+ },
+ {
+  "id": "IV-0181",
+  "patient": "PS-P-0031",
+  "date": "2025-05-14",
+  "amount": 4448,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 948
+   }
+  ]
+ },
+ {
+  "id": "IV-0182",
+  "patient": "PS-P-0031",
+  "date": "2025-08-19",
+  "amount": 5449,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1949
+   }
+  ]
+ },
+ {
+  "id": "IV-0183",
+  "patient": "PS-P-0031",
+  "date": "2025-09-08",
+  "amount": 6548,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3048
+   }
+  ]
+ },
+ {
+  "id": "IV-0184",
+  "patient": "PS-P-0031",
+  "date": "2025-09-12",
+  "amount": 4696,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1196
+   }
+  ]
+ },
+ {
+  "id": "IV-0185",
+  "patient": "PS-P-0031",
+  "date": "2026-02-07",
+  "amount": 8513,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5013
+   }
+  ]
+ },
+ {
+  "id": "IV-0186",
+  "patient": "PS-P-0032",
+  "date": "2025-06-22",
+  "amount": 17618,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14118
+   }
+  ]
+ },
+ {
+  "id": "IV-0187",
+  "patient": "PS-P-0032",
+  "date": "2025-09-23",
+  "amount": 8580,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5080
+   }
+  ]
+ },
+ {
+  "id": "IV-0188",
+  "patient": "PS-P-0032",
+  "date": "2026-01-17",
+  "amount": 6469,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2969
+   }
+  ]
+ },
+ {
+  "id": "IV-0189",
+  "patient": "PS-P-0033",
+  "date": "2025-06-15",
+  "amount": 6598,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3098
+   }
+  ]
+ },
+ {
+  "id": "IV-0190",
+  "patient": "PS-P-0033",
+  "date": "2025-07-01",
+  "amount": 13968,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10468
+   }
+  ]
+ },
+ {
+  "id": "IV-0191",
+  "patient": "PS-P-0033",
+  "date": "2025-09-15",
+  "amount": 7546,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4046
+   }
+  ]
+ },
+ {
+  "id": "IV-0192",
+  "patient": "PS-P-0033",
+  "date": "2025-09-20",
+  "amount": 11918,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8418
+   }
+  ]
+ },
+ {
+  "id": "IV-0193",
+  "patient": "PS-P-0033",
+  "date": "2025-11-03",
+  "amount": 12302,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8802
+   }
+  ]
+ },
+ {
+  "id": "IV-0194",
+  "patient": "PS-P-0034",
+  "date": "2025-06-19",
+  "amount": 9482,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5982
+   }
+  ]
+ },
+ {
+  "id": "IV-0195",
+  "patient": "PS-P-0034",
+  "date": "2025-07-12",
+  "amount": 9306,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5806
+   }
+  ]
+ },
+ {
+  "id": "IV-0196",
+  "patient": "PS-P-0034",
+  "date": "2025-08-09",
+  "amount": 4373,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 873
+   }
+  ]
+ },
+ {
+  "id": "IV-0197",
+  "patient": "PS-P-0034",
+  "date": "2025-11-11",
+  "amount": 4155,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 655
+   }
+  ]
+ },
+ {
+  "id": "IV-0198",
+  "patient": "PS-P-0034",
+  "date": "2026-01-14",
+  "amount": 4398,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 898
+   }
+  ]
+ },
+ {
+  "id": "IV-0199",
+  "patient": "PS-P-0035",
+  "date": "2025-06-19",
+  "amount": 13560,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10060
+   }
+  ]
+ },
+ {
+  "id": "IV-0200",
+  "patient": "PS-P-0035",
+  "date": "2025-07-07",
+  "amount": 8434,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4934
+   }
+  ]
+ },
+ {
+  "id": "IV-0201",
+  "patient": "PS-P-0035",
+  "date": "2026-03-19",
+  "amount": 4887,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1387
+   }
+  ]
+ },
+ {
+  "id": "IV-0202",
+  "patient": "PS-P-0035",
+  "date": "2026-03-24",
+  "amount": 6666,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3166
+   }
+  ]
+ },
+ {
+  "id": "IV-0203",
+  "patient": "PS-P-0036",
+  "date": "2025-08-04",
+  "amount": 13348,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9848
+   }
+  ]
+ },
+ {
+  "id": "IV-0204",
+  "patient": "PS-P-0036",
+  "date": "2026-04-24",
+  "amount": 16812,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13312
+   }
+  ]
+ },
+ {
+  "id": "IV-0205",
+  "patient": "PS-P-0036",
+  "date": "2026-04-27",
+  "amount": 17725,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14225
+   }
+  ]
+ },
+ {
+  "id": "IV-0206",
+  "patient": "PS-P-0036",
+  "date": "2026-05-23",
+  "amount": 6881,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3381
+   }
+  ]
+ },
+ {
+  "id": "IV-0207",
+  "patient": "PS-P-0037",
+  "date": "2025-09-12",
+  "amount": 17026,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13526
+   }
+  ]
+ },
+ {
+  "id": "IV-0208",
+  "patient": "PS-P-0037",
+  "date": "2025-09-18",
+  "amount": 13909,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10409
+   }
+  ]
+ },
+ {
+  "id": "IV-0209",
+  "patient": "PS-P-0037",
+  "date": "2025-09-19",
+  "amount": 4506,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1006
+   }
+  ]
+ },
+ {
+  "id": "IV-0210",
+  "patient": "PS-P-0037",
+  "date": "2025-10-10",
+  "amount": 6759,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3259
+   }
+  ]
+ },
+ {
+  "id": "IV-0211",
+  "patient": "PS-P-0037",
+  "date": "2025-11-28",
+  "amount": 18201,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14701
+   }
+  ]
+ },
+ {
+  "id": "IV-0212",
+  "patient": "PS-P-0038",
+  "date": "2025-06-01",
+  "amount": 11901,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8401
+   }
+  ]
+ },
+ {
+  "id": "IV-0213",
+  "patient": "PS-P-0038",
+  "date": "2025-09-22",
+  "amount": 17996,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14496
+   }
+  ]
+ },
+ {
+  "id": "IV-0214",
+  "patient": "PS-P-0038",
+  "date": "2025-10-29",
+  "amount": 9442,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5942
+   }
+  ]
+ },
+ {
+  "id": "IV-0215",
+  "patient": "PS-P-0038",
+  "date": "2026-01-08",
+  "amount": 7423,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3923
+   }
+  ]
+ },
+ {
+  "id": "IV-0216",
+  "patient": "PS-P-0038",
+  "date": "2026-03-20",
+  "amount": 10040,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6540
+   }
+  ]
+ },
+ {
+  "id": "IV-0217",
+  "patient": "PS-P-0038",
+  "date": "2026-05-01",
+  "amount": 8806,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5306
+   }
+  ]
+ },
+ {
+  "id": "IV-0218",
+  "patient": "PS-P-0039",
+  "date": "2025-07-05",
+  "amount": 5715,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2215
+   }
+  ]
+ },
+ {
+  "id": "IV-0219",
+  "patient": "PS-P-0039",
+  "date": "2025-07-13",
+  "amount": 8588,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5088
+   }
+  ]
+ },
+ {
+  "id": "IV-0220",
+  "patient": "PS-P-0039",
+  "date": "2025-08-04",
+  "amount": 13358,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9858
+   }
+  ]
+ },
+ {
+  "id": "IV-0221",
+  "patient": "PS-P-0039",
+  "date": "2025-08-06",
+  "amount": 9098,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5598
+   }
+  ]
+ },
+ {
+  "id": "IV-0222",
+  "patient": "PS-P-0039",
+  "date": "2026-04-18",
+  "amount": 13844,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10344
+   }
+  ]
+ },
+ {
+  "id": "IV-0223",
+  "patient": "PS-P-0040",
+  "date": "2025-05-04",
+  "amount": 5528,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2028
+   }
+  ]
+ },
+ {
+  "id": "IV-0224",
+  "patient": "PS-P-0040",
+  "date": "2025-08-05",
+  "amount": 12427,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8927
+   }
+  ]
+ },
+ {
+  "id": "IV-0225",
+  "patient": "PS-P-0040",
+  "date": "2025-11-29",
+  "amount": 5022,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1522
+   }
+  ]
+ },
+ {
+  "id": "IV-0226",
+  "patient": "PS-P-0040",
+  "date": "2026-02-01",
+  "amount": 9382,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5882
+   }
+  ]
+ },
+ {
+  "id": "IV-0227",
+  "patient": "PS-P-0041",
+  "date": "2025-06-03",
+  "amount": 7186,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3686
+   }
+  ]
+ },
+ {
+  "id": "IV-0228",
+  "patient": "PS-P-0041",
+  "date": "2025-06-10",
+  "amount": 8922,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5422
+   }
+  ]
+ },
+ {
+  "id": "IV-0229",
+  "patient": "PS-P-0041",
+  "date": "2025-07-03",
+  "amount": 7080,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3580
+   }
+  ]
+ },
+ {
+  "id": "IV-0230",
+  "patient": "PS-P-0041",
+  "date": "2025-07-21",
+  "amount": 11145,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7645
+   }
+  ]
+ },
+ {
+  "id": "IV-0231",
+  "patient": "PS-P-0041",
+  "date": "2025-08-17",
+  "amount": 6560,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3060
+   }
+  ]
+ },
+ {
+  "id": "IV-0232",
+  "patient": "PS-P-0041",
+  "date": "2025-12-20",
+  "amount": 14456,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10956
+   }
+  ]
+ },
+ {
+  "id": "IV-0233",
+  "patient": "PS-P-0041",
+  "date": "2026-03-03",
+  "amount": 6228,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2728
+   }
+  ]
+ },
+ {
+  "id": "IV-0234",
+  "patient": "PS-P-0042",
+  "date": "2025-07-15",
+  "amount": 6113,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2613
+   }
+  ]
+ },
+ {
+  "id": "IV-0235",
+  "patient": "PS-P-0042",
+  "date": "2025-07-28",
+  "amount": 4453,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 953
+   }
+  ]
+ },
+ {
+  "id": "IV-0236",
+  "patient": "PS-P-0042",
+  "date": "2025-09-28",
+  "amount": 18101,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14601
+   }
+  ]
+ },
+ {
+  "id": "IV-0237",
+  "patient": "PS-P-0043",
+  "date": "2025-04-13",
+  "amount": 5164,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1664
+   }
+  ]
+ },
+ {
+  "id": "IV-0238",
+  "patient": "PS-P-0043",
+  "date": "2025-10-27",
+  "amount": 5700,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2200
+   }
+  ]
+ },
+ {
+  "id": "IV-0239",
+  "patient": "PS-P-0043",
+  "date": "2026-02-22",
+  "amount": 10464,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6964
+   }
+  ]
+ },
+ {
+  "id": "IV-0240",
+  "patient": "PS-P-0043",
+  "date": "2026-03-28",
+  "amount": 4148,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 648
+   }
+  ]
+ },
+ {
+  "id": "IV-0241",
+  "patient": "PS-P-0043",
+  "date": "2026-05-10",
+  "amount": 6917,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3417
+   }
+  ]
+ },
+ {
+  "id": "IV-0242",
+  "patient": "PS-P-0044",
+  "date": "2025-05-17",
+  "amount": 7342,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3842
+   }
+  ]
+ },
+ {
+  "id": "IV-0243",
+  "patient": "PS-P-0044",
+  "date": "2025-09-25",
+  "amount": 16097,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12597
+   }
+  ]
+ },
+ {
+  "id": "IV-0244",
+  "patient": "PS-P-0044",
+  "date": "2025-11-04",
+  "amount": 7882,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4382
+   }
+  ]
+ },
+ {
+  "id": "IV-0245",
+  "patient": "PS-P-0045",
+  "date": "2025-07-04",
+  "amount": 5757,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2257
+   }
+  ]
+ },
+ {
+  "id": "IV-0246",
+  "patient": "PS-P-0045",
+  "date": "2026-02-07",
+  "amount": 8532,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5032
+   }
+  ]
+ },
+ {
+  "id": "IV-0247",
+  "patient": "PS-P-0046",
+  "date": "2025-12-10",
+  "amount": 5416,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1916
+   }
+  ]
+ },
+ {
+  "id": "IV-0248",
+  "patient": "PS-P-0046",
+  "date": "2026-01-10",
+  "amount": 9665,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6165
+   }
+  ]
+ },
+ {
+  "id": "IV-0249",
+  "patient": "PS-P-0047",
+  "date": "2025-08-19",
+  "amount": 7233,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3733
+   }
+  ]
+ },
+ {
+  "id": "IV-0250",
+  "patient": "PS-P-0047",
+  "date": "2026-01-01",
+  "amount": 17251,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13751
+   }
+  ]
+ },
+ {
+  "id": "IV-0251",
+  "patient": "PS-P-0047",
+  "date": "2026-02-28",
+  "amount": 5412,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1912
+   }
+  ]
+ },
+ {
+  "id": "IV-0252",
+  "patient": "PS-P-0048",
+  "date": "2025-07-11",
+  "amount": 9787,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6287
+   }
+  ]
+ },
+ {
+  "id": "IV-0253",
+  "patient": "PS-P-0048",
+  "date": "2025-12-22",
+  "amount": 18131,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14631
+   }
+  ]
+ },
+ {
+  "id": "IV-0254",
+  "patient": "PS-P-0048",
+  "date": "2026-01-11",
+  "amount": 10683,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7183
+   }
+  ]
+ },
+ {
+  "id": "IV-0255",
+  "patient": "PS-P-0048",
+  "date": "2026-02-13",
+  "amount": 8557,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5057
+   }
+  ]
+ },
+ {
+  "id": "IV-0256",
+  "patient": "PS-P-0048",
+  "date": "2026-05-02",
+  "amount": 16267,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12767
+   }
+  ]
+ },
+ {
+  "id": "IV-0257",
+  "patient": "PS-P-0049",
+  "date": "2025-06-26",
+  "amount": 5354,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1854
+   }
+  ]
+ },
+ {
+  "id": "IV-0258",
+  "patient": "PS-P-0049",
+  "date": "2025-06-27",
+  "amount": 4644,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1144
+   }
+  ]
+ },
+ {
+  "id": "IV-0259",
+  "patient": "PS-P-0049",
+  "date": "2025-09-07",
+  "amount": 7848,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4348
+   }
+  ]
+ },
+ {
+  "id": "IV-0260",
+  "patient": "PS-P-0049",
+  "date": "2025-10-28",
+  "amount": 8650,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5150
+   }
+  ]
+ },
+ {
+  "id": "IV-0261",
+  "patient": "PS-P-0049",
+  "date": "2025-12-28",
+  "amount": 5556,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2056
+   }
+  ]
+ },
+ {
+  "id": "IV-0262",
+  "patient": "PS-P-0049",
+  "date": "2026-04-10",
+  "amount": 4202,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 702
+   }
+  ]
+ },
+ {
+  "id": "IV-0263",
+  "patient": "PS-P-0049",
+  "date": "2026-05-27",
+  "amount": 5311,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1811
+   }
+  ]
+ },
+ {
+  "id": "IV-0264",
+  "patient": "PS-P-0050",
+  "date": "2025-05-24",
+  "amount": 13565,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10065
+   }
+  ]
+ },
+ {
+  "id": "IV-0265",
+  "patient": "PS-P-0050",
+  "date": "2025-09-24",
+  "amount": 11664,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8164
+   }
+  ]
+ },
+ {
+  "id": "IV-0266",
+  "patient": "PS-P-0050",
+  "date": "2025-09-26",
+  "amount": 9410,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5910
+   }
+  ]
+ },
+ {
+  "id": "IV-0267",
+  "patient": "PS-P-0050",
+  "date": "2025-10-18",
+  "amount": 9841,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6341
+   }
+  ]
+ },
+ {
+  "id": "IV-0268",
+  "patient": "PS-P-0050",
+  "date": "2025-11-02",
+  "amount": 5375,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1875
+   }
+  ]
+ },
+ {
+  "id": "IV-0269",
+  "patient": "PS-P-0050",
+  "date": "2026-03-26",
+  "amount": 7533,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4033
+   }
+  ]
+ },
+ {
+  "id": "IV-0270",
+  "patient": "PS-P-0050",
+  "date": "2026-04-04",
+  "amount": 4024,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 524
+   }
+  ]
+ },
+ {
+  "id": "IV-0271",
+  "patient": "PS-P-0051",
+  "date": "2025-07-23",
+  "amount": 18012,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14512
+   }
+  ]
+ },
+ {
+  "id": "IV-0272",
+  "patient": "PS-P-0051",
+  "date": "2025-11-03",
+  "amount": 14306,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10806
+   }
+  ]
+ },
+ {
+  "id": "IV-0273",
+  "patient": "PS-P-0051",
+  "date": "2026-01-21",
+  "amount": 14144,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10644
+   }
+  ]
+ },
+ {
+  "id": "IV-0274",
+  "patient": "PS-P-0051",
+  "date": "2026-02-20",
+  "amount": 5415,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1915
+   }
+  ]
+ },
+ {
+  "id": "IV-0275",
+  "patient": "PS-P-0051",
+  "date": "2026-02-24",
+  "amount": 16536,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13036
+   }
+  ]
+ },
+ {
+  "id": "IV-0276",
+  "patient": "PS-P-0051",
+  "date": "2026-03-31",
+  "amount": 17744,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14244
+   }
+  ]
+ },
+ {
+  "id": "IV-0277",
+  "patient": "PS-P-0051",
+  "date": "2026-04-07",
+  "amount": 5801,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2301
+   }
+  ]
+ },
+ {
+  "id": "IV-0278",
+  "patient": "PS-P-0052",
+  "date": "2025-05-16",
+  "amount": 4161,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 661
+   }
+  ]
+ },
+ {
+  "id": "IV-0279",
+  "patient": "PS-P-0052",
+  "date": "2025-05-18",
+  "amount": 7846,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4346
+   }
+  ]
+ },
+ {
+  "id": "IV-0280",
+  "patient": "PS-P-0052",
+  "date": "2025-07-04",
+  "amount": 4793,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1293
+   }
+  ]
+ },
+ {
+  "id": "IV-0281",
+  "patient": "PS-P-0052",
+  "date": "2026-02-06",
+  "amount": 12160,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8660
+   }
+  ]
+ },
+ {
+  "id": "IV-0282",
+  "patient": "PS-P-0053",
+  "date": "2025-11-28",
+  "amount": 7713,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4213
+   }
+  ]
+ },
+ {
+  "id": "IV-0283",
+  "patient": "PS-P-0053",
+  "date": "2025-12-13",
+  "amount": 5734,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2234
+   }
+  ]
+ },
+ {
+  "id": "IV-0284",
+  "patient": "PS-P-0053",
+  "date": "2026-01-01",
+  "amount": 11747,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8247
+   }
+  ]
+ },
+ {
+  "id": "IV-0285",
+  "patient": "PS-P-0054",
+  "date": "2025-04-08",
+  "amount": 8174,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4674
+   }
+  ]
+ },
+ {
+  "id": "IV-0286",
+  "patient": "PS-P-0054",
+  "date": "2025-04-30",
+  "amount": 15855,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12355
+   }
+  ]
+ },
+ {
+  "id": "IV-0287",
+  "patient": "PS-P-0054",
+  "date": "2025-05-17",
+  "amount": 16404,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12904
+   }
+  ]
+ },
+ {
+  "id": "IV-0288",
+  "patient": "PS-P-0054",
+  "date": "2025-07-04",
+  "amount": 16673,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13173
+   }
+  ]
+ },
+ {
+  "id": "IV-0289",
+  "patient": "PS-P-0054",
+  "date": "2025-10-21",
+  "amount": 11924,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8424
+   }
+  ]
+ },
+ {
+  "id": "IV-0290",
+  "patient": "PS-P-0054",
+  "date": "2026-04-25",
+  "amount": 6238,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2738
+   }
+  ]
+ },
+ {
+  "id": "IV-0291",
+  "patient": "PS-P-0055",
+  "date": "2025-05-12",
+  "amount": 17466,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13966
+   }
+  ]
+ },
+ {
+  "id": "IV-0292",
+  "patient": "PS-P-0055",
+  "date": "2025-07-05",
+  "amount": 13201,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9701
+   }
+  ]
+ },
+ {
+  "id": "IV-0293",
+  "patient": "PS-P-0055",
+  "date": "2025-08-23",
+  "amount": 6903,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3403
+   }
+  ]
+ },
+ {
+  "id": "IV-0294",
+  "patient": "PS-P-0055",
+  "date": "2025-08-23",
+  "amount": 9076,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5576
+   }
+  ]
+ },
+ {
+  "id": "IV-0295",
+  "patient": "PS-P-0055",
+  "date": "2025-10-07",
+  "amount": 12138,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8638
+   }
+  ]
+ },
+ {
+  "id": "IV-0296",
+  "patient": "PS-P-0055",
+  "date": "2026-04-24",
+  "amount": 6394,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2894
+   }
+  ]
+ },
+ {
+  "id": "IV-0297",
+  "patient": "PS-P-0055",
+  "date": "2026-05-04",
+  "amount": 17696,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14196
+   }
+  ]
+ },
+ {
+  "id": "IV-0298",
+  "patient": "PS-P-0056",
+  "date": "2025-04-21",
+  "amount": 16290,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12790
+   }
+  ]
+ },
+ {
+  "id": "IV-0299",
+  "patient": "PS-P-0056",
+  "date": "2025-11-14",
+  "amount": 9559,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6059
+   }
+  ]
+ },
+ {
+  "id": "IV-0300",
+  "patient": "PS-P-0056",
+  "date": "2025-11-28",
+  "amount": 16342,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12842
+   }
+  ]
+ },
+ {
+  "id": "IV-0301",
+  "patient": "PS-P-0057",
+  "date": "2025-09-28",
+  "amount": 6889,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3389
+   }
+  ]
+ },
+ {
+  "id": "IV-0302",
+  "patient": "PS-P-0057",
+  "date": "2025-09-28",
+  "amount": 3650,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 150
+   }
+  ]
+ },
+ {
+  "id": "IV-0303",
+  "patient": "PS-P-0058",
+  "date": "2025-06-14",
+  "amount": 13299,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9799
+   }
+  ]
+ },
+ {
+  "id": "IV-0304",
+  "patient": "PS-P-0058",
+  "date": "2025-07-30",
+  "amount": 12762,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9262
+   }
+  ]
+ },
+ {
+  "id": "IV-0305",
+  "patient": "PS-P-0058",
+  "date": "2025-08-02",
+  "amount": 5764,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2264
+   }
+  ]
+ },
+ {
+  "id": "IV-0306",
+  "patient": "PS-P-0058",
+  "date": "2025-10-11",
+  "amount": 13068,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9568
+   }
+  ]
+ },
+ {
+  "id": "IV-0307",
+  "patient": "PS-P-0058",
+  "date": "2025-12-07",
+  "amount": 9065,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5565
+   }
+  ]
+ },
+ {
+  "id": "IV-0308",
+  "patient": "PS-P-0058",
+  "date": "2026-03-07",
+  "amount": 8177,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4677
+   }
+  ]
+ },
+ {
+  "id": "IV-0309",
+  "patient": "PS-P-0059",
+  "date": "2025-04-16",
+  "amount": 6415,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2915
+   }
+  ]
+ },
+ {
+  "id": "IV-0310",
+  "patient": "PS-P-0059",
+  "date": "2025-04-24",
+  "amount": 8635,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5135
+   }
+  ]
+ },
+ {
+  "id": "IV-0311",
+  "patient": "PS-P-0059",
+  "date": "2025-09-13",
+  "amount": 7084,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3584
+   }
+  ]
+ },
+ {
+  "id": "IV-0312",
+  "patient": "PS-P-0059",
+  "date": "2025-11-07",
+  "amount": 5990,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2490
+   }
+  ]
+ },
+ {
+  "id": "IV-0313",
+  "patient": "PS-P-0059",
+  "date": "2025-12-09",
+  "amount": 12544,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9044
+   }
+  ]
+ },
+ {
+  "id": "IV-0314",
+  "patient": "PS-P-0059",
+  "date": "2026-02-11",
+  "amount": 10019,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6519
+   }
+  ]
+ },
+ {
+  "id": "IV-0315",
+  "patient": "PS-P-0059",
+  "date": "2026-04-10",
+  "amount": 7272,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3772
+   }
+  ]
+ },
+ {
+  "id": "IV-0316",
+  "patient": "PS-P-0060",
+  "date": "2025-04-17",
+  "amount": 4664,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1164
+   }
+  ]
+ },
+ {
+  "id": "IV-0317",
+  "patient": "PS-P-0060",
+  "date": "2025-06-06",
+  "amount": 16226,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12726
+   }
+  ]
+ },
+ {
+  "id": "IV-0318",
+  "patient": "PS-P-0060",
+  "date": "2025-06-19",
+  "amount": 11520,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8020
+   }
+  ]
+ },
+ {
+  "id": "IV-0319",
+  "patient": "PS-P-0060",
+  "date": "2025-11-01",
+  "amount": 7953,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4453
+   }
+  ]
+ },
+ {
+  "id": "IV-0320",
+  "patient": "PS-P-0060",
+  "date": "2025-12-21",
+  "amount": 7681,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4181
+   }
+  ]
+ },
+ {
+  "id": "IV-0321",
+  "patient": "PS-P-0060",
+  "date": "2026-02-03",
+  "amount": 10243,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6743
+   }
+  ]
+ },
+ {
+  "id": "IV-0322",
+  "patient": "PS-P-0060",
+  "date": "2026-02-08",
+  "amount": 7052,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3552
+   }
+  ]
+ },
+ {
+  "id": "IV-0323",
+  "patient": "PS-P-0061",
+  "date": "2025-04-15",
+  "amount": 6987,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3487
+   }
+  ]
+ },
+ {
+  "id": "IV-0324",
+  "patient": "PS-P-0061",
+  "date": "2025-08-20",
+  "amount": 15990,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12490
+   }
+  ]
+ },
+ {
+  "id": "IV-0325",
+  "patient": "PS-P-0061",
+  "date": "2025-10-22",
+  "amount": 5672,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2172
+   }
+  ]
+ },
+ {
+  "id": "IV-0326",
+  "patient": "PS-P-0061",
+  "date": "2025-11-17",
+  "amount": 10824,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7324
+   }
+  ]
+ },
+ {
+  "id": "IV-0327",
+  "patient": "PS-P-0061",
+  "date": "2026-01-13",
+  "amount": 3237,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3237
+   }
+  ]
+ },
+ {
+  "id": "IV-0328",
+  "patient": "PS-P-0061",
+  "date": "2026-01-31",
+  "amount": 9742,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6242
+   }
+  ]
+ },
+ {
+  "id": "IV-0329",
+  "patient": "PS-P-0061",
+  "date": "2026-02-20",
+  "amount": 4191,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 691
+   }
+  ]
+ },
+ {
+  "id": "IV-0330",
+  "patient": "PS-P-0062",
+  "date": "2025-05-19",
+  "amount": 6593,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3093
+   }
+  ]
+ },
+ {
+  "id": "IV-0331",
+  "patient": "PS-P-0062",
+  "date": "2026-01-25",
+  "amount": 17747,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14247
+   }
+  ]
+ },
+ {
+  "id": "IV-0332",
+  "patient": "PS-P-0062",
+  "date": "2026-02-03",
+  "amount": 7597,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4097
+   }
+  ]
+ },
+ {
+  "id": "IV-0333",
+  "patient": "PS-P-0063",
+  "date": "2025-04-18",
+  "amount": 7145,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3645
+   }
+  ]
+ },
+ {
+  "id": "IV-0334",
+  "patient": "PS-P-0063",
+  "date": "2025-05-04",
+  "amount": 17729,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14229
+   }
+  ]
+ },
+ {
+  "id": "IV-0335",
+  "patient": "PS-P-0063",
+  "date": "2025-09-29",
+  "amount": 4816,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1316
+   }
+  ]
+ },
+ {
+  "id": "IV-0336",
+  "patient": "PS-P-0063",
+  "date": "2025-12-29",
+  "amount": 5481,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1981
+   }
+  ]
+ },
+ {
+  "id": "IV-0337",
+  "patient": "PS-P-0063",
+  "date": "2026-05-27",
+  "amount": 4800,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1300
+   }
+  ]
+ },
+ {
+  "id": "IV-0338",
+  "patient": "PS-P-0064",
+  "date": "2025-05-02",
+  "amount": 17685,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14185
+   }
+  ]
+ },
+ {
+  "id": "IV-0339",
+  "patient": "PS-P-0064",
+  "date": "2025-05-19",
+  "amount": 6920,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3420
+   }
+  ]
+ },
+ {
+  "id": "IV-0340",
+  "patient": "PS-P-0064",
+  "date": "2026-01-25",
+  "amount": 8434,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4934
+   }
+  ]
+ },
+ {
+  "id": "IV-0341",
+  "patient": "PS-P-0064",
+  "date": "2026-02-19",
+  "amount": 16633,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13133
+   }
+  ]
+ },
+ {
+  "id": "IV-0342",
+  "patient": "PS-P-0065",
+  "date": "2025-04-29",
+  "amount": 6457,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2957
+   }
+  ]
+ },
+ {
+  "id": "IV-0343",
+  "patient": "PS-P-0065",
+  "date": "2025-07-09",
+  "amount": 15700,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12200
+   }
+  ]
+ },
+ {
+  "id": "IV-0344",
+  "patient": "PS-P-0065",
+  "date": "2025-08-27",
+  "amount": 5974,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2474
+   }
+  ]
+ },
+ {
+  "id": "IV-0345",
+  "patient": "PS-P-0065",
+  "date": "2025-10-11",
+  "amount": 6785,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3285
+   }
+  ]
+ },
+ {
+  "id": "IV-0346",
+  "patient": "PS-P-0065",
+  "date": "2025-11-25",
+  "amount": 11622,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8122
+   }
+  ]
+ },
+ {
+  "id": "IV-0347",
+  "patient": "PS-P-0065",
+  "date": "2026-05-31",
+  "amount": 13471,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9971
+   }
+  ]
+ },
+ {
+  "id": "IV-0348",
+  "patient": "PS-P-0066",
+  "date": "2025-04-21",
+  "amount": 10793,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7293
+   }
+  ]
+ },
+ {
+  "id": "IV-0349",
+  "patient": "PS-P-0066",
+  "date": "2025-08-23",
+  "amount": 9842,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6342
+   }
+  ]
+ },
+ {
+  "id": "IV-0350",
+  "patient": "PS-P-0066",
+  "date": "2025-09-15",
+  "amount": 6565,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3065
+   }
+  ]
+ },
+ {
+  "id": "IV-0351",
+  "patient": "PS-P-0066",
+  "date": "2025-11-07",
+  "amount": 5795,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2295
+   }
+  ]
+ },
+ {
+  "id": "IV-0352",
+  "patient": "PS-P-0066",
+  "date": "2026-02-28",
+  "amount": 16474,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12974
+   }
+  ]
+ },
+ {
+  "id": "IV-0353",
+  "patient": "PS-P-0066",
+  "date": "2026-03-07",
+  "amount": 5766,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2266
+   }
+  ]
+ },
+ {
+  "id": "IV-0354",
+  "patient": "PS-P-0066",
+  "date": "2026-04-08",
+  "amount": 8073,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4573
+   }
+  ]
+ },
+ {
+  "id": "IV-0355",
+  "patient": "PS-P-0067",
+  "date": "2025-04-24",
+  "amount": 10821,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7321
+   }
+  ]
+ },
+ {
+  "id": "IV-0356",
+  "patient": "PS-P-0067",
+  "date": "2025-10-22",
+  "amount": 3799,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 299
+   }
+  ]
+ },
+ {
+  "id": "IV-0357",
+  "patient": "PS-P-0067",
+  "date": "2025-11-11",
+  "amount": 8282,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4782
+   }
+  ]
+ },
+ {
+  "id": "IV-0358",
+  "patient": "PS-P-0067",
+  "date": "2026-01-03",
+  "amount": 7056,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3556
+   }
+  ]
+ },
+ {
+  "id": "IV-0359",
+  "patient": "PS-P-0067",
+  "date": "2026-02-07",
+  "amount": 8581,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5081
+   }
+  ]
+ },
+ {
+  "id": "IV-0360",
+  "patient": "PS-P-0068",
+  "date": "2025-04-22",
+  "amount": 3877,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 377
+   }
+  ]
+ },
+ {
+  "id": "IV-0361",
+  "patient": "PS-P-0068",
+  "date": "2025-06-09",
+  "amount": 6502,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3002
+   }
+  ]
+ },
+ {
+  "id": "IV-0362",
+  "patient": "PS-P-0068",
+  "date": "2026-01-21",
+  "amount": 12328,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8828
+   }
+  ]
+ },
+ {
+  "id": "IV-0363",
+  "patient": "PS-P-0068",
+  "date": "2026-02-18",
+  "amount": 5190,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1690
+   }
+  ]
+ },
+ {
+  "id": "IV-0364",
+  "patient": "PS-P-0068",
+  "date": "2026-03-05",
+  "amount": 12488,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8988
+   }
+  ]
+ },
+ {
+  "id": "IV-0365",
+  "patient": "PS-P-0068",
+  "date": "2026-05-01",
+  "amount": 11487,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7987
+   }
+  ]
+ },
+ {
+  "id": "IV-0366",
+  "patient": "PS-P-0069",
+  "date": "2025-05-05",
+  "amount": 13351,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9851
+   }
+  ]
+ },
+ {
+  "id": "IV-0367",
+  "patient": "PS-P-0069",
+  "date": "2025-11-01",
+  "amount": 6507,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3007
+   }
+  ]
+ },
+ {
+  "id": "IV-0368",
+  "patient": "PS-P-0069",
+  "date": "2025-12-19",
+  "amount": 4226,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 726
+   }
+  ]
+ },
+ {
+  "id": "IV-0369",
+  "patient": "PS-P-0070",
+  "date": "2025-06-13",
+  "amount": 4355,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 855
+   }
+  ]
+ },
+ {
+  "id": "IV-0370",
+  "patient": "PS-P-0070",
+  "date": "2025-09-23",
+  "amount": 7819,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4319
+   }
+  ]
+ },
+ {
+  "id": "IV-0371",
+  "patient": "PS-P-0070",
+  "date": "2025-10-09",
+  "amount": 6391,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2891
+   }
+  ]
+ },
+ {
+  "id": "IV-0372",
+  "patient": "PS-P-0070",
+  "date": "2025-12-16",
+  "amount": 6361,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2861
+   }
+  ]
+ },
+ {
+  "id": "IV-0373",
+  "patient": "PS-P-0070",
+  "date": "2026-01-25",
+  "amount": 3342,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3342
+   }
+  ]
+ },
+ {
+  "id": "IV-0374",
+  "patient": "PS-P-0071",
+  "date": "2025-06-28",
+  "amount": 16042,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12542
+   }
+  ]
+ },
+ {
+  "id": "IV-0375",
+  "patient": "PS-P-0071",
+  "date": "2026-03-16",
+  "amount": 9730,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6230
+   }
+  ]
+ },
+ {
+  "id": "IV-0376",
+  "patient": "PS-P-0072",
+  "date": "2025-06-24",
+  "amount": 6016,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2516
+   }
+  ]
+ },
+ {
+  "id": "IV-0377",
+  "patient": "PS-P-0072",
+  "date": "2026-03-18",
+  "amount": 7468,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3968
+   }
+  ]
+ },
+ {
+  "id": "IV-0378",
+  "patient": "PS-P-0072",
+  "date": "2026-05-15",
+  "amount": 8081,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4581
+   }
+  ]
+ },
+ {
+  "id": "IV-0379",
+  "patient": "PS-P-0073",
+  "date": "2025-04-23",
+  "amount": 7651,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4151
+   }
+  ]
+ },
+ {
+  "id": "IV-0380",
+  "patient": "PS-P-0073",
+  "date": "2025-06-04",
+  "amount": 14497,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10997
+   }
+  ]
+ },
+ {
+  "id": "IV-0381",
+  "patient": "PS-P-0073",
+  "date": "2025-07-24",
+  "amount": 7401,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3901
+   }
+  ]
+ },
+ {
+  "id": "IV-0382",
+  "patient": "PS-P-0073",
+  "date": "2025-10-25",
+  "amount": 5992,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2492
+   }
+  ]
+ },
+ {
+  "id": "IV-0383",
+  "patient": "PS-P-0073",
+  "date": "2025-12-20",
+  "amount": 7887,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4387
+   }
+  ]
+ },
+ {
+  "id": "IV-0384",
+  "patient": "PS-P-0073",
+  "date": "2026-01-04",
+  "amount": 13556,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10056
+   }
+  ]
+ },
+ {
+  "id": "IV-0385",
+  "patient": "PS-P-0073",
+  "date": "2026-01-19",
+  "amount": 6713,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3213
+   }
+  ]
+ },
+ {
+  "id": "IV-0386",
+  "patient": "PS-P-0074",
+  "date": "2025-09-05",
+  "amount": 11962,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8462
+   }
+  ]
+ },
+ {
+  "id": "IV-0387",
+  "patient": "PS-P-0074",
+  "date": "2025-10-12",
+  "amount": 18478,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14978
+   }
+  ]
+ },
+ {
+  "id": "IV-0388",
+  "patient": "PS-P-0074",
+  "date": "2025-11-22",
+  "amount": 7901,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4401
+   }
+  ]
+ },
+ {
+  "id": "IV-0389",
+  "patient": "PS-P-0074",
+  "date": "2025-12-28",
+  "amount": 5578,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2078
+   }
+  ]
+ },
+ {
+  "id": "IV-0390",
+  "patient": "PS-P-0074",
+  "date": "2026-02-10",
+  "amount": 13179,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9679
+   }
+  ]
+ },
+ {
+  "id": "IV-0391",
+  "patient": "PS-P-0075",
+  "date": "2025-08-28",
+  "amount": 7114,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3614
+   }
+  ]
+ },
+ {
+  "id": "IV-0392",
+  "patient": "PS-P-0075",
+  "date": "2025-10-16",
+  "amount": 5921,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2421
+   }
+  ]
+ },
+ {
+  "id": "IV-0393",
+  "patient": "PS-P-0075",
+  "date": "2025-12-09",
+  "amount": 7842,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4342
+   }
+  ]
+ },
+ {
+  "id": "IV-0394",
+  "patient": "PS-P-0075",
+  "date": "2026-05-06",
+  "amount": 9963,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6463
+   }
+  ]
+ },
+ {
+  "id": "IV-0395",
+  "patient": "PS-P-0076",
+  "date": "2025-04-19",
+  "amount": 12231,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8731
+   }
+  ]
+ },
+ {
+  "id": "IV-0396",
+  "patient": "PS-P-0076",
+  "date": "2025-05-31",
+  "amount": 16208,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12708
+   }
+  ]
+ },
+ {
+  "id": "IV-0397",
+  "patient": "PS-P-0077",
+  "date": "2025-04-10",
+  "amount": 6271,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2771
+   }
+  ]
+ },
+ {
+  "id": "IV-0398",
+  "patient": "PS-P-0077",
+  "date": "2025-06-15",
+  "amount": 10653,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7153
+   }
+  ]
+ },
+ {
+  "id": "IV-0399",
+  "patient": "PS-P-0077",
+  "date": "2025-07-29",
+  "amount": 5110,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1610
+   }
+  ]
+ },
+ {
+  "id": "IV-0400",
+  "patient": "PS-P-0077",
+  "date": "2025-07-30",
+  "amount": 9645,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6145
+   }
+  ]
+ },
+ {
+  "id": "IV-0401",
+  "patient": "PS-P-0077",
+  "date": "2026-04-06",
+  "amount": 5035,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1535
+   }
+  ]
+ },
+ {
+  "id": "IV-0402",
+  "patient": "PS-P-0078",
+  "date": "2025-04-23",
+  "amount": 11522,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8022
+   }
+  ]
+ },
+ {
+  "id": "IV-0403",
+  "patient": "PS-P-0078",
+  "date": "2025-06-09",
+  "amount": 16606,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13106
+   }
+  ]
+ },
+ {
+  "id": "IV-0404",
+  "patient": "PS-P-0078",
+  "date": "2025-07-16",
+  "amount": 10392,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6892
+   }
+  ]
+ },
+ {
+  "id": "IV-0405",
+  "patient": "PS-P-0078",
+  "date": "2025-07-26",
+  "amount": 10038,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6538
+   }
+  ]
+ },
+ {
+  "id": "IV-0406",
+  "patient": "PS-P-0078",
+  "date": "2025-10-26",
+  "amount": 17855,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14355
+   }
+  ]
+ },
+ {
+  "id": "IV-0407",
+  "patient": "PS-P-0079",
+  "date": "2026-01-22",
+  "amount": 8924,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5424
+   }
+  ]
+ },
+ {
+  "id": "IV-0408",
+  "patient": "PS-P-0079",
+  "date": "2026-03-25",
+  "amount": 10811,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7311
+   }
+  ]
+ },
+ {
+  "id": "IV-0409",
+  "patient": "PS-P-0080",
+  "date": "2025-09-30",
+  "amount": 14111,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10611
+   }
+  ]
+ },
+ {
+  "id": "IV-0410",
+  "patient": "PS-P-0080",
+  "date": "2025-12-28",
+  "amount": 7311,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3811
+   }
+  ]
+ },
+ {
+  "id": "IV-0411",
+  "patient": "PS-P-0081",
+  "date": "2025-08-24",
+  "amount": 13470,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9970
+   }
+  ]
+ },
+ {
+  "id": "IV-0412",
+  "patient": "PS-P-0081",
+  "date": "2025-12-22",
+  "amount": 5087,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1587
+   }
+  ]
+ },
+ {
+  "id": "IV-0413",
+  "patient": "PS-P-0081",
+  "date": "2026-02-28",
+  "amount": 7342,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3842
+   }
+  ]
+ },
+ {
+  "id": "IV-0414",
+  "patient": "PS-P-0081",
+  "date": "2026-05-26",
+  "amount": 6936,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3436
+   }
+  ]
+ },
+ {
+  "id": "IV-0415",
+  "patient": "PS-P-0081",
+  "date": "2026-05-27",
+  "amount": 13683,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10183
+   }
+  ]
+ },
+ {
+  "id": "IV-0416",
+  "patient": "PS-P-0082",
+  "date": "2025-05-02",
+  "amount": 5702,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2202
+   }
+  ]
+ },
+ {
+  "id": "IV-0417",
+  "patient": "PS-P-0082",
+  "date": "2025-06-03",
+  "amount": 6524,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3024
+   }
+  ]
+ },
+ {
+  "id": "IV-0418",
+  "patient": "PS-P-0082",
+  "date": "2025-09-10",
+  "amount": 17567,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14067
+   }
+  ]
+ },
+ {
+  "id": "IV-0419",
+  "patient": "PS-P-0082",
+  "date": "2025-09-22",
+  "amount": 5166,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1666
+   }
+  ]
+ },
+ {
+  "id": "IV-0420",
+  "patient": "PS-P-0082",
+  "date": "2025-09-29",
+  "amount": 5217,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1717
+   }
+  ]
+ },
+ {
+  "id": "IV-0421",
+  "patient": "PS-P-0082",
+  "date": "2025-10-20",
+  "amount": 15557,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 12057
+   }
+  ]
+ },
+ {
+  "id": "IV-0422",
+  "patient": "PS-P-0082",
+  "date": "2026-05-30",
+  "amount": 12012,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8512
+   }
+  ]
+ },
+ {
+  "id": "IV-0423",
+  "patient": "PS-P-0083",
+  "date": "2025-05-19",
+  "amount": 12020,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8520
+   }
+  ]
+ },
+ {
+  "id": "IV-0424",
+  "patient": "PS-P-0083",
+  "date": "2025-06-18",
+  "amount": 5373,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1873
+   }
+  ]
+ },
+ {
+  "id": "IV-0425",
+  "patient": "PS-P-0083",
+  "date": "2025-11-07",
+  "amount": 10581,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7081
+   }
+  ]
+ },
+ {
+  "id": "IV-0426",
+  "patient": "PS-P-0083",
+  "date": "2025-12-16",
+  "amount": 12040,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8540
+   }
+  ]
+ },
+ {
+  "id": "IV-0427",
+  "patient": "PS-P-0084",
+  "date": "2025-05-07",
+  "amount": 18031,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14531
+   }
+  ]
+ },
+ {
+  "id": "IV-0428",
+  "patient": "PS-P-0084",
+  "date": "2025-08-28",
+  "amount": 8350,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4850
+   }
+  ]
+ },
+ {
+  "id": "IV-0429",
+  "patient": "PS-P-0085",
+  "date": "2025-08-01",
+  "amount": 6610,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3110
+   }
+  ]
+ },
+ {
+  "id": "IV-0430",
+  "patient": "PS-P-0085",
+  "date": "2025-08-08",
+  "amount": 5162,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1662
+   }
+  ]
+ },
+ {
+  "id": "IV-0431",
+  "patient": "PS-P-0085",
+  "date": "2025-10-16",
+  "amount": 4410,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 910
+   }
+  ]
+ },
+ {
+  "id": "IV-0432",
+  "patient": "PS-P-0085",
+  "date": "2025-10-29",
+  "amount": 5259,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1759
+   }
+  ]
+ },
+ {
+  "id": "IV-0433",
+  "patient": "PS-P-0085",
+  "date": "2025-12-16",
+  "amount": 4743,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1243
+   }
+  ]
+ },
+ {
+  "id": "IV-0434",
+  "patient": "PS-P-0085",
+  "date": "2026-02-19",
+  "amount": 4277,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 777
+   }
+  ]
+ },
+ {
+  "id": "IV-0435",
+  "patient": "PS-P-0086",
+  "date": "2025-06-23",
+  "amount": 8380,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4880
+   }
+  ]
+ },
+ {
+  "id": "IV-0436",
+  "patient": "PS-P-0086",
+  "date": "2025-12-26",
+  "amount": 16592,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13092
+   }
+  ]
+ },
+ {
+  "id": "IV-0437",
+  "patient": "PS-P-0086",
+  "date": "2026-05-23",
+  "amount": 6128,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2628
+   }
+  ]
+ },
+ {
+  "id": "IV-0438",
+  "patient": "PS-P-0087",
+  "date": "2025-06-17",
+  "amount": 12604,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9104
+   }
+  ]
+ },
+ {
+  "id": "IV-0439",
+  "patient": "PS-P-0087",
+  "date": "2025-09-16",
+  "amount": 9375,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5875
+   }
+  ]
+ },
+ {
+  "id": "IV-0440",
+  "patient": "PS-P-0087",
+  "date": "2025-10-27",
+  "amount": 11409,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7909
+   }
+  ]
+ },
+ {
+  "id": "IV-0441",
+  "patient": "PS-P-0087",
+  "date": "2026-01-10",
+  "amount": 13434,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9934
+   }
+  ]
+ },
+ {
+  "id": "IV-0442",
+  "patient": "PS-P-0088",
+  "date": "2025-04-22",
+  "amount": 6135,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2635
+   }
+  ]
+ },
+ {
+  "id": "IV-0443",
+  "patient": "PS-P-0088",
+  "date": "2025-09-26",
+  "amount": 5323,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1823
+   }
+  ]
+ },
+ {
+  "id": "IV-0444",
+  "patient": "PS-P-0088",
+  "date": "2025-11-22",
+  "amount": 4905,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1405
+   }
+  ]
+ },
+ {
+  "id": "IV-0445",
+  "patient": "PS-P-0088",
+  "date": "2026-01-18",
+  "amount": 5422,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1922
+   }
+  ]
+ },
+ {
+  "id": "IV-0446",
+  "patient": "PS-P-0088",
+  "date": "2026-02-04",
+  "amount": 17153,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13653
+   }
+  ]
+ },
+ {
+  "id": "IV-0447",
+  "patient": "PS-P-0088",
+  "date": "2026-03-05",
+  "amount": 4666,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1166
+   }
+  ]
+ },
+ {
+  "id": "IV-0448",
+  "patient": "PS-P-0089",
+  "date": "2025-07-26",
+  "amount": 9618,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6118
+   }
+  ]
+ },
+ {
+  "id": "IV-0449",
+  "patient": "PS-P-0089",
+  "date": "2025-07-27",
+  "amount": 9366,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5866
+   }
+  ]
+ },
+ {
+  "id": "IV-0450",
+  "patient": "PS-P-0089",
+  "date": "2025-09-12",
+  "amount": 14460,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10960
+   }
+  ]
+ },
+ {
+  "id": "IV-0451",
+  "patient": "PS-P-0090",
+  "date": "2024-01-20",
+  "amount": 12412,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8912
+   }
+  ]
+ },
+ {
+  "id": "IV-0452",
+  "patient": "PS-P-0091",
+  "date": "2024-04-06",
+  "amount": 17955,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14455
+   }
+  ]
+ },
+ {
+  "id": "IV-0453",
+  "patient": "PS-P-0091",
+  "date": "2025-04-18",
+  "amount": 18236,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14736
+   }
+  ]
+ },
+ {
+  "id": "IV-0454",
+  "patient": "PS-P-0092",
+  "date": "2024-02-11",
+  "amount": 5039,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1539
+   }
+  ]
+ },
+ {
+  "id": "IV-0455",
+  "patient": "PS-P-0093",
+  "date": "2024-03-03",
+  "amount": 4439,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 939
+   }
+  ]
+ },
+ {
+  "id": "IV-0456",
+  "patient": "PS-P-0093",
+  "date": "2024-05-14",
+  "amount": 5386,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1886
+   }
+  ]
+ },
+ {
+  "id": "IV-0457",
+  "patient": "PS-P-0093",
+  "date": "2024-06-22",
+  "amount": 5324,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1824
+   }
+  ]
+ },
+ {
+  "id": "IV-0458",
+  "patient": "PS-P-0094",
+  "date": "2024-04-11",
+  "amount": 12544,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9044
+   }
+  ]
+ },
+ {
+  "id": "IV-0459",
+  "patient": "PS-P-0094",
+  "date": "2025-04-27",
+  "amount": 7015,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3515
+   }
+  ]
+ },
+ {
+  "id": "IV-0460",
+  "patient": "PS-P-0095",
+  "date": "2024-03-01",
+  "amount": 8831,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5331
+   }
+  ]
+ },
+ {
+  "id": "IV-0461",
+  "patient": "PS-P-0095",
+  "date": "2024-11-02",
+  "amount": 7871,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4371
+   }
+  ]
+ },
+ {
+  "id": "IV-0462",
+  "patient": "PS-P-0095",
+  "date": "2025-01-30",
+  "amount": 5684,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2184
+   }
+  ]
+ },
+ {
+  "id": "IV-0463",
+  "patient": "PS-P-0096",
+  "date": "2024-10-12",
+  "amount": 6785,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3285
+   }
+  ]
+ },
+ {
+  "id": "IV-0464",
+  "patient": "PS-P-0096",
+  "date": "2025-02-18",
+  "amount": 10500,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7000
+   }
+  ]
+ },
+ {
+  "id": "IV-0465",
+  "patient": "PS-P-0096",
+  "date": "2025-03-02",
+  "amount": 6885,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3385
+   }
+  ]
+ },
+ {
+  "id": "IV-0466",
+  "patient": "PS-P-0097",
+  "date": "2024-04-08",
+  "amount": 12285,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8785
+   }
+  ]
+ },
+ {
+  "id": "IV-0467",
+  "patient": "PS-P-0097",
+  "date": "2025-03-14",
+  "amount": 9879,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6379
+   }
+  ]
+ },
+ {
+  "id": "IV-0468",
+  "patient": "PS-P-0098",
+  "date": "2024-05-17",
+  "amount": 13529,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10029
+   }
+  ]
+ },
+ {
+  "id": "IV-0469",
+  "patient": "PS-P-0098",
+  "date": "2024-07-23",
+  "amount": 16524,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13024
+   }
+  ]
+ },
+ {
+  "id": "IV-0470",
+  "patient": "PS-P-0098",
+  "date": "2024-07-30",
+  "amount": 11755,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8255
+   }
+  ]
+ },
+ {
+  "id": "IV-0471",
+  "patient": "PS-P-0099",
+  "date": "2024-01-27",
+  "amount": 8800,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5300
+   }
+  ]
+ },
+ {
+  "id": "IV-0472",
+  "patient": "PS-P-0099",
+  "date": "2024-09-29",
+  "amount": 10406,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6906
+   }
+  ]
+ },
+ {
+  "id": "IV-0473",
+  "patient": "PS-P-0100",
+  "date": "2024-02-25",
+  "amount": 17971,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14471
+   }
+  ]
+ },
+ {
+  "id": "IV-0474",
+  "patient": "PS-P-0100",
+  "date": "2024-04-30",
+  "amount": 7643,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4143
+   }
+  ]
+ },
+ {
+  "id": "IV-0475",
+  "patient": "PS-P-0100",
+  "date": "2024-07-10",
+  "amount": 13680,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10180
+   }
+  ]
+ },
+ {
+  "id": "IV-0476",
+  "patient": "PS-P-0101",
+  "date": "2024-02-24",
+  "amount": 5083,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1583
+   }
+  ]
+ },
+ {
+  "id": "IV-0477",
+  "patient": "PS-P-0102",
+  "date": "2024-05-30",
+  "amount": 5702,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2202
+   }
+  ]
+ },
+ {
+  "id": "IV-0478",
+  "patient": "PS-P-0102",
+  "date": "2024-07-25",
+  "amount": 5993,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2493
+   }
+  ]
+ },
+ {
+  "id": "IV-0479",
+  "patient": "PS-P-0103",
+  "date": "2024-01-10",
+  "amount": 10100,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6600
+   }
+  ]
+ },
+ {
+  "id": "IV-0480",
+  "patient": "PS-P-0103",
+  "date": "2024-09-28",
+  "amount": 10647,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7147
+   }
+  ]
+ },
+ {
+  "id": "IV-0481",
+  "patient": "PS-P-0103",
+  "date": "2025-01-11",
+  "amount": 18375,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14875
+   }
+  ]
+ },
+ {
+  "id": "IV-0482",
+  "patient": "PS-P-0104",
+  "date": "2024-04-10",
+  "amount": 9099,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5599
+   }
+  ]
+ },
+ {
+  "id": "IV-0483",
+  "patient": "PS-P-0105",
+  "date": "2024-08-16",
+  "amount": 16830,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13330
+   }
+  ]
+ },
+ {
+  "id": "IV-0484",
+  "patient": "PS-P-0106",
+  "date": "2025-05-03",
+  "amount": 7096,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3596
+   }
+  ]
+ },
+ {
+  "id": "IV-0485",
+  "patient": "PS-P-0106",
+  "date": "2025-05-06",
+  "amount": 9095,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5595
+   }
+  ]
+ },
+ {
+  "id": "IV-0486",
+  "patient": "PS-P-0106",
+  "date": "2025-06-14",
+  "amount": 11852,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8352
+   }
+  ]
+ },
+ {
+  "id": "IV-0487",
+  "patient": "PS-P-0106",
+  "date": "2025-07-03",
+  "amount": 7364,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3864
+   }
+  ]
+ },
+ {
+  "id": "IV-0488",
+  "patient": "PS-P-0106",
+  "date": "2025-07-31",
+  "amount": 3871,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 371
+   }
+  ]
+ },
+ {
+  "id": "IV-0489",
+  "patient": "PS-P-0106",
+  "date": "2026-03-26",
+  "amount": 16693,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 13193
+   }
+  ]
+ },
+ {
+  "id": "IV-0490",
+  "patient": "PS-P-0107",
+  "date": "2025-06-22",
+  "amount": 10514,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7014
+   }
+  ]
+ },
+ {
+  "id": "IV-0491",
+  "patient": "PS-P-0107",
+  "date": "2025-07-25",
+  "amount": 5269,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1769
+   }
+  ]
+ },
+ {
+  "id": "IV-0492",
+  "patient": "PS-P-0107",
+  "date": "2025-12-01",
+  "amount": 9349,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5849
+   }
+  ]
+ },
+ {
+  "id": "IV-0493",
+  "patient": "PS-P-0108",
+  "date": "2025-10-18",
+  "amount": 9570,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6070
+   }
+  ]
+ },
+ {
+  "id": "IV-0494",
+  "patient": "PS-P-0108",
+  "date": "2026-02-03",
+  "amount": 7505,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4005
+   }
+  ]
+ },
+ {
+  "id": "IV-0495",
+  "patient": "PS-P-0108",
+  "date": "2026-02-24",
+  "amount": 10531,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7031
+   }
+  ]
+ },
+ {
+  "id": "IV-0496",
+  "patient": "PS-P-0108",
+  "date": "2026-03-16",
+  "amount": 10385,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6885
+   }
+  ]
+ },
+ {
+  "id": "IV-0497",
+  "patient": "PS-P-0108",
+  "date": "2026-05-04",
+  "amount": 5405,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1905
+   }
+  ]
+ },
+ {
+  "id": "IV-0498",
+  "patient": "PS-P-0108",
+  "date": "2026-05-04",
+  "amount": 8768,
+  "paid": false,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5268
+   }
+  ]
+ },
+ {
+  "id": "IV-0499",
+  "patient": "PS-P-0109",
+  "date": "2025-06-15",
+  "amount": 8189,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4689
+   }
+  ]
+ },
+ {
+  "id": "IV-0500",
+  "patient": "PS-P-0109",
+  "date": "2025-07-27",
+  "amount": 10529,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7029
+   }
+  ]
+ },
+ {
+  "id": "IV-0501",
+  "patient": "PS-P-0109",
+  "date": "2025-11-29",
+  "amount": 6946,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3446
+   }
+  ]
+ },
+ {
+  "id": "IV-0502",
+  "patient": "PS-P-0109",
+  "date": "2025-12-24",
+  "amount": 11823,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8323
+   }
+  ]
+ },
+ {
+  "id": "IV-0503",
+  "patient": "PS-P-0110",
+  "date": "2025-05-26",
+  "amount": 6615,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3115
+   }
+  ]
+ },
+ {
+  "id": "IV-0504",
+  "patient": "PS-P-0110",
+  "date": "2025-10-11",
+  "amount": 6763,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3263
+   }
+  ]
+ },
+ {
+  "id": "IV-0505",
+  "patient": "PS-P-0110",
+  "date": "2025-12-22",
+  "amount": 18075,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 14575
+   }
+  ]
+ },
+ {
+  "id": "IV-0506",
+  "patient": "PS-P-0110",
+  "date": "2025-12-30",
+  "amount": 6216,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2716
+   }
+  ]
+ },
+ {
+  "id": "IV-0507",
+  "patient": "PS-P-0063",
+  "date": "2026-05-24",
+  "amount": 6523,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3023
+   }
+  ]
+ },
+ {
+  "id": "IV-0508",
+  "patient": "PS-P-0032",
+  "date": "2026-05-28",
+  "amount": 8233,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4733
+   }
+  ]
+ },
+ {
+  "id": "IV-0509",
+  "patient": "PS-P-0051",
+  "date": "2026-05-31",
+  "amount": 4962,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1462
+   }
+  ]
+ },
+ {
+  "id": "IV-0510",
+  "patient": "PS-P-0109",
+  "date": "2026-05-20",
+  "amount": 8319,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4819
+   }
+  ]
+ },
+ {
+  "id": "IV-0511",
+  "patient": "PS-P-0095",
+  "date": "2026-05-22",
+  "amount": 4667,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1167
+   }
+  ]
+ },
+ {
+  "id": "IV-0512",
+  "patient": "PS-P-0052",
+  "date": "2026-05-24",
+  "amount": 7761,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4261
+   }
+  ]
+ },
+ {
+  "id": "IV-0513",
+  "patient": "PS-P-0087",
+  "date": "2026-05-24",
+  "amount": 4773,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1273
+   }
+  ]
+ },
+ {
+  "id": "IV-0514",
+  "patient": "PS-P-0003",
+  "date": "2026-05-25",
+  "amount": 4786,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 1286
+   }
+  ]
+ },
+ {
+  "id": "IV-0515",
+  "patient": "PS-P-0083",
+  "date": "2026-05-25",
+  "amount": 6727,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 3227
+   }
+  ]
+ },
+ {
+  "id": "IV-0516",
+  "patient": "PS-P-0083",
+  "date": "2026-05-26",
+  "amount": 6463,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 2963
+   }
+  ]
+ },
+ {
+  "id": "IV-0517",
+  "patient": "PS-P-0021",
+  "date": "2025-12-04",
+  "amount": 8751,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5251
+   }
+  ]
+ },
+ {
+  "id": "IV-0518",
+  "patient": "PS-P-0030",
+  "date": "2025-12-27",
+  "amount": 13374,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9874
+   }
+  ]
+ },
+ {
+  "id": "IV-0519",
+  "patient": "PS-P-0110",
+  "date": "2025-12-29",
+  "amount": 11784,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8284
+   }
+  ]
+ },
+ {
+  "id": "IV-0520",
+  "patient": "PS-P-0050",
+  "date": "2026-01-29",
+  "amount": 12398,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8898
+   }
+  ]
+ },
+ {
+  "id": "IV-0521",
+  "patient": "PS-P-0109",
+  "date": "2026-02-06",
+  "amount": 11526,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8026
+   }
+  ]
+ },
+ {
+  "id": "IV-0522",
+  "patient": "PS-P-0012",
+  "date": "2026-01-27",
+  "amount": 7596,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4096
+   }
+  ]
+ },
+ {
+  "id": "IV-0523",
+  "patient": "PS-P-0078",
+  "date": "2026-02-26",
+  "amount": 13544,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 10044
+   }
+  ]
+ },
+ {
+  "id": "IV-0524",
+  "patient": "PS-P-0064",
+  "date": "2026-03-04",
+  "amount": 10455,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6955
+   }
+  ]
+ },
+ {
+  "id": "IV-0525",
+  "patient": "PS-P-0003",
+  "date": "2026-03-02",
+  "amount": 11415,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 7915
+   }
+  ]
+ },
+ {
+  "id": "IV-0526",
+  "patient": "PS-P-0023",
+  "date": "2026-02-25",
+  "amount": 8702,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 5202
+   }
+  ]
+ },
+ {
+  "id": "IV-0527",
+  "patient": "PS-P-0015",
+  "date": "2026-03-24",
+  "amount": 10496,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6996
+   }
+  ]
+ },
+ {
+  "id": "IV-0528",
+  "patient": "PS-P-0063",
+  "date": "2026-04-04",
+  "amount": 12155,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8655
+   }
+  ]
+ },
+ {
+  "id": "IV-0529",
+  "patient": "PS-P-0099",
+  "date": "2026-03-26",
+  "amount": 12827,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9327
+   }
+  ]
+ },
+ {
+  "id": "IV-0530",
+  "patient": "PS-P-0066",
+  "date": "2026-03-24",
+  "amount": 13413,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9913
+   }
+  ]
+ },
+ {
+  "id": "IV-0531",
+  "patient": "PS-P-0057",
+  "date": "2026-03-29",
+  "amount": 12253,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8753
+   }
+  ]
+ },
+ {
+  "id": "IV-0532",
+  "patient": "PS-P-0079",
+  "date": "2026-05-09",
+  "amount": 10058,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 6558
+   }
+  ]
+ },
+ {
+  "id": "IV-0533",
+  "patient": "PS-P-0022",
+  "date": "2026-04-22",
+  "amount": 13288,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9788
+   }
+  ]
+ },
+ {
+  "id": "IV-0534",
+  "patient": "PS-P-0021",
+  "date": "2026-05-03",
+  "amount": 11860,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8360
+   }
+  ]
+ },
+ {
+  "id": "IV-0535",
+  "patient": "PS-P-0013",
+  "date": "2026-05-08",
+  "amount": 12553,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 9053
+   }
+  ]
+ },
+ {
+  "id": "IV-0536",
+  "patient": "PS-P-0016",
+  "date": "2026-05-06",
+  "amount": 12154,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 8654
+   }
+  ]
+ },
+ {
+  "id": "IV-0537",
+  "patient": "PS-P-0001",
+  "date": "2026-05-05",
+  "amount": 8294,
+  "paid": true,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "amount": 3500
+   },
+   {
+    "item": "history",
+    "name": "Medicines and services",
+    "amount": 4794
+   }
+  ]
+ }
+]

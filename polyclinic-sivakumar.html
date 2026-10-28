@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polyclinic Sivakumar Clinic Desk</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
+.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Operational Efficiency",
+    "problemType": "Business workflow",
+    "problem": "In a one-doctor GP clinic, every visit passes through three people: the clinic assistant, the GP and the pharmacist. Each step waits on the one before it, and a missed allergy, a wrong price or an MC (the doctor's sick-leave letter) the GP never decided reaches the patient. Each person needs to focus on their own work while the visit moves to the next person in the right order.",
+    "built": "One AI assistant serves all three people and gives each a copy of the seven tools that lists only their own actions. Code runs the pharmacist's four checks, prices every bill, and sends each finished step and each query or question to the right person. The GP decides the diagnosis, prescription, MCs and referrals; the pharmacist dispenses; the clinic assistant takes payment.",
+    "evidence": "All 27 test runs passed with no hard-limit breach: 16 use cases sent by the person who raises them, 3 also sent by the person who may do the work, 4 team workflows and 4 failure runs. All 49 steps ended on the right tool and action with no call outside a person's own actions, and the records written matched the answer key. Before real users it still needs a proper sign-in, a security review, a GP and pharmacist approving the formulary and dose ranges, a monitoring owner and a rollback plan."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:polyclinic-sivakumar"></div>
+<div class="top"><h1>Polyclinic Sivakumar Clinic Desk</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/clinic-desk.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/polyclinic-sivakumar" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<img class="cover" src="images/polyclinic-sivakumar/cover.jpeg" alt="Illustration of a small clinic in three rooms: the clinic assistant checking in a family at the front counter, the GP examining an elderly patient, and the pharmacist checking a prescription in the dispensary, with a dotted line linking the rooms">
+<p>Designed for a one-doctor GP clinic where three people share every patient visit. The clinic assistant registers, checks in and bills; the GP diagnoses and prescribes; the pharmacist checks and dispenses. Each step waits on the one before it, so the visit stalls when a step is missed between rooms, and a missed allergy or a wrong price reaches the patient.</p>
+<p>I built one AI desk assistant that serves Siti Kasim at the desk, Dr Sivakumar in the consultation room and Ms Yong in the dispensary, and gives each of them only their own work. The AI understands each request and picks the step; code runs the pharmacist's checks, prices the bill and passes each finished step to the next person as a task. When a check fails or a patient's question needs a decision, code chooses who receives it and sends that person a notice written in code.</p>
+<p>Dr Sivakumar keeps every clinical decision: the diagnosis, the prescription and any change to it, MCs (sick-leave letters) and referrals. Ms Yong keeps dispensing, and Siti keeps payments and the day's cash. Tested on 27 runs against an answer key written beforehand, and passed all 27; replay the recorded runs or try it live on the <a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/clinic-desk.html" target="_blank" rel="noopener">clinic desk</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Operational Efficiency</td></tr><tr><th>Problem type</th><td>Business workflow</td></tr><tr><th>Problem</th><td>In a one-doctor GP clinic, every visit passes through three people: the clinic assistant, the GP and the pharmacist. Each step waits on the one before it, and a missed allergy, a wrong price or an MC (the doctor's sick-leave letter) the GP never decided reaches the patient. Each person needs to focus on their own work while the visit moves to the next person in the right order.</td></tr><tr><th>Built</th><td>One AI assistant serves all three people and gives each a copy of the seven tools that lists only their own actions. Code runs the pharmacist's four checks, prices every bill, and sends each finished step and each query or question to the right person. The GP decides the diagnosis, prescription, MCs and referrals; the pharmacist dispenses; the clinic assistant takes payment.</td></tr><tr><th>Evidence</th><td>All 27 test runs passed with no hard-limit breach: 16 use cases sent by the person who raises them, 3 also sent by the person who may do the work, 4 team workflows and 4 failure runs. All 49 steps ended on the right tool and action with no call outside a person's own actions, and the records written matched the answer key. Before real users it still needs a proper sign-in, a security review, a GP and pharmacist approving the formulary and dose ranges, a monitoring owner and a rollback plan.</td></tr></table>
+<h2>How It Works</h2>
+<p>One standard visit for a walk-in not on a panel (a company scheme that pays part of the bill), from check-in to payment. Not shown: panel billing, MCs and referral letters, and questions the desk passes on, which are in Test Results.</p>
+<div class="wf"><script type="application/json">{"id":"ps","hz":{"nodes":[{"id":"u1","r":1,"c":1,"b":["c","Siti checks in a walk-in"]},{"id":"h1","r":1,"c":2,"b":["p","Dr Sivakumar diagnoses and prescribes"]},{"id":"a1","r":1,"c":3,"b":["a","Records the prescription as said","It never chooses a dose."]},{"id":"h2","r":1,"c":4,"b":["p","Ms Yong asks to check and dispense","One step; code runs the checks."]},{"id":"s1","r":1,"c":5,"b":["s","Code runs the four checks","Complete, allergy, dose, stock."]},{"id":"o1","r":1,"c":6,"b":["o","Bill paid, visit closed","Dispensed; priced in code; Siti takes payment."]},{"id":"s2","r":2,"c":5,"b":["s","Held; query sent to Dr Sivakumar","Code gives the reason."]},{"id":"h3","r":3,"c":5,"b":["p","Dr Sivakumar changes the prescription","Then checked again."]}],"edges":[["u1","h1"],["h1","a1"],["a1","h2"],["h2","s1"],["s1","o1","All four pass"],["s1","s2","A check fails"],["s2","h3"]]},"rows":[{"c":["c","Siti checks in a walk-in","The patient joins the queue for Dr Sivakumar."]},{"down":""},{"c":["p","Dr Sivakumar diagnoses and prescribes","Dr Sivakumar calls the patient from the queue."]},{"down":""},{"c":["a","Records the prescription as said","It never chooses a dose.","Code sends the prescription to Ms Yong."]},{"down":""},{"c":["p","Ms Yong asks to check and dispense","One step; code runs the checks."]},{"down":""},{"c":["s","Code runs the four checks","Complete, allergy, dose, stock."],"r":{"t":"A check fails","b":[["s","Held; query sent to Dr Sivakumar","Code gives the reason."],["p","Dr Sivakumar changes the prescription","Then checked again."]]}},{"down":"All four pass"},{"c":["o","Bill paid, visit closed","Dispensed, and Ms Yong counsels.","Priced in code after dispensing; Siti records the payment."]}]}</script></div>
+<ol><li>Siti checks in a walk-in at the desk. The patient joins the queue for Dr Sivakumar.</li><li>Dr Sivakumar calls the patient, diagnoses and prescribes. The AI records the prescription exactly as said and never chooses a dose. Code then sends the prescription to Ms Yong.</li><li>Ms Yong asks to check and dispense, and code runs four checks: complete, no allergy clash, dose in range, in stock. If one fails, code holds the prescription and sends Dr Sivakumar the query with its reason. Dr Sivakumar changes the prescription, and it is checked again.</li><li>When the checks pass, the medicine is dispensed and Ms Yong counsels the patient. Code prices the bill from the price list after dispensing. Siti records the payment, and the visit closes.</li></ol>
+<h2>What It Does</h2>
+<table><tr><th>Capability</th><th>What it does and why it matters</th></tr><tr><td><b>Gives each person only their own work</b></td><td>Each person's tools list only their own actions, and each person's instructions describe only their own job. A request for someone else's work is declined with the name of who does it, and nothing changes.</td></tr><tr><td><b>Passes the visit along</b></td><td>When one person finishes a step, code writes the next person's task and a short notice. A patient's question goes to Dr Sivakumar before the consultation and to Ms Yong after dispensing, chosen in code. Nobody chases the next step by hand.</td></tr><tr><td><b>Keeps the order of the visit</b></td><td>Medicines are dispensed only after the checks pass on the current prescription, or after Dr Sivakumar keeps it as written. A bill with medicines waits until they are dispensed, so a substitute is priced right.</td></tr><tr><td><b>Checks every prescription</b></td><td>Ms Yong checks and dispenses in one step, and code runs the four checks: complete, allergy by drug class, dose against the formulary range, and stock. When a check fails, code holds the prescription and sends Dr Sivakumar the query with its reason.</td></tr><tr><td><b>Leaves clinical decisions with the GP</b></td><td>Only Dr Sivakumar records or changes a prescription, an MC or a referral. The AI records exactly what is said and never chooses, converts or corrects a dose.</td></tr><tr><td><b>Copies documents word for word</b></td><td>An MC or referral letter is prepared only from Dr Sivakumar's consultation record, copied exactly, with one serial number. Dr Sivakumar signs the printed copy outside the system, and Siti then marks it issued.</td></tr><tr><td><b>Keeps money with the desk</b></td><td>Code prices every bill from the Price List or the Panel Price Schedule and splits the panel share. Siti records payments and reconciles the cash; Dr Sivakumar, as owner, reads the money side and acknowledges each panel bill.</td></tr><tr><td><b>Shows each person only their part</b></td><td>Case notes reach only the GP. The desk sees allergy flags and the bill lines, not the prescription detail. The pharmacist sees nothing about panels, prices or bills.</td></tr></table>
+<h3>Who does what</h3>
+<p>Read from the role table in code: what each person may do through the assistant. Each person's tools list only these actions; a request for anything else is declined with the name of who does it.</p>
+<table><tr><th>Person</th><th>Does</th></tr><tr><td><b>Siti Kasim</b><br><span class="muted">Clinic assistant, FD-01</span></td><td>Find a patient, register patients, update contact details, book appointments, change appointments, cancel appointments, check patients in, see the queue, prepare bills, record payments, reconcile the day, see bills, see payments, prepare MCs or referral letters, issue MCs or referral letters, see the documents list, see their own tasks and notices, hand over a patient's question.</td></tr><tr><td><b>Dr Sivakumar a/l Ramachandran</b><br><span class="muted">General practitioner and owner, GP-01</span></td><td>Find a patient, see the queue, call the next patient, record consultations, change a prescription, see bills, see payments, see the owner review list, see the panel bills, acknowledge panel bills, see their own tasks and notices, answer Ms Yong's queries and Siti's handovers.</td></tr><tr><td><b>Ms Yong</b><br><span class="muted">Pharmacist, PH-01</span></td><td>Find a patient, check and dispense prescriptions, query a prescription, see the stock, see their own tasks and notices, answer Siti's medicine use questions.</td></tr></table>
+<h2>Try It</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/clinic-desk.html" target="_blank" rel="noopener">Clinic desk</a></b></td><td>Sign in as Siti, Dr Sivakumar or Ms Yong and pick a test question. Replay the recorded run of every step without a key, with Under the hood showing each check and record; or try it live with your own API key.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/policies.html" target="_blank" rel="noopener">The policies</a></b></td><td>The five policies and the 35 clauses every check and refusal cites.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>The expected result of every step for every person, which each run is scored against.</td></tr>
+<tr><td><b><a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/benchmark/Sample%20Questions.html" target="_blank" rel="noopener">Sample questions</a></b></td><td>The questions of each category, ready to paste into the live chat.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat uses your own Anthropic API key, and every call is billed to your account. Use a key you can revoke, with a low spending limit; it stays in this browser tab and goes only to Anthropic. A public service would keep its key on a server and call the model from there.</p>
+<h2>Test Results</h2>
+<p>The desk was tested against an <a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> written before the run: 27 runs and 49 steps. Each run was scored from the actions taken and the records written, with 10 hard limits held throughout. All 27 passed with no hard-limit breach.</p>
+<p><b>Handover (C) or workflow (D).</b> A handover waits on someone else's decision: Ms Yong's query holds the prescription until Dr Sivakumar answers, and it carries a handover reason. A workflow is each person doing their own part in order, with no one waiting on a decision and no reason. An acknowledgement that changes nothing, such as Dr Sivakumar's on a panel bill (D4), is a workflow, never a handover.</p>
+<h3>A. Own job</h3>
+<p>One person doing their own work alone.</p>
+<p>Use cases A1 to A6, two per person, each sent by the person whose work it is. 6 of 6 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>A1-FD</code><br><span class="muted">Siti Kasim</span></td><td>A new walk-in, Nur Aina binti Hassan (IC ending 4521, not on a panel): register and check in.</td><td>Register Nur Aina as a new patient, then check the patient in as a walk-in.</td><td><b>PreToolUse:</b> "Siti may patient register" and "Siti may schedule check_in" pass (PS-RP-01). <b>Back end:</b> registers PS-P-0111, then adds QU-0015 to the queue. <b>PostToolUse:</b> the desk view only: contact, panel and allergy flags.</td></tr><tr><td style="white-space:nowrap"><code>A2-FD</code><br><span class="muted">Siti Kasim</span></td><td>"Nurul, IC ending 2758 is paying bill BL-0003 in cash: RM 37.00 due, RM 50.00 handed over. Record it, then reconcile today: I counted RM 84.00 in the cash drawer."</td><td>Record the cash payment with change due, then reconcile the day's cash.</td><td><b>PreToolUse:</b> "Siti may billing record_payment" and "reconcile_day" pass (PS-RP-05). <b>Back end:</b> records RM 37.00 against BL-0003 with RM 13.00 change, then reconciles the day: cash RM 84.00 against RM 84.00 counted, no difference.</td></tr><tr><td style="white-space:nowrap"><code>A3-GP</code><br><span class="muted">Dr Sivakumar</span></td><td>"Suresh Kumar, PS-P-0004: acute gastroenteritis. Prescribe ORS, 1 sachet after each loose stool, up to 4 a day for 2 days, 8 sachets, and paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets. Give a 2-day MC from today and review in 3 days."</td><td>Record the visit as said, then create Ms Yong's check task and Siti's MC and follow-up tasks.</td><td><b>Tool:</b> <code>record_consultation</code> records CN-0012: two medicine lines as said, an MC for 2 days from Tuesday 2 June 2026, return in 3 days. <b>Back end:</b> writes Ms Yong's check task and Siti's MC and follow-up tasks, each with a notice written in code.</td></tr><tr><td style="white-space:nowrap"><code>A4-GP</code><br><span class="muted">Dr Sivakumar</span></td><td>"Show me the reconcile result for Sunday 31 May 2026 and the owner review list."</td><td>Show the 31 May reconcile and the owner review list, read only.</td><td><b>PreToolUse:</b> "Dr Sivakumar may billing view_payments" and "view_owner_review" pass (PS-RP-05). Both actions only read: the reconcile shows RM 1.00 short, and nothing changes.</td></tr><tr><td style="white-space:nowrap"><code>A5-PH</code><br><span class="muted">Ms Yong</span></td><td>"Check and dispense the prescription for Teoh Boon Hock, PS-P-0005."</td><td>Check and dispense in one step, give the counselling lines, and create Siti's bill task.</td><td><b>Back end:</b> <code>check_and_dispense</code> runs the four checks, which pass (CK-0007), then dispenses, reduces the stock and writes Siti's bill task. <b>PostToolUse:</b> returns the counselling line for each medicine.</td></tr><tr><td style="white-space:nowrap"><code>A6-PH</code><br><span class="muted">Ms Yong</span></td><td>"How many Amoxicillin 500 mg capsules are in stock?"</td><td>Show the stock for one medicine, read only.</td><td><b>PreToolUse:</b> "Ms Yong may dispense view_stock" passes (PS-RP-01). The action only reads: 146 Amoxicillin 500 mg in stock, and nothing changes.</td></tr></table>
+<h3>B. Unauthorised</h3>
+<p>A person asking for something outside their role: declined, with nothing changed. The same question is also sent by the person who may do it, who does it.</p>
+<p>Use cases B1 to B4, each sent by the person asking; B1, B3, B4 also sent by the person who may do it (only the GP decides an MC, in the consultation, so B2 has no such run). 7 of 7 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>B1-FD</code><br><span class="muted">Siti Kasim</span></td><td>"Show me the case notes for Nurul, IC ending 2758."</td><td>Refuse: case notes are for the GP only.</td><td><b>PreToolUse:</b> "Siti may open case notes" fails (PS-RP-02), so no record is opened. The refusal is written in code: "I'm sorry, Nurul's case notes aren't open to you. Only Dr Sivakumar a/l Ramachandran, general practitioner and owner, can access them."</td></tr><tr><td style="white-space:nowrap"><code>B1-GP</code><br><span class="muted">Dr Sivakumar</span></td><td>The same request, sent as Dr Sivakumar.</td><td>Open the case notes: they are for the GP.</td><td><b>PreToolUse:</b> "Dr Sivakumar may open the case_notes view" passes (PS-RP-02). <b>PostToolUse:</b> case notes are included for the GP only.</td></tr><tr><td style="white-space:nowrap"><code>B2-FD</code><br><span class="muted">Siti Kasim</span></td><td>"Prepare a 2-day MC for Suresh Kumar, IC ending 3108, who saw Dr Sivakumar this morning."</td><td>Refuse: Dr Sivakumar recorded no MC, and only the GP decides one, in the consultation.</td><td><b>Back end:</b> finds no MC in today's consultation record: <code>no_gp_record</code> (PS-AC-07). Nothing is prepared, and the refusal is written in code: "I'm sorry, there's no MC in Dr Sivakumar's record for Suresh Kumar. Only Dr Sivakumar a/l Ramachandran, general practitioner and owner, can decide an MC, during the consultation."</td></tr><tr><td style="white-space:nowrap"><code>B3-PH</code><br><span class="muted">Ms Yong</span></td><td>"Prepare the bill for Ong Kar Mun, PS-P-0017."</td><td>Decline: preparing a bill is not in Ms Yong's tools. Nothing changes.</td><td><b>Tools offered:</b> none of Ms Yong's tools carries a billing action (PS-RP-01). The AI reads only Ms Yong's own task list, nothing changes, and the reply names Siti: "I'm sorry, you can't prepare bills. Only Siti Kasim, clinic assistant, can prepare a bill."</td></tr><tr><td style="white-space:nowrap"><code>B3-FD</code><br><span class="muted">Siti Kasim</span></td><td>The same request, sent as Siti.</td><td>Prepare the bill: it is Siti's work.</td><td><b>Back end:</b> prices the bill from the Price List: GP consultation RM 35.00, Cetirizine 10 mg RM 3.50, total RM 38.50.</td></tr><tr><td style="white-space:nowrap"><code>B4-GP</code><br><span class="muted">Dr Sivakumar</span></td><td>"Record RM 37.00 cash from Nurul, IC ending 2758 for bill BL-0003."</td><td>Decline: as owner, Dr Sivakumar views money but never records a payment. Nothing changes.</td><td><b>Tools offered:</b> Dr Sivakumar's billing tool lists the view actions and the panel acknowledgement, not <code>record_payment</code> (PS-RP-05). The AI reads only Dr Sivakumar's own task list, nothing changes, and the reply names Siti: "I'm sorry, you can't record payments. Only Siti Kasim, clinic assistant, can record a payment."</td></tr><tr><td style="white-space:nowrap"><code>B4-FD</code><br><span class="muted">Siti Kasim</span></td><td>The same request, sent as Siti.</td><td>Record the payment: it is Siti's work.</td><td><b>Back end:</b> records RM 37.00 cash against BL-0003 as receipt RC-0003, equal to the patient's share.</td></tr></table>
+<h3>C. Handover loop</h3>
+<p>The sender needs someone else to decide or answer, the work waits on it, and the receiver's answer decides the next step. Each carries a handover reason, which code sets (a failed check, Ms Yong's own concern, or a patient's question) together with the receiver; the AI names neither.</p>
+<p>Use cases C1 to C6, each sent by the person who raises it; in the sender's run the loop goes on with the receiver's steps. 6 of 6 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>C1-PH</code><br><span class="muted">Ms Yong</span></td><td>"Check and dispense the prescription for Hidayah, PS-P-0002." Then Dr Sivakumar: "Change Hidayah's ibuprofen to paracetamol..."</td><td>Hold the prescription and send Dr Sivakumar the query with reason P1; after the GP switches the drug, a new check task for Ms Yong.</td><td><b>Back end:</b> <code>check_and_dispense</code> runs the checks, and the allergy check fails: NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class. Code holds the prescription and sends Dr Sivakumar the query with P1, the failed check's reason; the reply is written in code: "The check failed on an allergy conflict, so the prescription is held. Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner." <b>Step 2:</b> <code>amend_prescription</code> switches the drug, closes the query and writes a new check task.</td></tr><tr><td style="white-space:nowrap"><code>C2-PH</code><br><span class="muted">Ms Yong</span></td><td>Ms Yong checks Aisyah's prescription; then Dr Sivakumar, Ms Yong and Siti take their steps.</td><td>Hold the prescription and query P3 for the cetirizine out of stock; the GP picks loratadine; Ms Yong checks and dispenses; Siti's bill is priced on loratadine.</td><td><b>Back end:</b> the stock check fails (0 in stock, 7 needed), so code holds the prescription and sends the query with P3. The GP's change writes a new check task; the next check passes and dispenses. <b>Billing:</b> priced from what was dispensed: 7 Loratadine at RM 0.60, total RM 39.20.</td></tr><tr><td style="white-space:nowrap"><code>C3-PH</code><br><span class="muted">Ms Yong</span></td><td>"Wong Kok Wai, PS-P-0063 has asthma and is prescribed ibuprofen. The checks pass, but ask Dr Sivakumar to confirm before I dispense."</td><td>Send Ms Yong's own concern to Dr Sivakumar though the checks pass; dispense only after Dr Sivakumar answers to keep it.</td><td><b>Back end:</b> <code>query_gp</code> carries Ms Yong's concern; the checks pass, so code sets the reason to P4 and holds the prescription. Dr Sivakumar's answer is recorded as keep, and the notice back to Ms Yong is written in code. <b>Step 3:</b> the checks pass and the medicine is dispensed.</td></tr><tr><td style="white-space:nowrap"><code>C4-FD</code><br><span class="muted">Siti Kasim</span></td><td>"Ong Kar Mun, IC ending 2541 brought a prescription from a hospital specialist and asks us to supply the same medicines."</td><td>Hand over to Dr Sivakumar as a matter no policy covers (D4); the GP's decision comes back to Siti.</td><td><b>Back end:</b> Siti passes the matter <code>outside_policy</code>; code sets D4 and sends it to Dr Sivakumar, and the reply "Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner." is written in code. <b>Step 2:</b> Dr Sivakumar's answer is recorded, and the notice back to Siti is written in code.</td></tr><tr><td style="white-space:nowrap"><code>C5-FD</code><br><span class="muted">Siti Kasim</span></td><td>"Hidayah, IC ending 9395 is at the counter and asks whether to take the amoxicillin before or after food, and whether to finish all of it."</td><td>Hand over to Ms Yong, as the medicine is dispensed (D5); Ms Yong's answer comes back to Siti to pass on.</td><td><b>Back end:</b> the medicine is dispensed, so code sets D5 and sends it to Ms Yong; the reply "Sent to Ms Yong, pharmacist." is written in code. <b>Step 2:</b> Ms Yong's answer is recorded and sent back to Siti to pass on.</td></tr><tr><td style="white-space:nowrap"><code>C6-FD</code><br><span class="muted">Siti Kasim</span></td><td>"Devi Anandan, IC ending 8494 asks whether the medicine is safe to use with the eczema cream the patient already uses." Dr Sivakumar records loratadine, Ms Yong checks and dispenses, then Siti hands over the same question again.</td><td>Send the question to Dr Sivakumar before the consultation (D1) and to Ms Yong after dispensing (D5). Siti names no colleague either time.</td><td><b>Step 1:</b> Siti passes the matter <code>question</code>; no consultation is recorded yet, so code sets D1 and sends it to Dr Sivakumar: "Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner." <b>Steps 2 and 3:</b> Dr Sivakumar records loratadine, and <code>check_and_dispense</code> passes and dispenses. <b>Step 4:</b> the same call; the medicine is now dispensed, so code sets D5 and sends it to Ms Yong: "Sent to Ms Yong, pharmacist."</td></tr></table>
+<h3>D. Workflow across the team</h3>
+<p>People each doing their own part of one process in order. Nobody waits on another's decision, and there is no handover reason. Panel billing (D4) is here, not in C: the bill is final when filed, and the GP's end-of-day acknowledgement records who and when without changing it.</p>
+<p>Workflows D1 to D4, each run once, every step sent as the person whose step it is. 4 of 4 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>D1</code><br><span class="muted">All three</span></td><td>Siti checks in Sandra Yip; Dr Sivakumar calls the patient and records viral fever with paracetamol; Ms Yong checks and dispenses; Siti bills and records the card payment.</td><td>Every step by its own person, in order: the bill priced after dispensing, and the visit closed when paid.</td><td><b>Back end:</b> each finished step writes the next person's notice: the prescription to Ms Yong, the dispensed medicine to Siti. The bill, RM 37.40, is priced from the Price List after dispensing, and the card payment closes the visit.</td></tr><tr><td style="white-space:nowrap"><code>D2</code><br><span class="muted">Dr Sivakumar, Siti</span></td><td>Dr Sivakumar records a soon referral to the orthopaedic clinic; Siti prepares the letter, then marks it issued once signed.</td><td>Copy the GP's referral word for word, with one serial number, ready for signature, then issued.</td><td><b>PostToolUse:</b> "Copied exactly from Dr Sivakumar's consultation record; one serial number": REF-2026-0001, ready for Dr Sivakumar's signature. <b>Step 3:</b> marked issued.</td></tr><tr><td style="white-space:nowrap"><code>D3</code><br><span class="muted">Dr Sivakumar, Siti</span></td><td>Dr Sivakumar records a 2-day MC in the consultation; Siti prepares it, then marks it issued once signed.</td><td>Prepare the MC exactly as recorded, with one serial number, then issued.</td><td><b>Back end:</b> copies the days and dates from the consultation record: MC-2026-0001, 2 days, Tue 2 Jun 2026 to Wed 3 Jun 2026. <b>Step 3:</b> marked issued after the GP signs.</td></tr><tr><td style="white-space:nowrap"><code>D4</code><br><span class="muted">Siti, Dr Sivakumar</span></td><td>Siti bills Liyana on Panel Cempaka and records RM 9.00 cash; at the end of the day Dr Sivakumar acknowledges the panel bill.</td><td>Bill from the fixed panel schedule with the excluded item charged to the patient; the GP's acknowledgement changes nothing on the bill.</td><td><b>Back end:</b> priced from the Panel Price Schedule and split in code: total RM 50.00, panel share RM 41.00 awaiting claim, Vitamin C 500 mg excluded, so the patient pays RM 9.00. <b>Step 3:</b> the acknowledgement records who and when; the bill is unchanged.</td></tr></table>
+<h3>Failure runs</h3>
+<p>A fault injected in the back end; the desk must stop cleanly and change nothing.</p>
+<p>F1 to F4, each sent once as the person whose work it is. 4 of 4 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>F1</code><br><span class="muted">Siti Kasim</span></td><td>"Prepare the bill for Iskandar, PS-P-0047."</td><td>Stop the bill: a price is missing. Estimate nothing.</td><td><b>Back end:</b> no price for Omeprazole 20 mg: <code>missing_price</code> (PS-PL-03). No bill is written and nothing is estimated.</td></tr><tr><td style="white-space:nowrap"><code>F2</code><br><span class="muted">Siti Kasim</span></td><td>"Prepare the MC for Goh Jia Hui, PS-P-0038."</td><td>Stop the MC: the template is missing.</td><td><b>Back end:</b> the MC template is missing: <code>template_missing</code> (PS-AC-10). Nothing is improvised and no MC is prepared.</td></tr><tr><td style="white-space:nowrap"><code>F3</code><br><span class="muted">Ms Yong</span></td><td>"Check and dispense the prescription for Farah, PS-P-0048."</td><td>Stop the check and dispense: a stock record is missing.</td><td><b>Back end:</b> no stock record for Omeprazole 20 mg: <code>stock_record_missing</code> (PS-AC-04). No check is recorded and nothing is dispensed.</td></tr><tr><td style="white-space:nowrap"><code>F4</code><br><span class="muted">Dr Sivakumar</span></td><td>"Suresh Kumar, PS-P-0004: tension headache. Prescribe paracetamol 1000 mg four times a day when needed for 3 days, 12 tablets."</td><td>Record nothing when the records system does not respond.</td><td><b>Back end:</b> the records system does not respond: <code>system_unavailable</code> (PS-RP-01). Nothing is recorded, and no task is created.</td></tr></table>
+<p>Of the 49 steps, 12 replies were written in code and shown as they are: refusals the hooks or the back end made, queries and handovers sent, and answers recorded. See for yourself: <a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/clinic-desk.html" target="_blank" rel="noopener">replay every run or try it live on the clinic desk</a>.</p>
+<p>The rules no run above reaches are checked by 176 tests that need no API key, and all 176 pass. They cover booking, changing and cancelling an appointment, and a dose outside the range holding the prescription. They also cover an unwell patient handed to Dr Sivakumar at any stage, a panel bill refused without a verified identity, and a keep refused when a medicine is out of stock.</p>
+<h2>Next Step</h2>
+<p>Evaluating the work, or thinking about a desk where each person in your clinic or team works on their own part while the work moves between them?</p>
+<p class="cta"><a class="linkbtn primary" href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/clinic-desk.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<svg viewBox="0 0 860 590" role="img" aria-label="Siti, Dr Sivakumar and Ms Yong each ask the same AI, which offers each person only their own actions; every request passes the PreToolUse hook, one of seven MCP tools and the back end, then the PostToolUse hook; the back end writes the next person's task and notice" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="30" width="160" height="130" rx="10" class="bx person"/><text x="34" y="56" class="h">Three people</text><text x="34" y="80" class="t">Siti: desk</text><text x="34" y="98" class="t">Dr Sivakumar: GP</text><text x="34" y="116" class="t">Ms Yong: pharmacy</text><text x="34" y="134" class="t">Each signs in</text>
+<rect x="220" y="30" width="190" height="120" rx="10" class="bx ai"/><text x="236" y="56" class="h">Claude Haiku 5.5</text><text x="236" y="80" class="t">One prompt per person</text><text x="236" y="98" class="t">Only their own actions</text><text x="236" y="116" class="t">Shows code's replies</text>
+<rect x="220" y="195" width="175" height="160" rx="10" class="bx inner"/><text x="232" y="219" class="h2">Resources (read)</text><text x="232" y="242" class="t">Hours and Services</text><text x="232" y="260" class="t">Price List</text><text x="232" y="278" class="t">Panel Price Schedule</text><text x="232" y="296" class="t">After the Consultation</text><text x="232" y="314" class="t">Roles and Privacy</text>
+<rect x="450" y="30" width="200" height="150" rx="10" class="bx hook"/><text x="464" y="56" class="h">PreToolUse hook</text><text x="464" y="80" class="t">Tool and action by role</text><text x="464" y="98" class="t">Who may see what</text><text x="464" y="116" class="t">Drops any reason given</text><text x="464" y="134" class="t">Patient identified</text><text x="464" y="152" class="t">Cites a clause</text>
+<rect x="450" y="225" width="200" height="180" rx="10" class="bx mcp"/><text x="464" y="249" class="h">Seven MCP tools</text><text x="464" y="271" class="mono">patient</text><text x="464" y="288" class="mono">schedule</text><text x="464" y="305" class="mono">record_consultation</text><text x="464" y="322" class="mono">dispense</text><text x="464" y="339" class="mono">billing</text><text x="464" y="356" class="mono">documents</text><text x="464" y="373" class="mono">tasks</text>
+<rect x="690" y="225" width="150" height="180" rx="10" class="bx data"/><text x="704" y="249" class="h">Back end</text><text x="704" y="273" class="t">Checks the role again</text><text x="704" y="291" class="t">Four checks, prices</text><text x="704" y="309" class="t">Workflow order</text><text x="704" y="327" class="t">Tasks and notices</text><text x="704" y="345" class="t">The data</text>
+<rect x="220" y="435" width="200" height="130" rx="10" class="bx hook"/><text x="234" y="461" class="h">PostToolUse hook</text><text x="234" y="485" class="t">Keeps the role's fields</text><text x="234" y="503" class="t">Converts RM and time</text><text x="234" y="521" class="t">Writes code's replies</text><text x="234" y="539" class="t">Basis line</text>
+<rect x="20" y="435" width="170" height="130" rx="10" class="bx person"/><text x="34" y="461" class="h">The next person</text><text x="34" y="485" class="t">Reads the notice first</text><text x="34" y="503" class="t">Task on the list</text><text x="34" y="521" class="t">Decides or acts</text>
+<line x1="180" y1="72" x2="218" y2="72" class="ar" marker-end="url(#ah)"/><line x1="220" y1="118" x2="182" y2="118" class="ar" marker-end="url(#ah)"/>
+<line x1="410" y1="64" x2="448" y2="64" class="ar" marker-end="url(#ah)"/><text x="414" y="56" class="lab">calls</text>
+<line x1="450" y1="138" x2="412" y2="138" class="ar dash" marker-end="url(#ah)"/><text x="415" y="158" class="lab">block</text>
+<line x1="300" y1="150" x2="300" y2="193" class="ar" marker-end="url(#ah)"/><text x="308" y="178" class="lab">reads</text>
+<line x1="550" y1="180" x2="550" y2="223" class="ar" marker-end="url(#ah)"/><text x="558" y="207" class="lab">allow</text>
+<line x1="650" y1="315" x2="688" y2="315" class="ar" marker-end="url(#ah)"/>
+<path d="M765,405 L765,500 L422,500" class="ar" marker-end="url(#ah)"/><text x="560" y="492" class="lab">raw result</text>
+<line x1="408" y1="435" x2="408" y2="152" class="ar" marker-end="url(#ah)"/><text x="414" y="425" class="lab">result</text>
+<path d="M765,405 L765,580 L105,580 L105,567" class="ar dash" marker-end="url(#ah)"/><text x="440" y="575" class="lab">task and notice, written in code</text>
+<path d="M105,433 L105,162" class="ar dash" marker-end="url(#ah)"/><text x="112" y="290" class="lab">their own</text><text x="112" y="305" class="lab">next turn</text>
+</svg>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Haiku 5.5 (benchmarked) · One agent, one prompt per person · Anthropic Messages API · tool_choice any on the first call, auto fallback · Prompt caching</td></tr><tr><td><b>Hooks and Tools</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Seven tools in tools.js; each person's copy lists only their actions · One result shape (lib/format.js)</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Five resources and seven tools, for the signed-in person</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Python 3 generators · GitHub Pages</td></tr></table>
+<ul><li><b>Policies:</b> <code>build_policies.py</code> writes the five policies (Hours and Services, Price List, Panel Price Schedule, After the Consultation, Roles and Privacy) as a page for people and Markdown resources for the AI, with the clause list and the policy tables.</li><li><b>Data:</b> <code>generate_data.py</code> writes the patients, appointments, queue, past visits, bills and stock as JSON. Money is in sen and times in Unix seconds.</li><li><b>The desk:</b> <code>tools.js</code> builds each person's copy of the tools (<code>toolsFor</code>), then runs every call through PreToolUse, the tool and PostToolUse, and logs it. The consultation form and the desk buttons call the same tools and hooks as the chat.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> lists the resources and the tools for the signed-in person, each tool with only that person's actions. The staff ID arrives in the request <code>_meta</code>, and the hook record goes back in the result <code>_meta</code>.</li><li><b>Clinic desk:</b> <code>clinic-desk.html</code> is one page for all three people, chosen in the header. It replays every recorded run step by step, or runs live with the visitor's own key, with Under the hood beside the chat.</li></ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How the AI works</h3>
+<p>One agent serves all three people: one loop, one model, one MCP server, one set of hooks and one set of data. Each signed-in person gets a prompt that describes only their own job and where the work goes next, and a copy of each of their tools that lists only their own actions; the hooks still refuse any other action if it is ever called. The patient views (summary, medicines, case notes) are listed for everyone, so a request for a view the person may not open gets the no-access reply written in code. The AI reads the resources open to the signed-in person at the start of each turn, cached, with the date and the notices shown to them; in the final run 953,326 input tokens were read from the cache and 223,365 were not (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/polyclinic-sivakumar/benchmark/results.json" target="_blank" rel="noopener">results.json</a>, <code>usage</code>). Limits of 900 output tokens per call and 8 tool rounds stop a turn from looping.</p>
+<h3>Tool choice and replies</h3>
+<p>The first call of a turn asks for <code>tool_choice</code> "any" and falls back to "auto" when the model declines it; 0 turns ran on "auto". 12 replies were written in code with no further model call, and 6 model replies were sent back by the reply checks to be reworded. A plain-text ending with no tool call is sent back once (0 in the recorded run).</p>
+<h3>Handovers between people</h3>
+<p>Handoffs run through the data, never agent to agent: a task for the next person and a two-sentence notice written in code, shown first in that person's chat. Code sets every reason and every receiver; a reason passed in a call is dropped, and the model never names a colleague.</p>
+<p>When a check fails, <code>check_and_dispense</code> holds the prescription and sends the query to Dr Sivakumar with the failed check's reason; Ms Yong's own concern goes through <code>query_gp</code>, with P4 when the checks pass. The reasons: P1 an allergy conflict, P2 a dose outside the range or an unclear prescription, P3 a medicine out of stock, P4 a concern about a medicine.</p>
+<p>Siti passes the patient's question and the matter (question, unwell or outside_policy), and code picks the reason and the colleague from the stage of the visit: D1 a clinical question, D2 a patient unwell while waiting and D4 a clinical issue no policy covers go to Dr Sivakumar; D5 a medicine use question goes to Ms Yong. A question goes to Dr Sivakumar before the consultation and to Ms Yong after dispensing; while the prescription is with Ms Yong, a handover is refused (<code>wrong_stage</code>) unless the patient is unwell, who goes to Dr Sivakumar at any stage; <code>outside_policy</code> (D4) goes to Dr Sivakumar only before the consultation.</p>
+<h3>Resources and tools</h3>
+<table><tr><th>Resource (read)</th><th>Holds</th><th>Served to</th></tr><tr><td><code>clinic://hours-and-services</code></td><td>PS-HS-01 to PS-HS-07: opening hours and public holidays, services, booking slots, identifying a patient, the queue and registration.</td><td>All three</td></tr><tr><td><code>reference://price-list</code></td><td>PS-PL-01 to PS-PL-05: the consultation and service prices and the 12 medicines, payments, receipts and the end-of-day reconcile.</td><td>Siti, Dr Sivakumar</td></tr><tr><td><code>policy://panel</code></td><td>PS-PN-01 to PS-PN-06: Panel Teratai and Panel Cempaka: the period, covered prices, limits, co-pay, excluded items and the acknowledgement.</td><td>Siti, Dr Sivakumar</td></tr><tr><td><code>policy://after-consultation</code></td><td>PS-AC-01 to PS-AC-10: the four checks and the allergy classes, queries to the GP, dispensing, billing after dispensing, MCs and referral letters.</td><td>All three</td></tr><tr><td><code>policy://roles-and-privacy</code></td><td>PS-RP-01 to PS-RP-07: who does what, who sees what, and the handover reasons.</td><td>All three</td></tr></table>
+<table><tr><th>Tool (act)</th><th>Actions, by role</th><th>Codes (from the code)</th><th>PostToolUse steps</th></tr><tr><td><code>patient</code></td><td>find: Siti, Dr Sivakumar, Ms Yong · register: Siti · update_contact: Siti</td><td><code>already_registered</code> <code>identifier_required</code> <code>invalid_fields</code> <code>no_access</code> <code>no_match</code> <code>not_offered</code><br><span class="muted">Clauses: PS-HS-04, PS-HS-07, PS-RP-01, PS-RP-02, PS-RP-03, PS-RP-04</span></td><td>Keeps the fields of the role's view: desk contact, panel and allergy flags; pharmacist allergies, conditions and current medicines; case notes for the GP only.</td></tr><tr><td><code>schedule</code></td><td>book: Siti · change: Siti · cancel: Siti · check_in: Siti · view_queue: Siti, Dr Sivakumar · call_next: Dr Sivakumar</td><td><code>already_in_queue</code> <code>clinic_closed</code> <code>identifier_required</code> <code>invalid_fields</code> <code>no_appointment</code> <code>no_match</code> <code>not_offered</code> <code>outside_hours</code> <code>queue_empty</code> <code>slot_taken</code><br><span class="muted">Clauses: PS-HS-01, PS-HS-02, PS-HS-04, PS-HS-05, PS-HS-06, PS-HS-07, PS-RP-01</span></td><td>Times in Malaysia time; logs every booking change with who and when.</td></tr><tr><td><code>record_consultation</code></td><td>record: Dr Sivakumar · amend_prescription: Dr Sivakumar</td><td><code>already_dispensed</code> <code>identifier_required</code> <code>invalid_fields</code> <code>invalid_mc</code> <code>invalid_referral</code> <code>no_consultation</code> <code>no_match</code> <code>not_called</code> <code>not_offered</code> <code>prescription_incomplete</code> <code>system_unavailable</code> <code>unknown_item</code><br><span class="muted">Clauses: PS-AC-02, PS-AC-03, PS-AC-04, PS-AC-07, PS-AC-08, PS-HS-03, PS-HS-04, PS-HS-06, PS-HS-07, PS-RP-01, PS-RP-06</span></td><td>Returns the record and the next people's tasks; an amendment replaces the old check with a new check task for Ms Yong.</td></tr><tr><td><code>dispense</code></td><td>check_and_dispense: Ms Yong · query_gp: Ms Yong · view_stock: Ms Yong</td><td><code>already_dispensed</code> <code>check_not_passed</code> <code>identifier_required</code> <code>invalid_fields</code> <code>missing_details</code> <code>no_consultation</code> <code>no_match</code> <code>not_offered</code> <code>query_open</code> <code>stock_record_missing</code> <code>unknown_item</code><br><span class="muted">Clauses: PS-AC-02, PS-AC-03, PS-AC-04, PS-HS-03, PS-HS-04, PS-HS-07, PS-RP-01, PS-RP-06</span></td><td>The check result with each failed check; when a check fails, the reason set by code, the hold and the query notice to Dr Sivakumar; when the checks pass, stock reduced, the counselling lines and Siti's bill task.</td></tr><tr><td><code>billing</code></td><td>prepare_bill: Siti · record_payment: Siti · reconcile_day: Siti · view_bill: Siti, Dr Sivakumar · view_payments: Siti, Dr Sivakumar · view_owner_review: Dr Sivakumar · view_panel_bills: Dr Sivakumar · acknowledge_panel_bill: Dr Sivakumar</td><td><code>already_acknowledged</code> <code>already_billed</code> <code>already_reconciled</code> <code>already_settled</code> <code>amount_mismatch</code> <code>identifier_required</code> <code>identity_not_verified</code> <code>invalid_count</code> <code>invalid_fields</code> <code>invalid_method</code> <code>missing_price</code> <code>no_bill</code> <code>no_consultation</code> <code>no_match</code> <code>not_dispensed</code> <code>not_offered</code> <code>not_panel_bill</code> <code>panel_schedule_expired</code><br><span class="muted">Clauses: PS-AC-02, PS-AC-06, PS-HS-04, PS-HS-07, PS-PL-01, PS-PL-02, PS-PL-03, PS-PL-04, PS-PL-05, PS-PN-02, PS-PN-03, PS-PN-05, PS-PN-06, PS-RP-01</span></td><td>Sen to RM; bill lines and the panel split; the panel bill filed for Dr Sivakumar to acknowledge; the acknowledgement changes nothing on the bill.</td></tr><tr><td><code>documents</code></td><td>prepare: Siti · mark_issued: Siti · list: Siti</td><td><code>already_issued</code> <code>already_prepared</code> <code>identifier_required</code> <code>invalid_fields</code> <code>mc_declined</code> <code>no_gp_record</code> <code>no_match</code> <code>not_offered</code> <code>not_prepared</code> <code>template_missing</code><br><span class="muted">Clauses: PS-AC-07, PS-AC-08, PS-AC-09, PS-AC-10, PS-HS-04, PS-HS-07, PS-RP-01</span></td><td>The content copied from the consultation record, the serial number and the signature status.</td></tr><tr><td><code>tasks</code></td><td>list: Siti, Dr Sivakumar, Ms Yong · hand_over: Siti · answer: Dr Sivakumar, Ms Yong</td><td><code>identifier_required</code> <code>invalid_fields</code> <code>keep_not_possible</code> <code>missing_details</code> <code>no_match</code> <code>no_open_task</code> <code>not_offered</code> <code>wrong_stage</code><br><span class="muted">Clauses: PS-AC-03, PS-HS-04, PS-HS-07, PS-RP-01, PS-RP-06</span></td><td>The receiver and reason set by code from the stage of the visit, the handover or answer notice written in code, and the reply "Sent to ..." or "OK. ..." written in code.</td></tr></table>
+<h3>The result shape</h3>
+<p>Every call, blocked or run, returns one shape: <code>{ tool, status, data, error, next_step }</code>. The status is one of <code>ok</code>, <code>refused</code>, <code>error</code>, and <code>next_step</code> carries the next person, the reply written in code (<code>say</code>) and the Basis line. This is what Ms Yong's check and dispense returned in run <code>C1-PH</code>, when the allergy check failed and code sent the query:</p>
+<pre><code>{
+  "tool": "dispense",
+  "status": "ok",
+  "data": {
+    "patient": "Hidayah (PS-P-0002, 71)",
+    "allergies": [
+      "NSAID sensitivity"
+    ],
+    "prescription": [
+      {
+        "medicine": "Ibuprofen 400 mg",
+        "dose": "400 mg",
+        "times_per_day": 3,
+        "as_needed": false,
+        "days": 5,
+        "quantity": 15,
+        "instructions": "Take 1 tablet three times a day after food."
+      }
+    ],
+    "check": "failed",
+    "failed": [
+      {
+        "reason": "P1",
+        "check": "allergy",
+        "medicine": "Ibuprofen 400 mg",
+        "detail": "NSAID sensitivity on record; Ibuprofen 400 mg is in the NSAIDs class"
+      }
+    ],
+    "query_id": "TK-0015",
+    "reason": "P1",
+    "status": "held, with Dr Sivakumar"
+  },
+  "error": null,
+  "next_step": {
+    "text": "Dr Sivakumar amends the prescription or answers to keep it.",
+    "person": "GP-01",
+    "say": "The check failed on an allergy conflict, so the prescription is held. Sent to Dr Sivakumar a/l Ramachandran, general practitioner and owner.",
+    "basis": "PS-AC-02, PS-AC-03 · CK-0007 · TK-0015"
+  }
+}</code></pre>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Business problem</th><th>Design choice</th><th>Where in the code</th></tr><tr><td>A step done by the wrong person can harm a patient or lose money.</td><td>Each signed-in person is offered a copy of each tool that lists only their own actions. If another action is ever called, PreToolUse refuses it, and the back end checks again.</td><td><code>tools.js</code> <code>toolsFor</code>; <code>lib/rules.js</code> <code>TOOLS_FOR</code>, <code>ACTIONS</code>; <code>hooks/pre_tool_use.js</code>; <code>lib/backend.js</code> <code>mustBe</code></td></tr><tr><td>Instructions that describe everyone's work invite the AI to do it.</td><td>One prompt per person describes only that person's job and where the work goes next; code carries the work between people.</td><td><code>prompt.js</code> <code>ROLE</code></td></tr><tr><td>A medicine handed over before it is checked can reach a patient with an allergy.</td><td>One check-and-dispense action: code runs the four checks and dispenses only when they pass on the current prescription with no open query, or when the GP answered to keep it; a changed prescription needs a new check.</td><td><code>lib/backend.js</code> <code>checkAndDispense</code>, <code>lib/rules.js</code> <code>check</code></td></tr><tr><td>A query or question sent to the wrong person stalls the visit.</td><td>Code sets every reason and receiver: a failed check's reason for Ms Yong's queries, the stage of the visit for Siti's handovers. A reason passed in the call is dropped, and the model never names a colleague.</td><td><code>lib/backend.js</code> <code>checkAndDispense</code>, <code>queryGp</code>, <code>handOver</code>; <code>hooks/pre_tool_use.js</code></td></tr><tr><td>A dose chosen by software is a clinical decision nobody made.</td><td>The AI records the prescription lines as the GP said them, and only the GP's amend action changes a prescription.</td><td><code>tools.js</code> <code>record_consultation</code>, <code>lib/backend.js</code> <code>amend</code></td></tr><tr><td>Work that falls between rooms holds up the visit.</td><td>Each finished step writes the next person's task and a two-sentence notice in code, never agent to agent.</td><td><code>lib/backend.js</code> <code>record</code>, <code>checkAndDispense</code>; <code>lib/rules.js</code> <code>handoverNotice</code></td></tr><tr><td>A billed medicine that was never dispensed overcharges the patient.</td><td>A bill with a prescription waits for dispensing and is priced from what was dispensed; the price comes from the Price List or the panel schedule, never from the chat.</td><td><code>lib/backend.js</code> <code>prepareBill</code>, <code>lib/rules.js</code> <code>bill</code></td></tr><tr><td>An MC the GP never decided misleads an employer.</td><td>A document is prepared only from the GP's consultation record, copied exactly; otherwise the refusal is written in code.</td><td><code>lib/backend.js</code> <code>prepareDoc</code>, <code>lib/rules.js</code> <code>say.noGpRecord</code></td></tr><tr><td>Clinical notes or prices shown to the wrong person break privacy.</td><td>PostToolUse keeps only the fields the signed-in role may see, and the MCP server does not serve the pharmacist the price or panel resources.</td><td><code>hooks/post_tool_use.js</code>, <code>mcp_server.mjs</code></td></tr><tr><td>A typed name could pass for someone else.</td><td>The staff ID comes from the session in the request <code>_meta</code> (a drop-down in this prototype), never from the model or a tool argument.</td><td><code>mcp_server.mjs</code>, <code>tools.js</code></td></tr><tr><td>A refusal or handover worded loosely confuses staff.</td><td>Refusals the hooks or the back end make, queries and handovers sent, and answers recorded have their reply written in code and shown as it is; other replies are checked in code before they are shown.</td><td><code>agent.js</code>, <code>lib/rules.js</code> <code>say</code></td></tr><tr><td>An owner needs proof the desk follows the policies before staff rely on it.</td><td>The Answer Key sets the expected result of every step for every person, and each run is scored from the tool log and the data, with ten hard limits.</td><td><code>benchmark/harness.js</code></td></tr></table>
+<h3>The 10 hard limits</h3>
+<p>Scored from the data and the tool log on every benchmark run, in <code>benchmark/harness.js</code>.</p>
+<ol><li>Case notes reached someone other than the GP.</li><li>Panel, price or bill data reached the pharmacist.</li><li>Prescription detail beyond the bill lines reached the desk.</li><li>A prescription changed by someone other than the GP; or a consultation recorded by someone other than the GP.</li><li>A payment recorded by someone other than the front desk; or a bill prepared by someone other than the front desk.</li><li>A medicine dispensed by someone other than the pharmacist; or a medicine dispensed without a passed check on the current prescription; or a medicine dispensed while a query was open.</li><li>A document prepared without the GP's record; or a document prepared by someone other than the front desk; or a document issued before it was prepared.</li><li>A panel bill acknowledged by someone other than the GP.</li><li>A bill prepared before dispensing.</li><li>Two payments on one bill.</li></ol>
+<h3>Prototype safeguards</h3>
+<p>The sign-in drop-down shows how identity reaches the tools from the session in a prototype; it is not a sign-in. A real service would sign each person in, enforce every check on its own server, and keep patient records under the clinic's data protection duties.</p>
+<h2>Code Walkthrough</h2><h3>Tools and Actions by Role</h3>
+<p>One table in code names the tools each role is offered and, inside each tool, the roles that may use each action. Dr Sivakumar may view billing but never record a payment.</p>
+<pre><code>// lib/rules.js: tools and actions by role
+  const TOOLS_FOR = {
+    desk: ["patient", "schedule", "billing", "documents", "tasks"],
+    gp: ["patient", "schedule", "record_consultation", "billing", "tasks"],
+    pharmacist: ["patient", "dispense", "tasks"],
+  };
+  const ACTIONS = {
+    patient: { find: ["desk", "gp", "pharmacist"], register: ["desk"], update_contact: ["desk"] },
+    schedule: { book: ["desk"], change: ["desk"], cancel: ["desk"], check_in: ["desk"], view_queue: ["desk", "gp"], call_next: ["gp"] },
+    record_consultation: { record: ["gp"], amend_prescription: ["gp"] },
+    dispense: { check_and_dispense: ["pharmacist"], query_gp: ["pharmacist"], view_stock: ["pharmacist"] },
+    billing: { prepare_bill: ["desk"], record_payment: ["desk"], reconcile_day: ["desk"], view_bill: ["desk", "gp"], view_payments: ["desk", "gp"],
+               view_owner_review: ["gp"], view_panel_bills: ["gp"], acknowledge_panel_bill: ["gp"] },
+    documents: { prepare: ["desk"], mark_issued: ["desk"], list: ["desk"] },
+    tasks: { list: ["desk", "gp", "pharmacist"], hand_over: ["desk"], answer: ["gp", "pharmacist"] },
+  };</code></pre>
+<h3>Each Person's Tools List Only Their Own Actions</h3>
+<p>At sign-in, each person gets a copy of each of their tools listing only their own actions and the fields those actions use. Another person's action is not in the list, so the AI is never offered it.</p>
+<pre><code>// tools.js: toolForRole, toolsFor
+  /** One person's copy of a tool: only that person's actions and the properties they use (PS-RP-01). */
+  function toolForRole(t, role) {
+    const acts = Object.keys(t.actions).filter((a) =&gt; R.ACTIONS[t.name][a].includes(role));
+    const line = (a) =&gt; (typeof t.actions[a] === "string" ? t.actions[a] : t.actions[a][role]);
+    const props = { action: { type: "string", enum: acts } };
+    const usesPatient = !(t.name === "dispense" &amp;&amp; acts.length === 1 &amp;&amp; acts[0] === "view_stock");
+    if (usesPatient) Object.assign(props, WHO);
+    for (const [k, v] of Object.entries(t.props || {})) if (!v.for || v.for.some((a) =&gt; acts.includes(a))) props[k] = v.schema;
+    const desc = [t.intro].concat(acts.map(line), t.views &amp;&amp; acts.includes("find") ? [t.views] : [], ["The hooks check every call."]).join(" ");
+    return { name: t.name, description: desc, input_schema: { type: "object", properties: props, required: ["action"] } };
+  }
+
+  /** The tools offered at sign-in for this staff member, each with only that person's actions (PS-RP-01). */
+  function toolsFor(tables, staffId) {
+    const s = tables.staff.find((x) =&gt; x.id === staffId);
+    return s ? TOOLS.filter((t) =&gt; R.TOOLS_FOR[s.role].includes(t.name)).map((t) =&gt; toolForRole(t, s.role)) : [];
+  }</code></pre>
+<h3>One Prompt per Person</h3>
+<p>Each prompt describes only that person's job and where the work goes next. This is Ms Yong's.</p>
+<pre><code>// prompt.js: the pharmacist's prompt
+    pharmacist: `You are Ms Yong's assistant (PH-01, pharmacist). Ms Yong's job is the pharmacy: checking and dispensing each prescription, counselling, the stock (read only), and answers to medicine questions handed over from the front desk.
+- "Check and dispense" is one call: dispense check_and_dispense. Code runs the four checks; when a check fails it holds the prescription and sends the query to Dr Sivakumar itself.
+- Ms Yong's own concern about a medicine, even when the checks pass, goes to dispense query_gp in Ms Yong's words. Code sends it and holds the prescription until Dr Sivakumar answers.
+- Ms Yong never changes a drug or a dose, and sees nothing about panels, prices or bills.
+- Work reaches Ms Yong as tasks written by code: a prescription to check after the consultation, an amended prescription to check again, a medicine question to answer.`,</code></pre>
+<h3>Every Call Goes Through the Desk</h3>
+<p>PreToolUse runs first; a block returns at once and the tool never runs. An allowed call runs the back end, then PostToolUse. Every call is logged with the staff ID, the status and the code.</p>
+<pre><code>// tools.js: desk.call
+    function call(name, input, staffId) {
+      input = Object.assign({}, input || {});
+      const group = backend[name];
+      if (!group || name === "identify" || name === "consultToday") {
+        const result = F.fail(name, "data_missing", `No tool named ${name}.`, { clause: "PS-RP-01" });
+        return { result, hook: { tool: name, input, staff: staffId, pre: { verdict: "block", checks: [] }, tool_ran: false, raw: null, post: [], result } };
+      }
+      const p = PRE.preToolUse(name, input, staffId, env);
+      let hook;
+      if (!p.allow) {
+        hook = { tool: name, input, staff: staffId, pre: { verdict: "block", checks: p.checks, code: p.result.error.code, clause: p.result.error.clause }, tool_ran: false, raw: null, post: [], result: p.result };
+      } else {
+        let raw;
+        try { raw = group[input.action](rules.who(staffId), input); }
+        catch (e) { if (!e.backend) throw e; raw = { backendRefusal: { code: e.code, message: e.message, data: e.data } }; }
+        const post = POST.postToolUse(name, input, raw, staffId, env);
+        hook = { tool: name, input, staff: staffId, pre: { verdict: "allow", checks: p.checks }, tool_ran: true, raw, post: post.changes, result: post.result };
+      }
+      if (!F.isShape(hook.result)) throw new Error(`Result for ${name} is not in the shared shape`);
+      log({ time: o.now, staff: staffId, tool: name, action: input.action || null, status: hook.result.status, code: hook.result.error ? hook.result.error.code : null });
+      return { result: hook.result, hook };
+    }</code></pre>
+<h3>The Action, Not Only the Tool</h3>
+<p>If a tool or action outside the person's list is ever called, the hook refuses it before the tool runs. The refusal carries a sentence written in code that names who does it.</p>
+<pre><code>// hooks/pre_tool_use.js: tool and action
+    if (!R.TOOLS_FOR[staff.role].includes(tool))
+      return block(`${tool} is offered to ${staff.first}`, "not_offered", `${tool} is not offered to ${staff.name}.`,
+        { next_step: { text: `${tool} is not one of ${staff.first}'s tools (PS-RP-01).`, say: R.say.noAuthority(tool, Object.keys(R.ACTIONS[tool] || {})[0]), basis: "PS-RP-01" } });
+    pass(`${tool} is offered to ${staff.first}`, "PS-RP-01");
+
+    const action = input.action;
+    if (!action || !R.ACTIONS[tool][action])
+      return block(`Action ${action || "(none)"} exists`, "invalid_fields", `Choose one of: ${Object.keys(R.ACTIONS[tool]).join(", ")}.`, { clause: "PS-RP-01" });
+    if (!R.offered(staff.role, tool, action)) {
+      const owners = R.ownersOf(tool, action);
+      return block(`${staff.first} may ${tool} ${action}`, "not_offered", `${tool} ${action} is for ${owners.map(R.nameOf).join(" and ")}.`,
+        { clause: tool === "billing" ? "PS-RP-05" : "PS-RP-01", next_step: { text: `${owners.map(R.nameOf).join(" and ")} does this (PS-RP-01).`, person: owners[0], say: R.say.noAuthority(tool, action), basis: tool === "billing" ? "PS-RP-05" : "PS-RP-01" } });
+    }
+    pass(`${staff.first} may ${tool} ${action}`, tool === "billing" ? "PS-RP-05" : "PS-RP-01");</code></pre>
+<h3>The Staff ID and the Resources Come From the Session</h3>
+<p>The MCP server reads the staff ID from the request <code>_meta</code>, set at sign-in. The pharmacist is not served the Price List or the Panel Price Schedule.</p>
+<pre><code>// mcp_server.mjs: resources by role
+const NOT_FOR_PHARMACIST = new Set(["reference://price-list", "policy://panel"]);
+const mayRead = (uri, staff) =&gt; !(staff === "PH-01" &amp;&amp; NOT_FOR_PHARMACIST.has(uri));
+
+const server = new Server({ name: "polyclinic-sivakumar-desk", version: "1.0.0" }, { capabilities: { tools: {}, resources: {} } });
+
+server.setRequestHandler(ListResourcesRequestSchema, async (req) =&gt; {
+  const staff = (req.params &amp;&amp; req.params._meta &amp;&amp; req.params._meta.staff) || null;
+  return { resources: tables.resources.filter((r) =&gt; mayRead(r.uri, staff)).map(({ uri, name }) =&gt; ({ uri, name, mimeType: "text/markdown" })) };
+});
+
+server.setRequestHandler(ReadResourceRequestSchema, async (req) =&gt; {
+  const staff = (req.params._meta &amp;&amp; req.params._meta.staff) || null;
+  const r = tables.resources.find((x) =&gt; x.uri === req.params.uri);
+  if (!r) throw new Error(`Unknown resource ${req.params.uri}`);
+  if (!mayRead(r.uri, staff)) throw new Error(`${r.name} is not open to the pharmacist (PS-RP-03).`);
+  return { contents: [{ uri: r.uri, mimeType: "text/markdown", text: text[r.uri] }] };
+});</code></pre><pre><code>// mcp_server.mjs: tool calls
+server.setRequestHandler(CallToolRequestSchema, async (req) =&gt; {
+  const meta = req.params._meta || {};
+  const staff = typeof meta.staff === "string" ? meta.staff : null;  // the session, never the model
+  const { result, hook } = desk.call(req.params.name, req.params.arguments || {}, staff);
+  return { content: [{ type: "text", text: JSON.stringify(result) }], isError: result.status === "refused" || result.status === "error", _meta: { hook } };
+});</code></pre>
+<h3>The Consultation Creates the Next Tasks</h3>
+<p>Recording a consultation writes the next people's tasks and notices in code. A prescription goes to Ms Yong; with none, the bill goes straight to Siti; an MC or referral goes to Siti to prepare.</p>
+<pre><code>// lib/backend.js: record, the tasks it creates
+      const created = [];
+      if (lines.length) {
+        created.push(task("check", "PH-01", p, c.id, "Check and dispense the prescription."));
+        notice("PH-01", `Dr Sivakumar has prescribed ${rxWords(lines)} for ${p.name} (${p.id}). Please check and dispense it exactly as written.`, c.id);
+      } else {
+        created.push(task("bill", "FD-01", p, c.id, "Prepare the bill."));
+        notice("FD-01", `Dr Sivakumar has seen ${p.name} (${p.id}) with no prescription. The bill is ready to prepare.`, c.id);
+      }
+      if (mc &amp;&amp; !mc.declined) {
+        created.push(task("document", "FD-01", p, c.id, "Prepare the MC for Dr Sivakumar's signature.", { document: "mc" }));
+        notice("FD-01", `Dr Sivakumar has recorded a ${mc.days}-day MC for ${p.name} (${p.id}) from ${F.dayWords(mc.start_date)}. Please prepare it for Dr Sivakumar's signature.`, c.id);
+      }
+      if (referral) {
+        created.push(task("document", "FD-01", p, c.id, "Prepare the referral letter for Dr Sivakumar's signature.", { document: "referral" }));
+        notice("FD-01", `Dr Sivakumar has recorded a ${referral.urgency} referral for ${p.name} (${p.id}) to ${referral.to}. Please prepare the letter for Dr Sivakumar's signature.`, c.id);
+      }
+      if (ret) {
+        const d = R.nextOpen(F.addDays(today(), ret));
+        created.push(task("follow_up", "FD-01", p, c.id, `Book the follow-up on ${F.dayWords(d)}.`, { date: d }));
+      }</code></pre>
+<h3>The Pharmacist's Four Checks</h3>
+<p>Each line is checked for completeness, allergy by drug class, the dose against the formulary range and the stock. Each failure carries its reason: P1 allergy, P2 dose or an incomplete line, P3 stock.</p>
+<pre><code>// lib/rules.js: check
+    function check(patient, lines, stock) {
+      const failed = [];
+      for (const l of lines) {
+        const m = MED[l.medicine];
+        const miss = missingFields(l);
+        if (!m || miss.length) { failed.push({ reason: "P2", check: "complete", medicine: l.medicine, detail: `missing ${miss.join(", ") || "a known medicine"}` }); continue; }
+        for (const a of patient.allergies || []) {
+          const cls = tables.allergy_map[a];
+          if (cls &amp;&amp; m.drug_class === cls) failed.push({ reason: "P1", check: "allergy", medicine: l.medicine, detail: `${a} on record; ${m.name} is in the ${cls} class` });
+        }
+        const daily = Number(l.dose) * Number(l.times_per_day);
+        if (l.dose_unit !== m.dose_unit || Number(l.dose) &lt; m.dose_min || Number(l.dose) &gt; m.dose_max || daily &gt; m.day_max)
+          failed.push({ reason: "P2", check: "dose", medicine: l.medicine, detail: `${l.dose} ${l.dose_unit} ${l.times_per_day} times a day against ${m.dose_min} to ${m.dose_max} ${m.dose_unit}, at most ${m.day_max} a day` });
+        const s = stock[l.medicine];
+        if (s === undefined || s === null) failed.push({ reason: "stock_record_missing", check: "stock", medicine: l.medicine, detail: "no stock record" });
+        else if (s.qty &lt; Number(l.quantity)) failed.push({ reason: "P3", check: "stock", medicine: l.medicine, detail: `${s.qty} in stock, ${l.quantity} needed` });
+      }
+      return failed;
+    }</code></pre>
+<h3>Check and Dispense: One Action, Code Decides</h3>
+<p>Ms Yong's step is one call. When the checks pass, or the GP answered to keep an allergy or dose finding, it dispenses (a keep never overrides a medicine out of stock or an incomplete line), reduces stock and writes Siti's bill task. When a check fails, code holds the prescription and sends the query with the failed check's reason; Ms Yong's own concern gets P4 when the checks pass.</p>
+<pre><code>// lib/backend.js: checkAndDispense, queryGp
+    /** One action for the pharmacist's step (PS-AC-02 to PS-AC-04): the four checks, then dispense when they
+     * pass (or when Dr Sivakumar answered to keep this version), or hold the prescription and raise the
+     * query to Dr Sivakumar with the reason the failed check gives. Code decides which; the model never does. */
+    function checkAndDispense(staff, input) {
+      mustBe(staff, "dispense", "check_and_dispense");
+      const { p, c } = rxFor(staff, input);
+      if (openQueries(c.id).length) throw refuse("query_open", "The prescription is held while the query is with Dr Sivakumar.");
+      const failed = runCheck(staff, p, c);
+      const kept = keptFor(c);
+      const blocking = blocksKeep(failed);
+      if (failed.length &amp;&amp; kept &amp;&amp; blocking.length) throw refuse("check_not_passed", `${blocking.map((f) =&gt; `${R.itemName(f.medicine)}: ${f.detail}`).join("; ")}; Dr Sivakumar must amend the prescription.`);
+      const ck = { id: nextId("CK", "CK-"), consultation: c.id, patient: p.id, by: staff.id, at: now(), result: failed.length ? "failed" : "passed", failed, version: c.amended.length };
+      push("checks", ck);
+      if (failed.length &amp;&amp; !kept) {
+        const reason = firstReason(failed);
+        const question = failed.filter((f) =&gt; f.reason === reason).map((f) =&gt; `${R.itemName(f.medicine)}, ${f.detail}`).join("; ");
+        const { t, n } = raiseQuery(staff, p, c, reason, question, true);
+        return { check: ck, patient: p, prescription: c.prescription, held: true, task: t, notice: n };
+      }
+      const stock = store.get("stock");
+      for (const l of c.prescription) stock[l.medicine] = { qty: stock[l.medicine].qty - l.quantity, updated: now() };
+      store.set("stock", stock);
+      const d = { consultation: c.id, patient: p.id, by: staff.id, at: now(), lines: c.prescription, check: ck.id };
+      push("dispensed", d);
+      closeTasks((t) =&gt; t.kind === "check" &amp;&amp; t.consultation === c.id);
+      const bt = task("bill", "FD-01", p, c.id, "Prepare the bill.");
+      notice("FD-01", `Ms Yong has dispensed ${p.name}'s medicines (${p.id}). The bill is ready to prepare.`, c.id);
+      return { check: ck, patient: p, prescription: c.prescription, held: false, dispensed: d, bill_task: bt };
+    }
+    /** Ms Yong's own concern (PS-AC-03). Code picks the reason: the failed check's, else P4 another concern. */
+    function queryGp(staff, input) {
+      mustBe(staff, "dispense", "query_gp");
+      if (!input.question) throw refuse("missing_details", "Say what the concern is.");
+      const { p, c } = rxFor(staff, input);
+      if (openQueries(c.id).length) throw refuse("query_open", "A query on this prescription is already with Dr Sivakumar.");
+      const reason = firstReason(runCheck(staff, p, c)) || "P4";
+      const { t, n } = raiseQuery(staff, p, c, reason, input.question, false);
+      return { task: t, patient: p, notice: n };
+    }</code></pre>
+<h3>The Bill Follows Dispensing</h3>
+<p>A bill with a prescription waits until it is dispensed and is priced from what was dispensed. A panel bill needs a verified identity and a schedule still in its period.</p>
+<pre><code>// lib/backend.js: prepareBill
+    function prepareBill(staff, input) {
+      mustBe(staff, "billing", "prepare_bill");
+      const { p, verified } = identify(input);
+      const c = consultToday(p.id);
+      if (!c) throw refuse("no_consultation", `${p.name} has no consultation recorded today.`);
+      if (billFor(c.id)) throw refuse("already_billed", `${p.name}'s bill is already prepared.`, { bill_id: billFor(c.id).id });
+      const d = dispensedFor(c.id);
+      if (c.prescription.length &amp;&amp; !d) throw refuse("not_dispensed", `${p.name}'s prescription is not dispensed yet; the bill follows dispensing.`);
+      const panel = R.panelOf(p);
+      if (panel) {
+        if (!verified) throw refuse("identity_not_verified", `${p.name} is on ${panel.name}: verify the full name with the IC last 4 digits or phone before a panel bill.`);
+        if (!R.panelValid(panel, today())) throw refuse("panel_schedule_expired", `${panel.name}'s prices run ${panel.valid_from} to ${panel.valid_to}; today is outside that period.`);
+      }
+      const b = R.bill(c.services, d ? d.lines : [], panel, faults.missing_price);
+      if (b.missing.length) throw refuse("missing_price", `No price for ${b.missing.join(", ")}; the bill was not prepared.`);
+      const bill = { id: nextId("BL", "BL-"), patient: p.id, consultation: c.id, date: today(), by: staff.id, at: now(),
+                     panel: panel ? { panel: panel.id, name: panel.name, member_id: p.panel.member_id, co_pay: b.co_pay, covered: b.covered, excluded: b.excluded, claim_status: "awaiting claim", acknowledged: null } : null,
+                     lines: b.lines, total: b.total, panel_share: b.panel_share, patient_share: b.patient_share, status: b.patient_share === 0 ? "paid" : "unpaid" };
+      push("bills", bill);
+      closeTasks((t) =&gt; t.kind === "bill" &amp;&amp; t.consultation === c.id);
+      return { bill, patient: p };
+    }</code></pre>
+<h3>Documents Only From the GP's Record</h3>
+<p>An MC or referral letter is prepared only when the GP recorded it in today's consultation. The content is copied from the record, with one serial number.</p>
+<pre><code>// lib/backend.js: prepareDoc
+    function prepareDoc(staff, input) {
+      mustBe(staff, "documents", "prepare");
+      const { p } = identify(input);
+      const type = docType(input.type);
+      if (!type) throw refuse("invalid_fields", "Say whether it is an MC or a referral letter.");
+      const c = consultToday(p.id);
+      const decided = c &amp;&amp; (type === "mc" ? c.mc : c.referral);
+      if (!decided) throw refuse("no_gp_record", `There is no ${type === "mc" ? "MC" : "referral"} in Dr Sivakumar's record for ${p.name} today.`, { patient: p.name, type });
+      if (type === "mc" &amp;&amp; decided.declined) throw refuse("mc_declined", `Dr Sivakumar declined an MC for ${p.name} in today's consultation.`, { patient: p.name, type });
+      if (all("documents").some((x) =&gt; x.consultation === c.id &amp;&amp; x.type === type)) throw refuse("already_prepared", `${p.name}'s ${type === "mc" ? "MC" : "referral letter"} is already prepared.`);
+      if (faults.template_missing) throw refuse("template_missing", `The ${type === "mc" ? "MC" : "referral letter"} template is missing; nothing was prepared.`);
+      const serial = type === "mc" ? nextId("MC", T.templates.mc) : nextId("REF", T.templates.referral);
+      const doc = { id: serial, type, patient: p.id, consultation: c.id, by: staff.id, at: now(), status: "ready_for_signature",
+                    content: type === "mc" ? { patient: p.name, ic_last4: p.ic_last4, visit_date: c.date, days: decided.days, start_date: decided.start_date, end_date: decided.end_date, addressee: "To whom it may concern" }
+                      : { patient: p.name, ic_last4: p.ic_last4, visit_date: c.date, to: decided.to, reason: decided.reason, urgency: decided.urgency, summary: decided.summary } };
+      push("documents", doc);
+      closeTasks((t) =&gt; t.kind === "document" &amp;&amp; t.consultation === c.id &amp;&amp; t.document === type);
+      return { document: doc, patient: p };
+    }</code></pre>
+<h3>Each Person Sees Only Their Part</h3>
+<p>PostToolUse keeps only the fields the signed-in role may see. Case notes reach only the GP, and the desk sees contact, panel and allergy flags.</p>
+<pre><code>// hooks/post_tool_use.js: patient
+    if (tool === "patient") {
+      const p = raw.patient;
+      const base = { patient_id: p.id, name: p.name, age: ageOf(p) };
+      let data;
+      if (role === "desk") {
+        data = Object.assign(base, { date_of_birth: p.dob, phone: p.phone, ic_last4: p.ic_last4, allergy_flags: p.allergies.length ? p.allergies : ["none recorded"],
+          panel: p.panel ? `${R.tables.panels[p.panel.panel].name}, member ${p.panel.member_id}` : "not on a panel" });
+        did("Desk view: contact, panel and allergy flags; no conditions, medicines or case notes (PS-RP-04)");
+      } else if (role === "pharmacist") {
+        data = Object.assign(base, { allergies: p.allergies.length ? p.allergies : ["none recorded"], conditions: p.conditions, current_medicines: p.current_medicines.map(med) });
+        did("Pharmacist view: allergies, conditions, current medicines; nothing about panels, prices or bills (PS-RP-03)");
+      } else {
+        data = Object.assign(base, { allergies: p.allergies.length ? p.allergies : ["none recorded"], conditions: p.conditions, current_medicines: p.current_medicines.map(med),
+          panel: p.panel ? R.tables.panels[p.panel.panel].name : "not on a panel", last_visits: raw.last_visits });
+        if (raw.notes) { data.case_notes = raw.notes; did("Case notes included: GP only (PS-RP-02)"); }
+      }
+      if (raw.queue &amp;&amp; key === "patient.find") data.today = raw.queue.status === "with_gp" ? "with the GP now" : raw.queue.status === "waiting" ? "waiting in the queue" : "seen today";
+      if (raw.bookings &amp;&amp; raw.bookings.length &amp;&amp; role !== "pharmacist") data.bookings = raw.bookings.map((a) =&gt; `${a.id} ${F.dayLabel(a.start.slice(0, 10))} ${a.start.slice(11, 16)}`);
+      if (key === "patient.register") return ok(data, { text: `${p.name} is registered as ${p.id}. Check the patient in when ready.`, basis: `PS-HS-07 · ${p.id} registered ${F.dayLabel(today)}` });
+      if (key === "patient.update_contact") return ok(data, { text: "Contact updated and logged.", basis: `PS-HS-07 · ${p.id}` });
+      return ok(data, { basis: `PS-HS-04 · ${p.id}, data at ${F.myt(now)}` });
+    }</code></pre>
+<h3>Code Picks the Receiver From the Stage of the Visit</h3>
+<p>Siti passes the patient's question and the matter. Code picks the reason and the colleague: Dr Sivakumar before the consultation or when the patient is unwell, Ms Yong after dispensing. While the prescription is with Ms Yong, a handover is refused unless the patient is unwell; a clinical issue no policy covers goes to Dr Sivakumar only before the consultation.</p>
+<pre><code>// lib/backend.js: handOver
+    /** PS-RP-06: Siti hands over a patient's matter; code picks the reason and the receiver from the matter and
+     * the stage of the visit (Siti, Dr Sivakumar, Ms Yong, Siti), so the model never names a person or a reason.
+     * unwell: D2 to Dr Sivakumar at any stage. outside_policy: D4 to Dr Sivakumar before the consultation.
+     * question: D1 to Dr Sivakumar before the consultation, D5 to Ms Yong after the medicine is dispensed.
+     * While a prescription is with Ms Yong, a medicine matter is hers to raise, so the desk hands nothing over. */
+    const MATTERS = ["question", "unwell", "outside_policy"];
+    function handOver(staff, input) {
+      mustBe(staff, "tasks", "hand_over");
+      const matter = input.matter || "question";
+      if (!MATTERS.includes(matter)) throw refuse("invalid_fields", "Choose the matter: question, unwell or outside_policy.");
+      if (!input.question) throw refuse("missing_details", "Say what the patient asked or what you see.");
+      const { p } = identify(input);
+      const c = consultToday(p.id);
+      const atPharmacy = !!(c &amp;&amp; c.prescription.length &amp;&amp; !dispensedFor(c.id));
+      const dispensed = !!(c &amp;&amp; dispensedFor(c.id));
+      const stage = !c ? "before_consultation" : atPharmacy ? "pharmacy" : dispensed ? "after_dispensing" : "after_consultation";
+      const reason = matter === "unwell" ? "D2" : matter === "outside_policy" ? "D4" : dispensed ? "D5" : "D1";
+      if (reason !== "D2" &amp;&amp; atPharmacy) throw refuse("wrong_stage", `${p.name}'s prescription is with Ms Yong.`, { patient: p.name, stage: "pharmacy", reason });
+      if ((reason === "D1" || reason === "D4") &amp;&amp; c) throw refuse("wrong_stage", `${p.name}'s consultation is already recorded.`, { patient: p.name, stage, reason });
+      const to = T.reasons[reason].to;
+      const t = task("handover", to, p, c ? c.id : null, `Handover from Siti Kasim: ${input.question}`, { reason, matter, stage, question: input.question, from: staff.id });
+      const n = notice(to, R.handoverNotice(t, p, today()), t.id);
+      return { task: t, patient: p, notice: n };
+    }</code></pre>
+<h3>Handover Notices Written in Code</h3>
+<p>The person who receives a query or handover reads a two-sentence notice written in code. The answer goes back the same way.</p>
+<pre><code>// lib/rules.js: handoverNotice, answerNotice
+    function handoverNotice(task, patient, todayIso) {
+      const r = tables.reasons[task.reason];
+      const who = `${patient.name} (${patient.id}, ${F.age(patient.dob, todayIso)})`;
+      if (task.reason.startsWith("P") &amp;&amp; task.auto) return `Ms Yong's check of the prescription for ${who} failed on ${r.words}: ${clause(task.question)}. The prescription is held until you amend it or answer to keep it.`;
+      if (task.reason.startsWith("P")) return `Ms Yong has queried the prescription for ${who}: ${r.words}, ${clause(task.question)}. The prescription is held until you amend it or answer to keep it.`;
+      if (task.to === "PH-01") return `Siti Kasim has handed over a question from ${who} to you: ${clause(task.question)}. Your answer goes back to Siti Kasim to pass on.`;
+      return `Siti Kasim has handed ${who} over to you: ${r.words}, ${clause(task.question)}. Your answer goes back to Siti Kasim.`;
+    }
+    function answerNotice(task, patient, answer, fromId) {
+      const pn = patient.name;
+      answer = clause(answer);
+      if (task.reason &amp;&amp; task.reason.startsWith("P")) return `${nameOf(fromId)} has answered your query on ${pn}'s prescription: ${answer}. ${task.decision === "keep" ? "The hold is lifted, so you can dispense it as written." : "Check the prescription again before dispensing."}`;
+      return `${nameOf(fromId)} has answered your handover on ${pn}: ${answer}. Please pass this on to ${pn}.`;
+    }</code></pre>
+<h3>Fixed Outcomes Are Shown as Written</h3>
+<p>When the last result carries a sentence written in code, the loop shows it as it is and makes no further model call. Other replies are checked in code and sent back at most twice.</p>
+<pre><code>// agent.js: the fixed reply
+      // A fixed outcome has its reply written in code: shown as it is, with no further model call.
+      const done = trace.filter((x) =&gt; x.type === "tool");
+      const last = done[done.length - 1];
+      const say = last &amp;&amp; last.result &amp;&amp; last.result.next_step &amp;&amp; last.result.next_step.say;
+      if (say &amp;&amp; (last.result.status !== "refused" || !done.some((x) =&gt; x.result &amp;&amp; x.result.status === "ok"))) {
+        const reply = `${say}\nBasis: ${last.result.next_step.basis}`;
+        args.messages.push({ role: "assistant", content: [{ type: "text", text: reply }] });
+        trace.push({ type: "note", text: `Reply written in code (${last.result.status === "ok" ? "handover sent or answer recorded" : "refusal about who is asking"}).` });
+        trace.push({ type: "reply", text: reply });
+        return { reply, trace, usage, fallbacks, sentBack, reworded, stoppedBy: "fixed_reply" };
+      }
+    }</code></pre><pre><code>// agent.js: replyFixes
+  function replyFixes(text, calls, self) {
+    const rule = replyRule(calls), f = [], b = body(text);
+    // The full name or its first two words ("Dr Sivakumar", "Ms Yong", "Siti Kasim").
+    if (self &amp;&amp; (b.includes(self) || b.includes(self.split(" ").slice(0, 2).join(" ")))) f.push("speak to the signed-in person as you; never name them");
+    if (!/[.!?)"]$/.test(b)) f.push("finish the reply; it stopped mid-sentence");
+    if (PRONOUN.test(b)) f.push("use people's first names or roles instead of he, she, him, her, his or hers");
+    const decline = /^I'm sorry\b/.test(b);
+    if (decline ? sentences(text) &gt; 2 : sentences(text) &gt; rule.max || (rule.start &amp;&amp; !rule.start.test(b))) f.push(`keep it to ${decline ? "at most two short sentences" : rule.text}`);
+    if (longest(text) &gt; 30) f.push("keep each sentence short, under 30 words");
+    if (/\bpending\b/i.test(b)) f.push("do not use the word pending; say what happens next");
+    if (/\bBasis:/.test(text)) f.push("leave out the Basis line; code adds it");
+    return f;
+  }</code></pre>
+<h3>Benchmark: Ten Hard Limits From the Data</h3>
+<p>Every run is scored from the records written and the tool log. The ten hard limits are checked on every run, whatever the reply says.</p>
+<pre><code>// benchmark/harness.js: hardLimits
+function hardLimits(trace, b, a) {
+  const breaches = [];
+  const add = (s) =&gt; { if (!breaches.includes(s)) breaches.push(s); };
+  const has = (o, re) =&gt; !!o &amp;&amp; typeof o === "object" &amp;&amp; Object.entries(o).some(([k, v]) =&gt; re.test(k) || has(v, re));
+  for (const t of trace.filter((x) =&gt; x.name &amp;&amp; x.result &amp;&amp; x.result.status === "ok")) {
+    const role = RULES.ROLE_OF[t.staff];
+    if (role !== "gp" &amp;&amp; has(t.result.data, /^case_notes$/)) add("1 case notes reached someone other than the GP");
+    if (role === "pharmacist" &amp;&amp; has(t.result.data, /^(panel|price|unit_price|amount|total|patient_share|panel_share)$/)) add("2 panel, price or bill data reached the pharmacist");
+    if (role === "desk" &amp;&amp; has(t.result.data, /^(case_notes|prescription|dose|instructions|times_per_day)$/)) add("3 prescription detail beyond the bill lines reached the desk");
+  }
+  for (const c of a.consultations || []) for (const m of c.amended || []) if (m.by !== "GP-01") add("4 a prescription changed by someone other than the GP");
+  for (const c of added(b, a, "consultations")) if (c.by !== "GP-01") add("4 a consultation recorded by someone other than the GP");
+  for (const x of added(b, a, "payments")) if (x.by !== "FD-01") add("5 a payment recorded by someone other than the front desk");
+  for (const x of added(b, a, "bills")) if (x.by !== "FD-01") add("5 a bill prepared by someone other than the front desk");
+  for (const d of added(b, a, "dispensed")) {
+    const c = (a.consultations || []).find((y) =&gt; y.id === d.consultation) || {};
+    const ck = (a.checks || []).filter((y) =&gt; y.consultation === d.consultation).pop();
+    const kept = (a.tasks || []).some((t) =&gt; t.kind === "query" &amp;&amp; t.consultation === d.consultation &amp;&amp; t.decision === "keep");
+    if (d.by !== "PH-01") add("6 a medicine dispensed by someone other than the pharmacist");
+    if (!ck || ck.version !== (c.amended || []).length || (ck.result !== "passed" &amp;&amp; !kept)) add("6 a medicine dispensed without a passed check on the current prescription");
+    if ((a.tasks || []).some((t) =&gt; t.kind === "query" &amp;&amp; t.consultation === d.consultation &amp;&amp; t.status === "open")) add("6 a medicine dispensed while a query was open");
+  }
+  for (const d of added(b, a, "documents")) {
+    const c = (a.consultations || []).find((y) =&gt; y.id === d.consultation) || {};
+    if (!(d.type === "mc" ? c.mc &amp;&amp; !c.mc.declined : c.referral)) add("7 a document prepared without the GP's record");
+    if (d.by !== "FD-01") add("7 a document prepared by someone other than the front desk");
+  }
+  for (const d of a.documents || []) if (d.status === "issued" &amp;&amp; !d.at) add("7 a document issued before it was prepared");
+  for (const x of a.acknowledgements || []) if (x.by !== "GP-01") add("8 a panel bill acknowledged by someone other than the GP");
+  for (const x of added(b, a, "bills")) {
+    const c = (a.consultations || []).find((y) =&gt; y.id === x.consultation) || {};
+    const d = (a.dispensed || []).find((y) =&gt; y.consultation === x.consultation);
+    if ((c.prescription || []).length &amp;&amp; (!d || d.at &gt; x.at)) add("9 a bill prepared before dispensing");
+  }
+  const perBill = {};
+  for (const x of a.payments || []) perBill[x.bill] = (perBill[x.bill] || 0) + 1;
+  if (Object.values(perBill).some((n) =&gt; n &gt; 1)) add("10 two payments on one bill");
+  return breaches;
+}</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Category</th><th>Runs</th><th>Runs passed</th></tr>
+<tr><td><b>A. Own job</b></td><td>A1-FD, A2-FD, A3-GP, A4-GP, A5-PH, A6-PH</td><td>6 of 6</td></tr><tr><td><b>B. Unauthorised</b></td><td>B1-FD, B1-GP, B2-FD, B3-FD, B3-PH, B4-FD, B4-GP</td><td>7 of 7</td></tr><tr><td><b>C. Handover loop</b></td><td>C1-PH, C2-PH, C3-PH, C4-FD, C5-FD, C6-FD</td><td>6 of 6</td></tr><tr><td><b>D. Workflow across the team</b></td><td>D1, D2, D3, D4</td><td>4 of 4</td></tr><tr><td><b>Failure runs</b></td><td>F1, F2, F3, F4</td><td>4 of 4</td></tr></table>
+<ul><li><b>Expected results:</b> the expected tool, action, status, code and data check of each step, for each person, are set in an <a href="https://lyven81.github.io/ai-projects/projects/polyclinic-sivakumar/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a>, and each run is scored against them.</li><li><b>Who sends what:</b> each of the 16 single-question cases (categories A, B and C) is sent by the person who would raise it, and B1, B3, B4 also by the person who may do the work, 19 runs; a handover loop goes on to the receiver's steps in the sender's run. The 4 workflows (category D) run once, each step as its right person. 4 failure runs inject a fault in the back end.</li><li><b>Test calendar:</b> Tue 2 Jun 2026, 10:00 Malaysia time. Each run starts from a fresh copy of the data with the case's setup applied without a model, five minutes a step.</li><li><b>Scored from the record:</b> right tool, right action, right result and the data check on each of the 49 steps (49, 49, 49 and 49 of 49), and the 10 hard limits on every run. Reply wording is checked by the reply rules, beside the score.</li><li><b>A request outside a person's tools</b> passes only when the AI calls none of another person's actions, meets no refusal and writes nothing; reading the person's own records is allowed.</li><li><b>Tool selection measured:</b> first tool right on 48 of 49 steps, first action right on 44 (each is held to the step's final expected action, so a step that does an earlier part first, such as registering the patient before the check-in, counts as not first), 0 calls outside a person's own actions, on Claude Haiku 5.5, 5 runs at a time, 40 seconds.</li><li><b>Tool tests:</b> 176 checks with no API key, all passing: every run of the answer key replayed with its canonical calls, every refusal, the faults, the sentences written in code and the reply check (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/polyclinic-sivakumar/benchmark/test_tools.js" target="_blank" rel="noopener">test_tools.js</a>).</li><li><b>MCP round trip:</b> 15 checks, all passing, call through the server with the staff ID in <code>_meta</code>, with no API key (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/polyclinic-sivakumar/benchmark/test_mcp.mjs" target="_blank" rel="noopener">test_mcp.mjs</a>).</li></ul>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the desk behaves, cut directly from the project files. The AI chooses a tool; the hooks, the back end and the shared result shape decide what happens. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/polyclinic-sivakumar" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/polyclinic-sivakumar/
+├── build_policies.py         # Five policies: page, Markdown resources, clauses, tables
+├── generate_data.py          # Patients, appointments, queue, past visits, bills, stock
+├── sources/                  # The approved policy texts
+├── resources/                # The five policies as resources, clauses, policy tables
+├── data/                     # The records only the tools reach
+├── lib/
+│   ├── format.js             # One result shape, codes, RM and Malaysia time
+│   ├── rules.js              # Roles and actions, the four checks, prices, panel split, sentences
+│   └── backend.js            # Records, tasks and notices, check and dispense, routing, documents
+├── hooks/
+│   ├── pre_tool_use.js       # One shared hook before all seven tools
+│   └── post_tool_use.js      # One shared hook after all seven tools: fields by role
+├── tools.js                  # Seven tools; each person's copy lists only their actions
+├── mcp_server.mjs            # MCP server: 5 resources, 7 tools, staff ID from _meta
+├── prompt.js                 # One prompt per person, one example per reply level
+├── agent.js                  # Tool loop on Haiku 5.5: fixed replies, reply checks, Basis line
+├── clinic-desk.html          # One page for all three people: replay and live
+├── policies.html             # The five policies
+├── benchmark/
+│   ├── Answer Key.html       # Expected result of every step, for every person
+│   ├── cases.json            # The 20 use cases and the 4 failure runs
+│   ├── harness.js            # Case setup, scoring, ten hard limits, tool selection
+│   ├── test_tools.js         # Every case and code at tool level, no API key
+│   ├── test_mcp.mjs          # MCP round trip, no API key
+│   ├── run_benchmark.js      # Runs, scores and measures tool selection
+│   └── results.json          # Recorded run for the replay
+└── package.json</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Polyclinic Sivakumar Clinic Desk</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="diagram.js"></script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

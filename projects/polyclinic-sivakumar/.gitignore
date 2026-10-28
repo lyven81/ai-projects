@@ -1,0 +1,18 @@
+node_modules/
+.env
+__pycache__/
+*.pyc
+benchmark/runs/
+benchmark/results-partial.*
+.DS_Store
+*.log
+# working previews of the UI options, kept for the plan; not published
+desk-preview.html
+desk-layout1.html
+# backups kept in the run folder, never published
+*.bak-*
+# reruns of the earlier 52-run design (27 Oct), kept locally; the published evidence is results.*, sample.* and rerun-b1.*
+benchmark/rerun1.*
+benchmark/rerun2.*
+benchmark/rerun-d1.*
+benchmark/rerun-stage.*

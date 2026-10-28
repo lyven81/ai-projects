@@ -1,0 +1,95 @@
+[
+ {
+  "id": "BL-0001",
+  "patient": "PS-P-0024",
+  "consultation": "CN-0001",
+  "date": "2026-06-02",
+  "by": "FD-01",
+  "at": 1780363800,
+  "panel": null,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "qty": 1,
+    "unit": 3500,
+    "amount": 3500,
+    "covered": null
+   },
+   {
+    "item": "amoxicillin-500-mg",
+    "name": "Amoxicillin 500 mg",
+    "qty": 15,
+    "unit": 80,
+    "amount": 1200,
+    "covered": null
+   }
+  ],
+  "total": 4700,
+  "panel_share": 0,
+  "patient_share": 4700,
+  "status": "paid"
+ },
+ {
+  "id": "BL-0002",
+  "patient": "PS-P-0026",
+  "consultation": "CN-0002",
+  "date": "2026-06-02",
+  "by": "FD-01",
+  "at": 1780364100,
+  "panel": null,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "qty": 1,
+    "unit": 3500,
+    "amount": 3500,
+    "covered": null
+   },
+   {
+    "item": "paracetamol-500-mg",
+    "name": "Paracetamol 500 mg",
+    "qty": 12,
+    "unit": 20,
+    "amount": 240,
+    "covered": null
+   }
+  ],
+  "total": 3740,
+  "panel_share": 0,
+  "patient_share": 3740,
+  "status": "paid"
+ },
+ {
+  "id": "BL-0003",
+  "patient": "PS-P-0018",
+  "consultation": "CN-0003",
+  "date": "2026-06-02",
+  "by": "FD-01",
+  "at": 1780364700,
+  "panel": null,
+  "lines": [
+   {
+    "item": "gp-consultation",
+    "name": "GP consultation",
+    "qty": 1,
+    "unit": 3500,
+    "amount": 3500,
+    "covered": null
+   },
+   {
+    "item": "paracetamol-500-mg",
+    "name": "Paracetamol 500 mg",
+    "qty": 10,
+    "unit": 20,
+    "amount": 200,
+    "covered": null
+   }
+  ],
+  "total": 3700,
+  "panel_share": 0,
+  "patient_share": 3700,
+  "status": "unpaid"
+ }
+]

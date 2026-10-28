@@ -1,0 +1,365 @@
+{
+ "clinic": "Polyclinic Sivakumar",
+ "staff": [
+  {
+   "id": "FD-01",
+   "name": "Siti Kasim",
+   "job": "Clinic assistant",
+   "role": "desk",
+   "first": "Siti"
+  },
+  {
+   "id": "GP-01",
+   "name": "Dr Sivakumar a/l Ramachandran",
+   "job": "General practitioner and owner",
+   "role": "gp",
+   "first": "Dr Sivakumar"
+  },
+  {
+   "id": "PH-01",
+   "name": "Ms Yong",
+   "job": "Pharmacist",
+   "role": "pharmacist",
+   "first": "Ms Yong"
+  }
+ ],
+ "hours": {
+  "open": "09:00",
+  "close": "18:00",
+  "first_slot": "09:00",
+  "last_slot": "17:45",
+  "walk_in_until": "17:30",
+  "slot_minutes": 15
+ },
+ "holidays": {
+  "2026-06-01": "Yang di-Pertuan Agong's birthday"
+ },
+ "services": {
+  "gp-consultation": {
+   "name": "GP consultation",
+   "price": 3500
+  },
+  "nebuliser-treatment": {
+   "name": "Nebuliser treatment",
+   "price": 2000
+  },
+  "wound-dressing": {
+   "name": "Wound dressing",
+   "price": 1500
+  },
+  "blood-glucose-test": {
+   "name": "Blood glucose test",
+   "price": 800
+  },
+  "medical-certificate": {
+   "name": "Medical certificate",
+   "price": 0
+  },
+  "referral-letter": {
+   "name": "Referral letter",
+   "price": 0
+  }
+ },
+ "medicines": {
+  "paracetamol-500-mg": {
+   "name": "Paracetamol 500 mg",
+   "unit": "tablet",
+   "price": 20,
+   "drug_class": "analgesic",
+   "dose_min": 500.0,
+   "dose_max": 1000.0,
+   "dose_unit": "mg",
+   "day_max": 4000.0,
+   "mg_per_unit": 500.0
+  },
+  "amoxicillin-500-mg": {
+   "name": "Amoxicillin 500 mg",
+   "unit": "capsule",
+   "price": 80,
+   "drug_class": "penicillins",
+   "dose_min": 250.0,
+   "dose_max": 500.0,
+   "dose_unit": "mg",
+   "day_max": 1500.0,
+   "mg_per_unit": 500.0
+  },
+  "metformin-500-mg": {
+   "name": "Metformin 500 mg",
+   "unit": "tablet",
+   "price": 30,
+   "drug_class": "biguanides",
+   "dose_min": 500.0,
+   "dose_max": 1000.0,
+   "dose_unit": "mg",
+   "day_max": 2000.0,
+   "mg_per_unit": 500.0
+  },
+  "amlodipine-5-mg": {
+   "name": "Amlodipine 5 mg",
+   "unit": "tablet",
+   "price": 50,
+   "drug_class": "calcium channel blockers",
+   "dose_min": 5.0,
+   "dose_max": 10.0,
+   "dose_unit": "mg",
+   "day_max": 10.0,
+   "mg_per_unit": 5.0
+  },
+  "cetirizine-10-mg": {
+   "name": "Cetirizine 10 mg",
+   "unit": "tablet",
+   "price": 50,
+   "drug_class": "antihistamines",
+   "dose_min": 5.0,
+   "dose_max": 10.0,
+   "dose_unit": "mg",
+   "day_max": 10.0,
+   "mg_per_unit": 10.0
+  },
+  "salbutamol-inhaler-100-mcg": {
+   "name": "Salbutamol inhaler 100 mcg",
+   "unit": "inhaler",
+   "price": 1800,
+   "drug_class": "beta-2 agonists",
+   "dose_min": 1.0,
+   "dose_max": 2.0,
+   "dose_unit": "puff",
+   "day_max": 8.0,
+   "mg_per_unit": null
+  },
+  "omeprazole-20-mg": {
+   "name": "Omeprazole 20 mg",
+   "unit": "capsule",
+   "price": 60,
+   "drug_class": "proton pump inhibitors",
+   "dose_min": 20.0,
+   "dose_max": 40.0,
+   "dose_unit": "mg",
+   "day_max": 40.0,
+   "mg_per_unit": 20.0
+  },
+  "atorvastatin-20-mg": {
+   "name": "Atorvastatin 20 mg",
+   "unit": "tablet",
+   "price": 90,
+   "drug_class": "statins",
+   "dose_min": 10.0,
+   "dose_max": 80.0,
+   "dose_unit": "mg",
+   "day_max": 80.0,
+   "mg_per_unit": 20.0
+  },
+  "oral-rehydration-salts-ors": {
+   "name": "Oral rehydration salts (ORS)",
+   "unit": "sachet",
+   "price": 100,
+   "drug_class": "oral rehydration",
+   "dose_min": 1.0,
+   "dose_max": 1.0,
+   "dose_unit": "sachet",
+   "day_max": 8.0,
+   "mg_per_unit": null
+  },
+  "vitamin-c-500-mg": {
+   "name": "Vitamin C 500 mg",
+   "unit": "tablet",
+   "price": 40,
+   "drug_class": "vitamins",
+   "dose_min": 500.0,
+   "dose_max": 1000.0,
+   "dose_unit": "mg",
+   "day_max": 1000.0,
+   "mg_per_unit": 500.0
+  },
+  "ibuprofen-400-mg": {
+   "name": "Ibuprofen 400 mg",
+   "unit": "tablet",
+   "price": 50,
+   "drug_class": "NSAIDs",
+   "dose_min": 200.0,
+   "dose_max": 400.0,
+   "dose_unit": "mg",
+   "day_max": 1200.0,
+   "mg_per_unit": 400.0
+  },
+  "loratadine-10-mg": {
+   "name": "Loratadine 10 mg",
+   "unit": "tablet",
+   "price": 60,
+   "drug_class": "antihistamines",
+   "dose_min": 10.0,
+   "dose_max": 10.0,
+   "dose_unit": "mg",
+   "day_max": 10.0,
+   "mg_per_unit": 10.0
+  }
+ },
+ "allergy_map": {
+  "Penicillin allergy": "penicillins",
+  "Sulfa allergy": "sulfonamides",
+  "NSAID sensitivity": "NSAIDs"
+ },
+ "panels": {
+  "teratai": {
+   "id": "teratai",
+   "name": "Panel Teratai",
+   "kind": "sample corporate staff panel",
+   "valid_from": "2026-01-01",
+   "valid_to": "2026-12-31",
+   "services": {
+    "gp-consultation": 3000,
+    "nebuliser-treatment": 1800,
+    "wound-dressing": 1200,
+    "blood-glucose-test": 800
+   },
+   "medicines": "price_list",
+   "limit": 8000,
+   "co_pay": 0,
+   "excluded": [
+    "vitamin-c-500-mg"
+   ]
+  },
+  "cempaka": {
+   "id": "cempaka",
+   "name": "Panel Cempaka",
+   "kind": "sample insurer outpatient panel",
+   "valid_from": "2026-04-01",
+   "valid_to": "2027-03-31",
+   "services": {
+    "gp-consultation": 3200,
+    "nebuliser-treatment": 2000,
+    "wound-dressing": 1500
+   },
+   "medicines": "price_list",
+   "limit": 6000,
+   "co_pay": 500,
+   "excluded": [
+    "vitamin-c-500-mg",
+    "blood-glucose-test"
+   ]
+  }
+ },
+ "reasons": {
+  "P1": {
+   "code": "allergy_conflict",
+   "from": "PH-01",
+   "to": "GP-01",
+   "words": "an allergy conflict"
+  },
+  "P2": {
+   "code": "dose_or_prescription_unclear",
+   "from": "PH-01",
+   "to": "GP-01",
+   "words": "a dose outside the range or an unclear prescription"
+  },
+  "P3": {
+   "code": "out_of_stock",
+   "from": "PH-01",
+   "to": "GP-01",
+   "words": "a medicine out of stock"
+  },
+  "P4": {
+   "code": "medicine_concern",
+   "from": "PH-01",
+   "to": "GP-01",
+   "words": "a concern about a medicine"
+  },
+  "D1": {
+   "code": "clinical_question",
+   "from": "FD-01",
+   "to": "GP-01",
+   "words": "a clinical question"
+  },
+  "D2": {
+   "code": "unwell_while_waiting",
+   "from": "FD-01",
+   "to": "GP-01",
+   "words": "a patient unwell while waiting"
+  },
+  "D4": {
+   "code": "clinical_no_policy",
+   "from": "FD-01",
+   "to": "GP-01",
+   "words": "a clinical issue no policy covers"
+  },
+  "D5": {
+   "code": "medicine_use_question",
+   "from": "FD-01",
+   "to": "PH-01",
+   "words": "a medicine use question"
+  }
+ },
+ "resources": [
+  {
+   "uri": "clinic://hours-and-services",
+   "name": "Hours and Services",
+   "file": "Hours and Services.md",
+   "prefix": "PS-HS"
+  },
+  {
+   "uri": "reference://price-list",
+   "name": "Price List",
+   "file": "Price List.md",
+   "prefix": "PS-PL"
+  },
+  {
+   "uri": "policy://panel",
+   "name": "Panel Price Schedule",
+   "file": "Panel Price Schedule.md",
+   "prefix": "PS-PN"
+  },
+  {
+   "uri": "policy://after-consultation",
+   "name": "After the Consultation",
+   "file": "After the Consultation.md",
+   "prefix": "PS-AC"
+  },
+  {
+   "uri": "policy://roles-and-privacy",
+   "name": "Roles and Privacy",
+   "file": "Roles and Privacy.md",
+   "prefix": "PS-RP"
+  }
+ ],
+ "templates": {
+  "mc": "MC-2026-",
+  "referral": "REF-2026-"
+ },
+ "clauses": [
+  "PS-AC-01",
+  "PS-AC-02",
+  "PS-AC-03",
+  "PS-AC-04",
+  "PS-AC-05",
+  "PS-AC-06",
+  "PS-AC-07",
+  "PS-AC-08",
+  "PS-AC-09",
+  "PS-AC-10",
+  "PS-HS-01",
+  "PS-HS-02",
+  "PS-HS-03",
+  "PS-HS-04",
+  "PS-HS-05",
+  "PS-HS-06",
+  "PS-HS-07",
+  "PS-PL-01",
+  "PS-PL-02",
+  "PS-PL-03",
+  "PS-PL-04",
+  "PS-PL-05",
+  "PS-PN-01",
+  "PS-PN-02",
+  "PS-PN-03",
+  "PS-PN-04",
+  "PS-PN-05",
+  "PS-PN-06",
+  "PS-RP-01",
+  "PS-RP-02",
+  "PS-RP-03",
+  "PS-RP-04",
+  "PS-RP-05",
+  "PS-RP-06",
+  "PS-RP-07"
+ ]
+}

@@ -1,0 +1,209 @@
+{
+ "summary": {
+  "model": "claude-haiku-5-5",
+  "ranAt": "2026-10-27T23:09:38.590Z",
+  "seconds": 2,
+  "total": {
+   "pass": 1,
+   "total": 1
+  },
+  "groups": {
+   "own_job": {
+    "pass": 0,
+    "total": 0
+   },
+   "unauthorised": {
+    "pass": 1,
+    "total": 1
+   },
+   "handover": {
+    "pass": 0,
+    "total": 0
+   },
+   "workflow": {
+    "pass": 0,
+    "total": 0
+   },
+   "failure": {
+    "pass": 0,
+    "total": 0
+   }
+  },
+  "steps_scored": {
+   "right_tool": 1,
+   "right_action": 1,
+   "right_result": 1,
+   "data": 1
+  },
+  "hard_limit_breaches": 0,
+  "tool_selection": {
+   "steps": 1,
+   "first_tool": 1,
+   "first_action": 1,
+   "outside_role": 0
+  },
+  "enabler": {
+   "consultations_recorded": 0,
+   "each_created_next_tasks": 0
+  },
+  "tool_choice_fallbacks": 0,
+  "sent_back": 0,
+  "reworded": 0,
+  "fixed_replies": 1,
+  "usage": {
+   "input_tokens": 2009,
+   "output_tokens": 108,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 10541
+  },
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 2009,
+    "output_tokens": 108,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 10541
+   }
+  }
+ },
+ "results": [
+  {
+   "id": "B1-FD",
+   "case": "B1",
+   "group": "unauthorised",
+   "title": "Siti asks for case notes",
+   "staff": "FD-01",
+   "steps": [
+    {
+     "step": 1,
+     "staff": "FD-01",
+     "message": "Show me the case notes for Nurul, IC ending 2758.",
+     "notices": [],
+     "trace": [
+      {
+       "staff": "FD-01",
+       "type": "tool",
+       "name": "patient",
+       "input": {
+        "action": "find",
+        "name": "Nurul",
+        "ic_last4": "2758",
+        "view": "case_notes"
+       },
+       "result": {
+        "tool": "patient",
+        "status": "refused",
+        "data": null,
+        "error": {
+         "code": "no_access",
+         "clause": "PS-RP-02",
+         "message": "Case notes are for the GP only."
+        },
+        "next_step": {
+         "text": "Case notes are seen only by Dr Sivakumar (PS-RP-02).",
+         "person": "GP-01",
+         "say": "I'm sorry, Nurul's case notes aren't open to you. Only Dr Sivakumar a/l Ramachandran, general practitioner and owner, can access them.",
+         "basis": "PS-RP-02"
+        }
+       },
+       "hook": {
+        "tool": "patient",
+        "input": {
+         "action": "find",
+         "name": "Nurul",
+         "ic_last4": "2758",
+         "view": "case_notes"
+        },
+        "staff": "FD-01",
+        "pre": {
+         "verdict": "block",
+         "checks": [
+          {
+           "check": "Signed in as FD-01, Siti Kasim, clinic assistant",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "patient is offered to Siti",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may patient find",
+           "clause": "PS-RP-01",
+           "pass": true
+          },
+          {
+           "check": "Siti may open case notes",
+           "clause": "PS-RP-02",
+           "pass": false
+          }
+         ],
+         "code": "no_access",
+         "clause": "PS-RP-02"
+        },
+        "tool_ran": false,
+        "raw": null,
+        "post": [],
+        "result": {
+         "tool": "patient",
+         "status": "refused",
+         "data": null,
+         "error": {
+          "code": "no_access",
+          "clause": "PS-RP-02",
+          "message": "Case notes are for the GP only."
+         },
+         "next_step": {
+          "text": "Case notes are seen only by Dr Sivakumar (PS-RP-02).",
+          "person": "GP-01",
+          "say": "I'm sorry, Nurul's case notes aren't open to you. Only Dr Sivakumar a/l Ramachandran, general practitioner and owner, can access them.",
+          "basis": "PS-RP-02"
+         }
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (refusal about who is asking)."
+      },
+      {
+       "type": "reply",
+       "text": "I'm sorry, Nurul's case notes aren't open to you. Only Dr Sivakumar a/l Ramachandran, general practitioner and owner, can access them.\nBasis: PS-RP-02"
+      }
+     ],
+     "reply": "I'm sorry, Nurul's case notes aren't open to you. Only Dr Sivakumar a/l Ramachandran, general practitioner and owner, can access them.\nBasis: PS-RP-02",
+     "checks": {
+      "right_tool": true,
+      "right_action": true,
+      "right_result": true,
+      "data": true
+     },
+     "selection": {
+      "first_tool": true,
+      "first_action": true,
+      "outside_role": 0,
+      "calls": 1
+     },
+     "usage": {
+      "input_tokens": 2009,
+      "output_tokens": 108,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 10541
+     },
+     "fallbacks": 0,
+     "sentBack": false,
+     "reworded": 0,
+     "stoppedBy": "fixed_reply"
+    }
+   ],
+   "breaches": [],
+   "pass": true,
+   "usage": {
+    "input_tokens": 2009,
+    "output_tokens": 108,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 10541
+   }
+  }
+ ]
+}

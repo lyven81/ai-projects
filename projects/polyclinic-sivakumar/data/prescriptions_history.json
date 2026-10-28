@@ -1,0 +1,8604 @@
+[
+ {
+  "id": "RXH-0001",
+  "patient": "PS-P-0001",
+  "date": "2025-05-30",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0002",
+  "patient": "PS-P-0001",
+  "date": "2025-06-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0003",
+  "patient": "PS-P-0001",
+  "date": "2025-07-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0004",
+  "patient": "PS-P-0001",
+  "date": "2025-07-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0005",
+  "patient": "PS-P-0001",
+  "date": "2025-08-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0006",
+  "patient": "PS-P-0001",
+  "date": "2025-08-17",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0007",
+  "patient": "PS-P-0001",
+  "date": "2025-08-25",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0008",
+  "patient": "PS-P-0001",
+  "date": "2025-09-15",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0009",
+  "patient": "PS-P-0001",
+  "date": "2025-10-14",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0010",
+  "patient": "PS-P-0001",
+  "date": "2025-10-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0011",
+  "patient": "PS-P-0001",
+  "date": "2026-02-01",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0012",
+  "patient": "PS-P-0001",
+  "date": "2026-02-08",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0013",
+  "patient": "PS-P-0001",
+  "date": "2026-02-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0014",
+  "patient": "PS-P-0001",
+  "date": "2026-05-18",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0015",
+  "patient": "PS-P-0002",
+  "date": "2025-04-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0016",
+  "patient": "PS-P-0002",
+  "date": "2025-04-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0017",
+  "patient": "PS-P-0002",
+  "date": "2025-05-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0018",
+  "patient": "PS-P-0002",
+  "date": "2025-06-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0019",
+  "patient": "PS-P-0002",
+  "date": "2025-10-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0020",
+  "patient": "PS-P-0002",
+  "date": "2025-10-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0021",
+  "patient": "PS-P-0002",
+  "date": "2025-10-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0022",
+  "patient": "PS-P-0002",
+  "date": "2025-10-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0023",
+  "patient": "PS-P-0002",
+  "date": "2025-11-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0024",
+  "patient": "PS-P-0002",
+  "date": "2025-11-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0025",
+  "patient": "PS-P-0002",
+  "date": "2025-12-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0026",
+  "patient": "PS-P-0002",
+  "date": "2026-02-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0027",
+  "patient": "PS-P-0002",
+  "date": "2026-04-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0028",
+  "patient": "PS-P-0002",
+  "date": "2026-04-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0029",
+  "patient": "PS-P-0003",
+  "date": "2025-04-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0030",
+  "patient": "PS-P-0003",
+  "date": "2025-05-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0031",
+  "patient": "PS-P-0003",
+  "date": "2025-06-28",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0032",
+  "patient": "PS-P-0003",
+  "date": "2025-11-08",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0033",
+  "patient": "PS-P-0003",
+  "date": "2025-12-03",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0034",
+  "patient": "PS-P-0003",
+  "date": "2025-12-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0035",
+  "patient": "PS-P-0003",
+  "date": "2025-12-26",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0036",
+  "patient": "PS-P-0003",
+  "date": "2026-01-09",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0037",
+  "patient": "PS-P-0003",
+  "date": "2026-01-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0038",
+  "patient": "PS-P-0003",
+  "date": "2026-02-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0039",
+  "patient": "PS-P-0003",
+  "date": "2026-02-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0040",
+  "patient": "PS-P-0003",
+  "date": "2026-02-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0041",
+  "patient": "PS-P-0003",
+  "date": "2026-04-26",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0042",
+  "patient": "PS-P-0003",
+  "date": "2026-05-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0043",
+  "patient": "PS-P-0004",
+  "date": "2025-05-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0044",
+  "patient": "PS-P-0004",
+  "date": "2025-05-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0045",
+  "patient": "PS-P-0004",
+  "date": "2025-10-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0046",
+  "patient": "PS-P-0004",
+  "date": "2025-10-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0047",
+  "patient": "PS-P-0004",
+  "date": "2025-10-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0048",
+  "patient": "PS-P-0004",
+  "date": "2025-11-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0049",
+  "patient": "PS-P-0004",
+  "date": "2025-11-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0050",
+  "patient": "PS-P-0004",
+  "date": "2025-12-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0051",
+  "patient": "PS-P-0004",
+  "date": "2025-12-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0052",
+  "patient": "PS-P-0004",
+  "date": "2025-12-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0053",
+  "patient": "PS-P-0004",
+  "date": "2026-01-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0054",
+  "patient": "PS-P-0004",
+  "date": "2026-01-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0055",
+  "patient": "PS-P-0004",
+  "date": "2026-01-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0056",
+  "patient": "PS-P-0004",
+  "date": "2026-02-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0057",
+  "patient": "PS-P-0004",
+  "date": "2026-02-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0058",
+  "patient": "PS-P-0004",
+  "date": "2026-05-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0059",
+  "patient": "PS-P-0005",
+  "date": "2025-06-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0060",
+  "patient": "PS-P-0005",
+  "date": "2025-06-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0061",
+  "patient": "PS-P-0006",
+  "date": "2025-10-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0062",
+  "patient": "PS-P-0006",
+  "date": "2025-11-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0063",
+  "patient": "PS-P-0006",
+  "date": "2025-12-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0064",
+  "patient": "PS-P-0006",
+  "date": "2025-12-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0065",
+  "patient": "PS-P-0006",
+  "date": "2025-12-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0066",
+  "patient": "PS-P-0007",
+  "date": "2025-06-28",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0067",
+  "patient": "PS-P-0007",
+  "date": "2025-08-08",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0068",
+  "patient": "PS-P-0008",
+  "date": "2025-05-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0069",
+  "patient": "PS-P-0008",
+  "date": "2025-11-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0070",
+  "patient": "PS-P-0008",
+  "date": "2026-03-13",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0071",
+  "patient": "PS-P-0008",
+  "date": "2026-03-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0072",
+  "patient": "PS-P-0009",
+  "date": "2025-08-12",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0073",
+  "patient": "PS-P-0009",
+  "date": "2025-11-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0074",
+  "patient": "PS-P-0009",
+  "date": "2026-01-30",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0075",
+  "patient": "PS-P-0009",
+  "date": "2026-04-07",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0076",
+  "patient": "PS-P-0010",
+  "date": "2025-05-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0077",
+  "patient": "PS-P-0010",
+  "date": "2025-06-21",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0078",
+  "patient": "PS-P-0010",
+  "date": "2025-06-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0079",
+  "patient": "PS-P-0010",
+  "date": "2025-10-11",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0080",
+  "patient": "PS-P-0010",
+  "date": "2025-11-24",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0081",
+  "patient": "PS-P-0011",
+  "date": "2025-04-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0082",
+  "patient": "PS-P-0011",
+  "date": "2026-02-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0083",
+  "patient": "PS-P-0012",
+  "date": "2025-06-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0084",
+  "patient": "PS-P-0012",
+  "date": "2025-09-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0085",
+  "patient": "PS-P-0012",
+  "date": "2025-10-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0086",
+  "patient": "PS-P-0012",
+  "date": "2026-04-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0087",
+  "patient": "PS-P-0013",
+  "date": "2025-08-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0088",
+  "patient": "PS-P-0013",
+  "date": "2025-11-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0089",
+  "patient": "PS-P-0014",
+  "date": "2025-06-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0090",
+  "patient": "PS-P-0014",
+  "date": "2026-04-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0091",
+  "patient": "PS-P-0014",
+  "date": "2026-05-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0092",
+  "patient": "PS-P-0015",
+  "date": "2025-06-02",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0093",
+  "patient": "PS-P-0015",
+  "date": "2025-08-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0094",
+  "patient": "PS-P-0015",
+  "date": "2025-08-11",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0095",
+  "patient": "PS-P-0015",
+  "date": "2025-10-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0096",
+  "patient": "PS-P-0015",
+  "date": "2025-11-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0097",
+  "patient": "PS-P-0015",
+  "date": "2025-12-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0098",
+  "patient": "PS-P-0015",
+  "date": "2026-04-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0099",
+  "patient": "PS-P-0016",
+  "date": "2025-04-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0100",
+  "patient": "PS-P-0016",
+  "date": "2025-06-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0101",
+  "patient": "PS-P-0016",
+  "date": "2025-07-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0102",
+  "patient": "PS-P-0016",
+  "date": "2025-07-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0103",
+  "patient": "PS-P-0017",
+  "date": "2025-05-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0104",
+  "patient": "PS-P-0017",
+  "date": "2025-07-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0105",
+  "patient": "PS-P-0017",
+  "date": "2025-10-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0106",
+  "patient": "PS-P-0017",
+  "date": "2026-01-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0107",
+  "patient": "PS-P-0017",
+  "date": "2026-01-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0108",
+  "patient": "PS-P-0018",
+  "date": "2025-05-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0109",
+  "patient": "PS-P-0018",
+  "date": "2025-07-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0110",
+  "patient": "PS-P-0018",
+  "date": "2025-08-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0111",
+  "patient": "PS-P-0019",
+  "date": "2025-05-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0112",
+  "patient": "PS-P-0019",
+  "date": "2025-05-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0113",
+  "patient": "PS-P-0019",
+  "date": "2025-05-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0114",
+  "patient": "PS-P-0019",
+  "date": "2025-08-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0115",
+  "patient": "PS-P-0019",
+  "date": "2025-12-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0116",
+  "patient": "PS-P-0019",
+  "date": "2026-03-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0117",
+  "patient": "PS-P-0019",
+  "date": "2026-05-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0118",
+  "patient": "PS-P-0020",
+  "date": "2025-08-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0119",
+  "patient": "PS-P-0020",
+  "date": "2025-09-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0120",
+  "patient": "PS-P-0020",
+  "date": "2025-11-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0121",
+  "patient": "PS-P-0020",
+  "date": "2025-11-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0122",
+  "patient": "PS-P-0020",
+  "date": "2026-03-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0123",
+  "patient": "PS-P-0021",
+  "date": "2025-05-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0124",
+  "patient": "PS-P-0021",
+  "date": "2025-09-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0125",
+  "patient": "PS-P-0021",
+  "date": "2025-10-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0126",
+  "patient": "PS-P-0021",
+  "date": "2026-03-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0127",
+  "patient": "PS-P-0021",
+  "date": "2026-05-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0128",
+  "patient": "PS-P-0022",
+  "date": "2025-04-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0129",
+  "patient": "PS-P-0022",
+  "date": "2025-05-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0130",
+  "patient": "PS-P-0022",
+  "date": "2025-08-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0131",
+  "patient": "PS-P-0022",
+  "date": "2025-12-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0132",
+  "patient": "PS-P-0022",
+  "date": "2025-12-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0133",
+  "patient": "PS-P-0022",
+  "date": "2026-03-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0134",
+  "patient": "PS-P-0023",
+  "date": "2025-04-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0135",
+  "patient": "PS-P-0023",
+  "date": "2025-06-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0136",
+  "patient": "PS-P-0023",
+  "date": "2025-07-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0137",
+  "patient": "PS-P-0023",
+  "date": "2025-07-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0138",
+  "patient": "PS-P-0023",
+  "date": "2025-10-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0139",
+  "patient": "PS-P-0023",
+  "date": "2026-01-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0140",
+  "patient": "PS-P-0023",
+  "date": "2026-05-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0141",
+  "patient": "PS-P-0024",
+  "date": "2025-07-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0142",
+  "patient": "PS-P-0024",
+  "date": "2025-07-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0143",
+  "patient": "PS-P-0024",
+  "date": "2025-09-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0144",
+  "patient": "PS-P-0024",
+  "date": "2025-09-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0145",
+  "patient": "PS-P-0024",
+  "date": "2026-03-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0146",
+  "patient": "PS-P-0025",
+  "date": "2025-06-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0147",
+  "patient": "PS-P-0025",
+  "date": "2025-06-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0148",
+  "patient": "PS-P-0025",
+  "date": "2025-07-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0149",
+  "patient": "PS-P-0025",
+  "date": "2025-11-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0150",
+  "patient": "PS-P-0025",
+  "date": "2026-01-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0151",
+  "patient": "PS-P-0025",
+  "date": "2026-01-31",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0152",
+  "patient": "PS-P-0025",
+  "date": "2026-04-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0153",
+  "patient": "PS-P-0026",
+  "date": "2025-09-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0154",
+  "patient": "PS-P-0026",
+  "date": "2025-10-08",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0155",
+  "patient": "PS-P-0026",
+  "date": "2025-10-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0156",
+  "patient": "PS-P-0026",
+  "date": "2025-11-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0157",
+  "patient": "PS-P-0026",
+  "date": "2025-12-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0158",
+  "patient": "PS-P-0026",
+  "date": "2026-01-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0159",
+  "patient": "PS-P-0026",
+  "date": "2026-02-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0160",
+  "patient": "PS-P-0027",
+  "date": "2025-04-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0161",
+  "patient": "PS-P-0027",
+  "date": "2025-08-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0162",
+  "patient": "PS-P-0027",
+  "date": "2025-11-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0163",
+  "patient": "PS-P-0027",
+  "date": "2025-12-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0164",
+  "patient": "PS-P-0027",
+  "date": "2026-01-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0165",
+  "patient": "PS-P-0027",
+  "date": "2026-01-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0166",
+  "patient": "PS-P-0028",
+  "date": "2025-04-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0167",
+  "patient": "PS-P-0028",
+  "date": "2025-09-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0168",
+  "patient": "PS-P-0028",
+  "date": "2026-01-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0169",
+  "patient": "PS-P-0028",
+  "date": "2026-03-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0170",
+  "patient": "PS-P-0028",
+  "date": "2026-03-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0171",
+  "patient": "PS-P-0028",
+  "date": "2026-04-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0172",
+  "patient": "PS-P-0028",
+  "date": "2026-04-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0173",
+  "patient": "PS-P-0029",
+  "date": "2025-04-25",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0174",
+  "patient": "PS-P-0029",
+  "date": "2025-06-01",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0175",
+  "patient": "PS-P-0030",
+  "date": "2025-09-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0176",
+  "patient": "PS-P-0030",
+  "date": "2026-01-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0177",
+  "patient": "PS-P-0030",
+  "date": "2026-01-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0178",
+  "patient": "PS-P-0030",
+  "date": "2026-03-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0179",
+  "patient": "PS-P-0030",
+  "date": "2026-03-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0180",
+  "patient": "PS-P-0030",
+  "date": "2026-04-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0181",
+  "patient": "PS-P-0031",
+  "date": "2025-05-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0182",
+  "patient": "PS-P-0031",
+  "date": "2025-08-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0183",
+  "patient": "PS-P-0031",
+  "date": "2025-09-08",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0184",
+  "patient": "PS-P-0031",
+  "date": "2025-09-12",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0185",
+  "patient": "PS-P-0031",
+  "date": "2026-02-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0186",
+  "patient": "PS-P-0032",
+  "date": "2025-06-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0187",
+  "patient": "PS-P-0032",
+  "date": "2025-09-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0188",
+  "patient": "PS-P-0032",
+  "date": "2026-01-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0189",
+  "patient": "PS-P-0033",
+  "date": "2025-06-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0190",
+  "patient": "PS-P-0033",
+  "date": "2025-07-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0191",
+  "patient": "PS-P-0033",
+  "date": "2025-09-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0192",
+  "patient": "PS-P-0033",
+  "date": "2025-09-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0193",
+  "patient": "PS-P-0033",
+  "date": "2025-11-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0194",
+  "patient": "PS-P-0034",
+  "date": "2025-06-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0195",
+  "patient": "PS-P-0034",
+  "date": "2025-07-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0196",
+  "patient": "PS-P-0034",
+  "date": "2025-08-09",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0197",
+  "patient": "PS-P-0034",
+  "date": "2025-11-11",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0198",
+  "patient": "PS-P-0034",
+  "date": "2026-01-14",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0199",
+  "patient": "PS-P-0035",
+  "date": "2025-06-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0200",
+  "patient": "PS-P-0035",
+  "date": "2025-07-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0201",
+  "patient": "PS-P-0035",
+  "date": "2026-03-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0202",
+  "patient": "PS-P-0035",
+  "date": "2026-03-24",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0203",
+  "patient": "PS-P-0036",
+  "date": "2025-08-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0204",
+  "patient": "PS-P-0036",
+  "date": "2026-04-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0205",
+  "patient": "PS-P-0036",
+  "date": "2026-04-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0206",
+  "patient": "PS-P-0036",
+  "date": "2026-05-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0207",
+  "patient": "PS-P-0037",
+  "date": "2025-09-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0208",
+  "patient": "PS-P-0037",
+  "date": "2025-09-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0209",
+  "patient": "PS-P-0037",
+  "date": "2025-09-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0210",
+  "patient": "PS-P-0037",
+  "date": "2025-10-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0211",
+  "patient": "PS-P-0037",
+  "date": "2025-11-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0212",
+  "patient": "PS-P-0038",
+  "date": "2025-06-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0213",
+  "patient": "PS-P-0038",
+  "date": "2025-09-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0214",
+  "patient": "PS-P-0038",
+  "date": "2025-10-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0215",
+  "patient": "PS-P-0038",
+  "date": "2026-01-08",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0216",
+  "patient": "PS-P-0038",
+  "date": "2026-03-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0217",
+  "patient": "PS-P-0038",
+  "date": "2026-05-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0218",
+  "patient": "PS-P-0039",
+  "date": "2025-07-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0219",
+  "patient": "PS-P-0039",
+  "date": "2025-07-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0220",
+  "patient": "PS-P-0039",
+  "date": "2025-08-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0221",
+  "patient": "PS-P-0039",
+  "date": "2025-08-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0222",
+  "patient": "PS-P-0039",
+  "date": "2026-04-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0223",
+  "patient": "PS-P-0040",
+  "date": "2025-05-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0224",
+  "patient": "PS-P-0040",
+  "date": "2025-08-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0225",
+  "patient": "PS-P-0040",
+  "date": "2025-11-29",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0226",
+  "patient": "PS-P-0040",
+  "date": "2026-02-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0227",
+  "patient": "PS-P-0041",
+  "date": "2025-06-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0228",
+  "patient": "PS-P-0041",
+  "date": "2025-06-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0229",
+  "patient": "PS-P-0041",
+  "date": "2025-07-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0230",
+  "patient": "PS-P-0041",
+  "date": "2025-07-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0231",
+  "patient": "PS-P-0041",
+  "date": "2025-08-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0232",
+  "patient": "PS-P-0041",
+  "date": "2025-12-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0233",
+  "patient": "PS-P-0041",
+  "date": "2026-03-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0234",
+  "patient": "PS-P-0042",
+  "date": "2025-07-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0235",
+  "patient": "PS-P-0042",
+  "date": "2025-07-28",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0236",
+  "patient": "PS-P-0042",
+  "date": "2025-09-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0237",
+  "patient": "PS-P-0043",
+  "date": "2025-04-13",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0238",
+  "patient": "PS-P-0043",
+  "date": "2025-10-27",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0239",
+  "patient": "PS-P-0043",
+  "date": "2026-02-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0240",
+  "patient": "PS-P-0043",
+  "date": "2026-03-28",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0241",
+  "patient": "PS-P-0043",
+  "date": "2026-05-10",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0242",
+  "patient": "PS-P-0044",
+  "date": "2025-05-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0243",
+  "patient": "PS-P-0044",
+  "date": "2025-09-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0244",
+  "patient": "PS-P-0044",
+  "date": "2025-11-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0245",
+  "patient": "PS-P-0045",
+  "date": "2025-07-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0246",
+  "patient": "PS-P-0045",
+  "date": "2026-02-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0247",
+  "patient": "PS-P-0046",
+  "date": "2025-12-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0248",
+  "patient": "PS-P-0046",
+  "date": "2026-01-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0249",
+  "patient": "PS-P-0047",
+  "date": "2025-08-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0250",
+  "patient": "PS-P-0047",
+  "date": "2026-01-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0251",
+  "patient": "PS-P-0047",
+  "date": "2026-02-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0252",
+  "patient": "PS-P-0048",
+  "date": "2025-07-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0253",
+  "patient": "PS-P-0048",
+  "date": "2025-12-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0254",
+  "patient": "PS-P-0048",
+  "date": "2026-01-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0255",
+  "patient": "PS-P-0048",
+  "date": "2026-02-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0256",
+  "patient": "PS-P-0048",
+  "date": "2026-05-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0257",
+  "patient": "PS-P-0049",
+  "date": "2025-06-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0258",
+  "patient": "PS-P-0049",
+  "date": "2025-06-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0259",
+  "patient": "PS-P-0049",
+  "date": "2025-09-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0260",
+  "patient": "PS-P-0049",
+  "date": "2025-10-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0261",
+  "patient": "PS-P-0049",
+  "date": "2025-12-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0262",
+  "patient": "PS-P-0049",
+  "date": "2026-04-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0263",
+  "patient": "PS-P-0049",
+  "date": "2026-05-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0264",
+  "patient": "PS-P-0050",
+  "date": "2025-05-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0265",
+  "patient": "PS-P-0050",
+  "date": "2025-09-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0266",
+  "patient": "PS-P-0050",
+  "date": "2025-09-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0267",
+  "patient": "PS-P-0050",
+  "date": "2025-10-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0268",
+  "patient": "PS-P-0050",
+  "date": "2025-11-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0269",
+  "patient": "PS-P-0050",
+  "date": "2026-03-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0270",
+  "patient": "PS-P-0050",
+  "date": "2026-04-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0271",
+  "patient": "PS-P-0051",
+  "date": "2025-07-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0272",
+  "patient": "PS-P-0051",
+  "date": "2025-11-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0273",
+  "patient": "PS-P-0051",
+  "date": "2026-01-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0274",
+  "patient": "PS-P-0051",
+  "date": "2026-02-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0275",
+  "patient": "PS-P-0051",
+  "date": "2026-02-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0276",
+  "patient": "PS-P-0051",
+  "date": "2026-03-31",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0277",
+  "patient": "PS-P-0051",
+  "date": "2026-04-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0278",
+  "patient": "PS-P-0052",
+  "date": "2025-05-16",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0279",
+  "patient": "PS-P-0052",
+  "date": "2025-05-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0280",
+  "patient": "PS-P-0052",
+  "date": "2025-07-04",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0281",
+  "patient": "PS-P-0052",
+  "date": "2026-02-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0282",
+  "patient": "PS-P-0053",
+  "date": "2025-11-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0283",
+  "patient": "PS-P-0053",
+  "date": "2025-12-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0284",
+  "patient": "PS-P-0053",
+  "date": "2026-01-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0285",
+  "patient": "PS-P-0054",
+  "date": "2025-04-08",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0286",
+  "patient": "PS-P-0054",
+  "date": "2025-04-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0287",
+  "patient": "PS-P-0054",
+  "date": "2025-05-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0288",
+  "patient": "PS-P-0054",
+  "date": "2025-07-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0289",
+  "patient": "PS-P-0054",
+  "date": "2025-10-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0290",
+  "patient": "PS-P-0054",
+  "date": "2026-04-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0291",
+  "patient": "PS-P-0055",
+  "date": "2025-05-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0292",
+  "patient": "PS-P-0055",
+  "date": "2025-07-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0293",
+  "patient": "PS-P-0055",
+  "date": "2025-08-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0294",
+  "patient": "PS-P-0055",
+  "date": "2025-08-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0295",
+  "patient": "PS-P-0055",
+  "date": "2025-10-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0296",
+  "patient": "PS-P-0055",
+  "date": "2026-04-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0297",
+  "patient": "PS-P-0055",
+  "date": "2026-05-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0298",
+  "patient": "PS-P-0056",
+  "date": "2025-04-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0299",
+  "patient": "PS-P-0056",
+  "date": "2025-11-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0300",
+  "patient": "PS-P-0056",
+  "date": "2025-11-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0301",
+  "patient": "PS-P-0057",
+  "date": "2025-09-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0302",
+  "patient": "PS-P-0057",
+  "date": "2025-09-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0303",
+  "patient": "PS-P-0058",
+  "date": "2025-06-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0304",
+  "patient": "PS-P-0058",
+  "date": "2025-07-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0305",
+  "patient": "PS-P-0058",
+  "date": "2025-08-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0306",
+  "patient": "PS-P-0058",
+  "date": "2025-10-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0307",
+  "patient": "PS-P-0058",
+  "date": "2025-12-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0308",
+  "patient": "PS-P-0058",
+  "date": "2026-03-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0309",
+  "patient": "PS-P-0059",
+  "date": "2025-04-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0310",
+  "patient": "PS-P-0059",
+  "date": "2025-04-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0311",
+  "patient": "PS-P-0059",
+  "date": "2025-09-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0312",
+  "patient": "PS-P-0059",
+  "date": "2025-11-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0313",
+  "patient": "PS-P-0059",
+  "date": "2025-12-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0314",
+  "patient": "PS-P-0059",
+  "date": "2026-02-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0315",
+  "patient": "PS-P-0059",
+  "date": "2026-04-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0316",
+  "patient": "PS-P-0060",
+  "date": "2025-04-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0317",
+  "patient": "PS-P-0060",
+  "date": "2025-06-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0318",
+  "patient": "PS-P-0060",
+  "date": "2025-06-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0319",
+  "patient": "PS-P-0060",
+  "date": "2025-11-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0320",
+  "patient": "PS-P-0060",
+  "date": "2025-12-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0321",
+  "patient": "PS-P-0060",
+  "date": "2026-02-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0322",
+  "patient": "PS-P-0060",
+  "date": "2026-02-08",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0323",
+  "patient": "PS-P-0061",
+  "date": "2025-04-15",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0324",
+  "patient": "PS-P-0061",
+  "date": "2025-08-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0325",
+  "patient": "PS-P-0061",
+  "date": "2025-10-22",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0326",
+  "patient": "PS-P-0061",
+  "date": "2025-11-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0327",
+  "patient": "PS-P-0061",
+  "date": "2026-01-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0328",
+  "patient": "PS-P-0061",
+  "date": "2026-01-31",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0329",
+  "patient": "PS-P-0061",
+  "date": "2026-02-20",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0330",
+  "patient": "PS-P-0062",
+  "date": "2025-05-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0331",
+  "patient": "PS-P-0062",
+  "date": "2026-01-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0332",
+  "patient": "PS-P-0062",
+  "date": "2026-02-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0333",
+  "patient": "PS-P-0063",
+  "date": "2025-04-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0334",
+  "patient": "PS-P-0063",
+  "date": "2025-05-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0335",
+  "patient": "PS-P-0063",
+  "date": "2025-09-29",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0336",
+  "patient": "PS-P-0063",
+  "date": "2025-12-29",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0337",
+  "patient": "PS-P-0063",
+  "date": "2026-05-27",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0338",
+  "patient": "PS-P-0064",
+  "date": "2025-05-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0339",
+  "patient": "PS-P-0064",
+  "date": "2025-05-19",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0340",
+  "patient": "PS-P-0064",
+  "date": "2026-01-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0341",
+  "patient": "PS-P-0064",
+  "date": "2026-02-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0342",
+  "patient": "PS-P-0065",
+  "date": "2025-04-29",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0343",
+  "patient": "PS-P-0065",
+  "date": "2025-07-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0344",
+  "patient": "PS-P-0065",
+  "date": "2025-08-27",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0345",
+  "patient": "PS-P-0065",
+  "date": "2025-10-11",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0346",
+  "patient": "PS-P-0065",
+  "date": "2025-11-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0347",
+  "patient": "PS-P-0065",
+  "date": "2026-05-31",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0348",
+  "patient": "PS-P-0066",
+  "date": "2025-04-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0349",
+  "patient": "PS-P-0066",
+  "date": "2025-08-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0350",
+  "patient": "PS-P-0066",
+  "date": "2025-09-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0351",
+  "patient": "PS-P-0066",
+  "date": "2025-11-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0352",
+  "patient": "PS-P-0066",
+  "date": "2026-02-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0353",
+  "patient": "PS-P-0066",
+  "date": "2026-03-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0354",
+  "patient": "PS-P-0066",
+  "date": "2026-04-08",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0355",
+  "patient": "PS-P-0067",
+  "date": "2025-04-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0356",
+  "patient": "PS-P-0067",
+  "date": "2025-10-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0357",
+  "patient": "PS-P-0067",
+  "date": "2025-11-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0358",
+  "patient": "PS-P-0067",
+  "date": "2026-01-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0359",
+  "patient": "PS-P-0067",
+  "date": "2026-02-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0360",
+  "patient": "PS-P-0068",
+  "date": "2025-04-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0361",
+  "patient": "PS-P-0068",
+  "date": "2025-06-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0362",
+  "patient": "PS-P-0068",
+  "date": "2026-01-21",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0363",
+  "patient": "PS-P-0068",
+  "date": "2026-02-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0364",
+  "patient": "PS-P-0068",
+  "date": "2026-03-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0365",
+  "patient": "PS-P-0068",
+  "date": "2026-05-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0366",
+  "patient": "PS-P-0069",
+  "date": "2025-05-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0367",
+  "patient": "PS-P-0069",
+  "date": "2025-11-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0368",
+  "patient": "PS-P-0069",
+  "date": "2025-12-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0369",
+  "patient": "PS-P-0070",
+  "date": "2025-06-13",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0370",
+  "patient": "PS-P-0070",
+  "date": "2025-09-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0371",
+  "patient": "PS-P-0070",
+  "date": "2025-10-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0372",
+  "patient": "PS-P-0070",
+  "date": "2025-12-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0373",
+  "patient": "PS-P-0070",
+  "date": "2026-01-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0374",
+  "patient": "PS-P-0071",
+  "date": "2025-06-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0375",
+  "patient": "PS-P-0071",
+  "date": "2026-03-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0376",
+  "patient": "PS-P-0072",
+  "date": "2025-06-24",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0377",
+  "patient": "PS-P-0072",
+  "date": "2026-03-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0378",
+  "patient": "PS-P-0072",
+  "date": "2026-05-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0379",
+  "patient": "PS-P-0073",
+  "date": "2025-04-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0380",
+  "patient": "PS-P-0073",
+  "date": "2025-06-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0381",
+  "patient": "PS-P-0073",
+  "date": "2025-07-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0382",
+  "patient": "PS-P-0073",
+  "date": "2025-10-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0383",
+  "patient": "PS-P-0073",
+  "date": "2025-12-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0384",
+  "patient": "PS-P-0073",
+  "date": "2026-01-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0385",
+  "patient": "PS-P-0073",
+  "date": "2026-01-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0386",
+  "patient": "PS-P-0074",
+  "date": "2025-09-05",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0387",
+  "patient": "PS-P-0074",
+  "date": "2025-10-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0388",
+  "patient": "PS-P-0074",
+  "date": "2025-11-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0389",
+  "patient": "PS-P-0074",
+  "date": "2025-12-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0390",
+  "patient": "PS-P-0074",
+  "date": "2026-02-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0391",
+  "patient": "PS-P-0075",
+  "date": "2025-08-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0392",
+  "patient": "PS-P-0075",
+  "date": "2025-10-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0393",
+  "patient": "PS-P-0075",
+  "date": "2025-12-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0394",
+  "patient": "PS-P-0075",
+  "date": "2026-05-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0395",
+  "patient": "PS-P-0076",
+  "date": "2025-04-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0396",
+  "patient": "PS-P-0076",
+  "date": "2025-05-31",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0397",
+  "patient": "PS-P-0077",
+  "date": "2025-04-10",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0398",
+  "patient": "PS-P-0077",
+  "date": "2025-06-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0399",
+  "patient": "PS-P-0077",
+  "date": "2025-07-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0400",
+  "patient": "PS-P-0077",
+  "date": "2025-07-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0401",
+  "patient": "PS-P-0077",
+  "date": "2026-04-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0402",
+  "patient": "PS-P-0078",
+  "date": "2025-04-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0403",
+  "patient": "PS-P-0078",
+  "date": "2025-06-09",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0404",
+  "patient": "PS-P-0078",
+  "date": "2025-07-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0405",
+  "patient": "PS-P-0078",
+  "date": "2025-07-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0406",
+  "patient": "PS-P-0078",
+  "date": "2025-10-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0407",
+  "patient": "PS-P-0079",
+  "date": "2026-01-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0408",
+  "patient": "PS-P-0079",
+  "date": "2026-03-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0409",
+  "patient": "PS-P-0080",
+  "date": "2025-09-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0410",
+  "patient": "PS-P-0080",
+  "date": "2025-12-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0411",
+  "patient": "PS-P-0081",
+  "date": "2025-08-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0412",
+  "patient": "PS-P-0081",
+  "date": "2025-12-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0413",
+  "patient": "PS-P-0081",
+  "date": "2026-02-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0414",
+  "patient": "PS-P-0081",
+  "date": "2026-05-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0415",
+  "patient": "PS-P-0081",
+  "date": "2026-05-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0416",
+  "patient": "PS-P-0082",
+  "date": "2025-05-02",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0417",
+  "patient": "PS-P-0082",
+  "date": "2025-06-03",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0418",
+  "patient": "PS-P-0082",
+  "date": "2025-09-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0419",
+  "patient": "PS-P-0082",
+  "date": "2025-09-22",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0420",
+  "patient": "PS-P-0082",
+  "date": "2025-09-29",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0421",
+  "patient": "PS-P-0082",
+  "date": "2025-10-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0422",
+  "patient": "PS-P-0082",
+  "date": "2026-05-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0423",
+  "patient": "PS-P-0083",
+  "date": "2025-05-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0424",
+  "patient": "PS-P-0083",
+  "date": "2025-06-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0425",
+  "patient": "PS-P-0083",
+  "date": "2025-11-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0426",
+  "patient": "PS-P-0083",
+  "date": "2025-12-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0427",
+  "patient": "PS-P-0084",
+  "date": "2025-05-07",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0428",
+  "patient": "PS-P-0084",
+  "date": "2025-08-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0429",
+  "patient": "PS-P-0085",
+  "date": "2025-08-01",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0430",
+  "patient": "PS-P-0085",
+  "date": "2025-08-08",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0431",
+  "patient": "PS-P-0085",
+  "date": "2025-10-16",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0432",
+  "patient": "PS-P-0085",
+  "date": "2025-10-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0433",
+  "patient": "PS-P-0085",
+  "date": "2025-12-16",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0434",
+  "patient": "PS-P-0085",
+  "date": "2026-02-19",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0435",
+  "patient": "PS-P-0086",
+  "date": "2025-06-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0436",
+  "patient": "PS-P-0086",
+  "date": "2025-12-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0437",
+  "patient": "PS-P-0086",
+  "date": "2026-05-23",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0438",
+  "patient": "PS-P-0087",
+  "date": "2025-06-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0439",
+  "patient": "PS-P-0087",
+  "date": "2025-09-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0440",
+  "patient": "PS-P-0087",
+  "date": "2025-10-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0441",
+  "patient": "PS-P-0087",
+  "date": "2026-01-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0442",
+  "patient": "PS-P-0088",
+  "date": "2025-04-22",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0443",
+  "patient": "PS-P-0088",
+  "date": "2025-09-26",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0444",
+  "patient": "PS-P-0088",
+  "date": "2025-11-22",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0445",
+  "patient": "PS-P-0088",
+  "date": "2026-01-18",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0446",
+  "patient": "PS-P-0088",
+  "date": "2026-02-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0447",
+  "patient": "PS-P-0088",
+  "date": "2026-03-05",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0448",
+  "patient": "PS-P-0089",
+  "date": "2025-07-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0449",
+  "patient": "PS-P-0089",
+  "date": "2025-07-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0450",
+  "patient": "PS-P-0089",
+  "date": "2025-09-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0451",
+  "patient": "PS-P-0090",
+  "date": "2024-01-20",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0452",
+  "patient": "PS-P-0091",
+  "date": "2024-04-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0453",
+  "patient": "PS-P-0091",
+  "date": "2025-04-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0454",
+  "patient": "PS-P-0092",
+  "date": "2024-02-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0455",
+  "patient": "PS-P-0093",
+  "date": "2024-03-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0456",
+  "patient": "PS-P-0093",
+  "date": "2024-05-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0457",
+  "patient": "PS-P-0093",
+  "date": "2024-06-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0458",
+  "patient": "PS-P-0094",
+  "date": "2024-04-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0459",
+  "patient": "PS-P-0094",
+  "date": "2025-04-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0460",
+  "patient": "PS-P-0095",
+  "date": "2024-03-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0461",
+  "patient": "PS-P-0095",
+  "date": "2024-11-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0462",
+  "patient": "PS-P-0095",
+  "date": "2025-01-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0463",
+  "patient": "PS-P-0096",
+  "date": "2024-10-12",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0464",
+  "patient": "PS-P-0096",
+  "date": "2025-02-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0465",
+  "patient": "PS-P-0096",
+  "date": "2025-03-02",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0466",
+  "patient": "PS-P-0097",
+  "date": "2024-04-08",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0467",
+  "patient": "PS-P-0097",
+  "date": "2025-03-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0468",
+  "patient": "PS-P-0098",
+  "date": "2024-05-17",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0469",
+  "patient": "PS-P-0098",
+  "date": "2024-07-23",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0470",
+  "patient": "PS-P-0098",
+  "date": "2024-07-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0471",
+  "patient": "PS-P-0099",
+  "date": "2024-01-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0472",
+  "patient": "PS-P-0099",
+  "date": "2024-09-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0473",
+  "patient": "PS-P-0100",
+  "date": "2024-02-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0474",
+  "patient": "PS-P-0100",
+  "date": "2024-04-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0475",
+  "patient": "PS-P-0100",
+  "date": "2024-07-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0476",
+  "patient": "PS-P-0101",
+  "date": "2024-02-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0477",
+  "patient": "PS-P-0102",
+  "date": "2024-05-30",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0478",
+  "patient": "PS-P-0102",
+  "date": "2024-07-25",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "oral-rehydration-salts-ors",
+    "dose": 1,
+    "dose_unit": "sachet",
+    "times_per_day": 4,
+    "days": 2,
+    "quantity": 8,
+    "instructions": "Dissolve 1 sachet in 200 mL water after each loose stool."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0479",
+  "patient": "PS-P-0103",
+  "date": "2024-01-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0480",
+  "patient": "PS-P-0103",
+  "date": "2024-09-28",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0481",
+  "patient": "PS-P-0103",
+  "date": "2025-01-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0482",
+  "patient": "PS-P-0104",
+  "date": "2024-04-10",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0483",
+  "patient": "PS-P-0105",
+  "date": "2024-08-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0484",
+  "patient": "PS-P-0106",
+  "date": "2025-05-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0485",
+  "patient": "PS-P-0106",
+  "date": "2025-05-06",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amoxicillin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 3,
+    "days": 5,
+    "quantity": 15,
+    "instructions": "Take 1 capsule three times a day with or after food; finish the course."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0486",
+  "patient": "PS-P-0106",
+  "date": "2025-06-14",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0487",
+  "patient": "PS-P-0106",
+  "date": "2025-07-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0488",
+  "patient": "PS-P-0106",
+  "date": "2025-07-31",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0489",
+  "patient": "PS-P-0106",
+  "date": "2026-03-26",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0490",
+  "patient": "PS-P-0107",
+  "date": "2025-06-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0491",
+  "patient": "PS-P-0107",
+  "date": "2025-07-25",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0492",
+  "patient": "PS-P-0107",
+  "date": "2025-12-01",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0493",
+  "patient": "PS-P-0108",
+  "date": "2025-10-18",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0494",
+  "patient": "PS-P-0108",
+  "date": "2026-02-03",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0495",
+  "patient": "PS-P-0108",
+  "date": "2026-02-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0496",
+  "patient": "PS-P-0108",
+  "date": "2026-03-16",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0497",
+  "patient": "PS-P-0108",
+  "date": "2026-05-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0498",
+  "patient": "PS-P-0108",
+  "date": "2026-05-04",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "amlodipine-5-mg",
+    "dose": 5,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0499",
+  "patient": "PS-P-0109",
+  "date": "2025-06-15",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0500",
+  "patient": "PS-P-0109",
+  "date": "2025-07-27",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "salbutamol-inhaler-100-mcg",
+    "dose": 2,
+    "dose_unit": "puff",
+    "times_per_day": 4,
+    "days": 30,
+    "quantity": 1,
+    "instructions": "Inhale 2 puffs when needed for wheeze, up to four times a day."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0501",
+  "patient": "PS-P-0109",
+  "date": "2025-11-29",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "atorvastatin-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 30,
+    "quantity": 30,
+    "instructions": "Take 1 tablet once a day at night."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0502",
+  "patient": "PS-P-0109",
+  "date": "2025-12-24",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "paracetamol-500-mg",
+    "dose": 1000,
+    "dose_unit": "mg",
+    "times_per_day": 4,
+    "days": 3,
+    "quantity": 12,
+    "instructions": "Take 2 tablets four times a day when needed for fever or pain."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0503",
+  "patient": "PS-P-0110",
+  "date": "2025-05-26",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "cetirizine-10-mg",
+    "dose": 10,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 7,
+    "quantity": 7,
+    "instructions": "Take 1 tablet once a day; may cause drowsiness."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0504",
+  "patient": "PS-P-0110",
+  "date": "2025-10-11",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0505",
+  "patient": "PS-P-0110",
+  "date": "2025-12-22",
+  "repeat": false,
+  "lines": [
+   {
+    "medicine": "omeprazole-20-mg",
+    "dose": 20,
+    "dose_unit": "mg",
+    "times_per_day": 1,
+    "days": 14,
+    "quantity": 14,
+    "instructions": "Take 1 capsule once a day before breakfast."
+   }
+  ]
+ },
+ {
+  "id": "RXH-0506",
+  "patient": "PS-P-0110",
+  "date": "2025-12-30",
+  "repeat": true,
+  "lines": [
+   {
+    "medicine": "metformin-500-mg",
+    "dose": 500,
+    "dose_unit": "mg",
+    "times_per_day": 2,
+    "days": 30,
+    "quantity": 60,
+    "instructions": "Take 1 tablet twice a day with meals."
+   }
+  ]
+ }
+]

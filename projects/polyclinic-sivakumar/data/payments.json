@@ -1,0 +1,24 @@
+[
+ {
+  "id": "RC-0001",
+  "bill": "BL-0001",
+  "patient": "PS-P-0024",
+  "amount": 4700,
+  "method": "cash",
+  "tendered": 5000,
+  "change": 300,
+  "by": "FD-01",
+  "at": 1780363920
+ },
+ {
+  "id": "RC-0002",
+  "bill": "BL-0002",
+  "patient": "PS-P-0026",
+  "amount": 3740,
+  "method": "card",
+  "tendered": null,
+  "change": 0,
+  "by": "FD-01",
+  "at": 1780364220
+ }
+]
