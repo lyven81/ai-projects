@@ -69,8 +69,8 @@
  <section class="card" id="nextcard" hidden><div class="body"><h2>NEXT STEP</h2><div id="nextstep"></div></div></section>
  </aside>
  </div>
- <details><summary>Demo details · access check and escalation scenario</summary><p>This is a browser-only UI simulation using synthetic data. The dropdown is not authentication, and its bundled data is not protected by server-side authorisation. A real app must check identity, patient access and returned fields on the server for every request.</p><p>The displayed permissions follow the latest agreed attending-doctor / clerk / escalated-lead rule. Policy clause references must be reconciled with the revised policies before implementation.</p><label class="democontrol" id="escalationcontrol"><input id="escalation" type="checkbox">Simulate an open consult from Dr Daniel to Dr Aisyah for Aiman</label><p>Changing this fixture does not create or approve a real escalation. It changes only the lead’s simulated access.</p><pre id="trace"></pre></details>
- <footer><span>© 2026 Lee Yih Ven · Sang Kancil Specialist Clinic</span><span>Synthetic records · Replay is recorded; Live uses your own API key</span></footer>
+ <details><summary>Demo details · access check and escalation scenario</summary><p>Identity reaches the tools from the session, never from the chat. A production service checks identity, patient access and returned fields on its own server for every request.</p><p>The displayed permissions follow the latest agreed attending-doctor / clerk / escalated-lead rule.</p><label class="democontrol" id="escalationcontrol"><input id="escalation" type="checkbox">Open a consult from Dr Daniel to Dr Aisyah for Aiman</label><p>Opening the consult shows how the lead’s access changes under the rule.</p><pre id="trace"></pre></details>
+ <footer><span>© 2026 Lee Yih Ven · Sang Kancil Specialist Clinic</span><span>Replay is recorded; Live uses your own API key</span></footer>
  </main>
 </div>
 <script>/*__FORMAT_JS__*/</script>

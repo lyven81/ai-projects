@@ -67,7 +67,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   .pill .date { font-size: 18px; font-weight: 700; margin: 2px 0; }
   .pill .util { font-size: 11px; color: #6B7280; }
   .pill.active .util { color: #9A3412; font-weight: 600; }
-  .pill.closed .util::before { content: "— closed —"; }
+  .pill.closed .util::before { content: "closed"; }
 
   /* Sections */
   section {
@@ -260,8 +260,8 @@ TEMPLATE = r"""<!DOCTYPE html>
     <h2>Bay schedule</h2>
     <div class="bay-grid" id="bay-grid"></div>
     <div class="legend">
-      <span><span class="swatch bookable"></span><strong>Bookable</strong> — bay free + qualified mechanic available</span>
-      <span><span class="swatch idle"></span><strong>Idle</strong> — bay free but no qualified mechanic</span>
+      <span><span class="swatch bookable"></span><strong>Bookable</strong>: bay free + qualified mechanic available</span>
+      <span><span class="swatch idle"></span><strong>Idle</strong>: bay free but no qualified mechanic</span>
       <span><span class="swatch busy"></span>Single-slot booking</span>
       <span><span class="swatch multi"></span>Multi-slot booking (&gt;60 min)</span>
       <span><span class="swatch pending"></span><strong>Pending</strong>: request from the assistant, slot held until staff confirm or reject</span>
@@ -295,7 +295,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     </div>
     <div class="modal-body">
       <div class="banner-info">
-        Changes are saved in <strong>your browser only</strong> (localStorage). Use Reset to restore the original seed.
+        Changes stay in this browser until you press Reset, which restores the starting schedule.
       </div>
       <div class="form-row">
         <div class="form-field">
@@ -687,7 +687,7 @@ function computeSchedule(date) {
 function cancelBooking(bookingId) {
   const b = state.bookings.find(x => x.booking_id === bookingId);
   if (!b) return;
-  if (!confirm(`Cancel ${bookingId} — ${b.service} for ${b.customer_name} (${b.plate})?`)) return;
+  if (!confirm(`Cancel ${bookingId}: ${b.service} for ${b.customer_name} (${b.plate})?`)) return;
   state.bookings = state.bookings.filter(x => x.booking_id !== bookingId);
   saveState();
   renderAll();
@@ -822,7 +822,7 @@ function submitBooking() {
   const startIdx = SLOTS.indexOf(startSlot);
   const sched = computeSchedule(date);
   for (let k = 0; k < n; k++) {
-    if (sched.bayBusy[svc.bay][startIdx + k]) { errEl.textContent = "Bay no longer free at that slot — someone may have just booked."; errEl.style.display = "block"; return; }
+    if (sched.bayBusy[svc.bay][startIdx + k]) { errEl.textContent = "Bay no longer free at that slot; someone may have just booked."; errEl.style.display = "block"; return; }
     if (sched.mechBusy[mech][startIdx + k]) { errEl.textContent = "Mechanic no longer free at that slot."; errEl.style.display = "block"; return; }
   }
   const booking = {
@@ -832,7 +832,7 @@ function submitBooking() {
     bay: svc.bay, mechanic: mech, service: svcName,
     duration_minutes: dur, ready_at: readyTimeStr(startSlot, dur),
     next_bookable_at: nextBookableStr(startSlot, n),
-    customer_name: name, plate: plate, phone: phone || "—",
+    customer_name: name, plate: plate, phone: phone || "Not given",
     price_rm: prices[svcName], status: "confirmed",
   };
   state.bookings.push(booking);

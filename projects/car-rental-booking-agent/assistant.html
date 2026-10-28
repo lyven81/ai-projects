@@ -173,7 +173,7 @@ body.fs-on{overflow:hidden}
 <body><div class="wrap">
 <div class="crumbs"><a href="../../index.html">AI Projects</a> / <a href="../../car-rental-booking-agent.html">Kereta Sewa Jalan-jalan Car Rental Agent</a></div>
 <h1>Kereta Sewa Jalan-jalan rental agent</h1>
-<p class="intro">Kereta Sewa Jalan-jalan rents 56 cars at KLIA (a fictional business). Its agent checks cars and prices, takes booking requests, records deposit payments and quotes cancellations; staff confirm, set delivery charges and handle everything passed to them, from their phone. The customer's phone is on the left, the staff phone on the right.</p>
+<p class="intro">Kereta Sewa Jalan-jalan rents 56 cars at KLIA. Its agent checks cars and prices, takes booking requests, records deposit payments and quotes cancellations; staff confirm, set delivery charges and handle everything passed to them, from their phone. The customer's phone is on the left, the staff phone on the right.</p>
 <p class="links">What the agent reads: <a href="resources/Rental%20Policy.html" target="_blank" rel="noopener">Rental Policy</a> · <a href="resources/Car%20Inventory.html" target="_blank" rel="noopener">Car Inventory</a> · fleet schedule · <a href="benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></p>
 
 <div class="tabs" role="tablist">
@@ -375,7 +375,7 @@ body.fs-on{overflow:hidden}
   </div>
 </section>
 
-<footer>© 2026 Lee Yih Ven · Kereta Sewa Jalan-jalan is a fictional company for a portfolio demo. Receipts and the DuitNow QR are marked Demo, not payable.</footer>
+<footer>© 2026 Lee Yih Ven · Receipts and the DuitNow QR are marked Demo, not payable.</footer>
 </div>
 
 <script>/* Kereta Sewa Jalan-jalan: the agent's tools and the staff actions, written once.
@@ -2115,7 +2115,7 @@ function drawReceipt(amount, reference, paidText) {
     g.textAlign = "right"; g.fillStyle = "#1F2A36"; g.font = "bold 20px Arial"; g.fillText(v, 540, y + 20); y += 64;
   }
   g.fillStyle = "#FDECEA"; g.fillRect(0, 790, 600, 70); g.textAlign = "center"; g.fillStyle = "#B3261E"; g.font = "bold 18px Arial";
-  g.fillText("DEMO, NOT PAYABLE  ·  sample receipt for a portfolio demo", 300, 832);
+  g.fillText("DEMO, NOT PAYABLE", 300, 832);
   return c.toDataURL("image/jpeg", 0.85);
 }
 function drawCar() {

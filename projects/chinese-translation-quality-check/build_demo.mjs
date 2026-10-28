@@ -33,7 +33,7 @@ const n = sections.reduce((a, s) => a + s.findings.length, 0);
 const flags = sections.reduce((a, s) => a + s.findings.reduce((b, f) => b + (f.flags ? f.flags.length : 1), 0), 0);
 const data = {
   doc, glossary_report: glossaryReport, glossary, sections, decisions: {}, banned: config.banned_in_output,
-  intro: `This is the Chinese version of a fictional company's quarterly report, checked against its English original. The glossary stage has already corrected the settled terms; three specialists then raised ${flags} flags, each checked in code. Flags on the same words share one box with one correction, giving ${n} boxes, and a separate grader annotated each one.`,
+  intro: `This is the Chinese version of the test report, a logistics group's quarterly report, checked against its English original. The glossary stage has already corrected the settled terms; three specialists then raised ${flags} flags, each checked in code. Flags on the same words share one box with one correction, giving ${n} boxes, and a separate grader annotated each one.`,
   run_note: from === "batch" ? "The findings come from one recorded run on the Message Batches API." : "The findings come from one recorded live run.",
 };
 

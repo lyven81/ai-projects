@@ -160,7 +160,7 @@
   <header class="top">
     <div><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../badminton-booking-agent.html" style="color:inherit;text-decoration:none">Badminton Court Booking Agent</a></div>
       <h1>Subang Badminton Arena · Booking Assistant</h1>
-      <div class="sub">A court booking assistant that answers only from the centre's policies (fictional data) · <span id="today-text"></span></div>
+      <div class="sub">A court booking assistant that answers only from the centre's policies · <span id="today-text"></span></div>
     </div>
     <nav class="switch"><a href="demo.html">Staff dashboard</a><a class="on" href="assistant.html">Player chat</a></nav>
   </header>
@@ -255,7 +255,7 @@
       </div>
     </div>
   </div>
-  <footer>© 2026 Lee Yih Ven · Subang Badminton Arena is a fictional centre for a portfolio demo. QR codes and receipts are marked Demo, not payable.</footer>
+  <footer>© 2026 Lee Yih Ven · QR codes and receipts are marked Demo, not payable.</footer>
 </div>
 <div class="modal" id="modal"><img id="modal-img" alt="Image"></div>
 
@@ -1781,7 +1781,7 @@ function drawReceipt(amount, reference, paidText) {
     g.textAlign = "right"; g.fillStyle = "#1F2A36"; g.font = "bold 22px Arial"; g.fillText(v, 540, y + 20); y += 64;
   }
   g.fillStyle = "#FDECEA"; g.fillRect(0, 790, 600, 70); g.textAlign = "center"; g.fillStyle = "#B3261E"; g.font = "bold 18px Arial";
-  g.fillText("DEMO, NOT PAYABLE  ·  sample receipt for a portfolio demo", 300, 832);
+  g.fillText("DEMO, NOT PAYABLE", 300, 832);
   return c.toDataURL("image/jpeg", 0.85);
 }
 function drawRacket() {

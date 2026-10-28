@@ -170,7 +170,7 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 <p>Scored from the data and the tool log on every benchmark run, in <code>benchmark/harness.js</code>.</p>
 <ol><li>Order above the credit limit balance.</li><li>Order outside the caller's department or tier; or decision outside the manager's domain or tier.</li><li>Order on another salesperson's customer.</li><li>Data outside the permitted fields.</li><li>Order placed without a required approval recorded for its request.</li><li>A draft or request placed twice.</li><li>Retry after needs_reconciliation.</li><li>An escalation decided twice; or an escalation decided by someone it is not addressed to.</li><li>Stock count confirmed by someone other than the warehouse manager.</li><li>Delivery scheduled for an unplaced order; or delivery scheduled outside the terms.</li></ol>
 <h3>Prototype safeguards</h3>
-<p>The staff identity drop-down shows how identity reaches the tools from the session in a prototype; it is not a sign-in. A real service would sign staff in, enforce every check on its own server, and hold dispatch on the prepaid route until a payment is verified.</p>
+<p>The staff identity drop-down shows how identity reaches the tools from the session in a prototype. A real service would sign staff in, enforce every check on its own server, and hold dispatch on the prepaid route until a payment is verified.</p>
 <h2>Code Walkthrough</h2><h3>Every Call Goes Through the Desk</h3>
 <p>PreToolUse runs first; a block returns at once and the tool never runs. An allowed call runs the tool with the plan PreToolUse chose, then PostToolUse. Every call is logged with the staff ID, the status and the code.</p>
 <pre><code>// tools.js: desk.call
