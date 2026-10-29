@@ -1,0 +1,106 @@
+{
+ "when": "2026-10-29T02:26:56.689Z",
+ "model": "claude-haiku-5-5",
+ "plan": "rerun-a2-a2-seq.json",
+ "summary": {
+  "runs": 2,
+  "scenarios_passed": 2,
+  "scenarios": 2,
+  "all_runs_passed": 2,
+  "cost_usd": 0.04,
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 2616,
+    "output_tokens": 35460,
+    "cache_read_input_tokens": 365753,
+    "cache_creation_input_tokens": 146595
+   }
+  },
+  "models": {
+   "all": "claude-haiku-5-5"
+  },
+  "timing": null
+ },
+ "results": [
+  {
+   "run_id": "A2-par-1-2026-10-29T02-24-01",
+   "id": "A2",
+   "group": "A",
+   "title": "WhatsApp and Instagram only, more urgent",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 51551,
+   "writing": {
+    "writers": 2,
+    "start": 15468,
+    "end": 29444,
+    "ms": 13976,
+    "sum_ms": 27123,
+    "overlap": true
+   },
+   "model_calls": 8,
+   "cost_usd": 0.013421635000000001,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1298,
+     "output_tokens": 10643,
+     "cache_read_input_tokens": 108371,
+     "cache_creation_input_tokens": 55093
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "A2-seq-1-2026-10-29T02-24-01",
+   "id": "A2",
+   "group": "A",
+   "title": "WhatsApp and Instagram only, more urgent",
+   "mode": "sequential",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 123671,
+   "writing": {
+    "writers": 2,
+    "start": 14828,
+    "end": 39172,
+    "ms": 24344,
+    "sum_ms": 24344,
+    "overlap": false
+   },
+   "model_calls": 15,
+   "cost_usd": 0.026551870000000005,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1318,
+     "output_tokens": 24817,
+     "cache_read_input_tokens": 257382,
+     "cache_creation_input_tokens": 91502
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval"
+   },
+   "retries": 2
+  }
+ ]
+}

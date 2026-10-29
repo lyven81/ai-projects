@@ -1,0 +1,124 @@
+{
+ "writerToolHits": [
+  {
+   "ch": "whatsapp",
+   "t": 14432
+  },
+  {
+   "ch": "instagram",
+   "t": 15780
+  }
+ ],
+ "sys": [
+  {
+   "sub": "thinking_tokens",
+   "t": 6758,
+   "task": null,
+   "d": ""
+  },
+  {
+   "sub": "thinking_tokens",
+   "t": 6759,
+   "task": null,
+   "d": ""
+  },
+  {
+   "sub": "thinking_tokens",
+   "t": 6759,
+   "task": null,
+   "d": ""
+  },
+  {
+   "sub": "task_started",
+   "t": 8512,
+   "task": "a0d7507ba9fce1e2b",
+   "d": "WhatsApp broadcast for PB01"
+  },
+  {
+   "sub": "task_started",
+   "t": 9963,
+   "task": "ad5011605460902ff",
+   "d": "Instagram caption for PB01"
+  },
+  {
+   "sub": "task_progress",
+   "t": 14402,
+   "task": "a0d7507ba9fce1e2b",
+   "d": "WhatsApp broadcast for PB01"
+  },
+  {
+   "sub": "task_progress",
+   "t": 15767,
+   "task": "ad5011605460902ff",
+   "d": "Instagram caption for PB01"
+  },
+  {
+   "sub": "task_updated",
+   "t": 17126,
+   "task": "a0d7507ba9fce1e2b",
+   "d": ""
+  },
+  {
+   "sub": "task_notification",
+   "t": 17127,
+   "task": "a0d7507ba9fce1e2b",
+   "d": "done\n\nNote: the ordering step is a placeholder, [cara tempah"
+  },
+  {
+   "sub": "task_updated",
+   "t": 17322,
+   "task": "ad5011605460902ff",
+   "d": ""
+  },
+  {
+   "sub": "task_notification",
+   "t": 17323,
+   "task": "ad5011605460902ff",
+   "d": "done. No link or ordering channel was given, so I used the p"
+  },
+  {
+   "sub": "thinking_tokens",
+   "t": 18427,
+   "task": null,
+   "d": ""
+  },
+  {
+   "sub": "thinking_tokens",
+   "t": 18925,
+   "task": null,
+   "d": ""
+  }
+ ],
+ "agentResults": [
+  {
+   "t": 17145,
+   "text": "[{\"type\":\"text\",\"text\":\"  <tools-used-before-summary>mcp__kiddoz__write_whatsapp</tools-used-before-summary>\\n  \\n[Subagent hand-back] The text below is the final report of a subagent this session del"
+  },
+  {
+   "t": 17334,
+   "text": "[{\"type\":\"text\",\"text\":\"  <tools-used-before-summary>mcp__kiddoz__write_instagram</tools-used-before-summary>\\n  \\n[Subagent hand-back] The text below is the final report of a subagent this session de"
+  }
+ ],
+ "initToolsHasAgent": false,
+ "initToolsHasTask": true,
+ "spawnsPerResponse": {
+  "msg_011CgVi6gDYhF2ohw9Bh36Bo": [
+   "Agent:whatsapp_writer",
+   "Agent:instagram_writer"
+  ]
+ },
+ "spans": [
+  {
+   "type": "whatsapp_writer",
+   "start": 1793239530795,
+   "end": 1793239539442
+  },
+  {
+   "type": "instagram_writer",
+   "start": 1793239532232,
+   "end": 1793239539635
+  }
+ ],
+ "overlap": true,
+ "cost": 0.004835305000000001
+}

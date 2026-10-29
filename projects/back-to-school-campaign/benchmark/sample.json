@@ -1,0 +1,141 @@
+{
+ "when": "2026-10-29T02:38:42.934Z",
+ "model": "claude-haiku-5-5",
+ "plan": "sample.json",
+ "summary": {
+  "runs": 3,
+  "scenarios_passed": 3,
+  "scenarios": 3,
+  "all_runs_passed": 3,
+  "cost_usd": 0.0601,
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 3845,
+    "output_tokens": 54305,
+    "cache_read_input_tokens": 392055,
+    "cache_creation_input_tokens": 228837
+   }
+  },
+  "models": {
+   "all": "claude-haiku-5-5"
+  },
+  "timing": null
+ },
+ "results": [
+  {
+   "run_id": "B2-par-1-2026-10-29T02-36-52",
+   "id": "B2",
+   "group": "B",
+   "title": "Wrong promotion price",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 13325,
+   "writing": null,
+   "model_calls": 4,
+   "cost_usd": 0.00303964,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1248,
+     "output_tokens": 895,
+     "cache_read_input_tokens": 44909,
+     "cache_creation_input_tokens": 16146
+    }
+   },
+   "final": {
+    "whatsapp": "waiting_for_owner"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "C2-par-1-2026-10-29T02-36-52",
+   "id": "C2",
+   "group": "C",
+   "title": "The hook rejects RM18; only Instagram retries",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 58711,
+   "writing": {
+    "writers": 2,
+    "start": 12935,
+    "end": 28509,
+    "ms": 15574,
+    "sum_ms": 23908,
+    "overlap": true
+   },
+   "model_calls": 10,
+   "cost_usd": 0.01674749,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1265,
+     "output_tokens": 12595,
+     "cache_read_input_tokens": 131274,
+     "cache_creation_input_tokens": 72086
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval"
+   },
+   "retries": 1
+  },
+  {
+   "run_id": "A1-par-1-2026-10-29T02-36-52",
+   "id": "A1",
+   "group": "A",
+   "title": "A complete campaign across five channels",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 110572,
+   "writing": {
+    "writers": 5,
+    "start": 13768,
+    "end": 45966,
+    "ms": 32198,
+    "sum_ms": 95478,
+    "overlap": true
+   },
+   "model_calls": 14,
+   "cost_usd": 0.040275044999999995,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1332,
+     "output_tokens": 40815,
+     "cache_read_input_tokens": 215872,
+     "cache_creation_input_tokens": 140605
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval",
+    "blog": "ready_for_approval",
+    "seo": "ready_for_approval"
+   },
+   "retries": 1
+  }
+ ]
+}

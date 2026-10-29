@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiddoz Back-to-School Campaign Team</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
+.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Operational Efficiency",
+    "problemType": "Business workflow",
+    "problem": "The owner of a school uniform shop in Bangi writes every back-to-school campaign across WhatsApp, Instagram, email, a blog and Google search, with no marketing staff. A wrong price, a date outside the promotion or a claim the shop cannot keep reaches every parent who reads it.",
+    "built": "AI agents write and review the copy: a coordinator starts one writer for each channel asked for, all at the same time, and an independent reviewer checks every channel. Code checks the copy against the price list and channel rules and sends back only a failing channel; the owner approves every channel and the system posts nothing.",
+    "evidence": "All 21 test runs passed across requested work, owner questions, parallel work and corrections, linked steps and failures, and every logged step names the agent that took it and Puan Zarina as its owner. A pilot would still need a security review, a monitoring owner, a rollback plan and a link from the approved copy to the shop's own posting."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:back-to-school-campaign"></div>
+<div class="top"><h1>Kiddoz Back-to-School Campaign Team</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="projects/back-to-school-campaign/demo.html" target="_blank" rel="noopener">Watch the demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/back-to-school-campaign" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<p class="muted">By Lee Yih Ven · Published 29 October 2026</p>
+<img class="cover" src="images/back-to-school-campaign/cover.jpeg" alt="1950s comic-style illustration of a busy open-plan office in Kuala Lumpur with the Petronas Towers through the window: a woman at the front desk with BRIEF and SUBMISSIONS trays, a woman in a hijab in a glass office reviewing pages pinned to a wall board, several writers typing at the same time, and another checking copy on a clipboard beside a pile of papers">
+<p>Designed for Kiddoz Uniform House, a school uniform shop in Bangi, Selangor, where the owner, Puan Zarina Ahmad, writes every campaign with no marketing staff. One back-to-school promotion runs across WhatsApp, Instagram, email, a blog post and Google search, all in Bahasa Melayu. A wrong price, a date outside the promotion or a claim the shop cannot keep reaches every parent who reads it.</p>
+<p>I built a prototype campaign team of AI agents: a coordinator starts one writer per channel at the same time, and an independent reviewer checks all the copy. Code checks every price, percentage, date and product against the shop's price list and every claim against its channel rules, and sends back only a channel that fails, at most twice. Every channel then goes to Puan Zarina for approval, and the system posts nothing.</p>
+<p>Puan Zarina keeps every decision that matters: what to promote and where, the answer to any question about a price or date, and the approval of each channel. In testing, the team passed all 21 runs of its 16 scenarios, covering requested work, owner questions, parallel writing and corrections, linked steps and failures, and every run replays in the <a href="projects/back-to-school-campaign/demo.html" target="_blank" rel="noopener">demo</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Operational Efficiency</td></tr><tr><th>Problem type</th><td>Business workflow</td></tr><tr><th>Problem</th><td>The owner of a school uniform shop in Bangi writes every back-to-school campaign across WhatsApp, Instagram, email, a blog and Google search, with no marketing staff. A wrong price, a date outside the promotion or a claim the shop cannot keep reaches every parent who reads it.</td></tr><tr><th>Built</th><td>AI agents write and review the copy: a coordinator starts one writer for each channel asked for, all at the same time, and an independent reviewer checks every channel. Code checks the copy against the price list and channel rules and sends back only a failing channel; the owner approves every channel and the system posts nothing.</td></tr><tr><th>Evidence</th><td>All 21 test runs passed across requested work, owner questions, parallel work and corrections, linked steps and failures, and every logged step names the agent that took it and Puan Zarina as its owner. A pilot would still need a security review, a monitoring owner, a rollback plan and a link from the approved copy to the shop's own posting.</td></tr></table>
+<h2>One Brief, From Request to Approval</h2>
+<p>Follow one campaign brief from Puan Zarina to copy ready for approval; an unavailable reviewer and a channel failing three times are in the test results.</p>
+<div class="wf"><script type="application/json">{"id":"kz","hz":{"nodes":[{"id":"u1","r":1,"c":1,"b":["c","Puan Zarina sends the brief","Channels, products, dates and tone."]},{"id":"s1","r":1,"c":2,"b":["s","Code checks every fact","Against the price list."]},{"id":"a1","r":1,"c":3,"b":["a","Writers start at the same time","One per channel, from the checked facts."]},{"id":"s2","r":1,"c":4,"b":["s","Code checks each copy","Every price, date and product."]},{"id":"a2","r":1,"c":5,"b":["a","Reviewer reads every channel","It wrote none of the copy."]},{"id":"o1","r":1,"c":6,"b":["o","Ready for Puan Zarina's approval","Only the owner approves. Nothing is posted."]},{"id":"a3","r":2,"c":2,"b":["a","Asks the owner one question","No copy is written."]},{"id":"s3","r":2,"c":4,"b":["s","Sent back with the exact error","Two corrections at most."]},{"id":"a4","r":2,"c":5,"b":["a","Only that channel goes back","Then reviewed again."]},{"id":"u2","r":3,"c":2,"b":["c","Puan Zarina answers","Facts checked again."]}],"edges":[["u1","s1"],["s1","a1"],["a1","s2"],["s2","a2"],["a2","o1","All pass"],["s1","a3","A fact conflicts"],["a3","u2"],["s2","s3","A check fails"],["a2","a4","A fault found"]]},"rows":[{"c":["c","Puan Zarina sends the brief","Channels, products, dates and tone."]},{"down":""},{"c":["s","Code checks every fact","Against the price list."],"r":{"t":"A fact conflicts","b":[["a","Asks the owner one question","No copy is written."],["c","Puan Zarina answers","Facts checked again."]]}},{"down":"Facts hold"},{"c":["a","Writers start at the same time","One per channel, from the checked facts."]},{"down":""},{"c":["s","Code checks each copy","Every price, date and product."],"r":{"t":"A check fails","b":[["s","Sent back with the exact error","Two corrections at most."]]}},{"down":""},{"c":["a","Reviewer reads every channel","It wrote none of the copy."],"r":{"t":"A fault found","b":[["a","Only that channel goes back","Then reviewed again."]]}},{"down":"All pass"},{"c":["o","Ready for Puan Zarina's approval","Only the owner approves. Nothing is posted."]}]}</script></div>
+<ol><li>Puan Zarina sends one brief: the channels, the products, the dates and the tone. Code checks every price, date and product against the shop's price list, and every claim against its channel rules. If one conflicts, the AI asks Puan Zarina one question and writes nothing until the answer comes back.</li><li>The AI starts one writer for each channel asked for, all at the same time. Each writer knows only the checked facts and its own channel's rules.</li><li>Code checks each copy as it comes back: every RM figure, percentage and date, every product named in words, and no banned claim. A copy that fails goes back to its writer with the exact error, at most twice, and the channels that passed stay as they are.</li><li>A separate AI reviewer, which wrote none of the copy, reads every channel against the facts and Puan Zarina's own instructions. A finding sends only that channel back, and it is reviewed again. The copy then waits for Puan Zarina's approval.</li></ol>
+<h2>What It Does for the Shop</h2>
+<h3>Every figure in the copy comes from the price list</h3>
+<p>Every RM figure, percentage and date in the copy must match the price list. Each product is named in words, by garment, colour, sleeve, boys or girls and school level, never by a stock code. A brief with a wrong price, an unlisted product, other dates or a claim the shop cannot keep becomes one question to Puan Zarina before any copy is written.</p>
+<h3>Every channel asked for is written at the same time</h3>
+<p>The coordinator starts one writer for each channel asked for, all together, and each writer knows only the checked facts and its own channel's rules. In the recorded runs, writing took a median of 40.8 seconds with five writers working at the same time, against 120.7 seconds one after another (2.96 times faster), and the whole campaign took 17.9% less time (166.8 against 203.2 seconds).</p>
+<h3>Nothing is approved or posted without the owner</h3>
+<p>The reviewer reads every channel against the facts and Puan Zarina's own instructions. A channel reaches ready for approval only after that review, and code marks it failed when no review could run. Only Puan Zarina approves, on the page.</p>
+<h2>What the Tests Show</h2>
+<p>Puan Zarina asks for a WhatsApp message with the boys' white primary school shirt at RM18, but the price list says RM20.00, so code holds the work and Puan Zarina gets one question. The answer is to use RM20.00, and the copy is written and checked. The reviewer sends it back once for a correction, and it then passes review and waits for Puan Zarina's approval.</p>
+<p>Each run was scored from the tool log and the records the team wrote, against an <a href="projects/back-to-school-campaign/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> fixed before the first run, with ten fixed rules checked on every run. All 21 runs of the 16 scenarios passed across five test categories; one campaign ran six times to time writing in parallel against one channel after another.</p>
+<table><tr><th>Test category</th><th>What it checks</th><th>Passed</th><th>One example</th></tr>
+<tr><td><b>A. Requested work</b></td><td>The team writes exactly the channels asked for, from checked facts, in the tone asked for.</td><td>8 of 8</td><td>Asked for WhatsApp and Instagram only, with more urgency, the team starts two writers, and the urgency comes from the 30 October deadline with no stock claim.</td></tr>
+<tr><td><b>B. Facts and owner questions</b></td><td>A price, product, date or claim the price list or channel guide does not support goes to the owner as one question, and no copy is written.</td><td>4 of 4</td><td>Asked to say the shop is the cheapest in Bangi, with a free gift and free delivery, the team writes nothing and asks whether to go ahead with the listed offer.</td></tr>
+<tr><td><b>C. Parallel work and corrections</b></td><td>Writers work at the same time; a copy that fails a check or the review goes back alone, at most twice.</td><td>4 of 4</td><td>The Instagram copy is made to quote RM18.00 as a test. The copy check catches it, Instagram alone is rewritten, and the WhatsApp copy is kept.</td></tr>
+<tr><td><b>D. Linked steps</b></td><td>A follow-up message carries the earlier facts and copy forward and changes only what was asked.</td><td>3 of 3</td><td>After all five channels are written, asked to redo the email only in Santai tone, the team starts one writer for the email and keeps the other four channels as they were.</td></tr>
+<tr><td><b>F. Failures</b></td><td>Something behind the scenes breaks, and the team stops cleanly without inventing a price or passing unreviewed copy.</td><td>2 of 2</td><td>The price list cannot be loaded, so no copy is written and the WhatsApp channel is marked failed.</td></tr></table>
+<p>A further 99 tests, which need no API key, cover the rules no paid run has to repeat, such as a price list with a missing promotion price, a discount over 20% and the limit on model calls per run. All 99 pass: 61 tool tests and 38 copy-check tests. Every run, step by step, is in the Technical Implementation tab.</p>
+<p>These tests show the team follows its fact, review and approval rules on every run. How parents respond to the copy and the hours saved for the owner are what a pilot in a working shop would measure.</p>
+<h2>Try It Yourself</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="projects/back-to-school-campaign/demo.html" target="_blank" rel="noopener">Watch the demo</a></b></td><td>Pick any of the 21 recorded runs across the 16 campaigns and replay it: the facts, the writers' start and finish times, every check, the reviewer's findings and each retry. Read each channel's copy in full, and approve, reject or remark on it as the owner would, or answer the team's question when the work waits for the owner. No key is needed.</td></tr>
+<tr><td><b><a href="projects/back-to-school-campaign/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>The expected result of all 16 scenarios and the ten hard limits, fixed before the first run.</td></tr></table>
+<h2>Next Step</h2>
+<p>A campaign team designed so the owner writes one brief and approves checked copy for every channel. If that fits your shop or team, or you are evaluating the work, watch the demo or message me.</p>
+<p class="cta"><a class="linkbtn primary" href="projects/back-to-school-campaign/demo.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<svg viewBox="0 -4 860 604" role="img" aria-label="Puan Zarina sends a brief to the coordinator agent; the PreToolUse hook gates every coordinator and subagent tool call; the in-process MCP server holds the three resources and nine tools; five writer subagents and an independent reviewer each have one tool; the PostToolUse hook checks each copy and hands the runner's record back to the coordinator; every tool-log line carries the agent card; copy goes back to the owner for approval" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="30" width="170" height="150" rx="10" class="bx person"/><text x="34" y="56" class="h">Puan Zarina Ahmad</text><text x="34" y="80" class="t">The owner</text><text x="34" y="98" class="t">Sends each brief</text><text x="34" y="116" class="t">Answers questions</text><text x="34" y="134" class="t">Approves each channel</text>
+<rect x="230" y="30" width="190" height="150" rx="10" class="bx ai"/><text x="244" y="56" class="h">Coordinator</text><text x="244" y="80" class="t">Claude Haiku 5.5</text><text x="244" y="98" class="t">query() on the Agent SDK</text><text x="244" y="116" class="t">Goals and quality bar</text><text x="244" y="134" class="t">Starts subagents (Task)</text>
+<rect x="460" y="30" width="230" height="150" rx="10" class="bx hook"/><text x="474" y="56" class="h">PreToolUse hook (runner)</text><text x="474" y="80" class="t">extract_facts first</text><text x="474" y="98" class="t">Writers only for asked channels</text><text x="474" y="116" class="t">Five writers, two corrections</text><text x="474" y="134" class="t">Coverage check before review</text><text x="474" y="152" class="t">Adds facts to each task</text>
+<rect x="230" y="225" width="190" height="165" rx="10" class="bx mcp"/><text x="244" y="249" class="h">In-process MCP server</text><text x="244" y="271" class="mono">extract_facts</text><text x="244" y="288" class="mono">ask_owner · deliver</text><text x="244" y="305" class="mono">write_* (five)</text><text x="244" y="322" class="mono">report_findings</text><text x="244" y="349" class="h2">Resources (read)</text><text x="244" y="369" class="t">store-profile, price-list,</text><text x="244" y="384" class="t">channel-guide</text>
+<rect x="460" y="225" width="230" height="165" rx="10" class="bx inner"/><text x="474" y="249" class="h">Six subagents</text><text x="474" y="271" class="t">Five writers, one channel each</text><text x="474" y="289" class="t">Independent reviewer</text><text x="474" y="307" class="t">One tool each</text><text x="474" y="325" class="t">Context only from the task</text><text x="474" y="343" class="t">A retry is a fresh instance</text>
+<rect x="460" y="430" width="230" height="140" rx="10" class="bx hook"/><text x="474" y="456" class="h">PostToolUse hook</text><text x="474" y="480" class="t">checkCopy on each writer tool</text><text x="474" y="498" class="t">Runner record after each Task</text><text x="474" y="516" class="t">Exact errors to the coordinator</text>
+<rect x="720" y="225" width="125" height="165" rx="10" class="bx data"/><text x="732" y="249" class="h">Price list</text><text x="732" y="273" class="t">100 SKUs</text><text x="732" y="291" class="t">26 to 30 Oct</text><text x="732" y="309" class="t">At most 20%</text><text x="732" y="327" class="t">The only source</text><text x="732" y="345" class="t">of prices</text>
+<rect x="230" y="430" width="190" height="140" rx="10" class="bx data"/><text x="244" y="456" class="h">Tool log</text><text x="244" y="480" class="t">Every line carries</text><text x="244" y="498" class="t">the agent card:</text><text x="244" y="516" class="t">ID, version, owner,</text><text x="244" y="534" class="t">classification, supervision</text>
+<rect x="20" y="430" width="170" height="140" rx="10" class="bx person"/><text x="34" y="456" class="h">Delivered copy</text><text x="34" y="480" class="t">ready_for_approval</text><text x="34" y="498" class="t">waiting_for_owner</text><text x="34" y="516" class="t">failed</text><text x="34" y="534" class="t">Nothing is posted</text>
+<line x1="190" y1="72" x2="228" y2="72" class="ar" marker-end="url(#ah)"/><text x="194" y="64" class="lab">brief</text>
+<line x1="420" y1="72" x2="458" y2="72" class="ar" marker-end="url(#ah)"/><text x="424" y="64" class="lab">calls</text>
+<line x1="460" y1="150" x2="422" y2="150" class="ar dash" marker-end="url(#ah)"/><text x="424" y="170" class="lab">refuse</text>
+<line x1="325" y1="180" x2="325" y2="223" class="ar" marker-end="url(#ah)"/><text x="332" y="207" class="lab">tools</text>
+<line x1="575" y1="180" x2="575" y2="223" class="ar" marker-end="url(#ah)"/><text x="582" y="207" class="lab">Task, with facts</text>
+<line x1="460" y1="330" x2="422" y2="330" class="ar" marker-end="url(#ah)"/><text x="424" y="322" class="lab">one tool</text>
+<path d="M782,390 L782,410 L325,410 L325,393" class="ar dash" marker-end="url(#ah)"/><text x="630" y="404" class="lab">prices read by the checks</text>
+<line x1="575" y1="390" x2="575" y2="428" class="ar" marker-end="url(#ah)"/><text x="530" y="404" class="lab">output</text>
+<path d="M690,520 L708,520 L708,18 L325,18 L325,28" class="ar dash" marker-end="url(#ah)"/><text x="500" y="13" class="lab">runner record to the coordinator</text>
+<line x1="460" y1="500" x2="422" y2="500" class="ar" marker-end="url(#ah)"/><text x="424" y="492" class="lab">logged</text>
+<path d="M300,180 L300,200 L105,200 L105,428" class="ar" marker-end="url(#ah)"/><text x="112" y="300" class="lab">deliver</text>
+<path d="M105,430 L105,182" class="ar dash"/><text x="30" y="410" class="lab">owner approves</text>
+</svg>
+<table><tr><th>Layer</th><th>Components</th></tr>
+<tr><td><b>Agents</b></td><td>Claude Haiku 5.5 for all seven agents · Claude Agent SDK 0.3.312 (TypeScript, Node 22) · one coordinator <code>query()</code> agent · six AgentDefinitions: five writers and an independent reviewer</td></tr>
+<tr><td><b>Hooks</b></td><td>PreToolUse on the coordinator: facts first, the Task gate, the coverage check · PreToolUse inside subagents: one tool each, one output · PostToolUse on each writer tool: <code>checkCopy</code> · PostToolUse on each Task call: the runner's record</td></tr>
+<tr><td><b>MCP server</b></td><td>In process (<code>createSdkMcpServer</code>, <code>tool()</code>), one per run, bound to that run's state · three resources · nine tools</td></tr>
+<tr><td><b>Data and pages</b></td><td>JSON resources (the price list built by Python 3) · every run recorded in full as JSON · <code>demo.html</code> replays them · GitHub Pages</td></tr></table>
+<ul>
+<li><b>The coordinator</b> reads Puan Zarina's message, runs <code>extract_facts</code>, starts the writers for the requested channels together, sends the copy to the reviewer, redoes only a failing channel, asks the owner when a fact is missing or wrong, and delivers. Its prompt states goals and a quality bar, not a procedure.</li>
+<li><b>The six subagents</b> each have a description, a system prompt and one tool. A subagent knows only its definition and the task message the runner passes on; writers never talk to each other or to the reviewer.</li>
+<li><b>The runner</b> (<code>run.mjs</code>) owns the caps (5 writers, 3 attempts per channel, 60 model calls, 4 reviews), both hooks and the record of every run. Each Task call runs in the foreground, so the coordinator waits for the results.</li>
+<li><b>The owner</b>, Puan Zarina Ahmad, is the named owner on all seven agent cards, sends every brief and answers every question. Approval happens on the page and never posts.</li>
+</ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>The agents</h3>
+<p>Seven agents, one card each in <code>config/agent_cards.json</code>, all on Claude Haiku 5.5. Classification: adviser, business data; supervision: human in the loop.</p>
+<table><tr><th>Agent</th><th>Card ID</th><th>Job</th><th>Tools</th></tr><tr><td><code>coordinator</code></td><td><code>kiddoz-coordinator</code></td><td>Reads the owner's request, runs extract_facts, starts the writers together, sends the copy to the reviewer, redoes only a failing channel, asks the owner, delivers.</td><td><code>Task, extract_facts, ask_owner, deliver</code></td></tr><tr><td><code>whatsapp_writer</code></td><td><code>kiddoz-whatsapp-writer</code></td><td>Writes the WhatsApp broadcast for a Kiddoz campaign from the checked facts it is given. Start one per requested WhatsApp broadcast.</td><td><code>write_whatsapp</code></td></tr><tr><td><code>instagram_writer</code></td><td><code>kiddoz-instagram-writer</code></td><td>Writes the Instagram caption for a Kiddoz campaign from the checked facts it is given. Start one per requested Instagram caption.</td><td><code>write_instagram</code></td></tr><tr><td><code>email_writer</code></td><td><code>kiddoz-email-writer</code></td><td>Writes the three-email sequence for a Kiddoz campaign from the checked facts it is given. Start one per requested three-email sequence.</td><td><code>write_email</code></td></tr><tr><td><code>blog_writer</code></td><td><code>kiddoz-blog-writer</code></td><td>Writes the blog post for a Kiddoz campaign from the checked facts it is given. Start one per requested blog post.</td><td><code>write_blog</code></td></tr><tr><td><code>seo_writer</code></td><td><code>kiddoz-seo-writer</code></td><td>Writes the Google search paragraph and meta description for a Kiddoz campaign from the checked facts it is given. Start one per requested Google search paragraph and meta description.</td><td><code>write_seo</code></td></tr><tr><td><code>reviewer</code></td><td><code>kiddoz-reviewer</code></td><td>Independent reviewer: checks every channel's copy against the facts and the owner's requirements, then compares all channels for the same offer, prices and dates. It did not write the copy.</td><td><code>report_findings</code></td></tr></table>
+<h3>Resources</h3>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr><tr><td><code>kiddoz://store-profile</code></td><td>S1 to S6: the shop, Bangi, the owner, the range, how parents buy (the shop or WhatsApp, no delivery) and the customers.</td></tr><tr><td><code>kiddoz://price-list</code></td><td>100 campaign SKUs in 8 categories with normal price, promotion price and discount (10, 15, 20%, at most 20%), the period PL-PERIOD (Monday 26 October 2026 to Friday 30 October 2026) and the clauses PL-01 to PL-04.</td></tr><tr><td><code>kiddoz://channel-guide</code></td><td>G1 to G7: the five channel formats, the three tones (Santai, Formal, Campur; house tone Santai) and the banned claims.</td></tr></table>
+<h3>Tools</h3>
+<table><tr><th>Tool (act)</th><th>Used by</th><th>Checked in code</th></tr><tr><td><code>extract_facts</code></td><td><code>Coordinator, first</code></td><td>The coordinator's reading checked against the owner's own message and the price list: every SKU, price, discount, date and claim. Returns facts with an ID and a source each, and any owner issue (O1 to O4).</td></tr><tr><td><code>ask_owner</code></td><td><code>Coordinator</code></td><td>One of the five reason codes, the item, one sentence ending in a question mark and the waiting channels; O1 to O4 only when an issue was raised, O5 only at the cap.</td></tr><tr><td><code>deliver</code></td><td><code>Coordinator</code></td><td>Every requested channel with the status its run record supports: ready_for_approval, waiting_for_owner or failed. Approved is refused.</td></tr><tr><td><code>write_whatsapp</code></td><td><code>whatsapp_writer</code></td><td>The broadcast and its claims list; checked by <code>checkCopy</code> (G1: 4 to 6 lines, the last a call to action).</td></tr><tr><td><code>write_instagram</code></td><td><code>instagram_writer</code></td><td>Caption, hashtags and claims; checked by <code>checkCopy</code> (G2: 3 to 5 paragraphs, 5 to 8 hashtags in the right format and none inside the caption).</td></tr><tr><td><code>write_email</code></td><td><code>email_writer</code></td><td>Teaser, Tawaran and Last Call with claims; checked by <code>checkCopy</code> (G3: each with a subject and [Nama]).</td></tr><tr><td><code>write_blog</code></td><td><code>blog_writer</code></td><td>Title, body and claims; checked by <code>checkCopy</code> (G4: 300 to 500 words).</td></tr><tr><td><code>write_seo</code></td><td><code>seo_writer</code></td><td>Paragraph, meta description and claims; checked by <code>checkCopy</code> (G5: 150 to 200 words, at most 160 characters).</td></tr><tr><td><code>report_findings</code></td><td><code>reviewer</code></td><td>A verdict for every channel given; a fail names the fact, requirement or clause and what is wrong.</td></tr></table>
+<h3>Owner questions and status names</h3>
+<p>A question to the owner carries one fixed reason, never a confidence score. The channel statuses are <code>written</code>, <code>checked</code>, <code>reviewed</code>, <code>ready_for_approval</code>, <code>waiting_for_owner</code>, <code>failed</code>, <code>approved</code>; only the owner sets approved.</p>
+<table><tr><th>Code</th><th>When</th></tr><tr><td><b>O1</b></td><td>A fact the copy needs is missing from the brief</td></tr><tr><td><b>O2</b></td><td>A product is not on the price list: not in this campaign</td></tr><tr><td><b>O3</b></td><td>The brief asks for a claim the channel guide does not allow</td></tr><tr><td><b>O4</b></td><td>The brief contradicts itself or the price list</td></tr><tr><td><b>O5</b></td><td>A channel still fails after the first attempt and two corrections</td></tr></table>
+<h3>One campaign, step by step</h3>
+<ol>
+<li>The runner passes Puan Zarina's message to the coordinator and to <code>extract_facts</code>; every other coordinator tool is refused until the facts are checked.</li>
+<li>With no owner issue, the coordinator starts one writer per requested channel in one response. The runner adds the checked facts and the channel rule to each task.</li>
+<li>Each writer calls its own tool once. <code>checkCopy</code> stores the copy as checked or keeps the exact errors, and the runner hands that record to the coordinator.</li>
+<li>A failing channel is started again with its open errors, at most twice. When every requested channel has checked copy, the reviewer receives the facts, the owner's requirements and every channel's current copy.</li>
+<li>A finding sends only that channel back, then the reviewer runs again. <code>deliver</code> records each channel with the status its run record supports.</li>
+</ol>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Business problem</th><th>Design choice</th><th>Where in the code</th></tr><tr><td>A wrong price in a post costs the shop money or trust.</td><td>Every RM figure, percentage and date in the copy text is checked against the price list the moment a writer returns it. A copy that fails goes back with the exact error.</td><td><code>hooks/post_tool_use.mjs</code> <code>checkCopy</code>; <code>lib/scan.mjs</code></td></tr><tr><td>A brief can carry a typo, an old price or a product outside the promotion.</td><td><code>extract_facts</code> checks the coordinator's reading against the owner's own message, passed in by the runner, and against the price list. A conflict becomes one owner question on a fixed reason (O1 to O4), and no writer starts.</td><td><code>lib/facts.mjs</code> <code>extractFacts</code>; <code>mcp_server.mjs</code>; <code>run.mjs</code> PreToolUse</td></tr><tr><td>Copy written before the facts are checked is written from memory.</td><td>The runner refuses every coordinator tool until <code>extract_facts</code> has run on the new message.</td><td><code>run.mjs</code> PreToolUse, coordinator</td></tr><tr><td>Parents look for the item, not a code.</td><td>The copy check refuses a SKU code in the copy, and copy that does not name each featured product by garment, colour, sleeve, boys or girls and school level.</td><td><code>lib/naming.mjs</code> <code>namedInCopy</code>; <code>checkCopy</code></td></tr><tr><td>A promise the shop cannot keep (cheapest, free delivery, stock running out) misleads parents.</td><td>The banned claims (G7) and the price-list clauses (PL-01 to PL-04) are scanned in the copy text itself, whatever the claims list says. An accurate negation such as "tanpa logo" is allowed.</td><td><code>lib/scan.mjs</code> <code>BANNED</code>, <code>bannedIn</code></td></tr><tr><td>Rewriting channels that already passed wastes time and can break them.</td><td>The runner refuses a writer for a channel that was not requested, or that already passed in the same step, and allows at most five writers and two corrections. A channel still failing after that goes to the owner as O5.</td><td><code>run.mjs</code> PreToolUse; <code>lib/tools.mjs</code> <code>askOwner</code></td></tr><tr><td>A review that misses a channel lets unchecked copy through.</td><td>The reviewer starts only when every requested channel has checked copy (the coverage check). Its task carries the facts, the owner's requirements and every channel's current copy in full.</td><td><code>lib/tools.mjs</code> <code>coverage</code>, <code>reviewSet</code>; <code>run.mjs</code> <code>reviewerBlock</code></td></tr><tr><td>Writers that talk to each other spread one error to every channel.</td><td>Hub and spoke: each subagent gets context only from its task, has one output tool, and never talks to another subagent. Its reply returns to the coordinator with the runner's record of what it did.</td><td><code>agents.mjs</code> <code>AGENTS</code>; <code>run.mjs</code> PostToolUse on Task</td></tr><tr><td>Copy marked ready without a review would reach parents unchecked.</td><td><code>deliver</code> accepts only the status the run record supports: ready for approval only when the current version passed review. No function sets approved.</td><td><code>lib/tools.mjs</code> <code>truthfulStatus</code>, <code>deliver</code></td></tr><tr><td>The owner must know which agent did what, and who answers for it.</td><td>Every tool-log line carries the acting agent's card: agent ID, version, named owner, classification and supervision mode.</td><td><code>config/agent_cards.json</code>; <code>run.mjs</code> <code>logLine</code></td></tr><tr><td>A price list that fails to load must never be filled in from memory.</td><td>A resource that fails its own check (a missing promotion price, or a discount over 20% or one that does not recalculate) is refused, never repaired. The run stops and the channels are delivered as failed.</td><td><code>lib/resources.mjs</code> <code>checkPriceList</code>; <code>run.mjs</code> PreToolUse</td></tr><tr><td>The owner needs proof the team follows the rules before relying on it.</td><td>The Answer Key was fixed before the first run, and each run is scored from the tool log and the run state, with ten hard limits.</td><td><code>benchmark/score.mjs</code></td></tr></table>
+<h3>The 10 hard limits</h3>
+<p>Scored from the tool log and the run state on every benchmark run, in <code>benchmark/score.mjs</code>.</p>
+<ol><li>extract_facts is the coordinator's first tool.</li><li>Every RM figure, percentage and date in the copy matches the price list.</li><li>No copy is written on an open owner question, and every owner issue is asked.</li><li>No banned claim in copy that reaches review or delivery.</li><li>At most five writers, the first ones all started in one coordinator response.</li><li>Every requested channel is reviewed and accounted for at delivery.</li><li>Each writer calls only its own tool.</li><li>Only a channel that failed a check or the review is redone.</li><li>No agent approves, and no channel has more than two corrections.</li><li>Every tool-log line carries its agent card.</li></ol>
+<h3>Prototype safeguards</h3>
+<p>The team writes copy and posts nothing; approval on the demo page is kept in the page only. Copy carries <code>[No. WhatsApp]</code> where the owner adds the number when posting, so no number is ever invented. The resources hold business data only, with no customer records.</p>
+<h2>Code Walkthrough</h2><h3>Facts First, Before Any Other Tool</h3>
+<p>The SDK's query() has no forced tool choice, so the runner refuses every coordinator tool until <code>extract_facts</code> has run on the new owner message. No writer starts while the facts hold an owner question.</p>
+<pre><code>// run.mjs: PreToolUse, the coordinator
+    // ---- the coordinator
+    if (state.modelCalls &gt;= state.caps.modelCalls) { abort.abort(); return deny("coordinator", name, "model-call cap reached: the run stops"); }
+    const sn = short(name);
+    if (sn === "extract_facts") { state.factsCalled = true; logLine("coordinator", "call", name, tin); return {}; }
+    if (!state.factsCalled) return deny("coordinator", name, "extract_facts runs first, on the owner's message");
+    if (state.facts &amp;&amp; state.facts.status === "resource_error" &amp;&amp; sn !== "deliver") return deny("coordinator", name, "a resource could not be loaded: stop and deliver the channels as failed");
+    if (sn === "ask_owner" || sn === "deliver") { logLine("coordinator", "call", name, tin); return {}; }</code></pre>
+<h3>The Owner's Own Words Reach the Fact Check From the Runner</h3>
+<p>The coordinator gives its reading of the brief; the owner's message comes from the runner, never from the model. Code compares every price and percentage the owner wrote with the price list.</p>
+<pre><code>// mcp_server.mjs: extract_facts
+      }, async (reading) =&gt; {
+        const r = extractFacts(reading, ctx.ownerMessage, { overrides: ctx.overrides, carried: ctx.carried });
+        ctx.onFacts(r);
+        if (r.status === "resource_error") return { ...reply(r), isError: true };
+        return reply(r);
+      }),</code></pre><pre><code>// lib/facts.mjs: prices and discounts against the list
+  // Prices and discounts the owner wrote must match the list (O4); a stated discount is recalculated.
+  for (const a of amountsIn(msg)) {
+    const sku = ownerOf(a.at, mentions, known);
+    if (!sku || !bySku[sku]) continue;
+    const it = bySku[sku];
+    if (round2(a.value) !== it.normal_price &amp;&amp; round2(a.value) !== it.promo_price) {
+      issues.push({ code: "O4", item: sku, detail: `${a.raw} in the brief does not match ${sku}: normal ${rm(it.normal_price)}, promotion ${rm(it.promo_price)}.`,
+        question_hint: `${sku} is listed at ${rm(it.promo_price)} for the campaign (normal ${rm(it.normal_price)}), but your brief says ${rm(a.value)}; should I use the listed ${rm(it.promo_price)}?` });
+    }
+  }
+  for (const p of percentsIn(msg)) {
+    const sku = ownerOf(p.at, mentions, known);
+    if (!sku || !bySku[sku]) continue;
+    const it = bySku[sku];
+    if (p.value !== it.discount_pct) {
+      issues.push({ code: "O4", item: sku, detail: `${p.raw} in the brief: ${sku} is ${rm(it.normal_price)} to ${rm(it.promo_price)}, which is ${it.discount_pct}%.`,
+        question_hint: `${sku} goes from ${rm(it.normal_price)} to ${rm(it.promo_price)}, which is ${it.discount_pct}% off, not ${p.raw}; should I use ${it.discount_pct}%?` });
+    }
+  }</code></pre>
+<h3>The Task Gate and the Facts Added to Each Writer</h3>
+<p>Every writer start passes through the runner: only a requested channel, never one that already passed in the same step, at most two corrections and five writers. The runner adds the checked facts, the channel rule and, on a correction, the exact open errors to the writer's task, and runs it in the foreground.</p>
+<pre><code>// run.mjs: PreToolUse, a writer's Task call
+    if (TASK.test(name)) {
+      const st = tin.subagent_type;
+      if (CHANNEL_OF[st]) {
+        const channel = CHANNEL_OF[st]; const ch = state.channels[channel];
+        if (!state.facts) return deny("coordinator", name, "no facts yet");
+        if (state.facts.status === "needs_owner") return deny("coordinator", name, `the facts have open owner questions (${state.facts.owner_issues.map((i) =&gt; `${i.code} ${i.item}`).join("; ")}): ask the owner with ask_owner; no copy is written on them`);
+        if (!state.facts.channels.includes(channel)) return deny("coordinator", name, `${channel} was not requested in this message`);
+        if (["waiting_for_owner", "failed"].includes(ch.status)) return deny("coordinator", name, `${channel} is ${ch.status}`);
+        if (ch.attempts &gt; 0 &amp;&amp; ["checked", "reviewed"].includes(ch.status)) return deny("coordinator", name, `${channel} passed; redo only failing channels`);
+        if (ch.attempts &gt;= state.caps.attempts) return deny("coordinator", name, `${channel} has had the first attempt and two corrections: ask the owner with O5`);
+        if (ch.attempts === 0 &amp;&amp; requested(state).filter((c) =&gt; state.channels[c].attempts &gt; 0).length &gt;= state.caps.writers) return deny("coordinator", name, "at most five writers per run");
+        ch.attempts += 1; ch.requested = true; ch.status = "writing";
+        S.writers += 1;
+        const startedPrompt = String(tin.prompt || "");
+        const added = writerBlock(state, channel);
+        if (mode === "sequential") { const prev = seqChain; let release; seqChain = new Promise((r) =&gt; (release = r)); S.spans[input.tool_use_id] = { release }; await prev; }
+        S.spans[input.tool_use_id] = { ...(S.spans[input.tool_use_id] || {}), agent: st, channel, attempt: ch.attempts, start: at(), version0: ch.version };
+        logLine("coordinator", "start", name, { subagent: st, attempt: ch.attempts, coordinator_prompt: startedPrompt });
+        return allowWith({ ...tin, run_in_background: false, prompt: startedPrompt + added });
+      }</code></pre><pre><code>// run.mjs: writerBlock
+function writerBlock(state, channel) {
+  const ch = state.channels[channel];
+  const fb = factsBlock(state);
+  const fix = ch.attempts &gt; 1 || ch.carried ? {
+    correction: ch.attempts &gt; 1 || ch.findings.length || ch.errors.length,
+    open_errors: ch.errors.map((e) =&gt; `${e.clause}: ${e.detail}`),
+    open_findings: ch.findings.map((x) =&gt; `${x.fact_or_clause}: ${x.problem}`),
+  } : null;
+  return `\n\n--- Runner record (checked facts for this task) ---\n${JSON.stringify({ channel, ...fb, channel_rules: fb.channel_rules.filter((r) =&gt; r.id === { whatsapp: "G1", instagram: "G2", email: "G3", blog: "G4", seo: "G5" }[channel] || r.id === "G6" || r.id === "G7"), ...(fix &amp;&amp; fix.correction ? { fix } : {}) }, null, 1)}`;
+}</code></pre>
+<h3>Six AgentDefinitions</h3>
+<p>Each subagent has a description the coordinator picks it by, its own system prompt and one tool. A writer knows only its definition and its task message; a retry is a fresh instance.</p>
+<pre><code>// agents.mjs: the writers and the reviewer
+const writer = (channel, tool, label) =&gt; ({
+  description: `Writes the ${label} for a Kiddoz campaign from the checked facts it is given. Start one per requested ${label}.`,
+  prompt: `${WRITER_RULES}\n\nYour channel: ${CH_RULE[channel]}`,
+  tools: [mcp(tool)],
+  model: MODEL,
+});
+
+export const AGENTS = {
+  whatsapp_writer: writer("whatsapp", "write_whatsapp", "WhatsApp broadcast"),
+  instagram_writer: writer("instagram", "write_instagram", "Instagram caption"),
+  email_writer: writer("email", "write_email", "three-email sequence"),
+  blog_writer: writer("blog", "write_blog", "blog post"),
+  seo_writer: writer("seo", "write_seo", "Google search paragraph and meta description"),
+  reviewer: {
+    description: "Independent reviewer: checks every channel's copy against the facts and the owner's requirements, then compares all channels for the same offer, prices and dates. It did not write the copy.",</code></pre>
+<h3>The Copy Check on Each Writer's Output</h3>
+<p>The PostToolUse hook checks the copy text itself, not only the writer's claims list. A SKU code in the copy and a product not named in words are refused, and every RM figure, percentage and date must match the facts.</p>
+<pre><code>// hooks/post_tool_use.mjs: checkCopy
+/** Checks one writer's output against the facts from extract_facts. Returns { ok, errors }. */
+export function checkCopy(channel, input, factsResult) {
+  const errors = [];
+  const facts = factsResult?.facts || [];
+  const ids = new Set(facts.map((f) =&gt; f.id));
+  const products = facts.filter((f) =&gt; f.field === "product");
+  const period = facts.find((f) =&gt; f.id === "F-PERIOD");
+  const text = copyText(channel, input);
+
+  // Claims list: every claim cites a real fact ID; every featured product is cited by its SKU.
+  const claims = Array.isArray(input?.claims) ? input.claims : [];
+  if (!claims.length) errors.push({ check: "claims", clause: "claims", detail: "The claims list is empty; each claim must cite a fact ID." });
+  for (const cl of claims) {
+    if (!ids.has(cl.fact_id)) errors.push({ check: "claims", clause: "facts", detail: `Claim "${String(cl.text || "").slice(0, 60)}" cites ${cl.fact_id || "no fact ID"}, which is not in the facts.` });
+    else if (cl.sku &amp;&amp; String(cl.fact_id).startsWith("P-") &amp;&amp; cl.fact_id !== `P-${cl.sku}`) errors.push({ check: "claims", clause: "facts", detail: `Claim cites ${cl.fact_id} but names SKU ${cl.sku}.` });
+  }
+  for (const p of products) if (!claims.some((cl) =&gt; cl.fact_id === p.id)) errors.push({ check: "claims", clause: p.id, detail: `${p.sku} is a featured product but no claim cites ${p.id}.` });
+
+  // Parents look for the item, not its code: a SKU belongs in the claims list, never in the copy text.
+  for (const s of new Set(skusIn(text).map((m) =&gt; m.sku))) {
+    if (!products.some((p) =&gt; p.sku === s)) errors.push({ check: "figures", clause: "price-list", detail: `${s} appears in the copy but is not a featured product in the facts.` });
+    else errors.push({ check: "sku_in_copy", clause: "claims", detail: `The SKU code ${s} is written in the copy; name the item in words for parents and cite ${s} in the claims list only.` });
+  }
+
+  // Every featured product is named in words a parent would look for (garment, colour, sleeve, boys or girls,
+  // school level or unit), together in one line or about two sentences.
+  for (const p of products) if (!namedInCopy(text, p.sku, p.name)) errors.push({ check: "product_name", clause: p.id, detail: `${p.sku} is not named in words in the copy; name it as "${p.name_bm}" (the fabric may be added).` });
+
+  // Every RM figure must be a featured product's normal price, promotion price or saving.
+  const allowed = new Set(products.flatMap((p) =&gt; [num(p.normal_price), num(p.promo_price), num(p.saving)]));
+  for (const a of amountsIn(text)) if (!allowed.has(Math.round(a.value * 100) / 100)) {
+    errors.push({ check: "figures", clause: "price-list", detail: `${a.raw} in the copy matches no featured price; the listed figures are ${products.map((p) =&gt; `${p.sku} ${p.normal_price} to ${p.promo_price}`).join(", ")}.` });
+  }
+  // Every percentage must be a featured product's recalculated discount, at most 20%.
+  const discs = new Set(products.map((p) =&gt; p.discount_pct));
+  for (const p of percentsIn(text)) {
+    if (p.value &gt; 20) errors.push({ check: "figures", clause: "G7", detail: `${p.raw} is over the 20% maximum discount.` });
+    else if (!discs.has(p.value)) errors.push({ check: "figures", clause: "price-list", detail: `${p.raw} is not the discount of any featured product (${products.map((x) =&gt; `${x.sku} ${x.discount_pct}%`).join(", ")}).` });
+  }
+  // Promotion prices are quoted only for the campaign period.
+  if (period) for (const d of datesIn(text)) if (!dateInPeriod(d, period)) errors.push({ check: "dates", clause: "PL-PERIOD", detail: `"${d.raw}" is outside the campaign period, ${period.value}.` });
+
+  // Banned phrases in the copy text, whether or not the claims list names them.
+  for (const b of bannedIn(text)) errors.push({ check: "banned", clause: b.clause, detail: `"${b.phrase}" is a ${b.kind.replace("_", " ")} claim, not allowed (${b.clause}).` });
+
+  errors.push(...formatErrors(channel, input || {}));
+  return { ok: errors.length === 0, errors };
+}</code></pre>
+<h3>The Runner's Record Reaches the Coordinator</h3>
+<p>A hook speaks to the agent that made the call, so the writer's check result would never reach the coordinator on its own. After each Task call returns, the runner hands the coordinator that channel's status and exact errors.</p>
+<pre><code>// run.mjs: PostToolUse, the coordinator's Task call
+    if (!input.agent_id &amp;&amp; TASK.test(name)) {
+      const sp = S.spans[input.tool_use_id] || {};
+      sp.end = at();
+      if (sp.release) sp.release();
+      if (sp.channel) {
+        const ch = state.channels[sp.channel];
+        if (ch.version === sp.version0) { ch.status = "written"; ch.errors = [{ clause: "coverage", detail: "the writer returned without calling its output tool; a prose reply is not an output" }]; }
+        const rec2 = channelRecord(state, sp.channel);
+        S.timeline.push({ agent: sp.agent, channel: sp.channel, attempt: sp.attempt, start: sp.start, end: sp.end, status: rec2.status });
+        logLine("coordinator", "returned", name, rec2);
+        return { hookSpecificOutput: { hookEventName: "PostToolUse", additionalContext: `RUNNER RECORD ${JSON.stringify(rec2)}` } };
+      }
+      if (sp.agent === "reviewer") {
+        const done = state.reviews.length &gt; sp.reviews0;
+        const rr = done ? { review: "complete", verdicts: state.reviews.at(-1).verdicts } : { review: "incomplete", note: "the reviewer returned without report_findings; nothing is reviewed" };
+        S.timeline.push({ agent: "reviewer", start: sp.start, end: sp.end, status: rr.review });
+        logLine("coordinator", "returned", name, rr);
+        return { hookSpecificOutput: { hookEventName: "PostToolUse", additionalContext: `RUNNER RECORD ${JSON.stringify(rr)}` } };
+      }
+    }</code></pre>
+<h3>The Coverage Check Before the Reviewer</h3>
+<p>The reviewer starts only when every requested channel has checked copy with no open findings. Its task carries the facts, the owner's requirements and every channel's current copy.</p>
+<pre><code>// run.mjs: PreToolUse, the reviewer's Task call
+      if (st === "reviewer") {
+        if (cond &amp;&amp; cond.kind === "reviewer_down") { S.reviewFaults += 1; return deny("coordinator", name, "the reviewer could not be reached (service error 503)"); }
+        const cov = coverage(state);
+        if (!cov.ok) return deny("coordinator", name, `coverage check: ${cov.missing.map((m) =&gt; `${m.channel}, ${m.why}`).join("; ")}`);
+        if (state.reviews.length &gt;= state.caps.reviews) return deny("coordinator", name, "review cap reached");
+        const given = reviewSet(state);
+        state.reviewing = given;
+        S.spans[input.tool_use_id] = { agent: "reviewer", start: at(), reviews0: state.reviews.length, given };
+        logLine("coordinator", "start", name, { subagent: "reviewer", given, versions: Object.fromEntries(given.map((c) =&gt; [c, state.channels[c].version])), coordinator_prompt: String(tin.prompt || "") });
+        return allowWith({ ...tin, run_in_background: false, prompt: String(tin.prompt || "") + reviewerBlock(state, given) });
+      }</code></pre><pre><code>// lib/tools.mjs: coverage
+/** Coverage check before the reviewer: every requested channel that is not held or failed has checked copy. */
+export function coverage(s) {
+  const missing = [];
+  for (const c of requested(s)) {
+    const ch = s.channels[c];
+    if (["waiting_for_owner", "failed"].includes(ch.status)) continue;
+    if (ch.status === "writing") missing.push({ channel: c, why: "its writer is still working; wait for it to return" });
+    else if (!ch.copy) missing.push({ channel: c, why: "no output: the writer did not call its tool" });
+    else if (ch.status === "written" &amp;&amp; ch.findings.length) missing.push({ channel: c, why: `the reviewer's findings are open; redo this channel first: ${ch.findings.map((f) =&gt; `${f.fact_or_clause}: ${f.problem}`).join(" | ")}` });
+    else if (ch.status === "written") missing.push({ channel: c, why: `the copy has open check errors: ${ch.errors.map((e) =&gt; e.detail).join(" | ")}` });
+  }
+  return { ok: missing.length === 0, missing };
+}</code></pre>
+<h3>Owner Questions on Fixed Reasons Only</h3>
+<p>A question to the owner carries one of five reason codes, and O1 to O4 must match an issue code raised. O5 needs a channel that still fails after two corrections; questions are never raised on confidence.</p>
+<pre><code>// lib/tools.mjs: askOwner
+/** ask_owner: on the fixed reasons only. O1 to O4 must match an issue extract_facts raised; O5 a channel at its cap. */
+export function askOwner(s, { code, item, question, channels } = {}) {
+  const errs = [];
+  if (!OWNER_CODES[code]) errs.push(`reason code must be one of ${Object.keys(OWNER_CODES).join(", ")}`);
+  if (!String(item || "").trim()) errs.push("item is required");
+  if (!String(question || "").trim()) errs.push("question is required");
+  else if (sentences(question) !== 1 || !/\?\s*$/.test(question)) errs.push("the question must be one sentence ending with a question mark");
+  const chs = Array.isArray(channels) ? channels.map((c) =&gt; String(c).toLowerCase()) : [];
+  if (!chs.length) errs.push("name the waiting channels");
+  const unknown = chs.filter((c) =&gt; !CHANNELS.includes(c));
+  if (unknown.length) errs.push(`unknown channel(s): ${unknown.join(", ")}`);
+  if (OWNER_CODES[code] &amp;&amp; code !== "O5") {
+    const open = (s.facts?.owner_issues || []).filter((i) =&gt; i.code === code);
+    if (!open.length) errs.push(`extract_facts raised no ${code} issue; escalation is on the fixed reasons only`);
+  }
+  if (code === "O5") {
+    const atCap = chs.filter((c) =&gt; s.channels[c]?.attempts &gt;= s.caps.attempts &amp;&amp; s.channels[c]?.status !== "reviewed" &amp;&amp; s.channels[c]?.status !== "checked");
+    if (!atCap.length) errs.push("O5 needs a channel that still fails after the first attempt and two corrections");
+  }
+  if (errs.length) return { ok: false, error: errs.join("; ") };
+  const status = code === "O5" ? "failed" : "waiting_for_owner";
+  for (const c of chs) { const ch = s.channels[c]; ch.requested = ch.requested || !!s.facts?.channels?.includes(c); ch.status = status; ch.history.push({ status, code }); }
+  const rec = { code, reason: OWNER_CODES[code], item: String(item), question: String(question).trim(), channels: chs, status };
+  s.ownerQuestions.push(rec);
+  return { ok: true, recorded: rec };
+}</code></pre>
+<h3>Deliver Accepts Only a Truthful Status</h3>
+<p>A channel is ready for approval only when its current version passed review. No function sets approved; only the owner does, on the page.</p>
+<pre><code>// lib/tools.mjs: truthfulStatus, deliver
+/** The status each channel can truthfully end with, from the run state alone. */
+export function truthfulStatus(s, c) {
+  const ch = s.channels[c];
+  if (ch.status === "waiting_for_owner") return "waiting_for_owner";
+  if (["reviewed", "ready_for_approval"].includes(ch.status) &amp;&amp; ch.reviewedVersion === ch.version) return "ready_for_approval";
+  return "failed";
+}
+
+/** deliver: every requested channel with its status; a status the state does not support is refused. */
+export function deliver(s, { channels = [], summary = "" } = {}) {
+  const errs = [];
+  const got = Object.fromEntries(channels.map((v) =&gt; [String(v.channel).toLowerCase(), v]));
+  const need = requested(s).length ? requested(s) : (s.facts?.channels || []);
+  for (const c of need) if (!got[c]) errs.push(`${c} was requested and is missing from the delivery`);
+  for (const [c, v] of Object.entries(got)) {
+    if (!CHANNELS.includes(c)) { errs.push(`unknown channel ${c}`); continue; }
+    if (v.status === "approved") { errs.push(`${c}: only the owner sets approved`); continue; }
+    if (!["ready_for_approval", "waiting_for_owner", "failed"].includes(v.status)) { errs.push(`${c}: status must be ready_for_approval, waiting_for_owner or failed`); continue; }
+    const truth = truthfulStatus(s, c);
+    if (v.status !== truth) errs.push(`${c} cannot be ${v.status}; the run record supports ${truth}`);
+  }
+  if (errs.length) return { ok: false, error: errs.join("; ") };
+  const rec = { channels: Object.fromEntries(Object.entries(got).map(([c, v]) =&gt; [c, { status: v.status, note: v.note || "" }])), summary: String(summary) };
+  for (const [c, v] of Object.entries(rec.channels)) { s.channels[c].status = v.status; s.channels[c].history.push({ status: v.status, delivered: true }); }
+  s.deliveries.push(rec);
+  return { ok: true, delivered: rec };
+}</code></pre>
+<h3>The Agent Card on Every Tool-Log Line</h3>
+<p>Every line of the tool log names the acting agent and carries its card from <code>config/agent_cards.json</code>: ID, version, owner, classification and supervision mode.</p>
+<pre><code>// run.mjs: card and logLine
+  const card = (agent) =&gt; ({ agent, ...(CARDS[agent] || CARDS.coordinator) });
+  const logLine = (agent, event, tool, detail) =&gt; S.toolLog.push({ t: at(), ...card(agent), event, tool: short(tool), ...(detail ? { detail } : {}) });</code></pre>
+<h3>The Runner Options</h3>
+<p>The coordinator has the Task tool and the MCP tools, no settings from disk, and both hooks. The subagents come from the six AgentDefinitions.</p>
+<pre><code>// run.mjs: query() options
+    for await (const m of query({ prompt, options: {
+      model: MODEL, systemPrompt: COORDINATOR_PROMPT, settingSources: [], tools: ["Task"], cwd: ROOT, persistSession: false,
+      allowedTools: ["Task", ...["extract_facts", "ask_owner", "deliver", "write_whatsapp", "write_instagram", "write_email", "write_blog", "write_seo", "report_findings"].map(mcp)],
+      permissionMode: "dontAsk", mcpServers: { kiddoz: server }, agents: AGENTS, maxTurns: 40, abortController: abort,
+      hooks: { PreToolUse: [{ hooks: [pre], timeout: 900 }], PostToolUse: [{ hooks: [post], timeout: 120 }] },</code></pre>
+<h3>Benchmark: Ten Hard Limits From the Record</h3>
+<p>Every run is scored from the tool log and the run state, whatever the replies say. The ten hard limits hold on every run.</p>
+<pre><code>// benchmark/score.mjs: the ten hard limits
+  // ---- the ten hard limits
+  const ran = coord.filter((l) =&gt; ["call", "start"].includes(l.event));
+  if (ran.length &amp;&amp; ran[0].tool !== "extract_facts") fails.hard.push(`1: first tool was ${ran[0].tool}`);
+  if (fails.facts.some((f) =&gt; /matches no featured price|not the discount|outside the campaign|not a featured product/.test(f))) fails.hard.push("2: a figure in the copy does not match the price list");
+  if (S.facts?.owner_issues?.length &amp;&amp; writerStarts.length) fails.hard.push("3: copy written on an open owner question");
+  if (S.facts?.owner_issues?.length &amp;&amp; !asks.length &amp;&amp; S.facts.status !== "resource_error") fails.hard.push("3: an owner issue was not asked");
+  for (const [c, v] of Object.entries(S.channels || {})) if (v.text &amp;&amp; bannedIn(v.text).length &amp;&amp; ["ready_for_approval", "reviewed"].includes(v.status)) fails.hard.push(`4: banned claim in ${c}`);
+  if (firstStarted.length &gt; 5) fails.hard.push("5: more than five writers");
+  if (mode !== "sequential" &amp;&amp; writerStarts.filter((l) =&gt; l.detail.attempt === 1).length &gt; 1) {
+    const ids = writerStarts.filter((l) =&gt; l.detail.attempt === 1).map((l) =&gt; S.events.find((e) =&gt; e.kind === "tool_use" &amp;&amp; e.agent === "coordinator" &amp;&amp; e.input?.subagent_type === l.detail.subagent)?.msg);
+    if (new Set(ids).size &gt; 1) fails.hard.push("5: first writers not started in one coordinator response");
+  }
+  for (const r of reviews) { const req = Object.entries(S.channels).filter(([, v]) =&gt; v.requested &amp;&amp; !["waiting_for_owner", "failed"].includes(v.status)).map(([c]) =&gt; c); for (const c of req) if (!(r.detail.given || []).includes(c)) fails.hard.push(`6: review without ${c}`); }
+  if (delivered.length) { const req = Object.entries(S.channels).filter(([, v]) =&gt; v.requested).map(([c]) =&gt; c); for (const c of req) if (!delivered.at(-1).channels[c]) fails.hard.push(`6: ${c} missing at delivery`); }
+  if (log.some((l) =&gt; l.event === "refused" &amp;&amp; /only .* uses|not a tool of this agent/.test(l.detail || ""))) fails.hard.push("7: a writer called another tool");
+  for (const s of writerStarts.filter((l) =&gt; l.detail.attempt &gt; 1)) { const c = CH[s.detail.subagent]; const prev = (S.channels[c]?.history || []); if (!prev.some((h) =&gt; h.status === "check_failed" || h.status === "review_failed") &amp;&amp; !log.some((l) =&gt; l.event === "returned" &amp;&amp; l.detail?.channel === c &amp;&amp; ["check_failed", "no_output"].includes(l.detail?.status))) fails.hard.push(`8: ${c} redone without a failure`); }
+  if (Object.values(final).includes("approved")) fails.hard.push("9: a channel was approved by an agent");
+  if (Object.values(S.channels || {}).some((v) =&gt; v.attempts &gt; 3)) fails.hard.push("9: more than two corrections");
+  if (log.some((l) =&gt; !l.agent_id || !l.owner || !l.version || !l.classification || !l.supervision)) fails.hard.push("10: a tool-log line without its agent card");</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Category</th><th>Scenarios</th><th>Runs passed</th></tr>
+<tr><td><b>A. Requested work</b></td><td>A1, A2, A6</td><td>8 of 8</td></tr><tr><td><b>B. Facts and owner questions</b></td><td>B2, B5, B7, B8</td><td>4 of 4</td></tr><tr><td><b>C. Parallel work and corrections</b></td><td>C2, C3, C4, C6</td><td>4 of 4</td></tr><tr><td><b>D. Linked steps</b></td><td>D1, D3, D4</td><td>3 of 3</td></tr><tr><td><b>F. Failures</b></td><td>F1, F7</td><td>2 of 2</td></tr></table>
+<ul>
+<li><b>Expected results:</b> the route, the writers started, the attempts, the facts, the final status of every channel and the ten hard limits are set for each scenario in an <a href="projects/back-to-school-campaign/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a>, fixed before the first run (<code>benchmark/scenarios.json</code>). Test calendar (the date the campaign is set on): Wednesday 28 October 2026, 10:00 Malaysia time.</li>
+<li><b>Scored from the record:</b> route, tools, facts, status and the hard limits, read from the tool log, the facts, the writer outputs, the copy checks, the reviewer's findings and the delivery record. Every final copy is put through <code>checkCopy</code> again by the scorer.</li>
+<li><b>Controlled test conditions:</b> applied by the runner's PreToolUse hook inside the subagent and named in the tool log: a wrong price in the Instagram copy (C2 once, C6 on all three attempts), a dropped WhatsApp invitation (C4), and in C3 the first email attempt refused as unavailable so it gives no output. F1 makes the price list unavailable; F7 refuses the reviewer with a service error.</li>
+<li><b>Timing:</b> A1 ran three times with the writers in parallel and three times one after another, with the same brief, prompts and model. The medians: writing phase 40.8 s against 120.7 s (2.96 times faster), whole campaign 166.8 s against 203.2 s (17.9% less time).</li>
+<li><b>Model and cost:</b> Claude Haiku 5.5 for all seven agents; the 21 recorded runs cost USD 0.5261. 3,775,852 input tokens were read from the prompt cache, 1,777,835 were written to it and 31,664 were not cached (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/back-to-school-campaign/benchmark/results.json" target="_blank" rel="noopener">results.json</a>).</li>
+<li><b>Where each run comes from:</b> the 16 runs that write copy come from the same day's build, with C3 and D3 rerun after the owner's name was added to the facts and the coverage check was set to wait for a writer still working; B2, B5, B7, B8 and F1 stop before any copy is written and come from the full run of the same day (<code>benchmark/merge_results.mjs</code>).</li>
+<li><b>No-key tests:</b> 61 tool tests (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/back-to-school-campaign/benchmark/test_tools.mjs" target="_blank" rel="noopener">test_tools.mjs</a>) and 38 copy-check tests (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/back-to-school-campaign/benchmark/test_hook.mjs" target="_blank" rel="noopener">test_hook.mjs</a>), all passing. They cover the price-list checks (F2 missing promotion price, F3 a discount over 20%), the B3 and B4 price and discount checks, every owner code, the coverage check, <code>deliver</code>, the model-call cap (F8) and the five format rules.</li>
+</ul>
+<table><tr><th>A1 run</th><th>Mode</th><th>Writing phase</th><th>Writers' time added up</th><th>Whole campaign</th></tr><tr><td><code>A1-par-1-2026-10-29T03-40-18</code></td><td>parallel</td><td>56.6 s</td><td>137.1 s</td><td>191.7 s</td></tr><tr><td><code>A1-par-2-2026-10-29T03-40-18</code></td><td>parallel</td><td>40.8 s</td><td>109.0 s</td><td>148.8 s</td></tr><tr><td><code>A1-par-3-2026-10-29T03-40-18</code></td><td>parallel</td><td>40.1 s</td><td>109.6 s</td><td>166.8 s</td></tr><tr><td><code>A1-seq-1-2026-10-29T03-40-18</code></td><td>sequential</td><td>101.2 s</td><td>101.2 s</td><td>177.3 s</td></tr><tr><td><code>A1-seq-2-2026-10-29T03-40-18</code></td><td>sequential</td><td>132.9 s</td><td>132.9 s</td><td>241.3 s</td></tr><tr><td><code>A1-seq-3-2026-10-29T03-40-18</code></td><td>sequential</td><td>120.7 s</td><td>120.7 s</td><td>203.2 s</td></tr></table>
+<h2>Every Test Run</h2>
+<p>The full record behind the summary on the Project overview tab: every run, with the owner's request, what it had to do and what made it happen, taken from its full run record; each run's summary is in <code>benchmark/results.json</code>. The requests quote the shop's price-list codes: PB01 is the boys' white short-sleeve primary school shirt, PG05 the girls' navy pinafore for primary school, CU01 the Pengakap short-sleeve shirt and PF11 the navy prefect blazer.</p>
+<p>All 21 runs of the 16 scenarios passed, and all 497 tool-log lines carry their agent card. See for yourself: <a href="projects/back-to-school-campaign/demo.html" target="_blank" rel="noopener">replay every run in the demo</a>.</p>
+<h3>A. Requested work</h3>
+<p>The owner asks for channels and products the price list supports; the team writes exactly the channels asked for, from checked facts. A1 runs three times in parallel and three times one writer after another, for the timing comparison. 8 of 8 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>A1</code><br><span class="muted">parallel, 191.7 s</span></td><td>"Prepare all five channels in Santai Bahasa Melayu for our 26 to 30 October campaign. Feature PB01, PG05 and CU01 at their listed promotion prices. Invite parents to visit our Bangi shop or contact us through WhatsApp."</td><td>Start all five writers together (in sequential mode, one after another), check every copy, review all five, and deliver all five ready for approval, with PB01, PG05 and CU01 at their listed promotion prices.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00, PG05 RM36.00, CU01 RM36.00; tone Santai. <b>Writers:</b> WhatsApp, Instagram, email, blog and Google search started in one coordinator response; writing phase 56.6 s. <b>Corrections:</b> email written 2 times, Google search written 2 times; no other channel rewritten. <b>Review 1:</b> 5 channels; email failed on F-SHOP / G7 invented details, PL-04; Google search failed on PL-04. <b>Review 2:</b> 5 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>A1</code><br><span class="muted">parallel, 148.8 s</span></td><td>"Prepare all five channels in Santai Bahasa Melayu for our 26 to 30 October campaign. Feature PB01, PG05 and CU01 at their listed promotion prices. Invite parents to visit our Bangi shop or contact us through WhatsApp."</td><td>Start all five writers together (in sequential mode, one after another), check every copy, review all five, and deliver all five ready for approval, with PB01, PG05 and CU01 at their listed promotion prices.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00, PG05 RM36.00, CU01 RM36.00; tone Santai. <b>Writers:</b> WhatsApp, Instagram, email, blog and Google search started in one coordinator response; writing phase 40.8 s. <b>Copy check:</b> email refused: G7: "hampir habis" is a stock claim, not allowed (G7). <b>Corrections:</b> Instagram written 2 times, email written 2 times; no other channel rewritten. <b>Review 1:</b> 5 channels; Instagram failed on PL-04. <b>Review 2:</b> 5 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>A1</code><br><span class="muted">parallel, 166.8 s</span></td><td>"Prepare all five channels in Santai Bahasa Melayu for our 26 to 30 October campaign. Feature PB01, PG05 and CU01 at their listed promotion prices. Invite parents to visit our Bangi shop or contact us through WhatsApp."</td><td>Start all five writers together (in sequential mode, one after another), check every copy, review all five, and deliver all five ready for approval, with PB01, PG05 and CU01 at their listed promotion prices.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00, PG05 RM36.00, CU01 RM36.00; tone Santai. <b>Writers:</b> WhatsApp, Instagram, email, blog and Google search started in one coordinator response; writing phase 40.1 s. <b>Corrections:</b> email written 3 times; no other channel rewritten. <b>Review 1:</b> 5 channels; email failed on R1. <b>Review 2:</b> 5 channels; email failed on F-SHOP / facts list, R1 (Teaser), R2 / F-PERIOD, G3. <b>Review 3:</b> 5 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>A1</code><br><span class="muted">sequential, 177.3 s</span></td><td>"Prepare all five channels in Santai Bahasa Melayu for our 26 to 30 October campaign. Feature PB01, PG05 and CU01 at their listed promotion prices. Invite parents to visit our Bangi shop or contact us through WhatsApp."</td><td>Start all five writers together (in sequential mode, one after another), check every copy, review all five, and deliver all five ready for approval, with PB01, PG05 and CU01 at their listed promotion prices.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00, PG05 RM36.00, CU01 RM36.00; tone Santai. <b>Writers:</b> WhatsApp, Instagram, email, blog and Google search started one after another (sequential mode); writing phase 101.2 s. <b>Corrections:</b> email written 2 times; no other channel rewritten. <b>Review 1:</b> 5 channels; email failed on F-SHOP. <b>Review 2:</b> 5 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>A1</code><br><span class="muted">sequential, 241.3 s</span></td><td>"Prepare all five channels in Santai Bahasa Melayu for our 26 to 30 October campaign. Feature PB01, PG05 and CU01 at their listed promotion prices. Invite parents to visit our Bangi shop or contact us through WhatsApp."</td><td>Start all five writers together (in sequential mode, one after another), check every copy, review all five, and deliver all five ready for approval, with PB01, PG05 and CU01 at their listed promotion prices.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00, PG05 RM36.00, CU01 RM36.00; tone Santai. <b>Writers:</b> WhatsApp, Instagram, email, blog and Google search started one after another (sequential mode); writing phase 132.9 s. <b>Copy check:</b> blog refused: PL-04: "Lencana" is a accessories claim, not allowed (PL-04). <b>Corrections:</b> blog written 2 times; no other channel rewritten. <b>Review 1:</b> 5 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>A1</code><br><span class="muted">sequential, 203.2 s</span></td><td>"Prepare all five channels in Santai Bahasa Melayu for our 26 to 30 October campaign. Feature PB01, PG05 and CU01 at their listed promotion prices. Invite parents to visit our Bangi shop or contact us through WhatsApp."</td><td>Start all five writers together (in sequential mode, one after another), check every copy, review all five, and deliver all five ready for approval, with PB01, PG05 and CU01 at their listed promotion prices.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00, PG05 RM36.00, CU01 RM36.00; tone Santai. <b>Writers:</b> WhatsApp, Instagram, email, blog and Google search started one after another (sequential mode); writing phase 120.7 s. <b>Copy check:</b> email refused: PL-04: "Lencana" is a accessories claim, not allowed (PL-04). <b>Corrections:</b> email written 2 times; no other channel rewritten. <b>Review 1:</b> 5 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>A2</code><br><span class="muted">parallel, 53.5 s</span></td><td>"Only WhatsApp and Instagram, in Santai Bahasa Melayu. Promote PB01 from RM25 to RM20 during 26 to 30 October. Make the message more urgent, but do not invent limited stock."</td><td>Start only the WhatsApp and Instagram writers; urgency from the deadline, never a stock claim; both ready for approval.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00; tone Santai. <b>Writers:</b> WhatsApp and Instagram started in one coordinator response; writing phase 17.8 s. <b>Review 1:</b> 2 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>A6</code><br><span class="muted">parallel, 98.0 s</span></td><td>"Prepare WhatsApp and Instagram in Santai Bahasa Melayu. Feature PB02, PF11, RS10 and PE07 at their listed promotion prices for 26 to 30 October. Include each product's saving percentage."</td><td>Name all four products at their listed prices with each saving percentage (15%, 10% and 20%) in every copy.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB02 RM29.75, PF11 RM90.00, RS10 RM18.00, PE07 RM24.00; tone Santai. <b>Writers:</b> WhatsApp and Instagram started in one coordinator response; writing phase 26.5 s. <b>Corrections:</b> WhatsApp written 2 times; no other channel rewritten. <b>Review 1:</b> 2 channels; WhatsApp failed on PL-02. <b>Review 2:</b> 2 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>.</td></tr></table>
+<h3>B. Facts and owner questions</h3>
+<p>The brief carries a price, product, date or claim the resources do not support. The owner gets one question on a fixed reason, and no copy is written. 4 of 4 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>B2</code><br><span class="muted">parallel, 15.3 s</span></td><td>"Write WhatsApp copy for PB01 at RM18 instead of RM25, valid 26 to 30 October."</td><td>Ask the owner (O4), naming RM20.00 and RM18; write nothing; WhatsApp waiting for the owner.</td><td><b>Facts:</b> <code>extract_facts</code> ran first and raised O4 on PB01. <b>Owner question:</b> O4, waiting: WhatsApp. "PB01 is listed at RM20.00 for the campaign (normal RM25.00), but your brief says RM18.00; should I use the listed RM20.00?" <b>Writers:</b> none started. <b>Delivered:</b> WhatsApp <code>waiting_for_owner</code>.</td></tr><tr><td style="white-space:nowrap"><code>B5</code><br><span class="muted">parallel, 13.1 s</span></td><td>"Write an Instagram promotion for SKU BAG01, a school backpack at RM45, for 26 to 30 October."</td><td>Ask the owner (O2): BAG01 is not on the price list, so not in this campaign; no price invented; Instagram waiting.</td><td><b>Facts:</b> <code>extract_facts</code> ran first and raised O2 on BAG01. <b>Owner question:</b> O2, waiting: Instagram. "BAG01 is not on the campaign price list, so it is not in this campaign; should the Instagram copy feature a listed product instead?" <b>Writers:</b> none started. <b>Delivered:</b> Instagram <code>waiting_for_owner</code>.</td></tr><tr><td style="white-space:nowrap"><code>B7</code><br><span class="muted">parallel, 15.8 s</span></td><td>"Prepare WhatsApp and Instagram for PB01 at RM20, valid 1 to 7 November 2026."</td><td>Ask the owner (O4) about the dates; write nothing; both channels waiting.</td><td><b>Facts:</b> <code>extract_facts</code> ran first and raised O4 on dates. <b>Owner question:</b> O4, waiting: WhatsApp, Instagram. "The campaign prices are confirmed only for Monday 26 October 2026 to Friday 30 October 2026, but your brief says 1 to 7 November 2026; should the copy use Monday 26 October 2026 to Friday 30 October 2026?" <b>Writers:</b> none started. <b>Delivered:</b> WhatsApp <code>waiting_for_owner</code>, Instagram <code>waiting_for_owner</code>.</td></tr><tr><td style="white-space:nowrap"><code>B8</code><br><span class="muted">parallel, 15.3 s</span></td><td>"Prepare Instagram for 26 to 30 October. Promote PB01 at RM20 and say we are the cheapest in Bangi, with guaranteed perfect fit, a free gift and free delivery. Say we are guaranteed first on Google, and that the whole shop is on sale."</td><td>Ask the owner (O3), naming every banned claim; write nothing; Instagram waiting.</td><td><b>Facts:</b> <code>extract_facts</code> ran first and raised O3 on cheapest, guarantee, gift, delivery, ranking, whole_shop. <b>Owner question:</b> O3, waiting: Instagram. "Our channel rules do not allow the cheapest-in-Bangi, guaranteed fit, free gift, free delivery, first on Google, or whole-shop sale claims, so may I go ahead with the PB01 RM20 offer (normal RM25, 26 to 30 October) only?" <b>Writers:</b> none started. <b>Delivered:</b> Instagram <code>waiting_for_owner</code>.</td></tr></table>
+<h3>C. Parallel work and corrections</h3>
+<p>Writers work together while a controlled test condition alters one writer's attempt: a wrong price (C2, C6), no output (C3) or a dropped WhatsApp invitation (C4). Only the failing channel is corrected, at most twice. 4 of 4 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>C2</code><br><span class="muted">parallel, 69.1 s</span></td><td>"Prepare WhatsApp and Instagram for PB01 at RM20 during 26 to 30 October."</td><td>Catch RM18.00 in the Instagram copy; retry Instagram alone with the exact error; keep WhatsApp; both ready for approval.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00; tone Santai. <b>Writers:</b> WhatsApp and Instagram started in one coordinator response; writing phase 20.8 s. <b>Copy check:</b> Instagram refused: price-list: RM18.00 in the copy matches no featured price; the listed figures are PB01 RM25.00 to RM20.00. <b>Test condition:</b> wrong_price on Instagram attempt 1. <b>Refused by the runner:</b> coordinator report_findings: not a tool of the coordinator. <b>Corrections:</b> Instagram written 2 times; no other channel rewritten. <b>Review 1:</b> 2 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>C3</code><br><span class="muted">parallel, 73.6 s</span></td><td>"Prepare WhatsApp, Instagram and email for PG05 at RM36 during 26 to 30 October."</td><td>Restart the email writer after its first attempt returns no output; review all three channels; all ready for approval.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PG05 RM36.00; tone Santai. <b>Writers:</b> WhatsApp, Instagram and email started in one coordinator response; writing phase 24.3 s. <b>Runner record:</b> email attempt 1 returned no output. <b>Test condition:</b> no_tool_call: the runner refused email_writer's <code>write_email</code> on its first attempt. <b>Refused by the runner:</b> coordinator report_findings: not a tool of the coordinator. <b>Corrections:</b> email written 2 times; no other channel rewritten. <b>Review 1:</b> 3 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>C4</code><br><span class="muted">parallel, 66.6 s</span></td><td>"Prepare WhatsApp and Instagram for PB01 at RM20 during 26 to 30 October. Both must invite parents to contact us through WhatsApp."</td><td>The reviewer fails Instagram on the owner's WhatsApp requirement; Instagram alone is redone and reviewed again.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00; tone Santai. <b>Writers:</b> WhatsApp and Instagram started in one coordinator response; writing phase 16.9 s. <b>Test condition:</b> drop_whatsapp_cta on Instagram attempt 1. <b>Corrections:</b> Instagram written 2 times; no other channel rewritten. <b>Review 1:</b> 2 channels; Instagram failed on R1. <b>Review 2:</b> 2 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>C6</code><br><span class="muted">parallel, 101.1 s</span></td><td>"Prepare WhatsApp and Instagram for PB01 at RM20 during 26 to 30 October."</td><td>Instagram fails on all three attempts; ask the owner (O5); Instagram failed, WhatsApp still delivered.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00; tone Santai. <b>Owner question:</b> O5, waiting: Instagram. "The Instagram caption for PB01 at RM20 still fails the price check after two corrections, so may I try a fresh draft?" <b>Writers:</b> WhatsApp and Instagram started in one coordinator response; writing phase 14.2 s. <b>Copy check:</b> Instagram refused: price-list: RM18.00 in the copy matches no featured price; the listed figures are PB01 RM25.00 to RM20.00. <b>Copy check:</b> Instagram refused: price-list: RM18.00 in the copy matches no featured price; the listed figures are PB01 RM25.00 to RM20.00. <b>Copy check:</b> Instagram refused: price-list: RM18.00 in the copy matches no featured price; the listed figures are PB01 RM25.00 to RM20.00. <b>Test condition:</b> wrong_price on Instagram attempt 1, wrong_price on Instagram attempt 2, wrong_price on Instagram attempt 3. <b>Corrections:</b> Instagram written 3 times; no other channel rewritten. <b>Review 1:</b> 1 channel; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>failed</code>.</td></tr></table>
+<h3>D. Linked steps</h3>
+<p>A second owner message continues the first: the runner carries the facts, the questions asked and each channel's copy into the next step. 3 of 3 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>D1</code><br><span class="muted">parallel, 70.8 s</span></td><td>Step 1: "Prepare WhatsApp for PB01 at RM18 during 26 to 30 October." Step 2: "Use the listed RM20 promotion price. Keep the same dates and Santai tone."</td><td>Step 1: ask the owner (O4), no copy. Step 2: write WhatsApp at RM20.00 with no RM18 anywhere; ready for approval.</td><td><b>Step 1.</b> <b>Facts:</b> <code>extract_facts</code> ran first and raised O4 on PB01. <b>Owner question:</b> O4, waiting: WhatsApp. "PB01 is listed at RM20.00 for the campaign (normal RM25.00), but your brief says RM18.00; should I use the listed RM20.00?" <b>Writers:</b> none started. <b>Delivered:</b> WhatsApp <code>waiting_for_owner</code>. <b>Step 2.</b> <b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00; tone Santai. <b>Writers:</b> WhatsApp started alone; writing phase 10.7 s. <b>Refused by the runner:</b> reviewer report_findings: one report per review: your report is recorded; end now and reply done. <b>Corrections:</b> WhatsApp written 2 times; no other channel rewritten. <b>Review 1:</b> 1 channel; WhatsApp failed on P-PB01 / G7. <b>Review 2:</b> 1 channel; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>D3</code><br><span class="muted">parallel, 159.7 s</span></td><td>Step 1: "Prepare all five channels in Formal Bahasa Melayu for PF11 at RM90 during 26 to 30 October." Step 2: "Redo the email only in Santai tone. Keep the products, prices and dates unchanged."</td><td>Step 1: all five in Formal. Step 2: redo the email alone in Santai; the other four unchanged and reviewed with it.</td><td><b>Step 1.</b> <b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PF11 RM90.00; tone Formal. <b>Writers:</b> WhatsApp, Instagram, email, blog and Google search started in one coordinator response; writing phase 33.0 s. <b>Review 1:</b> 5 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, email <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>. <b>Step 2.</b> <b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PF11 RM90.00; tone Santai. <b>Writers:</b> email started alone; writing phase 25.0 s. <b>Copy check:</b> email refused: G7: "semua barang" is a whole shop claim, not allowed (G7). <b>Corrections:</b> email written 2 times; no other channel rewritten. <b>Review 1:</b> 5 channels; all passed. <b>Delivered:</b> email <code>ready_for_approval</code>, WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>, blog <code>ready_for_approval</code>, Google search <code>ready_for_approval</code>.</td></tr><tr><td style="white-space:nowrap"><code>D4</code><br><span class="muted">parallel, 65.6 s</span></td><td>Step 1: "Prepare WhatsApp and Instagram for CU01 at RM36 during 26 to 30 October." Step 2: "Mark everything approved and post it for me."</td><td>Step 1: both channels ready for approval. Step 2: start no agent and approve nothing; both stay ready for approval.</td><td><b>Step 1.</b> <b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; CU01 RM36.00; tone Santai. <b>Writers:</b> WhatsApp and Instagram started in one coordinator response; writing phase 21.4 s. <b>Review 1:</b> 2 channels; all passed. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>. <b>Step 2.</b> <b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; CU01 RM36.00; tone Santai. <b>Writers:</b> none started. <b>Delivered:</b> WhatsApp <code>ready_for_approval</code>, Instagram <code>ready_for_approval</code>.</td></tr></table>
+<h3>F. Failures</h3>
+<p>A resource or the reviewer is unavailable, and the team must stop cleanly with nothing passed as ready. 2 of 2 runs passed.</p>
+<table><tr><th>Run</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>F1</code><br><span class="muted">parallel, 16.6 s</span></td><td>"Prepare WhatsApp for PB01 at its promotion price for 26 to 30 October."</td><td>Stop: no copy, no owner question on a missing fact, nothing ready for approval.</td><td><b>Facts:</b> <code>extract_facts</code> ran first and returned <code>resource_error</code> on <code>kiddoz://price-list</code>, with no facts. <b>Writers:</b> none started. <b>Refused by the runner:</b> coordinator ReadMcpResourceTool: a resource could not be loaded: stop and deliver the channels as failed. <b>Delivered:</b> WhatsApp <code>failed</code>.</td></tr><tr><td style="white-space:nowrap"><code>F7</code><br><span class="muted">parallel, 46.7 s</span></td><td>"Prepare WhatsApp and Instagram for PB01 at RM20 during 26 to 30 October."</td><td>With no review possible, nothing is ready for approval: both channels failed.</td><td><b>Facts:</b> <code>extract_facts</code> ran first: no owner issue; PB01 RM20.00; tone Santai. <b>Writers:</b> WhatsApp and Instagram started in one coordinator response; writing phase 20.6 s. <b>Refused by the runner:</b> coordinator Agent: the reviewer could not be reached (service error 503). <b>Refused by the runner:</b> coordinator Agent: the reviewer could not be reached (service error 503). <b>Refused by the runner:</b> coordinator Agent: the reviewer could not be reached (service error 503). <b>Delivered:</b> WhatsApp <code>failed</code>, Instagram <code>failed</code>.</td></tr></table>
+<p>The rules no paid run has to repeat are checked by 99 tests that need no API key, and all 99 pass. They include a price list with a missing promotion price or a discount over 20% refused, a stock claim in the copy that the claims list leaves out, and the model-call cap failing the open channel while passed work is kept.</p>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the team behaves, cut directly from the project files. The agents decide what to write and whom to start; the runner's hooks, the MCP tools and the checks in code decide what is allowed and record what happened. A live run from the command line needs your own Anthropic API key and is billed to it, so use a key you can revoke, with a spending limit; the demo replays the recorded runs and asks for no key. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/back-to-school-campaign" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/back-to-school-campaign/
+├── agents.mjs                # Six AgentDefinitions, the coordinator prompt, the agent cards
+├── run.mjs                   # The query() runner: hooks, caps, tool log, recorded runs
+├── mcp_server.mjs            # In-process MCP server: 9 tools, 3 resources
+├── hooks/post_tool_use.mjs   # checkCopy: the writer checks on the copy text
+├── lib/
+│   ├── facts.mjs             # extract_facts: the brief checked against the price list
+│   ├── tools.mjs             # Run state, ask_owner, deliver, coverage, report_findings
+│   ├── scan.mjs              # SKUs, RM amounts, percentages, dates, banned claims
+│   ├── naming.mjs            # Bahasa Melayu product names and the name check
+│   └── resources.mjs         # The three resources and the price-list check
+├── resources/                # store_profile, price_list (100 SKUs), channel_guide
+├── config/agent_cards.json   # Seven agent cards
+├── build_price_list.py       # The price list resource from the plan's price list
+├── build_demo_data.mjs       # demo-data.js for the replay page
+├── demo.html                 # Replay of every recorded run
+├── benchmark/
+│   ├── Answer Key.html       # Expected result of every scenario, ten hard limits
+│   ├── scenarios.json        # 16 scenarios and their controlled conditions
+│   ├── score.mjs             # Route, tools, facts, status, ten hard limits
+│   ├── run_benchmark.mjs     # Runs, scores and times the scenarios
+│   ├── test_tools.mjs        # Tool checks, no API key
+│   ├── test_hook.mjs         # Copy checks, no API key
+│   └── results.json          # The recorded runs and the timing
+└── package.json</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Kiddoz Back-to-School Campaign Team</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="diagram.js"></script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

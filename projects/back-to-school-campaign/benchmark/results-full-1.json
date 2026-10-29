@@ -1,0 +1,866 @@
+{
+ "when": "2026-10-29T03:09:11.081Z",
+ "model": "claude-haiku-5-5",
+ "plan": "results.json",
+ "summary": {
+  "runs": 21,
+  "scenarios_passed": 12,
+  "scenarios": 16,
+  "all_runs_passed": 15,
+  "cost_usd": 0.6364,
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 31846,
+    "output_tokens": 668138,
+    "cache_read_input_tokens": 4536313,
+    "cache_creation_input_tokens": 2030283
+   }
+  },
+  "models": {
+   "all": "claude-haiku-5-5"
+  },
+  "timing": {
+   "parallel_writing_ms": 38295,
+   "sequential_writing_ms": 106037,
+   "parallel_total_ms": 205239,
+   "sequential_total_ms": 253348,
+   "writing_speedup": 2.77,
+   "total_time_reduction_pct": 19
+  }
+ },
+ "results": [
+  {
+   "run_id": "B2-par-1-2026-10-29T02-40-39",
+   "id": "B2",
+   "group": "B",
+   "title": "Wrong promotion price",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 15293,
+   "writing": null,
+   "model_calls": 4,
+   "cost_usd": 0.001527155,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1248,
+     "output_tokens": 1049,
+     "cache_read_input_tokens": 58873,
+     "cache_creation_input_tokens": 2313
+    }
+   },
+   "final": {
+    "whatsapp": "waiting_for_owner"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "B5-par-1-2026-10-29T02-40-39",
+   "id": "B5",
+   "group": "B",
+   "title": "Unknown SKU BAG01",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 13110,
+   "writing": null,
+   "model_calls": 4,
+   "cost_usd": 0.0021933250000000003,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1249,
+     "output_tokens": 878,
+     "cache_read_input_tokens": 51630,
+     "cache_creation_input_tokens": 8905
+    }
+   },
+   "final": {
+    "instagram": "waiting_for_owner"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "B7-par-1-2026-10-29T02-40-39",
+   "id": "B7",
+   "group": "B",
+   "title": "Dates outside the campaign period",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 15824,
+   "writing": null,
+   "model_calls": 5,
+   "cost_usd": 0.0027459900000000002,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1251,
+     "output_tokens": 1479,
+     "cache_read_input_tokens": 67089,
+     "cache_creation_input_tokens": 9684
+    }
+   },
+   "final": {
+    "whatsapp": "waiting_for_owner",
+    "instagram": "waiting_for_owner"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "B8-par-1-2026-10-29T02-40-39",
+   "id": "B8",
+   "group": "B",
+   "title": "Banned claims, ranking guarantee and whole shop on sale included",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 15290,
+   "writing": null,
+   "model_calls": 4,
+   "cost_usd": 0.002694635,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1303,
+     "output_tokens": 1545,
+     "cache_read_input_tokens": 53471,
+     "cache_creation_input_tokens": 10057
+    }
+   },
+   "final": {
+    "instagram": "waiting_for_owner"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "A2-par-1-2026-10-29T02-40-39",
+   "id": "A2",
+   "group": "A",
+   "title": "WhatsApp and Instagram only, more urgent",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 87031,
+   "writing": {
+    "writers": 2,
+    "start": 16685,
+    "end": 32487,
+    "ms": 15802,
+    "sum_ms": 29350,
+    "overlap": true
+   },
+   "model_calls": 12,
+   "cost_usd": 0.020464845000000002,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1310,
+     "output_tokens": 17651,
+     "cache_read_input_tokens": 182472,
+     "cache_creation_input_tokens": 77469
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval"
+   },
+   "retries": 1
+  },
+  {
+   "run_id": "C2-par-1-2026-10-29T02-40-39",
+   "id": "C2",
+   "group": "C",
+   "title": "The hook rejects RM18; only Instagram retries",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 74442,
+   "writing": {
+    "writers": 2,
+    "start": 14816,
+    "end": 34901,
+    "ms": 20085,
+    "sum_ms": 34215,
+    "overlap": true
+   },
+   "model_calls": 10,
+   "cost_usd": 0.016038860000000002,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1265,
+     "output_tokens": 14924,
+     "cache_read_input_tokens": 152411,
+     "cache_creation_input_tokens": 55410
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval"
+   },
+   "retries": 1
+  },
+  {
+   "run_id": "A6-par-1-2026-10-29T02-40-39",
+   "id": "A6",
+   "group": "A",
+   "title": "Four SKUs with each saving percentage",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 136220,
+   "writing": {
+    "writers": 2,
+    "start": 12935,
+    "end": 32920,
+    "ms": 19985,
+    "sum_ms": 29093,
+    "overlap": true
+   },
+   "model_calls": 14,
+   "cost_usd": 0.030188360000000008,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1321,
+     "output_tokens": 29429,
+     "cache_read_input_tokens": 227976,
+     "cache_creation_input_tokens": 104496
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval"
+   },
+   "retries": 2
+  },
+  {
+   "run_id": "C3-par-1-2026-10-29T02-40-39",
+   "id": "C3",
+   "group": "C",
+   "title": "The coverage check catches a missing email",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 78249,
+   "writing": {
+    "writers": 3,
+    "start": 13149,
+    "end": 34179,
+    "ms": 21030,
+    "sum_ms": 44235,
+    "overlap": true
+   },
+   "model_calls": 12,
+   "cost_usd": 0.02172544,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1273,
+     "output_tokens": 20173,
+     "cache_read_input_tokens": 184739,
+     "cache_creation_input_tokens": 77314
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval"
+   },
+   "retries": 1
+  },
+  {
+   "run_id": "D1-par-1-2026-10-29T02-40-39",
+   "id": "D1",
+   "group": "D",
+   "title": "The owner resolves a conflicting price",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 57821,
+   "writing": null,
+   "model_calls": 11,
+   "cost_usd": 0.011183875,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 2749,
+     "output_tokens": 7957,
+     "cache_read_input_tokens": 149910,
+     "cache_creation_input_tokens": 43451
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "C4-par-1-2026-10-29T02-40-39",
+   "id": "C4",
+   "group": "C",
+   "title": "The reviewer catches a missing WhatsApp call to action",
+   "mode": "parallel",
+   "pass": false,
+   "checks": {
+    "route": true,
+    "tools": false,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [
+    "tools: whatsapp: 2 attempts, expected 1"
+   ],
+   "ms": 88915,
+   "writing": {
+    "writers": 2,
+    "start": 11882,
+    "end": 35746,
+    "ms": 23864,
+    "sum_ms": 35544,
+    "overlap": true
+   },
+   "model_calls": 13,
+   "cost_usd": 0.023060175000000002,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1294,
+     "output_tokens": 19899,
+     "cache_read_input_tokens": 192790,
+     "cache_creation_input_tokens": 88427
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval"
+   },
+   "retries": 2
+  },
+  {
+   "run_id": "C6-par-1-2026-10-29T02-40-39",
+   "id": "C6",
+   "group": "C",
+   "title": "Instagram fails three attempts; O5",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 114881,
+   "writing": {
+    "writers": 2,
+    "start": 16685,
+    "end": 30360,
+    "ms": 13675,
+    "sum_ms": 20953,
+    "overlap": true
+   },
+   "model_calls": 15,
+   "cost_usd": 0.021934605,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1277,
+     "output_tokens": 21192,
+     "cache_read_input_tokens": 245253,
+     "cache_creation_input_tokens": 70067
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "failed"
+   },
+   "retries": 2
+  },
+  {
+   "run_id": "F1-par-1-2026-10-29T02-40-39",
+   "id": "F1",
+   "group": "F",
+   "title": "The price list resource is unavailable",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 16554,
+   "writing": null,
+   "model_calls": 5,
+   "cost_usd": 0.0023901350000000003,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1243,
+     "output_tokens": 1169,
+     "cache_read_input_tokens": 64771,
+     "cache_creation_input_tokens": 8269
+    }
+   },
+   "final": {},
+   "retries": 0
+  },
+  {
+   "run_id": "D4-par-1-2026-10-29T02-40-39",
+   "id": "D4",
+   "group": "D",
+   "title": "'Approve and post it' changes nothing",
+   "mode": "parallel",
+   "pass": false,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": false,
+    "hard": true
+   },
+   "notes": [
+    "step 2 status: whatsapp is waiting_for_owner, expected ready_for_approval",
+    "step 2 status: instagram is waiting_for_owner, expected ready_for_approval"
+   ],
+   "ms": 63068,
+   "writing": {
+    "writers": 2,
+    "start": 13179,
+    "end": 29814,
+    "ms": 16635,
+    "sum_ms": 27675,
+    "overlap": true
+   },
+   "model_calls": 11,
+   "cost_usd": 0.014816149999999997,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 2728,
+     "output_tokens": 11882,
+     "cache_read_input_tokens": 146585,
+     "cache_creation_input_tokens": 57092
+    }
+   },
+   "final": {
+    "whatsapp": "waiting_for_owner",
+    "instagram": "waiting_for_owner"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "A1-par-1-2026-10-29T02-40-39",
+   "id": "A1",
+   "group": "A",
+   "title": "A complete campaign across five channels",
+   "mode": "parallel",
+   "pass": false,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": false,
+    "hard": true
+   },
+   "notes": [
+    "status: seo is failed, expected ready_for_approval"
+   ],
+   "ms": 318411,
+   "writing": {
+    "writers": 5,
+    "start": 11768,
+    "end": 50134,
+    "ms": 38366,
+    "sum_ms": 104885,
+    "overlap": true
+   },
+   "model_calls": 27,
+   "cost_usd": 0.084784245,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1370,
+     "output_tokens": 93145,
+     "cache_read_input_tokens": 564037,
+     "cache_creation_input_tokens": 259475
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval",
+    "blog": "ready_for_approval",
+    "seo": "failed"
+   },
+   "retries": 4
+  },
+  {
+   "run_id": "F7-par-1-2026-10-29T02-40-39",
+   "id": "F7",
+   "group": "F",
+   "title": "The reviewer is unavailable",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 50600,
+   "writing": {
+    "writers": 2,
+    "start": 15061,
+    "end": 30506,
+    "ms": 15445,
+    "sum_ms": 25905,
+    "overlap": true
+   },
+   "model_calls": 9,
+   "cost_usd": 0.010208984999999999,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1259,
+     "output_tokens": 9959,
+     "cache_read_input_tokens": 141471,
+     "cache_creation_input_tokens": 29511
+    }
+   },
+   "final": {
+    "whatsapp": "failed",
+    "instagram": "failed"
+   },
+   "retries": 0
+  },
+  {
+   "run_id": "D3-par-1-2026-10-29T02-40-39",
+   "id": "D3",
+   "group": "D",
+   "title": "The email redone alone in Santai",
+   "mode": "parallel",
+   "pass": false,
+   "checks": {
+    "route": true,
+    "tools": false,
+    "facts": true,
+    "status": false,
+    "hard": true
+   },
+   "notes": [
+    "step 1 status: seo is failed, expected ready_for_approval",
+    "step 2 tools: first review lacks seo",
+    "step 2 status: seo is failed, expected ready_for_approval"
+   ],
+   "ms": 215344,
+   "writing": {
+    "writers": 5,
+    "start": 12198,
+    "end": 42796,
+    "ms": 30598,
+    "sum_ms": 96415,
+    "overlap": true
+   },
+   "model_calls": 26,
+   "cost_usd": 0.06499898999999999,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 2972,
+     "output_tokens": 70369,
+     "cache_read_input_tokens": 416804,
+     "cache_creation_input_tokens": 202794
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval",
+    "blog": "ready_for_approval",
+    "seo": "failed"
+   },
+   "retries": 3
+  },
+  {
+   "run_id": "A1-par-2-2026-10-29T02-40-39",
+   "id": "A1",
+   "group": "A",
+   "title": "A complete campaign across five channels",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 205239,
+   "writing": {
+    "writers": 5,
+    "start": 13572,
+    "end": 51867,
+    "ms": 38295,
+    "sum_ms": 98073,
+    "overlap": true
+   },
+   "model_calls": 16,
+   "cost_usd": 0.058887430000000004,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1340,
+     "output_tokens": 69408,
+     "cache_read_input_tokens": 273093,
+     "cache_creation_input_tokens": 170548
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval",
+    "blog": "ready_for_approval",
+    "seo": "ready_for_approval"
+   },
+   "retries": 3
+  },
+  {
+   "run_id": "A1-par-3-2026-10-29T02-40-39",
+   "id": "A1",
+   "group": "A",
+   "title": "A complete campaign across five channels",
+   "mode": "parallel",
+   "pass": false,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": false,
+    "hard": true
+   },
+   "notes": [
+    "status: instagram is failed, expected ready_for_approval"
+   ],
+   "ms": 183699,
+   "writing": {
+    "writers": 5,
+    "start": 13340,
+    "end": 51432,
+    "ms": 38092,
+    "sum_ms": 112523,
+    "overlap": true
+   },
+   "model_calls": 19,
+   "cost_usd": 0.058378445,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1348,
+     "output_tokens": 64315,
+     "cache_read_input_tokens": 346102,
+     "cache_creation_input_tokens": 181001
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "failed",
+    "email": "ready_for_approval",
+    "blog": "ready_for_approval",
+    "seo": "ready_for_approval"
+   },
+   "retries": 3
+  },
+  {
+   "run_id": "A1-seq-1-2026-10-29T02-40-39",
+   "id": "A1",
+   "group": "A",
+   "title": "A complete campaign across five channels",
+   "mode": "sequential",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 253348,
+   "writing": {
+    "writers": 5,
+    "start": 12810,
+    "end": 118847,
+    "ms": 106037,
+    "sum_ms": 106036,
+    "overlap": false
+   },
+   "model_calls": 17,
+   "cost_usd": 0.05596797,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1342,
+     "output_tokens": 62771,
+     "cache_read_input_tokens": 305877,
+     "cache_creation_input_tokens": 171116
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval",
+    "blog": "ready_for_approval",
+    "seo": "ready_for_approval"
+   },
+   "retries": 2
+  },
+  {
+   "run_id": "A1-seq-2-2026-10-29T02-40-39",
+   "id": "A1",
+   "group": "A",
+   "title": "A complete campaign across five channels",
+   "mode": "sequential",
+   "pass": false,
+   "checks": {
+    "route": false,
+    "tools": true,
+    "facts": true,
+    "status": false,
+    "hard": true
+   },
+   "notes": [
+    "route: no delivery",
+    "status: whatsapp is checked, expected ready_for_approval",
+    "status: instagram is checked, expected ready_for_approval",
+    "status: email is checked, expected ready_for_approval",
+    "status: blog is failed, expected ready_for_approval",
+    "status: seo is checked, expected ready_for_approval"
+   ],
+   "ms": 213737,
+   "writing": {
+    "writers": 5,
+    "start": 12683,
+    "end": 110009,
+    "ms": 97326,
+    "sum_ms": 97326,
+    "overlap": false
+   },
+   "model_calls": 14,
+   "cost_usd": 0.04322811,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1334,
+     "output_tokens": 49248,
+     "cache_read_input_tokens": 219021,
+     "cache_creation_input_tokens": 130244
+    }
+   },
+   "final": {
+    "whatsapp": "checked",
+    "instagram": "checked",
+    "email": "checked",
+    "blog": "failed",
+    "seo": "checked"
+   },
+   "retries": 3
+  },
+  {
+   "run_id": "A1-seq-3-2026-10-29T02-40-39",
+   "id": "A1",
+   "group": "A",
+   "title": "A complete campaign across five channels",
+   "mode": "sequential",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 415897,
+   "writing": {
+    "writers": 5,
+    "start": 17463,
+    "end": 130570,
+    "ms": 113107,
+    "sum_ms": 113107,
+    "overlap": false
+   },
+   "model_calls": 26,
+   "cost_usd": 0.08898438,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1370,
+     "output_tokens": 99696,
+     "cache_read_input_tokens": 491938,
+     "cache_creation_input_tokens": 272640
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval",
+    "blog": "ready_for_approval",
+    "seo": "ready_for_approval"
+   },
+   "retries": 5
+  }
+ ]
+}

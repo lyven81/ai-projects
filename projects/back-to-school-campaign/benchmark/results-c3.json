@@ -1,0 +1,67 @@
+{
+ "when": "2026-10-29T04:06:44.704Z",
+ "model": "claude-haiku-5-5",
+ "plan": "results-c3.json",
+ "summary": {
+  "runs": 1,
+  "scenarios_passed": 1,
+  "scenarios": 1,
+  "all_runs_passed": 1,
+  "cost_usd": 0.0202,
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 1273,
+    "output_tokens": 17646,
+    "cache_read_input_tokens": 187505,
+    "cache_creation_input_tokens": 74768
+   }
+  },
+  "models": {
+   "all": "claude-haiku-5-5"
+  },
+  "timing": null
+ },
+ "results": [
+  {
+   "run_id": "C3-par-1-2026-10-29T04-05-31",
+   "id": "C3",
+   "group": "C",
+   "title": "The coverage check catches a missing email",
+   "mode": "parallel",
+   "pass": true,
+   "checks": {
+    "route": true,
+    "tools": true,
+    "facts": true,
+    "status": true,
+    "hard": true
+   },
+   "notes": [],
+   "ms": 73618,
+   "writing": {
+    "writers": 3,
+    "start": 11670,
+    "end": 35975,
+    "ms": 24305,
+    "sum_ms": 48280,
+    "overlap": true
+   },
+   "model_calls": 12,
+   "cost_usd": 0.02017135,
+   "usage_by_model": {
+    "claude-haiku-5-5": {
+     "input_tokens": 1273,
+     "output_tokens": 17646,
+     "cache_read_input_tokens": 187505,
+     "cache_creation_input_tokens": 74768
+    }
+   },
+   "final": {
+    "whatsapp": "ready_for_approval",
+    "instagram": "ready_for_approval",
+    "email": "ready_for_approval"
+   },
+   "retries": 1
+  }
+ ]
+}

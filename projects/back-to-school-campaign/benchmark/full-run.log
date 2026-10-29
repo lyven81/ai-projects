@@ -1,0 +1,38 @@
+PASS B2-par-1-2026-10-29T02-40-39  15.3s  USD 0.0015
+PASS B5-par-1-2026-10-29T02-40-39  13.1s  USD 0.0022
+PASS B7-par-1-2026-10-29T02-40-39  15.8s  USD 0.0027
+PASS B8-par-1-2026-10-29T02-40-39  15.3s  USD 0.0027
+PASS A2-par-1-2026-10-29T02-40-39  87.0s  USD 0.0205  writing 15.8s overlap true
+PASS C2-par-1-2026-10-29T02-40-39  74.4s  USD 0.0160  writing 20.1s overlap true
+PASS A6-par-1-2026-10-29T02-40-39  136.2s  USD 0.0302  writing 20.0s overlap true
+PASS C3-par-1-2026-10-29T02-40-39  78.3s  USD 0.0217  writing 21.0s overlap true
+PASS D1-par-1-2026-10-29T02-40-39  57.8s  USD 0.0112
+FAIL C4-par-1-2026-10-29T02-40-39  88.9s  USD 0.0231  writing 23.9s overlap true
+   tools: whatsapp: 2 attempts, expected 1
+PASS C6-par-1-2026-10-29T02-40-39  114.9s  USD 0.0219  writing 13.7s overlap true
+PASS F1-par-1-2026-10-29T02-40-39  16.6s  USD 0.0024
+FAIL D4-par-1-2026-10-29T02-40-39  63.1s  USD 0.0148  writing 16.6s overlap true
+   step 2 status: whatsapp is waiting_for_owner, expected ready_for_approval
+   step 2 status: instagram is waiting_for_owner, expected ready_for_approval
+FAIL A1-par-1-2026-10-29T02-40-39  318.4s  USD 0.0848  writing 38.4s overlap true
+   status: seo is failed, expected ready_for_approval
+PASS F7-par-1-2026-10-29T02-40-39  50.6s  USD 0.0102  writing 15.4s overlap true
+FAIL D3-par-1-2026-10-29T02-40-39  215.4s  USD 0.0650  writing 30.6s overlap true
+   step 1 status: seo is failed, expected ready_for_approval
+   step 2 tools: first review lacks seo
+   step 2 status: seo is failed, expected ready_for_approval
+PASS A1-par-2-2026-10-29T02-40-39  205.2s  USD 0.0589  writing 38.3s overlap true
+FAIL A1-par-3-2026-10-29T02-40-39  183.7s  USD 0.0584  writing 38.1s overlap true
+   status: instagram is failed, expected ready_for_approval
+PASS A1-seq-1-2026-10-29T02-40-39  253.4s  USD 0.0560  writing 106.0s overlap false
+FAIL A1-seq-2-2026-10-29T02-40-39  213.7s  USD 0.0432  writing 97.3s overlap false
+   route: no delivery
+   status: whatsapp is checked, expected ready_for_approval
+   status: instagram is checked, expected ready_for_approval
+   status: email is checked, expected ready_for_approval
+   status: blog is failed, expected ready_for_approval
+   status: seo is checked, expected ready_for_approval
+PASS A1-seq-3-2026-10-29T02-40-39  415.9s  USD 0.0890  writing 113.1s overlap false
+
+12/16 scenarios passed; 15/21 runs; USD 0.6364; writing speedup 2.77x, total time reduction 19%
+Wrote benchmark/results.json

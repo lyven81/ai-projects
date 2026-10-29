@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 10**
+**Total published AI projects: 11**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 11 | 2026-10-29 | Kiddoz Back-to-School Campaign Team | [page](https://lyven81.github.io/ai-projects/back-to-school-campaign.html) |
 | 10 | 2026-10-28 | Polyclinic Sivakumar Clinic Desk | [page](https://lyven81.github.io/ai-projects/polyclinic-sivakumar.html) |
 | 9 | 2026-10-23 | DF Auto Parts Distributors | [page](https://lyven81.github.io/ai-projects/df-auto-parts-distributors.html) |
 | 8 | 2026-10-23 | Sang Kancil Specialist Clinic | [page](https://lyven81.github.io/ai-projects/sang-kancil-specialist-clinic.html) |
@@ -33,6 +34,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-21
 
 ### Business workflow
+
+#### Kiddoz Back-to-School Campaign Team
+- **What it does:** A campaign team for a school uniform shop where AI agents write every channel asked for at the same time, code checks each copy against the price list, and the owner approves every channel.
+- **How it's built:** A Claude Agent SDK coordinator starts one writer subagent per requested channel in parallel and an independent reviewer subagent; an in-process MCP server holds the price list, store profile and channel guide, and hooks check every copy, gate every writer start and stamp an agent card on every tool-log line.
+- **Problem solved:** A shop owner with no marketing staff writes every channel alone; the team writes them together from checked facts, sends back only a failing channel, and leaves every approval with the owner.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/back-to-school-campaign.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/back-to-school-campaign/demo.html)
+- **Rebuilt:** 2026-10-29
 
 #### Polyclinic Sivakumar Clinic Desk
 - **What it does:** A clinic desk for a one-doctor GP clinic where the clinic assistant, the GP and the pharmacist each see only their own work, and code carries each visit from one person to the next.

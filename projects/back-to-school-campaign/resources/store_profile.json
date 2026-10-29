@@ -1,0 +1,11 @@
+{
+ "resource": "kiddoz://store-profile",
+ "clauses": [
+  {"id": "S1", "field": "shop", "text": "Kiddoz Uniform House, a school uniform niche shop."},
+  {"id": "S2", "field": "location", "text": "Bangi, Selangor."},
+  {"id": "S3", "field": "owner", "text": "Puan Zarina Ahmad, the owner, writes and approves every campaign. The shop has 1 to 3 staff and no marketing staff."},
+  {"id": "S4", "field": "range", "text": "Primary and secondary school uniforms, prefect and student leader uniforms, religious school uniforms, sports and PE clothing, and co-curricular uniforms."},
+  {"id": "S5", "field": "how_to_buy", "text": "Parents buy at the Bangi shop or contact Kiddoz through WhatsApp. The default call to action is: visit the Bangi shop or contact Kiddoz through WhatsApp. The WhatsApp number is added by the owner when posting; copy writes [No. WhatsApp] where it belongs. There is no online store and no delivery service."},
+  {"id": "S6", "field": "customers", "text": "Parents of primary and secondary school pupils in Bangi and nearby areas, preparing for the new school session."}
+ ]
+}

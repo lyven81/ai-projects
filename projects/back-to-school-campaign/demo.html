@@ -1,0 +1,522 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiddoz Campaign Desk</title>
+<link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+*{box-sizing:border-box}html,body{overflow-x:hidden}body{margin:0;background:#f5f5f0;color:#243c36;font:14px/1.55 Arial,sans-serif}
+button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}
+button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #e4aa44;outline-offset:3px}
+.crumb{background:#213c34;color:#fff;padding:10px 4%;font-size:13px}.crumb a{color:#fff;text-decoration:none}.crumb a:hover{text-decoration:underline}.crumb span{opacity:.6;margin:0 6px}
+.brand{display:flex;align-items:center;gap:10px;font-size:25px;font-weight:800;letter-spacing:-1px}.logo{background:#e7ad43;color:#243c36;border-radius:10px;padding:1px 10px}
+.top{padding:22px 4%;background:#fff;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e1e6df;gap:10px}
+.muted{color:#66716a;font-size:12px}.top small{font-size:12px;font-weight:400;letter-spacing:0;display:block}
+.avatar{display:inline-grid;place-items:center;background:#e4eadf;width:34px;height:34px;border-radius:50%;margin-right:8px;font-weight:700;font-size:12px}
+.owner{display:flex;align-items:center}
+.wrap{max-width:1480px;margin:auto;padding:30px 4%}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.8px;font-weight:700;color:#7a6040}
+h1{font-size:32px;line-height:1.2;letter-spacing:-1px;margin:8px 0}h2{font-size:20px;margin:0}h3{font-size:15px;margin:0}h4{font-size:13px;margin:16px 0 8px}
+.intro{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px;gap:16px}
+.pill{display:inline-block;border:1px solid #dde4d9;border-radius:30px;padding:5px 11px;font-size:11px;background:#fff}
+.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:24px}
+.panel{background:#fff;border:1px solid #dfe5dc;border-radius:13px;padding:23px}
+.panelhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px}.num{font-size:11px;color:#858c80}
+.lbl{display:block;font-weight:600;font-size:12px;margin:19px 0 7px}
+select,input[type=text],.field{width:100%;border:1px solid #dce2d9;border-radius:7px;padding:10px;background:#fff;color:#30423a}
+.field{white-space:pre-line;font-size:13px;background:#fafbf7}
+.products{background:#f6f7f2;border-radius:8px;padding:12px}.prod{display:flex;justify-content:space-between;margin:8px 0;gap:10px;font-size:12px}.prod strong{white-space:nowrap;text-align:right}.prod s{color:#7d877f;font-weight:400;display:block;font-size:11px}
+.sku{color:#7a6040;font:10px monospace;font-weight:700}
+.channels{display:flex;flex-wrap:wrap;gap:8px}.channels label{margin:0;padding:6px 9px;border:1px solid #dce2d9;border-radius:6px;font-size:11px;display:flex;align-items:center;gap:5px}.channels label.on{background:#eef3ea;border-color:#b9cdb3}
+.btn{border:0;border-radius:7px;background:#254c3e;color:#fff;padding:11px 17px;font-weight:600}.btn.secondary{background:#f0f3eb;color:#294939}.btn.outline{border:1px solid #d8e0d3;background:#fff;color:#294939}
+.wide{width:100%;margin-top:22px}.note{font-size:11px;color:#68736a;margin-top:10px}
+.stepper{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}.stepper button{font-size:11px;padding:6px 10px}.stepper button.active{background:#254c3e;color:#fff;border-color:#254c3e}
+.scenario{background:#ecefe5;padding:13px 16px;border-radius:9px;display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.picker{position:relative;max-width:560px;flex:1 1 280px;min-width:0}
+.pickbtn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;border:1px solid #c9d2c4;border-radius:7px;padding:10px 12px;background:#fff;color:#243c36;font-weight:600}
+.pickbtn span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}.caret{font-size:12px;color:#55665a}
+.picklist{position:absolute;left:0;top:calc(100% + 4px);z-index:20;width:min(640px,calc(100vw - 32px));max-height:min(70vh,560px);overflow-y:auto;background:#fff;border:1px solid #c9d2c4;border-radius:9px;box-shadow:0 10px 30px #162b2630;padding:4px 0}
+.picklist .phead{padding:8px 14px;font-size:11.5px;font-weight:700;letter-spacing:.4px;position:sticky;top:-4px;z-index:1}
+.picklist .popt{padding:7px 14px 7px 22px;font-size:13px;cursor:pointer;border-left:4px solid transparent;line-height:1.4}
+.picklist .popt:hover,.picklist .popt:focus{outline:none;filter:brightness(.95)}
+.picklist .popt:focus-visible{box-shadow:inset 0 0 0 2px #243c36}
+.picklist .popt[aria-selected="true"]{font-weight:700;border-left-color:#243c36}
+.cat-A .phead{background:#cfe4d2;color:#1d4a2b}.cat-A .popt{background:#eef6ef}
+.cat-B .phead{background:#f3dfb4;color:#5c3f08}.cat-B .popt{background:#fcf5e6}
+.cat-C .phead{background:#cfe0f1;color:#1b4469}.cat-C .popt{background:#eef4fb}
+.cat-D .phead{background:#ded5ee;color:#43306b}.cat-D .popt{background:#f4f1fa}
+.cat-E .phead{background:#f1d3ce;color:#7a241a}.cat-E .popt{background:#fbefed}
+.cat-X .phead{background:#e4e8e1;color:#33443b}.cat-X .popt{background:#f6f7f4}.scenario>span{white-space:nowrap;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.pickernote{flex-basis:100%;font-size:12px;color:#44544b}.runmeta{font-size:11px;color:#4f5d55;display:flex;flex-wrap:wrap;gap:4px 14px;flex-basis:100%}.runmeta code{font-size:11px;background:#fff;border:1px solid #dce2d9;border-radius:4px;padding:0 5px;word-break:break-all}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}.stat{background:#fff;border:1px solid #dfe5dc;border-radius:9px;padding:14px 18px}.stat b{display:block;font-size:23px}.stat small{color:#66716a;font-size:11px;text-transform:uppercase}
+.reviewbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:10px;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:17px}
+#carousel:focus-visible{outline:3px solid #e4aa44;outline-offset:4px;border-radius:12px}
+.carnav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.carnav .arrow{font-size:18px;padding:6px 16px;line-height:1}.carpos{user-select:none;font-weight:700;font-size:14px;text-align:center;flex:1}.carpos small{display:block;font-weight:400;font-size:11px;color:#66716a}.card{background:#fff;border:1px solid #dfe5dc;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.cardtop{padding:16px 18px;border-bottom:1px solid #edf0e8;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.status{font-size:10px;padding:4px 8px;border-radius:20px;white-space:nowrap;font-weight:700;background:#eef0ea;color:#4b5a52}
+.st-written{background:#eef0ea;color:#4b5a52}.st-checked{background:#e3eef8;color:#1f5480}.st-reviewed{background:#e5f1ee;color:#1f6150}.st-ready_for_approval{background:#eaf2e7;color:#2f5d32}.st-waiting_for_owner{background:#fff1d6;color:#7a5110}.st-failed{background:#fbe5e2;color:#9a2a1f}.st-approved{background:#254c3e;color:#fff}
+.copy{white-space:pre-line;padding:20px;font-size:13px;line-height:1.8;color:#334840;overflow-wrap:anywhere;flex:1}
+.copy .part{border-top:1px dashed #dfe5dc;padding-top:12px;margin-top:12px}.copy .part:first-child{border:0;padding:0;margin:0}
+.copy .lab{display:block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#7a6040;white-space:normal}
+.copy .subj{font-weight:700;white-space:normal}
+.tags{display:flex;flex-wrap:wrap;gap:6px;white-space:normal}.tags span{background:#f0f3eb;border-radius:20px;padding:2px 9px;font-size:12px}
+.waitbox{padding:20px;color:#5a6a61;font-size:13px}.waitbox.alert{background:#fff5df;border-top:1px solid #e5c98d;color:#5e4416}.waitbox.alert b{color:#7a5110}.waitbox.bad{background:#fdf1ef;color:#7d2a20}
+.checks{padding:12px 18px;border-top:1px solid #edf0e8;background:#fafbf7;font-size:11.5px;color:#44544b}
+.checks ol{margin:6px 0 0;padding-left:18px}.checks li{margin:3px 0}.checks .fix{color:#7a5110}.checks b{color:#243c36}
+.teamnote{padding:10px 18px;border-top:1px solid #edf0e8;font-size:11.5px;color:#44544b}
+.cardfoot{padding:12px 18px;border-top:1px solid #edf0e8;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.cardfoot small{font-size:11px;color:#55665a}.cardfoot button{font-size:11px;padding:7px 12px}
+.approved-msg{color:#254c3e;font-weight:700}.rejected-msg{color:#9a2a1f;font-weight:700}.st-rejected{background:#9a2a1f;color:#fff}
+.linkbtn{border:0;background:none;color:#254c3e;text-decoration:underline;padding:0 0 0 6px!important;font-size:11px!important}
+.actions{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.combox{padding:12px 18px;border-top:1px solid #edf0e8;background:#fafbf7}.combox label{display:block;font-weight:600;font-size:12px;margin-bottom:6px}.combox textarea{width:100%;min-height:80px;border:1px solid #dce2d9;border-radius:7px;padding:9px;resize:vertical;color:#30423a;background:#fff}.combox .row{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}.combox button{font-size:11px;padding:7px 12px}
+.remarks{padding:10px 18px;border-top:1px solid #edf0e8;font-size:12px}.remarks div{background:#f6f7f2;border-radius:6px;padding:8px 10px;margin-top:6px;overflow-wrap:anywhere;white-space:pre-line}.remarks div.rej{background:#fdf1ef}.remarks small{display:block;color:#66716a;font-size:10.5px;margin-top:4px;white-space:normal}
+.reply{margin-top:20px;background:#fff;border:1px solid #dfe5dc;border-left:4px solid #e7ad43;border-radius:12px;padding:18px 20px}.reply p{margin:8px 0 0;font-size:13.5px}
+.timeline{margin-top:20px}.timeline>summary{cursor:pointer;font-weight:600;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:16px}
+.tsec{margin-top:22px;border-top:1px solid #edf0e8;padding-top:16px}.tsec h3{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.tsec h3 i{font-style:normal;font-size:11px;color:#858c80}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin-top:10px}.fact{background:#f6f7f2;border-radius:8px;padding:10px 12px;font-size:12px}.fact .sku{display:block}
+.issue{background:#fff5df;border:1px solid #e5c98d;border-radius:8px;padding:10px 12px;font-size:12px;margin-top:8px}
+.gantt{margin-top:12px}.grow{display:grid;grid-template-columns:170px minmax(0,1fr);gap:10px;align-items:center;margin:6px 0}.glabel{font-size:11.5px;line-height:1.3}.glabel small{color:#66716a;display:block}
+.track{position:relative;height:22px;background:#f3f5ef;border-radius:5px}.bar{position:absolute;top:3px;bottom:3px;border-radius:4px;min-width:3px}
+.b-checked{background:#3f8a55}.b-check_failed{background:#d08b23}.b-complete{background:#6a5596}.b-running{background:repeating-linear-gradient(45deg,#8fa69a,#8fa69a 5px,#a9bcb1 5px,#a9bcb1 10px)}.b-other{background:#b3463a}.b-no_output{background:#b3463a}
+.band{position:absolute;top:0;bottom:0;background:#e7ad4330;border-left:1px dashed #c48f2c;border-right:1px dashed #c48f2c}
+.axis{position:relative;height:18px;font-size:10px;color:#66716a}.axis span{position:absolute;transform:translateX(-50%)}.axis span:first-child{transform:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11px;color:#55665a;margin-top:8px}.legend i{display:inline-block;width:12px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.wstat{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.wstat span{background:#f6f7f2;border-radius:6px;padding:6px 10px;font-size:12px}.wstat b{font-size:14px}
+.list{margin:8px 0 0;padding:0;list-style:none}.list li{border-left:3px solid #d08b23;background:#fffaf0;padding:8px 12px;margin:6px 0;font-size:12px;border-radius:0 6px 6px 0;overflow-wrap:anywhere}.list li.ok{border-color:#3f8a55;background:#f3f8f1}.list li.bad{border-color:#b3463a;background:#fdf1ef}
+.log{max-height:440px;overflow:auto;margin-top:10px;border:1px solid #edf0e8;border-radius:8px}
+.line{display:grid;grid-template-columns:58px 150px 74px minmax(0,1fr);gap:8px;padding:7px 10px;border-bottom:1px solid #f0f2ec;font-size:11.5px;align-items:start}
+.line:nth-child(even){background:#fafbf7}.line .t{font-family:monospace;color:#55665a}.line .ev{font-weight:700}.line .card-id{display:block;font-size:10px;color:#66716a;font-family:monospace;overflow-wrap:anywhere}
+.line .tool{font-family:monospace;font-weight:700;color:#254c3e}.line .d{overflow-wrap:anywhere}.ev-refused{color:#9a2a1f}.ev-checked{color:#1f5480}
+.line details summary{cursor:pointer;color:#254c3e;font-size:11px}.line details div,.prompt{white-space:pre-line;background:#f6f7f2;border-radius:6px;padding:8px;margin-top:4px;font-size:11px}
+.empty{padding:30px 20px;text-align:center;background:#fff;border:1px dashed #d5ded0;border-radius:12px;color:#5a6a61}
+.replaybar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px;font-size:12px}.prog{flex:1 1 160px;height:6px;background:#e4eadf;border-radius:4px;overflow:hidden}.prog i{display:block;height:100%;background:#e7ad43;width:0}
+.hidden{display:none!important}
+.footer{text-align:center;font-size:11px;color:#66716a;margin:30px 0}
+.modal{position:fixed;inset:0;background:#162b2690;z-index:10;display:grid;place-items:center;padding:16px}
+.dialog{background:#fff;border-radius:14px;padding:28px;max-width:900px;width:100%;max-height:88vh;overflow:auto}
+.dialog .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.dialog .filters>*{flex:1 1 200px}
+.tw{overflow-x:auto}.dialog table{border-collapse:collapse;width:100%;margin-top:14px;font-size:12px}.dialog td,.dialog th{text-align:left;border-bottom:1px solid #e4e8df;padding:9px 8px;vertical-align:top}.dialog th{font-size:11px;color:#55665a}
+.clauses{margin-top:10px}.clauses div{background:#f6f7f2;border-radius:6px;padding:8px 10px;font-size:12px;margin-top:6px}
+#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#243c36;color:#fff;padding:12px 22px;border-radius:8px;z-index:30;max-width:90vw}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.intro{align-items:flex-start;flex-wrap:wrap}.top .muted{display:none}}
+@media(max-width:600px){.picker{flex-basis:100%}.picklist{width:100%;max-height:65vh}.wrap{padding:20px 16px}.crumb,.top{padding-left:16px;padding-right:16px}.top .pill{display:none}h1{font-size:26px}.panel{padding:16px}.summary{gap:6px}.stat{padding:10px}.stat b{font-size:18px}.stat small{font-size:9.5px}
+.grow{grid-template-columns:1fr;gap:2px}.line{grid-template-columns:52px minmax(0,1fr)}.line .who{grid-column:2}.line .ev{grid-column:1}.line .d{grid-column:2}.dialog{padding:15px}.dialog table{font-size:11px}.copy{padding:16px}}
+</style></head><body>
+<nav class="crumb" aria-label="Breadcrumb"><a href="../../index.html">AI Projects</a><span>/</span><a href="../../back-to-school-campaign.html">Kiddoz Back-to-School Campaign Team</a></nav>
+<header class="top"><div class="brand"><span class="logo">k.</span><div>kiddoz<small>UNIFORM HOUSE · BANGI</small></div></div><div class="owner"><span class="avatar">ZA</span><span>Puan Zarina Ahmad <span class="muted"> · Shop owner</span></span></div></header>
+<main class="wrap">
+<section class="intro"><div><span class="eyebrow">Your campaign workspace</span><h1>One brief. Five channels. Ready for you.</h1><p class="muted" id="subtitle"></p></div><button class="btn outline" id="pricesTop">View campaign prices ↗</button></section>
+<div class="scenario"><div class="picker" id="picker"><button type="button" class="pickbtn" id="pickBtn" aria-haspopup="listbox" aria-expanded="false" aria-controls="pickList" aria-label="Choose a recorded run"><span id="pickLabel"></span><span class="caret" aria-hidden="true">&#9662;</span></button><div class="picklist hidden" id="pickList" role="listbox" aria-label="Campaigns" tabindex="-1"></div></div></div>
+<div class="layout">
+<aside class="panel brief"><div class="panelhead"><h2>Your campaign brief</h2><span class="num">01 / INPUT</span></div>
+<div id="stepper" class="stepper"></div>
+<span class="lbl">Your request to the team</span><div class="field" id="request"></div>
+<div id="prodWrap"><span class="lbl">Featured products</span><div class="products" id="products"></div></div>
+<button class="btn outline" style="margin-top:10px;font-size:11px" id="pricesBrief">Browse price resource</button>
+<span class="lbl">Channels to prepare</span><div class="channels" id="checks"></div>
+<p class="note">Prices are checked against the campaign resource. No vouchers, gifts, delivery promises or stock claims.</p>
+<button class="btn wide" id="replayBtn">▶ Replay this campaign</button>
+</aside>
+<section id="results" style="min-width:0">
+<div class="replaybar hidden" id="replaybar"><b id="replayLabel"></b><div class="prog"><i id="progBar"></i></div><span id="replayClock" class="muted"></span><button class="btn outline" id="showAll" style="font-size:11px;padding:7px 12px">Show all</button></div>
+<div class="summary"><div class="stat"><small>Requested channels</small><b id="count"></b></div><div class="stat"><small>Ready for your review</small><b id="ready"></b></div><div class="stat"><small>Campaign savings</small><b id="savings"></b></div></div>
+<div class="reviewbar"><h2>Campaign outputs</h2><span class="muted">Approval never posts your copy</span></div>
+<div id="carousel" tabindex="0" aria-label="Channel outputs, use the left and right arrow keys to switch channel"><div class="carnav" id="carnav"><button class="btn outline arrow" id="prevCard" aria-label="Previous channel">&#8592;</button><div class="carpos" id="carpos" aria-live="polite"></div><button class="btn outline arrow" id="nextCard" aria-label="Next channel">&#8594;</button></div><div class="cards" id="cards"></div></div>
+<div class="reply hidden" id="reply"><span class="eyebrow">Team's note to you</span><p id="replyText"></p></div>
+<details class="panel timeline" id="timeline"><summary>See how the team worked <span class="muted">Coordinator · five writers · independent reviewer</span></summary>
+<div class="tsec"><h3>1. Facts extracted <i>extract_facts, from the price list and store profile</i></h3><div id="factsBox"></div></div>
+<div class="tsec"><h3><span id="ganttHead">2. Writers started together</span> <i>recorded start and finish of every agent</i></h3><div id="ganttBox"></div></div>
+<div class="tsec"><h3>3. Checks and corrections <i>the hook checks every draft; only a failing channel is redone</i></h3><div id="corrBox"></div></div>
+<div class="tsec"><h3>4. Independent review <i>report_findings</i></h3><div id="reviewBox"></div></div>
+<div class="tsec"><h3>Tool log <i>every line carries the agent card</i></h3><div id="logBox"></div></div>
+</details>
+</section></div>
+<footer class="footer" id="footer"></footer>
+</main>
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-label="Campaign price list"><div class="dialog"><div class="panelhead"><div><span class="eyebrow">Read-only campaign resource</span><h2>Campaign price list</h2></div><button class="btn outline" id="closePrices">Close ✕</button></div>
+<p class="muted" id="priceIntro"></p>
+<div class="filters"><select id="cat" aria-label="Filter by category"></select><input id="search" type="text" placeholder="Search SKU or product" aria-label="Search products"></div>
+<div class="clauses" id="clauses"></div>
+<p class="muted" id="priceCount"></p>
+<div class="tw"><table><thead><tr><th>SKU</th><th>Product</th><th>Normal</th><th>Promotion</th><th>Discount</th></tr></thead><tbody id="priceRows"></tbody></table></div></div></div>
+<div id="toast" class="hidden" role="status"></div>
+<script src="demo-data.js"></script>
+<script>
+(function(){
+const K=window.KIDDOZ||{runs:[],price_list:{items:[],categories:[],clauses:[]}};
+const PL=K.price_list||{items:[],categories:[],clauses:[]};
+const RUNS=K.runs||[];
+const CH=['whatsapp','instagram','email','blog','seo'];
+const CHN={whatsapp:'WhatsApp',instagram:'Instagram',email:'Email',blog:'Blog',seo:'Google search'};
+const ICON={whatsapp:'◉',instagram:'▣',email:'✉',blog:'▤',seo:'⌕'};
+const el=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const stName=s=>s==='rejected'?'rejected by you':String(s||'').replace(/_/g,' ');
+const sec=ms=>(ms/1000).toFixed(1)+' s';
+const money=n=>typeof n==='number'?'RM'+n.toFixed(2):esc(n);
+const agentName=a=>{if(!a)return'';if(a==='coordinator')return'Coordinator';if(a==='reviewer')return'Reviewer';const c=a.replace(/_writer$/,'');return(CHN[c]||c)+' writer';};
+let runIdx=0,stepIdx=0,T=Infinity,replay=null,cur=0,curKey='';const decisions=new Map(),remarks=new Map();let box=null;
+function toast(s){const t=el('toast');t.textContent=s;t.classList.remove('hidden');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.add('hidden'),2800);}
+function fmtTime(iso){try{return new Date(iso).toLocaleString('en-GB',{timeZone:'Asia/Kuala_Lumpur',day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})+' Malaysia time';}catch(e){return iso;}}
+
+/* ---------- header, picker ---------- */
+const per=PL.period&&PL.period.text;
+el('subtitle').textContent='Back-to-school campaign'+(per?' · '+per:'')+' · You approve every channel.';
+el('footer').textContent='© 2026 Lee Yih Ven · Kiddoz Back-to-School Campaign Team · '+new Set(RUNS.map(r=>r.id)).size+' recorded campaigns'+(K.model?' on '+K.model:'')+' · Approval never posts your copy';
+/* ---------- run picker: categories A to E, numbered by scenario ---------- */
+const CATS=[{g:'A',L:'A',name:'Requested work'},{g:'B',L:'B',name:'Facts and owner questions'},{g:'C',L:'C',name:'Parallel work and refinement'},{g:'D',L:'D',name:'Linked steps'},{g:'F',L:'E',name:'Failures'}];
+[...new Set(RUNS.map(r=>r.group))].filter(g=>!CATS.some(c=>c.g===g)).forEach(g=>CATS.push({g,L:g,name:'Group '+g,extra:true}));
+const DISP={},ROWLABEL=[],ROWNO=[],MENU=[];
+(function number(){
+  const perId={};RUNS.forEach(r=>{perId[r.id]=(perId[r.id]||0)+1;});
+  CATS.forEach(c=>{const ids=[...new Set(RUNS.filter(r=>r.group===c.g).map(r=>r.id))];ids.forEach((id,n)=>{DISP[id]=c.L+(n+1);});});
+  /* one run per scenario: the first parallel run in data order, else the first run */
+  const chosen={};RUNS.forEach((r,i)=>{if(!(r.id in chosen))chosen[r.id]=i;else if(r.mode==='parallel'&&RUNS[chosen[r.id]].mode!=='parallel')chosen[r.id]=i;});
+  RUNS.forEach((r,i)=>{ROWLABEL[i]=`${(DISP[r.id]||'').slice(1)}. ${r.title}`;ROWNO[i]=DISP[r.id]||r.id;if(chosen[r.id]===i)MENU.push(i);});
+  const words=['no','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'];
+  const ids=Object.keys(perId);const extra=RUNS.length-ids.length;
+  let note=`${ids.length} scenarios from the Answer Key, one recorded run each.`;
+  if(extra>0){const extraIds=ids.filter(id=>perId[id]>1);const firstMenuId=MENU.length?RUNS[MENU[0]].id:null;
+    extraIds.forEach(id=>{const n=perId[id]-1;const who=id===firstMenuId?'The first scenario':`Scenario ${DISP[id]||id}`;
+      const both=RUNS.some(r=>r.id===id&&r.mode==='sequential')&&RUNS.some(r=>r.id===id&&r.mode!=='sequential');
+      note+=` ${who} was also recorded ${words[n]||n} more time${n>1?'s':''}${both?' to time the writers working together against one after another':''}; those timings are on the project page.`;});}
+  if(MENU.length&&!MENU.includes(runIdx))runIdx=MENU[0];
+})();
+const dispId=r=>DISP[r.id]||r.id;
+const pickBtn=el('pickBtn'),pickList=el('pickList');
+pickList.innerHTML=CATS.map(c=>{const rows=RUNS.map((r,i)=>r.group===c.g&&MENU.includes(i)?`<div class="popt" role="option" id="popt-${i}" data-i="${i}" tabindex="-1" aria-selected="false">${esc(ROWLABEL[i])}</div>`:'').join('');if(!rows)return'';return `<div class="pcat cat-${c.extra?'X':esc(c.L)}" role="group" aria-labelledby="phead-${esc(c.L)}"><div class="phead" id="phead-${esc(c.L)}" role="presentation">Category ${esc(c.L)} - ${esc(c.name)}</div>${rows}</div>`;}).join('');
+const optEls=()=>[...pickList.querySelectorAll('.popt')];
+function updatePicker(){const r=RUNS[runIdx];el('pickLabel').textContent=r?`${ROWNO[runIdx]}. ${ROWLABEL[runIdx].replace(/^\d+\.\s*/,'')}`:'';optEls().forEach(o=>o.setAttribute('aria-selected',String(+o.dataset.i===runIdx)));}
+function openPicker(){pickList.classList.remove('hidden');pickBtn.setAttribute('aria-expanded','true');const sel=pickList.querySelector('[aria-selected="true"]')||optEls()[0];if(sel){sel.focus();sel.scrollIntoView({block:'nearest'});}}
+function closePicker(focusBtn){if(pickList.classList.contains('hidden'))return;pickList.classList.add('hidden');pickBtn.setAttribute('aria-expanded','false');if(focusBtn)pickBtn.focus();}
+function selectRun(i){if(!RUNS[i])return;stopReplay();runIdx=i;stepIdx=0;T=Infinity;curKey='';updatePicker();renderAll();}
+pickBtn.addEventListener('click',()=>{pickList.classList.contains('hidden')?openPicker():closePicker(true);});
+pickBtn.addEventListener('keydown',e=>{if(['Enter',' ','ArrowDown','ArrowUp'].includes(e.key)){e.preventDefault();openPicker();}});
+pickList.addEventListener('click',e=>{const o=e.target.closest('.popt');if(!o)return;selectRun(+o.dataset.i);closePicker(true);});
+pickList.addEventListener('keydown',e=>{const os=optEls();const k=os.indexOf(document.activeElement);
+  if(e.key==='ArrowDown'){e.preventDefault();os[Math.min(os.length-1,k+1)].focus();}
+  else if(e.key==='ArrowUp'){e.preventDefault();os[Math.max(0,k-1)].focus();}
+  else if(e.key==='Home'){e.preventDefault();os[0].focus();}
+  else if(e.key==='End'){e.preventDefault();os[os.length-1].focus();}
+  else if(e.key==='Enter'||e.key===' '){e.preventDefault();if(k>=0){selectRun(+os[k].dataset.i);closePicker(true);}}
+  else if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closePicker(true);}
+  else if(e.key==='Tab'){closePicker(false);}});
+document.addEventListener('click',e=>{if(!el('picker').contains(e.target))closePicker(false);});
+updatePicker();
+const run=()=>RUNS[runIdx];const step=()=>run()&&run().steps[stepIdx];
+
+function renderRunMeta(){
+  if(!el('runmeta'))return; // the run details line is not shown on the page (founder, 29 Oct)
+  const r=run();if(!r){el('runmeta').innerHTML='';return;}
+  const bits=[`Run ID <code>${esc(r.run_id)}</code>`];
+  if(r.started)bits.push('Started '+esc(fmtTime(r.started)));
+  if(typeof r.ms==='number')bits.push('Recorded '+sec(r.ms));
+  const calls=r.steps.reduce((a,s)=>a+(s.model_calls||0),0);if(calls)bits.push(calls+' model calls');
+  if(r.model)bits.push(esc(r.model));
+  if(typeof r.cost_usd==='number')bits.push('USD '+r.cost_usd.toFixed(4));
+  if(typeof r.pass==='boolean')bits.push('Answer key: '+(r.pass?'passed':'not passed'));
+  if(r.fault&&r.fault.kind)bits.push('Test condition: '+esc(stName(r.fault.kind))+(r.fault.channel?' on '+esc(CHN[r.fault.channel]||r.fault.channel):'')+(r.fault.attempts&&r.fault.attempts.length?', attempt '+esc(r.fault.attempts.join(', ')):''));
+  el('runmeta').innerHTML=bits.map(b=>`<span>${b}</span>`).join('');
+}
+
+/* ---------- state at time T ---------- */
+function logAt(s){return (s.tool_log||[]).filter(l=>l.t<=T);}
+function finalT(s){const d=(s.tool_log||[]).filter(l=>l.tool==='deliver'&&l.event==='result');return d.length?d[d.length-1].t:s.ms;}
+function done(s){return T>=s.ms;}
+function deliveredChannels(s){const d=(s.deliveries||[]).slice(-1)[0];return d&&d.channels?Object.keys(d.channels):[];}
+function shownChannels(s){const c=s.channels||{};const keys=CH.filter(k=>c[k]&&(c[k].requested||c[k].carried));if(keys.length)return keys;const f=(s.facts&&s.facts.channels||[]).filter(k=>CH.includes(k));return f.length?f:deliveredChannels(s).filter(k=>CH.includes(k));}
+function requestedChannels(s){const c=s.channels||{};const k=CH.filter(x=>c[x]&&c[x].requested);if(k.length)return k;const f=(s.facts&&s.facts.channels||[]).filter(x=>CH.includes(x));return f.length?f:deliveredChannels(s).filter(x=>CH.includes(x));}
+function chanAt(s,c){
+  const ch=(s.channels||{})[c]||{};
+  if(T>=finalT(s)){const d=(s.deliveries||[]).slice(-1)[0];return{status:ch.status||(d&&d.channels&&d.channels[c]&&d.channels[c].status)||null,live:false,final:true};}
+  let st=ch.carried?(ch.history&&ch.history.length?'reviewed':null):null,note=ch.carried?'Carried from the earlier step':'',okVer=ch.carried?ch.version:0,errs=null;
+  for(const l of logAt(s)){const d=l.detail||{};
+    if(l.event==='start'&&l.tool==='Agent'&&d.subagent===c+'_writer'){st=null;note=`The ${CHN[c]} writer is on attempt ${d.attempt||1}`;errs=null;}
+    else if(l.event==='call'&&l.tool==='write_'+c){st='written';note='Draft written, the hook is checking it';}
+    else if(l.event==='checked'&&l.tool==='write_'+c){if(d.ok){st='checked';okVer=d.version;note='';errs=null;}else{st='written';errs=d.errors||[];note='';}}
+    else if(l.event==='reported'&&d.verdicts&&d.verdicts[c]){const v=d.verdicts[c];if(v.pass){st='reviewed';note='';}else{st='written';errs=(v.findings||[]).map(f=>(f.fact_or_clause?f.fact_or_clause+': ':'')+f.problem);note='';}}
+    else if(l.event==='result'&&l.tool==='ask_owner'&&d.recorded&&(d.recorded.channels||[]).includes(c)){st=d.recorded.status||'waiting_for_owner';note='';errs=null;}
+    else if(l.event==='returned'&&l.tool==='Agent'&&d.channel===c&&d.status==='no_output'){st=null;errs=d.errors||['no output'];note='';}
+  }
+  return{status:st,note,okVer,errs,live:true};
+}
+
+/* ---------- brief ---------- */
+function products(s){return (s&&s.facts&&s.facts.facts||[]).filter(f=>f.field==='product');}
+function renderBrief(){
+  const r=run(),s=step();if(!r||!s)return;
+  el('stepper').innerHTML=r.steps.length>1?r.steps.map((x,i)=>`<button class="btn outline${i===stepIdx?' active':''}" data-step="${i}">Step ${i+1}</button>`).join(''):'';
+  el('stepper').querySelectorAll('button').forEach(b=>b.onclick=()=>{stopReplay();stepIdx=+b.dataset.step;T=Infinity;curKey='';renderAll();});
+  el('request').textContent=r.steps.length>1?r.steps.map((x,i)=>`Step ${i+1}${i===stepIdx?' (shown)':''}: ${x.message}`).join('\n\n'):s.message;
+  const p=products(s);el('prodWrap').classList.toggle('hidden',!p.length);
+  el('products').innerHTML=p.map(f=>`<div class="prod"><span><span class="sku">${esc(f.sku)}</span><br>${esc(f.name)}</span><strong>${esc(f.promo_price)}${f.normal_price?`<s>${esc(f.normal_price)}</s>`:''}</strong></div>`).join('');
+  const req=requestedChannels(s);
+  el('checks').innerHTML=CH.map(c=>`<label class="${req.includes(c)?'on':''}"><input type="checkbox" disabled ${req.includes(c)?'checked':''}> ${esc(CHN[c])}</label>`).join('');
+}
+
+/* ---------- figures and cards ---------- */
+function statusOf(s,c){const a=chanAt(s,c);let st=a.status;const dec=decisions.get(key(c));if(a.final&&st==='ready_for_approval'&&dec)st=dec.kind;return Object.assign({},a,{status:st});}
+const key=c=>run().run_id+'|'+stepIdx+'|'+c;
+function renderStats(){
+  const s=step();if(!s)return;const req=requestedChannels(s);
+  el('count').textContent=req.length;
+  el('ready').textContent=req.filter(c=>statusOf(s,c).status==='ready_for_approval').length;
+  const d=products(s).map(f=>f.discount_pct).filter(x=>typeof x==='number');
+  el('savings').textContent=d.length?'Up to '+Math.max(...d)+'%':'None';
+}
+function words(t){return String(t||'').trim().split(/\s+/).filter(Boolean).length;}
+function copyHtml(c,cp){
+  if(!cp)return'';
+  if(c==='whatsapp')return esc(cp.message);
+  if(c==='instagram')return `<div class="part">${esc(cp.caption)}</div>${(cp.hashtags||[]).length?`<div class="part"><span class="lab">Hashtags</span><div class="tags">${cp.hashtags.map(h=>`<span>${esc(h)}</span>`).join('')}</div></div>`:''}`;
+  if(c==='email')return (cp.emails||[]).map(e=>`<div class="part"><span class="lab">${esc(e.label)}</span><span class="subj">Subjek: ${esc(e.subject)}</span>\n${esc(e.body)}</div>`).join('');
+  if(c==='blog')return `<div class="part"><span class="subj">${esc(cp.title)}</span>\n${esc(cp.body)}<span class="lab" style="margin-top:10px">${words(cp.body)} words</span></div>`;
+  if(c==='seo')return `<div class="part"><span class="lab">Page paragraph · ${words(cp.paragraph)} words</span>${esc(cp.paragraph)}</div><div class="part"><span class="lab">Meta description · ${String(cp.meta_description||'').length} characters</span>${esc(cp.meta_description)}</div>`;
+  return esc(JSON.stringify(cp));
+}
+function historyHtml(ch){
+  const h=ch.history||[];if(!h.length)return'';
+  const items=[];let checkedOk=0,lastAttempt=0;
+  h.forEach((e,i)=>{
+    const later=h.slice(i+1);
+    if(e.status==='written')items.push(`Attempt ${e.attempt||'?'} written (version ${e.version||'?'})`);
+    else if(e.status==='checked'){checkedOk++;lastAttempt=e.attempt;items.push(`<b>Checked by the hook</b>: attempt ${e.attempt||'?'} passed every check`);}
+    else if(e.status==='check_failed'){const fixed=later.some(x=>x.status==='checked');items.push(`<span class="fix">Hook check on attempt ${e.attempt||'?'} found: ${esc((e.errors||[]).join(' | '))}${fixed?' (fixed in the next attempt)':''}</span>`);}
+    else if(e.status==='review_failed'){const fixed=later.some(x=>x.status==='reviewed');items.push(`<span class="fix">Reviewer finding on version ${e.version||'?'}: ${esc((e.findings||[]).map(f=>(f.fact_or_clause?f.fact_or_clause+': ':'')+f.problem).join(' | '))}${fixed?' (fixed and reviewed again)':''}</span>`);}
+    else if(e.status==='reviewed')items.push(`<b>Reviewed by the independent reviewer</b>: version ${e.version||'?'} passed`);
+    else if(e.stopped)items.push(`Stopped: ${esc(e.stopped)}, set to ${esc(stName(e.status))}`);
+    else if(e.delivered)items.push(`Delivered to you as ${esc(stName(e.status))}`);
+    else if(e.code&&e.status!=='waiting_for_owner')items.push(`Set to ${esc(stName(e.status))} with owner question ${esc(e.code)}`);
+    else if(e.status==='waiting_for_owner')items.push(`Held for your answer${e.code?' ('+esc(e.code)+')':''}`);
+    else items.push(esc(stName(e.status)));
+  });
+  const att=ch.attempts||0;
+  const head=att?`${att} attempt${att>1?'s':''}${att>1?', '+(att-1)+' correction'+(att>2?'s':''):''}`:'No draft written';
+  return `<div class="checks"><b>Checks passed</b> · ${head}<ol>${items.map(x=>`<li>${x}</li>`).join('')}</ol></div>`;
+}
+function renderCards(){
+  const s=step();if(!s)return;const cs=shownChannels(s);
+  const ck=runIdx+'|'+stepIdx;if(ck!==curKey){curKey=ck;cur=0;box=null;}
+  if(!cs.length){el('cards').innerHTML='<div class="empty">No channel was prepared in this step.</div>';el('carnav').classList.add('hidden');return;}
+  if(cur>=cs.length)cur=cs.length-1;
+  const dl=(s.deliveries||[]).slice(-1)[0];
+  const multi=cs.length>1;
+  el('carnav').classList.toggle('hidden',!multi);
+  el('prevCard').disabled=cur===0;el('nextCard').disabled=cur===cs.length-1;el('prevCard').style.visibility=cur===0?'hidden':'';el('nextCard').style.visibility=cur===cs.length-1?'hidden':'';
+  const curSt=statusOf(s,cs[cur]).status;
+  el('carpos').innerHTML=`${esc(CHN[cs[cur]])} · ${cur+1} of ${cs.length}${curSt?`<small>${esc(stName(curSt))}</small>`:''}`;
+  el('cards').innerHTML=[cs[cur]].map(c=>{
+    const ch=(s.channels||{})[c]||{};const a=statusOf(s,c);const st=a.status;
+    let body='';
+    if(st==='waiting_for_owner'){
+      const qs=(s.owner_questions||[]).filter(q=>(q.channels||[]).includes(c));
+      body=`<div class="waitbox alert">${qs.map(q=>`<span class="eyebrow">Owner question · ${esc(q.code)}</span><p><b>${esc(q.reason||'')}</b></p><p>${esc(q.question)}</p>`).join('')||'Waiting for your answer.'}<small>No copy is written until you answer.</small></div>`;
+    }else if(st==='failed'&&a.final){
+      const why=[...(ch.errors||[]).map(e=>typeof e==='string'?e:(e.detail||JSON.stringify(e))),...(ch.findings||[]).map(f=>(f.fact_or_clause?f.fact_or_clause+': ':'')+f.problem)];
+      const stopH=(ch.history||[]).find(e=>e.stopped);const note=dl&&dl.channels&&dl.channels[c]&&dl.channels[c].note;
+      const fq=(s.owner_questions||[]).filter(q=>(q.channels||[]).includes(c));
+      body=`<div class="waitbox bad"><b>This channel was not delivered for approval.</b>${fq.map(q=>`<p><span class="eyebrow">Owner question · ${esc(q.code)}</span><br><b>${esc(q.reason||'')}</b><br>${esc(q.question)}</p>`).join('')}${why.length?`<p>${why.map(esc).join('<br>')}</p>`:''}${stopH?`<p>Run stopped: ${esc(stopH.stopped)}</p>`:''}${!why.length&&!fq.length&&!stopH&&!note?'<p>No reason was recorded.</p>':''}</div>`;
+    }else if(a.final||(a.okVer&&a.okVer===ch.version&&['checked','reviewed'].includes(st))){
+      body=ch.copy?`<div class="copy">${copyHtml(c,ch.copy)}</div>`:`<div class="waitbox">No copy recorded for this channel.</div>`;
+    }else{
+      body=`<div class="waitbox">${a.errs&&a.errs.length?`<b>To correct:</b> ${esc(a.errs.join(' | '))}<br>The writer is asked to correct this channel only.`:(a.okVer&&['checked','reviewed'].includes(st)?`Version ${esc(a.okVer)} passed the hook check.`:esc(a.note||'The coordinator is preparing this channel.'))}</div>`;
+    }
+    const dec=decisions.get(key(c));
+    const note=a.final&&dl&&dl.channels&&dl.channels[c]&&dl.channels[c].note;
+    return `<article class="card"><div class="cardtop"><h3>${ICON[c]} &nbsp; ${esc(CHN[c])}${ch.carried?` <span class="muted">(${ch.requested?'redone in this step':'carried from the earlier step'})</span>`:''}</h3>${st?`<span class="status st-${esc(st)}">${esc(stName(st))}</span>`:''}</div>${body}${a.final?historyHtml(ch):''}${note?`<div class="teamnote"><b>Team note:</b> ${esc(note)}</div>`:''}${remarksHtml(c,dec)}${a.final?footHtml(c,ch,st,dec):''}${boxHtml(c)}</article>`;
+  }).join('');
+  wireCardActions();
+  el('cards').querySelectorAll('[data-approve]').forEach(b=>b.onclick=()=>{decisions.set(key(b.dataset.approve),{kind:'approved',time:new Date()});box=null;renderStats();renderCards();toast(CHN[b.dataset.approve]+' approved by you. Nothing was posted.');});
+  el('cards').querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{const t=((step().channels||{})[b.dataset.copy]||{}).text||'';try{await navigator.clipboard.writeText(t);toast(CHN[b.dataset.copy]+' copy copied');}catch(e){toast('Clipboard unavailable. Select and copy the visible text.');}});
+}
+const hhmm=d=>d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+function footHtml(c,ch,st,dec){
+  const btn=(attr,label,cls)=>`<button class="btn${cls?' '+cls:''}" ${attr}="${c}">${label}</button>`;
+  const copy=ch.text?btn('data-copy','Copy','outline'):'';
+  let msg='',acts='';
+  if(st==='ready_for_approval'){msg='Ready for your approval';acts=copy+(ch.copy?btn('data-remark','Remark','outline'):'')+btn('data-reject','Reject','outline')+btn('data-approve','Approve');}
+  else if(st==='approved'){msg='<span class="approved-msg">Approved by you. Approval never posts your copy.</span>';acts=copy+(ch.copy?btn('data-remark','Remark','outline'):'');}
+  else if(st==='rejected'){msg='<span class="rejected-msg">Rejected by you.</span>';acts=copy+(ch.copy?btn('data-remark','Remark','outline'):'');}
+  else if(st==='waiting_for_owner'){acts=btn('data-answer','Answer the question');}
+  else if(st==='failed'){const passed=(ch.history||[]).some(e=>e.status==='checked'&&e.version===ch.version);acts=(passed?copy:'')+btn('data-retry','Ask the team to try again');}
+  else{acts=copy+(ch.copy?btn('data-remark','Remark','outline'):'');}
+  const undo=dec&&(st==='approved'||st==='rejected')?` <button class="linkbtn" data-undo="${c}">Undo</button>`:'';
+  if(!msg&&!acts&&!undo)return'';
+  return `<div class="cardfoot"><small>${msg}${undo}</small><div class="actions">${acts}</div></div>`;
+}
+const NOTE_KIND={
+  remark:{label:'Your remark',line:'Saved in this page only. In a live run, your remark goes back to the team for a redo.'},
+  answer:{label:'Your answer',line:'Saved in this page only. In a live run, your answer goes back to the team: code checks the facts again and the writers start (see D1, step 2).'},
+  retry:{label:'Your note to the team',line:'Saved in this page only. In a live run, the team tries this channel again with your note.'}};
+const BOX_TITLE={remark:'Your remark to the team',reject:'Why are you rejecting this?',answer:'Your answer to the team',retry:'Your note to the team'};
+function remarksHtml(c,dec){
+  const list=remarks.get(key(c))||[];const rej=dec&&dec.kind==='rejected'?dec:null;
+  if(!list.length&&!rej)return'';
+  return `<div class="remarks">${rej?`<div class="rej"><b>Your reason for rejecting:</b> ${esc(rej.reason)}<small>${esc(hhmm(rej.time))} · Saved in this page only. In a live run, your reason goes back to the team for a redo.</small></div>`:''}${list.map(r=>{const k=NOTE_KIND[r.kind||'remark'];return `<div><b>${k.label}:</b> ${esc(r.text)}<small>${esc(hhmm(r.time))} · ${k.line}</small></div>`;}).join('')}</div>`;
+}
+function boxHtml(c){
+  if(!box||box.key!==key(c))return'';
+  const title=BOX_TITLE[box.mode]||BOX_TITLE.remark;
+  return `<div class="combox"><label for="comText">${title}</label><textarea id="comText">${esc(box.draft||'')}</textarea><div class="row"><button class="btn outline" id="comCancel">Cancel</button><button class="btn" id="comSubmit">Submit</button></div><div class="comhint" id="comHint" style="display:none;font-size:12px;color:#a2482f;margin-top:6px">Please write something first.</div></div>`;
+}
+function wireCardActions(){
+  const q=sel=>el('cards').querySelectorAll(sel);
+  q('[data-remark]').forEach(b=>b.onclick=()=>{box={key:key(b.dataset.remark),mode:'remark',draft:''};renderCards();const t=el('comText');if(t)t.focus();});
+  q('[data-reject]').forEach(b=>b.onclick=()=>{box={key:key(b.dataset.reject),mode:'reject',draft:''};renderCards();const t=el('comText');if(t)t.focus();});
+  q('[data-answer]').forEach(b=>b.onclick=()=>{box={key:key(b.dataset.answer),mode:'answer',draft:''};renderCards();const t=el('comText');if(t)t.focus();});
+  q('[data-retry]').forEach(b=>b.onclick=()=>{box={key:key(b.dataset.retry),mode:'retry',draft:''};renderCards();const t=el('comText');if(t)t.focus();});
+  q('[data-undo]').forEach(b=>b.onclick=()=>{decisions.delete(key(b.dataset.undo));renderStats();renderCards();toast('Your decision on '+CHN[b.dataset.undo]+' is undone.');});
+  const t=el('comText');if(!t)return;
+  t.oninput=()=>{box.draft=t.value;if(t.value.trim())el('comHint').style.display='none';};
+  el('comCancel').onclick=()=>{box=null;renderCards();};
+  el('comSubmit').onclick=()=>{const txt=t.value.trim();if(!txt){el('comHint').style.display='';t.focus();return;}const k=box.key,c=k.split('|')[2];
+    if(box.mode==='reject'){decisions.set(k,{kind:'rejected',reason:txt,time:new Date()});toast(CHN[c]+' rejected by you. Nothing was posted.');}
+    else{const kind=NOTE_KIND[box.mode]?box.mode:'remark';if(!remarks.has(k))remarks.set(k,[]);remarks.get(k).push({text:txt,time:new Date(),kind});toast(NOTE_KIND[kind].label+' on '+CHN[c]+' is saved in this page.');}
+    box=null;renderStats();renderCards();};
+}
+function goCard(i){const n=step()?shownChannels(step()).length:0;if(i<0||i>=n)return;cur=i;renderCards();}
+el('prevCard').onclick=()=>goCard(cur-1);el('nextCard').onclick=()=>goCard(cur+1);
+el('carousel').addEventListener('keydown',e=>{if(!el('modal').classList.contains('hidden'))return;if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName))return;if(e.key==='ArrowLeft'){e.preventDefault();goCard(cur-1);}else if(e.key==='ArrowRight'){e.preventDefault();goCard(cur+1);}});
+let tx=null;el('cards').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+el('cards').addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>60)goCard(cur+(dx<0?1:-1));},{passive:true});
+function renderReply(){const s=step();const show=s&&s.reply&&done(s);el('reply').classList.toggle('hidden',!show);if(show)el('replyText').textContent=s.reply;}
+
+/* ---------- team panel ---------- */
+function renderFacts(){
+  const s=step();const fr=(s.tool_log||[]).find(l=>l.tool==='extract_facts'&&l.event==='result');
+  if(!s.facts||(fr&&fr.t>T)||(!fr&&!done(s))){el('factsBox').innerHTML=`<p class="muted">${T===Infinity?'No facts were recorded in this step.':'The coordinator is reading your brief.'}</p>`;return;}
+  const f=s.facts;const p=products(s);
+  let h=`<div class="wstat"><span>Status <b>${esc(stName(f.status))}</b></span>${f.tone?`<span>Tone <b>${esc(f.tone)}</b></span>`:''}${(f.channels||[]).length?`<span>Channels <b>${f.channels.map(c=>esc(CHN[c]||c)).join(', ')}</b></span>`:''}</div>`;
+  if(f.error){const e=f.error;const txt=typeof e==='string'?e:[e.resource,(e.problems||[]).join('; ')||e.message||e.code].filter(Boolean).join(': ');h+=`<div class="issue"><b>A resource could not be loaded.</b> ${esc(txt)}. No price was checked, so no copy was written.</div>`;}
+  if(p.length)h+=`<div class="facts">${p.map(x=>`<div class="fact"><span class="sku">${esc(x.sku)} · ${esc(x.id)}</span>${esc(x.name)}<br><b>${esc(x.promo_price)}</b>${x.normal_price?' (normal '+esc(x.normal_price)+')':''}${typeof x.discount_pct==='number'?', '+x.discount_pct+'% off':''}${x.saving?', saves '+esc(x.saving):''}</div>`).join('')}</div>`;
+  const other=(f.facts||[]).filter(x=>x.field!=='product');
+  if(other.length)h+=`<div class="facts">${other.map(x=>`<div class="fact"><span class="sku">${esc(x.id)} · ${esc(stName(x.field))}</span>${esc(x.value)}</div>`).join('')}</div>`;
+  (f.owner_issues||[]).forEach(o=>{h+=`<div class="issue"><b>${esc(o.code)}${o.item?' · '+esc(o.item):''}</b> ${esc(o.detail||'')}${o.question_hint?`<br>${esc(o.question_hint)}`:''}</div>`;});
+  el('factsBox').innerHTML=h;
+}
+function ticks(ms){const c=[1,2,5,10,15,20,30,60,120].map(x=>x*1000);const st=c.find(x=>ms/x<=7)||c[c.length-1];const out=[];for(let t=0;t<=ms;t+=st)out.push(t);return out;}
+function renderGantt(){
+  const s=step();el('ganttHead').textContent=run()&&run().mode==='sequential'?'2. Writers one after another (sequential run)':'2. Writers started together';const tl=s.timeline||[];const W=s.ms||1;
+  if(!tl.length){el('ganttBox').innerHTML=`<p class="muted">${(s.owner_questions||[]).length?'No writer started in this step: the team held the work for your answer.':'No writer started in this step.'}</p>`;return;}
+  const pct=x=>Math.max(0,Math.min(100,x/W*100));
+  const w=s.writing;
+  const band=w&&typeof w.start==='number'?`<div class="band" style="left:${pct(w.start)}%;width:${pct(w.end)-pct(w.start)}%"></div>`:'';
+  const nRev=tl.filter(e=>e.agent==='reviewer').length;let iRev=0;
+  const rows=tl.map(e=>{const revNo=e.agent==='reviewer'&&nRev>1?++iRev:0;
+    let bar='';if(e.start<=T){const end=Math.min(e.end,T);const running=e.end>T;const cls=running?'running':(['checked','check_failed','complete','no_output'].includes(e.status)?e.status:'other');bar=`<div class="bar b-${cls}" style="left:${pct(e.start)}%;width:${pct(end)-pct(e.start)}%" title="${esc(sec(e.start))} to ${esc(sec(e.end))}"></div>`;}
+    const lab=e.start<=T&&e.end<=T?`${sec(e.start)} to ${sec(e.end)} · ${esc(stName(e.status))}`:(e.start<=T?'working':'');
+    return `<div class="grow"><div class="glabel">${esc(agentName(e.agent))}${e.attempt?' · attempt '+esc(e.attempt):''}${revNo?' · review '+revNo:''}<small>${lab}</small></div><div class="track">${band}${bar}</div></div>`;
+  }).join('');
+  const axis=`<div class="grow"><div></div><div class="axis">${ticks(W).map(t=>`<span style="left:${pct(t)}%">${t/1000}s</span>`).join('')}</div></div>`;
+  let stats='';
+  if(w){stats=`<div class="wstat">${typeof w.writers==='number'?`<span>Writers started <b>${w.writers}</b></span>`:''}${typeof w.ms==='number'?`<span>Writing phase <b>${sec(w.ms)}</b></span>`:''}${typeof w.sum_ms==='number'?`<span>The writers' own times added up <b>${sec(w.sum_ms)}</b></span>`:''}${typeof w.overlap==='boolean'?`<span>Writers overlapped <b>${w.overlap?'yes':'no'}</b></span>`:''}<span>Mode <b>${esc(run().mode)}</b></span></div>`;}
+  el('ganttBox').innerHTML=stats+`<div class="gantt">${rows}${axis}</div><div class="legend"><span><i class="b-checked"></i>passed the check</span><span><i class="b-check_failed"></i>check found a problem</span>${tl.some(e=>e.status==='no_output')?'<span><i class="b-no_output"></i>no output</span>':''}<span><i class="b-complete"></i>review complete</span><span><i class="b-running"></i>working</span>${band?'<span><i style="background:#e7ad4330;border:1px dashed #c48f2c"></i>writing phase</span>':''}</div>`;
+}
+function renderCorr(){
+  const s=step();const L=logAt(s);
+  const checks=L.filter(l=>l.event==='checked');
+  const fails=L.filter(l=>l.event==='returned'&&l.detail&&['check_failed','no_output'].includes(l.detail.status));
+  const revFails=[];(s.reviews||[]).forEach((r,i)=>{const rep=(s.tool_log||[]).filter(l=>l.event==='reported')[i];if(rep&&rep.t>T)return;Object.entries(r.verdicts||{}).forEach(([c,v])=>{if(v.pass===false)revFails.push({c,v,t:rep?rep.t:0});});});
+  const refused=L.filter(l=>l.event==='refused');
+  if(!checks.length&&!fails.length&&!revFails.length&&!refused.length){el('corrBox').innerHTML=`<p class="muted">${done(s)?'No draft was checked in this step.':'No check has run yet.'}</p>`;return;}
+  let h='';
+  if(checks.length)h+=`<h4>Hook checks on every draft</h4><ul class="list">${checks.map(l=>{const d=l.detail||{};return `<li class="${d.ok?'ok':''}">${sec(l.t)} · ${esc(agentName(l.agent))} · ${esc(l.tool)}, version ${esc(d.version)}: ${d.ok?'passed':'found '+esc((d.errors||[]).join(' | '))}</li>`;}).join('')}</ul>`;
+  if(fails.length||revFails.length){h+=`<h4>Corrections</h4><ul class="list">`;
+    fails.forEach(l=>{const d=l.detail;const retry=(s.tool_log||[]).find(x=>x.event==='start'&&x.detail&&x.detail.subagent===d.channel+'_writer'&&x.detail.attempt===(d.attempt||0)+1);h+=`<li>${sec(l.t)} · ${esc(CHN[d.channel]||d.channel)} attempt ${esc(d.attempt)} returned <b>${esc(stName(d.status))}</b>: ${esc((d.errors||[]).join(' | ')||'no output')}. ${retry&&retry.t<=T?`Retried as attempt ${esc(retry.detail.attempt)} at ${sec(retry.t)}; the other channels kept their copy.`:(typeof d.corrections_left==='number'?d.corrections_left+' corrections left.':'')}</li>`;});
+    revFails.forEach(({c,v,t})=>{const redo=(s.tool_log||[]).find(x=>x.event==='start'&&x.t>t&&x.t<=T&&x.detail&&x.detail.subagent===c+'_writer');h+=`<li>${sec(t)} · Reviewer finding on ${esc(CHN[c]||c)}: ${esc((v.findings||[]).map(f=>(f.fact_or_clause?f.fact_or_clause+': ':'')+f.problem).join(' | '))}${redo?` Redone as attempt ${esc(redo.detail.attempt)} at ${sec(redo.t)}; the other channels kept their copy.`:''}</li>`;});
+    h+='</ul>';}
+  if(refused.length)h+=`<h4>Calls the hook refused</h4><ul class="list">${refused.map(l=>`<li class="bad">${sec(l.t)} · ${esc(agentName(l.agent))} called ${esc(l.tool)}: refused, ${esc(typeof l.detail==='string'?l.detail:JSON.stringify(l.detail))}</li>`).join('')}</ul>`;
+  el('corrBox').innerHTML=h;
+}
+function renderReview(){
+  const s=step();const starts=(s.tool_log||[]).filter(l=>l.event==='start'&&l.detail&&l.detail.subagent==='reviewer'&&l.t<=T);
+  const reps=(s.tool_log||[]).filter(l=>l.event==='reported');
+  const rets=(s.tool_log||[]).filter(l=>l.event==='returned'&&l.detail&&l.detail.review&&l.t<=T);
+  const refR=(s.tool_log||[]).filter(l=>l.event==='refused'&&l.tool==='Agent'&&l.t<=T);
+  if(!starts.length&&refR.length){el('reviewBox').innerHTML=`<p style="font-size:12.5px;margin:8px 0">The reviewer could not start, so no channel was reviewed.</p><ul class="list">${refR.map(l=>`<li class="bad">${sec(l.t)} · ${esc(typeof l.detail==='string'?l.detail:JSON.stringify(l.detail))}</li>`).join('')}</ul>`;return;}
+  if(!starts.length){el('reviewBox').innerHTML=`<p class="muted">${done(s)?'The reviewer was not started in this step.':'The reviewer starts once every channel has passed its checks.'}</p>`;return;}
+  el('reviewBox').innerHTML=starts.map((st,i)=>{const d=st.detail;const r=(s.reviews||[])[i];const rep=reps[i];const ret=rets[i];
+    const given=(d.given||[]).map(c=>`${esc(CHN[c]||c)}${d.versions&&d.versions[c]?' v'+esc(d.versions[c]):''}`).join(', ');
+    let v='';
+    if(r&&rep&&rep.t<=T)v=`<ul class="list">${Object.entries(r.verdicts||{}).map(([c,x])=>`<li class="${x.pass?'ok':''}">${esc(CHN[c]||c)}: ${x.pass?'passed':'finding: '+esc((x.findings||[]).map(f=>(f.fact_or_clause?f.fact_or_clause+': ':'')+f.problem).join(' | '))}</li>`).join('')}</ul>`;
+    else if(ret&&ret.detail.review!=='complete')v=`<ul class="list"><li class="bad">Review ${esc(ret.detail.review)}${ret.detail.note?': '+esc(ret.detail.note):''}</li></ul>`;
+    else v='<p class="muted">The reviewer is reading the copy.</p>';
+    return `<p style="font-size:12.5px;margin:8px 0">Review ${i+1} started at ${sec(st.t)}. Given the current copy of: <b>${given||'none'}</b>.</p>${d.coordinator_prompt?`<details><summary class="muted" style="cursor:pointer">The coordinator's brief to the reviewer</summary><div class="prompt">${esc(d.coordinator_prompt)}</div></details>`:''}${v}`;}).join('');
+}
+function summarize(l){
+  const d=l.detail;if(d==null)return'';if(typeof d==='string')return esc(d);
+  const list=a=>(a||[]).map(c=>esc(CHN[c]||c)).join(', ');
+  if(l.tool==='extract_facts'&&l.event==='call')return `channels ${list(d.channels)}${(d.skus||[]).length?'; SKUs '+esc(d.skus.join(', ')):''}${d.tone?'; tone '+esc(d.tone):''}`;
+  if(l.tool==='extract_facts')return `status ${esc(stName(d.status))}${(d.owner_issues||[]).length?'; owner issues '+esc(d.owner_issues.map(o=>o.code).join(', ')):''}${d.error?'; '+esc(typeof d.error==='string'?d.error:JSON.stringify(d.error)):''}`;
+  if(l.tool==='Agent'&&l.event==='start')return `starts ${esc(agentName(d.subagent))}${d.attempt?', attempt '+esc(d.attempt):''}${d.given?', given '+list(d.given):''}${d.coordinator_prompt?`<details><summary>Coordinator's brief</summary><div>${esc(d.coordinator_prompt)}</div></details>`:''}`;
+  if(l.tool==='Agent'&&l.event==='returned'){if(d.review)return `review ${esc(d.review)}`;return `${esc(CHN[d.channel]||d.channel)} attempt ${esc(d.attempt)}: ${esc(stName(d.status))}${(d.errors||[]).length?', '+esc(d.errors.join(' | ')):''}${typeof d.corrections_left==='number'?'; '+d.corrections_left+' corrections left':''}`;}
+  if(l.event==='checked')return d.ok?`passed, version ${esc(d.version)}`:`found ${esc((d.errors||[]).join(' | '))}`;
+  if(l.event==='reported')return Object.entries(d.verdicts||{}).map(([c,v])=>`${esc(CHN[c]||c)} ${v.pass?'pass':'finding'}`).join(', ');
+  if(l.tool==='ask_owner'&&l.event==='call')return `${esc(d.code)}: ${esc(d.question)}`;
+  if(l.tool==='ask_owner')return d.recorded?`recorded, ${esc(stName(d.recorded.status))}`:esc(JSON.stringify(d));
+  if(l.tool==='deliver'&&l.event==='call')return (d.channels||[]).map(x=>`${esc(CHN[x.channel]||x.channel)} ${esc(stName(x.status))}`).join(', ');
+  if(l.tool==='deliver')return d.ok?'delivered':esc(d.error||JSON.stringify(d));
+  if(/^write_/.test(l.tool||''))return `attempt ${esc(d.attempt)}${d.test_condition?' · test condition '+esc(stName(d.test_condition)):''}`;
+  const j=JSON.stringify(d);return esc(j.length>200?j.slice(0,200)+'...':j);
+}
+function renderLog(){
+  const s=step();const L=logAt(s);
+  if(!L.length){el('logBox').innerHTML='<p class="muted">No tool call yet.</p>';return;}
+  el('logBox').innerHTML=`<p class="muted">${L.length} of ${(s.tool_log||[]).length} lines. Time from the start of the step.</p><div class="log">${L.map(l=>`<div class="line"><span class="t">${sec(l.t)}</span><span class="who">${esc(agentName(l.agent))}<span class="card-id">${esc(l.agent_id)} v${esc(l.version)} · owner ${esc(l.owner)}</span></span><span class="ev ev-${esc(l.event)}">${esc(l.event)}</span><span class="d"><span class="tool">${esc(l.tool)}</span> ${summarize(l)}</span></div>`).join('')}</div>`;
+}
+
+/* ---------- render, replay ---------- */
+let lastSig='';
+function sig(){const s=step();return runIdx+'|'+stepIdx+'|'+logAt(s).length+'|'+done(s)+'|'+(s.timeline||[]).filter(e=>e.end<=T).length;}
+function renderAll(){renderRunMeta();renderBrief();renderDynamic(true);}
+function renderDynamic(force){
+  const g=sig();renderGantt();
+  if(!force&&g===lastSig)return;lastSig=g;
+  renderStats();renderCards();renderReply();renderFacts();renderCorr();renderReview();renderLog();
+}
+function stopReplay(){if(replay){cancelAnimationFrame(replay.raf);replay=null;}el('replaybar').classList.add('hidden');el('replayBtn').disabled=false;el('replayBtn').style.visibility='';}
+function startReplay(){
+  stopReplay();box=null;const r=run();if(!r)return;
+  const total=r.steps.reduce((a,s)=>a+(s.ms||0),0)||1;const dur=Math.min(18000,Math.max(10000,Math.min(total,18000)));const speed=total/dur;
+  el('timeline').open=true;el('replaybar').classList.remove('hidden');el('replayBtn').disabled=true;el('replayBtn').style.visibility='hidden';
+  el('replayLabel').textContent='Replaying '+dispId(r)+(speed>1.05?' at '+speed.toFixed(1)+'x speed':' at recorded speed');
+  stepIdx=0;T=0;renderBrief();renderDynamic(true);
+  const t0=performance.now();let lastDraw=0;
+  replay={raf:0};
+  const tick=now=>{
+    const el_=(now-t0)*speed;let acc=0,si=0;while(si<r.steps.length-1&&el_>acc+r.steps[si].ms){acc+=r.steps[si].ms;si++;}
+    if(si!==stepIdx){stepIdx=si;renderBrief();lastSig='';}
+    T=el_-acc;el('progBar').style.width=Math.min(100,el_/total*100)+'%';
+    el('replayClock').textContent=(r.steps.length>1?'Step '+(si+1)+' · ':'')+sec(Math.min(T,r.steps[si].ms))+' of '+sec(r.steps[si].ms);
+    if(el_>=total){finish();return;}
+    if(now-lastDraw>90){lastDraw=now;renderDynamic(false);}
+    replay.raf=requestAnimationFrame(tick);
+  };
+  replay.raf=requestAnimationFrame(tick);
+}
+function finish(){stopReplay();T=Infinity;renderAll();toast('Replay complete');}
+el('replayBtn').onclick=startReplay;
+el('showAll').onclick=()=>{const r=run();stopReplay();stepIdx=r?r.steps.length-1:0;T=Infinity;renderAll();};
+
+/* ---------- price list ---------- */
+const cats=PL.categories||[];
+el('cat').innerHTML='<option value="">All categories</option>'+cats.map(c=>`<option value="${esc(c.id)}">${esc(c.title)}${typeof c.count==='number'?' ('+c.count+')':''}</option>`).join('');
+el('priceIntro').textContent=(PL.items||[]).length+' products in the campaign resource'+(per?'. Valid '+per:'')+'. Prices per piece.';
+function renderPrices(){
+  const cat=el('cat').value,q=el('search').value.toLowerCase().trim();
+  const rows=(PL.items||[]).filter(i=>(!cat||i.category===cat)&&(!q||(i.sku+' '+i.name).toLowerCase().includes(q)));
+  const code=cat?(cats.find(c=>c.id===cat)||{}).code:null;
+  const cl=(PL.clauses||[]).filter(c=>!code||(c.applies_to||[]).includes(code));
+  el('clauses').innerHTML=cl.map(c=>`<div><b>${esc(c.id)}</b>${(c.applies_to||[]).length?' · applies to '+esc(c.applies_to.join(', ')):''}: ${esc(c.text)}</div>`).join('');
+  el('priceCount').textContent='Showing '+rows.length+' of '+(PL.items||[]).length;
+  el('priceRows').innerHTML=rows.map(i=>`<tr><td><span class="sku">${esc(i.sku)}</span></td><td>${esc(i.name)}</td><td>${money(i.normal_price)}</td><td><b>${money(i.promo_price)}</b></td><td>${esc(i.discount_pct)}%</td></tr>`).join('')||'<tr><td colspan="5">No matching product.</td></tr>';
+}
+function showPrices(){el('modal').classList.remove('hidden');renderPrices();el('cat').focus();}
+function closePrices(){el('modal').classList.add('hidden');}
+el('pricesTop').onclick=showPrices;el('pricesBrief').onclick=showPrices;el('closePrices').onclick=closePrices;
+el('cat').onchange=renderPrices;el('search').oninput=renderPrices;
+el('modal').addEventListener('click',e=>{if(e.target===el('modal'))closePrices();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePrices();});
+
+if(!RUNS.length){el('cards').innerHTML='<div class="empty">No recorded run is loaded.</div>';}else renderAll();
+window.__kiddoz={select:i=>selectRun(i),menu:()=>MENU.slice(),replaying:()=>!!replay};
+})();
+</script></body></html>

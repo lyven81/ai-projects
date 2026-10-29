@@ -1,0 +1,12 @@
+{
+ "note": "One card per agent. Written into every tool-log line. Classification: adviser (nothing is posted by the system); data sensitivity: business; supervision: human in the loop (the owner approves every channel).",
+ "cards": {
+  "coordinator": {"agent_id": "kiddoz-coordinator", "version": "1.0.0", "owner": "Puan Zarina Ahmad", "classification": "adviser, business data", "supervision": "human in the loop"},
+  "whatsapp_writer": {"agent_id": "kiddoz-whatsapp-writer", "version": "1.0.0", "owner": "Puan Zarina Ahmad", "classification": "adviser, business data", "supervision": "human in the loop"},
+  "instagram_writer": {"agent_id": "kiddoz-instagram-writer", "version": "1.0.0", "owner": "Puan Zarina Ahmad", "classification": "adviser, business data", "supervision": "human in the loop"},
+  "email_writer": {"agent_id": "kiddoz-email-writer", "version": "1.0.0", "owner": "Puan Zarina Ahmad", "classification": "adviser, business data", "supervision": "human in the loop"},
+  "blog_writer": {"agent_id": "kiddoz-blog-writer", "version": "1.0.0", "owner": "Puan Zarina Ahmad", "classification": "adviser, business data", "supervision": "human in the loop"},
+  "seo_writer": {"agent_id": "kiddoz-seo-writer", "version": "1.0.0", "owner": "Puan Zarina Ahmad", "classification": "adviser, business data", "supervision": "human in the loop"},
+  "reviewer": {"agent_id": "kiddoz-reviewer", "version": "1.0.0", "owner": "Puan Zarina Ahmad", "classification": "adviser, business data", "supervision": "human in the loop"}
+ }
+}

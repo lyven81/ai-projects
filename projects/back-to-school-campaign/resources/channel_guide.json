@@ -1,0 +1,13 @@
+{
+ "resource": "kiddoz://channel-guide",
+ "language": "Bahasa Melayu",
+ "clauses": [
+  {"id": "G1", "channel": "whatsapp", "text": "WhatsApp broadcast: 4 to 6 lines, short and direct, the last line a call to action (visit the shop or WhatsApp Kiddoz)."},
+  {"id": "G2", "channel": "instagram", "text": "Instagram caption: a hook line first, 3 to 5 short paragraphs in all (the hook counts as one, paragraphs separated by a blank line), then 5 to 8 Bahasa Melayu hashtags given separately."},
+  {"id": "G3", "channel": "email", "text": "Email sequence: exactly three emails labelled Teaser, Tawaran and Last Call, in that order, each with a subject line and a body that greets the reader with [Nama]."},
+  {"id": "G4", "channel": "blog", "text": "Blog post: a title and a body of 300 to 500 words, useful to parents preparing for school, with the offer and a call to action."},
+  {"id": "G5", "channel": "seo", "text": "Google search copy: one paragraph of 150 to 200 words for the shop's page and a meta description of at most 160 characters."},
+  {"id": "G6", "channel": "all", "text": "Tones: Santai (warm, conversational Bahasa Melayu), Formal (polite, standard Bahasa Melayu), Campur (Bahasa Melayu with light everyday English words). When the owner names no tone, the shop's house tone, Santai, is used."},
+  {"id": "G7", "channel": "all", "text": "Banned claims: any cheapest or lowest-price claim (for example 'paling murah di Bangi'); any guarantee, fit included; gifts; vouchers or coupons; free or any delivery; stock, quantity or scarcity claims and invented countdowns; search ranking claims (for example 'first on Google'); any claim that the whole shop or all uniforms are on promotion, or that every item has the same discount; any price, discount or date not on the price list; an invented phone number."}
+ ]
+}

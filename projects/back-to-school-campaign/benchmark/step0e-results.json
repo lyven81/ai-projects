@@ -1,0 +1,24 @@
+{
+ "initToolsHasAgent": false,
+ "initToolsHasTask": true,
+ "spawnsPerResponse": {
+  "msg_011CgVi4Bqg7JRAB1NZazocE": [
+   "Agent:whatsapp_writer",
+   "Agent:instagram_writer"
+  ]
+ },
+ "spans": [
+  {
+   "type": "whatsapp_writer",
+   "start": 1793239496491,
+   "end": 1793239496531
+  },
+  {
+   "type": "instagram_writer",
+   "start": 1793239497292,
+   "end": 1793239497331
+  }
+ ],
+ "overlap": false,
+ "cost": 0.00583613
+}

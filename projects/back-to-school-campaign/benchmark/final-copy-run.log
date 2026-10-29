@@ -1,0 +1,20 @@
+PASS A2-par-1-2026-10-29T03-40-18  53.5s  USD 0.0147  writing 17.8s overlap true
+PASS C2-par-1-2026-10-29T03-40-18  69.1s  USD 0.0177  writing 20.8s overlap true
+PASS A6-par-1-2026-10-29T03-40-18  98.0s  USD 0.0234  writing 26.5s overlap true
+FAIL C3-par-1-2026-10-29T03-40-18  110.9s  USD 0.0322  writing 29.4s overlap true
+   tools: email: 3 attempts, expected 2
+PASS C4-par-1-2026-10-29T03-40-18  66.6s  USD 0.0193  writing 16.9s overlap true
+PASS D1-par-1-2026-10-29T03-40-18  70.8s  USD 0.0160
+PASS C6-par-1-2026-10-29T03-40-18  101.1s  USD 0.0187  writing 14.2s overlap true
+PASS D4-par-1-2026-10-29T03-40-18  65.6s  USD 0.0149  writing 21.4s overlap true
+PASS F7-par-1-2026-10-29T03-40-18  46.7s  USD 0.0107  writing 20.6s overlap true
+PASS D3-par-1-2026-10-29T03-40-18  187.2s  USD 0.0622  writing 40.2s overlap true
+PASS A1-par-1-2026-10-29T03-40-18  191.7s  USD 0.0643  writing 56.6s overlap true
+PASS A1-par-2-2026-10-29T03-40-18  148.9s  USD 0.0505  writing 40.8s overlap true
+PASS A1-par-3-2026-10-29T03-40-18  166.8s  USD 0.0542  writing 40.1s overlap true
+PASS A1-seq-1-2026-10-29T03-40-18  177.4s  USD 0.0412  writing 101.2s overlap false
+PASS A1-seq-2-2026-10-29T03-40-18  241.3s  USD 0.0501  writing 132.9s overlap false
+PASS A1-seq-3-2026-10-29T03-40-18  203.2s  USD 0.0447  writing 120.7s overlap false
+
+10/11 scenarios passed; 15/16 runs; USD 0.535; writing speedup 2.96x, total time reduction 17.9%
+Wrote benchmark/results-final-copy.json

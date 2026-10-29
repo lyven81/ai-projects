@@ -1,0 +1,894 @@
+{
+ "resource": "kiddoz://price-list",
+ "shop": "Kiddoz Uniform House",
+ "campaign_period": {
+  "id": "PL-PERIOD",
+  "start": "2026-10-26",
+  "end": "2026-10-30",
+  "text": "Monday 26 October 2026 to Friday 30 October 2026"
+ },
+ "max_discount_pct": 20,
+ "scope": "Only the 100 campaign SKUs (about 20% of the shop's stock). A product not on this list is not in this campaign.",
+ "categories": [
+  {
+   "code": "PB",
+   "id": "primary_boys",
+   "title": "Primary boys' uniforms",
+   "count": 12
+  },
+  {
+   "code": "PG",
+   "id": "primary_girls",
+   "title": "Primary girls' uniforms",
+   "count": 16
+  },
+  {
+   "code": "SB",
+   "id": "secondary_boys",
+   "title": "Secondary boys' uniforms",
+   "count": 10
+  },
+  {
+   "code": "SG",
+   "id": "secondary_girls",
+   "title": "Secondary girls' uniforms",
+   "count": 14
+  },
+  {
+   "code": "PF",
+   "id": "prefect",
+   "title": "Prefect and student leader uniforms",
+   "count": 12
+  },
+  {
+   "code": "RS",
+   "id": "religious_school",
+   "title": "Religious school uniforms",
+   "count": 10
+  },
+  {
+   "code": "PE",
+   "id": "sports_pe",
+   "title": "Sports and PE clothing",
+   "count": 10
+  },
+  {
+   "code": "CU",
+   "id": "co_curricular",
+   "title": "Co-curricular uniforms",
+   "count": 16
+  }
+ ],
+ "clauses": [
+  {
+   "id": "PL-01",
+   "applies_to": [
+    "PF"
+   ],
+   "text": "Prefect and student leader colours are proposed options. Parents choose the design their school requires; copy never claims an item matches a school's uniform."
+  },
+  {
+   "id": "PL-02",
+   "applies_to": [
+    "RS"
+   ],
+   "text": "Religious school colours are proposed catalogue options and must match the school's requirements; copy never claims an item matches a school's uniform."
+  },
+  {
+   "id": "PL-03",
+   "applies_to": [
+    "PE"
+   ],
+   "text": "PE tops are plain, without school logos or printing; copy never offers logos, printing or school badges."
+  },
+  {
+   "id": "PL-04",
+   "applies_to": [
+    "CU"
+   ],
+   "text": "Each co-curricular garment is sold separately. Badges, scarves, headwear and other accessories are excluded from the campaign; copy never offers them or a full set."
+  }
+ ],
+ "items": [
+  {
+   "sku": "PB01",
+   "category": "primary_boys",
+   "name": "Primary boys' white short-sleeve shirt, standard fabric",
+   "normal_price": 25.0,
+   "promo_price": 20.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PB02",
+   "category": "primary_boys",
+   "name": "Primary boys' white short-sleeve shirt, cotton-rich",
+   "normal_price": 35.0,
+   "promo_price": 29.75,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PB03",
+   "category": "primary_boys",
+   "name": "Primary boys' white short-sleeve shirt, easy-iron",
+   "normal_price": 30.0,
+   "promo_price": 27.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PB04",
+   "category": "primary_boys",
+   "name": "Primary boys' white long-sleeve shirt, standard fabric",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PB05",
+   "category": "primary_boys",
+   "name": "Primary boys' white long-sleeve shirt, cotton-rich",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PB06",
+   "category": "primary_boys",
+   "name": "Primary boys' white long-sleeve shirt, easy-iron",
+   "normal_price": 35.0,
+   "promo_price": 31.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PB07",
+   "category": "primary_boys",
+   "name": "Primary boys' navy blue shorts, standard fabric",
+   "normal_price": 25.0,
+   "promo_price": 20.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PB08",
+   "category": "primary_boys",
+   "name": "Primary boys' navy blue shorts, cotton-rich",
+   "normal_price": 35.0,
+   "promo_price": 29.75,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PB09",
+   "category": "primary_boys",
+   "name": "Primary boys' navy blue shorts, adjustable waist",
+   "normal_price": 30.0,
+   "promo_price": 27.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PB10",
+   "category": "primary_boys",
+   "name": "Primary boys' navy blue long trousers, standard fabric",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PB11",
+   "category": "primary_boys",
+   "name": "Primary boys' navy blue long trousers, cotton-rich",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PB12",
+   "category": "primary_boys",
+   "name": "Primary boys' navy blue long trousers, adjustable waist",
+   "normal_price": 40.0,
+   "promo_price": 36.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PG01",
+   "category": "primary_girls",
+   "name": "Primary girls' white short-sleeve blouse, standard fabric",
+   "normal_price": 25.0,
+   "promo_price": 20.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PG02",
+   "category": "primary_girls",
+   "name": "Primary girls' white short-sleeve blouse, cotton-rich",
+   "normal_price": 35.0,
+   "promo_price": 29.75,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PG03",
+   "category": "primary_girls",
+   "name": "Primary girls' white long-sleeve blouse, standard fabric",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PG04",
+   "category": "primary_girls",
+   "name": "Primary girls' white long-sleeve blouse, cotton-rich",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PG05",
+   "category": "primary_girls",
+   "name": "Primary girls' navy blue pinafore, standard fabric",
+   "normal_price": 45.0,
+   "promo_price": 36.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PG06",
+   "category": "primary_girls",
+   "name": "Primary girls' navy blue pinafore, easy-iron",
+   "normal_price": 50.0,
+   "promo_price": 42.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PG07",
+   "category": "primary_girls",
+   "name": "Primary girls' navy blue pinafore, cotton-rich",
+   "normal_price": 60.0,
+   "promo_price": 54.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PG08",
+   "category": "primary_girls",
+   "name": "Primary girls' white baju kurung top, standard fabric",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PG09",
+   "category": "primary_girls",
+   "name": "Primary girls' white baju kurung top, cotton-rich",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PG10",
+   "category": "primary_girls",
+   "name": "Primary girls' white baju kurung top, easy-iron",
+   "normal_price": 40.0,
+   "promo_price": 36.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PG11",
+   "category": "primary_girls",
+   "name": "Primary girls' navy blue baju kurung skirt, standard fabric",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PG12",
+   "category": "primary_girls",
+   "name": "Primary girls' navy blue baju kurung skirt, cotton-rich",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PG13",
+   "category": "primary_girls",
+   "name": "Primary girls' navy blue baju kurung skirt, easy-iron",
+   "normal_price": 35.0,
+   "promo_price": 31.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PG14",
+   "category": "primary_girls",
+   "name": "Primary girls' white pull-on school tudung, standard",
+   "normal_price": 15.0,
+   "promo_price": 12.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PG15",
+   "category": "primary_girls",
+   "name": "Primary girls' white pull-on school tudung, cotton jersey",
+   "normal_price": 20.0,
+   "promo_price": 17.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PG16",
+   "category": "primary_girls",
+   "name": "Primary girls' white long school tudung",
+   "normal_price": 25.0,
+   "promo_price": 22.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "SB01",
+   "category": "secondary_boys",
+   "name": "Secondary boys' white short-sleeve shirt, standard fabric",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SB02",
+   "category": "secondary_boys",
+   "name": "Secondary boys' white short-sleeve shirt, cotton-rich",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SB03",
+   "category": "secondary_boys",
+   "name": "Secondary boys' white short-sleeve shirt, easy-iron",
+   "normal_price": 35.0,
+   "promo_price": 31.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "SB04",
+   "category": "secondary_boys",
+   "name": "Secondary boys' white long-sleeve shirt, standard fabric",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SB05",
+   "category": "secondary_boys",
+   "name": "Secondary boys' white long-sleeve shirt, cotton-rich",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SB06",
+   "category": "secondary_boys",
+   "name": "Secondary boys' white long-sleeve shirt, easy-iron",
+   "normal_price": 40.0,
+   "promo_price": 36.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "SB07",
+   "category": "secondary_boys",
+   "name": "Secondary boys' olive green trousers, standard fabric",
+   "normal_price": 40.0,
+   "promo_price": 32.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SB08",
+   "category": "secondary_boys",
+   "name": "Secondary boys' olive green trousers, cotton-rich",
+   "normal_price": 50.0,
+   "promo_price": 42.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SB09",
+   "category": "secondary_boys",
+   "name": "Secondary boys' olive green trousers, easy-iron",
+   "normal_price": 45.0,
+   "promo_price": 40.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "SB10",
+   "category": "secondary_boys",
+   "name": "Secondary boys' olive green trousers, adjustable waist",
+   "normal_price": 50.0,
+   "promo_price": 45.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "SG01",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white short-sleeve blouse, standard fabric",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SG02",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white short-sleeve blouse, cotton-rich",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SG03",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white long-sleeve blouse, standard fabric",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SG04",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white long-sleeve blouse, cotton-rich",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SG05",
+   "category": "secondary_girls",
+   "name": "Secondary girls' turquoise pinafore, standard fabric",
+   "normal_price": 50.0,
+   "promo_price": 40.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SG06",
+   "category": "secondary_girls",
+   "name": "Secondary girls' turquoise pinafore, easy-iron",
+   "normal_price": 55.0,
+   "promo_price": 46.75,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SG07",
+   "category": "secondary_girls",
+   "name": "Secondary girls' turquoise pinafore, cotton-rich",
+   "normal_price": 65.0,
+   "promo_price": 58.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "SG08",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white baju kurung top, standard fabric",
+   "normal_price": 40.0,
+   "promo_price": 32.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SG09",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white baju kurung top, cotton-rich",
+   "normal_price": 50.0,
+   "promo_price": 42.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SG10",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white baju kurung top, easy-iron",
+   "normal_price": 45.0,
+   "promo_price": 40.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "SG11",
+   "category": "secondary_girls",
+   "name": "Secondary girls' turquoise baju kurung skirt, standard fabric",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "SG12",
+   "category": "secondary_girls",
+   "name": "Secondary girls' turquoise baju kurung skirt, cotton-rich",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SG13",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white pull-on school tudung, cotton jersey",
+   "normal_price": 25.0,
+   "promo_price": 21.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "SG14",
+   "category": "secondary_girls",
+   "name": "Secondary girls' white long school tudung",
+   "normal_price": 30.0,
+   "promo_price": 27.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PF01",
+   "category": "prefect",
+   "name": "Boys’ light blue short-sleeve prefect shirt",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PF02",
+   "category": "prefect",
+   "name": "Boys’ light blue long-sleeve prefect shirt",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PF03",
+   "category": "prefect",
+   "name": "Boys’ navy blue prefect trousers",
+   "normal_price": 45.0,
+   "promo_price": 36.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PF04",
+   "category": "prefect",
+   "name": "Boys’ black prefect trousers",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PF05",
+   "category": "prefect",
+   "name": "Girls’ light blue long-sleeve prefect blouse",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PF06",
+   "category": "prefect",
+   "name": "Girls’ navy blue prefect skirt",
+   "normal_price": 40.0,
+   "promo_price": 32.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PF07",
+   "category": "prefect",
+   "name": "Girls’ navy blue prefect pinafore",
+   "normal_price": 60.0,
+   "promo_price": 51.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PF08",
+   "category": "prefect",
+   "name": "Light blue prefect baju kurung top",
+   "normal_price": 45.0,
+   "promo_price": 36.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PF09",
+   "category": "prefect",
+   "name": "Navy blue prefect baju kurung skirt",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PF10",
+   "category": "prefect",
+   "name": "Navy blue prefect vest",
+   "normal_price": 40.0,
+   "promo_price": 36.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PF11",
+   "category": "prefect",
+   "name": "Navy blue prefect blazer",
+   "normal_price": 100.0,
+   "promo_price": 90.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PF12",
+   "category": "prefect",
+   "name": "Beige short-sleeve librarian shirt",
+   "normal_price": 35.0,
+   "promo_price": 29.75,
+   "discount_pct": 15
+  },
+  {
+   "sku": "RS01",
+   "category": "religious_school",
+   "name": "White boys’ baju Melayu top, standard fabric",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "RS02",
+   "category": "religious_school",
+   "name": "White boys’ baju Melayu top, cotton-rich",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "RS03",
+   "category": "religious_school",
+   "name": "White boys’ baju Melayu trousers",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "RS04",
+   "category": "religious_school",
+   "name": "Black boys’ baju Melayu trousers",
+   "normal_price": 30.0,
+   "promo_price": 25.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "RS05",
+   "category": "religious_school",
+   "name": "White girls’ baju kurung top, standard fabric",
+   "normal_price": 35.0,
+   "promo_price": 28.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "RS06",
+   "category": "religious_school",
+   "name": "White girls’ baju kurung top, cotton-rich",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "RS07",
+   "category": "religious_school",
+   "name": "Black girls’ baju kurung skirt",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "RS08",
+   "category": "religious_school",
+   "name": "White girls’ baju kurung skirt",
+   "normal_price": 30.0,
+   "promo_price": 25.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "RS09",
+   "category": "religious_school",
+   "name": "White long religious school tudung",
+   "normal_price": 25.0,
+   "promo_price": 22.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "RS10",
+   "category": "religious_school",
+   "name": "Black plain songkok",
+   "normal_price": 20.0,
+   "promo_price": 18.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PE01",
+   "category": "sports_pe",
+   "name": "White short-sleeve cotton PE T-shirt",
+   "normal_price": 20.0,
+   "promo_price": 16.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PE02",
+   "category": "sports_pe",
+   "name": "White long-sleeve cotton PE T-shirt",
+   "normal_price": 25.0,
+   "promo_price": 20.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PE03",
+   "category": "sports_pe",
+   "name": "Navy blue short-sleeve quick-dry PE T-shirt",
+   "normal_price": 25.0,
+   "promo_price": 21.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PE04",
+   "category": "sports_pe",
+   "name": "Navy blue long-sleeve quick-dry PE T-shirt",
+   "normal_price": 30.0,
+   "promo_price": 25.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PE05",
+   "category": "sports_pe",
+   "name": "Navy blue Muslimah sports top",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PE06",
+   "category": "sports_pe",
+   "name": "Black Muslimah sports top",
+   "normal_price": 40.0,
+   "promo_price": 36.0,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PE07",
+   "category": "sports_pe",
+   "name": "Black track pants, straight cut",
+   "normal_price": 30.0,
+   "promo_price": 24.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "PE08",
+   "category": "sports_pe",
+   "name": "Navy blue track pants, straight cut",
+   "normal_price": 30.0,
+   "promo_price": 25.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "PE09",
+   "category": "sports_pe",
+   "name": "Black track pants, cuffed ankle",
+   "normal_price": 35.0,
+   "promo_price": 31.5,
+   "discount_pct": 10
+  },
+  {
+   "sku": "PE10",
+   "category": "sports_pe",
+   "name": "Navy blue sports shorts",
+   "normal_price": 20.0,
+   "promo_price": 16.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "CU01",
+   "category": "co_curricular",
+   "name": "Pengakap short-sleeve uniform shirt",
+   "normal_price": 45.0,
+   "promo_price": 36.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "CU02",
+   "category": "co_curricular",
+   "name": "Pengakap long-sleeve uniform shirt",
+   "normal_price": 50.0,
+   "promo_price": 42.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU03",
+   "category": "co_curricular",
+   "name": "Pengakap uniform trousers",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU04",
+   "category": "co_curricular",
+   "name": "Pandu Puteri Tunas uniform dress",
+   "normal_price": 65.0,
+   "promo_price": 55.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU05",
+   "category": "co_curricular",
+   "name": "Pandu Puteri uniform blouse",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU06",
+   "category": "co_curricular",
+   "name": "Pandu Puteri uniform skirt",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU07",
+   "category": "co_curricular",
+   "name": "TKRS short-sleeve uniform shirt",
+   "normal_price": 40.0,
+   "promo_price": 32.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "CU08",
+   "category": "co_curricular",
+   "name": "TKRS long-sleeve uniform shirt",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU09",
+   "category": "co_curricular",
+   "name": "TKRS uniform trousers",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU10",
+   "category": "co_curricular",
+   "name": "KRS short-sleeve uniform shirt",
+   "normal_price": 45.0,
+   "promo_price": 36.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "CU11",
+   "category": "co_curricular",
+   "name": "KRS long-sleeve uniform shirt",
+   "normal_price": 50.0,
+   "promo_price": 42.5,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU12",
+   "category": "co_curricular",
+   "name": "KRS uniform trousers",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU13",
+   "category": "co_curricular",
+   "name": "Puteri Islam uniform top",
+   "normal_price": 45.0,
+   "promo_price": 38.25,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU14",
+   "category": "co_curricular",
+   "name": "Puteri Islam uniform skirt",
+   "normal_price": 40.0,
+   "promo_price": 34.0,
+   "discount_pct": 15
+  },
+  {
+   "sku": "CU15",
+   "category": "co_curricular",
+   "name": "BSMM short-sleeve uniform shirt",
+   "normal_price": 45.0,
+   "promo_price": 36.0,
+   "discount_pct": 20
+  },
+  {
+   "sku": "CU16",
+   "category": "co_curricular",
+   "name": "BSMM long-sleeve uniform shirt",
+   "normal_price": 50.0,
+   "promo_price": 42.5,
+   "discount_pct": 15
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "run_id": "A1-par-1-2026-10-29T03-40-18",
+ "scored": "2026-10-29T04:42:53.263Z",
+ "channels": {
+  "whatsapp": {
+   "scores": {
+    "natural": 5,
+    "channel": 5,
+    "persuasive": 5,
+    "tone": 5
+   },
+   "note": "",
+   "pass": true
+  },
+  "instagram": {
+   "scores": {
+    "natural": 5,
+    "channel": 5,
+    "persuasive": 5,
+    "tone": 5
+   },
+   "note": "Tone score 5 given by the founder in chat, 29 Oct 2026 (the row was left blank on the page).",
+   "pass": true
+  },
+  "email": {
+   "scores": {
+    "natural": 5,
+    "channel": 5,
+    "persuasive": 5,
+    "tone": 5
+   },
+   "note": "",
+   "pass": true
+  },
+  "blog": {
+   "scores": {
+    "natural": 5,
+    "channel": 5,
+    "persuasive": 5,
+    "tone": 5
+   },
+   "note": "",
+   "pass": true
+  },
+  "seo": {
+   "scores": {
+    "natural": 5,
+    "channel": 5,
+    "persuasive": 5,
+    "tone": 5
+   },
+   "note": "",
+   "pass": true
+  }
+ },
+ "overall_note": "",
+ "pass": true
+}

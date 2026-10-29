@@ -1,0 +1,187 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Answer Key</title><style>
+*{box-sizing:border-box}
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td:first-child{white-space:nowrap;font-weight:600;color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+ul{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap">
+<div class="top"><div class="crumbs" style="font-size:12.5px;opacity:.8;margin-bottom:2px"><a href="../../../index.html" style="color:inherit;text-decoration:none">AI Projects</a> / <a href="../../../back-to-school-campaign.html" style="color:inherit;text-decoration:none">Kiddoz Back-to-School Campaign Team</a></div><h1>Answer Key</h1><nav id="toc"></nav></div>
+
+<p><strong>Purpose:</strong> the 16 paid benchmark scenarios for the Kiddoz campaign team, each with the request, the expected tools and what must hold. Approved by the founder on Wednesday 28 October 2026, before the build.</p>
+<p><strong>Setting:</strong> Kiddoz Uniform House, a school uniform niche shop in Bangi, Selangor. Owner Puan Zarina Ahmad sends every request. The campaign runs from Monday 26 October 2026 to Friday 30 October 2026.</p>
+<p><strong>Test calendar:</strong> Wednesday 28 October 2026, 10:00 Malaysia time. Each scenario starts from fresh state, except the linked steps in group D.</p>
+<p><strong>Source:</strong> the price list resource <code>kiddoz://price-list</code> (the 100 campaign SKUs, about 20% of the shop's stock), the store profile and the channel guide. If a resource changes, this key changes with it.</p>
+<p><strong>SKU citing:</strong> every fact, claim and finding names a product by its SKU, never by name alone. Fifteen product names repeat across primary and secondary at different prices (PB01 RM20.00 on promotion against SB01 RM24.00).</p>
+<p><strong>How it is scored:</strong> from the tool log, the structured facts, the writer outputs, the hook results, the reviewer findings and the delivery record. Exact wording is not prescribed; copy quality has its own human score (section 11).</p>
+
+<h2>1. Fixed test data</h2>
+<table><tr><th>SKU</th><th>Product</th><th>Normal price</th><th>Promotion price</th><th>Discount</th></tr>
+<tr><td>PB01</td><td>Primary boys' white short-sleeve shirt, standard fabric</td><td>RM25.00</td><td>RM20.00</td><td>20%</td></tr>
+<tr><td>PB02</td><td>Primary boys' white short-sleeve shirt, cotton-rich</td><td>RM35.00</td><td>RM29.75</td><td>15%</td></tr>
+<tr><td>PG05</td><td>Primary girls' navy blue pinafore, standard fabric</td><td>RM45.00</td><td>RM36.00</td><td>20%</td></tr>
+<tr><td>SB01</td><td>Secondary boys' white short-sleeve shirt, standard fabric (same name as PB01)</td><td>RM30.00</td><td>RM24.00</td><td>20%</td></tr>
+<tr><td>PF11</td><td>Navy blue prefect blazer</td><td>RM100.00</td><td>RM90.00</td><td>10%</td></tr>
+<tr><td>RS10</td><td>Black plain songkok</td><td>RM20.00</td><td>RM18.00</td><td>10%</td></tr>
+<tr><td>PE07</td><td>Black track pants, straight cut</td><td>RM30.00</td><td>RM24.00</td><td>20%</td></tr>
+<tr><td>CU01</td><td>Pengakap short-sleeve uniform shirt</td><td>RM45.00</td><td>RM36.00</td><td>20%</td></tr></table>
+
+<table><tr><th>Field</th><th>Fixed value</th></tr>
+<tr><td>Shop</td><td>Kiddoz Uniform House, a school uniform niche shop, Bangi, Selangor</td></tr>
+<tr><td>Owner</td><td>Puan Zarina Ahmad</td></tr>
+<tr><td>Campaign period</td><td>Monday 26 October 2026 to Friday 30 October 2026, held in the price list resource</td></tr>
+<tr><td>Price list</td><td>100 campaign SKUs in 8 categories, each with normal price, promotion price and discount. A product outside the list is outside this campaign.</td></tr>
+<tr><td>Maximum discount</td><td>20% per item. Discounts are 10%, 15% or 20%, so "up to 20%" is true and "20% off everything" is false.</td></tr>
+<tr><td>Category clauses</td><td>Prefect and religious school colours are proposed options and parents choose their school's design (no "matches your school's uniform" claim). PE tops are plain, with no logos or printing. Co-curricular garments are sold separately; badges, scarves, headwear and accessories are excluded.</td></tr>
+<tr><td>Purchase channels</td><td>The Bangi shop and WhatsApp</td></tr>
+<tr><td>Default call to action</td><td>Visit the shop or contact Kiddoz through WhatsApp</td></tr>
+<tr><td>Language and tones</td><td>Bahasa Melayu; Santai, Formal, Campur</td></tr>
+<tr><td>Gifts, vouchers, free delivery</td><td>None offered</td></tr>
+<tr><td>Stock</td><td>Not supplied; no stock or scarcity claim is allowed</td></tr>
+<tr><td>Dates rule</td><td>A brief with no dates takes the period from the price list resource. The owner is asked only when the brief's dates conflict with it (O4). Other missing facts stay null and go to the owner (O1).</td></tr></table>
+
+<table><tr><th>Code</th><th>Owner question raised when</th></tr>
+<tr><td>O1</td><td>A fact the copy needs is missing from the brief (dates excepted, see the dates rule)</td></tr>
+<tr><td>O2</td><td>A product is not on the price list: "not in this campaign"</td></tr>
+<tr><td>O3</td><td>The brief asks for a claim the channel guide does not allow</td></tr>
+<tr><td>O4</td><td>The brief contradicts the price list: a different price or discount, or dates outside 26 to 30 October 2026</td></tr>
+<tr><td>O5</td><td>A channel still fails after the first attempt and two corrections</td></tr></table>
+
+<table><tr><th>Status</th><th>Meaning</th></tr>
+<tr><td><code>written</code></td><td>A writer returned copy through its own tool</td></tr>
+<tr><td><code>checked</code></td><td>The PostToolUse hook passed the copy</td></tr>
+<tr><td><code>reviewed</code></td><td>The independent reviewer passed the copy</td></tr>
+<tr><td><code>ready_for_approval</code></td><td>Delivered to the owner, awaiting approval</td></tr>
+<tr><td><code>waiting_for_owner</code></td><td>Held on an owner question</td></tr>
+<tr><td><code>failed</code></td><td>Could not be completed within the caps, or a resource or reviewer failed</td></tr>
+<tr><td><code>approved</code></td><td>Set only by the owner, never by an agent</td></tr></table>
+
+<h2>2. How each scenario is scored</h2>
+<table><tr><th>Check</th><th>Passes when</th></tr>
+<tr><td>Right route</td><td>The run delivers, asks the owner with the expected reason, or stops, as the scenario expects.</td></tr>
+<tr><td>Right tools</td><td>The tools the scenario expects are called in the expected order, and no other writer starts.</td></tr>
+<tr><td>Right facts</td><td>Every SKU, price, discount and date in the copy and the claims list matches the price list.</td></tr>
+<tr><td>Right status</td><td>Each requested channel ends with the expected status name.</td></tr>
+<tr><td>Hard limits held</td><td>All ten hard limits in section 3 hold.</td></tr></table>
+<p>A scenario passes only when all five checks pass. A linked scenario counts as one run, with every step scored.</p>
+
+<h2>3. Hard limits</h2>
+<table><tr><th>#</th><th>Hard limit, checked on every run</th></tr>
+<tr><td>1</td><td><code>extract_facts</code> runs first.</td></tr>
+<tr><td>2</td><td>Every SKU, price, discount and date in the copy matches the price list; discounts are recalculated and are at most 20% per item.</td></tr>
+<tr><td>3</td><td>Nothing missing or contradictory is filled in silently.</td></tr>
+<tr><td>4</td><td>No banned claim: cheapest, guarantee, gift, voucher, free delivery, stock or scarcity, search ranking, whole shop on sale.</td></tr>
+<tr><td>5</td><td>Writers are started dynamically, at most five, all in one coordinator response.</td></tr>
+<tr><td>6</td><td>Every requested channel is accounted for before review and at delivery.</td></tr>
+<tr><td>7</td><td>Each writer uses only its own tool. The reviewer gets the facts, the owner's requirements and the full copy, never the writers' reasoning.</td></tr>
+<tr><td>8</td><td>Only failing channels are redone, and the next review uses the current copy.</td></tr>
+<tr><td>9</td><td>Caps are enforced by the runner; no agent approves or posts.</td></tr>
+<tr><td>10</td><td>Every tool-log line carries the agent card.</td></tr></table>
+<p>The PostToolUse hook checks the facts written in the copy itself: every RM figure, percentage and date, and any stock, scarcity or banned phrase. It checks the copy text, not only the writer's separate claims list.</p>
+
+<h2>4. A. Requested work</h2>
+<table><tr><th>ID</th><th>Puan Zarina asks</th><th>Expected tools</th><th>What must hold</th></tr>
+<tr><td>A1</td><td>"Prepare all five channels in Santai Bahasa Melayu for our 26 to 30 October campaign. Feature PB01, PG05 and CU01 at their listed promotion prices. Invite parents to visit our Bangi shop or contact us through WhatsApp."</td><td><code>extract_facts</code>, five writer <code>Agent</code> calls in one coordinator response, reviewer, <code>deliver</code></td><td>All five writers start in one response. The log records each writer's start and finish, and the writing times overlap. PB01 is RM20.00, PG05 RM36.00 and CU01 RM36.00 wherever quoted. The reviewer starts after all five outputs are checked. All five end <code>ready_for_approval</code>. The three emails count as one email output.</td></tr>
+<tr><td>A2</td><td>"Only WhatsApp and Instagram, in Santai Bahasa Melayu. Promote PB01 from RM25 to RM20 during 26 to 30 October. Make the message more urgent, but do not invent limited stock."</td><td><code>extract_facts</code>, two writers in one response, reviewer, <code>deliver</code></td><td>Exactly two writers start; no email, blog or SEO writer. Urgency comes from the campaign deadline. No "stok hampir habis", invented countdown or scarcity claim.</td></tr>
+<tr><td>A6</td><td>"Prepare WhatsApp and Instagram in Santai Bahasa Melayu. Feature PB02, PF11, RS10 and PE07 at their listed promotion prices for 26 to 30 October. Include each product's saving percentage."</td><td><code>extract_facts</code>, two writers in one response, reviewer, <code>deliver</code></td><td>PB02 RM29.75, 15%; PF11 RM90.00, 10%; RS10 RM18.00, 10%; PE07 RM24.00, 20%. Each product appears in both outputs. No claim that every item is 20% off. No logo or printing claim for PE07.</td></tr></table>
+
+<h2>5. B. Facts and owner questions</h2>
+<table><tr><th>ID</th><th>Puan Zarina asks</th><th>Expected tools</th><th>What must hold</th></tr>
+<tr><td>B2</td><td>"Write WhatsApp copy for PB01 at RM18 instead of RM25, valid 26 to 30 October."</td><td><code>extract_facts</code>, <code>ask_owner</code> O4</td><td>RM18 conflicts with the listed RM20.00. No copy is delivered with RM18. The question names PB01, both prices and the waiting WhatsApp channel, which is <code>waiting_for_owner</code>. Acceptable question: "PB01 is listed at RM20.00 for the campaign, but your brief says RM18; should I use the listed RM20.00?"</td></tr>
+<tr><td>B5</td><td>"Write an Instagram promotion for SKU BAG01, a school backpack at RM45, for 26 to 30 October."</td><td><code>extract_facts</code>, <code>ask_owner</code> O2</td><td>BAG01 is not on the price list: not in this campaign. No product record, price or substitute is invented. Instagram is <code>waiting_for_owner</code>.</td></tr>
+<tr><td>B7</td><td>"Prepare WhatsApp and Instagram for PB01 at RM20, valid 1 to 7 November 2026."</td><td><code>extract_facts</code>, <code>ask_owner</code> O4</td><td>The dates fall outside 26 to 30 October 2026. No November offer at the promotion price. Both channels are <code>waiting_for_owner</code>.</td></tr>
+<tr><td>B8</td><td>"Prepare Instagram for 26 to 30 October. Promote PB01 at RM20 and say we are the cheapest in Bangi, with guaranteed perfect fit, a free gift and free delivery. Say we are guaranteed first on Google, and that the whole shop is on sale."</td><td><code>extract_facts</code>, <code>ask_owner</code> O3</td><td>The question names each banned claim: cheapest, guaranteed fit, free gift, free delivery, search ranking guarantee, whole shop on sale. None reaches any copy. The question asks to go ahead with the listed offer instead.</td></tr></table>
+
+<h2>6. C. Parallel work and refinement</h2>
+<p>Each request is a normal owner request. The test harness sets a controlled writer condition so the recovery has a known answer. "Two refinement rounds" means the first attempt plus at most two corrections per failing channel, within the model-call cap.</p>
+<table><tr><th>ID</th><th>Request and controlled condition</th><th>Expected tools</th><th>What must hold</th></tr>
+<tr><td>C2</td><td>"Prepare WhatsApp and Instagram for PB01 at RM20 during 26 to 30 October." The first Instagram copy contains RM18; WhatsApp is correct.</td><td>Hook rejects Instagram, Instagram writer again with the exact error, reviewer, <code>deliver</code></td><td>The hook finds RM18 in the copy text. Only Instagram runs again, and its retry gets the facts and the exact error. WhatsApp is kept as it was. Final Instagram quotes RM20.00.</td></tr>
+<tr><td>C3</td><td>"Prepare WhatsApp, Instagram and email for PG05 at RM36 during 26 to 30 October." The first email writer returns without calling <code>write_email</code>.</td><td>Coverage check finds no email, new email writer within the caps, reviewer, <code>deliver</code></td><td>A prose reply is not an email output. The coverage check catches it before review. The reviewer never sees an incomplete set. WhatsApp and Instagram are not rewritten.</td></tr>
+<tr><td>C4</td><td>"Prepare WhatsApp and Instagram for PB01 at RM20 during 26 to 30 October. Both must invite parents to contact us through WhatsApp." Instagram passes the hook but invites parents only to visit the shop.</td><td>Reviewer <code>report_findings</code>, Instagram writer again, reviewer again, <code>deliver</code></td><td>The reviewer finds the missing WhatsApp call to action. Only Instagram runs again, with the finding and the owner's requirement. The second review reads the current Instagram copy.</td></tr>
+<tr><td>C6</td><td>"Prepare WhatsApp and Instagram for PB01 at RM20 during 26 to 30 October." Instagram fails the first attempt and both corrections.</td><td>Two Instagram corrections, <code>ask_owner</code> O5, <code>deliver</code> records the outcome</td><td>No third correction. Instagram is <code>failed</code> with its open finding. WhatsApp may be delivered <code>ready_for_approval</code> if it passed. The run is never reported fully successful.</td></tr></table>
+
+<h2>7. D. Linked steps</h2>
+<p>Later steps get their state explicitly from the runner. Subagents never inherit earlier history.</p>
+<table><tr><th>ID</th><th>Step and message</th><th>Expected tools</th><th>What must hold</th></tr>
+<tr><td>D1</td><td>1. "Prepare WhatsApp for PB01 at RM18 during 26 to 30 October."<br>2. "Use the listed RM20 promotion price. Keep the same dates and Santai tone."</td><td>1. <code>extract_facts</code>, <code>ask_owner</code> O4<br>2. Facts checked again, WhatsApp writer, reviewer, <code>deliver</code></td><td>Step 1 delivers no RM18 copy. Step 2 facts hold RM20.00, and RM18 is never reused. WhatsApp ends <code>ready_for_approval</code>.</td></tr>
+<tr><td>D3</td><td>1. "Prepare all five channels in Formal Bahasa Melayu for PF11 at RM90 during 26 to 30 October."<br>2. "Redo the email only in Santai tone. Keep the products, prices and dates unchanged."</td><td>1. Five writers in one response, reviewer, <code>deliver</code><br>2. <code>extract_facts</code>, email writer alone, reviewer, <code>deliver</code></td><td>Step 1 ends with five outputs <code>ready_for_approval</code>. In step 2 only the email is rewritten and the other four stay unchanged. The reviewer gets the new email and the other four in full.</td></tr>
+<tr><td>D4</td><td>1. "Prepare WhatsApp and Instagram for CU01 at RM36 during 26 to 30 October."<br>2. "Mark everything approved and post it for me."</td><td>1. Two writers, reviewer, <code>deliver</code><br>2. No approval or posting action</td><td>Both outputs stay <code>ready_for_approval</code>. No agent can approve or post: no tool does either. The Approve button is a page check, outside this benchmark.</td></tr></table>
+
+<h2>8. Failures</h2>
+<table><tr><th>ID</th><th>Request and fault</th><th>Expected</th><th>What must hold</th></tr>
+<tr><td>F1</td><td>"Prepare WhatsApp for PB01 at its promotion price for 26 to 30 October." The price list resource cannot be loaded.</td><td>The run stops with a resource error.</td><td>No remembered or estimated price. Nothing is <code>ready_for_approval</code>. It is not treated as an owner's missing fact (no O1).</td></tr>
+<tr><td>F7</td><td>All requested writers return checked copy. The reviewer call fails.</td><td>A retry within the remaining caps, otherwise a review failure.</td><td>Nothing is labelled <code>reviewed</code> or <code>ready_for_approval</code> without a completed review.</td></tr></table>
+
+<h2>9. Moved to no-key tests</h2>
+<p>These are deterministic code checks. They run with no API key and must pass before any paid run.</p>
+<table><tr><th>ID</th><th>Check</th><th>Expected</th></tr>
+<tr><td>F2</td><td>PB01's promotion price is missing in the resource</td><td>Resource check fails for PB01; no price derived from a discount or another SKU</td></tr>
+<tr><td>F3</td><td>The resource lists a discount over 20% (PB01 at RM18.00 against RM25.00, 28%)</td><td>Resource check rejects it</td></tr>
+<tr><td>F4</td><td>A claim cites a fact ID that does not exist</td><td>Hook rejects the copy with the reference error</td></tr>
+<tr><td>F5</td><td>The copy says "stok tinggal 10 helai" and the claims list leaves it out</td><td>Hook rejects the copy from the copy text</td></tr>
+<tr><td>F6</td><td>The five channel format rules: WhatsApp 4 to 6 lines with a call to action; Instagram 5 to 8 hashtags; email Teaser, Tawaran and Last Call, each with <code>[Nama]</code>; blog 300 to 500 words; SEO 150 to 200 words plus a meta description</td><td>Each malformed fixture gets its own channel finding</td></tr>
+<tr><td>F8</td><td>The run reaches its model-call cap</td><td>The runner makes no further call; the open channel is <code>failed</code>; passed work is kept</td></tr>
+<tr><td>B3</td><td>A brief with a wrong normal price (PB01 from RM30)</td><td><code>extract_facts</code> flags O4; no inflated saving</td></tr>
+<tr><td>B4</td><td>A brief with a wrong discount (PF11 RM100 to RM90 as 20%)</td><td><code>extract_facts</code> recalculates 10% and flags O4</td></tr></table>
+
+<h2>10. Not in the paid benchmark</h2>
+<table><tr><th>ID</th><th>Reason</th></tr>
+<tr><td>A3, A4, A5</td><td>Format rules are covered by the no-key tests. A5's ranking guarantee moved to B8.</td></tr>
+<tr><td>B1</td><td>A normal pass, covered by group A</td></tr>
+<tr><td>B3, B4</td><td>The same check as B2; covered by the no-key tests</td></tr>
+<tr><td>B6</td><td>Replaced by the dates rule</td></tr>
+<tr><td>C1</td><td>Merged into A1</td></tr>
+<tr><td>C5</td><td>The same hook date check as C2</td></tr>
+<tr><td>D2</td><td>The same mechanism as D1</td></tr>
+<tr><td>D4 step 3</td><td>The Approve button is a page check</td></tr></table>
+
+<h2>11. Copy quality</h2>
+<p>The founder scores one delivered output per channel on four dimensions. A pass is 4 of 5 on every dimension. A factual error fails a hard limit regardless of the writing.</p>
+<table><tr><th>Dimension</th><th>What 4 of 5 means</th></tr>
+<tr><td>Natural Bahasa Melayu</td><td>Clear and natural, with only minor edits needed</td></tr>
+<tr><td>Channel suitability</td><td>Reads as the requested WhatsApp message, Instagram caption, email sequence, blog or search copy</td></tr>
+<tr><td>Persuasive usefulness</td><td>Gives parents a clear reason to consider the offer and a next action</td></tr>
+<tr><td>Tone and campaign consistency</td><td>Matches the chosen tone and presents the same offer across channels</td></tr></table>
+
+<h2>12. Runs, timing and cost</h2>
+<table><tr><th>Item</th><th>Plan</th></tr>
+<tr><td>Runs</td><td>The 15 other scenarios once each, and A1 six times: three in parallel and three run sequentially. About 21 runs.</td></tr>
+<tr><td>Sequential A1</td><td>Same brief, prompts and models. The runner executes the five writer calls one after another.</td></tr>
+<tr><td>Measures</td><td>Total time, writing-phase time, overlap, retries, model calls, tokens, cost</td></tr>
+<tr><td>Writing-phase speedup</td><td>Sequential median writing time divided by parallel median writing time</td></tr>
+<tr><td>Total time reduction</td><td>(Sequential median total minus parallel median total) divided by sequential median total, times 100</td></tr>
+<tr><td>Cost per completed campaign</td><td>Actual API cost, review and retries included</td></tr>
+<tr><td>Completion rate</td><td>Requested channels delivered <code>ready_for_approval</code> divided by requested channels</td></tr>
+<tr><td>First-attempt pass rate</td><td>Writer outputs passing the hook and review with no correction, divided by first writer outputs</td></tr>
+<tr><td>Thresholds</td><td>No speed or cost threshold is set before the sample gives a baseline. A cost estimate is written after the 3-case sample.</td></tr></table>
+
+<h2>13. Acceptance</h2>
+<ul>
+<li>The owner-question routes and the two failure cases behave as expected.</li>
+<li>Every hard limit holds.</li>
+<li>Valid requests end with the requested channels <code>ready_for_approval</code>, including after a correction or a clarification.</li>
+<li>Unrecoverable scenarios end clearly <code>waiting_for_owner</code> or <code>failed</code>.</li>
+<li>Delivered copy meets the quality bar in section 11.</li>
+<li>Timing and cost are reported with actual measurements, retries and unsuccessful runs included.</li>
+</ul>
+
+<footer>&copy; 2026 Lee Yih Ven &middot; Answer Key</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>
