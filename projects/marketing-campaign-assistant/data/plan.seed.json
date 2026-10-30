@@ -1,0 +1,162 @@
+{
+  "changes": [
+    {
+      "id": "P-02",
+      "campaign_id": "TT-13",
+      "type": "pause",
+      "change": {},
+      "target": {
+        "rule": "T1",
+        "deadline": "2026-10-25"
+      },
+      "status": "approved",
+      "decided": {
+        "by": "Owner",
+        "at": "2026-09-28T10:07"
+      },
+      "action": {
+        "action": "Paused",
+        "date": "2026-09-30",
+        "new_setting": "Paused"
+      }
+    },
+    {
+      "id": "P-03",
+      "campaign_id": "IG-14",
+      "type": "budget_shift",
+      "change": {
+        "from_weekly_rm": 210,
+        "to_weekly_rm": 178
+      },
+      "target": {
+        "rule": "T3",
+        "deadline": "2026-10-25"
+      },
+      "status": "approved",
+      "decided": {
+        "by": "Owner",
+        "at": "2026-09-28T10:10"
+      },
+      "action": null
+    },
+    {
+      "id": "P-04",
+      "campaign_id": "IG-15",
+      "type": "test_boost",
+      "change": {
+        "from_weekly_rm": 250,
+        "to_weekly_rm": 288,
+        "extra_rm": 152
+      },
+      "target": {
+        "rule": "T2",
+        "deadline": "2026-10-25"
+      },
+      "status": "approved",
+      "decided": {
+        "by": "Owner",
+        "at": "2026-09-28T10:12"
+      },
+      "action": {
+        "action": "Weekly budget changed",
+        "date": "2026-09-30",
+        "new_setting": "RM 288 a week"
+      },
+      "test": {
+        "question": "Does ROAS hold at a slightly higher weekly budget?",
+        "stop_condition": "Stop early if the additional spending reaches its cap."
+      }
+    },
+    {
+      "id": "P-05",
+      "campaign_id": "FB-15",
+      "type": "budget_shift",
+      "change": {
+        "from_weekly_rm": 250,
+        "to_weekly_rm": 212
+      },
+      "target": {
+        "rule": "T3",
+        "deadline": "2026-10-25"
+      },
+      "status": "approved",
+      "decided": {
+        "by": "Owner",
+        "at": "2026-09-28T10:14"
+      },
+      "action": {
+        "action": "Weekly budget changed",
+        "date": "2026-10-01",
+        "new_setting": "RM 212 a week"
+      }
+    },
+    {
+      "id": "P-06",
+      "campaign_id": "YT-07",
+      "type": "extend",
+      "change": {
+        "to_end_date": "2027-01-31"
+      },
+      "target": {
+        "rule": "T4",
+        "deadline": "2026-10-25"
+      },
+      "status": "approved",
+      "decided": {
+        "by": "Owner",
+        "at": "2026-09-28T10:16"
+      },
+      "action": {
+        "action": "End date extended",
+        "date": "2026-10-02",
+        "new_setting": "Ends 31 Jan 2027"
+      }
+    },
+    {
+      "id": "P-07",
+      "campaign_id": "IG-16",
+      "type": "pause",
+      "change": {},
+      "target": {
+        "rule": "T1",
+        "deadline": "2026-10-25"
+      },
+      "status": "rejected",
+      "decided": {
+        "by": "Owner",
+        "at": "2026-09-28T10:18"
+      },
+      "action": null
+    },
+    {
+      "id": "P-09",
+      "campaign_id": null,
+      "type": "test_new",
+      "change": {
+        "platform": "XiaoHongShu",
+        "objective": "Sales",
+        "campaign_name": "Wipes Bundle Trial",
+        "weekly_rm": 100,
+        "total_rm": 400
+      },
+      "test": {
+        "question": "Does a wipes bundle sell on XiaoHongShu at a small budget?",
+        "stop_condition": "Stop early if RM 400 is spent before 25 Oct 2026."
+      },
+      "target": {
+        "rule": "T2",
+        "deadline": "2026-10-25"
+      },
+      "status": "approved",
+      "decided": {
+        "by": "Owner",
+        "at": "2026-09-28T10:22"
+      },
+      "action": {
+        "action": "Campaign created",
+        "date": "2026-09-30",
+        "new_setting": "RM 100 a week"
+      }
+    }
+  ]
+}

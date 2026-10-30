@@ -1,0 +1,16 @@
+{
+  "name": "comel-diaper-marketing-campaign-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Comel Diaper Marketing Campaign Assistant: a single agent with four MCP tools, an owner workspace and a benchmark",
+  "scripts": {
+    "test": "node benchmark/test_tools.mjs",
+    "serve": "node server.mjs",
+    "mcp": "node mcp_server.mjs",
+    "build": "node build_workspace.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.0"
+  }
+}

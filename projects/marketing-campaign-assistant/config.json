@@ -1,0 +1,11 @@
+{
+  "today": "2026-09-28",
+  "model": "claude-haiku-5-5",
+  "fallback_model": "claude-sonnet-5-5",
+  "review_period": { "start": "2025-09-29", "end": "2026-09-27" },
+  "next_period": { "start": "2026-09-28", "end": "2026-10-25" },
+  "action_window": { "start": "2026-09-28", "end": "2026-10-02" },
+  "baseline_window": { "start": "2026-08-31", "end": "2026-09-27" },
+  "owner_targets": { "min_roas": null, "max_cost_per_order": null },
+  "test_caps": { "per_test_rm": 500, "combined_rm": 1000 }
+}

@@ -1,0 +1,1 @@
+{ "mcpServers": { "comel-diaper": { "command": "node", "args": ["mcp_server.mjs"] } } }

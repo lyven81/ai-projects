@@ -1,0 +1,61 @@
+campaign_id,campaign_name,platform,objective,format,audience,start_date,end_date,budget_rm,status
+FB-01,Newborn Pack Sale,Facebook,Sales,Video,Existing customers,2026-07-06,2026-08-09,1100,Completed
+FB-02,Night Pants Promo,Facebook,Sales,Video,Lookalike,2026-08-03,2026-09-13,1620,Completed
+FB-03,Wipes Bundle Deal,Facebook,Sales,Carousel,New,2025-11-10,2026-01-04,1520,Completed
+FB-04,11.11 Mega Sale,Facebook,Sales,Carousel,Retargeting,2025-11-10,2025-12-07,880,Completed
+FB-05,12.12 Year-End Sale,Facebook,Sales,Live,Existing customers,2026-04-06,2026-05-31,1440,Completed
+FB-06,CNY Bundle,Facebook,Sales,Live,Retargeting,2025-10-13,2025-12-07,1760,Completed
+FB-07,Raya Value Pack,Facebook,Sales,Video,New,2026-07-06,2026-08-09,500,Completed
+FB-08,Mid-Year Sale,Facebook,Sales,Short video,Retargeting,2026-07-06,2026-08-16,3720,Completed
+FB-09,Merdeka Deal,Facebook,Sales,Carousel,Retargeting,2026-02-23,2026-04-05,1320,Completed
+FB-10,Size Up Bundle,Facebook,Sales,Carousel,Existing customers,2025-11-24,2026-01-18,2000,Completed
+FB-11,Subscribe and Save,Facebook,Sales,Carousel,New,2026-08-31,2026-09-27,800,Completed
+FB-12,Cart Reminder,Facebook,Sales,Short video,Existing customers,2026-05-25,2026-07-05,1020,Completed
+FB-13,Newborn Pack Sale,Facebook,Sales,Image,Retargeting,2026-09-14,2026-12-13,1170,Running
+FB-14,Night Pants Promo,Facebook,Sales,Live,New,2026-07-13,2026-12-27,4560,Running
+FB-15,Wipes Bundle Deal,Facebook,Sales,Live,Retargeting,2026-08-10,2026-11-29,4000,Running
+FB-16,11.11 Mega Sale,Facebook,Sales,Carousel,Existing customers,2026-07-13,2026-12-27,6240,Running
+IG-01,12.12 Year-End Sale,Instagram,Sales,Image,New,2025-12-29,2026-02-22,2000,Completed
+IG-02,CNY Bundle,Instagram,Sales,Carousel,Retargeting,2026-05-18,2026-07-12,1360,Completed
+IG-03,Raya Value Pack,Instagram,Sales,Video,Existing customers,2025-11-17,2025-12-21,950,Completed
+IG-04,Mid-Year Sale,Instagram,Sales,Carousel,New,2025-09-29,2025-11-23,2000,Completed
+IG-05,Merdeka Deal,Instagram,Sales,Image,Retargeting,2026-02-09,2026-03-29,1820,Completed
+IG-06,Size Up Bundle,Instagram,Sales,Image,Lookalike,2026-03-30,2026-04-26,1160,Completed
+IG-07,Subscribe and Save,Instagram,Sales,Image,Existing customers,2025-11-24,2025-12-21,640,Completed
+IG-08,Cart Reminder,Instagram,Sales,Image,New,2025-12-01,2026-01-25,2000,Completed
+IG-09,Newborn Pack Sale,Instagram,Sales,Carousel,Existing customers,2026-03-16,2026-04-19,1450,Completed
+IG-10,Night Pants Promo,Instagram,Sales,Video,Lookalike,2026-05-04,2026-06-07,1150,Completed
+IG-11,Wipes Bundle Deal,Instagram,Sales,Short video,Existing customers,2026-03-02,2026-04-19,1610,Completed
+IG-12,11.11 Mega Sale,Instagram,Sales,Image,Lookalike,2026-06-08,2026-07-26,2100,Completed
+IG-13,12.12 Year-End Sale,Instagram,Sales,Image,Retargeting,2026-09-14,2026-11-29,1100,Running
+IG-14,CNY Bundle,Instagram,Sales,Live,Existing customers,2026-07-27,2026-12-13,4200,Running
+IG-15,Raya Value Pack,Instagram,Sales,Carousel,Retargeting,2026-08-03,2026-12-20,5000,Running
+IG-16,Mid-Year Sale,Instagram,Sales,Carousel,New,2026-07-13,2026-12-20,5750,Running
+TT-01,Merdeka Deal,TikTok,Sales,Short video,Lookalike,2026-01-05,2026-02-22,1470,Completed
+TT-02,Size Up Bundle,TikTok,Sales,Image,Lookalike,2026-06-08,2026-07-19,960,Completed
+TT-03,Subscribe and Save,TikTok,Sales,Carousel,Retargeting,2025-12-15,2026-02-01,1610,Completed
+TT-04,Cart Reminder,TikTok,Sales,Carousel,Existing customers,2026-05-04,2026-06-14,1080,Completed
+TT-05,Newborn Pack Sale,TikTok,Sales,Live,New,2026-08-03,2026-08-30,760,Completed
+TT-06,Night Pants Promo,TikTok,Sales,Video,Lookalike,2026-05-04,2026-06-21,1540,Completed
+TT-07,Wipes Bundle Deal,TikTok,Sales,Short video,Retargeting,2025-10-27,2025-12-07,1440,Completed
+TT-08,11.11 Mega Sale,TikTok,Sales,Short video,New,2025-12-22,2026-02-01,1020,Completed
+TT-09,12.12 Year-End Sale,TikTok,Sales,Live,Lookalike,2025-10-20,2025-12-14,1600,Completed
+TT-10,CNY Bundle,TikTok,Sales,Image,Retargeting,2026-07-20,2026-09-06,1680,Completed
+TT-11,Raya Value Pack,TikTok,Sales,Carousel,Existing customers,2026-04-13,2026-05-31,1610,Completed
+TT-12,Mid-Year Sale,TikTok,Sales,Live,Retargeting,2026-09-21,2026-12-06,880,Running
+TT-13,Merdeka Deal,TikTok,Sales,Image,Retargeting,2026-07-27,2026-12-27,5060,Running
+TT-14,Size Up Bundle,TikTok,Sales,Short video,Lookalike,2026-07-20,2026-12-20,3960,Running
+YT-01,Subscribe and Save,YouTube,Sales,Live,Retargeting,2026-04-06,2026-05-31,1600,Completed
+YT-02,Cart Reminder,YouTube,Sales,Short video,Retargeting,2026-03-30,2026-05-17,1190,Completed
+YT-03,Newborn Pack Sale,YouTube,Sales,Video,Retargeting,2026-04-13,2026-05-24,960,Completed
+YT-04,Night Pants Promo,YouTube,Sales,Live,Retargeting,2026-06-15,2026-07-12,840,Completed
+YT-05,Wipes Bundle Deal,YouTube,Sales,Video,New,2026-03-16,2026-04-19,1000,Completed
+YT-06,11.11 Mega Sale,YouTube,Sales,Short video,New,2026-02-02,2026-03-15,1080,Completed
+YT-07,12.12 Year-End Sale,YouTube,Sales,Image,Existing customers,2026-08-10,2026-11-29,3520,Running
+YT-08,CNY Bundle,YouTube,Sales,Short video,Retargeting,2026-07-06,2026-12-13,5060,Running
+XH-01,Raya Value Pack,XiaoHongShu,Sales,Video,Existing customers,2025-11-24,2026-01-11,420,Completed
+XH-02,Mid-Year Sale,XiaoHongShu,Sales,Video,Existing customers,2026-08-03,2026-09-20,420,Completed
+XH-03,Merdeka Deal,XiaoHongShu,Sales,Live,New,2026-02-23,2026-04-05,420,Completed
+XH-04,Size Up Bundle,XiaoHongShu,Sales,Carousel,Lookalike,2026-04-27,2026-05-24,280,Completed
+XH-05,Subscribe and Save,XiaoHongShu,Sales,Image,Existing customers,2026-07-20,2026-11-29,1330,Running
+XH-06,Cart Reminder,XiaoHongShu,Sales,Carousel,Lookalike,2026-07-20,2026-12-20,1320,Running

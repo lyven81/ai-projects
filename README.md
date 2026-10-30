@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 11**
+**Total published AI projects: 12**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 12 | 2026-10-30 | Comel Diaper Marketing Campaign Assistant | [page](https://lyven81.github.io/ai-projects/marketing-campaign-assistant.html) |
 | 11 | 2026-10-29 | Kiddoz Back-to-School Campaign Team | [page](https://lyven81.github.io/ai-projects/back-to-school-campaign.html) |
 | 10 | 2026-10-28 | Polyclinic Sivakumar Clinic Desk | [page](https://lyven81.github.io/ai-projects/polyclinic-sivakumar.html) |
 | 9 | 2026-10-23 | DF Auto Parts Distributors | [page](https://lyven81.github.io/ai-projects/df-auto-parts-distributors.html) |
@@ -23,6 +24,15 @@ Live site: https://lyven81.github.io/ai-projects/
 | 1 | 2026-10-16 | Wee Auto Car Care | [page](https://lyven81.github.io/ai-projects/wee-auto-car-care.html) |
 
 ## Projects by Problem Type
+
+### Research and reporting
+
+#### Comel Diaper Marketing Campaign Assistant
+- **What it does:** A campaign assistant for a baby diaper retailer where the AI explains each month's results on five platforms, code works out every figure and enforces the budget limits, and the owner decides every change.
+- **How it's built:** One Claude agent with four tools, also served over an MCP server (Node.js) with four resources; code works out every figure as a tagged record, sets each review status and enforces the 20% change limit and the RM 500 and RM 1,000 test caps; a reply check in code sends back an untagged or wrong figure, and a hook keeps next month's results closed until the period ends.
+- **Problem solved:** An owner running ads alone on five platforms compares them without one fixed method; the assistant reviews every platform the same way each month, proposes capped changes with their figures and sources, and leaves every decision and platform change with the owner.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/marketing-campaign-assistant.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/marketing-campaign-assistant/workspace.html)
+- **Rebuilt:** 2026-10-30
 
 ### Triage and routing
 

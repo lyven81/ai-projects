@@ -1,0 +1,77 @@
+{
+  "overspend": [
+    "FB-01",
+    "FB-04"
+  ],
+  "zero_results": [
+    "TT-01"
+  ],
+  "missing_week": [
+    "FB-02"
+  ],
+  "thin_evidence_platform": "XiaoHongShu",
+  "partial": [
+    "FB-13",
+    "IG-13",
+    "TT-12"
+  ],
+  "running": [
+    "FB-13",
+    "FB-14",
+    "FB-15",
+    "FB-16",
+    "IG-13",
+    "IG-14",
+    "IG-15",
+    "IG-16",
+    "TT-12",
+    "TT-13",
+    "TT-14",
+    "YT-07",
+    "YT-08",
+    "XH-05",
+    "XH-06"
+  ],
+  "missing_week_date": "2026-08-17",
+  "seed_plan": {
+    "conflict": "TT-13",
+    "not_reported": "IG-14",
+    "midweek_met": "IG-15",
+    "missed": "FB-15",
+    "extend": "YT-07",
+    "rejected": "IG-16",
+    "test_boost": "IG-15",
+    "test_new": "P-09"
+  },
+  "review_status": {
+    "tracking_fault": "IG-01",
+    "limited_29": "FB-03",
+    "boundary_30": "FB-05",
+    "variable_above": "FB-06",
+    "low_spend_useful": "FB-07",
+    "high_spend_poor": "FB-08",
+    "zero_avg_roas": "FB-09"
+  },
+  "total_budget": {
+    "baseline_spend_rm": 11095.85,
+    "planned_next_rm": 10640,
+    "headroom_rm": 455.85
+  },
+  "weekly_budget": {
+    "FB-13": 90,
+    "FB-14": 190,
+    "FB-15": 250,
+    "FB-16": 260,
+    "IG-13": 100,
+    "IG-14": 210,
+    "IG-15": 250,
+    "IG-16": 250,
+    "TT-12": 80,
+    "TT-13": 230,
+    "TT-14": 180,
+    "YT-07": 220,
+    "YT-08": 220,
+    "XH-05": 70,
+    "XH-06": 60
+  }
+}

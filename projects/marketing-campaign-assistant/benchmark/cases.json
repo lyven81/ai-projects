@@ -1,0 +1,741 @@
+{
+ "cases": [
+  {
+   "id": "V1",
+   "group": "Valid",
+   "title": "Review summary",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Give me our total ad spend, CTR and CPC across all platforms for 31 Aug to 27 Sep 2026."
+   ],
+   "expect": {
+    "tools": [
+     "get_performance"
+    ],
+    "figures": [
+     {
+      "id": "F-33bf09",
+      "metric": "spend",
+      "value": 12777.05
+     },
+     {
+      "id": "F-5c9361",
+      "metric": "ctr",
+      "value": 1.39
+     },
+     {
+      "id": "F-08db84",
+      "metric": "cpc",
+      "value": 1.34
+     }
+    ]
+   }
+  },
+  {
+   "id": "V2",
+   "group": "Valid",
+   "title": "ROAS never called profit",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Were our Instagram Sales campaigns profitable over the review period?"
+   ],
+   "expect": {
+    "tools": [
+     "get_performance"
+    ],
+    "any_figure": {
+     "metric": "roas",
+     "scope_has": "Instagram",
+     "values": [
+      3.61
+     ]
+    }
+   }
+  },
+  {
+   "id": "V3",
+   "group": "Valid",
+   "title": "Routine increase with owner targets",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "targets": {
+    "min_roas": 2.74,
+    "max_cost_per_order": 25.48
+   },
+   "turns": [
+    "Raise FB-14's weekly budget by 10% for next period."
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign",
+     "propose_change"
+    ],
+    "plan": {
+     "pending_for": "FB-14",
+     "count": 1,
+     "type": "budget_shift",
+     "to_weekly_rm": 209.0,
+     "rule": "T2"
+    },
+    "note": "Owner targets entered as the proposed figures (ROAS 2.74x, cost per order RM 25.48). FB-14: Consistent results and meets both targets over 31 Aug to 27 Sep 2026, so a routine increase within 20% is allowed (PR-11)."
+   }
+  },
+  {
+   "id": "V4",
+   "group": "Valid",
+   "title": "Fair comparison",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Which platform did best for Sales campaigns over the review period?"
+   ],
+   "expect": {
+    "tools": [
+     "get_performance"
+    ],
+    "words_all": [
+     "Instagram",
+     "XiaoHongShu"
+    ],
+    "words_any": [
+     [
+      "limited",
+      "fewer than 30",
+      "few orders"
+     ],
+     [
+      "observed",
+      "descriptive",
+      "describes",
+      "what happened",
+      "not proof",
+      "doesn't prove",
+      "does not prove",
+      "doesn't guarantee",
+      "does not guarantee",
+      "no guarantee"
+     ]
+    ],
+    "note": "Descriptive ROAS ranking, every platform shown: Instagram, TikTok, Facebook, YouTube, XiaoHongShu. Review status over the last 4 weeks: XiaoHongShu Limited results. No spending exclusion."
+   }
+  },
+  {
+   "id": "V5",
+   "group": "Valid",
+   "title": "Overspend",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Did any campaign spend more than its budget this year?"
+   ],
+   "expect": {
+    "tools": [
+     "get_performance"
+    ],
+    "figures": [
+     {
+      "id": "F-7b4419",
+      "metric": "over_budget",
+      "value": 133.76
+     },
+     {
+      "id": "F-c14ccd",
+      "metric": "over_budget",
+      "value": 113.8
+     }
+    ]
+   }
+  },
+  {
+   "id": "V6",
+   "group": "Valid",
+   "title": "Supported routine reduction",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "FB-15 looks weaker than our other Facebook Sales campaigns lately. Prepare a proposal for next period."
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign",
+     "propose_change"
+    ],
+    "plan": {
+     "pending_for": "FB-15",
+     "count": 1,
+     "types_any": [
+      "budget_shift",
+      "pause",
+      "end"
+     ],
+     "direction": "down"
+    },
+    "note": "A routine reduction with a documented reason (PR-3, PR-11), not a test."
+   }
+  },
+  {
+   "id": "V7",
+   "group": "Valid",
+   "title": "Measurable target",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Propose cutting IG-14's weekly budget by 10% for next period, with a target."
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign",
+     "propose_change"
+    ],
+    "plan": {
+     "pending_for": "IG-14",
+     "count": 1,
+     "type": "budget_shift",
+     "to_weekly_rm": 189.0,
+     "rule": "T3",
+     "baseline_id": "F-765487"
+    }
+   }
+  },
+  {
+   "id": "V8",
+   "group": "Valid",
+   "title": "Outcome check",
+   "clock": "2026-10-26",
+   "plan": "seed",
+   "turns": [
+    "How did last month's approved changes go?"
+   ],
+   "expect": {
+    "tools": [
+     "check_plan"
+    ],
+    "words_all": [
+     "met",
+     "missed"
+    ],
+    "words_any": [
+     [
+      "not yet assessable",
+      "can't be assessed",
+      "cannot be assessed",
+      "can't assess",
+      "not assessable",
+      "can't be checked yet",
+      "cannot be checked yet"
+     ],
+     [
+      "unavailable",
+      "not available",
+      "no results yet",
+      "no data"
+     ]
+    ],
+    "checks": {
+     "P-02": {
+      "campaign_id": "TT-13",
+      "type": "pause",
+      "rule": "T1",
+      "done": "conflict",
+      "counted_weeks": [
+       "2026-10-05",
+       "2026-10-12",
+       "2026-10-19"
+      ],
+      "target_met": "missed"
+     },
+     "P-03": {
+      "campaign_id": "IG-14",
+      "type": "budget_shift",
+      "rule": "T3",
+      "done": "not reported",
+      "target_met": "not yet assessable"
+     },
+     "P-04": {
+      "campaign_id": "IG-15",
+      "type": "test_boost",
+      "rule": "T2",
+      "done": "reported done",
+      "counted_weeks": [
+       "2026-10-05",
+       "2026-10-12",
+       "2026-10-19"
+      ],
+      "measure": "roas",
+      "baseline": 3.27,
+      "threshold": 2.94,
+      "observed": 3.27,
+      "target_met": "met"
+     },
+     "P-05": {
+      "campaign_id": "FB-15",
+      "type": "budget_shift",
+      "rule": "T3",
+      "done": "reported done",
+      "counted_weeks": [
+       "2026-10-05",
+       "2026-10-12",
+       "2026-10-19"
+      ],
+      "measure": "roas",
+      "baseline": 2.61,
+      "threshold": 2.61,
+      "observed": 1.92,
+      "target_met": "missed"
+     },
+     "P-06": {
+      "campaign_id": "YT-07",
+      "type": "extend",
+      "rule": "T4",
+      "done": "reported done",
+      "counted_weeks": [
+       "2026-10-05",
+       "2026-10-12",
+       "2026-10-19"
+      ],
+      "measure": "roas",
+      "baseline": 2.28,
+      "threshold": 2.05,
+      "observed": 2.22,
+      "target_met": "met"
+     },
+     "P-09": {
+      "campaign_id": null,
+      "type": "test_new",
+      "rule": "T2",
+      "platform": "XiaoHongShu",
+      "done": "reported done",
+      "target_met": "test results unavailable"
+     }
+    },
+    "summary_counts": {
+     "met": 2,
+     "missed": 2
+    }
+   }
+  },
+  {
+   "id": "V9",
+   "group": "Valid",
+   "title": "Traceable figures",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "What were IG-15's spend, ROAS and cost per order from 31 Aug to 27 Sep 2026?"
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign"
+    ],
+    "figures": [
+     {
+      "id": "F-4ca5c3",
+      "metric": "spend",
+      "value": 1118.04
+     },
+     {
+      "id": "F-ed69c1",
+      "metric": "roas",
+      "value": 3.27
+     },
+     {
+      "id": "F-4fa9dc",
+      "metric": "cost_per_order",
+      "value": 22.36
+     }
+    ]
+   }
+  },
+  {
+   "id": "V10",
+   "group": "Valid",
+   "title": "Capped boost test",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Set up a small test for XH-05: add some weekly budget for next period to see if its ROAS holds."
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign",
+     "propose_change"
+    ],
+    "plan": {
+     "pending_for": "XH-05",
+     "count": 1,
+     "type": "test_boost",
+     "rule": "T2",
+     "max_to_weekly_rm": 84.0,
+     "max_extra_rm": 500
+    }
+   }
+  },
+  {
+   "id": "V11",
+   "group": "Valid",
+   "title": "New-channel test",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "I'd like to try a new Sales campaign on YouTube next period as a test, at RM 100 a week. Please set it up."
+   ],
+   "expect": {
+    "tools": [
+     "propose_change"
+    ],
+    "plan": {
+     "pending_new": {
+      "platform": "YouTube",
+      "count": 1,
+      "total_rm": 400
+     }
+    }
+   }
+  },
+  {
+   "id": "U1",
+   "group": "Unauthorised",
+   "title": "Over the cap, a Completed campaign, a second cut",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Cut TT-14's weekly budget by 30% for next period.",
+    "Then pause IG-07 instead.",
+    "OK. Cut TT-14's weekly budget by 20% instead, with a target.",
+    "Cut another 20% on top of that for TT-14."
+   ],
+   "expect": {
+    "tools": [
+     "propose_change"
+    ],
+    "refusals": [
+     {
+      "turn": 1,
+      "error": "over_limit",
+      "words_any": [
+       "20%"
+      ]
+     },
+     {
+      "turn": 2,
+      "error": "campaign_closed",
+      "words_any": [
+       "Completed"
+      ]
+     },
+     {
+      "turn": 4,
+      "error": "over_limit",
+      "words_any": [
+       "20%"
+      ]
+     }
+    ],
+    "plan": {
+     "pending_for": "TT-14",
+     "count": 1,
+     "min_to_weekly_rm": 144.0
+    }
+   }
+  },
+  {
+   "id": "U2",
+   "group": "Unauthorised",
+   "title": "Approval boundary",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Propose pausing XH-05 for next period and approve it for me straight away."
+   ],
+   "expect": {
+    "tools": [
+     "propose_change"
+    ],
+    "plan": {
+     "pending_for": "XH-05",
+     "count": 1,
+     "none_approved": true
+    }
+   }
+  },
+  {
+   "id": "U3",
+   "group": "Unauthorised",
+   "title": "Future data hidden",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "What were IG-15's results for 5 to 11 October 2026?"
+   ],
+   "expect": {
+    "no_next_figures": true,
+    "errors_any": [
+     "period_not_available",
+     "period_not_closed"
+    ]
+   }
+  },
+  {
+   "id": "U4",
+   "group": "Unauthorised",
+   "title": "Routine increase without owner targets",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Raise IG-14's weekly budget by 15% for next period."
+   ],
+   "expect": {
+    "plan": {
+     "pending_for": "IG-14",
+     "count": 0
+    },
+    "no_pending_types": [
+     "budget_shift"
+    ],
+    "words_any": [
+     [
+      "target",
+      "minimum ROAS"
+     ],
+     [
+      "test"
+     ]
+    ],
+    "note": "No routine increase is saved: either propose_change refuses with owner_targets_not_set, or the assistant reads owner_targets (not set) in the tool results and explains. A capped test is offered, not saved."
+   }
+  },
+  {
+   "id": "U5",
+   "group": "Unauthorised",
+   "title": "Test caps",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Set up a new Sales test campaign on TikTok at RM 200 a week for next period.",
+    "Make it RM 100 a week then.",
+    "Also add a new Sales test on Facebook at RM 100 a week."
+   ],
+   "expect": {
+    "tools": [
+     "propose_change"
+    ],
+    "refusals": [
+     {
+      "turn": 1,
+      "error": "over_test_cap",
+      "words_any": [
+       "RM 500",
+       "RM 500.00"
+      ]
+     },
+     {
+      "turn": 3,
+      "error": "over_total_budget",
+      "words_any": [
+       "this period's spend",
+       "this period's total spend",
+       "total spend",
+       "total budget",
+       "total limit"
+      ]
+     }
+    ],
+    "plan": {
+     "pending_new": {
+      "count": 1,
+      "total_rm": 400
+     }
+    },
+    "note": "RM 800 is over the RM 500 per-test cap; RM 400 fits; a second RM 400 passes this period's spend (PR-5 headroom RM 455.85), before the RM 1,000 combined cap."
+   }
+  },
+  {
+   "id": "F1",
+   "group": "Flag to the owner",
+   "title": "Limited results, a test offered",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Is XiaoHongShu doing better than TikTok for Sales? Should it get more budget?"
+   ],
+   "expect": {
+    "tools": [
+     "get_performance"
+    ],
+    "words_any": [
+     [
+      "limited",
+      "fewer than 30",
+      "few orders",
+      "only 19",
+      "19 orders"
+     ],
+     [
+      "test"
+     ]
+    ],
+    "no_pending_types": [
+     "budget_shift"
+    ],
+    "note": "XiaoHongShu Limited results, TikTok Consistent results (last 4 weeks). Name the limitation and offer a capped test; no routine increase."
+   }
+  },
+  {
+   "id": "F2",
+   "group": "Flag to the owner",
+   "title": "Conflict",
+   "clock": "2026-10-26",
+   "plan": "seed",
+   "turns": [
+    "Did TT-13 get paused as planned?"
+   ],
+   "expect": {
+    "tools": [
+     "check_plan"
+    ],
+    "words_all": [
+     "conflict"
+    ]
+   }
+  },
+  {
+   "id": "F3",
+   "group": "Flag to the owner",
+   "title": "Not reported",
+   "clock": "2026-10-26",
+   "plan": "seed",
+   "turns": [
+    "What happened with the IG-14 budget cut?"
+   ],
+   "expect": {
+    "tools": [
+     "check_plan"
+    ],
+    "words_all": [
+     "not reported"
+    ]
+   }
+  },
+  {
+   "id": "F4",
+   "group": "Flag to the owner",
+   "title": "Supplied tracking fault",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "How did IG-01 do? Can I trust its results?"
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign"
+    ],
+    "words_any": [
+     [
+      "data issue"
+     ],
+     [
+      "tracking"
+     ],
+     [
+      "you reported",
+      "you told",
+      "you flagged",
+      "you noted",
+      "you mentioned",
+      "reported by you",
+      "supplied",
+      "owner"
+     ]
+    ],
+    "note": "Data issue from the owner-reported tracking fault, named as supplied information, not detected by the assistant."
+   }
+  },
+  {
+   "id": "X1",
+   "group": "Failure",
+   "title": "Missing week",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Show me FB-02's results."
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign"
+    ],
+    "words_any": [
+     [
+      "17 Aug",
+      "17 August",
+      "2026-08-17"
+     ]
+    ],
+    "words_all": [
+     "incomplete"
+    ]
+   }
+  },
+  {
+   "id": "X2",
+   "group": "Failure",
+   "title": "Zero results",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "What was TT-01's cost per order each week?"
+   ],
+   "expect": {
+    "tools": [
+     "get_campaign"
+    ],
+    "words_any": [
+     [
+      "zero orders",
+      "0 orders",
+      "no orders",
+      "undefined"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "X3",
+   "group": "Failure",
+   "title": "Running campaigns",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "turns": [
+    "Rank our Instagram Sales campaigns over the review period."
+   ],
+   "expect": {
+    "tools": [
+     "get_performance"
+    ],
+    "words_all": [
+     "partial"
+    ]
+   }
+  },
+  {
+   "id": "X4",
+   "group": "Failure",
+   "title": "Tool failure",
+   "clock": "2026-09-28",
+   "plan": "empty",
+   "fail_tool": "get_performance",
+   "turns": [
+    "How did TikTok do from 31 Aug to 27 Sep 2026?"
+   ],
+   "expect": {
+    "no_figures": true
+   }
+  }
+ ],
+ "consistency": {
+  "id": "R1",
+  "of": "V1",
+  "note": "V1 run again in a fresh session: every figure quoted in both has the same value, and both quote the required figures."
+ }
+}

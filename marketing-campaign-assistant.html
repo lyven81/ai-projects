@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comel Diaper Marketing Campaign Assistant</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.wf .hz{z-index:0}
+.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
+.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
+.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
+.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
+.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
+.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
+.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
+.dg .lab{font-size:12px;fill:var(--muted)}
+.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Information and Decision Support",
+    "problemType": "Research and reporting",
+    "problem": "The owner of a baby diaper retailer runs the advertising alone on Facebook, Instagram, TikTok, YouTube and XiaoHongShu, reading each platform's figures separately. Next month's budget is set without one fixed way to compare the platforms or to check whether last month's changes held.",
+    "built": "One AI assistant explains the results and proposes changes, while code works out every figure with its source, gives each campaign and platform a review status, and enforces the 20% change limit and the RM 500 and RM 1,000 test caps. Every proposal waits for the owner, who approves it, makes the change on the platform and records it.",
+    "evidence": "In testing, the assistant passed 23 of 24 cases across valid requests, unauthorised requests, flags to the owner and failures, with no wrong figure, no invented figure and no approval the owner did not give. A pilot would still need a security review, a named monitoring owner, a rollback plan, and validation of the pilot settings against real campaign periods."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:marketing-campaign-assistant"></div>
+<div class="top"><h1>Comel Diaper Marketing Campaign Assistant</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="projects/marketing-campaign-assistant/workspace.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/marketing-campaign-assistant" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<p class="muted">By Lee Yih Ven · Published 30 October 2026</p>
+<img class="cover" src="images/marketing-campaign-assistant/cover.jpeg" alt="1950s comic-style illustration of a glass-walled office with city towers outside: a woman with a dark ponytail points at line and bar charts on a large monitor while an older man in a mustard sweater vest sits beside the woman, chin in hand, weighing the figures">
+<p>Designed for Comel Diaper, a baby diaper retailer selling diapers, pants and wipes online and through WhatsApp orders, where the owner runs the advertising alone on Facebook, Instagram, TikTok, YouTube and XiaoHongShu. Each platform reports its own figures, and next month's budget is set without one fixed way to compare them. Once the next month starts, checking last month's changes against the results takes a separate effort.</p>
+<p>I built a prototype assistant that reviews all five platforms the same way each month. The AI explains the results and suggests changes, while code keeps control of every figure and every limit. Nothing changes on any platform until the owner decides.</p>
+<p>The owner keeps the business priorities, the creative work, the approval of every change and the change itself on each platform. In testing, the assistant passed 23 of 24 cases covering valid requests, unauthorised requests, flags to the owner and failures, and every case replays in the <a href="projects/marketing-campaign-assistant/workspace.html" target="_blank" rel="noopener">demo</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Information and Decision Support</td></tr><tr><th>Problem type</th><td>Research and reporting</td></tr><tr><th>Problem</th><td>The owner of a baby diaper retailer runs the advertising alone on Facebook, Instagram, TikTok, YouTube and XiaoHongShu, reading each platform's figures separately. Next month's budget is set without one fixed way to compare the platforms or to check whether last month's changes held.</td></tr><tr><th>Built</th><td>One AI assistant explains the results and proposes changes, while code works out every figure with its source, gives each campaign and platform a review status, and enforces the 20% change limit and the RM 500 and RM 1,000 test caps. Every proposal waits for the owner, who approves it, makes the change on the platform and records it.</td></tr><tr><th>Evidence</th><td>In testing, the assistant passed 23 of 24 cases across valid requests, unauthorised requests, flags to the owner and failures, with no wrong figure, no invented figure and no approval the owner did not give. A pilot would still need a security review, a named monitoring owner, a rollback plan, and validation of the pilot settings against real campaign periods.</td></tr></table>
+<h2>One Budget Question, From Request to Follow-up</h2>
+<p>One budget question about XiaoHongShu, from the owner's question to the follow-up check; the owner both asks and decides. Refusals, cuts, pauses and increases that need the owner's targets are in Every Test Run, on the Technical Implementation tab.</p>
+<div class="wf"><script type="application/json">{"id":"mc","hz":{"nodes":[{"id":"u1","r":1,"c":1,"b":["c","The owner asks about more budget","Is XiaoHongShu doing better than TikTok?"]},{"id":"a1","r":1,"c":2,"b":["a","AI looks up every platform","Figures come from code."]},{"id":"s1","r":1,"c":3,"b":["s","Code sets the review status","Limited results: 25 orders, 30 needed."]},{"id":"a2","r":1,"c":4,"b":["a","AI explains and offers a test","No owner targets, so no routine increase."]},{"id":"s2","r":1,"c":5,"b":["s","Code checks the test limits","Within 20% and RM 500. Saved for the owner."]},{"id":"p1","r":1,"c":6,"b":["p","Owner approves and changes the budget","The AI cannot approve."]},{"id":"o2","r":2,"c":5,"b":["o","Refused, nothing saved","A test or change over a limit."]},{"id":"o1","r":2,"c":6,"b":["o","Follow-up report for the owner","Owner's record and the results, side by side."]}],"edges":[["u1","a1"],["a1","s1"],["s1","a2"],["a2","s2","Owner asks"],["s2","p1","Within limits"],["s2","o2","Over a limit"],["p1","o1","Afterwards"]]},"rows":[{"c":["c","The owner asks about more budget","Is XiaoHongShu doing better than TikTok?"]},{"down":""},{"c":["a","AI looks up every platform","Figures come from code."]},{"down":""},{"c":["s","Code sets the review status","Limited results: 25 orders, 30 needed."]},{"down":""},{"c":["a","AI explains and offers a test","No owner targets, so no routine increase."]},{"down":"Owner asks"},{"c":["s","Code checks the test limits","Within 20% and RM 500. Saved for the owner."],"r":{"t":"Over a limit","b":[["o","Refused, nothing saved","A test or change over a limit."]]}},{"down":"Within limits"},{"c":["p","Owner approves and changes the budget","The AI cannot approve."]},{"down":"Afterwards"},{"c":["o","Follow-up report for the owner","Owner's record and the results, side by side."]}]}</script></div>
+<ol><li>The owner asks whether XiaoHongShu is doing better than TikTok and should get more budget. The AI looks up every platform, and code works out each figure with its source. Code also gives each platform a review status: XiaoHongShu is Limited results, with 25 orders in the last four weeks, below the 30 orders needed to judge whether results are steady.</li><li>The AI explains the figures and the status in plain words. The owner has set no targets, so code allows no routine increase, and the AI offers a small capped test instead, such as RM 70 to RM 80 a week on one XiaoHongShu campaign.</li><li>When the owner asks for the test, code checks it against the limits: a campaign's weekly budget moves at most 20% a period, up or down, counting changes already waiting or approved. Each test stays within RM 500, and all tests together within RM 1,000 and this period's spend. A test over a limit is declined, by the AI or by code, and nothing is saved.</li><li>Only the owner approves or rejects it, then makes the change on the platform and records it. After the next period closes, code checks what happened.</li></ol>
+<h2>What It Does for Comel Diaper</h2>
+<h3>Every figure is worked out in code and carries its source</h3>
+<p>ROAS (sales for each ringgit of ad spend), cost per order, orders and every other figure come from code, each with a tag pointing to a record of its measure, campaign or platform and dates. Code checks every reply before the owner sees it, and sends one with an untagged number, a wrong tag or ROAS called profit back up to twice before it goes out. All 7,649 figures compared with the answer key match.</p>
+<h3>Every platform is shown, with its limitation named</h3>
+<p>Each campaign and platform gets a review status from its orders and how steady its weekly ROAS was: Data issue, Variation not assessable, Limited results, Variable results or Consistent results (steady weekly ROAS, not profit). The amount spent never decides the status, so a small platform is shown with its figures and its limit, such as too few orders. Its next step is a capped test, unless a tracking fault the owner reported falls in the review window.</p>
+<h3>The follow-up keeps the owner's record apart from the data</h3>
+<p>After the period closes, code reports what the owner recorded apart from whether the target was met. A pause recorded as done is flagged as a conflict when the campaign still spends. A reply that credits a change with causing a result is sent back, and an automatic test checks this.</p>
+<h2>What the Tests Show</h2>
+<p>The owner asks whether TikTok campaign TT-13 was paused as planned. The owner's record says paused on 30 September, but code finds spend in each counted week: RM 233.15, RM 239.77 and RM 235.43. The assistant reports a conflict and a missed target, and suggests checking the campaign on the platform.</p>
+<p>Each case was scored from the record of what the assistant looked up and saved and from every reply, against an <a href="projects/marketing-campaign-assistant/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> worked out from the raw data by a separate script. The assistant passed 23 of 24 cases across four test categories, and the same question asked again in a fresh session gave the same figures. The one miss: the assistant rightly declined an RM 800 test, but its reply named "the cap" without the RM 500 figure.</p>
+<table><tr><th>Test category</th><th>What it checks</th><th>Passed</th><th>One example</th></tr>
+<tr><td><b>Valid requests</b></td><td>The owner's own review and planning questions: figures, comparisons, overspend, routine cuts, capped tests and the follow-up check.</td><td>11 of 11</td><td>Asked for a small test on a XiaoHongShu campaign, the assistant saves a test raising its weekly budget from RM 70 to RM 80, RM 40 in all, inside the RM 500 cap, waiting for the owner.</td></tr>
+<tr><td><b>Unauthorised requests</b></td><td>Requests the rules do not allow: over the 20% limit, a test cap or this period's spend, a finished campaign, next month's results, an increase without owner targets, or an approval.</td><td>4 of 5</td><td>Asked to propose pausing a campaign and approve it straight away, the assistant saves the pause as waiting and says only the owner can approve it.</td></tr>
+<tr><td><b>Flag to the owner</b></td><td>Something the owner needs to know: few orders, a pause that did not hold, an approved change with no record, or a tracking fault the owner reported.</td><td>4 of 4</td><td>Asked whether an Instagram campaign's results can be trusted, the assistant names the tracking fault the owner reported for 2 to 15 February 2026 and gives the status Data issue.</td></tr>
+<tr><td><b>Failures</b></td><td>Gaps in the data and a service that stops responding: a missing week, weeks with no orders, campaigns still running.</td><td>4 of 4</td><td>When the figures service does not respond, the assistant gives no figures and asks the owner to try again later.</td></tr></table>
+<p>A further 134 automatic tests, run without the AI, check the edge cases, such as 29 against 30 orders, a variation of exactly 30% and the RM 1,000 cap on all tests together. All 134 pass. Every run, step by step, is in the Technical Implementation tab.</p>
+<p>These tests show the assistant works out its figures correctly, applies the configured rules and leaves every decision with the owner. Whether its proposals lift sales, and the hours saved each month, are what a pilot on real campaign periods would measure.</p>
+<h2>Try It Yourself</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="projects/marketing-campaign-assistant/workspace.html" target="_blank" rel="noopener">Live demo</a></b></td><td>Open the owner workspace: Review &amp; Propose, Approve &amp; Record and Check Results, with the demo date switch. Approve or reject the proposals saved in the recorded runs, and read the follow-up check. In the side chat, replay all 24 recorded runs with no key, or chat live with your own key.</td></tr>
+<tr><td><b><a href="projects/marketing-campaign-assistant/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>The expected figures, statuses and outcome of every case, worked out from the raw data and the written rules.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat runs on your own Anthropic API key, and every call is billed to your account. Use a key you can revoke, with a low spending limit. It stays in this browser tab's memory and is sent only with calls to Anthropic; a public service would hold the key on its own server instead.</p>
+<h2>Next Step</h2>
+<p>The assistant is designed so the owner reviews every platform the same way each month and decides every change with the figures and their sources in hand. If that fits your business or team, or you are evaluating the work, try the demo or message me.</p>
+<p class="cta"><a class="linkbtn primary" href="projects/marketing-campaign-assistant/workspace.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<svg viewBox="0 -4 860 604" role="img" aria-label="The owner asks the AI assistant in the chat; the assistant calls the four tools in tools.js, which read the sample data and the next period only through the guard hook and save proposals to the plan for the owner; the reply check reads every reply before it reaches the owner; the MCP server serves the same tools and the four resources; the owner approves, rejects and records actions on the workspace" class="dg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
+<rect x="20" y="30" width="170" height="150" rx="10" class="bx person"/><text x="34" y="56" class="h">The owner</text><text x="34" y="80" class="t">Asks in the chat</text><text x="34" y="98" class="t">Approves or rejects</text><text x="34" y="116" class="t">Records each action</text><text x="34" y="134" class="t">May enter targets</text>
+<rect x="230" y="30" width="190" height="150" rx="10" class="bx ai"/><text x="244" y="56" class="h">AI assistant</text><text x="244" y="80" class="t">Claude Haiku 5.5</text><text x="244" y="98" class="t">Tool-use loop (agent.js)</text><text x="244" y="116" class="t">A tool first each turn</text><text x="244" y="134" class="t">At most 9 model calls a turn</text>
+<rect x="460" y="30" width="230" height="150" rx="10" class="bx hook"/><text x="474" y="56" class="h">Reply check</text><text x="474" y="80" class="t">Each tag matches its figure</text><text x="474" y="98" class="t">No number without a source</text><text x="474" y="116" class="t">No causal or profit wording</text><text x="474" y="134" class="t">Sent back, at most twice</text>
+<rect x="720" y="30" width="125" height="150" rx="10" class="bx data"/><text x="732" y="56" class="h">Resources</text><text x="732" y="80" class="t">Business profile</text><text x="732" y="98" class="t">Metric definitions</text><text x="732" y="116" class="t">Review policy</text><text x="732" y="134" class="t">Planning rules</text><text x="732" y="152" class="t">Also in the prompt</text>
+<rect x="230" y="225" width="190" height="165" rx="10" class="bx mcp"/><text x="244" y="249" class="h">tools.js</text><text x="244" y="271" class="mono">get_performance</text><text x="244" y="288" class="mono">get_campaign</text><text x="244" y="305" class="mono">propose_change</text><text x="244" y="322" class="mono">check_plan</text><text x="244" y="349" class="h2">Every rule in code</text><text x="244" y="369" class="t">status, caps, targets</text>
+<rect x="460" y="225" width="230" height="165" rx="10" class="bx inner"/><text x="474" y="249" class="h">MCP server</text><text x="474" y="271" class="t">The same four tools</text><text x="474" y="289" class="t">The four resources</text><text x="474" y="307" class="t">For Claude Code</text><text x="474" y="325" class="t">One process, one conversation</text>
+<rect x="720" y="225" width="125" height="165" rx="10" class="bx data"/><text x="732" y="249" class="h">Sample data</text><text x="732" y="273" class="t">60 Sales</text><text x="732" y="291" class="t">campaigns</text><text x="732" y="309" class="t">Weekly results</text><text x="732" y="327" class="t">Next period</text><text x="732" y="345" class="t">Owner's notes</text>
+<rect x="20" y="430" width="170" height="140" rx="10" class="bx person"/><text x="34" y="456" class="h">Owner workspace</text><text x="34" y="480" class="t">Review &amp; Propose</text><text x="34" y="498" class="t">Approve &amp; Record</text><text x="34" y="516" class="t">Check Results</text><text x="34" y="534" class="t">Chat: replay, live</text>
+<rect x="230" y="430" width="190" height="140" rx="10" class="bx data"/><text x="244" y="456" class="h">data/plan.json</text><text x="244" y="480" class="t">Tools save proposals;</text><text x="244" y="498" class="t">only the workspace</text><text x="244" y="516" class="t">approves, rejects</text><text x="244" y="534" class="t">and records actions</text>
+<rect x="460" y="430" width="230" height="140" rx="10" class="bx hook"/><text x="474" y="456" class="h">Hooks (guards.js)</text><text x="474" y="480" class="t">Next period closed until</text><text x="474" y="498" class="t">it ends: a second guard</text><text x="474" y="516" class="t">Tool log, any key removed</text>
+<line x1="190" y1="72" x2="228" y2="72" class="ar" marker-end="url(#ah)"/><text x="194" y="64" class="lab">asks</text>
+<line x1="420" y1="72" x2="458" y2="72" class="ar" marker-end="url(#ah)"/><text x="424" y="64" class="lab">reply</text>
+<line x1="460" y1="150" x2="422" y2="150" class="ar dash" marker-end="url(#ah)"/><text x="426" y="170" class="lab">fix</text>
+<path d="M575,30 L575,14 L105,14 L105,28" class="ar dash" marker-end="url(#ah)"/><text x="250" y="9" class="lab">checked reply to the owner</text>
+<line x1="325" y1="180" x2="325" y2="223" class="ar" marker-end="url(#ah)"/><text x="332" y="207" class="lab">tool calls</text>
+<line x1="420" y1="300" x2="458" y2="300" class="ar" marker-end="url(#ah)"/><text x="424" y="292" class="lab">same</text>
+<path d="M760,180 L760,205 L620,205 L620,223" class="ar dash" marker-end="url(#ah)"/><text x="630" y="200" class="lab">served</text>
+<path d="M782,390 L782,410 L380,410 L380,393" class="ar" marker-end="url(#ah)"/><text x="560" y="405" class="lab">review-period rows</text>
+<path d="M820,390 L820,520 L692,520" class="ar dash" marker-end="url(#ah)"/><text x="700" y="540" class="lab">next period, after it closes</text>
+<line x1="300" y1="390" x2="300" y2="428" class="ar" marker-end="url(#ah)"/><text x="238" y="422" class="lab">proposals</text>
+<path d="M420,360 L440,360 L440,490 L458,490" class="ar" marker-end="url(#ah)"/><text x="444" y="425" class="lab">log</text>
+<line x1="105" y1="180" x2="105" y2="428" class="ar" marker-end="url(#ah)"/><text x="112" y="300" class="lab">decides on</text><text x="112" y="316" class="lab">the workspace</text>
+<line x1="190" y1="500" x2="228" y2="500" class="ar" marker-end="url(#ah)"/><text x="192" y="492" class="lab">decides</text>
+</svg>
+<table><tr><th>Layer</th><th>Components</th></tr>
+<tr><td><b>AI</b></td><td>Claude Haiku 5.5 through the Anthropic Messages API · one assistant in a tool-use loop (<code>agent.js</code>): at most 9 model calls per turn, tool rounds and reply fixes together, with at most 2 reply fixes, <code>tool_choice</code> "any" on the first round with a planned fallback to "auto" · system prompt and the four resources as cached reference (<code>prompt.js</code>)</td></tr>
+<tr><td><b>Rules in code</b></td><td><code>tools.js</code>: the metrics, figure records, review status, target check, caps and the follow-up check, written once and loaded by the local server, the MCP server, the benchmark and the browser workspace</td></tr>
+<tr><td><b>Checks around the model</b></td><td>The reply check (<code>lib/replycheck.js</code>) on every reply before it leaves the loop · hooks (<code>hooks/guards.js</code>): the next-period read guard and the tool log, with key-shaped text removed</td></tr>
+<tr><td><b>MCP server</b></td><td><code>mcp_server.mjs</code> (MCP SDK 1.17.0, stdio): the same four tools and four resources for Claude Code through <code>.mcp.json</code></td></tr>
+<tr><td><b>Data and pages</b></td><td>Sample data from <code>generate_data.py</code> (fixed seed): 60 Sales campaigns on five platforms, weekly results for the review period and the next period · <code>data/plan.json</code> shared with the owner workspace · <code>workspace.html</code> built with the recorded runs · Node 22, Python 3, GitHub Pages</td></tr></table>
+<ul>
+<li><b>The assistant</b> answers the owner in short plain sentences, looks every figure up first and quotes it with its tag, and saves proposals through one tool. It never approves, rejects or records an action.</li>
+<li><b>Code</b> works out every figure and enforces every rule; a refusal comes back as a structured error with a category and a message the assistant can explain.</li>
+<li><b>The owner</b> approves or rejects each proposal on the workspace, records what was done on the platform, and may enter a minimum ROAS and a maximum cost per order (proposed figures from the data, 2.74x and RM 25.48, are shown beside the boxes; median of the 45 Completed Sales campaigns, 29 Sep 2025 to 27 Sep 2026).</li>
+</ul>
+<h2>Tools, Resources and Workflow</h2>
+<h3>Tools</h3>
+<p>Four tools, the same in the agent loop and through the MCP server. Every figure in a result is a record with an ID, value, metric, scope and period.</p>
+<table><tr><th>Tool</th><th>Loop step</th><th>Checked in code</th><th>Structured errors</th></tr><tr><td><code>get_performance</code></td><td>Review</td><td>Totals for a period, by platform or by campaign; the descriptive ROAS ranking; partial, incomplete, zero-result, overspend and supplied-note statuses; the review status; owner targets and the limits.</td><td><code>invalid_input</code>, <code>period_not_available</code></td></tr><tr><td><code>get_campaign</code></td><td>Review</td><td>One campaign's settings, totals and weekly figures (weekly reach and frequency only), statuses and review status.</td><td><code>campaign_not_found</code>, <code>invalid_input</code>, <code>period_not_available</code></td></tr><tr><td><code>propose_change</code></td><td>Propose</td><td>Cited figures from this conversation, the target T1 to T4, the 20% limit, owner targets for an increase, the test fields and caps, this period's spend, a Completed campaign, a duplicate; always saved as <code>pending</code>.</td><td><code>invalid_input</code>, <code>campaign_not_found</code>, <code>reason_not_found</code>, <code>evidence_rule_failed</code>, <code>target_incomplete</code>, <code>over_limit</code>, <code>owner_targets_not_set</code>, <code>not_eligible</code>, <code>test_incomplete</code>, <code>data_issue</code>, <code>over_test_cap</code>, <code>over_combined_test_cap</code>, <code>over_total_budget</code>, <code>campaign_closed</code>, <code>duplicate</code></td></tr><tr><td><code>check_plan</code></td><td>Check</td><td>Only after the next period closes; only full weeks after the recorded action; Status and Target met? separately, with the counts in code.</td><td><code>period_not_closed</code>, <code>no_approved_plan</code></td></tr></table>
+<h3>Resources</h3>
+<p>Written before the data. A rule that must hold is in code; the files hold the same rules in words, with their IDs.</p>
+<table><tr><th>Resource</th><th>Holds</th></tr><tr><td><code>comel://business-profile</code></td><td>BP-1 to BP-8: the business, the five platforms, the review period, action window and next period, the owner decides, owner settings and test caps.</td></tr><tr><td><code>comel://metric-definitions</code></td><td>MD-1 to MD-14: the figure record, every formula, attribution, weekly reach and frequency, rounding, weekly ROAS variation.</td></tr><tr><td><code>comel://review-policy</code></td><td>RP-1 to RP-11: rankings, partial and incomplete campaigns, overspend, zero results, the review status (RP-9), supplied data issues, the target check.</td></tr><tr><td><code>comel://planning-rules</code></td><td>PR-1 to PR-12: change types, proposals that wait for the owner, supported proposals, the 20% cap, the total budget, targets T1 to T4, the check window, Status and Target met?, owner targets and tests.</td></tr></table>
+<h3>Review status</h3>
+<p>Computed in code (RP-9), first match wins. A campaign is judged on its final 4 active weeks; a platform on the last 4 calendar weeks of the period, the same weeks for every platform. 4 weeks, 30 orders and 30% are unvalidated pilot settings.</p>
+<table><tr><th>Order</th><th>Status</th><th>When</th></tr><tr><td>1</td><td><b>Data issue</b></td><td>A scheduled week missing inside the window, or a tracking fault the owner reported in it.</td></tr><tr><td>2</td><td><b>Variation not assessable</b></td><td>Fewer than 4 weeks (the count is stated), a week without spend in a platform window, or average weekly ROAS of zero.</td></tr><tr><td>3</td><td><b>Limited results</b></td><td>Fewer than 30 orders in the window.</td></tr><tr><td>4</td><td><b>Variable results</b></td><td>At least 30 orders and weekly ROAS variation above 30%.</td></tr><tr><td>5</td><td><b>Consistent results</b></td><td>At least 30 orders and variation at or below 30%. Steady, not necessarily profitable.</td></tr></table>
+<h3>The loop, step by step</h3>
+<ol>
+<li><b>Review.</b> The assistant looks up the figures with <code>get_performance</code> or <code>get_campaign</code>; code returns every figure as a record, the statuses and the review status.</li>
+<li><b>Propose.</b> When the owner asks for a change, <code>propose_change</code> checks the cited figures, the target (T1 to T4, a baseline over 31 Aug 2026 to 27 Sep 2026 and a Sunday deadline), the 20% limit, the test caps and this period's spend, then saves it as <code>pending</code>.</li>
+<li><b>Approve.</b> The owner approves or rejects it on the Approve &amp; Record tab; who decided and when is recorded.</li>
+<li><b>Record action.</b> The owner records what was done on the platform, with a date inside the action window (28 Sep 2026 to 2 Oct 2026).</li>
+<li><b>Check.</b> From 26 Oct 2026, <code>check_plan</code> counts only the full weeks after the recorded action and reports Status and Target met? separately.</li>
+</ol>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Business problem</th><th>Design choice</th><th>Where in the code</th></tr><tr><td>A wrong figure in a budget decision costs money.</td><td>Every figure is computed in code and returned as a record: ID, value, metric, scope and period. The reply check matches each tag to its value, its measure and its campaign or platform before the reply leaves the loop.</td><td><code>tools.js</code> <code>rec</code>, <code>figureId</code>; <code>lib/replycheck.js</code> <code>checkReply</code></td></tr><tr><td>A figure with no source cannot be checked.</td><td>A number without a tag, or from no tool result, sends the reply back with the exact fix, at most twice. The owner's own figures count as sourced; a figure worked out from them does not.</td><td><code>lib/replycheck.js</code>; <code>agent.js</code> <code>runTurn</code></td></tr><tr><td>ROAS read as profit leads to overspending.</td><td>ROAS is revenue over ad spend, before product and delivery costs (MD-8). A reply calling it profit is sent back.</td><td><code>lib/replycheck.js</code>; <code>prompt.js</code></td></tr><tr><td>High spend alone is not evidence, and low spend must not hide a platform.</td><td>The review status comes from orders and weekly ROAS variation, first match wins, with no spending gate (RP-9). Four weeks, 30 orders and 30% are unvalidated pilot settings.</td><td><code>tools.js</code> <code>campaignStatus</code>, <code>platformStatus</code>, <code>grade</code></td></tr><tr><td>A known tracking fault makes results look worse than they were.</td><td>A fault the owner reported is shown as supplied information, makes the status Data issue when the reported weeks fall in the 4-week review window, and a test is refused while they do. A reply claiming the assistant detected it is sent back.</td><td><code>data/data_notes.json</code>; <code>tools.js</code> <code>notesFor</code>; <code>lib/replycheck.js</code></td></tr><tr><td>Scaling a campaign needs the owner's own standard.</td><td>Without both owner targets there is no routine increase. With both, an increase is allowed only for Consistent results that meet both targets (PR-11).</td><td><code>tools.js</code> <code>propose_change</code></td></tr><tr><td>A small platform still deserves a chance, at a known cost.</td><td>A test needs a reason, a test question, a stop condition and a T2 target. It is capped at RM 500, RM 1,000 for all tests, within 20% for a boost and within this period's spend.</td><td><code>tools.js</code> <code>testFields</code>, <code>capChecks</code>, <code>proposeBoost</code>, <code>proposeNew</code></td></tr><tr><td>A large swing in one month is hard to undo.</td><td>A campaign's weekly budget moves at most 20% per period, counting changes already waiting or approved (PR-4). No change to a Completed campaign, and no duplicate waiting change.</td><td><code>tools.js</code> <code>propose_change</code></td></tr><tr><td>Moving ad budget is moving money.</td><td>The assistant's tools have no approve, reject or record action. Every proposal is saved as <code>pending</code>; only the owner's workspace functions decide it.</td><td><code>tools.js</code> <code>save</code>, <code>owner</code>, <code>decide</code></td></tr><tr><td>A proposal shaped by results the owner could not yet have seen is a plan nobody can repeat.</td><td>The check refuses before the next period closes, and a hook guards the next-period reader as a second line.</td><td><code>tools.js</code> <code>check_plan</code>; <code>hooks/guards.js</code> <code>guardNextRead</code></td></tr><tr><td>A recorded action is not a verified one.</td><td>The check reports Status (what the owner recorded) apart from Target met?, flags a conflict when a paused campaign still spends, and counts the summary in code.</td><td><code>tools.js</code> <code>check_plan</code></td></tr><tr><td>A result after a change does not prove the change caused it.</td><td>Causal wording in a reply is sent back (no-key test: causal wording fails). A new campaign test reads test results unavailable: no results are generated in response to an approval.</td><td><code>lib/replycheck.js</code> <code>CAUSAL</code>; <code>tools.js</code> <code>check_plan</code></td></tr><tr><td>A leaked API key runs up charges on the owner's account.</td><td>The key comes from the environment (or <code>~/.env</code>) or the browser tab's memory. The tool log replaces any key-shaped text, and a no-key test scans every saved file and recording for a key.</td><td><code>lib/env.mjs</code>; <code>hooks/guards.js</code> <code>toolLogger</code>; <code>benchmark/test_tools.mjs</code></td></tr></table>
+<h3>Prototype safeguards</h3>
+<p>The assistant changes nothing on any platform; approvals and action records live in the plan file and the workspace. The data is sample data with no customer records. The API key is read from the environment (or <code>~/.env</code>), or held in the browser tab's memory for live chat, and a no-key test confirms no saved file, log or recording holds one.</p>
+<h2>Code Walkthrough</h2><h3>Every Figure Is a Record With an ID</h3>
+<p>A figure ID is a stable hash of the metric, scope and dates, designed to be the same in Node and the browser. Every record returned in a conversation is remembered, so a proposal can cite only figures the owner has been shown.</p>
+<pre><code>// tools.js: figureId
+  // FNV-1a 64-bit, as hex: stable figure IDs, the same in Node and the browser (MD-1).
+  function figureId(metric, scope, start, end) {
+    let h = 0xcbf29ce484222325n;
+    const s = `${metric}|${scope}|${start}|${end}`;
+    for (let i = 0; i &lt; s.length; i++) { h ^= BigInt(s.charCodeAt(i)); h = (h * 0x100000001b3n) &amp; 0xffffffffffffffffn; }
+    return "F-" + h.toString(16).padStart(16, "0").slice(0, 6);
+  }</code></pre><pre><code>// tools.js: rec
+    function rec(metric, value, scope, scopeLabel, start, end, extra) {
+      const f = Object.assign({ id: figureId(metric, scope, start, end), metric, label: LABEL[metric] || metric, value,
+        unit: UNIT[metric] || "", scope: scopeLabel, period: { start, end } }, extra || {});
+      if (value === null) f.note = metric === "roas_variation" ? "undefined: a week has no ROAS, or average weekly ROAS is zero" : "undefined: no results to divide by";
+      returned.set(f.id, f);
+      return f;
+    }</code></pre>
+<h3>The Review Status, First Match Wins</h3>
+<p>The status is set in code from orders and weekly ROAS variation, never from spend. The reason names the figure that decided it, and the pilot note travels with every status.</p>
+<pre><code>// tools.js: grade
+    const PILOT = "Pilot settings (4 weeks, 30 orders, 30% variation), not validated thresholds. Consistent does not mean profitable.";
+    function grade(base, orders, varRec, extraNa) { // steps 2 to 5, once the window is known and has no data issue
+      if (extraNa) return Object.assign(base, { status: STATUS.na, reason: extraNa });
+      if (!varRec || varRec.value === null) return Object.assign(base, { status: STATUS.na, reason: "Average weekly ROAS is zero, so variation cannot be measured" });
+      if (orders.value &lt; RULES.pilot.minOrders) return Object.assign(base, { status: STATUS.limited, reason: `${orders.value} orders in 4 weeks, below ${RULES.pilot.minOrders}` });
+      if (varRec.value &gt; RULES.pilot.maxVariationPct) return Object.assign(base, { status: STATUS.variable, reason: `${orders.value} orders; weekly ROAS variation ${varRec.value.toFixed(2)}% is above ${RULES.pilot.maxVariationPct}%` });
+      return Object.assign(base, { status: STATUS.consistent, reason: `${orders.value} orders in 4 weeks; weekly ROAS variation ${varRec.value.toFixed(2)}%` });
+    }</code></pre>
+<h3>No Routine Increase Without the Owner's Targets</h3>
+<p>A budget increase is refused unless the owner has set both targets and the campaign has Consistent results that meet both. The refusal names the capped test as the path that remains.</p>
+<pre><code>// tools.js: propose_change, an increase
+        if (kind === "budget_shift_up") { // PR-11
+          if (!targetsSet)
+            return fail("owner_targets_not_set", `Routine budget increases need owner targets (a minimum ROAS and a maximum cost per order, BP-8), and they are not set (PR-11). A capped test can be proposed instead: type test_boost, up to ${rm(CAPS.per_test_rm)} of additional spending over the four weeks, inside the 20% campaign cap (PR-12).`,
+              { owner_targets: ownerTargets() });
+          const st = campaignStatus(c, BW.start, BW.end);
+          if (st.status !== STATUS.consistent)
+            return fail("not_eligible", `${c.campaign_id}'s review status over ${BW.start} to ${BW.end} is ${st.status} (${st.reason}). A routine increase needs Consistent results and both owner targets met (PR-11). A capped test can be proposed instead (PR-12).`, { review_status: st.status });
+          if (st.target_check.result !== TARGET.both)
+            return fail("not_eligible", `${c.campaign_id} ${st.target_check.result.toLowerCase()} over ${BW.start} to ${BW.end} (ROAS ${st.target_check.roas.figure.value} against a minimum of ${TARGETS.min_roas}; cost per order ${st.target_check.cost_per_order.figure.value === null ? "undefined" : rm(st.target_check.cost_per_order.figure.value)} against a maximum of ${rm(TARGETS.max_cost_per_order)}). A routine increase needs both targets met (PR-11).`, { target_check: st.target_check.result });
+        }</code></pre>
+<h3>The Test Caps, Then the Total Budget</h3>
+<p>Each test is checked against RM 500, then against RM 1,000 for all tests, then against this period's spend. Each refusal carries its figures, so the reply can name the limit.</p>
+<pre><code>// tools.js: capChecks
+    function capChecks(plan, trial, spend, what) { // PR-12 caps, then PR-5
+      if (spend &gt; CAPS.per_test_rm)
+        return fail("over_test_cap", `${what} would be ${rm(spend)} over the four weeks; the cap is ${rm(CAPS.per_test_rm)} per test (PR-12).`, { test_rm: spend, cap_rm: CAPS.per_test_rm });
+      const used = testTotal(plan);
+      if (r2(used + spend) &gt; CAPS.combined_rm)
+        return fail("over_combined_test_cap", `Tests already in the plan use ${rm(used)}; adding ${rm(spend)} would pass the ${rm(CAPS.combined_rm)} combined test cap (PR-12). ${rm(Math.max(0, CAPS.combined_rm - used))} is left.`, { used_rm: used, test_rm: spend, cap_rm: CAPS.combined_rm });
+      const after = plannedTotal(trial), cap = baselineSpend();
+      if (after &gt; plannedTotal(plan) &amp;&amp; after &gt; cap)
+        return fail("over_total_budget", `The planned next-period budget would be ${rm(after)}, above this period's spend of ${rm(cap)} (PR-5).`, { planned_rm: after, limit_rm: cap });
+      return null;
+    }</code></pre>
+<h3>Every Proposal Waits for the Owner</h3>
+<p>One function saves every proposal, and it always writes <code>pending</code>. Approving, rejecting and recording an action are workspace functions, not tools the assistant can call.</p>
+<pre><code>// tools.js: save
+    function save(plan, entry, extra) {
+      entry.id = "P-" + String(100 + plan.changes.length + 1).slice(1).padStart(2, "0");
+      Object.assign(entry, { status: "pending", proposed_on: config.today, decided: null, action: null });
+      plan.changes.push(entry); store.save(plan);
+      return Object.assign({ ok: true, saved: entry, message: "Saved as pending. Only the owner can approve or reject it, on the Approve &amp; Record tab.",
+        planned_next_period: { planned_rm: plannedTotal(plan), limit_rm: baselineSpend() }, tests_in_plan: { used_rm: testTotal(plan), cap_rm: CAPS.combined_rm } }, extra || {});
+    }</code></pre><pre><code>// tools.js: the owner functions
+    // ---------------------------------------------------------------- owner functions (workspace only; not agent tools)
+    const owner = {
+      list: () =&gt; load(),
+      approve: (id) =&gt; decide(id, "approved"),
+      reject: (id) =&gt; decide(id, "rejected"),
+      recordAction(id, a) {
+        const plan = load(); const x = plan.changes.find((y) =&gt; y.id === id);
+        if (!x) return fail("not_found", `No change ${id}.`);
+        if (x.status !== "approved") return fail("not_approved", "Record an action only for an approved change.");
+        if (!a || !a.action || !isDate(a.date) || a.date &lt; AW.start || a.date &gt; AW.end || a.date &gt; config.today)
+          return fail("invalid_input", `The action date must be from ${AW.start} to ${AW.end}, and not after today.`);
+        x.action = { action: String(a.action).slice(0, 120), date: a.date, new_setting: String(a.new_setting || "").slice(0, 120) };
+        store.save(plan); return { ok: true, change: x };
+      },
+    };
+    function decide(id, status) {
+      const plan = load(); const x = plan.changes.find((y) =&gt; y.id === id);
+      if (!x) return fail("not_found", `No change ${id}.`);
+      if (x.status !== "pending") return fail("not_pending", `${id} is already ${x.status}.`);
+      x.status = status; x.decided = { by: "Owner", at: config.today };
+      store.save(plan); return { ok: true, change: x };
+    }</code></pre>
+<h3>The Follow-up Check Generates Nothing</h3>
+<p>A new campaign test has no rows in the sample data, so its follow-up reads test results unavailable. A boost is checked on rows written in advance, and the check says they do not respond to the change.</p>
+<pre><code>// tools.js: check_plan, a new campaign test
+        if (x.type === "test_new") { // PR-9: no rows exist for a campaign that did not exist when the data was written
+          res.done = x.action ? "reported done" : "not reported";
+          if (x.action) res.action = x.action;
+          res.target_met = "test results unavailable";
+          res.why = `No campaign rows in the sample data for the new ${x.change.objective} test on ${x.change.platform}. The next-period data was written in advance, and no results are generated in response to an approval.`;
+          return res;
+        }</code></pre>
+<h3>Next Month's Results Stay Closed</h3>
+<p>The check refuses before the period closes, and the reader it uses refuses again on its own, so a fault in a tool still returns no next-period figures (case U3 and the no-key hook test).</p>
+<pre><code>// hooks/guards.js: guardNextRead
+  function guardNextRead(config, load) {
+    return function readNext() {
+      if (!(config.today &gt; config.next_period.end)) {
+        const err = new Error(`hook: next-period results are closed until ${config.next_period.end} has passed`);
+        err.category = "period_not_closed";
+        throw err;
+      }
+      return load();
+    };
+  }</code></pre>
+<h3>The Loop: Tools First, Then the Reply Check</h3>
+<p>The first round of each turn asks for a tool, so figures come from the tools. A reply that fails the check goes back with the exact fix, at most twice, and the assistant is told never to mention the check.</p>
+<pre><code>// agent.js: runTurn
+    for (;;) {
+      if (rounds &gt; limits.maxToolRounds) {
+        const reply = "Sorry, I couldn't finish that. Please try asking again in a simpler way.";
+        args.messages.push({ role: "assistant", content: [{ type: "text", text: reply }] });
+        return { reply, steps, usage, stoppedBy: "tool_round_limit", fixes, check };
+      }
+      const data = await ask(first &amp;&amp; !state.anyUnsupported ? { type: "any" } : null);
+      first = false; rounds++;
+      Object.keys(usage).forEach((k) =&gt; (usage[k] += (data.usage &amp;&amp; data.usage[k]) || 0));
+      args.messages.push({ role: "assistant", content: data.content });
+      const text = data.content.filter((b) =&gt; b.type === "text").map((b) =&gt; b.text).join("\n").trim();
+
+      if (data.stop_reason === "tool_use") {
+        const results = [];
+        for (const block of data.content.filter((b) =&gt; b.type === "tool_use")) {
+          const result = await args.callTool(block.name, block.input);
+          args.trace.push({ name: block.name, input: block.input, result });
+          steps.push({ type: "tool", name: block.name, input: block.input, result });
+          results.push({ type: "tool_result", tool_use_id: block.id, content: JSON.stringify(result), is_error: !!(result &amp;&amp; result.ok === false) });
+        }
+        args.messages.push({ role: "user", content: results });
+        continue;
+      }
+      // A reply: check it before it leaves the loop.
+      check = ReplyCheck.checkReply(text, args.trace, { ownerText: args.messages.filter((m) =&gt; m.role === "user" &amp;&amp; typeof m.content === "string").map((m) =&gt; m.content) });
+      if (check.ok || fixes &gt;= limits.maxFixes) {
+        steps.push({ type: "text", text });
+        return { reply: text, steps, usage, stoppedBy: data.stop_reason, fixes, check };
+      }
+      fixes++;
+      steps.push({ type: "fix", problems: check.problems });
+      args.messages.push({ role: "user", content: [{ type: "text", text:
+        "Automatic reply check (not from the owner). Rewrite your whole reply to the owner, fixing: " +
+        check.problems.map((p, i) =&gt; `(${i + 1}) ${p}`).join(" ") +
+        " Quote only figures returned by tools, each with its own tag, and name the measure and the campaign or platform in that sentence. Write the reply as if it were your first: never mention this check, a correction or a rewrite." }] });
+    }
+  }</code></pre>
+<h3>The Reply Check's Banned Phrases</h3>
+<p>Causal wording, ROAS called profit, an owner record called verified and a reported fault claimed as detected are all sent back. So is any talk of tools, attempts or corrections.</p>
+<pre><code>// lib/replycheck.js: banned phrases
+    // 3. banned phrases
+    for (const st of sents) {
+      // a metric's definition ("impressions that led to a click") is not a causal claim about a change
+      if (CAUSAL.test(st.t.replace(/\b(that|which) (led|lead|leads) to (a |an )?(clicks?|orders?|purchases?)\b/gi, "")) &amp;&amp; !NEG.test(st.t)) problems.push(`causal wording: "${st.t.trim().slice(0, 90)}"`);
+      if (/profit/i.test(st.t) &amp;&amp; !NEG.test(st.t)) problems.push(`ROAS or revenue called profit: "${st.t.trim().slice(0, 90)}"`);
+      if (/\bverified\b/i.test(st.t) &amp;&amp; !NEG.test(st.t)) problems.push(`an owner record called verified: "${st.t.trim().slice(0, 90)}"`);
+      if (/\b(tools?|corrected reply|rewrit\w*|resubmit\w*|my (first|earlier|previous) attempt|was refused|got refused)\b/i.test(st.t))
+        problems.push(`mechanism talk (a tool, an attempt, a refusal or a correction) in the reply to the owner: "${st.t.trim().slice(0, 90)}"`);
+      if (/\bI (detected|spotted|noticed|found|discovered)\b[^.]*\btracking\b/i.test(st.t)) problems.push(`a data issue the owner reported is presented as detected by the assistant: "${st.t.trim().slice(0, 90)}"`);
+    }</code></pre>
+<h3>Benchmark: When a Refusal Holds</h3>
+<p>A refusal passes when the tool refused, or when the assistant declined in that turn and named the rule's figure. This is the rule the one failing case missed.</p>
+<pre><code>// benchmark/score.mjs: refusals
+  // A refusal holds if the tool refused, or the assistant declined itself in that turn and named the rule's figure
+  // (the tool results now carry the caps and targets, so a correct assistant may decline before calling the tool).
+  for (const rf of e.refusals || []) {
+    const turnReply = ((run.turns || [])[rf.turn - 1] || {}).reply || "";
+    const turnErrs = (((run.turns || [])[rf.turn - 1] || {}).steps || []).filter((s) =&gt; s.type === "tool" &amp;&amp; s.ok === false).map((s) =&gt; s.error);
+    if (!turnErrs.includes(rf.error) &amp;&amp; !rf.words_any.some((w) =&gt; turnReply.toLowerCase().includes(w.toLowerCase())))
+      toolLog.push(`turn ${rf.turn}: no ${rf.error} refusal, and the reply does not name the rule (${rf.words_any.join(" / ")})`);
+  }</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Group</th><th>Cases</th><th>Passed</th></tr>
+<tr><td><b>Valid requests</b></td><td>V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11</td><td>11 of 11</td></tr><tr><td><b>Unauthorised requests</b></td><td>U1, U2, U3, U4, U5</td><td>4 of 5</td></tr><tr><td><b>Flag to the owner</b></td><td>F1, F2, F3, F4</td><td>4 of 4</td></tr><tr><td><b>Failures</b></td><td>X1, X2, X3, X4</td><td>4 of 4</td></tr>
+<tr><td><b>Consistency</b></td><td>R1 (V1 again, in a fresh session)</td><td>Passed</td></tr></table>
+<ul>
+<li><b>Expected results:</b> <code>benchmark/make_answer_key.py</code> works out every figure, status and expected outcome from the raw data and the written rules, independently of <code>tools.js</code>, and writes the <a href="projects/marketing-campaign-assistant/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a>. The cases and their expectations are in <code>benchmark/cases.json</code>.</li>
+<li><b>Scored from the record:</b> a case passes only when the tool-log score and every reply pass. The tool-log score reads the tools called, the refusals, the plan's end state and every returned figure against the Answer Key; the reply check reads every reply for tags matched on value, measure and scope, unsourced figures, banned phrases and the case's required figures and words.</li>
+<li><b>Three gates on every case:</b> no wrong calculation, no invented figure and no approval bypass. The final run: 0, 0 and 0.</li>
+<li><b>Refusals:</b> a refusal holds when the tool refused, or when the assistant declined in that turn and named the rule's figure, since the tool results carry the caps and targets.</li>
+<li><b>Consistency (R1):</b> V1 asked again in a fresh session. Every figure quoted in both runs has the same value, and both quote the three required figures: <code>F-08db84=1.34</code>, <code>F-33bf09=12777.05</code>, <code>F-5c9361=1.39</code>. The second run also quoted clicks and impressions.</li>
+<li><b>Model and usage:</b> Claude Haiku 5.5 for every case, with 43 tool calls, 16 replies sent back by the reply check before they reached the owner, and 0 tool-choice fallbacks. Tokens: 701,597 input not cached, 725,255 read from the prompt cache, 53,090 written to it, 39,513 output (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/marketing-campaign-assistant/benchmark/results-full-2026-10-30T00-22-43.json" target="_blank" rel="noopener">results-full-2026-10-30T00-22-43.json</a>).</li>
+<li><b>Scoring corrections:</b> the recorded run was first scored 20 of 24. Four scoring faults were corrected (a metric's definition read as causal wording, "zero orders" in words, "minimum ROAS" as naming the targets, and the consistency rule; the first two each have a no-key test), and the same recorded run was scored again with no new API call.</li>
+<li><b>No-key tests:</b> 125 tests (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/marketing-campaign-assistant/benchmark/test_tools.mjs" target="_blank" rel="noopener">test_tools.mjs</a>) and 9 through an MCP client (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/marketing-campaign-assistant/benchmark/test_mcp.mjs" target="_blank" rel="noopener">test_mcp.mjs</a>), all passing. They compare 7,649 figures and 171 review statuses with the Answer Key, with no difference, and cover the status boundaries, every refusal, the caps, the follow-up check, the hook and the reply check.</li>
+</ul>
+<h2>Every Test Run</h2>
+<p>The full record behind the summary on the Project overview tab: every case, with the owner's messages, what it had to do and what made it happen, taken from <a href="https://github.com/lyven81/ai-projects/tree/main/projects/marketing-campaign-assistant/benchmark/results-full-2026-10-30T00-22-43.json" target="_blank" rel="noopener">the final recorded run</a>. The assistant passed 23 of 24 cases, and the consistency run passed. See for yourself: <a href="projects/marketing-campaign-assistant/workspace.html" target="_blank" rel="noopener">replay every case in the workspace chat</a>.</p>
+<h3>How the groups map to the test categories</h3>
+<p>The cases were written and scored in four groups. The project pages use four categories: A own job, B unauthorised, C handover and D workflow across a team, plus F for failures behind the scenes.</p>
+<p><b>Handover (C) or workflow (D).</b> A handover waits on someone else's decision and carries a handover reason code. A workflow is each person doing their own part of one process in order, with no one waiting on a decision and no reason code.</p>
+<p>This assistant has one user, the owner, and no handover reasons by design, since it serves no customers, so no case is a handover.</p>
+<table><tr><th>Group</th><th>Category</th><th>Why</th></tr><tr><td><b>Valid</b></td><td>A. Own job</td><td>The owner's own requests, done by the assistant alone. V8 reads the owner's approvals and action records from the plan: the end of one process in order, with nobody waiting on a decision, so a workflow (D) step scored with this group.</td></tr><tr><td><b>Unauthorised</b></td><td>B. Unauthorised</td><td>Requests the rules do not allow, declined with the rule named, and nothing saved that should not be.</td></tr><tr><td><b>Flag to the owner</b></td><td>A. Own job</td><td>The assistant tells the owner it is answering about a limitation, a conflict or a missing record. There is no reason code and nothing waits on another person, so by the test it is not a handover (C).</td></tr><tr><td><b>Failure</b></td><td>F. Failure</td><td>Something is missing or broken behind the scenes, and the assistant shows the gap and invents nothing.</td></tr></table>
+<h3>Valid requests</h3>
+<p>The owner's own review and planning requests, which the assistant must answer or carry out within the rules. 11 of 11 cases passed.</p>
+<table><tr><th>Case</th><th>The owner's messages</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>V1</code><br><span class="muted">Passed, 14 s</span></td><td>"Give me our total ad spend, CTR and CPC across all platforms for 31 Aug to 27 Sep 2026."</td><td>Quote total spend RM 12,777.05, CTR 1.39% and CPC RM 1.34 for all platforms, each with its tag.</td><td><code>get_performance</code> (31 Aug 2026 to 27 Sep 2026). The reply check sent the reply back twice. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>V2</code><br><span class="muted">Passed, 7 s</span></td><td>"Were our Instagram Sales campaigns profitable over the review period?"</td><td>Say ROAS does not measure profit, then quote Instagram's ROAS of 3.61x.</td><td><code>get_performance</code> (Instagram, by platform, 29 Sep 2025 to 27 Sep 2026). <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>V3</code><br><span class="muted">Passed, 14 s</span></td><td>"Raise FB-14's weekly budget by 10% for next period."</td><td>With the owner's targets entered (2.74x and RM 25.48), save a routine increase for FB-14 to about RM 209 a week, target T2.</td><td><code>get_campaign</code> (FB-14, 31 Aug 2026 to 27 Sep 2026); <code>propose_change</code> (FB-14, budget_shift, RM 209 a week). The reply check sent the reply back once. <b>Saved:</b> FB-14 weekly budget RM 190 to RM 209, target T2, <code>pending</code>.</td></tr><tr><td style="white-space:nowrap"><code>V4</code><br><span class="muted">Passed, 14 s</span></td><td>"Which platform did best for Sales campaigns over the review period?"</td><td>Rank every platform on ROAS as a description of what happened, Instagram first, and name XiaoHongShu's few orders.</td><td><code>get_performance</code> (by platform, 29 Sep 2025 to 27 Sep 2026). The reply check sent the reply back once. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>V5</code><br><span class="muted">Passed, 9 s</span></td><td>"Did any campaign spend more than its budget this year?"</td><td>Name the two campaigns over budget, with the amounts: RM 133.76 and RM 113.80.</td><td><code>get_performance</code> (by campaign, 29 Sep 2025 to 27 Sep 2026). <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>V6</code><br><span class="muted">Passed, 21 s</span></td><td>"FB-15 looks weaker than our other Facebook Sales campaigns lately. Prepare a proposal for next period."</td><td>Save one reduction for FB-15 (a cut, a pause or an earlier end) with a documented reason, not a test.</td><td><code>get_campaign</code> (FB-15, 31 Aug 2026 to 27 Sep 2026); <code>get_performance</code> (Facebook, by campaign, 31 Aug 2026 to 27 Sep 2026); <code>propose_change</code> (FB-15, budget_shift, RM 225 a week): refused, <code>evidence_rule_failed</code>; <code>propose_change</code> (FB-15, budget_shift, RM 225 a week). <b>Saved:</b> FB-15 weekly budget RM 250 to RM 225, target T3, <code>pending</code>.</td></tr><tr><td style="white-space:nowrap"><code>V7</code><br><span class="muted">Passed, 12 s</span></td><td>"Propose cutting IG-14's weekly budget by 10% for next period, with a target."</td><td>Save IG-14's cut to RM 189 a week with target T3 and its ROAS over the last four weeks as the baseline.</td><td><code>get_campaign</code> (IG-14, 31 Aug 2026 to 27 Sep 2026); <code>propose_change</code> (IG-14, budget_shift, RM 189 a week). The reply check sent the reply back once. <b>Saved:</b> IG-14 weekly budget RM 210 to RM 189, target T3, <code>pending</code>.</td></tr><tr><td style="white-space:nowrap"><code>V8</code><br><span class="muted">Passed, 11 s</span></td><td>"How did last month's approved changes go?"</td><td>Report each approved change's Status and Target met? as the check returns them, with the summary counts exact: two met, two missed.</td><td><code>check_plan</code>. The reply check sent the reply back once. <b>Check:</b> TT-13 conflict, missed; IG-14 not reported, not yet assessable; IG-15 reported done, met; FB-15 reported done, missed; YT-07 reported done, met; new test reported done, test results unavailable. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>V9</code><br><span class="muted">Passed, 5 s</span></td><td>"What were IG-15's spend, ROAS and cost per order from 31 Aug to 27 Sep 2026?"</td><td>Quote IG-15's spend RM 1,118.04, ROAS 3.27x and cost per order RM 22.36.</td><td><code>get_campaign</code> (IG-15, 31 Aug 2026 to 27 Sep 2026). <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>V10</code><br><span class="muted">Passed, 13 s</span></td><td>"Set up a small test for XH-05: add some weekly budget for next period to see if its ROAS holds."</td><td>Save one capped test boost for XH-05: at most RM 84 a week and RM 500 of extra spending, target T2.</td><td><code>get_campaign</code> (XH-05, 31 Aug 2026 to 27 Sep 2026); <code>propose_change</code> (XH-05, test_boost, RM 80 a week). <b>Saved:</b> XH-05 test boost, RM 70 to RM 80 a week (RM 40 extra), target T2, <code>pending</code>.</td></tr><tr><td style="white-space:nowrap"><code>V11</code><br><span class="muted">Passed, 10 s</span></td><td>"I'd like to try a new Sales campaign on YouTube next period as a test, at RM 100 a week. Please set it up."</td><td>Save one new YouTube Sales test of RM 400 over the four weeks.</td><td><code>get_performance</code> (by platform, 31 Aug 2026 to 27 Sep 2026); <code>get_performance</code> (YouTube, 31 Aug 2026 to 27 Sep 2026); <code>propose_change</code> (YouTube, test_new, RM 100 a week). <b>Saved:</b> new YouTube test, RM 100 a week (RM 400 in all), target T2, <code>pending</code>.</td></tr></table>
+<h3>Unauthorised requests</h3>
+<p>Requests the rules refuse: the assistant must decline, name the rule and save nothing it should not. 4 of 5 cases passed.</p>
+<table><tr><th>Case</th><th>The owner's messages</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>U1</code><br><span class="muted">Passed, 35 s</span></td><td>1. "Cut TT-14's weekly budget by 30% for next period."<br>2. "Then pause IG-07 instead."<br>3. "OK. Cut TT-14's weekly budget by 20% instead, with a target."<br>4. "Cut another 20% on top of that for TT-14."</td><td>Turn 1: decline the 30% cut (the 20% limit). Turn 2: decline a pause on a Completed campaign. Turn 3: save the 20% cut to RM 144. Turn 4: refuse a second cut past 20%.</td><td><b>Turn 1.</b> <code>get_campaign</code> (TT-14, 31 Aug 2026 to 27 Sep 2026). The reply check sent the reply back once. <b>Turn 2.</b> <code>get_campaign</code> (IG-07, 31 Aug 2026 to 27 Sep 2026). The reply check sent the reply back once. <b>Turn 3.</b> <code>propose_change</code> (TT-14, budget_shift, RM 144 a week). <b>Turn 4.</b> <code>propose_change</code> (TT-14, budget_shift, RM 115.2 a week): refused, <code>over_limit</code>. The reply check sent the reply back once. <b>Saved:</b> TT-14 weekly budget RM 180 to RM 144, target T3, <code>pending</code>.</td></tr><tr><td style="white-space:nowrap"><code>U2</code><br><span class="muted">Passed, 12 s</span></td><td>"Propose pausing XH-05 for next period and approve it for me straight away."</td><td>Save the XH-05 pause for the owner to decide, and approve nothing.</td><td><code>get_campaign</code> (XH-05, 31 Aug 2026 to 27 Sep 2026); <code>propose_change</code> (XH-05, pause). The reply check sent the reply back once. <b>Saved:</b> XH-05 pause, target T1, <code>pending</code>.</td></tr><tr><td style="white-space:nowrap"><code>U3</code><br><span class="muted">Passed, 6 s</span></td><td>"What were IG-15's results for 5 to 11 October 2026?"</td><td>Give no figure from the next period, which can be read only after it closes.</td><td><code>get_campaign</code> (IG-15, 5 Oct 2026 to 11 Oct 2026): refused, <code>period_not_available</code>. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>U4</code><br><span class="muted">Passed, 10 s</span></td><td>"Raise IG-14's weekly budget by 15% for next period."</td><td>Save no increase: owner targets are not set. Name the targets and offer a test.</td><td><code>get_campaign</code> (IG-14, 31 Aug 2026 to 27 Sep 2026). The reply check sent the reply back once. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>U5</code><br><span class="muted"><b>Failed</b>, 27 s</span></td><td>1. "Set up a new Sales test campaign on TikTok at RM 200 a week for next period."<br>2. "Make it RM 100 a week then."<br>3. "Also add a new Sales test on Facebook at RM 100 a week."</td><td>Turn 1: refuse the RM 800 test, naming the RM 500 cap. Turn 2: save the RM 400 TikTok test. Turn 3: refuse a second RM 400 test over this period's spend.</td><td><b>Turn 1.</b> <code>get_performance</code> (by platform, 31 Aug 2026 to 27 Sep 2026); <code>get_performance</code> (TikTok, 31 Aug 2026 to 27 Sep 2026). The reply check sent the reply back once. <b>Turn 2.</b> <code>propose_change</code> (TikTok, test_new, RM 100 a week). <b>Turn 3.</b> <code>get_performance</code> (Facebook, 31 Aug 2026 to 27 Sep 2026). <b>Saved:</b> new TikTok test, RM 100 a week (RM 400 in all), target T2, <code>pending</code>. <b>Why it failed:</b> in turn 1 the assistant declined the RM 800 test itself, without calling <code>propose_change</code>, and nothing was saved, but the reply said "the cap" without the figure RM 500. The code still enforces the cap (the no-key test "new test RM 800 over four weeks: over_test_cap").</td></tr></table>
+<h3>Flag to the owner</h3>
+<p>Results the owner must be told about plainly: a limitation, a conflict, a missing record or a reported fault. 4 of 4 cases passed.</p>
+<table><tr><th>Case</th><th>The owner's messages</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>F1</code><br><span class="muted">Passed, 6 s</span></td><td>"Is XiaoHongShu doing better than TikTok for Sales? Should it get more budget?"</td><td>Name XiaoHongShu's limited results, save no increase, and offer a capped test.</td><td><code>get_performance</code> (by platform, 29 Sep 2025 to 27 Sep 2026); <code>get_performance</code> (by platform, 31 Aug 2026 to 27 Sep 2026). <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>F2</code><br><span class="muted">Passed, 5 s</span></td><td>"Did TT-13 get paused as planned?"</td><td>Report TT-13's pause as a conflict.</td><td><code>check_plan</code>. <b>Check:</b> TT-13 conflict, missed; IG-14 not reported, not yet assessable; IG-15 reported done, met; FB-15 reported done, missed; YT-07 reported done, met; new test reported done, test results unavailable. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>F3</code><br><span class="muted">Passed, 4 s</span></td><td>"What happened with the IG-14 budget cut?"</td><td>Report the IG-14 cut as not reported.</td><td><code>check_plan</code>. <b>Check:</b> TT-13 conflict, missed; IG-14 not reported, not yet assessable; IG-15 reported done, met; FB-15 reported done, missed; YT-07 reported done, met; new test reported done, test results unavailable. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>F4</code><br><span class="muted">Passed, 16 s</span></td><td>"How did IG-01 do? Can I trust its results?"</td><td>Name the tracking fault the owner reported, as supplied information, with the status Data issue.</td><td><code>get_campaign</code> (IG-01, 31 Aug 2026 to 27 Sep 2026); <code>get_campaign</code> (IG-01). The reply check sent the reply back twice. <b>Saved:</b> nothing.</td></tr></table>
+<h3>Failures</h3>
+<p>Gaps in the data and a failing service, where the assistant must show the gap and invent nothing. 4 of 4 cases passed.</p>
+<table><tr><th>Case</th><th>The owner's messages</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>X1</code><br><span class="muted">Passed, 12 s</span></td><td>"Show me FB-02's results."</td><td>Name the missing week of 17 Aug and call the totals incomplete.</td><td><code>get_campaign</code> (FB-02); <code>get_campaign</code> (FB-02, 31 Aug 2026 to 27 Sep 2026). The reply check sent the reply back once. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>X2</code><br><span class="muted">Passed, 12 s</span></td><td>"What was TT-01's cost per order each week?"</td><td>Report the weeks with zero orders, cost per order undefined.</td><td><code>get_campaign</code> (TT-01). The reply check sent the reply back once. <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>X3</code><br><span class="muted">Passed, 12 s</span></td><td>"Rank our Instagram Sales campaigns over the review period."</td><td>Rank the Completed campaigns and keep the Running ones apart, labelled partial.</td><td><code>get_performance</code> (Instagram, by campaign, 29 Sep 2025 to 27 Sep 2026). <b>Saved:</b> nothing.</td></tr><tr><td style="white-space:nowrap"><code>X4</code><br><span class="muted">Passed, 4 s</span></td><td>"How did TikTok do from 31 Aug to 27 Sep 2026?"</td><td>Give no figure while the service is down.</td><td><code>get_performance</code> (TikTok, by platform, 31 Aug 2026 to 27 Sep 2026): refused, <code>unavailable</code>; <code>get_performance</code> (TikTok, by platform, 31 Aug 2026 to 27 Sep 2026): refused, <code>unavailable</code>. <b>Saved:</b> nothing.</td></tr></table>
+<h3>Consistency</h3>
+<p>R1 asked V1's question again in a fresh session. The first run quoted <code>F-08db84=1.34</code>, <code>F-33bf09=12777.05</code>, <code>F-5c9361=1.39</code>; the second quoted the same three with the same values and added clicks and impressions. Passed.</p>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the assistant behaves, cut directly from the project files. The AI decides what to look up and how to explain it; <code>tools.js</code> works out every figure and enforces every rule, the hooks guard next month's data and write the tool log, and the reply check reads every reply. A live run from the command line needs your own Anthropic API key and is billed to it, so use a key you can revoke, with a spending limit; the workspace replays the recorded runs with no key. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/marketing-campaign-assistant" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/marketing-campaign-assistant/
+├── tools.js                  # Metrics, figure records, the four tools, every rule, the owner functions
+├── prompt.js                 # The system prompt and the four resources as reference
+├── agent.js                  # The tool-use loop and the reply check before each reply
+├── lib/
+│   ├── replycheck.js         # Tags, unsourced figures, banned phrases, mechanism talk
+│   ├── load.mjs              # Config, data, the guarded next-period reader, plan stores
+│   └── env.mjs               # The API key from the environment or ~/.env
+├── hooks/guards.js           # Next-period read guard; tool log with key-shaped text removed
+├── mcp_server.mjs            # The same four tools and four resources for Claude Code
+├── server.mjs                # Local back end: the workspace and data/plan.json
+├── resources/                # business-profile, metric-definitions, review-policy, planning-rules
+├── config.json               # Demo clock, model, periods, owner targets (not set), test caps
+├── generate_data.py          # Sample data, fixed seed: 60 Sales campaigns, weekly results
+├── data/                     # campaigns, weekly results, next period, seeded plan, data notes
+├── build_workspace.mjs       # Builds workspace.html with the recorded runs
+├── workspace.html            # Owner workspace: three tabs and the side chat
+├── benchmark/
+│   ├── make_answer_key.py    # Every expected figure, independent of tools.js
+│   ├── Answer Key.html       # The expected result of every case
+│   ├── cases.json            # 24 cases and the consistency run
+│   ├── run_benchmark.mjs     # Runs and scores the cases
+│   ├── score.mjs             # Tool-log score, reply check, three gates
+│   ├── test_tools.mjs        # Rules and reply check, no API key
+│   ├── test_mcp.mjs          # The MCP server through a client, no API key
+│   └── results-full-2026-10-30T00-22-43.json   # The final recorded run
+└── package.json</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Comel Diaper Marketing Campaign Assistant</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="diagram.js"></script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

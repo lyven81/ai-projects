@@ -1,0 +1,14 @@
+{
+  "notes": [
+    {
+      "campaign_id": "IG-01",
+      "kind": "tracking_fault",
+      "weeks": [
+        "2026-02-02",
+        "2026-02-09"
+      ],
+      "source": "Reported by the owner",
+      "note": "Instagram purchase tracking was not recording orders from 2 Feb 2026 to 15 Feb 2026."
+    }
+  ]
+}

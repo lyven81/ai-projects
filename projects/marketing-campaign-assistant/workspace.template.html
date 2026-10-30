@@ -1,0 +1,277 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comel Diaper · Marketing Campaign Assistant</title>
+<link rel="icon" href="../../favicon.svg">
+<style>
+:root{--bg:#fff8f3;--ink:#3a2a26;--line:#f0dfd6;--line2:#f2e2d9;--row:#f7ece6;--muted:#7a6660;--logo:#fce3d6;--badge:#fbeae1;--badgeink:#9c4038;--primary:#a8473e;--chathead:#fce8dd;--bubble:#fdf1ea;--focus:#5fa8b0;--teal:#7fb7be;--tealbg:#eef7f8;--amber:#fff0d5;--amberink:#805d21;--step:#3f7f87;--card:#fff;--neutral:#f4ece7;--neutralink:#79645d;--barbg:#f3e5dc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px system-ui,"Segoe UI",sans-serif}
+button,select,input{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:var(--card);color:inherit;border-radius:9px;padding:9px 13px}button:hover{filter:brightness(.97)}button:disabled{opacity:.45;cursor:default}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.crumb{font-size:13px;padding:10px 32px;border-bottom:1px solid var(--line)}.crumb a{color:var(--primary);text-decoration:none}
+.shell{max-width:1500px;margin:auto;padding:20px 32px}
+header{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px}
+.logo{border-radius:14px;background:var(--logo);font-size:27px;padding:10px 14px;color:var(--primary);font-weight:700}.brand strong{font-size:23px;letter-spacing:-1px}
+.muted,small{color:var(--muted)}h1{font-size:27px;letter-spacing:-1px;margin:20px 0 4px}h2{font-size:18px;margin:0 0 4px}h3{font-size:15.5px;margin:0 0 6px}p{line-height:1.6}
+.badge{display:inline-block;font-size:12px;padding:4px 9px;border-radius:20px;background:var(--badge);color:var(--badgeink);white-space:nowrap}.amber{background:var(--amber);color:var(--amberink)}.tealb{background:var(--tealbg);color:var(--step)}.neutral{background:var(--neutral);color:var(--neutralink)}
+.tabs{display:flex;gap:8px;margin:20px 0 18px;border-bottom:1px solid var(--line);padding-bottom:14px;flex-wrap:wrap}.tabs button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:22px;align-items:start}main{min-width:0}select{max-width:100%;min-width:0}.fields label{min-width:0}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:15px;padding:20px;margin-bottom:18px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:8px}.metric{background:var(--card);border:1px solid var(--line2);border-radius:13px;padding:16px}.metric strong{display:block;font-size:27px;margin:8px 0 4px}
+.sumline{font-size:13px;color:var(--muted);margin:0 0 18px}
+.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:11px 9px;border-bottom:1px solid var(--row);text-align:left;vertical-align:top}th{font-weight:500;color:var(--muted);font-size:12px}
+td small{display:block;margin-top:4px;font-size:12px}
+.callout{border-left:3px solid var(--teal);background:var(--tealbg);padding:11px 15px;font-size:14px;line-height:1.6;margin:12px 0}
+.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.two .card{margin-bottom:18px}
+.target{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.target input{width:100%}
+.pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:10px;font-size:13px}.pager button{padding:5px 10px;font-size:13px}
+.bar{height:8px;background:var(--barbg);border-radius:5px;margin:10px 0}.bar span{display:block;height:100%;background:var(--teal);border-radius:5px}
+.chat{position:sticky;top:14px;background:var(--card);border:1px solid var(--line2);border-radius:15px;overflow:hidden}
+.chathead{background:var(--chathead);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.modes button{font-size:12px;padding:5px 9px}.modes button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.messages{height:470px;overflow:auto;padding:14px}.bubble{padding:11px 13px;background:var(--bubble);border-radius:12px;margin:0 0 10px;font-size:14px;line-height:1.6;white-space:pre-wrap}
+.bubble.rich{white-space:normal}.bubble.rich p{margin:0 0 8px}.bubble.rich p:last-child{margin:0}.bubble.rich ul{margin:4px 0 10px;padding-left:18px}.bubble.rich li{margin:0 0 7px}
+.bubble.user{background:var(--primary);color:#fff;margin-left:30px}.bubble.sys{background:var(--tealbg);color:var(--step);font-size:13px}
+.tool{font-size:12px;color:var(--muted);margin:-4px 0 10px 4px}.tool b{color:var(--step)}
+.chat form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}.chat input{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;padding:9px}
+.suggestions{padding:0 12px 12px;display:flex;gap:6px;flex-wrap:wrap}.suggestions button{font-size:12px;padding:6px 8px}
+.src{display:inline-block;font-size:9.5px;letter-spacing:.3px;padding:0 4px;border-radius:6px;background:var(--tealbg);color:var(--step);border:1px solid #cfe5e7;margin-left:3px;cursor:help;vertical-align:1px;white-space:nowrap}
+.daterow{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:0 0 12px}.daterow[hidden]{display:none}.daterow label{min-width:170px}
+.fields{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:12px 0}label{display:grid;gap:5px;font-size:13px}
+select,input[type=date],input[type=text],input[type=password]{padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:inherit}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.statusline{font-size:13px;margin-top:10px;color:var(--step)}
+.footer{font-size:12px;color:var(--muted);margin:14px 0}.view[hidden]{display:none}.step{font-size:11px;font-weight:700;letter-spacing:1.8px;color:var(--step)}
+.change{border:1px solid var(--line2);border-radius:12px;padding:16px;margin-bottom:12px}.change ul{margin:8px 0;padding-left:20px;line-height:1.65;font-size:14px}.change .kind{font-size:12px;color:var(--muted);margin:6px 0 2px}
+.keyrow{padding:12px;border-top:1px solid var(--line);font-size:12.5px;display:none}.keyrow.on{display:block}.keyrow input{width:100%;margin:6px 0}
+.chat.full{position:fixed;top:16px;bottom:16px;left:50%;transform:translateX(-50%);width:min(980px,calc(100% - 32px));z-index:20;display:flex;flex-direction:column;box-shadow:0 12px 40px #3a2a2633}
+.chat.full .messages{height:auto;flex:1;padding:22px 28px}.chat.full .bubble{font-size:15.5px;line-height:1.75;padding:14px 18px;margin-bottom:14px}.chat.full .bubble.user{margin-left:120px}.chat.full .tool{font-size:13px}
+.shade{display:none;position:fixed;inset:0;background:#3a2a2655;z-index:19}.shade.on{display:block}
+.casepick{padding:10px 12px;border-bottom:1px solid var(--line);font-size:13px}.casepick select{width:100%}
+@media(max-width:1000px){.workspace{grid-template-columns:1fr}.chat{position:static}.messages{height:360px}.shell{padding:16px}.crumb{padding:10px 16px}.metrics{grid-template-columns:1fr 1fr 1fr;gap:7px}.metric{padding:10px}.metric strong{font-size:19px}.fields{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+@media(max-width:600px){.metrics{grid-template-columns:1fr}}
+</style></head>
+<body>
+<div class="crumb"><a href="../../index.html">AI Projects</a> / <a href="../../marketing-campaign-assistant.html">Marketing Campaign Assistant</a></div>
+<div class="shell">
+<header><div class="brand"><div><strong>Comel Diaper</strong><br><small>Marketing Campaign Assistant</small></div></div>
+<div><label style="display:inline-grid">Demo date<select id="clock"><option value="2026-09-28">Mon 28 Sep 2026 · review and propose</option><option value="2026-10-26">Mon 26 Oct 2026 · check results</option></select></label> <span class="badge">Owner workspace · Sample data</span></div></header>
+<h1>Your campaign review, with a second pair of eyes.</h1>
+<nav class="tabs" role="tablist"><button role="tab" id="tab0" class="active" onclick="tab(0)">1 &nbsp; Review &amp; Propose</button><button role="tab" id="tab1" onclick="tab(1)">2 &nbsp; Approve &amp; Record</button><button role="tab" id="tab2" onclick="tab(2)">3 &nbsp; Check Results</button></nav>
+<div class="workspace"><main>
+<section class="view" id="view0">
+ <div class="card"><div class="step">REVIEW WINDOW</div><div class="fields">
+  <label>Period<select id="period"><option value="7">Last 7 days of data (21 to 27 Sep 2026)</option><option value="30" selected>Last 4 complete weeks (31 Aug to 27 Sep 2026)</option><option value="all">Whole review period (29 Sep 2025 to 27 Sep 2026)</option><option value="custom">Choose dates on the calendar</option></select></label>
+  <label>Platform<select id="platform"><option value="">All platforms</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>YouTube</option><option>XiaoHongShu</option></select></label></div>
+  <div id="customRow" class="daterow" hidden><button type="button" id="sameDay" title="Set the end date to the start date">Same day</button><label>From<input type="date" id="dFrom" min="2025-09-29" max="2026-09-27" value="2026-09-21"></label><label>To<input type="date" id="dTo" min="2025-09-29" max="2026-09-27" value="2026-09-27"></label></div>
+  <small id="windowNote"></small><br><small>Dataset period: 29 September 2025 to 25 October 2026</small></div>
+ <div class="metrics" id="tiles"></div><p class="sumline" id="sumline"></p>
+ <div class="card"><h2>Platform performance</h2><p class="muted" style="margin:0 0 10px">Observed results, with a separate review status.</p><div class="tablewrap"><table><thead id="platHead"></thead><tbody id="platRows"></tbody></table></div><p class="footer" id="platNote"></p></div>
+ <div class="two">
+  <div class="card"><h3>How review status works</h3><p style="font-size:14px;margin:6px 0">Data issues take priority. Fewer than four weeks, a week without spend, or an average weekly ROAS of zero: Variation not assessable. Below 30 orders: Limited results. At least 30 orders: weekly ROAS variation above 30% is Variable results; otherwise Consistent results.</p>
+   <p class="callout" style="margin-bottom:0">Consistent does not mean profitable. Spend is shown for exposure and never decides the status. Every campaign here is a Sales campaign.</p></div>
+  <div class="card"><div class="row"><h3 style="margin:0">Owner performance targets</h3><span class="badge neutral" id="tgtBadge">Not set</span></div>
+   <div class="target"><label>Minimum ROAS (x)<input type="text" inputmode="decimal" id="inRoas" placeholder=""><small id="propRoas"></small></label><label>Maximum cost per order (RM)<input type="text" inputmode="decimal" id="inCpo" placeholder=""><small id="propCpo"></small></label></div>
+   <div class="actions" style="margin-top:0"><button type="button" id="useProp">Use proposed</button><button type="button" class="primary" id="setTgt">Set targets</button><button type="button" id="clearTgt">Clear</button></div>
+   <p style="font-size:14px;margin:10px 0 4px" id="tgtLine"></p><small id="propBasis"></small></div>
+ </div>
+ <div class="card"><div class="row"><div><h2>Campaigns</h2><small id="campSub"></small></div><label style="min-width:170px">State<select id="state"><option value="All">Running and Completed</option><option>Running</option><option>Completed</option></select></label></div>
+  <div class="tablewrap" style="margin-top:10px"><table><thead id="campHead"></thead><tbody id="campRows"></tbody></table></div>
+  <div class="pager" id="pager"></div><p class="footer" id="campNote"></p></div>
+</section>
+<section class="view" id="view1" hidden>
+ <div class="card"><div class="step">YOUR DECISIONS</div><h2 style="margin-top:10px">Review proposals</h2><div id="changes"></div></div>
+ <div class="card"><h3>Test spending allowance</h3><div class="bar"><span id="allowBar" style="width:0"></span></div><p style="margin:4px 0;font-size:14px" id="allowLine"></p>
+  <small>Existing campaign: the limits apply to its additional spending. New campaign: the limits apply to its full test budget. All tests stay within the overall next-period budget.</small>
+  <p class="footer" id="budgetLine"></p></div>
+</section>
+<section class="view" id="view2" hidden>
+ <div class="card"><div class="step" id="checkStep">FOLLOW-UP · 5 TO 25 OCT 2026</div><h2 style="margin-top:12px">Check results</h2><div id="checkBody"></div>
+ <p class="footer" id="ownNote"></p><div class="callout" style="margin-top:18px">Next-period sample results were generated in advance. They do not react to your new decisions. Meeting a target does not prove the change caused the result or that the campaign is profitable.</div></div>
+</section>
+<p class="footer">Comel Diaper · Sample data · Changes stay in this browser. <button onclick="resetAll()" style="font-size:12px;padding:5px 9px">Reset demo</button></p>
+</main>
+<div class="shade" id="shade" onclick="full(false)"></div><aside class="chat" id="chat"><div class="chathead"><div><b>Your marketing assistant</b><br><small>One conversation across all tabs</small></div><div class="modes"><button id="mReplay" class="active" onclick="mode('replay')">Replay</button> <button id="mLive" onclick="mode('live')">Live</button> <button id="fullBtn" onclick="full()" aria-pressed="false" title="Full screen (Esc to close)">⛶ Full screen</button></div></div>
+<div class="casepick" id="casePick"><label>Recorded run<select id="caseSel"></select></label></div>
+<div class="keyrow" id="keyRow"><b>Live chat uses your own Anthropic API key.</b><input type="password" id="apiKey" placeholder="sk-ant-..." autocomplete="off"></div>
+<div class="messages" id="messages" aria-live="polite"></div>
+<div class="suggestions" id="sugg"></div>
+<form id="ask"><input id="question" placeholder="Ask about your campaigns…" required><button class="primary">Send</button></form>
+</aside></div>
+<p class="footer">© 2026 Lee Yih Ven · Marketing Campaign Assistant</p>
+</div>
+<script>/*INLINE:LIBS*/</script>
+<script>
+const DATA=/*INLINE:DATA*/;
+const E=(s)=>String(s).replace(/[&<>"]/g,(c)=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtRM=(v)=>v===null?"undefined":"RM "+v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmt=(f)=>!f||f.value===null?"undefined":f.unit==="RM"?fmtRM(f.value):f.unit==="%"?f.value.toFixed(2)+"%":f.unit==="x"?f.value.toFixed(2)+"x":f.value.toLocaleString("en-US");
+const DAY=(iso)=>new Date(iso+"T00:00:00Z").toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
+const DM=(iso)=>new Date(iso+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",timeZone:"UTC"});
+const RANGE=(a,b)=>`${DM(a)}${a.slice(0,4)!==b.slice(0,4)?" "+a.slice(0,4):""} to ${DM(b)} ${b.slice(0,4)}`;
+const tagHtml=(f)=>f?`<span class="src" tabindex="0" title="Source: ${E(f.label)}, ${E(f.scope)}, ${DAY(f.period.start)} to ${DAY(f.period.end)}. Computed in code from the sample data (record ${f.id}).">source</span>`:"";
+const fs_=(f)=>f?`${fmt(f)} ${tagHtml(f)}`:"";
+const STORE_KEY="comel-plan-v3";
+let clock=DATA.config.today, plans={}, desk=null, chatDesk=null, chat={messages:[],trace:[],state:{}}, liveMode=false, apiKey="", page=0;
+function loadPlans(){try{plans=JSON.parse(localStorage.getItem(STORE_KEY))||{}}catch(e){plans={}}
+ if(!plans["2026-09-28"])plans["2026-09-28"]=JSON.parse(JSON.stringify(DATA.pending)); if(!plans["2026-10-26"])plans["2026-10-26"]=JSON.parse(JSON.stringify(DATA.seed));}
+// The check on 26 Oct covers the sample plan plus the changes you approved on 28 Sep.
+function checkPlan(){const own=plans["2026-09-28"].changes.filter((x)=>x.status!=="pending").map((x,i)=>Object.assign({},x,{id:"Y-"+String(i+1).padStart(2,"0"),yours:true}));
+ return {changes:plans["2026-10-26"].changes.concat(own)}}
+function savePlans(){try{localStorage.setItem(STORE_KEY,JSON.stringify(plans))}catch(e){}
+ if(location.protocol.startsWith("http")&&clock===DATA.config.today)fetch("api/plan",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(plans[clock])}).catch(()=>{});}
+const store={load:()=>JSON.parse(JSON.stringify(clock==="2026-10-26"?checkPlan():plans[clock])),save:(p)=>{p=JSON.parse(JSON.stringify(p));if(clock==="2026-10-26")p.changes=p.changes.filter((x)=>!x.yours);plans[clock]=p;savePlans();renderAll();}};
+const TGT_KEY="comel-targets-v1";let targets=null;
+function loadTargets(){try{targets=JSON.parse(localStorage.getItem(TGT_KEY))}catch(e){targets=null}}
+function makeDesk(){const cfg=Object.assign({},DATA.config,{today:clock},targets?{owner_targets:targets}:{});
+ return ComelDesk.createDesk({data:{campaigns:DATA.campaigns,weekly:DATA.weekly,notes:DATA.notes},store,config:cfg,readNext:ComelHooks.guardNextRead(cfg,()=>DATA.next),log:()=>{}});}
+function tab(n){for(let i=0;i<3;i++){document.getElementById("view"+i).hidden=i!==n;document.getElementById("tab"+i).classList.toggle("active",i===n)}}
+const STATUS_CLS={"Consistent results":"tealb","Variable results":"amber","Limited results":"amber","Variation not assessable":"neutral","Data issue":"","Status rules not configured":"neutral"};
+const TC_CLS={"Meets both targets":"tealb","Meets one target":"amber","Meets neither target":""};
+const tcHtml=(t)=>t?`<span class="badge ${TC_CLS[t.result]}">${E(t.result)}</span><small>ROAS ${fs_(t.roas.figure)} ${t.roas.met?"≥":"<"} ${t.roas.min.toFixed(2)}x · cost per order ${fs_(t.cost_per_order.figure)} ${t.cost_per_order.met?"≤":">"} ${fmtRM(t.cost_per_order.max)}</small>`:'<span class="muted">No window</span>';
+const statusHtml=(rs,extra)=>rs?`<span class="badge ${STATUS_CLS[rs.status]}">${E(rs.status)}</span>${rs.reason&&rs.status!=="Status rules not configured"?`<small>${E(rs.reason)}</small>`:""}${extra||""}`:"";
+// ------------------------------------------------ tab 1
+const D0="2025-09-29",D1="2026-09-27";
+function shift(iso,n){const d=new Date(iso+"T00:00:00Z");d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)}
+function wholeWeeks(a,b){if(a>b)[a,b]=[b,a];a=a<D0?D0:a>D1?D1:a;b=b<D0?D0:b>D1?D1:b;
+ while(new Date(a+"T00:00:00Z").getUTCDay()!==1)a=shift(a,-1);while(new Date(b+"T00:00:00Z").getUTCDay()!==0)b=shift(b,1);return [a<D0?D0:a,b>D1?D1:b]}
+function periodRange(){const v=document.getElementById("period").value;document.getElementById("customRow").hidden=v!=="custom";
+ if(v==="7")return ["2026-09-21",D1];if(v==="30")return ["2026-08-31",D1];if(v==="all")return [D0,D1];
+ const a=document.getElementById("dFrom").value||D1,b=document.getElementById("dTo").value||a;return wholeWeeks(a,b)}
+const MAIN={Sales:"roas"};
+const COLS={Sales:[["spend","Spend"],["roas","ROAS"],["cost_per_order","Cost / order"],["conversion_rate","Conversion"],["orders","Orders"]]};
+const TILES={Sales:[["roas","Attributed ROAS","Revenue relative to ad spend"],["cost_per_order","Cost per order","Advertising cost only"],["orders","Orders",null]]};
+function renderReview(){
+ const [s,e]=periodRange(),obj="Sales",plat=document.getElementById("platform").value||undefined;
+ const r=desk.call("get_performance",{period_start:s,period_end:e,platform:plat,group_by:"platform"});
+ if(!r.ok){document.getElementById("tiles").innerHTML=`<div class="card">${E(r.error.message)}</div>`;return}
+ const T=r.totals;
+ document.getElementById("tiles").innerHTML=TILES[obj].map(([m,lab,sub])=>`<div class="metric"><small>${E(lab)}</small><strong>${fmt(T[m])}</strong><small>${m==="orders"?"Conversion rate "+fs_(T.conversion_rate):E(sub||"")} ${m==="orders"?"":tagHtml(T[m])}</small></div>`).join("");
+ document.getElementById("sumline").innerHTML=`Ad spend ${fs_(T.spend)}${obj==="Sales"?` · Attributed revenue ${fs_(T.revenue)}`:""} · ${E(r.scope)}, ${RANGE(s,e)}.`;
+ const g0=(r.groups||[]).find((g)=>g.review_status&&g.review_status.window);
+ document.getElementById("windowNote").textContent=`Performance: ${RANGE(s,e)} · Platform status: ${g0?"the same four-week window for every platform, "+RANGE(g0.review_status.window.start,g0.review_status.window.end):"fewer than four weeks in the period"}`;
+ const tset=!!(r.owner_targets&&r.owner_targets.set);
+ const cols=COLS[obj];
+ document.getElementById("platHead").innerHTML=`<tr><th>Platform</th>${cols.map(([,l])=>`<th>${l}</th>`).join("")}${obj==="Sales"?"<th>Weekly ROAS variation</th>":""}<th>Review status</th>${tset?"<th>Your targets</th>":""}</tr>`;
+ const rank=(r.ranking&&r.ranking.order)||[];
+ const groups=(r.groups||[]).slice().sort((a,b)=>rank.indexOf(a.platform)-rank.indexOf(b.platform));
+ document.getElementById("platRows").innerHTML=groups.map((g)=>{const rs=g.review_status;const v=rs&&rs.variation;
+  return `<tr><td><b>${E(g.platform)}</b><small>${g.campaigns} campaign${g.campaigns===1?"":"s"}</small></td>${cols.map(([m])=>`<td>${fs_(g.figures[m])}</td>`).join("")}${obj==="Sales"?`<td>${v&&v.value!==null?fs_(v):'<span class="muted">Not assessable</span>'}</td>`:""}<td>${statusHtml(rs)}</td>${tset?`<td>${tcHtml(rs&&rs.target_check)}</td>`:""}</tr>`}).join("")||'<tr><td colspan="9">No campaigns in the period.</td></tr>';
+ const mm=MAIN[obj];
+ document.getElementById("platNote").textContent=rank.length?`Highest observed ${ComelDesk.LABEL[mm]}${["cpm","cpc","cost_per_lead"].includes(mm)?" (lowest cost)":""}: ${rank[0]}. This is a descriptive comparison over ${RANGE(s,e)}, not proof of future performance.`:"";
+ renderCampaigns(s,e,obj,plat);
+}
+function renderCampaigns(s,e,obj,plat){
+ const r=desk.call("get_performance",{period_start:s,period_end:e,platform:plat,group_by:"campaign"});if(!r.ok)return;
+ const state=document.getElementById("state").value,mm=MAIN[obj];
+ const order=[...(r.ranking.order||[]),...(r.ranking.partial_order||[])];
+ const rows=r.rows.filter((x)=>state==="All"||x.status===state).sort((a,b)=>{const i=order.indexOf(a.campaign_id),j=order.indexOf(b.campaign_id);return (i<0?999:i)-(j<0?999:j)});
+ const pages=Math.max(1,Math.ceil(rows.length/10));if(page>=pages)page=pages-1;
+ document.getElementById("campSub").textContent=`${rows.length} campaign${rows.length===1?"":"s"} with results in ${RANGE(s,e)}${plat?" on "+plat:""}`;
+ document.getElementById("campHead").innerHTML=`<tr><th>Campaign</th><th>State</th><th>Performance period</th><th>${E(ComelDesk.LABEL[mm])}</th><th>Review status</th></tr>`;
+ document.getElementById("campRows").innerHTML=rows.slice(page*10,page*10+10).map((x)=>{const rs=x.review_status,w=rs.window,pp=x.performance_period;
+  const same=w&&w.start===pp.start&&w.end===pp.end;
+  const win=w?`<small>Status: ${same?"same dates":"final four active weeks, "+RANGE(w.start,w.end)}</small>`:"";
+  const flags=[x.statuses.incomplete?"incomplete":null,x.statuses.overspend?"overspend":null,x.statuses.data_notes?"owner-reported data note":null].filter(Boolean);
+  return `<tr><td><b>${x.campaign_id}</b> · ${E(x.name)}<small>${E(x.platform)}${flags.length?" · "+flags.join(", "):""}</small></td><td><span class="badge ${x.status==="Running"?"tealb":"neutral"}">${x.status}</span>${x.status==="Running"?"<small>partial</small>":""}</td><td>${RANGE(pp.start,pp.end)}<small>Requested-period totals</small></td><td>${fs_(x.figures[mm])}</td><td>${statusHtml(rs,win)}${rs.target_check?"<br>"+tcHtml(rs.target_check):""}</td></tr>`}).join("")||'<tr><td colspan="5">No campaigns match these filters.</td></tr>';
+ document.getElementById("pager").innerHTML=rows.length>10?`<button ${page===0?"disabled":""} onclick="page--;renderReview()">Previous</button><span>Page ${page+1} of ${pages}</span><button ${page>=pages-1?"disabled":""} onclick="page++;renderReview()">Next</button>`:"";
+
+}
+// ------------------------------------------------ tab 2
+function cname(x){if(x.type==="test_new")return `New ${x.change.objective} campaign on ${x.change.platform}`;const c=DATA.campaigns.find((y)=>y.campaign_id===x.campaign_id);return `${x.campaign_id} · ${c?c.campaign_name:""}`}
+function describe(x){
+ const what=x.type==="pause"?"Pause":x.type==="end"?"End early, "+DAY(x.change.to_end_date):x.type==="extend"?"Extend to "+DAY(x.change.to_end_date):x.type==="test_new"?`"${x.change.campaign_name}", ${fmtRM(x.change.weekly_rm)} a week (${fmtRM(x.change.total_rm)} over four weeks)`:x.type==="test_boost"?`Test a small increase: ${fmtRM(x.change.from_weekly_rm)} → ${fmtRM(x.change.to_weekly_rm)} a week`:`Weekly budget ${fmtRM(x.change.from_weekly_rm)} → ${fmtRM(x.change.to_weekly_rm)}`;
+ const kind=x.type==="test_boost"?"Controlled test · Existing campaign":x.type==="test_new"?"Controlled test · New campaign":"Routine change";
+ return {what,kind};}
+const thrTxt=(t)=>t&&t.threshold?`${t.threshold.measure} ${t.threshold.op.replace(">=","≥").replace("<=","≤")} ${t.threshold.unit==="RM"?fmtRM(t.threshold.value):t.threshold.value+(t.threshold.unit||"")}`:"";
+function renderChanges(){const plan=store.load();const el=document.getElementById("changes");
+ if(!plan.changes.length){el.innerHTML='<p>No proposals now. Ask the assistant to prepare one, for example "Set up a small test for XH-05."</p>';}
+ else el.innerHTML=plan.changes.map((x)=>{const {what,kind}=describe(x);const t=x.target||{};
+  const st={pending:'<span class="badge amber">Pending approval</span>',approved:'<span class="badge tealb">Approved</span>',rejected:'<span class="badge neutral">Rejected</span>'}[x.status];
+  const items=[];
+  if(x.reason)items.push(`Reason: ${E(x.reason)}`);
+  if(x.type==="test_boost"){const pct=((x.change.to_weekly_rm-x.change.from_weekly_rm)/x.change.from_weekly_rm*100);
+   items.push(`Weekly budget: ${fmtRM(x.change.from_weekly_rm)} → ${fmtRM(x.change.to_weekly_rm)} for four weeks.`,`Additional test spending: ${fmtRM(x.change.extra_rm)} total.`,`20% campaign cap: ${pct<=20.0001?"met":"exceeded"} (+${pct.toFixed(1)}%).`);}
+  if(x.type==="test_new")items.push(`Full test budget: ${fmtRM(x.change.total_rm)} over four weeks.`);
+  if(x.test){items.push(`Question: ${E(x.test.question)}`);items.push(`Stop condition: ${E(x.test.stop_condition)}`);}
+  if(t.rule)items.push(`${t.rule} check: ${E(thrTxt(t))}${t.baseline!==undefined&&t.baseline!==null?` (baseline ${t.threshold&&t.threshold.unit==="RM"?fmtRM(t.baseline):t.baseline+(t.threshold?t.threshold.unit:"")}${t.benchmark?", a comparison benchmark for the platform":""})`:""}${t.deadline?`. Review: ${DAY(t.deadline)}`:""}.`);
+  let body=`<div class="change"><div class="row">${st}<small>${x.from_run?"Prepared in recorded run "+x.from_run:""}</small></div><p class="kind">${kind}</p><h3>${x.id} · ${E(cname(x))}</h3><p style="margin:4px 0">${E(what)}</p><ul>${items.map((i)=>`<li>${i}</li>`).join("")}</ul>`;
+  if(x.status==="pending")body+=`<div class="actions"><button class="primary" onclick="decide('${x.id}','approve')">Approve</button><button onclick="decide('${x.id}','reject')">Reject</button></div>`;
+  if(x.status==="approved"&&!x.action&&clock==="2026-09-28")body+=`<div class="fields"><label>Action<select id="act-${x.id}"><option>${x.type==="pause"?"Paused":x.type==="extend"?"End date extended":x.type==="end"?"End date brought forward":x.type==="test_new"?"Campaign created":"Weekly budget changed"}</option><option>No action taken</option></select></label><label>Action date<input type="date" id="date-${x.id}" value="2026-09-28" min="2026-09-28" max="2026-10-02"></label><label>New setting<input type="text" id="set-${x.id}" value="${E(x.type==="budget_shift"||x.type==="test_boost"?fmtRM(x.change.to_weekly_rm)+" a week":x.type==="test_new"?fmtRM(x.change.weekly_rm)+" a week":x.type==="pause"?"Paused":"")}"></label></div><div class="actions"><button class="primary" onclick="record('${x.id}')">Save action record</button></div>`;
+  if(x.action)body+=`<p class="statusline">You reported: ${E(x.action.action)} on ${DAY(x.action.date)}${x.action.new_setting?" ("+E(x.action.new_setting)+")":""}. Owner-reported, not independently verified.</p>`;
+  if(x.decided)body+=`<small>${x.status==="approved"?"Approved":"Rejected"} by the owner, ${DAY(x.decided.at.slice(0,10))}.</small>`;
+  return body+"</div>";}).join("");
+ const i=desk._internals,used=i.testTotal(),cap=i.caps;const live=plan.changes.filter((x)=>(x.status==="pending"||x.status==="approved")&&(x.type==="test_boost"||x.type==="test_new"));
+ const big=live.reduce((a,x)=>Math.max(a,x.type==="test_boost"?x.change.extra_rm:x.change.total_rm),0);
+ document.getElementById("allowBar").style.width=Math.min(100,used/cap.combined_rm*100)+"%";
+ document.getElementById("allowLine").textContent=`${fmtRM(used)} of ${fmtRM(cap.combined_rm)} combined · largest test ${fmtRM(big)} of ${fmtRM(cap.per_test_rm)} per test · ${live.length} test${live.length===1?"":"s"} pending or approved.`;
+ document.getElementById("budgetLine").textContent=`Planned next-period budget ${fmtRM(i.plannedTotal())} against this period's spend of ${fmtRM(i.baselineSpend())} (Running campaigns, 31 Aug to 27 Sep 2026). Tests and any change that raises the plan stay within it.`;
+}
+function decide(id,how){const r=how==="approve"?desk.owner.approve(id):desk.owner.reject(id);if(!r.ok){alert(r.error.message);return}
+ sysLine(`${how==="approve"?"Approved":"Rejected"} by the owner, ${DAY(clock)}: ${id} (${cname(r.change)}).`);}
+function record(id){const a=document.getElementById("act-"+id).value;if(a==="No action taken"){sysLine(`${id}: no action recorded. It will show as not reported at the check.`);return}
+ const r=desk.owner.recordAction(id,{action:a,date:document.getElementById("date-"+id).value,new_setting:document.getElementById("set-"+id).value});
+ if(!r.ok){alert(r.error.message);return} sysLine(`Action recorded by the owner for ${id}: ${a}, ${DAY(r.change.action.date)}. Owner-reported.`);}
+// ------------------------------------------------ tab 3
+function renderCheck(){const el=document.getElementById("checkBody");const r=desk.call("check_plan",{});
+ document.getElementById("ownNote").textContent=checkPlan().changes.some((x)=>x.yours)?"Rows marked Y- are the changes you decided on 28 Sep. The next-period results are sample data written before the build, so they do not react to your decisions: a pause you record will show as a conflict, which is how the check reports spend that continued.":"Rows P-02 to P-09 are the sample plan. Approve proposals on 28 Sep and record your actions, and they are added here as Y- rows.";
+ if(!r.ok){el.innerHTML=`<p class="callout">${E(r.error.message)}${r.error.category==="period_not_closed"?" Switch the demo date to Mon 26 Oct 2026 to see the check on the sample plan.":""}</p>`;return}
+ const plan=checkPlan();
+ el.innerHTML=`<div class="tablewrap"><table><thead><tr><th>Proposal</th><th>Status</th><th>Follow-up target</th><th>Outcome</th></tr></thead><tbody>${r.checked.map((x)=>{const p=plan.changes.find((y)=>y.id===x.id)||x;const {what,kind}=describe(p);
+  const obs=Array.isArray(x.observed)?x.observed.map(fs_).join("<br>"):x.observed?fs_(x.observed):"";
+  const done={"reported done":'<span class="badge tealb">Reported done</span>',"not reported":'<span class="badge amber">Not reported</span>',"conflict":'<span class="badge amber">Conflict</span>'}[x.done];
+  const met={"met":'<span class="badge tealb">Met</span>',"missed":'<span class="badge">Missed</span>',"not yet assessable":'<span class="badge amber">Not yet assessable</span>',"test results unavailable":'<span class="badge neutral">Test results unavailable</span>'}[x.target_met];
+  const tgt=x.threshold?thrTxt({threshold:x.threshold}):p.target?thrTxt(p.target)||(p.target.rule+" target"):"";
+  return `<tr><td><b>${x.id}</b> · ${E(cname(p))}<small>${E(kind)}: ${E(what)}</small></td><td>${done}</td><td>${x.target_rule} · ${E(tgt)}</td><td>${met}${obs?"<small>Observed "+obs+"</small>":""}${x.why?"<small>"+E(x.why)+"</small>":""}${x.note?"<small>"+E(x.note)+"</small>":""}</td></tr>`}).join("")}</tbody></table></div>${r.not_scored.length?`<p class="footer">Not scored: ${r.not_scored.map((x)=>x.id+" "+(x.campaign_id||"new test")+" ("+x.status+")").join(", ")}.</p>`:""}`;}
+// ------------------------------------------------ chat
+function addBubble(html,cls){const d=document.createElement("div");d.className="bubble"+(cls?" "+cls:"");d.innerHTML=html;const m=document.getElementById("messages");m.appendChild(d);m.scrollTop=m.scrollHeight;return d}
+function full(on){const c=document.getElementById("chat");on=on===undefined?!c.classList.contains("full"):on;c.classList.toggle("full",on);document.getElementById("shade").classList.toggle("on",on);
+ const b=document.getElementById("fullBtn");b.textContent=on?"✕ Exit full screen":"⛶ Full screen";b.setAttribute("aria-pressed",on);const m=document.getElementById("messages");m.scrollTop=m.scrollHeight;}
+document.addEventListener("keydown",(e)=>{if(e.key==="Escape")full(false)});
+function sysLine(t){addBubble(E(t),"sys");}
+function replyHtml(text,trace){const {records}=ComelReplyCheck.collect(trace);
+ const blocks=[];let list=null;
+ for(const line of String(text).split(/\n/)){const t=line.trim();if(!t){list=null;continue}
+  if(/^[-*•]\s+/.test(t)){if(!list){list=[];blocks.push(list)}list.push(t.replace(/^[-*•]\s+/,""))}else{list=null;blocks.push(t)}}
+ const inline=(t)=>E(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\[(F-[0-9a-f]{6})\]/g,(m,id)=>records.get(id)?tagHtml(records.get(id)):`<span class="src" title="Source record ${id}">source</span>`);
+ return blocks.map((b)=>Array.isArray(b)?`<ul>${b.map((x)=>`<li>${inline(x)}</li>`).join("")}</ul>`:`<p>${inline(b)}</p>`).join("");}
+function playCase(id){const m=document.getElementById("messages");m.innerHTML="";const rec=DATA.runs.find((r)=>r.id===id);if(!rec)return;
+ const trace=rec.trace;
+ for(const t of rec.turns){addBubble(E(t.owner),"user");addBubble(replyHtml(t.reply,trace),"rich");}}
+function mode(m){liveMode=m==="live";document.getElementById("mLive").classList.toggle("active",liveMode);document.getElementById("mReplay").classList.toggle("active",!liveMode);
+ document.getElementById("keyRow").classList.toggle("on",liveMode);document.getElementById("casePick").style.display=liveMode?"none":"block";
+ document.getElementById("messages").innerHTML="";if(liveMode){newChat();addBubble("Hello! I can review your campaigns, prepare a proposal for your approval, and check approved changes once the next period closes.")}else playCase(document.getElementById("caseSel").value);}
+function newChat(){chat={messages:[],trace:[],state:{}};chatDesk=makeDesk();}
+async function send(q){if(!liveMode){mode("live")}apiKey=document.getElementById("apiKey").value.trim();
+ addBubble(E(q),"user");if(!apiKey){sysLine("Enter your API key above to chat live, or switch to Replay to see recorded runs.");return}
+ chat.messages.push({role:"user",content:q});const wait=addBubble("Working…");
+ try{const out=await ComelAgent.runTurn({apiKey,model:DATA.config.model,system:ComelPrompt.buildSystem({resources:DATA.resources,today:clock}),tools:chatDesk.tools,messages:chat.messages,
+   callTool:async(n,i)=>chatDesk.call(n,i),trace:chat.trace,state:chat.state});
+  wait.remove();addBubble(replyHtml(out.reply,chat.trace),"rich");renderAll();}
+ catch(e){wait.remove();sysLine("The assistant is not available right now: "+String(e.message).slice(0,120));}}
+document.getElementById("ask").onsubmit=(ev)=>{ev.preventDefault();const q=document.getElementById("question").value.trim();if(q){document.getElementById("question").value="";send(q)}};
+function setSugg(){const s=clock==="2026-09-28"?["Explain XiaoHongShu's review status.","Compare ROAS and cost per order across platforms.","Prepare a controlled test for XH-05."]:["How did last month's approved changes go?","Did TT-13 get paused as planned?"];
+ document.getElementById("sugg").innerHTML=s.map((q)=>`<button type="button">${E(q)}</button>`).join("");[...document.getElementById("sugg").children].forEach((b,i)=>b.onclick=()=>send(s[i]));}
+function renderAll(){renderReview();renderChanges();renderCheck();renderTargets();}
+function resetAll(){try{localStorage.removeItem(STORE_KEY);localStorage.removeItem(TGT_KEY)}catch(e){}targets=null;document.getElementById("inRoas").value="";document.getElementById("inCpo").value="";loadPlans();desk=makeDesk();newChat();renderAll();mode(liveMode?"live":"replay");}
+document.getElementById("clock").onchange=(e)=>{clock=e.target.value;desk=makeDesk();newChat();setSugg();renderAll();if(liveMode)mode("live");};
+["period","platform","dFrom","dTo","state"].forEach((id)=>document.getElementById(id).onchange=()=>{page=0;renderReview()});
+document.getElementById("sameDay").onclick=()=>{document.getElementById("dTo").value=document.getElementById("dFrom").value;page=0;renderReview()};
+document.getElementById("caseSel").innerHTML=DATA.runs.map((r,i)=>`<option value="${r.id}">${i+1}. ${E(r.title)}${r.pass?"":" (did not pass)"}</option>`).join("");
+document.getElementById("caseSel").onchange=(e)=>playCase(e.target.value);
+function renderTargets(){const ot=desk._internals.ownerTargets(),pr=ot.proposed;
+ document.getElementById("inRoas").placeholder=`Proposed ${pr.min_roas.toFixed(2)}`;document.getElementById("inCpo").placeholder=`Proposed ${pr.max_cost_per_order.toFixed(2)}`;
+ document.getElementById("propRoas").textContent=`Proposed from the data: ${pr.min_roas.toFixed(2)}x`;document.getElementById("propCpo").textContent=`Proposed from the data: ${fmtRM(pr.max_cost_per_order)}`;
+ document.getElementById("propBasis").textContent=`Proposed figures: ${pr.basis.replace("2025-09-29 to 2026-09-27","29 Sep 2025 to 27 Sep 2026")}. A comparison benchmark until you enter it. Your targets stay in this browser.`;
+ if(targets){document.getElementById("inRoas").value=targets.min_roas;document.getElementById("inCpo").value=targets.max_cost_per_order;}
+ const b=document.getElementById("tgtBadge");b.textContent=ot.set?"Set by you":"Not set";b.className="badge "+(ot.set?"tealb":"neutral");
+ document.getElementById("tgtLine").textContent=ot.set?`Set: ROAS at least ${ot.min_roas.toFixed(2)}x, cost per order at most ${fmtRM(ot.max_cost_per_order)}. Each review status now shows a target check, and a routine increase is allowed for a campaign with Consistent results that meets both. The recorded runs were made with targets not set.`
+  :"Routine increases require owner targets. Controlled tests, justified reductions and extensions can still be proposed. Enter both figures, your own or the proposed ones, then Set targets.";}
+function setTargets(t){targets=t;try{t?localStorage.setItem(TGT_KEY,JSON.stringify(t)):localStorage.removeItem(TGT_KEY)}catch(e){}desk=makeDesk();newChat();renderAll();if(liveMode)mode("live");}
+document.getElementById("useProp").onclick=()=>{const pr=desk._internals.proposedTargets();document.getElementById("inRoas").value=pr.min_roas;document.getElementById("inCpo").value=pr.max_cost_per_order;};
+document.getElementById("setTgt").onclick=()=>{const a=Number(document.getElementById("inRoas").value),b=Number(document.getElementById("inCpo").value);
+ if(!(a>0)||!(b>0)){alert("Enter both targets as positive numbers, for example 2.74 and 25.48.");return}setTargets({min_roas:Math.round(a*100)/100,max_cost_per_order:Math.round(b*100)/100});sysLine(`Owner targets set by you: ROAS at least ${a.toFixed(2)}x, cost per order at most ${fmtRM(b)}.`);};
+document.getElementById("clearTgt").onclick=()=>{document.getElementById("inRoas").value="";document.getElementById("inCpo").value="";setTargets(null);sysLine("Owner targets cleared: not set.");};
+loadTargets();loadPlans();desk=makeDesk();newChat();setSugg();renderAll();
+if(location.protocol.startsWith("http"))fetch("api/plan").then((r)=>r.ok?r.json():null).then((p)=>{if(p&&p.changes&&p.changes.length){plans["2026-09-28"]=p;renderAll();}}).catch(()=>{});
+playCase(DATA.runs.length?DATA.runs[0].id:"");
+</script></body></html>
