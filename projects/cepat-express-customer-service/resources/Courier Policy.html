@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cepat Express Courier Policy</title><link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><style>:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+.crumbs{font-size:12.5px;color:var(--muted);margin-bottom:2px}.crumbs a{color:inherit;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+td a.cl{text-decoration:none}
+tr{scroll-margin-top:110px}
+tr:target td{background:var(--box);box-shadow:inset 3px 0 0 var(--accent)}
+tr:target td:first-child{font-weight:700}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}</style></head>
+<body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../cepat-express-customer-service.html">Cepat Express Customer Service</a> / <a href="../demo.html">Demo</a></div><h1>Cepat Express Courier Policy</h1><nav id="toc"></nav></div>
+<p><b>Cepat Express</b> is a courier serving Ipoh, Johor Bahru and Klang. What a parcel status means and what Cepat Express does about it. The AI agent advises from these clauses; the limits (C4 to C7, C15) are computed in code from the parcel record. A clause under a reply on the demo page opens its row here, highlighted.</p>
+<p><b>The other pages:</b> <a href="Customer Service Policy.html">Customer Service Policy</a> · <a href="Delivery Status Guide.html">Delivery Status Guide</a> · <a href="Staff Directory.html">Staff Directory</a> · <a href="../benchmark/Answer Key.html">Answer Key</a></p>
+<p>Owner: Operations. Effective 2 Nov 2026.</p>
+<p>The Courier Policy says what a parcel status means and what Cepat Express does about it. The Customer Service Policy says what the AI agent and the CS staff do; it cites these clause IDs and never restates them.</p>
+<h2>1. Parcel status</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr><tr id="C1"><td>C1</td><td>A parcel has one status at a time: Booked (not yet shipped), Picked up, At sorting hub, In transit, Out for delivery, Delivery attempted, Delivered, Rejected by recipient.</td><td>Code (data)</td></tr><tr id="C2"><td>C2</td><td>A parcel is shipped from the moment it is Picked up. Before that it is Booked.</td><td>Code</td></tr><tr id="C3"><td>C3</td><td>Every status change is a scan, with date, time and location. The last scan is the current status.</td><td>Code (data)</td></tr><tr id="C3a"><td>C3a</td><td>Cepat Express serves three locations: Ipoh, Johor Bahru and Klang, each with a sorting hub and a Logistics Officer. Every parcel's delivery location and every scan location is one of the three.</td><td>Code (data check)</td></tr></table>
+<h2>2. Delivery standards and limits</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr><tr id="C4"><td>C4</td><td>Delivery standard: 2 working days throughout Peninsular Malaysia, counted from pickup.</td><td>Code (date shown by the tool)</td></tr><tr id="C5"><td>C5</td><td>No new scan for more than 3 days counts as delayed.</td><td>Code</td></tr><tr id="C6"><td>C6</td><td>A parcel at a sorting hub for more than 48 hours counts as delayed.</td><td>Code</td></tr><tr id="C7"><td>C7</td><td>A parcel Out for delivery is delivered by 9 pm the same day. After 9 pm with no delivery scan, the delivery has failed.</td><td>Code</td></tr></table>
+<h2>3. Delivery attempts</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr><tr id="C8"><td>C8</td><td>When no one receives the parcel, the rider records a Delivery attempted scan with the reason.</td><td>Code (data)</td></tr><tr id="C9"><td>C9</td><td>A missed delivery is attempted again on the next working day, once. After a second failed attempt the parcel waits at the branch for 5 working days for self-collection, then returns to the sender.</td><td>Prompt (information)</td></tr><tr id="C10"><td>C10</td><td>A Delivered scan carries proof of delivery: time, location and photo or signature.</td><td>Code (data)</td></tr></table>
+<h2>4. Changes after booking</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr><tr id="C11"><td>C11</td><td>The delivery address can be changed only while the parcel is Booked. The change is made by Logistics.</td><td>Code</td></tr><tr id="C12"><td>C12</td><td>Once a parcel is shipped (<a class="cl" href="#C2">C2</a>), the address cannot be changed.</td><td>Code</td></tr><tr id="C13"><td>C13</td><td>A change of delivery date for a shipped parcel is arranged by Logistics.</td><td>Prompt (routing in S-policy)</td></tr></table>
+<h2>5. Problems with a parcel</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr><tr id="C14"><td>C14</td><td>Damaged parcel, items missing, lost parcel and rejected parcel are registered as a ticket of type damaged, lost or rejected. Items missing is registered as damaged.</td><td>Code</td></tr><tr id="C15"><td>C15</td><td>Days with no new scan decide the outcome, one rule: 0 to 3 days, on its way (<a class="cl" href="#C5">C5</a>); over 3 to 7 days, delayed (<a class="cl" href="#C5">C5</a>); over 7 days, lost. When a customer reports a parcel lost but the tracking record shows a scan within 7 days, the agent politely advises that the parcel is not missing and is on its way, with its last scan.</td><td>Code</td></tr><tr id="C16"><td>C16</td><td>Compensation is decided by Customer Service after investigation. No compensation is promised before that.</td><td>Prompt</td></tr><tr id="C17"><td>C17</td><td>Delivered but not received, a wrong parcel, a missed delivery while the customer was home, and rider conduct are investigated by the Logistics Officer of the location where the issue happened.</td><td>Code (routing in S-policy, <a class="cl" href="Customer Service Policy.html#S20a">S20a</a>)</td></tr></table>
+<h2>6. Outside customer service</h2>
+<table><tr><th>Rule</th><th>Policy</th><th>Enforced by</th></tr><tr id="C18"><td>C18</td><td>A new pickup is booked by the sender through the Cepat Express app or website. A parcel already booked but not yet picked up (Booked, <a class="cl" href="#C2">C2</a>) has its pickup arranged by the Logistics Officer of the pickup location, the parcel's origin (<a class="cl" href="Customer Service Policy.html#S20c">S20c</a>).</td><td>Prompt + Code (routing in S-policy)</td></tr><tr id="C19"><td>C19</td><td>A special delivery instruction (guardhouse, neighbour) for a parcel not yet delivered is passed to the Logistics Officer of the delivery location, who passes it to the rider (<a class="cl" href="Customer Service Policy.html#S20d">S20d</a>).</td><td>Prompt + Code (routing in S-policy)</td></tr></table>
+<footer>© 2026 Lee Yih Ven · Cepat Express Courier Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+if(location.hash){const r=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(r)setTimeout(()=>r.scrollIntoView({block:'center'}),50);}
+</script></body></html>

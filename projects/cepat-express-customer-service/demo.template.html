@@ -1,0 +1,319 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cepat Express | Customer Desk</title><link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml"><style>
+:root{--ink:#172c36;--muted:#697c83;--line:#dfe7e7;--green:#146353;--bg:#f3f6f5;--orange:#e49b4d}*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,sans-serif;color:var(--ink);background:var(--bg)}button,input,textarea{font:inherit}button{cursor:pointer}
+.crumb{font-size:12px;padding:6px 32px;background:var(--ink);color:#c9d6d6}.crumb a{color:#fff;text-decoration:none}.crumb a:hover{text-decoration:underline}
+header{height:85px;padding:18px 32px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px}.logo{background:var(--green);color:white;padding:8px 12px;border-radius:12px;font-size:24px;font-weight:800}.brand strong{font-size:19px}.small,small{font-size:12px;color:var(--muted)}.person{display:flex;align-items:center;gap:10px}.avatar{border-radius:50%;background:#e6efeb;padding:10px;color:var(--green);font-weight:700}.top{padding:24px 32px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}h1{font-size:25px;margin:0 0 4px}p{margin:0}button{border:1px solid var(--line);background:white;border-radius:8px;padding:8px 12px;color:var(--ink)}button:hover{border-color:var(--green)}.primary{background:var(--green);color:white;border-color:var(--green)}.tag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:5px;background:#e8f1ed;color:var(--green)}.amber{background:#fff1dd;color:#94601d}.grey{background:#eef1f2;color:#55666c}.workspace{display:grid;grid-template-columns:3fr 2fr;gap:18px;padding:0 32px 28px;height:calc(100vh - 215px);min-height:620px}.panel{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}.panelhead{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}h2{font-size:16px;margin:0}.conversation{display:grid;grid-template-columns:200px 1fr;flex:1;min-height:0}.list{border-right:1px solid var(--line);overflow:auto;padding:10px}.list button{display:block;width:100%;text-align:left;border:0;margin-bottom:6px;padding:11px 10px}.list button.active{background:#eaf3ef;box-shadow:inset 3px 0 var(--green)}.list strong{display:block;font-size:13px}.list small{display:block;margin-top:3px}.list .grouphead{display:flex;justify-content:space-between;align-items:center;width:100%;margin:6px 0;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#f6f9f8;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink);box-shadow:none}.list .grouphead.open{background:var(--green);color:white;border-color:var(--green)}.list .grouphead .gcount{font-weight:600;letter-spacing:0}.list .group{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:10px 4px 6px}.chat{display:flex;flex-direction:column;min-width:0;min-height:0}.chathead{padding:14px 20px;border-bottom:1px solid var(--line)}.chathead strong{font-size:15px}.key{margin-top:6px;font-size:12px;color:#596e76;background:#f6f9f8;border:1px solid var(--line);border-radius:8px;padding:7px 10px}.key b{color:var(--ink)}.pass{color:var(--green);font-weight:700}.fail{color:#a43d32;font-weight:700}.messages{padding:20px;flex:1;overflow:auto;background:#fcfdfc}.bubble{padding:12px 15px;border-radius:12px;margin-bottom:18px;max-width:94%;background:#e2f0eb;border:1px solid #b9d8cc;border-bottom-left-radius:4px;white-space:pre-wrap}.bubble small{color:var(--green);font-weight:700}.bubble.customer{background:#fdf0de;border-color:#f0d3a8;border-bottom-left-radius:12px;border-bottom-right-radius:4px;margin-left:auto}.bubble.customer small{color:#94601d}.bubble small{display:block;margin-bottom:5px}.clauses{white-space:normal}.clause{background:none;border:0;color:var(--green);font-size:11px;padding:7px 8px 0 0;text-decoration:underline}.event{font-size:11px;color:var(--muted);text-align:center;margin:0 0 18px}.composer{padding:15px;border-top:1px solid var(--line)}form{display:flex;gap:8px}input,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px;min-width:0}form button{flex-shrink:0}.lanes{padding:16px;overflow:auto;flex:1;background:#fafcfb}.lanehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em}.card{background:white;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:9px;padding:14px;margin-bottom:12px}.card.done{border-left-color:var(--green)}.card.focus{box-shadow:0 0 0 2px #8bb6a6}.card h3{font-size:14px;margin:8px 0}.card dl{margin:0;font-size:12px;color:#596e76}.card dt{font-weight:700;color:var(--ink);margin-top:6px}.card dd{margin:0}.actions{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}.actions button{font-size:12px}.divider{margin-top:24px}.empty{font-size:12px;color:var(--muted);margin:0 0 14px}.mobiletabs{display:none}.notice{font-size:11px;color:var(--muted);padding:9px 16px;border-top:1px solid var(--line)}dialog{border:1px solid var(--line);border-radius:15px;padding:26px;max-width:520px;width:90%;box-shadow:0 20px 100px #172c3633}dialog::backdrop{background:#172c3666}dialog h2{margin-bottom:12px}dialog p{margin:12px 0}dialog button{margin-top:14px}#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;border-radius:9px;padding:12px 20px;display:none;z-index:3}.viewbar{display:flex;gap:6px;margin-top:8px}.viewbar button{font-size:12px;padding:5px 10px}.viewbar button[aria-pressed="true"]{background:var(--green);color:white;border-color:var(--green)}
+.hlist{list-style:none;margin:0;padding:0}.hlist>li{margin:0 0 10px}
+.hstep{background:#fff;border:1px solid var(--line);border-left:3px solid #2f6fb0;border-radius:8px;padding:8px 12px;font-size:12.5px}
+.hstep.code{border-left-color:var(--green)}.hstep.ai{border-left-color:#7b5ea7}.hstep.cust{border-left-color:#8a9aa0}.hstep.muted{border-left-color:var(--line);color:var(--muted)}
+.hstep h4{margin:0 0 4px;font-size:13px}.hstep p{margin:3px 0}.hstep code{background:#f3f6f5;border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:11.5px}
+.hstep .who{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;padding:1px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.who.c{background:#eef1f2;color:#55666c}.who.s{background:#e8f1ed;color:var(--green)}.who.a{background:#efe9f6;color:#5d4387}.who.h{background:#fff1dd;color:#94601d}
+.warn{background:#fff1dd;border:1px solid #f0d3a8;border-radius:8px;padding:10px 12px;font-size:12.5px;color:#6b4515}
+@media(max-width:1100px){.conversation{grid-template-columns:150px 1fr}.workspace{padding:0 18px 20px;gap:12px}header,.top,.crumb{padding-left:18px;padding-right:18px}}@media(max-width:899px){.workspace{display:block;height:calc(100vh - 290px);min-height:570px}.panel{height:100%}.mobiletabs{display:flex;gap:8px;padding:0 18px 14px}.mobiletabs .active{background:var(--green);color:white}#handoverPanel{display:none}.person .small{display:none}.top{align-items:start;flex-wrap:wrap}h1{font-size:21px}.conversation{grid-template-columns:125px 1fr}.panelhead{padding:14px}.messages{padding:13px}.chathead{padding:12px}.brand strong{font-size:16px}}@media(max-width:480px){.conversation{grid-template-columns:100px 1fr}.list{padding:4px}.list button{padding:9px 7px}.list small{font-size:10px}.top button{font-size:11px;padding:7px}.composer{padding:8px}form{flex-wrap:wrap}form button{width:100%}header{padding:12px;height:76px}.avatar{display:none}}
+</style></head><body>
+<div class="crumb"><a href="../../index.html">AI Projects</a> / <a href="../../cepat-express-customer-service.html">Cepat Express Customer Service</a></div>
+<header><div class="brand"><span class="logo">c↗</span><div><strong>Cepat Express</strong><div class="small">CUSTOMER SERVICE DESK</div></div></div><div class="person"><span class="tag">Staff workspace</span><span class="avatar">NA</span><div class="small"><b>Nurul Aina</b><br>CS Lead · Shah Alam HQ</div></div></header>
+<div class="top"><div><h1>A clear view of every conversation.</h1><p class="small">Review the chat. Check the handover. Take the next step.</p><p class="small" style="margin-top:4px"><a href="resources/Courier%20Policy.html" style="color:var(--green)">Courier Policy</a> · <a href="resources/Customer%20Service%20Policy.html" style="color:var(--green)">Customer Service Policy</a> · <a href="resources/Delivery%20Status%20Guide.html" style="color:var(--green)">Delivery Status Guide</a> · <a href="resources/Staff%20Directory.html" style="color:var(--green)">Staff Directory</a> · <a href="benchmark/Answer%20Key.html" style="color:var(--green)">Answer Key</a></p></div><div><button onclick="openKey()">Live chat</button> <button onclick="resetDemo()">↻ Reset demo</button></div></div>
+<div class="mobiletabs"><button class="active" onclick="tab('chat',this)">Conversations</button><button onclick="tab('queue',this)">Handovers</button></div>
+<main class="workspace"><section class="panel" id="chatPanel"><div class="panelhead"><h2>Customer chat <span class="tag" id="chatCount"></span></h2><span class="small" id="today"></span></div><div class="conversation"><nav class="list" id="list" aria-label="Conversations"></nav><div class="chat"><div class="chathead" id="chathead"></div><div class="messages" id="messages" aria-live="polite"></div><div class="composer"><form onsubmit="send(event)"><input id="message" aria-label="Customer message" placeholder="Type as a customer, for example: Where is CE26000103?" required><button class="primary" id="sendBtn">Send</button></form><div class="small" style="margin-top:7px" id="modeLine"></div></div></div></div></section>
+<section class="panel" id="handoverPanel"><div class="panelhead"><h2>CS Lead handovers <span class="tag" id="count"></span></h2><span class="small">Review before action</span></div><div class="lanes" id="queue"></div><div class="notice">Demo actions only. No tickets or transfers leave this page.</div></section></main>
+<dialog id="policy"><h2 id="policyTitle"></h2><p class="small" id="policySource"></p><p id="policyText"></p><p><a id="policyLink" target="_blank" rel="noopener" style="color:var(--green)">Open in the policy ↗</a></p><button onclick="$('policy').close()">Close</button></dialog>
+<dialog id="action"><h2 id="actionTitle"></h2><p id="actionText"></p><label for="note">Staff note</label><textarea id="note" rows="3" placeholder="Add a note before completing this action."></textarea><div id="error" style="color:#a43d32"></div><button onclick="$('action').close()">Cancel</button> <button class="primary" onclick="confirmAction()">Confirm</button></dialog>
+<dialog id="keyDialog"><h2>Live chat with your own API key</h2><p class="warn">Live chat calls the Anthropic API from this page with your key, so every message is <b>billed to your Anthropic account</b> (Claude Haiku 5.5, roughly USD 0.002 to 0.005 a message). Use a key with a low spending limit and delete it when you are done. The key is kept only in this page's memory and is sent only to api.anthropic.com. A public service would keep the key on its own server instead.</p><label for="keyInput">Anthropic API key</label><input id="keyInput" type="password" autocomplete="off" placeholder="sk-ant-..."><div id="keyError" style="color:#a43d32"></div><button onclick="$('keyDialog').close()">Cancel</button> <button class="primary" onclick="saveKey()">Start live chat</button></dialog>
+<div id="toast" role="status"></div>
+<script>/*__ENGINE__*/</script>
+<script>
+const DATA = /*__DATA__*/;
+const $ = (id) => document.getElementById(id);
+function el(t, cls, text) { const n = document.createElement(t); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; }
+const SYSTEM = CXPrompt.system(DATA.resources, DATA.tables);
+const TOOL_LIST = Object.entries(CXTools.TOOLS).map(([name, t]) => Object.assign({ name }, t));
+const REASON_LABEL = { damaged: "Damaged parcel", items_missing: "Items missing", lost: "Lost parcel", rejected: "Rejected parcel", address_change_not_shipped: "Address change, not yet shipped", delivery_date_change: "Change of delivery date", delivered_not_received: "Delivered, not received", wrong_parcel: "Wrong parcel received", marked_unavailable_home: "Home, but marked unavailable", rider_conduct: "Rider conduct", self_collection: "Self-collection", pickup_not_collected: "Pickup not yet made", delivery_instruction: "Delivery instruction", customer_asks_for_person: "Asked for a person", no_clause: "No clause covers it", no_progress: "Record does not answer it", delay: "Delayed past the limit", failed_delivery: "Failed delivery" };
+let store, desk, convs, selected, pending, apiKey = null, liveN = 0, view = 'chat', openGroup = null;
+
+/** The page state: one desk over the sample data, with every replayed chat's handovers in the queue. */
+function build() {
+  store = CXTools.memoryStore({ parcels: DATA.parcels, handovers: [] });
+  desk = CXTools.createDesk(store, DATA.tables, DATA.staff, { now: DATA.tables.today });
+  const all = [];
+  convs = DATA.replay.map((r) => {
+    const map = {};
+    for (const h of r.handovers) { const copy = JSON.parse(JSON.stringify(h)); const id = `H-${String(all.length + 1).padStart(4, "0")}`; map[h.id] = id; copy.id = id; copy.conversation = r.id; all.push(copy); }
+    return { id: r.id, kind: "replay", title: r.title, group: r.group, message: r.message, turns: r.turns, events: r.events, result: r, handoverIds: Object.values(map) };
+  });
+  store.set("handovers", all);
+  selected = null; openGroup = null;  // nothing chosen until a category and a question are picked
+}
+const conv = (id) => convs.find((c) => c.id === id);
+const parcelOf = (tn) => DATA.parcels.find((p) => p.tracking_number === tn);
+function customerName(c) {
+  const v = (c.events || []).find((e) => e.tool === "verify_customer" && e.result.status === "ok");
+  if (!v) return c.kind === "live" ? "Live chat" : "Customer";
+  const p = parcelOf(v.result.data.tracking_number);
+  return p ? p[v.result.data.as].name : "Customer";
+}
+function trackingOf(c) { const e = (c.events || []).find((x) => x.input && x.input.tracking_number); return e ? String(e.input.tracking_number).toUpperCase() : "No tracking number"; }
+function badgeOf(c) {
+  const hs = store.get("handovers").filter((h) => h.conversation === c.id);
+  if (hs.some((h) => h.raised_by === "code")) return "Auto-flagged";
+  if (hs.length) return hs[0].kind_label;
+  if (c.group === "Unauthorised") return "Declined politely";
+  return c.kind === "live" ? "Live" : "AI answered";
+}
+
+// ------------------------------------------------------------------ chat
+function renderList() {
+  $('list').replaceChildren();
+  // By category in the Answer Key's order (Valid, Unauthorised, Hand to staff, Failure), numbered from 1 in each (founder, 2 Nov).
+  const present = new Set(convs.map((c) => c.kind === "live" ? "Live chats" : c.group));
+  const groups = DATA.groups.filter((g) => present.has(g)).concat([...present].filter((g) => !DATA.groups.includes(g)));
+  // One category open at a time, all closed by default (founder, 2 Nov): a click opens it and closes the other; a second click closes it.
+  for (const g of groups) {
+    const items = convs.filter((x) => (x.kind === "live" ? "Live chats" : x.group) === g);
+    const open = openGroup === g;
+    const head = el('button', 'grouphead' + (open ? ' open' : ''));
+    head.setAttribute('aria-expanded', String(open));
+    head.append(el('span', '', g), el('span', 'gcount', `${items.length} ${open ? '▾' : '▸'}`));
+    head.onclick = () => { openGroup = open ? null : g; renderList(); };
+    $('list').append(head);
+    if (!open) continue;
+    items.forEach((c, k) => {
+      const b = el('button', c.id === selected ? 'active' : '');
+      b.title = c.kind === "live" ? '' : `Answer Key case ${c.result.id}`;
+      b.append(el('strong', '', c.kind === "live" ? `Live chat ${c.n}` : `${k + 1}. ${c.title}`), el('small', '', trackingOf(c)), el('small', '', badgeOf(c)));
+      b.onclick = () => select(c.id);
+      $('list').append(b);
+    });
+  }
+  $('chatCount').textContent = `${convs.filter((c) => c.kind === "replay").length} replayed chats`;
+}
+function eventsFor(trace) {
+  const out = [];
+  for (const t of trace.filter((x) => x.type === "tool")) {
+    const r = t.result, code = r.error && r.error.code;
+    if (t.name === "verify_customer" && r.status === "ok") out.push("✓ Phone matched for this parcel in this chat");
+    else if (t.name === "verify_customer" && code === "no_match") out.push("Phone number did not match the parcel");
+    else if (code === "locked") out.push("Chat locked for this tracking number after three numbers that did not match");
+    else if (t.name === "get_shipment_status" && r.status === "ok" && r.data.flag && !r.data.flag.already_flagged) out.push(`⚑ ${REASON_LABEL[r.data.flag.reason]} flagged by code from the record`);
+    else if (t.name === "escalate_case" && r.status === "ok") out.push(`↗ Handed to customer service: ${REASON_LABEL[r.data.reason]}`);
+    else if (code === "not_found") out.push("No parcel matches that tracking number");
+  }
+  return out;
+}
+function bubble(who, text, customer) {
+  const b = el('div', 'bubble' + (customer ? ' customer' : ''));
+  const m = !customer && String(text).match(/\n\s*Clause:\s*([^\n]+)\s*$/);
+  b.append(el('small', '', who), el('div', '', m ? text.slice(0, m.index).trim() : text));
+  if (m) {
+    const row = el('div', 'clauses');
+    for (const id of m[1].split(/[,\s]+/).filter(Boolean)) { const a = el('button', 'clause', 'View policy · ' + id); a.onclick = () => showClause(id); row.append(a); }
+    b.append(row);
+  }
+  $('messages').append(b);
+}
+function renderChat() {
+  const c = conv(selected);
+  $('messages').replaceChildren(); $('chathead').replaceChildren();
+  if (!c) {
+    $('chathead').append(el('strong', '', 'Choose a question'), el('div', 'small', 'Open a category on the left, then pick a question to replay its conversation.'));
+    $('modeLine').textContent = 'Or send a message to start a live chat with your own API key.';
+    return;
+  }
+  const tn = trackingOf(c), p = parcelOf(tn);
+  const st = p ? desk.statusOf(p).status.name : "";
+  $('chathead').append(el('strong', '', customerName(c)), el('div', 'small', [tn, st].filter(Boolean).join(' · ')));
+  if (c.kind === "replay") {
+    const k = el('div', 'key'), s = c.result.score;
+    k.append(el('b', '', 'Answer Key: '), document.createTextNode(DATA.cases[c.id].outcome + ' · '), el('span', s.pass ? 'pass' : 'fail', s.pass ? 'Passed' : `Failed (${s.label})`));
+    $('chathead').append(k);
+  }
+  const vb = el('div', 'viewbar');
+  for (const [v, label] of [['chat', 'Chat'], ['hood', 'Under the hood']]) {
+    const b = el('button', '', label); b.setAttribute('aria-pressed', String(view === v)); b.onclick = () => { view = v; renderChat(); }; vb.append(b);
+  }
+  $('chathead').append(vb);
+  if (view === 'hood') { renderHood(c); $('messages').scrollTop = 0; return; }
+  for (const t of c.turns) {
+    bubble('Customer', t.customer, true);
+    for (const e of eventsFor(t.trace || [])) $('messages').append(el('div', 'event', e));
+    if (t.reply) bubble('Cepat assistant', t.reply, false);
+  }
+  if (c.thinking) $('messages').append(el('div', 'event', 'The assistant is checking…'));
+  $('messages').scrollTop = $('messages').scrollHeight;
+  $('modeLine').textContent = c.kind === "replay" ? `Replay of a recorded benchmark run (${DATA.replay_source}). Send a message to start a live chat with your own API key.` : (apiKey ? 'Live chat on Claude Haiku 5.5 with your API key. Replies are checked in code before they show.' : 'Add your API key to chat live.');
+}
+// ------------------------------------------------------------------ under the hood (as Sang Kancil, 22 Oct): what happened behind each reply
+const CHECKED = 'Checked in code before it was shown: two short sentences in one paragraph, each under 30 words, the clause line, the flag sentence when one was raised, no staff titles or routing words, no word "pending", no he or she, no mention of tools.';
+const ROLE = { c: 'CUSTOMER', s: 'CODE', a: 'AI', h: 'STAFF' };
+function step(cls, who, title, lines) {
+  const d = el('div', 'hstep ' + cls), h = el('h4');
+  h.append(el('span', 'who ' + who, ROLE[who]), document.createTextNode(title));
+  d.append(h);
+  for (const l of lines.filter(Boolean)) { const p = el('p'); p.innerHTML = l; d.append(p); }
+  return d;
+}
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+const cl = (id) => id ? `<a href="#" onclick="showClause('${esc(id)}');return false" style="color:var(--green)">${esc(id)}</a>` : '';
+function asked(t) {
+  const tn = esc(String(t.input.tracking_number || '').toUpperCase());
+  if (t.name === 'get_shipment_status') return `The AI asked for the latest status of ${tn}`;
+  if (t.name === 'verify_customer') return `The AI asked to match the phone on ${tn}`;
+  if (t.name === 'get_parcel_details') return `The AI asked for the personal details of ${tn}`;
+  if (t.name === 'escalate_case') return `The AI chose a handover reason: ${esc(REASON_LABEL[t.input.reason] || t.input.reason)}`;
+  return `The AI called ${esc(t.name)}`;
+}
+function toolLines(c, t) {
+  const r = t.result || {}, d = r.data || {}, out = [`<code>${esc(t.name)}</code> · ${r.status === 'ok' ? 'done' : 'refused'}`];
+  if (r.status !== 'ok' && r.error) { out.push(`Code refused it: ${esc(r.error.message)} (${esc(r.error.code)}, ${cl(r.error.clause)})`); return out; }
+  if (t.name === 'get_shipment_status') {
+    out.push(`Record: ${esc(d.status.name)} (${cl(d.status.id)}), last scan ${esc(d.last_scan.location)}, ${esc(d.last_scan.at_label)}${d.expected_delivery ? `; expected ${esc(d.expected_delivery)} (${cl('C4')})` : ''}${d.reattempt_date ? `; reattempt ${esc(d.reattempt_date)} (${cl('C9')})` : ''}${d.last_collection_day ? `; at the branch until ${esc(d.last_collection_day)} (${cl('C9')})` : ''}.`);
+    if (d.limit && d.limit.clause) out.push(`Limit worked out in code: ${esc(d.hours_since_last_scan)} hours since the last scan, ${esc(d.limit.state)} under ${cl(d.limit.clause)}.`);
+    out.push('No personal field is returned on the tracking number alone (' + cl('S4') + ').');
+  }
+  if (t.name === 'verify_customer') out.push(`Matched the phone on the parcel as the ${esc(d.as)}. Personal details and cases for this parcel are now open in this chat only (${cl('S4')}).`);
+  if (t.name === 'get_parcel_details') out.push(`Opened after the phone match: recipient, address${d.proof_of_delivery ? ', proof of delivery' : ''} (${cl('C10')}).`);
+  if (t.name === 'escalate_case') out.push(`Code checked the reason against the record and chose the lane: ${esc(d.lane)}. The AI never chooses the person.`);
+  return out;
+}
+function handoverStep(c, h) {
+  return step('code', 's', `Code ${h.raised_by === 'code' ? 'raised a flag from the record' : 'wrote the handover note'}: ${esc(REASON_LABEL[h.reason] || h.reason)}`, [
+    `Routed to ${esc(h.to.name)}, ${esc(h.to.title)}, ${esc(h.to.place)} (${cl('S20a')}), lane ${esc(h.kind_label)}.`,
+    `Note queued for Nurul Aina's review with the nine fields (${cl('S26')}); it shows on the right.`,
+  ]);
+}
+function renderHood(c) {
+  const list = el('ol', 'hlist'), add = (n) => { const li = el('li'); li.append(n); list.append(li); };
+  const hs = store.get('handovers').filter((h) => h.conversation === c.id);
+  const shown = new Set();
+  for (const t of c.turns) {
+    add(step('cust', 'c', 'The customer asked', [`"${esc(t.customer)}"`]));
+    for (const x of t.trace || []) {
+      if (x.type === 'tool') {
+        add(step('ai', 'a', asked(x), toolLines(c, x)));
+        const r = x.result || {};
+        const flagId = x.name === 'get_shipment_status' && r.status === 'ok' && r.data.flag ? r.data.flag.reason : null;
+        const hoReason = x.name === 'escalate_case' && r.status === 'ok' ? r.data.reason : null;
+        const h = hs.find((y) => !shown.has(y.id) && ((flagId && y.raised_by === 'code' && y.reason === flagId) || (hoReason && y.raised_by === 'agent' && y.reason === hoReason)));
+        if (h) { shown.add(h.id); add(handoverStep(c, h)); }
+      } else if (x.type === 'note' && !/^Reply written in code/.test(x.text)) add(step('muted', 's', 'Code sent the reply back', [esc(x.text)]));
+      else if (x.type === 'reply') {
+        const code = (t.trace || []).some((y) => y.type === 'note' && /^Reply written in code/.test(y.text));
+        const body = String(x.text).replace(/\n\s*Clause:[^\n]*$/, '').trim();
+        add(code ? step('code', 's', 'Reply written in code, in the approved wording', [`"${esc(body)}"`, `Shown as it is, with no further AI call (${cl('S27')}).`])
+                 : step('ai', 'a', 'Reply written by the AI, checked in code', [`"${esc(body)}"`, esc(CHECKED)]));
+      }
+    }
+    if (!t.reply && c.thinking) add(step('muted', 's', 'Working…', ['The assistant is checking.']));
+  }
+  if (!c.turns.length) $('messages').append(el('p', 'empty', 'Nothing has happened yet. Under the hood follows the chat: send a message, and each step behind the reply appears here.'));
+  else $('messages').append(list);
+}
+
+function showClause(id) {
+  const c = DATA.clauses[id];
+  $('policyTitle').textContent = id; $('policySource').textContent = c ? c.source : '';
+  $('policyText').textContent = c ? c.text : 'Clause not found in the policies.';
+  const page = { C: 'Courier Policy.html', S: 'Customer Service Policy.html', D: 'Delivery Status Guide.html' }[id[0]];
+  $('policyLink').href = page ? `resources/${encodeURIComponent(page)}#${id}` : 'resources/Courier%20Policy.html';
+  $('policy').showModal();
+}
+function select(id) {
+  selected = id;
+  const c = conv(id);
+  if (c) openGroup = c.kind === 'live' ? 'Live chats' : c.group;  // the chosen question's category stays open
+  renderList(); renderChat(); renderQueue();
+}
+
+// ------------------------------------------------------------------ handover queue
+function renderQueue() {
+  const q = $('queue'); q.replaceChildren();
+  // Only the handovers of the conversation on the left (founder, 2 Nov); the header counts every open one.
+  const all = store.get("handovers");
+  const hs = all.filter((h) => h.conversation === selected);
+  const isOpen = (h) => h.state === 'queued' || h.state === 'ticket_registered';
+  if (!selected) q.append(el('p', 'empty', 'Choose a question to see its handover here.'));
+  else if (!hs.length) q.append(el('p', 'empty', 'No handover for this conversation. The AI handled it in the chat.'));
+  [['CS resolves', (h) => h.kind !== 'transfer'], ['Transfer', (h) => h.kind === 'transfer']].forEach(([lane, pick], li) => {
+    const list = hs.filter(pick);
+    if (!list.length) return;
+    const head = el('div', 'lanehead' + (li && q.children.length ? ' divider' : ''));
+    head.append(el('span', '', lane), el('span', 'tag', String(list.filter(isOpen).length)));
+    q.append(head);
+    for (const h of list) {
+      const done = !isOpen(h);
+      const card = el('article', 'card' + (done ? ' done' : ''));
+      const tag = done ? (h.state === 'closed' ? 'Closed' : 'Transferred') : h.state === 'ticket_registered' ? 'Ticket registered' : h.raised_by === 'code' ? 'Auto-flagged' : 'Queued';
+      card.append(el('span', 'tag' + (done ? '' : ' amber'), tag), el('h3', '', REASON_LABEL[h.reason] || h.reason));
+      const dl = el('dl');
+      for (const [k, v] of Object.entries(desk.noteOf(h))) dl.append(el('dt', '', k), el('dd', '', v));
+      card.append(dl);
+      const a = el('div', 'actions'), v = el('button', '', 'View conversation ↗');
+      v.onclick = () => { select(h.conversation); if (innerWidth < 900) tab('chat', document.querySelector('.mobiletabs button')); };
+      a.append(v);
+      if (!done) {
+        let act, label;
+        if (h.kind === 'transfer') { act = 'transfer'; label = 'Review & transfer'; }
+        else if (h.kind === 'cs_resolves' && h.state === 'queued') { act = 'register_ticket'; label = 'Register ticket'; }
+        else { act = 'close'; label = 'Close with note'; }
+        const b = el('button', 'primary', label); b.onclick = () => openAction(h.id, act); a.append(b);
+      }
+      card.append(a); q.append(card);
+    }
+  });
+  $('count').textContent = all.filter(isOpen).length + ' open in all chats';
+}
+function openAction(id, act) {
+  pending = { id, act };
+  const h = store.get("handovers").find((x) => x.id === id);
+  $('actionTitle').textContent = act === 'transfer' ? `Transfer to ${h.to.name}, ${h.to.place}` : act === 'register_ticket' ? 'Register ticket' : 'Close case';
+  $('actionText').textContent = h.recommended_action + ' This is a demo action; nothing leaves this page.';
+  $('note').value = ''; $('error').textContent = ''; $('action').showModal();
+}
+function confirmAction() {
+  const r = desk.staffAction(pending.id, pending.act, $('note').value);
+  if (r.status !== 'ok') { $('error').textContent = r.error.message; return; }
+  $('action').close(); renderQueue(); renderList(); toast(r.handover.workflow_state);
+}
+
+// ------------------------------------------------------------------ live chat
+function openKey() { $('keyError').textContent = ''; $('keyInput').value = ''; $('keyDialog').showModal(); }
+function saveKey() {
+  const k = $('keyInput').value.trim();
+  if (!/^sk-ant-/.test(k)) { $('keyError').textContent = 'That does not look like an Anthropic API key.'; return; }
+  apiKey = k; $('keyDialog').close(); newLive(); toast('Live chat ready');
+}
+function newLive() {
+  liveN++;
+  const c = { id: `L${liveN}`, n: liveN, kind: 'live', group: 'Live chats', turns: [], events: [], messages: [], session: desk.newSession(`L${liveN}`) };
+  c.events = c.session.events; convs.push(c); select(c.id); return c;
+}
+async function send(e) {
+  e.preventDefault();
+  const text = $('message').value.trim(); if (!text) return;
+  if (!apiKey) { openKey(); return; }
+  let c = conv(selected);
+  if (!c || c.kind !== 'live') c = newLive();
+  if (c.thinking) return;
+  $('message').value = '';
+  const turn = { customer: text, reply: null, trace: [] };
+  c.turns.push(turn); c.thinking = true; renderChat();
+  c.messages.push({ role: 'user', content: text });
+  c.session.last_message = text;
+  try {
+    const out = await CXAgent.runTurn({ apiKey, system: SYSTEM, tools: TOOL_LIST, messages: c.messages, callTool: (n, i) => desk.call(c.session, n, i) });
+    turn.reply = out.reply; turn.trace = out.trace;
+    desk.recordReply(c.session, out.reply);
+  } catch (err) {
+    turn.reply = 'Sorry, the live chat could not reach the AI: ' + String(err.message || err).slice(0, 160);
+  }
+  c.thinking = false; renderList(); renderChat(); renderQueue();
+}
+
+// ------------------------------------------------------------------ layout
+function tab(which, b) { $('chatPanel').style.display = which === 'chat' ? 'flex' : 'none'; $('handoverPanel').style.display = which === 'queue' ? 'flex' : 'none'; document.querySelectorAll('.mobiletabs button').forEach((x) => x.classList.remove('active')); b.classList.add('active'); }
+window.addEventListener('resize', () => { if (innerWidth >= 900) { $('chatPanel').style.display = 'flex'; $('handoverPanel').style.display = 'flex'; } });
+function toast(t) { $('toast').textContent = t; $('toast').style.display = 'block'; clearTimeout(toast.t); toast.t = setTimeout(() => ($('toast').style.display = 'none'), 2800); }
+function resetDemo() { liveN = 0; build(); renderList(); renderChat(); renderQueue(); toast('Demo reset'); }
+$('today').textContent = DATA.tables.today_label;
+build(); select(selected);
+</script></body></html>

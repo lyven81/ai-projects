@@ -1,0 +1,232 @@
+{
+ "summary": {
+  "date": "2026-11-02T07:51:43.278Z",
+  "today": "Friday 28 Aug 2026, 9:30 pm",
+  "model": "claude-haiku-5-5",
+  "runs": 1,
+  "passed": 1,
+  "hard_limit_breaches": 0,
+  "by_group": {
+   "Valid": {
+    "runs": 1,
+    "passed": 1
+   }
+  },
+  "labels": {},
+  "usage": {
+   "input_tokens": 2211,
+   "output_tokens": 2501,
+   "cache_read_input_tokens": 30735,
+   "cache_creation_input_tokens": 0
+  },
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 2211,
+    "output_tokens": 2501,
+    "cache_read_input_tokens": 30735,
+    "cache_creation_input_tokens": 0
+   }
+  },
+  "rescored_from": "2026-11-02T07:50:43.514Z"
+ },
+ "results": [
+  {
+   "id": "C11",
+   "group": "Valid",
+   "title": "Lost claim",
+   "message": "My parcel CE26000111 is lost, how do I get compensation?",
+   "reply": "I can't promise compensation, as Customer Service decides that only after investigating a parcel confirmed lost. Your parcel isn't missing: it was last scanned in transit at Johor Bahru, Wed 26 Aug 2026, 9:10 pm, and is due in Klang on Fri 28 Aug 2026.\n\nClause: C15, C4, C16",
+   "stoppedBy": "end_turn",
+   "sentBack": false,
+   "reworded": 1,
+   "turns": [
+    {
+     "customer": "My parcel CE26000111 is lost, how do I get compensation?",
+     "reply": "I can't promise compensation, as Customer Service decides that only after investigating a parcel confirmed lost. Your parcel isn't missing: it was last scanned in transit at Johor Bahru, Wed 26 Aug 2026, 9:10 pm, and is due in Klang on Fri 28 Aug 2026.\n\nClause: C15, C4, C16",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000111",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000111",
+         "status": {
+          "id": "D4",
+          "name": "In transit"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-26T21:10",
+          "at_label": "Wed 26 Aug 2026, 9:10 pm",
+          "location": "Johor Bahru",
+          "status": "In transit"
+         },
+         "hours_since_last_scan": 48.3,
+         "delivery_location": "Klang",
+         "scans": [
+          {
+           "at_label": "Tue 25 Aug 2026, 6:00 pm",
+           "status": "Booked",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 9:00 am",
+           "status": "Picked up",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 3:00 pm",
+           "status": "At sorting hub",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 9:10 pm",
+           "status": "In transit",
+           "location": "Johor Bahru"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "within",
+          "clause": "C5"
+         },
+         "clauses": [
+          "D4",
+          "C4",
+          "C5"
+         ],
+         "picked_up": "Wed 26 Aug 2026, 9:00 am",
+         "expected_delivery": "Fri 28 Aug 2026",
+         "expected_date_passed": false
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 7
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply sent back: keep it to at most two short sentences in one paragraph: answer the question directly, then the next step if there is one, keeping the clause line; keep each sentence short, under 30 words."
+      },
+      {
+       "type": "reply",
+       "text": "I can't promise compensation, as Customer Service decides that only after investigating a parcel confirmed lost. Your parcel isn't missing: it was last scanned in transit at Johor Bahru, Wed 26 Aug 2026, 9:10 pm, and is due in Klang on Fri 28 Aug 2026.\n\nClause: C15, C4, C16"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000111",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000111",
+       "status": {
+        "id": "D4",
+        "name": "In transit"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-26T21:10",
+        "at_label": "Wed 26 Aug 2026, 9:10 pm",
+        "location": "Johor Bahru",
+        "status": "In transit"
+       },
+       "hours_since_last_scan": 48.3,
+       "delivery_location": "Klang",
+       "scans": [
+        {
+         "at_label": "Tue 25 Aug 2026, 6:00 pm",
+         "status": "Booked",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 9:00 am",
+         "status": "Picked up",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 3:00 pm",
+         "status": "At sorting hub",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 9:10 pm",
+         "status": "In transit",
+         "location": "Johor Bahru"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "within",
+        "clause": "C5"
+       },
+       "clauses": [
+        "D4",
+        "C4",
+        "C5"
+       ],
+       "picked_up": "Wed 26 Aug 2026, 9:00 am",
+       "expected_delivery": "Fri 28 Aug 2026",
+       "expected_date_passed": false
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 7
+     },
+     "at": 0
+    }
+   ],
+   "handovers": [],
+   "usage": {
+    "input_tokens": 2211,
+    "output_tokens": 2501,
+    "cache_read_input_tokens": 30735,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 12389,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "C15",
+     "C4",
+     "C16"
+    ],
+    "metrics": {
+     "calls": 1,
+     "tools": [
+      "get_shipment_status:ok"
+     ]
+    }
+   }
+  }
+ ]
+}

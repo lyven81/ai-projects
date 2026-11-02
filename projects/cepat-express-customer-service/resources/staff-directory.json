@@ -1,0 +1,31 @@
+{
+  "note": "One Logistics Officer for each of the three locations (Courier Policy C3a). A Logistics escalation goes to the officer of the location where the issue happened (Customer Service Policy S20a).",
+  "customer_service": [
+    {
+      "id": "CS-01",
+      "name": "Nurul Aina",
+      "title": "Customer Service Lead",
+      "base": "Shah Alam HQ"
+    }
+  ],
+  "logistics": [
+    {
+      "id": "LG-IPH",
+      "name": "May",
+      "title": "Logistics Officer",
+      "location": "Ipoh"
+    },
+    {
+      "id": "LG-JHB",
+      "name": "Siti Aisyah",
+      "title": "Logistics Officer",
+      "location": "Johor Bahru"
+    },
+    {
+      "id": "LG-KLG",
+      "name": "Kavita",
+      "title": "Logistics Officer",
+      "location": "Klang"
+    }
+  ]
+}

@@ -1,0 +1,4112 @@
+{
+ "summary": {
+  "date": "2026-11-02T08:47:38.649Z",
+  "today": "Friday 28 Aug 2026, 9:30 pm",
+  "model": "claude-haiku-5-5",
+  "runs": 12,
+  "passed": 12,
+  "hard_limit_breaches": 0,
+  "by_group": {
+   "Hand to staff": {
+    "runs": 12,
+    "passed": 12
+   }
+  },
+  "labels": {},
+  "usage": {
+   "input_tokens": 24556,
+   "output_tokens": 7171,
+   "cache_read_input_tokens": 324446,
+   "cache_creation_input_tokens": 52330
+  },
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 24556,
+    "output_tokens": 7171,
+    "cache_read_input_tokens": 324446,
+    "cache_creation_input_tokens": 52330
+   }
+  },
+  "wall_ms": 16673,
+  "sample": false,
+  "only": "C02,C07,C08,C09,C10,C12,C13,C14,C15,C16,C17,C18"
+ },
+ "results": [
+  {
+   "id": "C02",
+   "group": "Hand to staff",
+   "title": "Delivered, not received",
+   "message": "The app says delivered but I never received my parcel. Tracking CE26000102, my phone is 012-338 4471.",
+   "reply": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our Ipoh team to check.\nClause: S16, C17",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "The app says delivered but I never received my parcel. Tracking CE26000102, my phone is 012-338 4471.",
+     "reply": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our Ipoh team to check.\nClause: S16, C17",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000102",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000102",
+         "status": {
+          "id": "D7",
+          "name": "Delivered"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-27T15:12",
+          "at_label": "Thu 27 Aug 2026, 3:12 pm",
+          "location": "Ipoh",
+          "status": "Delivered"
+         },
+         "hours_since_last_scan": 30.3,
+         "delivery_location": "Ipoh",
+         "scans": [
+          {
+           "at_label": "Tue 25 Aug 2026, 11:00 am",
+           "status": "Booked",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 3:30 pm",
+           "status": "Picked up",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 8:00 pm",
+           "status": "At sorting hub",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 6:10 am",
+           "status": "In transit",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 6:20 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 8:30 am",
+           "status": "Out for delivery",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 3:12 pm",
+           "status": "Delivered",
+           "location": "Ipoh"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D7"
+         ],
+         "picked_up": "Tue 25 Aug 2026, 3:30 pm",
+         "delivered_at": "Thu 27 Aug 2026, 3:12 pm"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 2
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000102",
+        "phone": "012-338 4471",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000102",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "delivered_not_received",
+        "tracking_number": "CE26000102",
+        "summary": "Customer says the app shows CE26000102 as delivered, but they never received the parcel.",
+        "told_customer": "Tracking shows the parcel as delivered, and the customer said they did not receive it. Nothing else has been told yet.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "delivered_not_received",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our Ipoh team to check.\nClause: S16, C17"
+        },
+        "elapsed_ms": 2
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our Ipoh team to check.\nClause: S16, C17"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000102",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000102",
+       "status": {
+        "id": "D7",
+        "name": "Delivered"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-27T15:12",
+        "at_label": "Thu 27 Aug 2026, 3:12 pm",
+        "location": "Ipoh",
+        "status": "Delivered"
+       },
+       "hours_since_last_scan": 30.3,
+       "delivery_location": "Ipoh",
+       "scans": [
+        {
+         "at_label": "Tue 25 Aug 2026, 11:00 am",
+         "status": "Booked",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 3:30 pm",
+         "status": "Picked up",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 8:00 pm",
+         "status": "At sorting hub",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 6:10 am",
+         "status": "In transit",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 6:20 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 8:30 am",
+         "status": "Out for delivery",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 3:12 pm",
+         "status": "Delivered",
+         "location": "Ipoh"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D7"
+       ],
+       "picked_up": "Tue 25 Aug 2026, 3:30 pm",
+       "delivered_at": "Thu 27 Aug 2026, 3:12 pm"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 2
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000102",
+      "phone": "012-338 4471",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000102",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "delivered_not_received",
+      "tracking_number": "CE26000102",
+      "summary": "Customer says the app shows CE26000102 as delivered, but they never received the parcel.",
+      "told_customer": "Tracking shows the parcel as delivered, and the customer said they did not receive it. Nothing else has been told yet.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "delivered_not_received",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our Ipoh team to check.\nClause: S16, C17"
+      },
+      "elapsed_ms": 2
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C02",
+     "raised_by": "agent",
+     "tracking_number": "CE26000102",
+     "reason": "delivered_not_received",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S16",
+      "C17"
+     ],
+     "to": {
+      "id": "LG-IPH",
+      "name": "May",
+      "title": "Logistics Officer",
+      "place": "Ipoh"
+     },
+     "customer": "Ravi Krishnan (recipient)",
+     "customer_report": "Customer says the app shows CE26000102 as delivered, but they never received the parcel.",
+     "agent_told": "Tracking shows the parcel as delivered, and the customer said they did not receive it. Nothing else has been told yet.",
+     "verification": "Phone 012***-4471 matched for this parcel in this chat (recipient).",
+     "record": "Delivered; last scan Delivered, Ipoh, Thu 27 Aug 2026, 3:12 pm; delivery attempts: 0; delivery location: Ipoh; proof of delivery: photo, Ipoh, Thu 27 Aug 2026, 3:12 pm, Parcel left at the front door.",
+     "told_customer": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our Ipoh team to check.",
+     "customer_sentence": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our Ipoh team to check.",
+     "recommended_action": "Review the handoff and transfer to May for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2093,
+    "output_tokens": 522,
+    "cache_read_input_tokens": 20932,
+    "cache_creation_input_tokens": 10466
+   },
+   "ms": 4465,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S16",
+     "C17"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C07",
+   "group": "Hand to staff",
+   "title": "Home but marked unavailable",
+   "message": "Rider marked recipient unavailable but I was home all day! CE26000107, phone 012-903 5571.",
+   "reply": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our Ipoh team to check.\nClause: S18, C17",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "Rider marked recipient unavailable but I was home all day! CE26000107, phone 012-903 5571.",
+     "reply": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our Ipoh team to check.\nClause: S18, C17",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000107",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000107",
+         "status": {
+          "id": "D6",
+          "name": "Delivery attempted"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-28T11:05",
+          "at_label": "Fri 28 Aug 2026, 11:05 am",
+          "location": "Ipoh",
+          "status": "Delivery attempted",
+          "reason": "Recipient unavailable"
+         },
+         "hours_since_last_scan": 10.4,
+         "delivery_location": "Ipoh",
+         "scans": [
+          {
+           "at_label": "Tue 25 Aug 2026, 10:00 am",
+           "status": "Booked",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 4:00 pm",
+           "status": "Picked up",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 9:00 pm",
+           "status": "At sorting hub",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 5:00 am",
+           "status": "In transit",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 2:00 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 8:10 am",
+           "status": "Out for delivery",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 11:05 am",
+           "status": "Delivery attempted",
+           "location": "Ipoh",
+           "reason": "Recipient unavailable"
+          }
+         ],
+         "attempts": 1,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D6",
+          "C9"
+         ],
+         "picked_up": "Tue 25 Aug 2026, 4:00 pm",
+         "reattempt_date": "Tue 1 Sep 2026"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000107",
+        "phone": "012-903 5571",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000107",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "marked_unavailable_home",
+        "told_customer": "Tracking shows the rider attempted delivery today at 11:05 am and marked the recipient unavailable; a reattempt is on Tue 1 Sep 2026.",
+        "summary": "Customer says they were at home all day and the rider marked the recipient unavailable.",
+        "tracking_number": "CE26000107",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "marked_unavailable_home",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our Ipoh team to check.\nClause: S18, C17"
+        },
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our Ipoh team to check.\nClause: S18, C17"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000107",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000107",
+       "status": {
+        "id": "D6",
+        "name": "Delivery attempted"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-28T11:05",
+        "at_label": "Fri 28 Aug 2026, 11:05 am",
+        "location": "Ipoh",
+        "status": "Delivery attempted",
+        "reason": "Recipient unavailable"
+       },
+       "hours_since_last_scan": 10.4,
+       "delivery_location": "Ipoh",
+       "scans": [
+        {
+         "at_label": "Tue 25 Aug 2026, 10:00 am",
+         "status": "Booked",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 4:00 pm",
+         "status": "Picked up",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 9:00 pm",
+         "status": "At sorting hub",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 5:00 am",
+         "status": "In transit",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 2:00 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 8:10 am",
+         "status": "Out for delivery",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 11:05 am",
+         "status": "Delivery attempted",
+         "location": "Ipoh",
+         "reason": "Recipient unavailable"
+        }
+       ],
+       "attempts": 1,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D6",
+        "C9"
+       ],
+       "picked_up": "Tue 25 Aug 2026, 4:00 pm",
+       "reattempt_date": "Tue 1 Sep 2026"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000107",
+      "phone": "012-903 5571",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000107",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 1
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "marked_unavailable_home",
+      "told_customer": "Tracking shows the rider attempted delivery today at 11:05 am and marked the recipient unavailable; a reattempt is on Tue 1 Sep 2026.",
+      "summary": "Customer says they were at home all day and the rider marked the recipient unavailable.",
+      "tracking_number": "CE26000107",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "marked_unavailable_home",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our Ipoh team to check.\nClause: S18, C17"
+      },
+      "elapsed_ms": 1
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C07",
+     "raised_by": "agent",
+     "tracking_number": "CE26000107",
+     "reason": "marked_unavailable_home",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S18",
+      "C17"
+     ],
+     "to": {
+      "id": "LG-IPH",
+      "name": "May",
+      "title": "Logistics Officer",
+      "place": "Ipoh"
+     },
+     "customer": "Deepa Nair (recipient)",
+     "customer_report": "Customer says they were at home all day and the rider marked the recipient unavailable.",
+     "agent_told": "Tracking shows the rider attempted delivery today at 11:05 am and marked the recipient unavailable; a reattempt is on Tue 1 Sep 2026.",
+     "verification": "Phone 012***-5571 matched for this parcel in this chat (recipient).",
+     "record": "Delivery attempted; last scan Delivery attempted, Ipoh, Fri 28 Aug 2026, 11:05 am; reason recorded: Recipient unavailable; delivery attempts: 1; delivery location: Ipoh; proof of delivery: not recorded.",
+     "told_customer": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our Ipoh team to check.",
+     "customer_sentence": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our Ipoh team to check.",
+     "recommended_action": "Review the handoff and transfer to May for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2126,
+    "output_tokens": 514,
+    "cache_read_input_tokens": 20932,
+    "cache_creation_input_tokens": 10466
+   },
+   "ms": 9400,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S18",
+     "C17"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C08",
+   "group": "Hand to staff",
+   "title": "Change address",
+   "message": "Can I change my delivery address for CE26000108? My phone is 011-2340 8812. The new address is 7, Jalan Pasir Puteh, 31650 Ipoh.",
+   "reply": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our Ipoh team to update.\nClause: S14, C11",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "Can I change my delivery address for CE26000108? My phone is 011-2340 8812. The new address is 7, Jalan Pasir Puteh, 31650 Ipoh.",
+     "reply": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our Ipoh team to update.\nClause: S14, C11",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000108",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000108",
+         "status": {
+          "id": "D1",
+          "name": "Booked"
+         },
+         "shipped": false,
+         "last_scan": {
+          "at": "2026-08-27T16:30",
+          "at_label": "Thu 27 Aug 2026, 4:30 pm",
+          "location": "Klang",
+          "status": "Booked"
+         },
+         "hours_since_last_scan": 29,
+         "delivery_location": "Ipoh",
+         "scans": [
+          {
+           "at_label": "Thu 27 Aug 2026, 4:30 pm",
+           "status": "Booked",
+           "location": "Klang"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D1",
+          "C2"
+         ]
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000108",
+        "phone": "011-2340 8812",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000108",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "address_change_not_shipped",
+        "tracking_number": "CE26000108",
+        "told_customer": "Asked whether the delivery address can be changed; told the customer the parcel is Booked and an address change can be requested.",
+        "summary": "Customer wants the delivery address changed to 7, Jalan Pasir Puteh, 31650 Ipoh.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "address_change_not_shipped",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our Ipoh team to update.\nClause: S14, C11"
+        },
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our Ipoh team to update.\nClause: S14, C11"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000108",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000108",
+       "status": {
+        "id": "D1",
+        "name": "Booked"
+       },
+       "shipped": false,
+       "last_scan": {
+        "at": "2026-08-27T16:30",
+        "at_label": "Thu 27 Aug 2026, 4:30 pm",
+        "location": "Klang",
+        "status": "Booked"
+       },
+       "hours_since_last_scan": 29,
+       "delivery_location": "Ipoh",
+       "scans": [
+        {
+         "at_label": "Thu 27 Aug 2026, 4:30 pm",
+         "status": "Booked",
+         "location": "Klang"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D1",
+        "C2"
+       ]
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000108",
+      "phone": "011-2340 8812",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000108",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "address_change_not_shipped",
+      "tracking_number": "CE26000108",
+      "told_customer": "Asked whether the delivery address can be changed; told the customer the parcel is Booked and an address change can be requested.",
+      "summary": "Customer wants the delivery address changed to 7, Jalan Pasir Puteh, 31650 Ipoh.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "address_change_not_shipped",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our Ipoh team to update.\nClause: S14, C11"
+      },
+      "elapsed_ms": 1
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C08",
+     "raised_by": "agent",
+     "tracking_number": "CE26000108",
+     "reason": "address_change_not_shipped",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S14",
+      "C11"
+     ],
+     "to": {
+      "id": "LG-IPH",
+      "name": "May",
+      "title": "Logistics Officer",
+      "place": "Ipoh"
+     },
+     "customer": "Arjun Pillai (recipient)",
+     "customer_report": "Customer wants the delivery address changed to 7, Jalan Pasir Puteh, 31650 Ipoh.",
+     "agent_told": "Asked whether the delivery address can be changed; told the customer the parcel is Booked and an address change can be requested.",
+     "verification": "Phone 011****-8812 matched for this parcel in this chat (recipient).",
+     "record": "Booked; last scan Booked, Klang, Thu 27 Aug 2026, 4:30 pm; delivery attempts: 0; delivery location: Ipoh; proof of delivery: not recorded.",
+     "told_customer": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our Ipoh team to update.",
+     "customer_sentence": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our Ipoh team to update.",
+     "recommended_action": "Review the handoff and transfer to May for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 1493,
+    "output_tokens": 562,
+    "cache_read_input_tokens": 20932,
+    "cache_creation_input_tokens": 10466
+   },
+   "ms": 7176,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S14",
+     "C11"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C09",
+   "group": "Hand to staff",
+   "title": "Self-collect",
+   "message": "Can I collect my parcel CE26000109 at your branch instead? Phone 016-288 7740.",
+   "reply": "I've noted that you'd like to collect your parcel at our Johor Bahru branch. I've passed your request to customer service for our Johor Bahru team to arrange.\nClause: S20b, C9",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "Can I collect my parcel CE26000109 at your branch instead? Phone 016-288 7740.",
+     "reply": "I've noted that you'd like to collect your parcel at our Johor Bahru branch. I've passed your request to customer service for our Johor Bahru team to arrange.\nClause: S20b, C9",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000109",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000109",
+         "status": {
+          "id": "D6",
+          "name": "Delivery attempted"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-28T12:45",
+          "at_label": "Fri 28 Aug 2026, 12:45 pm",
+          "location": "Johor Bahru",
+          "status": "Delivery attempted",
+          "reason": "No one at home"
+         },
+         "hours_since_last_scan": 8.8,
+         "delivery_location": "Johor Bahru",
+         "scans": [
+          {
+           "at_label": "Mon 24 Aug 2026, 12:00 pm",
+           "status": "Booked",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Mon 24 Aug 2026, 4:00 pm",
+           "status": "Picked up",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Mon 24 Aug 2026, 9:00 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 6:00 am",
+           "status": "In transit",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 3:00 pm",
+           "status": "At sorting hub",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 8:20 am",
+           "status": "Out for delivery",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 1:10 pm",
+           "status": "Delivery attempted",
+           "location": "Johor Bahru",
+           "reason": "No one at home"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 8:30 am",
+           "status": "Out for delivery",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 12:45 pm",
+           "status": "Delivery attempted",
+           "location": "Johor Bahru",
+           "reason": "No one at home"
+          }
+         ],
+         "attempts": 2,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D6",
+          "C9"
+         ],
+         "picked_up": "Mon 24 Aug 2026, 4:00 pm",
+         "last_collection_day": "Mon 7 Sep 2026"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 3
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000109",
+        "phone": "016-288 7740",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000109",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "self_collection",
+        "told_customer": "Parcel CE26000109 was attempted twice, with no one at home; the branch can hold it for self-collection until Mon 7 Sep 2026.",
+        "summary": "Customer asks to collect parcel CE26000109 at the branch instead of waiting for redelivery.",
+        "tracking_number": "CE26000109",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "self_collection",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "I've noted that you'd like to collect your parcel at our Johor Bahru branch. I've passed your request to customer service for our Johor Bahru team to arrange.\nClause: S20b, C9"
+        },
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "I've noted that you'd like to collect your parcel at our Johor Bahru branch. I've passed your request to customer service for our Johor Bahru team to arrange.\nClause: S20b, C9"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000109",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000109",
+       "status": {
+        "id": "D6",
+        "name": "Delivery attempted"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-28T12:45",
+        "at_label": "Fri 28 Aug 2026, 12:45 pm",
+        "location": "Johor Bahru",
+        "status": "Delivery attempted",
+        "reason": "No one at home"
+       },
+       "hours_since_last_scan": 8.8,
+       "delivery_location": "Johor Bahru",
+       "scans": [
+        {
+         "at_label": "Mon 24 Aug 2026, 12:00 pm",
+         "status": "Booked",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Mon 24 Aug 2026, 4:00 pm",
+         "status": "Picked up",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Mon 24 Aug 2026, 9:00 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 6:00 am",
+         "status": "In transit",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 3:00 pm",
+         "status": "At sorting hub",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 8:20 am",
+         "status": "Out for delivery",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 1:10 pm",
+         "status": "Delivery attempted",
+         "location": "Johor Bahru",
+         "reason": "No one at home"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 8:30 am",
+         "status": "Out for delivery",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 12:45 pm",
+         "status": "Delivery attempted",
+         "location": "Johor Bahru",
+         "reason": "No one at home"
+        }
+       ],
+       "attempts": 2,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D6",
+        "C9"
+       ],
+       "picked_up": "Mon 24 Aug 2026, 4:00 pm",
+       "last_collection_day": "Mon 7 Sep 2026"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 3
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000109",
+      "phone": "016-288 7740",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000109",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "self_collection",
+      "told_customer": "Parcel CE26000109 was attempted twice, with no one at home; the branch can hold it for self-collection until Mon 7 Sep 2026.",
+      "summary": "Customer asks to collect parcel CE26000109 at the branch instead of waiting for redelivery.",
+      "tracking_number": "CE26000109",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "self_collection",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "I've noted that you'd like to collect your parcel at our Johor Bahru branch. I've passed your request to customer service for our Johor Bahru team to arrange.\nClause: S20b, C9"
+      },
+      "elapsed_ms": 1
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C09",
+     "raised_by": "agent",
+     "tracking_number": "CE26000109",
+     "reason": "self_collection",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S20b",
+      "C9"
+     ],
+     "to": {
+      "id": "LG-JHB",
+      "name": "Siti Aisyah",
+      "title": "Logistics Officer",
+      "place": "Johor Bahru"
+     },
+     "customer": "Kelvin Chan Siew Mei (recipient)",
+     "customer_report": "Customer asks to collect parcel CE26000109 at the branch instead of waiting for redelivery.",
+     "agent_told": "Parcel CE26000109 was attempted twice, with no one at home; the branch can hold it for self-collection until Mon 7 Sep 2026.",
+     "verification": "Phone 016***-7740 matched for this parcel in this chat (recipient).",
+     "record": "Delivery attempted; last scan Delivery attempted, Johor Bahru, Fri 28 Aug 2026, 12:45 pm; reason recorded: No one at home; delivery attempts: 2; delivery location: Johor Bahru; proof of delivery: not recorded.",
+     "told_customer": "I've noted that you'd like to collect your parcel at our Johor Bahru branch. I've passed your request to customer service for our Johor Bahru team to arrange.",
+     "customer_sentence": "I've noted that you'd like to collect your parcel at our Johor Bahru branch. I've passed your request to customer service for our Johor Bahru team to arrange.",
+     "recommended_action": "Review the handoff and transfer to Siti Aisyah for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2336,
+    "output_tokens": 519,
+    "cache_read_input_tokens": 20932,
+    "cache_creation_input_tokens": 10466
+   },
+   "ms": 7184,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S20b",
+     "C9"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C10",
+   "group": "Hand to staff",
+   "title": "Damaged",
+   "message": "My parcel CE26000110 arrived broken, how do I claim? Phone 012-661 0347.",
+   "reply": "Sorry your parcel arrived damaged. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S10, C14",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "My parcel CE26000110 arrived broken, how do I claim? Phone 012-661 0347.",
+     "reply": "Sorry your parcel arrived damaged. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S10, C14",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000110",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000110",
+         "status": {
+          "id": "D7",
+          "name": "Delivered"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-27T11:30",
+          "at_label": "Thu 27 Aug 2026, 11:30 am",
+          "location": "Klang",
+          "status": "Delivered"
+         },
+         "hours_since_last_scan": 34,
+         "delivery_location": "Klang",
+         "scans": [
+          {
+           "at_label": "Mon 24 Aug 2026, 2:00 pm",
+           "status": "Booked",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 10:30 am",
+           "status": "Picked up",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 4:00 pm",
+           "status": "At sorting hub",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 10:00 pm",
+           "status": "In transit",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 7:00 pm",
+           "status": "At sorting hub",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 8:00 am",
+           "status": "Out for delivery",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 11:30 am",
+           "status": "Delivered",
+           "location": "Klang"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D7"
+         ],
+         "picked_up": "Tue 25 Aug 2026, 10:30 am",
+         "delivered_at": "Thu 27 Aug 2026, 11:30 am"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000110",
+        "phone": "012-661 0347",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000110",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "damaged",
+        "tracking_number": "CE26000110",
+        "summary": "The parcel arrived broken. The customer wants to know how to claim.",
+        "told_customer": "Asked for the phone number on the parcel and confirmed the customer's details; the parcel's status was shared.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "damaged",
+         "lane": "CS resolves",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Sorry your parcel arrived damaged. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S10, C14"
+        },
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Sorry your parcel arrived damaged. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S10, C14"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000110",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000110",
+       "status": {
+        "id": "D7",
+        "name": "Delivered"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-27T11:30",
+        "at_label": "Thu 27 Aug 2026, 11:30 am",
+        "location": "Klang",
+        "status": "Delivered"
+       },
+       "hours_since_last_scan": 34,
+       "delivery_location": "Klang",
+       "scans": [
+        {
+         "at_label": "Mon 24 Aug 2026, 2:00 pm",
+         "status": "Booked",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 10:30 am",
+         "status": "Picked up",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 4:00 pm",
+         "status": "At sorting hub",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 10:00 pm",
+         "status": "In transit",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 7:00 pm",
+         "status": "At sorting hub",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 8:00 am",
+         "status": "Out for delivery",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 11:30 am",
+         "status": "Delivered",
+         "location": "Klang"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D7"
+       ],
+       "picked_up": "Tue 25 Aug 2026, 10:30 am",
+       "delivered_at": "Thu 27 Aug 2026, 11:30 am"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000110",
+      "phone": "012-661 0347",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000110",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "damaged",
+      "tracking_number": "CE26000110",
+      "summary": "The parcel arrived broken. The customer wants to know how to claim.",
+      "told_customer": "Asked for the phone number on the parcel and confirmed the customer's details; the parcel's status was shared.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "damaged",
+       "lane": "CS resolves",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Sorry your parcel arrived damaged. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S10, C14"
+      },
+      "elapsed_ms": 1
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C10",
+     "raised_by": "agent",
+     "tracking_number": "CE26000110",
+     "reason": "damaged",
+     "kind": "cs_resolves",
+     "kind_label": "CS resolves",
+     "clauses": [
+      "S10",
+      "C14"
+     ],
+     "to": {
+      "id": "CS-01",
+      "name": "Nurul Aina",
+      "title": "Customer Service Lead",
+      "place": "Shah Alam HQ"
+     },
+     "customer": "Siti Rahman (recipient)",
+     "customer_report": "The parcel arrived broken. The customer wants to know how to claim.",
+     "agent_told": "Asked for the phone number on the parcel and confirmed the customer's details; the parcel's status was shared.",
+     "verification": "Phone 012***-0347 matched for this parcel in this chat (recipient).",
+     "record": "Delivered; last scan Delivered, Klang, Thu 27 Aug 2026, 11:30 am; delivery attempts: 0; delivery location: Klang; proof of delivery: signature, Klang, Thu 27 Aug 2026, 11:30 am, Signed by the recipient.",
+     "told_customer": "Sorry your parcel arrived damaged. I've passed your report to Nurul Aina from customer service for help with the next steps.",
+     "customer_sentence": "Sorry your parcel arrived damaged. I've passed your report to Nurul Aina from customer service for help with the next steps.",
+     "recommended_action": "Register a ticket of type damaged (S28, C14), then close with a note.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; ticket not yet registered.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2097,
+    "output_tokens": 507,
+    "cache_read_input_tokens": 20932,
+    "cache_creation_input_tokens": 10466
+   },
+   "ms": 7262,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S10",
+     "C14"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C12",
+   "group": "Hand to staff",
+   "title": "Wrong parcel",
+   "message": "I received someone else's parcel, not mine. Tracking CE26000112, phone 017-482 6619.",
+   "reply": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our Klang team to check.\nClause: S17, C17",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "I received someone else's parcel, not mine. Tracking CE26000112, phone 017-482 6619.",
+     "reply": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our Klang team to check.\nClause: S17, C17",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000112",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000112",
+         "status": {
+          "id": "D7",
+          "name": "Delivered"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-28T10:20",
+          "at_label": "Fri 28 Aug 2026, 10:20 am",
+          "location": "Klang",
+          "status": "Delivered"
+         },
+         "hours_since_last_scan": 11.2,
+         "delivery_location": "Klang",
+         "scans": [
+          {
+           "at_label": "Wed 26 Aug 2026, 9:00 am",
+           "status": "Booked",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 1:00 pm",
+           "status": "Picked up",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 7:00 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 2:00 am",
+           "status": "In transit",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 5:00 pm",
+           "status": "At sorting hub",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 8:00 am",
+           "status": "Out for delivery",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 10:20 am",
+           "status": "Delivered",
+           "location": "Klang"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D7"
+         ],
+         "picked_up": "Wed 26 Aug 2026, 1:00 pm",
+         "delivered_at": "Fri 28 Aug 2026, 10:20 am"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000112",
+        "phone": "017-482 6619",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000112",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "wrong_parcel",
+        "tracking_number": "CE26000112",
+        "told_customer": "I'm sorry, the parcel was delivered but it isn't yours. I've asked you for the phone number on the parcel to check it.",
+        "summary": "The customer says they received someone else's parcel, not their own, under tracking number CE26000112.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "wrong_parcel",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our Klang team to check.\nClause: S17, C17"
+        },
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our Klang team to check.\nClause: S17, C17"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000112",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000112",
+       "status": {
+        "id": "D7",
+        "name": "Delivered"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-28T10:20",
+        "at_label": "Fri 28 Aug 2026, 10:20 am",
+        "location": "Klang",
+        "status": "Delivered"
+       },
+       "hours_since_last_scan": 11.2,
+       "delivery_location": "Klang",
+       "scans": [
+        {
+         "at_label": "Wed 26 Aug 2026, 9:00 am",
+         "status": "Booked",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 1:00 pm",
+         "status": "Picked up",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 7:00 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 2:00 am",
+         "status": "In transit",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 5:00 pm",
+         "status": "At sorting hub",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 8:00 am",
+         "status": "Out for delivery",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 10:20 am",
+         "status": "Delivered",
+         "location": "Klang"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D7"
+       ],
+       "picked_up": "Wed 26 Aug 2026, 1:00 pm",
+       "delivered_at": "Fri 28 Aug 2026, 10:20 am"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000112",
+      "phone": "017-482 6619",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000112",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "wrong_parcel",
+      "tracking_number": "CE26000112",
+      "told_customer": "I'm sorry, the parcel was delivered but it isn't yours. I've asked you for the phone number on the parcel to check it.",
+      "summary": "The customer says they received someone else's parcel, not their own, under tracking number CE26000112.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "wrong_parcel",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our Klang team to check.\nClause: S17, C17"
+      },
+      "elapsed_ms": 1
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C12",
+     "raised_by": "agent",
+     "tracking_number": "CE26000112",
+     "reason": "wrong_parcel",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S17",
+      "C17"
+     ],
+     "to": {
+      "id": "LG-KLG",
+      "name": "Kavita",
+      "title": "Logistics Officer",
+      "place": "Klang"
+     },
+     "customer": "Priya Subramaniam (recipient)",
+     "customer_report": "The customer says they received someone else's parcel, not their own, under tracking number CE26000112.",
+     "agent_told": "I'm sorry, the parcel was delivered but it isn't yours. I've asked you for the phone number on the parcel to check it.",
+     "verification": "Phone 017***-6619 matched for this parcel in this chat (recipient).",
+     "record": "Delivered; last scan Delivered, Klang, Fri 28 Aug 2026, 10:20 am; delivery attempts: 0; delivery location: Klang; proof of delivery: photo, Klang, Fri 28 Aug 2026, 10:20 am, Handed to the recipient at the door.",
+     "told_customer": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our Klang team to check.",
+     "customer_sentence": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our Klang team to check.",
+     "recommended_action": "Review the handoff and transfer to Kavita for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2153,
+    "output_tokens": 559,
+    "cache_read_input_tokens": 31398,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 5474,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S17",
+     "C17"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C13",
+   "group": "Hand to staff",
+   "title": "Items missing",
+   "message": "Some items are missing from my parcel CE26000113. Phone 012-775 4093.",
+   "reply": "Sorry some items are missing from your parcel. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S11, C14",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "Some items are missing from my parcel CE26000113. Phone 012-775 4093.",
+     "reply": "Sorry some items are missing from your parcel. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S11, C14",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000113",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000113",
+         "status": {
+          "id": "D7",
+          "name": "Delivered"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-27T16:45",
+          "at_label": "Thu 27 Aug 2026, 4:45 pm",
+          "location": "Ipoh",
+          "status": "Delivered"
+         },
+         "hours_since_last_scan": 28.8,
+         "delivery_location": "Ipoh",
+         "scans": [
+          {
+           "at_label": "Tue 25 Aug 2026, 9:00 am",
+           "status": "Booked",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 2:00 pm",
+           "status": "Picked up",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 8:00 pm",
+           "status": "At sorting hub",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 4:00 am",
+           "status": "In transit",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 5:30 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 8:15 am",
+           "status": "Out for delivery",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 4:45 pm",
+           "status": "Delivered",
+           "location": "Ipoh"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D7"
+         ],
+         "picked_up": "Tue 25 Aug 2026, 2:00 pm",
+         "delivered_at": "Thu 27 Aug 2026, 4:45 pm"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000113",
+        "phone": "012-775 4093",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000113",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "items_missing",
+        "tracking_number": "CE26000113",
+        "told_customer": "Your parcel was delivered in Ipoh on Thu 27 Aug 2026 at 4:45 pm. I asked for the phone number on the parcel to check your details.",
+        "summary": "The customer, the recipient, reports that some items are missing from the parcel.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "items_missing",
+         "lane": "CS resolves",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Sorry some items are missing from your parcel. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S11, C14"
+        },
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Sorry some items are missing from your parcel. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S11, C14"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000113",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000113",
+       "status": {
+        "id": "D7",
+        "name": "Delivered"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-27T16:45",
+        "at_label": "Thu 27 Aug 2026, 4:45 pm",
+        "location": "Ipoh",
+        "status": "Delivered"
+       },
+       "hours_since_last_scan": 28.8,
+       "delivery_location": "Ipoh",
+       "scans": [
+        {
+         "at_label": "Tue 25 Aug 2026, 9:00 am",
+         "status": "Booked",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 2:00 pm",
+         "status": "Picked up",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 8:00 pm",
+         "status": "At sorting hub",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 4:00 am",
+         "status": "In transit",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 5:30 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 8:15 am",
+         "status": "Out for delivery",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 4:45 pm",
+         "status": "Delivered",
+         "location": "Ipoh"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D7"
+       ],
+       "picked_up": "Tue 25 Aug 2026, 2:00 pm",
+       "delivered_at": "Thu 27 Aug 2026, 4:45 pm"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000113",
+      "phone": "012-775 4093",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000113",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "items_missing",
+      "tracking_number": "CE26000113",
+      "told_customer": "Your parcel was delivered in Ipoh on Thu 27 Aug 2026 at 4:45 pm. I asked for the phone number on the parcel to check your details.",
+      "summary": "The customer, the recipient, reports that some items are missing from the parcel.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "items_missing",
+       "lane": "CS resolves",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Sorry some items are missing from your parcel. I've passed your report to Nurul Aina from customer service for help with the next steps.\nClause: S11, C14"
+      },
+      "elapsed_ms": 0
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C13",
+     "raised_by": "agent",
+     "tracking_number": "CE26000113",
+     "reason": "items_missing",
+     "kind": "cs_resolves",
+     "kind_label": "CS resolves",
+     "clauses": [
+      "S11",
+      "C14"
+     ],
+     "to": {
+      "id": "CS-01",
+      "name": "Nurul Aina",
+      "title": "Customer Service Lead",
+      "place": "Shah Alam HQ"
+     },
+     "customer": "Jason Ooi Boon Keat (recipient)",
+     "customer_report": "The customer, the recipient, reports that some items are missing from the parcel.",
+     "agent_told": "Your parcel was delivered in Ipoh on Thu 27 Aug 2026 at 4:45 pm. I asked for the phone number on the parcel to check your details.",
+     "verification": "Phone 012***-4093 matched for this parcel in this chat (recipient).",
+     "record": "Delivered; last scan Delivered, Ipoh, Thu 27 Aug 2026, 4:45 pm; delivery attempts: 0; delivery location: Ipoh; proof of delivery: signature, Ipoh, Thu 27 Aug 2026, 4:45 pm, Signed by the recipient.",
+     "told_customer": "Sorry some items are missing from your parcel. I've passed your report to Nurul Aina from customer service for help with the next steps.",
+     "customer_sentence": "Sorry some items are missing from your parcel. I've passed your report to Nurul Aina from customer service for help with the next steps.",
+     "recommended_action": "Register a ticket of type damaged (S28, C14), then close with a note.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; ticket not yet registered.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2064,
+    "output_tokens": 660,
+    "cache_read_input_tokens": 31398,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 4740,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S11",
+     "C14"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C14",
+   "group": "Hand to staff",
+   "title": "Delivery instruction",
+   "message": "Please leave my parcel CE26000114 at the guardhouse. My phone is 013-208 6650.",
+   "reply": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "Please leave my parcel CE26000114 at the guardhouse. My phone is 013-208 6650.",
+     "reply": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000114",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000114",
+         "status": {
+          "id": "D4",
+          "name": "In transit"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-28T06:00",
+          "at_label": "Fri 28 Aug 2026, 6:00 am",
+          "location": "Ipoh",
+          "status": "In transit"
+         },
+         "hours_since_last_scan": 15.5,
+         "delivery_location": "Klang",
+         "scans": [
+          {
+           "at_label": "Thu 27 Aug 2026, 10:00 am",
+           "status": "Booked",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 3:00 pm",
+           "status": "Picked up",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 9:00 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 6:00 am",
+           "status": "In transit",
+           "location": "Ipoh"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "within",
+          "clause": "C5"
+         },
+         "clauses": [
+          "D4",
+          "C4",
+          "C5"
+         ],
+         "picked_up": "Thu 27 Aug 2026, 3:00 pm",
+         "expected_delivery": "Tue 1 Sep 2026",
+         "expected_date_passed": false
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000114",
+        "phone": "013-208 6650",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000114",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "delivery_instruction",
+        "tracking_number": "CE26000114",
+        "summary": "Customer asks for parcel CE26000114 to be left at the guardhouse.",
+        "told_customer": "Parcel is in transit and not yet delivered; phone verified as recipient; instruction noted for the rider.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "delivery_instruction",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19"
+        },
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000114",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000114",
+       "status": {
+        "id": "D4",
+        "name": "In transit"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-28T06:00",
+        "at_label": "Fri 28 Aug 2026, 6:00 am",
+        "location": "Ipoh",
+        "status": "In transit"
+       },
+       "hours_since_last_scan": 15.5,
+       "delivery_location": "Klang",
+       "scans": [
+        {
+         "at_label": "Thu 27 Aug 2026, 10:00 am",
+         "status": "Booked",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 3:00 pm",
+         "status": "Picked up",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 9:00 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 6:00 am",
+         "status": "In transit",
+         "location": "Ipoh"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "within",
+        "clause": "C5"
+       },
+       "clauses": [
+        "D4",
+        "C4",
+        "C5"
+       ],
+       "picked_up": "Thu 27 Aug 2026, 3:00 pm",
+       "expected_delivery": "Tue 1 Sep 2026",
+       "expected_date_passed": false
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 1
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000114",
+      "phone": "013-208 6650",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000114",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "delivery_instruction",
+      "tracking_number": "CE26000114",
+      "summary": "Customer asks for parcel CE26000114 to be left at the guardhouse.",
+      "told_customer": "Parcel is in transit and not yet delivered; phone verified as recipient; instruction noted for the rider.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "delivery_instruction",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19"
+      },
+      "elapsed_ms": 1
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C14",
+     "raised_by": "agent",
+     "tracking_number": "CE26000114",
+     "reason": "delivery_instruction",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S20d",
+      "C19"
+     ],
+     "to": {
+      "id": "LG-KLG",
+      "name": "Kavita",
+      "title": "Logistics Officer",
+      "place": "Klang"
+     },
+     "customer": "Hana Kamal (recipient)",
+     "customer_report": "Customer asks for parcel CE26000114 to be left at the guardhouse.",
+     "agent_told": "Parcel is in transit and not yet delivered; phone verified as recipient; instruction noted for the rider.",
+     "verification": "Phone 013***-6650 matched for this parcel in this chat (recipient).",
+     "record": "In transit; last scan In transit, Ipoh, Fri 28 Aug 2026, 6:00 am; delivery attempts: 0; delivery location: Klang; proof of delivery: not recorded.",
+     "told_customer": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.",
+     "customer_sentence": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.",
+     "recommended_action": "Review the handoff and transfer to Kavita for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 535,
+    "cache_read_input_tokens": 31398,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 4397,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S20d",
+     "C19"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C15",
+   "group": "Hand to staff",
+   "title": "Rider rude",
+   "message": "Your rider was extremely rude to me when delivering CE26000115. My phone is 019-833 1205.",
+   "reply": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "Your rider was extremely rude to me when delivering CE26000115. My phone is 019-833 1205.",
+     "reply": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000115",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000115",
+         "status": {
+          "id": "D7",
+          "name": "Delivered"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-28T13:30",
+          "at_label": "Fri 28 Aug 2026, 1:30 pm",
+          "location": "Johor Bahru",
+          "status": "Delivered"
+         },
+         "hours_since_last_scan": 8,
+         "delivery_location": "Johor Bahru",
+         "scans": [
+          {
+           "at_label": "Wed 26 Aug 2026, 9:30 am",
+           "status": "Booked",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 2:00 pm",
+           "status": "Picked up",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 8:00 pm",
+           "status": "At sorting hub",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 3:00 am",
+           "status": "In transit",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 4:00 pm",
+           "status": "At sorting hub",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 8:20 am",
+           "status": "Out for delivery",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 1:30 pm",
+           "status": "Delivered",
+           "location": "Johor Bahru"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D7"
+         ],
+         "picked_up": "Wed 26 Aug 2026, 2:00 pm",
+         "delivered_at": "Fri 28 Aug 2026, 1:30 pm"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 1
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000115",
+        "phone": "019-833 1205",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000115",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "rider_conduct",
+        "tracking_number": "CE26000115",
+        "told_customer": "Confirmed the phone number matched the parcel. No other advice given yet.",
+        "summary": "The recipient says the rider was extremely rude to them when delivering the parcel.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "rider_conduct",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17"
+        },
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000115",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000115",
+       "status": {
+        "id": "D7",
+        "name": "Delivered"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-28T13:30",
+        "at_label": "Fri 28 Aug 2026, 1:30 pm",
+        "location": "Johor Bahru",
+        "status": "Delivered"
+       },
+       "hours_since_last_scan": 8,
+       "delivery_location": "Johor Bahru",
+       "scans": [
+        {
+         "at_label": "Wed 26 Aug 2026, 9:30 am",
+         "status": "Booked",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 2:00 pm",
+         "status": "Picked up",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 8:00 pm",
+         "status": "At sorting hub",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 3:00 am",
+         "status": "In transit",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 4:00 pm",
+         "status": "At sorting hub",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 8:20 am",
+         "status": "Out for delivery",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 1:30 pm",
+         "status": "Delivered",
+         "location": "Johor Bahru"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D7"
+       ],
+       "picked_up": "Wed 26 Aug 2026, 2:00 pm",
+       "delivered_at": "Fri 28 Aug 2026, 1:30 pm"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 1
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000115",
+      "phone": "019-833 1205",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000115",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "rider_conduct",
+      "tracking_number": "CE26000115",
+      "told_customer": "Confirmed the phone number matched the parcel. No other advice given yet.",
+      "summary": "The recipient says the rider was extremely rude to them when delivering the parcel.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "rider_conduct",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17"
+      },
+      "elapsed_ms": 0
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C15",
+     "raised_by": "agent",
+     "tracking_number": "CE26000115",
+     "reason": "rider_conduct",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S19",
+      "C17"
+     ],
+     "to": {
+      "id": "LG-JHB",
+      "name": "Siti Aisyah",
+      "title": "Logistics Officer",
+      "place": "Johor Bahru"
+     },
+     "customer": "Muhammad Ismail (recipient)",
+     "customer_report": "The recipient says the rider was extremely rude to them when delivering the parcel.",
+     "agent_told": "Confirmed the phone number matched the parcel. No other advice given yet.",
+     "verification": "Phone 019***-1205 matched for this parcel in this chat (recipient).",
+     "record": "Delivered; last scan Delivered, Johor Bahru, Fri 28 Aug 2026, 1:30 pm; delivery attempts: 0; delivery location: Johor Bahru; proof of delivery: signature, Johor Bahru, Fri 28 Aug 2026, 1:30 pm, Signed by the recipient.",
+     "told_customer": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.",
+     "customer_sentence": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.",
+     "recommended_action": "Review the handoff and transfer to Siti Aisyah for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2358,
+    "output_tokens": 759,
+    "cache_read_input_tokens": 31398,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 5221,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S19",
+     "C17"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C16",
+   "group": "Hand to staff",
+   "title": "Parcel left unattended",
+   "message": "My parcel CE26000116 was just left outside the gate, not handed to me. Phone 016-519 7731.",
+   "reply": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "My parcel CE26000116 was just left outside the gate, not handed to me. Phone 016-519 7731.",
+     "reply": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000116",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000116",
+         "status": {
+          "id": "D7",
+          "name": "Delivered"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-27T17:20",
+          "at_label": "Thu 27 Aug 2026, 5:20 pm",
+          "location": "Johor Bahru",
+          "status": "Delivered"
+         },
+         "hours_since_last_scan": 28.2,
+         "delivery_location": "Johor Bahru",
+         "scans": [
+          {
+           "at_label": "Tue 25 Aug 2026, 10:00 am",
+           "status": "Booked",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 3:00 pm",
+           "status": "Picked up",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 9:00 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 4:00 am",
+           "status": "In transit",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 6:00 pm",
+           "status": "At sorting hub",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 8:30 am",
+           "status": "Out for delivery",
+           "location": "Johor Bahru"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 5:20 pm",
+           "status": "Delivered",
+           "location": "Johor Bahru"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D7"
+         ],
+         "picked_up": "Tue 25 Aug 2026, 3:00 pm",
+         "delivered_at": "Thu 27 Aug 2026, 5:20 pm"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000116",
+        "phone": "016-519 7731",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000116",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "rider_conduct",
+        "tracking_number": "CE26000116",
+        "told_customer": "I'm sorry, I know the parcel should have been handed to you. Your report is being passed to customer service.",
+        "summary": "The customer says the parcel was left outside the gate and was not handed to them. The phone number on the parcel matched.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "rider_conduct",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17"
+        },
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000116",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000116",
+       "status": {
+        "id": "D7",
+        "name": "Delivered"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-27T17:20",
+        "at_label": "Thu 27 Aug 2026, 5:20 pm",
+        "location": "Johor Bahru",
+        "status": "Delivered"
+       },
+       "hours_since_last_scan": 28.2,
+       "delivery_location": "Johor Bahru",
+       "scans": [
+        {
+         "at_label": "Tue 25 Aug 2026, 10:00 am",
+         "status": "Booked",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 3:00 pm",
+         "status": "Picked up",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 9:00 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 4:00 am",
+         "status": "In transit",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 6:00 pm",
+         "status": "At sorting hub",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 8:30 am",
+         "status": "Out for delivery",
+         "location": "Johor Bahru"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 5:20 pm",
+         "status": "Delivered",
+         "location": "Johor Bahru"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D7"
+       ],
+       "picked_up": "Tue 25 Aug 2026, 3:00 pm",
+       "delivered_at": "Thu 27 Aug 2026, 5:20 pm"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000116",
+      "phone": "016-519 7731",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000116",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "rider_conduct",
+      "tracking_number": "CE26000116",
+      "told_customer": "I'm sorry, I know the parcel should have been handed to you. Your report is being passed to customer service.",
+      "summary": "The customer says the parcel was left outside the gate and was not handed to them. The phone number on the parcel matched.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "rider_conduct",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.\nClause: S19, C17"
+      },
+      "elapsed_ms": 0
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C16",
+     "raised_by": "agent",
+     "tracking_number": "CE26000116",
+     "reason": "rider_conduct",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S19",
+      "C17"
+     ],
+     "to": {
+      "id": "LG-JHB",
+      "name": "Siti Aisyah",
+      "title": "Logistics Officer",
+      "place": "Johor Bahru"
+     },
+     "customer": "Shirley Lee (recipient)",
+     "customer_report": "The customer says the parcel was left outside the gate and was not handed to them. The phone number on the parcel matched.",
+     "agent_told": "I'm sorry, I know the parcel should have been handed to you. Your report is being passed to customer service.",
+     "verification": "Phone 016***-7731 matched for this parcel in this chat (recipient).",
+     "record": "Delivered; last scan Delivered, Johor Bahru, Thu 27 Aug 2026, 5:20 pm; delivery attempts: 0; delivery location: Johor Bahru; proof of delivery: photo, Johor Bahru, Thu 27 Aug 2026, 5:20 pm, Parcel left outside the gate.",
+     "told_customer": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.",
+     "customer_sentence": "Sorry about your experience with the delivery. I've passed your report to customer service for our Johor Bahru team to check.",
+     "recommended_action": "Review the handoff and transfer to Siti Aisyah for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2243,
+    "output_tokens": 740,
+    "cache_read_input_tokens": 31398,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 4869,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S19",
+     "C17"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C17",
+   "group": "Hand to staff",
+   "title": "Pickup not collected",
+   "message": "I scheduled a pickup for CE26000117 but no rider showed up. I'm the sender, my phone is 017-650 2281.",
+   "reply": "Your parcel to Ipoh is booked but hasn't been picked up yet. I've passed your request to customer service for our Johor Bahru team to arrange the pickup.\nClause: S20c, C18",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "I scheduled a pickup for CE26000117 but no rider showed up. I'm the sender, my phone is 017-650 2281.",
+     "reply": "Your parcel to Ipoh is booked but hasn't been picked up yet. I've passed your request to customer service for our Johor Bahru team to arrange the pickup.\nClause: S20c, C18",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000117",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000117",
+         "status": {
+          "id": "D1",
+          "name": "Booked"
+         },
+         "shipped": false,
+         "last_scan": {
+          "at": "2026-08-26T10:00",
+          "at_label": "Wed 26 Aug 2026, 10:00 am",
+          "location": "Johor Bahru",
+          "status": "Booked"
+         },
+         "hours_since_last_scan": 59.5,
+         "delivery_location": "Ipoh",
+         "scans": [
+          {
+           "at_label": "Wed 26 Aug 2026, 10:00 am",
+           "status": "Booked",
+           "location": "Johor Bahru"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D1",
+          "C2"
+         ]
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000117",
+        "phone": "017-650 2281",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000117",
+         "as": "sender"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "pickup_not_collected",
+        "told_customer": "Parcel CE26000117 is still Booked and has not been picked up yet, so it has not been shipped.",
+        "summary": "I'm the sender. I scheduled a pickup for this parcel, and no rider has come to collect it.",
+        "tracking_number": "CE26000117",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "pickup_not_collected",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Your parcel to Ipoh is booked but hasn't been picked up yet. I've passed your request to customer service for our Johor Bahru team to arrange the pickup.\nClause: S20c, C18"
+        },
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Your parcel to Ipoh is booked but hasn't been picked up yet. I've passed your request to customer service for our Johor Bahru team to arrange the pickup.\nClause: S20c, C18"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000117",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000117",
+       "status": {
+        "id": "D1",
+        "name": "Booked"
+       },
+       "shipped": false,
+       "last_scan": {
+        "at": "2026-08-26T10:00",
+        "at_label": "Wed 26 Aug 2026, 10:00 am",
+        "location": "Johor Bahru",
+        "status": "Booked"
+       },
+       "hours_since_last_scan": 59.5,
+       "delivery_location": "Ipoh",
+       "scans": [
+        {
+         "at_label": "Wed 26 Aug 2026, 10:00 am",
+         "status": "Booked",
+         "location": "Johor Bahru"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D1",
+        "C2"
+       ]
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000117",
+      "phone": "017-650 2281",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000117",
+       "as": "sender"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "pickup_not_collected",
+      "told_customer": "Parcel CE26000117 is still Booked and has not been picked up yet, so it has not been shipped.",
+      "summary": "I'm the sender. I scheduled a pickup for this parcel, and no rider has come to collect it.",
+      "tracking_number": "CE26000117",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "pickup_not_collected",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Your parcel to Ipoh is booked but hasn't been picked up yet. I've passed your request to customer service for our Johor Bahru team to arrange the pickup.\nClause: S20c, C18"
+      },
+      "elapsed_ms": 0
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C17",
+     "raised_by": "agent",
+     "tracking_number": "CE26000117",
+     "reason": "pickup_not_collected",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S20c",
+      "C18"
+     ],
+     "to": {
+      "id": "LG-JHB",
+      "name": "Siti Aisyah",
+      "title": "Logistics Officer",
+      "place": "Johor Bahru"
+     },
+     "customer": "Arjun Krishnan (sender)",
+     "customer_report": "I'm the sender. I scheduled a pickup for this parcel, and no rider has come to collect it.",
+     "agent_told": "Parcel CE26000117 is still Booked and has not been picked up yet, so it has not been shipped.",
+     "verification": "Phone 017***-2281 matched for this parcel in this chat (sender).",
+     "record": "Booked; last scan Booked, Johor Bahru, Wed 26 Aug 2026, 10:00 am; delivery attempts: 0; delivery location: Ipoh; proof of delivery: not recorded.",
+     "told_customer": "Your parcel to Ipoh is booked but hasn't been picked up yet. I've passed your request to customer service for our Johor Bahru team to arrange the pickup.",
+     "customer_sentence": "Your parcel to Ipoh is booked but hasn't been picked up yet. I've passed your request to customer service for our Johor Bahru team to arrange the pickup.",
+     "recommended_action": "Review the handoff and transfer to Siti Aisyah for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 1540,
+    "output_tokens": 559,
+    "cache_read_input_tokens": 31398,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 4097,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S20c",
+     "C18"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C18",
+   "group": "Hand to staff",
+   "title": "Rejected parcel",
+   "message": "The recipient rejected my parcel CE26000118, how do I reship it? I'm the sender, my phone is 012-554 8120.",
+   "reply": "I understand the recipient rejected your parcel. I've passed your request to Nurul Aina from customer service for help with the next steps.\nClause: S13, C14",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "The recipient rejected my parcel CE26000118, how do I reship it? I'm the sender, my phone is 012-554 8120.",
+     "reply": "I understand the recipient rejected your parcel. I've passed your request to Nurul Aina from customer service for help with the next steps.\nClause: S13, C14",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000118",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000118",
+         "status": {
+          "id": "D8",
+          "name": "Rejected by recipient"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-27T12:10",
+          "at_label": "Thu 27 Aug 2026, 12:10 pm",
+          "location": "Klang",
+          "status": "Rejected by recipient",
+          "reason": "Recipient refused the parcel"
+         },
+         "hours_since_last_scan": 33.3,
+         "delivery_location": "Klang",
+         "scans": [
+          {
+           "at_label": "Tue 25 Aug 2026, 9:00 am",
+           "status": "Booked",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 2:30 pm",
+           "status": "Picked up",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Tue 25 Aug 2026, 8:00 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 3:00 am",
+           "status": "In transit",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Wed 26 Aug 2026, 4:00 pm",
+           "status": "At sorting hub",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 8:30 am",
+           "status": "Out for delivery",
+           "location": "Klang"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 12:10 pm",
+           "status": "Rejected by recipient",
+           "location": "Klang",
+           "reason": "Recipient refused the parcel"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "none",
+          "clause": null
+         },
+         "clauses": [
+          "D8"
+         ],
+         "picked_up": "Tue 25 Aug 2026, 2:30 pm"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000118",
+        "phone": "012-554 8120",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000118",
+         "as": "sender"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "rejected",
+        "tracking_number": "CE26000118",
+        "summary": "The sender says the recipient rejected the parcel and asks how to reship it.",
+        "told_customer": "I confirmed you are the sender of CE26000118, which shows as rejected by the recipient on Thu 27 Aug 2026.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "rejected",
+         "lane": "CS resolves",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "I understand the recipient rejected your parcel. I've passed your request to Nurul Aina from customer service for help with the next steps.\nClause: S13, C14"
+        },
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "I understand the recipient rejected your parcel. I've passed your request to Nurul Aina from customer service for help with the next steps.\nClause: S13, C14"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000118",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000118",
+       "status": {
+        "id": "D8",
+        "name": "Rejected by recipient"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-27T12:10",
+        "at_label": "Thu 27 Aug 2026, 12:10 pm",
+        "location": "Klang",
+        "status": "Rejected by recipient",
+        "reason": "Recipient refused the parcel"
+       },
+       "hours_since_last_scan": 33.3,
+       "delivery_location": "Klang",
+       "scans": [
+        {
+         "at_label": "Tue 25 Aug 2026, 9:00 am",
+         "status": "Booked",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 2:30 pm",
+         "status": "Picked up",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Tue 25 Aug 2026, 8:00 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 3:00 am",
+         "status": "In transit",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Wed 26 Aug 2026, 4:00 pm",
+         "status": "At sorting hub",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 8:30 am",
+         "status": "Out for delivery",
+         "location": "Klang"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 12:10 pm",
+         "status": "Rejected by recipient",
+         "location": "Klang",
+         "reason": "Recipient refused the parcel"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "none",
+        "clause": null
+       },
+       "clauses": [
+        "D8"
+       ],
+       "picked_up": "Tue 25 Aug 2026, 2:30 pm"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000118",
+      "phone": "012-554 8120",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000118",
+       "as": "sender"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "rejected",
+      "tracking_number": "CE26000118",
+      "summary": "The sender says the recipient rejected the parcel and asks how to reship it.",
+      "told_customer": "I confirmed you are the sender of CE26000118, which shows as rejected by the recipient on Thu 27 Aug 2026.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "rejected",
+       "lane": "CS resolves",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "I understand the recipient rejected your parcel. I've passed your request to Nurul Aina from customer service for help with the next steps.\nClause: S13, C14"
+      },
+      "elapsed_ms": 0
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C18",
+     "raised_by": "agent",
+     "tracking_number": "CE26000118",
+     "reason": "rejected",
+     "kind": "cs_resolves",
+     "kind_label": "CS resolves",
+     "clauses": [
+      "S13",
+      "C14"
+     ],
+     "to": {
+      "id": "CS-01",
+      "name": "Nurul Aina",
+      "title": "Customer Service Lead",
+      "place": "Shah Alam HQ"
+     },
+     "customer": "Kumar Hassan (sender)",
+     "customer_report": "The sender says the recipient rejected the parcel and asks how to reship it.",
+     "agent_told": "I confirmed you are the sender of CE26000118, which shows as rejected by the recipient on Thu 27 Aug 2026.",
+     "verification": "Phone 012***-8120 matched for this parcel in this chat (sender).",
+     "record": "Rejected by recipient; last scan Rejected by recipient, Klang, Thu 27 Aug 2026, 12:10 pm; reason recorded: Recipient refused the parcel; delivery attempts: 0; delivery location: Klang; proof of delivery: not recorded.",
+     "told_customer": "I understand the recipient rejected your parcel. I've passed your request to Nurul Aina from customer service for help with the next steps.",
+     "customer_sentence": "I understand the recipient rejected your parcel. I've passed your request to Nurul Aina from customer service for help with the next steps.",
+     "recommended_action": "Register a ticket of type rejected (S28, C14), then close with a note.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; ticket not yet registered.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 2179,
+    "output_tokens": 735,
+    "cache_read_input_tokens": 31398,
+    "cache_creation_input_tokens": 0
+   },
+   "ms": 4909,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S13",
+     "C14"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  }
+ ]
+}

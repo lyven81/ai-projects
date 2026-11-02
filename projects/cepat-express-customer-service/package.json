@@ -1,0 +1,15 @@
+{
+  "name": "cepat-express-customer-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cepat Express frontline customer service agent. MCP server, four tools with the rules in code, no-key tests, benchmark",
+  "type": "commonjs",
+  "scripts": {
+    "mcp": "node mcp_server.mjs",
+    "test": "node benchmark/test_tools.js && node benchmark/test_data.js && node benchmark/test_mcp.mjs",
+    "benchmark": "node benchmark/run_benchmark.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.0"
+  }
+}

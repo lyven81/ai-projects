@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Courier CS Ground-Truth Answer Key",
+    "version": "1.0",
+    "date": "2026-06-19",
+    "purpose": "The known truth the build scores agents against. Per reason: the correct gate outcome and the checklist a good response must contain. Response quality = share of required elements present.",
+    "outcomes": {
+      "resolve": "The agent (bot or human) can settle it with information or an approved self-serve action.",
+      "escalate": "Must be routed to a human specialist or back-office team (claims, disputes, conduct, finance).",
+      "decline": "Out of scope or non-business; politely refuse and redirect, never resolve or escalate."
+    }
+  },
+  "reasons": [
+    { "id": 1, "category": "A. Tracking & delivery status", "reason": "Tracking hasn't updated in days",
+      "correct_outcome": "resolve", "escalate_if": "no scan movement for more than 3 days", "handled_by": "bot",
+      "good_response_must_include": ["acknowledge the concern", "give the latest scan: status, location, time", "explain the likely cause (in transit / hub backlog)", "set the next-update or ETA expectation", "if stale beyond threshold, open an investigation with a reference number"],
+      "bad_response_example": "It shows in transit, please keep waiting." },
+
+    { "id": 2, "category": "A. Tracking & delivery status", "reason": "Tracking says delivered but not received",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize for the situation", "confirm the delivery record: time, location, proof of delivery", "open a proof-of-delivery investigation with a reference number", "advise checking household / neighbour / guardhouse", "set a callback SLA (for example 24 to 48 hours)"],
+      "bad_response_example": "Our system shows it was delivered, please check around your house." },
+
+    { "id": 3, "category": "A. Tracking & delivery status", "reason": "Estimated delivery date / ETA",
+      "correct_outcome": "resolve", "escalate_if": null, "handled_by": "bot",
+      "good_response_must_include": ["give the estimated delivery date or window", "state the current status", "flag any known delay", "offer delivery notifications"],
+      "bad_response_example": "Soon." },
+
+    { "id": 4, "category": "A. Tracking & delivery status", "reason": "Stuck at sorting hub / customs / in transit too long",
+      "correct_outcome": "resolve", "escalate_if": "dwell time exceeds the normal range for that stage", "handled_by": "bot",
+      "good_response_must_include": ["explain the current stage (sorting / customs clearance) and typical dwell time", "give an updated ETA", "if abnormally long, raise to operations with a reference", "reassure the parcel is not lost"],
+      "bad_response_example": "It is at the hub, nothing we can do." },
+
+    { "id": 5, "category": "A. Tracking & delivery status", "reason": "Out for delivery but nothing arrived",
+      "correct_outcome": "resolve", "escalate_if": "a failed attempt was logged or no delivery by end of day", "handled_by": "bot",
+      "good_response_must_include": ["confirm the out-for-delivery status", "set the same-day expectation", "if a failed attempt was logged, explain redelivery and offer to reschedule", "if no attempt by end of day, raise to the delivery hub"],
+      "bad_response_example": "It is out for delivery, just wait." },
+
+    { "id": 6, "category": "B. Failed delivery, redelivery & rescheduling", "reason": "Missed delivery, arrange redelivery",
+      "correct_outcome": "resolve", "escalate_if": null, "handled_by": "bot",
+      "good_response_must_include": ["confirm the missed attempt", "offer the next redelivery date or self-collect", "confirm the address and contact number", "give a confirmation reference"],
+      "bad_response_example": "You missed it, it will be returned." },
+
+    { "id": 7, "category": "B. Failed delivery, redelivery & rescheduling", "reason": "Marked 'recipient unavailable' but customer was home",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize for the false attempt", "log the dispute", "arrange a priority re-attempt", "route feedback to the delivery hub / rider", "give a reference and a callback"],
+      "bad_response_example": "The rider says no one was home, please wait for the next attempt." },
+
+    { "id": 8, "category": "B. Failed delivery, redelivery & rescheduling", "reason": "Change delivery address or reschedule date",
+      "correct_outcome": "resolve", "escalate_if": "change requested after out-for-delivery / past cutoff", "handled_by": "bot",
+      "good_response_must_include": ["confirm what change is allowed at this stage", "make the change or state the cutoff", "confirm the new details with a reference", "if too late, offer alternatives (self-collect, redelivery)"],
+      "bad_response_example": "Address cannot be changed." },
+
+    { "id": 9, "category": "B. Failed delivery, redelivery & rescheduling", "reason": "Self-collect at branch / hub",
+      "correct_outcome": "resolve", "escalate_if": null, "handled_by": "bot",
+      "good_response_must_include": ["confirm eligibility for self-collection", "give the branch / hub address and opening hours", "state what to bring (ID, tracking number)", "hold the parcel and confirm"],
+      "bad_response_example": "You can come and collect." },
+
+    { "id": 10, "category": "C. Damaged, lost, wrong or missing items", "reason": "Parcel arrived damaged / broken / wet",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize with empathy", "explain the claim steps and required evidence (photos, packaging, value)", "open a claim with a reference number", "set a resolution timeline", "advise the customer to retain the packaging"],
+      "bad_response_example": "Sorry about that, nothing we can do once delivered." },
+
+    { "id": 11, "category": "C. Damaged, lost, wrong or missing items", "reason": "Parcel lost, claim and compensation",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize", "confirm the last known status", "open a loss investigation and claim with a reference", "explain the compensation policy and coverage limits", "state who files (sender vs receiver) and the timeline"],
+      "bad_response_example": "It is lost, please contact the seller." },
+
+    { "id": 12, "category": "C. Damaged, lost, wrong or missing items", "reason": "Received the wrong parcel",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize", "arrange pickup of the wrong parcel", "open an investigation to locate the correct parcel", "give a reference and timeline"],
+      "bad_response_example": "Please return it to the nearest branch yourself." },
+
+    { "id": 13, "category": "C. Damaged, lost, wrong or missing items", "reason": "Items missing from the parcel",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize", "gather details (what is missing, packaging condition, weight)", "open an investigation", "note it may involve the seller's packing", "give a reference and timeline"],
+      "bad_response_example": "We only deliver sealed parcels, talk to the seller." },
+
+    { "id": 14, "category": "D. Delivery handling, instructions & conduct", "reason": "Special delivery instruction (leave at guardhouse / neighbour / door)",
+      "correct_outcome": "resolve", "escalate_if": null, "handled_by": "bot",
+      "good_response_must_include": ["confirm the instruction can be added (or the policy limit)", "attach the note to the shipment", "advise on liability if left unattended", "confirm"],
+      "bad_response_example": "We cannot follow special instructions." },
+
+    { "id": 15, "category": "D. Delivery handling, instructions & conduct", "reason": "Rider was rude / unprofessional",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize sincerely", "capture details (rider, time, what happened)", "log a formal conduct complaint", "route to the hub / operations", "give a reference and assure follow-up"],
+      "bad_response_example": "Noted, we will tell them." },
+
+    { "id": 16, "category": "D. Delivery handling, instructions & conduct", "reason": "Parcel left unattended / thrown / not handed over properly",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize", "capture details of the mishandling", "check for damage and open a claim if needed", "log a handling complaint to the hub", "give a reference and follow-up"],
+      "bad_response_example": "It was delivered, that is what matters." },
+
+    { "id": 17, "category": "E. COD, fees & charges", "reason": "Wrong COD amount / already paid but still showing owing",
+      "correct_outcome": "escalate", "escalate_if": null, "handled_by": "human",
+      "good_response_must_include": ["apologize", "verify the COD record and payment proof", "raise to the finance / COD team", "give a reference and resolution timeline", "reassure there will be no double charge"],
+      "bad_response_example": "Please just pay the amount shown." },
+
+    { "id": 18, "category": "E. COD, fees & charges", "reason": "Surcharge / remote-area / weight fee dispute",
+      "correct_outcome": "resolve", "escalate_if": "the fee appears to be an error or is formally disputed", "handled_by": "bot",
+      "good_response_must_include": ["explain the specific fee and how it is calculated (zone, weight or volumetric)", "show the breakdown", "if it looks like an error, raise it for review", "offer the dispute path"],
+      "bad_response_example": "That is the standard charge." },
+
+    { "id": 19, "category": "F. Sender / merchant & account", "reason": "Schedule a pickup / rider did not show",
+      "correct_outcome": "resolve", "escalate_if": "repeated pickup no-show", "handled_by": "bot",
+      "good_response_must_include": ["confirm the pickup details", "reschedule with a new window and a reference", "apologize for the no-show", "if repeated, escalate to the pickup hub"],
+      "bad_response_example": "Please wait for the next pickup round." },
+
+    { "id": 20, "category": "F. Sender / merchant & account", "reason": "Return / reship a rejected parcel",
+      "correct_outcome": "resolve", "escalate_if": null, "handled_by": "bot",
+      "good_response_must_include": ["explain the return-to-sender / reship options and any fee", "confirm the chosen action", "give a reference and timeline"],
+      "bad_response_example": "Rejected parcels are returned automatically." }
+  ],
+  "out_of_scope": {
+    "id": 0, "category": "Out of scope (not one of the 20)", "reason": "Non-business, abusive, or internal-information request",
+    "correct_outcome": "decline", "handled_by": "bot",
+    "good_response_must_include": ["politely decline", "state it is outside customer-service scope", "redirect to what can be helped with"],
+    "bad_response_example": "Answers an off-topic or internal-data question it should refuse." }
+}

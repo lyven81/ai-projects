@@ -1,0 +1,334 @@
+{
+  "note": "The values the code reads, taken from the four resources. Change a value here and in its policy, nowhere else. Times are Malaysia time (UTC+8), written without an offset.",
+  "company": "Cepat Express",
+  "today": "2026-08-28T21:30",
+  "today_label": "Friday 28 Aug 2026, 9:30 pm",
+  "period": {
+    "from": "2026-06-01",
+    "to": "2026-08-31"
+  },
+  "public_holidays": [
+    {
+      "date": "2026-06-01",
+      "name": "Agong's Birthday"
+    },
+    {
+      "date": "2026-08-31",
+      "name": "Merdeka Day"
+    }
+  ],
+  "locations": [
+    "Ipoh",
+    "Johor Bahru",
+    "Klang"
+  ],
+  "statuses": {
+    "D1": "Booked",
+    "D2": "Picked up",
+    "D3": "At sorting hub",
+    "D4": "In transit",
+    "D5": "Out for delivery",
+    "D6": "Delivery attempted",
+    "D7": "Delivered",
+    "D8": "Rejected by recipient"
+  },
+  "limits": {
+    "delivery_working_days": 2,
+    "no_scan_delayed_hours": 72,
+    "hub_delayed_hours": 48,
+    "out_for_delivery_cutoff": "21:00",
+    "no_scan_lost_hours": 168,
+    "reattempts": 1,
+    "branch_hold_working_days": 5,
+    "phone_failures_to_lock": 3
+  },
+  "reasons": {
+    "damaged": {
+      "kind": "cs_resolves",
+      "clauses": [
+        "S10",
+        "C14"
+      ],
+      "route": "cs"
+    },
+    "items_missing": {
+      "kind": "cs_resolves",
+      "clauses": [
+        "S11",
+        "C14"
+      ],
+      "route": "cs"
+    },
+    "lost": {
+      "kind": "cs_resolves",
+      "clauses": [
+        "S12",
+        "C14",
+        "C15"
+      ],
+      "route": "cs"
+    },
+    "rejected": {
+      "kind": "cs_resolves",
+      "clauses": [
+        "S13",
+        "C14"
+      ],
+      "route": "cs"
+    },
+    "address_change_not_shipped": {
+      "kind": "transfer",
+      "clauses": [
+        "S14",
+        "C11"
+      ],
+      "route": "delivery_location"
+    },
+    "delivery_date_change": {
+      "kind": "transfer",
+      "clauses": [
+        "S15",
+        "C13"
+      ],
+      "route": "delivery_location"
+    },
+    "delivered_not_received": {
+      "kind": "transfer",
+      "clauses": [
+        "S16",
+        "C17"
+      ],
+      "route": "delivery_location"
+    },
+    "wrong_parcel": {
+      "kind": "transfer",
+      "clauses": [
+        "S17",
+        "C17"
+      ],
+      "route": "delivery_location"
+    },
+    "marked_unavailable_home": {
+      "kind": "transfer",
+      "clauses": [
+        "S18",
+        "C17"
+      ],
+      "route": "delivery_location"
+    },
+    "rider_conduct": {
+      "kind": "transfer",
+      "clauses": [
+        "S19",
+        "C17"
+      ],
+      "route": "delivery_location"
+    },
+    "self_collection": {
+      "kind": "transfer",
+      "clauses": [
+        "S20b",
+        "C9"
+      ],
+      "route": "delivery_location"
+    },
+    "customer_asks_for_person": {
+      "kind": "to_cs",
+      "clauses": [
+        "S21"
+      ],
+      "route": "cs"
+    },
+    "no_clause": {
+      "kind": "to_cs",
+      "clauses": [
+        "S23"
+      ],
+      "route": "cs"
+    },
+    "no_progress": {
+      "kind": "to_cs",
+      "clauses": [
+        "S24"
+      ],
+      "route": "cs"
+    },
+    "pickup_not_collected": {
+      "kind": "transfer",
+      "clauses": [
+        "S20c",
+        "C18"
+      ],
+      "route": "origin"
+    },
+    "delivery_instruction": {
+      "kind": "transfer",
+      "clauses": [
+        "S20d",
+        "C19"
+      ],
+      "route": "delivery_location"
+    }
+  },
+  "flags": {
+    "delay": {
+      "kind": "transfer",
+      "clauses": [
+        "S20",
+        "S20a"
+      ],
+      "route": "last_scan_location"
+    },
+    "failed_delivery": {
+      "kind": "transfer",
+      "clauses": [
+        "S20",
+        "S20a",
+        "C7"
+      ],
+      "route": "delivery_location"
+    }
+  },
+  "kinds": {
+    "cs_resolves": "CS resolves",
+    "transfer": "Transfer",
+    "to_cs": "To CS"
+  },
+  "sentences": {
+    "note": "Approved customer wording (reply guide, founder 2 Nov 2026; S20, S27): written by code and shown as it is. {place} is the location of the officer code routes to; {lead} the Customer Service Lead; {destination} the parcel's delivery location. Staff titles and routing stay in the handover note.",
+    "handover": {
+      "damaged": {
+        "en": "Sorry your parcel arrived damaged. I've passed your report to {lead} from customer service for help with the next steps.",
+        "ms": "Maaf, bungkusan anda tiba dalam keadaan rosak. Saya telah menyerahkan laporan anda kepada {lead} dari khidmat pelanggan untuk membantu langkah seterusnya.",
+        "zh": "很抱歉您的包裹送达时已损坏。我已将您的报告转交给客服部的 {lead}，协助您处理后续步骤。"
+      },
+      "items_missing": {
+        "en": "Sorry some items are missing from your parcel. I've passed your report to {lead} from customer service for help with the next steps.",
+        "ms": "Maaf, ada barang yang hilang daripada bungkusan anda. Saya telah menyerahkan laporan anda kepada {lead} dari khidmat pelanggan untuk membantu langkah seterusnya.",
+        "zh": "很抱歉您的包裹里少了物品。我已将您的报告转交给客服部的 {lead}，协助您处理后续步骤。"
+      },
+      "lost": {
+        "en": "Sorry your parcel has had no update for more than 7 days. I've passed your report to {lead} from customer service for help with the next steps.",
+        "ms": "Maaf, bungkusan anda tiada kemas kini selama lebih 7 hari. Saya telah menyerahkan laporan anda kepada {lead} dari khidmat pelanggan untuk membantu langkah seterusnya.",
+        "zh": "很抱歉您的包裹已超过 7 天没有更新。我已将您的报告转交给客服部的 {lead}，协助您处理后续步骤。"
+      },
+      "rejected": {
+        "en": "I understand the recipient rejected your parcel. I've passed your request to {lead} from customer service for help with the next steps.",
+        "ms": "Saya faham penerima telah menolak bungkusan anda. Saya telah menyerahkan permintaan anda kepada {lead} dari khidmat pelanggan untuk membantu langkah seterusnya.",
+        "zh": "我了解收件人拒收了您的包裹。我已将您的请求转交给客服部的 {lead}，协助您处理后续步骤。"
+      },
+      "address_change_not_shipped": {
+        "en": "Your parcel hasn't been picked up yet, so the address can still be changed. I've passed your new address to customer service for our {place} team to update.",
+        "ms": "Bungkusan anda belum diambil, jadi alamat masih boleh ditukar. Saya telah menyerahkan alamat baharu anda kepada khidmat pelanggan untuk dikemas kini oleh pasukan {place} kami.",
+        "zh": "您的包裹尚未揽收，所以地址仍可更改。我已将您的新地址转交给客服部，由我们{place}的团队更新。"
+      },
+      "delivery_date_change": {
+        "en": "I've noted the delivery date you asked for. I've passed your request to customer service for our {place} team to arrange.",
+        "ms": "Saya telah mencatat tarikh penghantaran yang anda minta. Saya telah menyerahkan permintaan anda kepada khidmat pelanggan untuk diuruskan oleh pasukan {place} kami.",
+        "zh": "我已记下您要求的送货日期。我已将您的请求转交给客服部，由我们{place}的团队安排。"
+      },
+      "delivered_not_received": {
+        "en": "I understand you haven't received your parcel, although tracking shows it was delivered. I've passed your report to customer service for our {place} team to check.",
+        "ms": "Saya faham anda belum menerima bungkusan anda, walaupun penjejakan menunjukkan ia telah dihantar. Saya telah menyerahkan laporan anda kepada khidmat pelanggan untuk disemak oleh pasukan {place} kami.",
+        "zh": "我了解您还没收到包裹，虽然追踪显示已送达。我已将您的报告转交给客服部，由我们{place}的团队核查。"
+      },
+      "wrong_parcel": {
+        "en": "Sorry you received a parcel that isn't yours. I've passed your report to customer service for our {place} team to check.",
+        "ms": "Maaf, anda menerima bungkusan yang bukan milik anda. Saya telah menyerahkan laporan anda kepada khidmat pelanggan untuk disemak oleh pasukan {place} kami.",
+        "zh": "很抱歉您收到了不属于您的包裹。我已将您的报告转交给客服部，由我们{place}的团队核查。"
+      },
+      "marked_unavailable_home": {
+        "en": "Sorry the delivery was marked as missed while you were at home. I've passed your report to customer service for our {place} team to check.",
+        "ms": "Maaf, penghantaran ditanda tidak berjaya walaupun anda berada di rumah. Saya telah menyerahkan laporan anda kepada khidmat pelanggan untuk disemak oleh pasukan {place} kami.",
+        "zh": "很抱歉您在家时派送却被标记为无人签收。我已将您的报告转交给客服部，由我们{place}的团队核查。"
+      },
+      "rider_conduct": {
+        "en": "Sorry about your experience with the delivery. I've passed your report to customer service for our {place} team to check.",
+        "ms": "Maaf atas pengalaman anda dengan penghantaran ini. Saya telah menyerahkan laporan anda kepada khidmat pelanggan untuk disemak oleh pasukan {place} kami.",
+        "zh": "很抱歉这次派送给您带来不好的体验。我已将您的报告转交给客服部，由我们{place}的团队核查。"
+      },
+      "self_collection": {
+        "en": "I've noted that you'd like to collect your parcel at our {place} branch. I've passed your request to customer service for our {place} team to arrange.",
+        "ms": "Saya telah mencatat bahawa anda ingin mengambil bungkusan anda di cawangan {place} kami. Saya telah menyerahkan permintaan anda kepada khidmat pelanggan untuk diuruskan oleh pasukan {place} kami.",
+        "zh": "我已记下您希望到我们{place}分行自取包裹。我已将您的请求转交给客服部，由我们{place}的团队安排。"
+      },
+      "customer_asks_for_person": {
+        "en": "I've passed your chat to {lead} from customer service.",
+        "ms": "Saya telah menyerahkan sembang anda kepada {lead} dari khidmat pelanggan.",
+        "zh": "我已将您的对话转交给客服部的 {lead}。"
+      },
+      "no_clause": {
+        "en": "Our policies don't cover this request. I've passed your chat to {lead} from customer service to check.",
+        "ms": "Polisi kami tidak meliputi permintaan ini. Saya telah menyerahkan sembang anda kepada {lead} dari khidmat pelanggan untuk disemak.",
+        "zh": "我们的政策没有涵盖这项请求。我已将您的对话转交给客服部的 {lead} 核查。"
+      },
+      "no_progress": {
+        "en": "The parcel record doesn't answer this question. I've passed your chat to {lead} from customer service to check.",
+        "ms": "Rekod bungkusan tidak menjawab soalan ini. Saya telah menyerahkan sembang anda kepada {lead} dari khidmat pelanggan untuk disemak.",
+        "zh": "包裹记录无法回答这个问题。我已将您的对话转交给客服部的 {lead} 核查。"
+      },
+      "pickup_not_collected": {
+        "en": "Your parcel to {destination} is booked but hasn't been picked up yet. I've passed your request to customer service for our {place} team to arrange the pickup.",
+        "ms": "Bungkusan anda ke {destination} telah ditempah tetapi belum diambil. Saya telah menyerahkan permintaan anda kepada khidmat pelanggan untuk pasukan {place} kami mengatur pengambilan.",
+        "zh": "您寄往{destination}的包裹已预约，但尚未揽收。我已将您的请求转交给客服部，由我们{place}的团队安排揽收。"
+      },
+      "delivery_instruction": {
+        "en": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our {place} team to share with the rider.",
+        "ms": "Terima kasih, saya telah mencatat arahan penghantaran anda. Saya telah menyerahkannya kepada khidmat pelanggan untuk dikongsi oleh pasukan {place} kami dengan penunggang.",
+        "zh": "谢谢，我已记下您的派送指示。我已将它转交给客服部，由我们{place}的团队转告骑手。"
+      }
+    },
+    "flag": {
+      "delay": {
+        "en": "I've flagged the delay for customer service to follow up with our {place} team.",
+        "ms": "Saya telah memaklumkan kelewatan ini kepada khidmat pelanggan untuk disusuli bersama pasukan {place} kami.",
+        "zh": "我已将延误通报客服部，由我们{place}的团队跟进。"
+      },
+      "failed_delivery": {
+        "en": "I've flagged the missed delivery for customer service to follow up with our {place} team.",
+        "ms": "Saya telah memaklumkan penghantaran yang tidak berjaya ini kepada khidmat pelanggan untuk disusuli bersama pasukan {place} kami.",
+        "zh": "我已将未完成的派送通报客服部，由我们{place}的团队跟进。"
+      }
+    },
+    "locked": {
+      "en": "This chat is locked for that tracking number after three phone numbers that didn't match. Please call the Cepat Express hotline for help.",
+      "ms": "Sembang ini dikunci untuk nombor penjejakan itu selepas tiga nombor telefon yang tidak sepadan. Sila hubungi talian hotline Cepat Express untuk bantuan.",
+      "zh": "这个追踪号码的电话号码三次不符，此对话已锁定。请致电 Cepat Express 热线寻求帮助。"
+    },
+    "not_verified": {
+      "en": "I need the phone number on the parcel before I can show its personal details or open a case. Please send the phone number on the parcel.",
+      "ms": "Saya perlukan nombor telefon pada bungkusan sebelum boleh menunjukkan butiran peribadinya atau membuka kes. Sila hantar nombor telefon pada bungkusan.",
+      "zh": "我需要包裹上的电话号码，才能显示个人资料或开立个案。请发送包裹上的电话号码。"
+    }
+  },
+  "resources": [
+    {
+      "uri": "policy://courier",
+      "name": "Courier Policy",
+      "file": "Courier Policy.md"
+    },
+    {
+      "uri": "policy://customer-service",
+      "name": "Customer Service Policy",
+      "file": "Customer Service Policy.md"
+    },
+    {
+      "uri": "policy://delivery-status",
+      "name": "Delivery Status Guide",
+      "file": "Delivery Status Guide.md"
+    },
+    {
+      "uri": "staff://directory",
+      "name": "Staff directory",
+      "file": "staff-directory.json"
+    }
+  ],
+  "workflow": {
+    "queued_cs_resolves": "Queued for {lead}'s review; ticket not yet registered.",
+    "queued_transfer": "Queued for {lead}'s review; not yet transferred.",
+    "queued_to_cs": "Queued for {lead}; chat not yet taken.",
+    "ticket_registered": "Ticket {ticket} registered by {lead}; not yet closed.",
+    "transferred": "Transferred to {name}, {title}, {place}, by {lead}.",
+    "closed": "Closed by {lead}."
+  }
+}

@@ -1,0 +1,361 @@
+{
+ "summary": {
+  "date": "2026-11-02T08:14:42.209Z",
+  "today": "Friday 28 Aug 2026, 9:30 pm",
+  "model": "claude-haiku-5-5",
+  "runs": 1,
+  "passed": 1,
+  "hard_limit_breaches": 0,
+  "by_group": {
+   "Hand to staff": {
+    "runs": 1,
+    "passed": 1
+   }
+  },
+  "labels": {},
+  "usage": {
+   "input_tokens": 1880,
+   "output_tokens": 630,
+   "cache_read_input_tokens": 20776,
+   "cache_creation_input_tokens": 10388
+  },
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 1880,
+    "output_tokens": 630,
+    "cache_read_input_tokens": 20776,
+    "cache_creation_input_tokens": 10388
+   }
+  },
+  "wall_ms": 5349,
+  "sample": false,
+  "only": "C14"
+ },
+ "results": [
+  {
+   "id": "C14",
+   "group": "Hand to staff",
+   "title": "Delivery instruction",
+   "message": "Please leave my parcel CE26000114 at the guardhouse. My phone is 013-208 6650.",
+   "reply": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19",
+   "stoppedBy": "fixed_reply",
+   "sentBack": false,
+   "reworded": 0,
+   "turns": [
+    {
+     "customer": "Please leave my parcel CE26000114 at the guardhouse. My phone is 013-208 6650.",
+     "reply": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "get_shipment_status",
+       "input": {
+        "tracking_number": "CE26000114",
+        "language": "en"
+       },
+       "result": {
+        "tool": "get_shipment_status",
+        "status": "ok",
+        "data": {
+         "tracking_number": "CE26000114",
+         "status": {
+          "id": "D4",
+          "name": "In transit"
+         },
+         "shipped": true,
+         "last_scan": {
+          "at": "2026-08-28T06:00",
+          "at_label": "Fri 28 Aug 2026, 6:00 am",
+          "location": "Ipoh",
+          "status": "In transit"
+         },
+         "hours_since_last_scan": 15.5,
+         "delivery_location": "Klang",
+         "scans": [
+          {
+           "at_label": "Thu 27 Aug 2026, 10:00 am",
+           "status": "Booked",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 3:00 pm",
+           "status": "Picked up",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Thu 27 Aug 2026, 9:00 pm",
+           "status": "At sorting hub",
+           "location": "Ipoh"
+          },
+          {
+           "at_label": "Fri 28 Aug 2026, 6:00 am",
+           "status": "In transit",
+           "location": "Ipoh"
+          }
+         ],
+         "attempts": 0,
+         "limit": {
+          "state": "within",
+          "clause": "C5"
+         },
+         "clauses": [
+          "D4",
+          "C4",
+          "C5"
+         ],
+         "picked_up": "Thu 27 Aug 2026, 3:00 pm",
+         "expected_delivery": "Tue 1 Sep 2026",
+         "expected_date_passed": false
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 2
+       }
+      },
+      {
+       "type": "tool",
+       "name": "verify_customer",
+       "input": {
+        "tracking_number": "CE26000114",
+        "phone": "013-208 6650",
+        "language": "en"
+       },
+       "result": {
+        "tool": "verify_customer",
+        "status": "ok",
+        "data": {
+         "verified": true,
+         "tracking_number": "CE26000114",
+         "as": "recipient"
+        },
+        "error": null,
+        "next_step": null,
+        "elapsed_ms": 0
+       }
+      },
+      {
+       "type": "tool",
+       "name": "escalate_case",
+       "input": {
+        "reason": "delivery_instruction",
+        "tracking_number": "CE26000114",
+        "summary": "Customer, the recipient, asks that parcel CE26000114 be left at the guardhouse. The parcel is in transit, last scanned at Ipoh on Fri 28 Aug 2026 at 6:00 am, and has not been delivered.",
+        "told_customer": "The parcel is in transit and not yet delivered, with an expected delivery date of Tue 1 Sep 2026. The guardhouse instruction has been noted for the delivery team.",
+        "language": "en"
+       },
+       "result": {
+        "tool": "escalate_case",
+        "status": "ok",
+        "data": {
+         "handover": "H-0001",
+         "reason": "delivery_instruction",
+         "lane": "Transfer",
+         "duplicate": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19"
+        },
+        "elapsed_ms": 2
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (handover)."
+      },
+      {
+       "type": "reply",
+       "text": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "tool": "get_shipment_status",
+     "input": {
+      "tracking_number": "CE26000114",
+      "language": "en"
+     },
+     "result": {
+      "tool": "get_shipment_status",
+      "status": "ok",
+      "data": {
+       "tracking_number": "CE26000114",
+       "status": {
+        "id": "D4",
+        "name": "In transit"
+       },
+       "shipped": true,
+       "last_scan": {
+        "at": "2026-08-28T06:00",
+        "at_label": "Fri 28 Aug 2026, 6:00 am",
+        "location": "Ipoh",
+        "status": "In transit"
+       },
+       "hours_since_last_scan": 15.5,
+       "delivery_location": "Klang",
+       "scans": [
+        {
+         "at_label": "Thu 27 Aug 2026, 10:00 am",
+         "status": "Booked",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 3:00 pm",
+         "status": "Picked up",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Thu 27 Aug 2026, 9:00 pm",
+         "status": "At sorting hub",
+         "location": "Ipoh"
+        },
+        {
+         "at_label": "Fri 28 Aug 2026, 6:00 am",
+         "status": "In transit",
+         "location": "Ipoh"
+        }
+       ],
+       "attempts": 0,
+       "limit": {
+        "state": "within",
+        "clause": "C5"
+       },
+       "clauses": [
+        "D4",
+        "C4",
+        "C5"
+       ],
+       "picked_up": "Thu 27 Aug 2026, 3:00 pm",
+       "expected_delivery": "Tue 1 Sep 2026",
+       "expected_date_passed": false
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 2
+     },
+     "at": 0
+    },
+    {
+     "tool": "verify_customer",
+     "input": {
+      "tracking_number": "CE26000114",
+      "phone": "013-208 6650",
+      "language": "en"
+     },
+     "result": {
+      "tool": "verify_customer",
+      "status": "ok",
+      "data": {
+       "verified": true,
+       "tracking_number": "CE26000114",
+       "as": "recipient"
+      },
+      "error": null,
+      "next_step": null,
+      "elapsed_ms": 0
+     },
+     "at": 1
+    },
+    {
+     "tool": "escalate_case",
+     "input": {
+      "reason": "delivery_instruction",
+      "tracking_number": "CE26000114",
+      "summary": "Customer, the recipient, asks that parcel CE26000114 be left at the guardhouse. The parcel is in transit, last scanned at Ipoh on Fri 28 Aug 2026 at 6:00 am, and has not been delivered.",
+      "told_customer": "The parcel is in transit and not yet delivered, with an expected delivery date of Tue 1 Sep 2026. The guardhouse instruction has been noted for the delivery team.",
+      "language": "en"
+     },
+     "result": {
+      "tool": "escalate_case",
+      "status": "ok",
+      "data": {
+       "handover": "H-0001",
+       "reason": "delivery_instruction",
+       "lane": "Transfer",
+       "duplicate": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.\nClause: S20d, C19"
+      },
+      "elapsed_ms": 2
+     },
+     "at": 2
+    }
+   ],
+   "handovers": [
+    {
+     "at": "2026-08-28T21:30",
+     "conversation": "C14",
+     "raised_by": "agent",
+     "tracking_number": "CE26000114",
+     "reason": "delivery_instruction",
+     "kind": "transfer",
+     "kind_label": "Transfer",
+     "clauses": [
+      "S20d",
+      "C19"
+     ],
+     "to": {
+      "id": "LG-KLG",
+      "name": "Kavita",
+      "title": "Logistics Officer",
+      "place": "Klang"
+     },
+     "customer": "Hana Kamal (recipient)",
+     "customer_report": "Customer, the recipient, asks that parcel CE26000114 be left at the guardhouse. The parcel is in transit, last scanned at Ipoh on Fri 28 Aug 2026 at 6:00 am, and has not been delivered.",
+     "agent_told": "The parcel is in transit and not yet delivered, with an expected delivery date of Tue 1 Sep 2026. The guardhouse instruction has been noted for the delivery team.",
+     "verification": "Phone 013***-6650 matched for this parcel in this chat (recipient).",
+     "record": "In transit; last scan In transit, Ipoh, Fri 28 Aug 2026, 6:00 am; delivery attempts: 0; delivery location: Klang; proof of delivery: not recorded.",
+     "told_customer": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.",
+     "customer_sentence": "Thanks, I've noted your delivery instruction. I've passed it to customer service for our Klang team to share with the rider.",
+     "recommended_action": "Review the handoff and transfer to Kavita for investigation.",
+     "id": "H-0001",
+     "state": "queued",
+     "workflow_state": "Queued for Nurul Aina's review; not yet transferred.",
+     "staff_notes": []
+    }
+   ],
+   "usage": {
+    "input_tokens": 1880,
+    "output_tokens": 630,
+    "cache_read_input_tokens": 20776,
+    "cache_creation_input_tokens": 10388
+   },
+   "ms": 5340,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Tools that must run": true,
+     "Tools that must not run": true,
+     "Handovers": true,
+     "Clause line": true,
+     "Reply rule": true
+    },
+    "limits": {
+     "No personal detail before the phone match": true,
+     "No compensation promised": true,
+     "No handover to the wrong person": true,
+     "No handover the case does not need": true,
+     "No near match guessed": true
+    },
+    "reply_fixes": [],
+    "cited": [
+     "S20d",
+     "C19"
+    ],
+    "metrics": {
+     "calls": 3,
+     "tools": [
+      "get_shipment_status:ok",
+      "verify_customer:ok",
+      "escalate_case:ok"
+     ]
+    }
+   }
+  }
+ ]
+}

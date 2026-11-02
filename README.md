@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 12**
+**Total published AI projects: 13**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 13 | 2026-11-02 | Cepat Express Customer Service | [page](https://lyven81.github.io/ai-projects/cepat-express-customer-service.html) |
 | 12 | 2026-10-30 | Comel Diaper Marketing Campaign Assistant | [page](https://lyven81.github.io/ai-projects/marketing-campaign-assistant.html) |
 | 11 | 2026-10-29 | Kiddoz Back-to-School Campaign Team | [page](https://lyven81.github.io/ai-projects/back-to-school-campaign.html) |
 | 10 | 2026-10-28 | Polyclinic Sivakumar Clinic Desk | [page](https://lyven81.github.io/ai-projects/polyclinic-sivakumar.html) |
@@ -90,6 +91,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-19
 
 ### Customer service
+
+#### Cepat Express Customer Service
+- **What it does:** A courier customer service agent where the AI answers parcel status from the latest scan, code holds every limit, the phone match and every route, and the Customer Service Lead reviews every handover.
+- **How it's built:** Claude Haiku with an MCP server (Node.js) offering four resources (courier policy, customer service policy, delivery status guide, staff directory) and four tools; delivery limits, the phone match, the lock, every route and every handover reply are written in code; the AI picks one of 16 fixed reasons and writes at most two short sentences, checked in code.
+- **Problem solved:** A courier's customer service team answers where-is-my-parcel questions all day and must send each delay, missed delivery or damaged parcel to the right city with the facts attached. The agent answers from the record and hands every problem over with one note for the Customer Service Lead to review.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/cepat-express-customer-service.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/cepat-express-customer-service/demo.html)
+- **Rebuilt:** 2026-11-02
 
 #### Kereta Sewa Jalan-jalan Car Rental Agent
 - **What it does:** A car rental agent that prices, books and records deposits from the written policy, with confirmations, delivery charges and refunds kept for staff.
