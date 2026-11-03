@@ -39,16 +39,28 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
-.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+
+
+
+
+
+
+
+
+
+
+
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -110,27 +122,19 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 590" role="img" aria-label="A staff request passes the AI, the PreToolUse hook, one of seven MCP tools and the back end, then the PostToolUse hook; a rule a manager decides becomes a notification to that manager" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="30" width="150" height="120" rx="10" class="bx person"/><text x="34" y="56" class="h">Staff member</text><text x="34" y="80" class="t">Picks a staff ID</text><text x="34" y="98" class="t">Asks in the chat</text><text x="34" y="116" class="t">Uses the desk buttons</text>
-<rect x="210" y="30" width="200" height="120" rx="10" class="bx ai"/><text x="226" y="56" class="h">Claude Haiku 5.5</text><text x="226" y="80" class="t">Reads the resources</text><text x="226" y="98" class="t">Chooses one tool</text><text x="226" y="116" class="t">Shows code's replies</text>
-<rect x="210" y="195" width="170" height="160" rx="10" class="bx inner"/><text x="222" y="219" class="h2">Resources (read)</text><text x="222" y="242" class="t">Management Policy</text><text x="222" y="260" class="t">Sales Policy</text><text x="222" y="278" class="t">Finance Policy</text><text x="222" y="296" class="t">Warehouse Policy</text><text x="222" y="314" class="t">Product Catalogue</text><text x="222" y="332" class="t">Customer Directory</text>
-<rect x="450" y="30" width="200" height="150" rx="10" class="bx hook"/><text x="464" y="56" class="h">PreToolUse hook</text><text x="464" y="80" class="t">Department, tier, customer</text><text x="464" y="98" class="t">Prices, stock, credit, terms</text><text x="464" y="116" class="t">A manager's rule:</text><text x="464" y="134" class="t">escalate to them</text><text x="464" y="152" class="t">Cites a clause</text>
-<rect x="450" y="225" width="200" height="180" rx="10" class="bx mcp"/><text x="464" y="249" class="h">Seven MCP tools</text><text x="464" y="271" class="mono">check_stock</text><text x="464" y="288" class="mono">retrieve_customer_account</text><text x="464" y="305" class="mono">retrieve_customer_prices</text><text x="464" y="322" class="mono">create_order</text><text x="464" y="339" class="mono">decide_escalation</text><text x="464" y="356" class="mono">schedule_delivery</text><text x="464" y="373" class="mono">confirm_stock_count</text>
-<rect x="690" y="225" width="150" height="180" rx="10" class="bx data"/><text x="704" y="249" class="h">Back end</text><text x="704" y="273" class="t">Checks again</text><text x="704" y="291" class="t">Drafts, escalations</text><text x="704" y="309" class="t">Approvals by request</text><text x="704" y="327" class="t">Places an order once</text><text x="704" y="345" class="t">The data</text>
-<rect x="210" y="435" width="200" height="130" rx="10" class="bx hook"/><text x="224" y="461" class="h">PostToolUse hook</text><text x="224" y="485" class="t">Keeps permitted fields</text><text x="224" y="503" class="t">Writes notifications</text><text x="224" y="521" class="t">Writes code's replies</text><text x="224" y="539" class="t">Mismatch: reconcile</text>
-<rect x="20" y="435" width="170" height="130" rx="10" class="bx person"/><text x="34" y="461" class="h">Managers decide</text><text x="34" y="485" class="t">Farid: discount,</text><text x="34" y="503" class="t">minimum order</text><text x="34" y="521" class="t">Azlan: delivery date,</text><text x="34" y="539" class="t">stock count</text><text x="34" y="557" class="t">Nadia: prepaid route</text>
-<line x1="170" y1="72" x2="208" y2="72" class="ar" marker-end="url(#ah)"/><line x1="210" y1="118" x2="172" y2="118" class="ar" marker-end="url(#ah)"/>
-<line x1="410" y1="64" x2="448" y2="64" class="ar" marker-end="url(#ah)"/><text x="414" y="56" class="lab">calls</text>
-<line x1="450" y1="138" x2="412" y2="138" class="ar dash" marker-end="url(#ah)"/><text x="415" y="158" class="lab">block</text>
-<line x1="290" y1="150" x2="290" y2="193" class="ar" marker-end="url(#ah)"/><text x="298" y="178" class="lab">reads</text>
-<line x1="550" y1="180" x2="550" y2="223" class="ar" marker-end="url(#ah)"/><text x="558" y="207" class="lab">allow</text>
-<line x1="650" y1="315" x2="688" y2="315" class="ar" marker-end="url(#ah)"/>
-<path d="M765,405 L765,500 L412,500" class="ar" marker-end="url(#ah)"/><text x="560" y="492" class="lab">raw result</text>
-<line x1="398" y1="435" x2="398" y2="152" class="ar" marker-end="url(#ah)"/><text x="404" y="425" class="lab">result</text>
-<line x1="210" y1="520" x2="192" y2="520" class="ar" marker-end="url(#ah)"/>
-<path d="M95,433 L95,152" class="ar dash" marker-end="url(#ah)"/><text x="102" y="270" class="lab">decide on</text><text x="102" y="285" class="lab">the desk</text>
-</svg>
+<div class="arch" role="img" aria-label="A staff request passes the AI, the PreToolUse hook, one of seven MCP tools and the back end, then the PostToolUse hook; a rule a manager decides becomes a notification to that manager.">
+<div class="ar"><div class="ab who"><b>Staff member</b><span>Picks a staff ID; asks in the chat or uses the desk buttons</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Claude Haiku 5.5</b><span>Reads the resources, chooses one tool; shows code's replies</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Hooks</b><span>PreToolUse: department, tier, customer; a manager's rule escalates to them. PostToolUse: keeps permitted fields, writes notifications</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: seven tools</b><span>check_stock, retrieve_customer_account, retrieve_customer_prices, create_order, decide_escalation, schedule_delivery, confirm_stock_count</span></div><div class="ab read"><b>Six resources</b><span>Management, Sales, Finance and Warehouse Policy, Product Catalogue, Customer Directory</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Back end and data</b><span>Checks again; drafts, escalations, approvals by request; places an order once</span></div></div>
+<div class="ad"><em>decide on the desk</em></div>
+<div class="ar"><div class="ab person"><b>Managers decide</b><span>Farid: discount, minimum order · Azlan: delivery date, stock count · Nadia: prepaid route</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Haiku 5.5 (benchmarked) · Anthropic Messages API · tool_choice any on the first call, auto fallback · Prompt caching</td></tr><tr><td><b>Hooks and Tools</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Seven tools in tools.js · One result shape (lib/format.js)</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Six resources, seven tools</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Python 3 generators (seed 42) · GitHub Pages</td></tr></table>
 <ul><li><b>Policies:</b> <code>build_policies.py</code> writes the Management, Sales, Finance and Warehouse policies as pages for people and Markdown resources for the AI, with the clause list and the policy tables.</li><li><b>Data:</b> <code>generate_data.py</code> writes the customers, catalogue, price lists, stock, orders, invoices and approval records from a fixed seed. Money is in sen and times in Unix seconds.</li><li><b>The desk:</b> <code>tools.js</code> runs every call through PreToolUse, the tool and PostToolUse, and logs it. Approve and Decline with reason go through the same tool, hooks and checks as the chat (<code>decide</code>); Confirm summary records the staff confirmation in the back end (<code>confirm</code>), both in &lt;a href="https://github.com/lyven81/ai-projects/blob/main/projects/df-auto-parts-distributors/tools.js" target="_blank" rel="noopener">tools.js&lt;/a>.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers the six resources and seven tools. The staff ID arrives in the request <code>_meta</code>, and the hook record goes back in the result <code>_meta</code>.</li><li><b>Staff desk:</b> <code>staff-desk.html</code> holds the seven scenarios as tabs and steps. It replays each recorded step on the state the earlier steps left, or runs live from that state, with Under the hood beside the chat.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

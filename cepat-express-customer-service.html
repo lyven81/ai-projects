@@ -39,16 +39,17 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
-.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -111,28 +112,19 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 500" role="img" aria-label="The customer writes to the AI, which reads four resources and calls four MCP tools; the rules in code compute the limits, match the phone, check the reason and pick the person, and write handovers to the data; Nurul Aina reviews each handover on the staff page and transfers it to the Logistics Officer for the city; every reply the AI writes goes through the reply check, sent back at most twice, and code-written replies are shown as they are" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="40" width="150" height="100" rx="10" class="bx person"/><text x="34" y="66" class="h">Customer</text><text x="34" y="90" class="t">Tracking number</text><text x="34" y="108" class="t">Phone on the parcel</text>
-<rect x="210" y="30" width="200" height="120" rx="10" class="bx ai"/><text x="226" y="56" class="h">Claude Haiku 5.5</text><text x="226" y="80" class="t">One prompt</text><text x="226" y="98" class="t">Picks tool and reason</text><text x="226" y="116" class="t">Writes the reply</text>
-<rect x="450" y="30" width="180" height="150" rx="10" class="bx mcp"/><text x="464" y="56" class="h">Four MCP tools</text><text x="464" y="80" class="mono">get_shipment_status</text><text x="464" y="98" class="mono">verify_customer</text><text x="464" y="116" class="mono">get_parcel_details</text><text x="464" y="134" class="mono">escalate_case</text>
-<rect x="670" y="30" width="170" height="150" rx="10" class="bx hook"/><text x="684" y="56" class="h">Rules in code</text><text x="684" y="80" class="t">Limits, last scan</text><text x="684" y="98" class="t">Phone match, lock</text><text x="684" y="116" class="t">Reason vs record</text><text x="684" y="134" class="t">Person and wording</text>
-<rect x="210" y="195" width="200" height="130" rx="10" class="bx inner"/><text x="222" y="219" class="h2">Resources (read)</text><text x="222" y="242" class="t">Courier Policy</text><text x="222" y="260" class="t">Customer Service Policy</text><text x="222" y="278" class="t">Delivery Status Guide</text><text x="222" y="296" class="t">Staff directory</text>
-<rect x="670" y="225" width="170" height="95" rx="10" class="bx data"/><text x="684" y="251" class="h">Data</text><text x="684" y="275" class="mono">parcels.json</text><text x="684" y="293" class="mono">handovers.json</text>
-<rect x="20" y="200" width="160" height="130" rx="10" class="bx hook"/><text x="34" y="226" class="h">Reply check</text><text x="34" y="250" class="t">Two short sentences</text><text x="34" y="268" class="t">No staff titles</text><text x="34" y="286" class="t">Code's replies as is</text>
-<rect x="450" y="360" width="200" height="110" rx="10" class="bx person"/><text x="464" y="386" class="h">Nurul Aina</text><text x="464" y="410" class="t">Customer Service Lead</text><text x="464" y="428" class="t">Reviews every handover</text><text x="464" y="446" class="t">Ticket, close, transfer</text>
-<rect x="170" y="360" width="200" height="110" rx="10" class="bx person"/><text x="184" y="386" class="h">Logistics Officers</text><text x="184" y="410" class="t">May, Ipoh</text><text x="184" y="428" class="t">Siti Aisyah, Johor Bahru</text><text x="184" y="446" class="t">Kavita, Klang</text>
-<line x1="170" y1="90" x2="208" y2="90" class="ar" marker-end="url(#ah)"/>
-<line x1="410" y1="70" x2="448" y2="70" class="ar" marker-end="url(#ah)"/><text x="414" y="62" class="lab">calls</text>
-<line x1="450" y1="135" x2="412" y2="135" class="ar dash" marker-end="url(#ah)"/><text x="414" y="155" class="lab">result</text>
-<line x1="630" y1="100" x2="668" y2="100" class="ar" marker-end="url(#ah)"/>
-<line x1="755" y1="180" x2="755" y2="223" class="ar" marker-end="url(#ah)"/>
-<line x1="310" y1="195" x2="310" y2="152" class="ar" marker-end="url(#ah)"/><text x="318" y="180" class="lab">reads</text>
-<path d="M230,150 L230,170 L195,170 L195,265 L182,265" class="ar" marker-end="url(#ah)"/><text x="186" y="186" class="lab">reply</text>
-<line x1="100" y1="200" x2="100" y2="142" class="ar" marker-end="url(#ah)"/>
-<path d="M755,320 L755,415 L652,415" class="ar dash" marker-end="url(#ah)"/><text x="668" y="408" class="lab">handover</text>
-<line x1="450" y1="415" x2="372" y2="415" class="ar" marker-end="url(#ah)"/><text x="386" y="406" class="lab">transfer</text>
-</svg>
+<div class="arch" role="img" aria-label="The customer writes to the AI, which reads four resources and calls four MCP tools; the rules in code check the limits, the phone and the reason and pick the person; Nurul Aina reviews each handover and transfers it to the Logistics Officer for the city.">
+<div class="ar"><div class="ab who"><b>Customer</b><span>Tracking number and the phone on the parcel</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Claude Haiku 5.5</b><span>Picks the tool and reason, writes the reply; reply check in code</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: four tools</b><span>get_shipment_status, verify_customer, get_parcel_details, escalate_case</span></div><div class="ab read"><b>Four resources</b><span>Courier Policy, Customer Service Policy, Delivery Status Guide, Staff directory</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Rules in code and data</b><span>Limits, phone match, reason against the record, the person; parcels.json, handovers.json</span></div></div>
+<div class="ad"><em>handover</em></div>
+<div class="ar"><div class="ab person"><b>Nurul Aina, Customer Service Lead</b><span>Staff page: reviews every handover, closes or transfers</span></div></div>
+<div class="ad"><em>transfer</em></div>
+<div class="ar"><div class="ab person"><b>Logistics Officers</b><span>May, Ipoh · Siti Aisyah, Johor Bahru · Kavita, Klang</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Haiku 5.5 (benchmarked) · One agent, one prompt with the four resources appended · Anthropic Messages API by fetch (Node and browser) · tool_choice auto, one tool call at a time · Prompt caching</td></tr><tr><td><b>Tools</b></td><td>Four tools in tools.js · Limits, phone match, routing and wording in code · One result shape · Staff actions, not offered to the AI</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Four resources and four tools · Chat session from _meta</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Python 3 generators · GitHub Pages</td></tr></table>
 <ul><li><b>Policies:</b> the Courier Policy, the Customer Service Policy, the Delivery Status Guide and the staff directory are the single source. <code>build_pages.py</code> writes each as a page with a link per clause; <code>policy_tables.json</code> holds the values code reads.</li><li><b>Data:</b> <code>generate_data.py</code> writes 262 sample parcels across the three cities, with scan histories from 1 Jun to 28 Aug 2026, and an empty handover list. The system time is fixed at Friday 28 Aug 2026, 9:30 pm.</li><li><b>The tools:</b> <code>tools.js</code> holds the four tools, the handover note and the staff actions, and runs in Node and the browser. The benchmark, the MCP server and the demo call the same code.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> lists the four resources and the four tools. The chat session arrives in the request <code>_meta</code>, so a phone match holds only in its own chat.</li><li><b>Customer service desk:</b> <code>demo.html</code> shows the customer chat on the left and that chat's handovers on the right. It replays every recorded run, or runs live with the visitor's own key.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

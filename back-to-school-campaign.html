@@ -39,16 +39,17 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
-.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -107,30 +108,21 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 -4 860 604" role="img" aria-label="Puan Zarina sends a brief to the coordinator agent; the PreToolUse hook gates every coordinator and subagent tool call; the in-process MCP server holds the three resources and nine tools; five writer subagents and an independent reviewer each have one tool; the PostToolUse hook checks each copy and hands the runner's record back to the coordinator; every tool-log line carries the agent card; copy goes back to the owner for approval" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="30" width="170" height="150" rx="10" class="bx person"/><text x="34" y="56" class="h">Puan Zarina Ahmad</text><text x="34" y="80" class="t">The owner</text><text x="34" y="98" class="t">Sends each brief</text><text x="34" y="116" class="t">Answers questions</text><text x="34" y="134" class="t">Approves each channel</text>
-<rect x="230" y="30" width="190" height="150" rx="10" class="bx ai"/><text x="244" y="56" class="h">Coordinator</text><text x="244" y="80" class="t">Claude Haiku 5.5</text><text x="244" y="98" class="t">query() on the Agent SDK</text><text x="244" y="116" class="t">Goals and quality bar</text><text x="244" y="134" class="t">Starts subagents (Task)</text>
-<rect x="460" y="30" width="230" height="150" rx="10" class="bx hook"/><text x="474" y="56" class="h">PreToolUse hook (runner)</text><text x="474" y="80" class="t">extract_facts first</text><text x="474" y="98" class="t">Writers only for asked channels</text><text x="474" y="116" class="t">Five writers, two corrections</text><text x="474" y="134" class="t">Coverage check before review</text><text x="474" y="152" class="t">Adds facts to each task</text>
-<rect x="230" y="225" width="190" height="165" rx="10" class="bx mcp"/><text x="244" y="249" class="h">In-process MCP server</text><text x="244" y="271" class="mono">extract_facts</text><text x="244" y="288" class="mono">ask_owner · deliver</text><text x="244" y="305" class="mono">write_* (five)</text><text x="244" y="322" class="mono">report_findings</text><text x="244" y="349" class="h2">Resources (read)</text><text x="244" y="369" class="t">store-profile, price-list,</text><text x="244" y="384" class="t">channel-guide</text>
-<rect x="460" y="225" width="230" height="165" rx="10" class="bx inner"/><text x="474" y="249" class="h">Six subagents</text><text x="474" y="271" class="t">Five writers, one channel each</text><text x="474" y="289" class="t">Independent reviewer</text><text x="474" y="307" class="t">One tool each</text><text x="474" y="325" class="t">Context only from the task</text><text x="474" y="343" class="t">A retry is a fresh instance</text>
-<rect x="460" y="430" width="230" height="140" rx="10" class="bx hook"/><text x="474" y="456" class="h">PostToolUse hook</text><text x="474" y="480" class="t">checkCopy on each writer tool</text><text x="474" y="498" class="t">Runner record after each Task</text><text x="474" y="516" class="t">Exact errors to the coordinator</text>
-<rect x="720" y="225" width="125" height="165" rx="10" class="bx data"/><text x="732" y="249" class="h">Price list</text><text x="732" y="273" class="t">100 SKUs</text><text x="732" y="291" class="t">26 to 30 Oct</text><text x="732" y="309" class="t">At most 20%</text><text x="732" y="327" class="t">The only source</text><text x="732" y="345" class="t">of prices</text>
-<rect x="230" y="430" width="190" height="140" rx="10" class="bx data"/><text x="244" y="456" class="h">Tool log</text><text x="244" y="480" class="t">Every line carries</text><text x="244" y="498" class="t">the agent card:</text><text x="244" y="516" class="t">ID, version, owner,</text><text x="244" y="534" class="t">classification, supervision</text>
-<rect x="20" y="430" width="170" height="140" rx="10" class="bx person"/><text x="34" y="456" class="h">Delivered copy</text><text x="34" y="480" class="t">ready_for_approval</text><text x="34" y="498" class="t">waiting_for_owner</text><text x="34" y="516" class="t">failed</text><text x="34" y="534" class="t">Nothing is posted</text>
-<line x1="190" y1="72" x2="228" y2="72" class="ar" marker-end="url(#ah)"/><text x="194" y="64" class="lab">brief</text>
-<line x1="420" y1="72" x2="458" y2="72" class="ar" marker-end="url(#ah)"/><text x="424" y="64" class="lab">calls</text>
-<line x1="460" y1="150" x2="422" y2="150" class="ar dash" marker-end="url(#ah)"/><text x="424" y="170" class="lab">refuse</text>
-<line x1="325" y1="180" x2="325" y2="223" class="ar" marker-end="url(#ah)"/><text x="332" y="207" class="lab">tools</text>
-<line x1="575" y1="180" x2="575" y2="223" class="ar" marker-end="url(#ah)"/><text x="582" y="207" class="lab">Task, with facts</text>
-<line x1="460" y1="330" x2="422" y2="330" class="ar" marker-end="url(#ah)"/><text x="424" y="322" class="lab">one tool</text>
-<path d="M782,390 L782,410 L325,410 L325,393" class="ar dash" marker-end="url(#ah)"/><text x="630" y="404" class="lab">prices read by the checks</text>
-<line x1="575" y1="390" x2="575" y2="428" class="ar" marker-end="url(#ah)"/><text x="530" y="404" class="lab">output</text>
-<path d="M690,520 L708,520 L708,18 L325,18 L325,28" class="ar dash" marker-end="url(#ah)"/><text x="500" y="13" class="lab">runner record to the coordinator</text>
-<line x1="460" y1="500" x2="422" y2="500" class="ar" marker-end="url(#ah)"/><text x="424" y="492" class="lab">logged</text>
-<path d="M300,180 L300,200 L105,200 L105,428" class="ar" marker-end="url(#ah)"/><text x="112" y="300" class="lab">deliver</text>
-<path d="M105,430 L105,182" class="ar dash"/><text x="30" y="410" class="lab">owner approves</text>
-</svg>
+<div class="arch" role="img" aria-label="Puan Zarina sends a brief to the coordinator agent; the PreToolUse hook gates every tool call and the PostToolUse hook checks each copy; six subagents each have one tool on the in-process MCP server; every tool-log line carries the agent card; copy goes back to the owner for approval.">
+<div class="ar"><div class="ab who"><b>Puan Zarina Ahmad, the owner</b><span>Sends each brief, answers questions</span></div></div>
+<div class="ad"><em>brief</em></div>
+<div class="ar"><div class="ab ai"><b>Coordinator, Claude Haiku 5.5</b><span>Agent SDK; sets goals and the quality bar, starts subagents</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>PreToolUse hook (runner)</b><span>extract_facts first; writers only for the asked channels; adds facts to each task</span></div><div class="ab code"><b>PostToolUse hook</b><span>checkCopy on each writer tool; runner record back to the coordinator</span></div></div>
+<div class="ad"><em>task, with facts</em></div>
+<div class="ar"><div class="ab ai"><b>Six subagents</b><span>Five writers, one channel each, and an independent reviewer; one tool each</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>In-process MCP server</b><span>extract_facts, ask_owner, deliver, five write_* tools, report_findings</span></div><div class="ab read"><b>Resources</b><span>store-profile, price-list (100 SKUs, the only source of prices), channel-guide</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Tool log and delivered copy</b><span>Every line carries the agent card; ready_for_approval, waiting_for_owner or failed</span></div></div>
+<div class="ad"><em>owner approves</em></div>
+<div class="ar"><div class="ab person"><b>Puan Zarina Ahmad</b><span>Approves each channel; nothing is posted</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr>
 <tr><td><b>Agents</b></td><td>Claude Haiku 5.5 for all seven agents · Claude Agent SDK 0.3.312 (TypeScript, Node 22) · one coordinator <code>query()</code> agent · six AgentDefinitions: five writers and an independent reviewer</td></tr>
 <tr><td><b>Hooks</b></td><td>PreToolUse on the coordinator: facts first, the Task gate, the coverage check · PreToolUse inside subagents: one tool each, one output · PostToolUse on each writer tool: <code>checkCopy</code> · PostToolUse on each Task call: the runner's record</td></tr>

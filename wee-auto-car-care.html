@@ -38,16 +38,28 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:none;stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12.5px;font-family:Consolas,monospace}
-.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+
+
+
+
+
+
+
+
+
 .muted{color:var(--muted);font-size:13px}
+
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -107,22 +119,17 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 460" role="img" aria-label="How the assistant works with MCP resources, MCP tools and staff" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="160" width="135" height="84" rx="10" class="bx person"/><text x="36" y="190" class="h">Customer</text><text x="36" y="212" class="t">Asks a question</text><text x="36" y="230" class="t">on chat</text>
-<rect x="195" y="132" width="190" height="140" rx="10" class="bx ai"/><text x="211" y="160" class="h">Claude assistant</text><text x="211" y="184" class="t">Understands the question</text><text x="211" y="202" class="t">Picks a resource or tool</text><text x="211" y="220" class="t">Writes the reply</text><text x="211" y="238" class="t">Follows 8 handover rules</text>
-<rect x="425" y="18" width="245" height="384" rx="10" class="bx mcp"/><text x="441" y="42" class="h">MCP server</text>
-<rect x="440" y="56" width="215" height="128" rx="10" class="bx inner"/><text x="454" y="80" class="h2">Resources (read)</text><text x="454" y="102" class="t">Policy guide</text><text x="454" y="120" class="t">FAQ</text><text x="454" y="138" class="t">Service package prices</text>
-<rect x="440" y="198" width="215" height="192" rx="10" class="bx inner"/><text x="454" y="222" class="h2">Tools (act)</text><text x="454" y="244" class="mono">verify_customer</text><text x="454" y="262" class="mono">get_booking</text><text x="454" y="280" class="mono">check_availability</text><text x="454" y="298" class="mono">request_booking</text><text x="454" y="316" class="mono">escalate_to_staff</text><text x="454" y="380" class="note">Rules checked in code</text>
-<rect x="710" y="198" width="130" height="84" rx="10" class="bx data"/><text x="724" y="224" class="h">Workshop data</text><text x="724" y="246" class="t">Bookings</text><text x="724" y="264" class="t">Handovers</text>
-<rect x="710" y="312" width="130" height="90" rx="10" class="bx person"/><text x="724" y="338" class="h">Staff</text><text x="724" y="360" class="t">Confirm bookings</text><text x="724" y="378" class="t">Answer handovers</text>
-<line x1="155" y1="192" x2="193" y2="192" class="ar" marker-end="url(#ah)"/><line x1="195" y1="214" x2="157" y2="214" class="ar" marker-end="url(#ah)"/>
-<path d="M385,178 L438,120" class="ar" marker-end="url(#ah)"/><text x="392" y="140" class="lab">reads</text>
-<path d="M385,236 L438,290" class="ar" marker-end="url(#ah)"/><text x="392" y="282" class="lab">calls</text>
-<line x1="655" y1="240" x2="708" y2="240" class="ar" marker-end="url(#ah)"/><text x="662" y="232" class="lab">saves</text>
-<line x1="775" y1="282" x2="775" y2="310" class="ar" marker-end="url(#ah)"/>
-<path d="M775,402 L775,432 L88,432 L88,246" class="ar dash" marker-end="url(#ah)"/><text x="250" y="452" class="lab">Staff contact the customer about anything the assistant handed over</text>
-</svg>
+<div class="arch" role="img" aria-label="The customer asks the assistant, which reads three resources and calls five MCP tools with the rules checked in code; bookings and handovers are saved for staff, who contact the customer.">
+<div class="ar"><div class="ab who"><b>Customer</b><span>Asks a question on chat</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Claude assistant</b><span>Picks a resource or tool, writes the reply; follows 8 handover rules</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: five tools</b><span>verify_customer, get_booking, check_availability, request_booking, escalate_to_staff; rules in code</span></div><div class="ab read"><b>Three resources</b><span>Policy guide, FAQ, Service package prices</span></div></div>
+<div class="ad"><em>saves</em></div>
+<div class="ar"><div class="ab data"><b>Workshop data</b><span>Bookings, handovers</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab person"><b>Staff</b><span>Confirm bookings, answer handovers; contact the customer about anything handed over</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Assistant</b></td><td>Claude Haiku 5.5 (default) · Anthropic Messages API · Tool use · Prompt caching</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Shared tools.js</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · localStorage · Python 3 build scripts · GitHub Pages</td></tr></table>
 <ul><li><b>One rule file:</b> <code>tools.js</code> holds every tool and rule. The server and the web page both use it.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers the resources and tools.</li><li><b>Agent:</b> <code>agent.js</code> runs the loop. <code>prompt.js</code> holds the rules.</li><li><b>Benchmark:</b> <code>run_benchmark.mjs</code> runs each case on fresh data. It scores four checks.</li><li><b>Pages:</b> <code>assistant.html</code> for customers, <code>demo.html</code> for staff. Demo dates follow today.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

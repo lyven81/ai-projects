@@ -46,6 +46,18 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 :root{--ok:#2f855a;--no:#c53030}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ok:#68d391;--no:#fc8181}}
 :root[data-theme="dark"]{--ok:#68d391;--no:#fc8181}
+
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -112,6 +124,19 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
+<div class="arch" role="img" aria-label="Each staff member signs in and asks the same AI, which is offered only the tools for that role; every call passes the shared PreToolUse hook, the tool and the shared PostToolUse hook; the MCP server offers eight resources, one restricted, and eight tools; a request goes to the person who decides as a notice.">
+<div class="ar"><div class="ab who"><b>Staff, each signs in</b><span>Dr Aisyah Rahman (lead) · Dr Daniel Ong · Dr Priya Nair · Nurul Huda, clinic clerk</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Claude Haiku 5.5</b><span>Calls the tools offered to the role; reply checks in code</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Shared hooks</b><span>PreToolUse: the access rule for the view and the patient. PostToolUse: keeps the view's fields, adds the Basis line</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: eight tools</b><span>retrieve_patient_record, check_schedule, close_visit, book_appointment, create_request, find_patients, record_payment, list_my_actions</span></div><div class="ab read"><b>Eight resources, one restricted</b><span>Clinic, Clinical, Operations and Billing policies, Fee Schedule, Formulary, Immunisation Schedule, Hours and Rota</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>JSON data</b><span>Patients, visits, prescriptions, appointments, invoices and requests</span></div></div>
+<div class="ad"><em>request and notice</em></div>
+<div class="ar"><div class="ab person"><b>The person who decides</b><span>The attending doctor or Dr Aisyah; the notice is the first message of their chat</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Haiku 5.5 (benchmarked) · Anthropic Messages API · Tool use, tool_choice any with auto fallback · Prompt caching · Reply checks in code</td></tr><tr><td><b>Hooks and Tools</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Eight tools in tools.js, offered by role · One result shape (lib/format.js)</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Eight resources (one restricted), eight tools</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Python 3 generators · GitHub Pages</td></tr></table>
 <ul><li><b>Policies:</b> <code>build_policies.py</code> reads the clinic's seven source files, adds the Clinic Hours and Rota from its own table, and writes the Clinic, Clinical, Operations and Billing policies, the Fee Schedule, the Clinic Formulary, the Immunisation Schedule and the Clinic Hours and Rota as pages for people and Markdown resources for Claude.</li><li><b>Data:</b> <code>generate_data.py</code> writes 120 patients with guardians, visits, weights, allergies, prescriptions, vaccinations, appointments, invoices and requests from a fixed seed. Money is in sen and times in Unix seconds.</li><li><b>The desk:</b> <code>tools.js</code> runs every call through PreToolUse, the tool and PostToolUse, and logs it. The MCP server, the tests, the benchmark and the staff pages all load it.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers the resources and the tools for the signed-in role. The staff ID arrives in the request <code>_meta</code>, and the hook record, with Dr Aisyah's capacity, goes back in the result <code>_meta</code>.</li><li><b>Staff pages:</b> <code>staff-desk.html</code> is the clinic desk: pick a question and a staff member, then watch the chat or what happened under the hood. <code>staff.html</code> replays the recorded runs with the hook view, or chats live.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

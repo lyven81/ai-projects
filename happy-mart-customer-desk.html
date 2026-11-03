@@ -38,16 +38,28 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:none;stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .one{fill:var(--card);stroke:var(--accent);stroke-width:2}.dg .person{stroke:var(--navy);stroke-width:2}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12.5px;font-family:Consolas,monospace}
-.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+
+
+
+
+
+
+
+
+
 .muted{color:var(--muted);font-size:13px}
+
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -112,21 +124,21 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 520" role="img" aria-label="The customer writes to the router; each team is reached through a verified order block, other matters go straight to the writer; the writer's reply passes the pre-send check before it returns to the customer" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="160" width="120" height="70" rx="10" class="bx one"/><text x="40" y="200" class="h">Customer</text>
-<rect x="170" y="150" width="140" height="90" rx="10" class="bx one"/><text x="186" y="200" class="h">Router (Sonnet)</text>
-<line x1="140" y1="195" x2="168" y2="195" class="ar" marker-end="url(#ah)"/>
-<line x1="310" y1="195" x2="340" y2="195" class="ar"/>
-<line x1="340" y1="42" x2="340" y2="372" class="ar"/>
-<line x1="340" y1="42" x2="378" y2="42" class="ar" marker-end="url(#ah)"/><rect x="380" y="20" width="130" height="44" rx="10" class="bx one"/><text x="394" y="47" class="h">Verified order</text><line x1="510" y1="42" x2="548" y2="42" class="ar" marker-end="url(#ah)"/><rect x="550" y="20" width="190" height="44" rx="10" class="bx one"/><text x="566" y="47" class="h">Fulfilment team</text><line x1="740" y1="42" x2="780" y2="42" class="ar"/><line x1="340" y1="108" x2="378" y2="108" class="ar" marker-end="url(#ah)"/><rect x="380" y="86" width="130" height="44" rx="10" class="bx one"/><text x="394" y="113" class="h">Verified order</text><line x1="510" y1="108" x2="548" y2="108" class="ar" marker-end="url(#ah)"/><rect x="550" y="86" width="190" height="44" rx="10" class="bx one"/><text x="566" y="113" class="h">Returns team</text><line x1="740" y1="108" x2="780" y2="108" class="ar"/><line x1="340" y1="174" x2="378" y2="174" class="ar" marker-end="url(#ah)"/><rect x="380" y="152" width="130" height="44" rx="10" class="bx one"/><text x="394" y="179" class="h">Verified order</text><line x1="510" y1="174" x2="548" y2="174" class="ar" marker-end="url(#ah)"/><rect x="550" y="152" width="190" height="44" rx="10" class="bx one"/><text x="566" y="179" class="h">Finance team</text><line x1="740" y1="174" x2="780" y2="174" class="ar"/><line x1="340" y1="240" x2="378" y2="240" class="ar" marker-end="url(#ah)"/><rect x="380" y="218" width="130" height="44" rx="10" class="bx one"/><text x="394" y="245" class="h">Verified order</text><line x1="510" y1="240" x2="548" y2="240" class="ar" marker-end="url(#ah)"/><rect x="550" y="218" width="190" height="44" rx="10" class="bx one"/><text x="566" y="245" class="h">Claims team</text><line x1="740" y1="240" x2="780" y2="240" class="ar"/><line x1="340" y1="306" x2="378" y2="306" class="ar" marker-end="url(#ah)"/><rect x="380" y="284" width="130" height="44" rx="10" class="bx one"/><text x="394" y="311" class="h">Verified order</text><line x1="510" y1="306" x2="548" y2="306" class="ar" marker-end="url(#ah)"/><rect x="550" y="284" width="190" height="44" rx="10" class="bx one"/><text x="566" y="311" class="h">Marketing team</text><line x1="740" y1="306" x2="780" y2="306" class="ar"/>
-<line x1="340" y1="372" x2="548" y2="372" class="ar" marker-end="url(#ah)"/><rect x="550" y="350" width="190" height="44" rx="10" class="bx one"/><text x="566" y="377" class="h">Other</text><line x1="740" y1="372" x2="780" y2="372" class="ar"/>
-<path d="M780,42 L780,470 L702,470" class="ar" marker-end="url(#ah)"/>
-<rect x="500" y="440" width="200" height="60" rx="10" class="bx one"/><text x="516" y="476" class="h">Writer (Haiku)</text>
-<line x1="500" y1="470" x2="432" y2="470" class="ar" marker-end="url(#ah)"/>
-<rect x="230" y="440" width="200" height="60" rx="10" class="bx one"/><text x="246" y="476" class="h">Pre-send check</text>
-<path d="M230,470 L80,470 L80,232" class="ar" marker-end="url(#ah)"/>
-</svg>
+<div class="arch" role="img" aria-label="The customer writes to the router; each department team is reached through a verified order block; every tool call passes the shared hooks; the writer's reply passes the pre-send check before it returns to the customer.">
+<div class="ar"><div class="ab who"><b>Customer</b><span>Writes in the chat</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Router, Claude Sonnet 5.5</b><span>Sends the question to a team, or straight to the writer</span></div></div>
+<div class="ad"><em>verified order</em></div>
+<div class="ar"><div class="ab ai"><b>Five department teams</b><span>Fulfilment · Returns · Finance · Claims · Marketing</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Shared hooks</b><span>PreToolUse and PostToolUse on every tool call; the back end repeats the critical checks</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: 17 tools</b><span>The order data is reached only through the tools</span></div><div class="ab read"><b>13 resources</b><span>Six department policies, router workbook, role sheets, contact list</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Order data</b><span>About 2,600 orders and a catalogue of about 1,200 products</span></div></div>
+<div class="ad"><em>reply</em></div>
+<div class="ar"><div class="ab ai"><b>Writer, Claude Haiku 5.5</b><span>Writes the reply; the pre-send check reads it before it reaches the customer</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agents</b></td><td>Router: Claude Sonnet 5.5, effort medium · Five department teams: Sonnet 5.5, effort low, 20-second limit · Writer: Claude Haiku 5.5, effort low, thinking off · Anthropic Messages API, prompt caching</td></tr><tr><td><b>Rules</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Pre-send check · Back end repeating the critical checks</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · 13 resources, 17 tools</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · Python 3 build scripts (seed 42) · GitHub Pages</td></tr></table>
 <ul><li><b>One rule source:</b> <code>build_policies.py</code> writes the six department policies (28 clauses), the router workbook, five role sheets, the contact list and <code>policy_tables.json</code>. A clause, contact or value changes there and nowhere else.</li><li><b>Data:</b> <code>generate_data.py</code> writes about 2,600 orders from 1 Sep to 27 Oct 2026 for a catalogue of about 1,200 products, with the test orders planted and checked.</li><li><b>Tools and hooks:</b> <code>tools.js</code> runs every call through <code>hooks/pre_tool_use.js</code>, the tool in <code>lib/backend.js</code>, then <code>hooks/post_tool_use.js</code>. The pre-send check lives in <code>lib/presend.js</code>.</li><li><b>Agents:</b> <code>agent.js</code> runs the router, the five teams as sub-agents inside <code>ask_specialist</code>, and the writer inside <code>compose_reply</code>. The calling agent is set by the host, never by the model.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers the 13 resources and 17 tools. The order data is not a resource; it is reached only through the tools.</li><li><b>Pages:</b> <code>assistant.html</code> shows the customer's phone and the staff phone side by side; <code>desk.html</code> shows every hook record of each turn.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

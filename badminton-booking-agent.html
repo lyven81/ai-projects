@@ -38,16 +38,28 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:none;stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12.5px;font-family:Consolas,monospace}
-.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+
+
+
+
+
+
+
+
+
 .muted{color:var(--muted);font-size:13px}
+
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -112,22 +124,17 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 500" role="img" aria-label="How the assistant works with the policies, MCP tools and staff" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="170" width="135" height="84" rx="10" class="bx person"/><text x="36" y="200" class="h">Player</text><text x="36" y="222" class="t">Asks, books,</text><text x="36" y="240" class="t">uploads a receipt</text>
-<rect x="195" y="142" width="190" height="140" rx="10" class="bx ai"/><text x="211" y="170" class="h">Claude assistant</text><text x="211" y="194" class="t">Decides the policy case</text><text x="211" y="212" class="t">Picks a policy or tool</text><text x="211" y="230" class="t">Cites the clauses</text><text x="211" y="248" class="t">Hands over on fixed rules</text>
-<rect x="425" y="18" width="245" height="424" rx="10" class="bx mcp"/><text x="441" y="42" class="h">MCP server</text>
-<rect x="440" y="56" width="215" height="110" rx="10" class="bx inner"/><text x="454" y="80" class="h2">Resources (read)</text><text x="454" y="102" class="t">Operation Policy</text><text x="454" y="120" class="t">Booking Policy</text><text x="454" y="138" class="t">Cancellation Policy</text>
-<rect x="440" y="180" width="215" height="250" rx="10" class="bx inner"/><text x="454" y="204" class="h2">Tools (act)</text><text x="454" y="224" class="mono">check_availability</text><text x="454" y="245" class="mono">request_booking</text><text x="454" y="266" class="mono">verify_booking</text><text x="454" y="287" class="mono">get_booking</text><text x="454" y="308" class="mono">report_payment</text><text x="454" y="329" class="mono">quote_cancellation</text><text x="454" y="350" class="mono">request_cancellation</text><text x="454" y="371" class="mono">hand_to_staff</text><text x="454" y="392" class="mono">reply_to_player</text><text x="454" y="422" class="note">Rules checked in code</text>
-<rect x="710" y="180" width="130" height="102" rx="10" class="bx data"/><text x="724" y="206" class="h">Centre data</text><text x="724" y="228" class="t">Bookings</text><text x="724" y="246" class="t">Receipts</text><text x="724" y="264" class="t">Handovers</text>
-<rect x="710" y="312" width="130" height="110" rx="10" class="bx person"/><text x="724" y="338" class="h">Staff</text><text x="724" y="360" class="t">Confirm payments</text><text x="724" y="378" class="t">Release holds</text><text x="724" y="396" class="t">Approve, reply</text>
-<line x1="155" y1="202" x2="193" y2="202" class="ar" marker-end="url(#ah)"/><line x1="195" y1="224" x2="157" y2="224" class="ar" marker-end="url(#ah)"/>
-<path d="M385,188 L438,120" class="ar" marker-end="url(#ah)"/><text x="392" y="150" class="lab">reads</text>
-<path d="M385,246 L438,300" class="ar" marker-end="url(#ah)"/><text x="392" y="292" class="lab">calls</text>
-<line x1="655" y1="232" x2="708" y2="232" class="ar" marker-end="url(#ah)"/><text x="662" y="224" class="lab">saves</text>
-<line x1="775" y1="282" x2="775" y2="310" class="ar" marker-end="url(#ah)"/>
-<path d="M775,422 L775,470 L88,470 L88,256" class="ar dash" marker-end="url(#ah)"/><text x="210" y="490" class="lab">Each staff click sends a fixed message or a reply back to the player's chat</text>
-</svg>
+<div class="arch" role="img" aria-label="The player asks the assistant, which reads three policies and calls nine MCP tools with the rules checked in code; bookings, receipts and handovers are saved for staff, whose click sends a message back to the player's chat.">
+<div class="ar"><div class="ab who"><b>Player</b><span>Asks, books, uploads a receipt</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Claude assistant</b><span>Decides the policy case, cites the clauses; hands over on fixed rules</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: nine tools</b><span>check_availability, request_booking, verify_booking, get_booking, report_payment, quote_cancellation, request_cancellation, hand_to_staff, reply_to_player; rules in code</span></div><div class="ab read"><b>Three resources</b><span>Operation Policy, Booking Policy, Cancellation Policy</span></div></div>
+<div class="ad"><em>saves</em></div>
+<div class="ar"><div class="ab data"><b>Centre data</b><span>Bookings, receipts, handovers</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab person"><b>Staff</b><span>Confirm payments, release holds, approve and reply; each click sends a message to the player's chat</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Assistant</b></td><td>Claude Sonnet 5.5 (benchmarked) · Claude Haiku 5.5 (option) · Anthropic Messages API · Tool use · Prompt caching</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Shared tools.js</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · localStorage and BroadcastChannel · Python 3 build scripts · GitHub Pages</td></tr></table>
 <ul><li><b>One rule file:</b> <code>tools.js</code> holds the nine tools, every rule and the staff actions. The server, the benchmark and both pages use it.</li><li><b>Policies:</b> <code>build_policies.py</code> writes each policy as a page for people, a Markdown copy for Claude, and the clause list citations are checked against.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers three policy resources and nine tools. The host passes the turn, uploads, the player's words and the chat contact.</li><li><b>Agent:</b> <code>agent.js</code> runs the loop and ends each turn at <code>reply_to_player</code>. <code>prompt.js</code> holds the four-way rule and one example per kind of question.</li><li><b>Pages:</b> <code>assistant.html</code> for players and <code>demo.html</code> for staff share data and update each other live.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

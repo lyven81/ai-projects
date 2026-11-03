@@ -39,16 +39,17 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
-.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -111,27 +112,19 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 590" role="img" aria-label="Siti, Dr Sivakumar and Ms Yong each ask the same AI, which offers each person only their own actions; every request passes the PreToolUse hook, one of seven MCP tools and the back end, then the PostToolUse hook; the back end writes the next person's task and notice" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="30" width="160" height="130" rx="10" class="bx person"/><text x="34" y="56" class="h">Three people</text><text x="34" y="80" class="t">Siti: desk</text><text x="34" y="98" class="t">Dr Sivakumar: GP</text><text x="34" y="116" class="t">Ms Yong: pharmacy</text><text x="34" y="134" class="t">Each signs in</text>
-<rect x="220" y="30" width="190" height="120" rx="10" class="bx ai"/><text x="236" y="56" class="h">Claude Haiku 5.5</text><text x="236" y="80" class="t">One prompt per person</text><text x="236" y="98" class="t">Only their own actions</text><text x="236" y="116" class="t">Shows code's replies</text>
-<rect x="220" y="195" width="175" height="160" rx="10" class="bx inner"/><text x="232" y="219" class="h2">Resources (read)</text><text x="232" y="242" class="t">Hours and Services</text><text x="232" y="260" class="t">Price List</text><text x="232" y="278" class="t">Panel Price Schedule</text><text x="232" y="296" class="t">After the Consultation</text><text x="232" y="314" class="t">Roles and Privacy</text>
-<rect x="450" y="30" width="200" height="150" rx="10" class="bx hook"/><text x="464" y="56" class="h">PreToolUse hook</text><text x="464" y="80" class="t">Tool and action by role</text><text x="464" y="98" class="t">Who may see what</text><text x="464" y="116" class="t">Drops any reason given</text><text x="464" y="134" class="t">Patient identified</text><text x="464" y="152" class="t">Cites a clause</text>
-<rect x="450" y="225" width="200" height="180" rx="10" class="bx mcp"/><text x="464" y="249" class="h">Seven MCP tools</text><text x="464" y="271" class="mono">patient</text><text x="464" y="288" class="mono">schedule</text><text x="464" y="305" class="mono">record_consultation</text><text x="464" y="322" class="mono">dispense</text><text x="464" y="339" class="mono">billing</text><text x="464" y="356" class="mono">documents</text><text x="464" y="373" class="mono">tasks</text>
-<rect x="690" y="225" width="150" height="180" rx="10" class="bx data"/><text x="704" y="249" class="h">Back end</text><text x="704" y="273" class="t">Checks the role again</text><text x="704" y="291" class="t">Four checks, prices</text><text x="704" y="309" class="t">Workflow order</text><text x="704" y="327" class="t">Tasks and notices</text><text x="704" y="345" class="t">The data</text>
-<rect x="220" y="435" width="200" height="130" rx="10" class="bx hook"/><text x="234" y="461" class="h">PostToolUse hook</text><text x="234" y="485" class="t">Keeps the role's fields</text><text x="234" y="503" class="t">Converts RM and time</text><text x="234" y="521" class="t">Writes code's replies</text><text x="234" y="539" class="t">Basis line</text>
-<rect x="20" y="435" width="170" height="130" rx="10" class="bx person"/><text x="34" y="461" class="h">The next person</text><text x="34" y="485" class="t">Reads the notice first</text><text x="34" y="503" class="t">Task on the list</text><text x="34" y="521" class="t">Decides or acts</text>
-<line x1="180" y1="72" x2="218" y2="72" class="ar" marker-end="url(#ah)"/><line x1="220" y1="118" x2="182" y2="118" class="ar" marker-end="url(#ah)"/>
-<line x1="410" y1="64" x2="448" y2="64" class="ar" marker-end="url(#ah)"/><text x="414" y="56" class="lab">calls</text>
-<line x1="450" y1="138" x2="412" y2="138" class="ar dash" marker-end="url(#ah)"/><text x="415" y="158" class="lab">block</text>
-<line x1="300" y1="150" x2="300" y2="193" class="ar" marker-end="url(#ah)"/><text x="308" y="178" class="lab">reads</text>
-<line x1="550" y1="180" x2="550" y2="223" class="ar" marker-end="url(#ah)"/><text x="558" y="207" class="lab">allow</text>
-<line x1="650" y1="315" x2="688" y2="315" class="ar" marker-end="url(#ah)"/>
-<path d="M765,405 L765,500 L422,500" class="ar" marker-end="url(#ah)"/><text x="560" y="492" class="lab">raw result</text>
-<line x1="408" y1="435" x2="408" y2="152" class="ar" marker-end="url(#ah)"/><text x="414" y="425" class="lab">result</text>
-<path d="M765,405 L765,580 L105,580 L105,567" class="ar dash" marker-end="url(#ah)"/><text x="440" y="575" class="lab">task and notice, written in code</text>
-<path d="M105,433 L105,162" class="ar dash" marker-end="url(#ah)"/><text x="112" y="290" class="lab">their own</text><text x="112" y="305" class="lab">next turn</text>
-</svg>
+<div class="arch" role="img" aria-label="Siti, Dr Sivakumar and Ms Yong each ask the same AI, which offers each person only their own actions; every request passes the PreToolUse hook, one of seven MCP tools and the back end, then the PostToolUse hook; the back end writes the next person's task and notice.">
+<div class="ar"><div class="ab who"><b>Three people, each signs in</b><span>Siti: desk · Dr Sivakumar: GP · Ms Yong: pharmacy</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Claude Haiku 5.5</b><span>One prompt per person, only their own actions; shows code's replies</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Hooks</b><span>PreToolUse: tool and action by role, who may see what, cites a clause. PostToolUse: keeps the role's fields, writes code's replies</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: seven tools</b><span>patient, schedule, record_consultation, dispense, billing, documents, tasks</span></div><div class="ab read"><b>Five resources</b><span>Hours and Services, Price List, Panel Price Schedule, After the Consultation, Roles and Privacy</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Back end and data</b><span>Checks the role again, four checks and prices, workflow order, tasks and notices</span></div></div>
+<div class="ad"><em>task and notice</em></div>
+<div class="ar"><div class="ab person"><b>The next person</b><span>Reads the notice first, then decides or acts</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Haiku 5.5 (benchmarked) · One agent, one prompt per person · Anthropic Messages API · tool_choice any on the first call, auto fallback · Prompt caching</td></tr><tr><td><b>Hooks and Tools</b></td><td>Shared PreToolUse hook · Shared PostToolUse hook · Seven tools in tools.js; each person's copy lists only their actions · One result shape (lib/format.js)</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Five resources and seven tools, for the signed-in person</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Python 3 generators · GitHub Pages</td></tr></table>
 <ul><li><b>Policies:</b> <code>build_policies.py</code> writes the five policies (Hours and Services, Price List, Panel Price Schedule, After the Consultation, Roles and Privacy) as a page for people and Markdown resources for the AI, with the clause list and the policy tables.</li><li><b>Data:</b> <code>generate_data.py</code> writes the patients, appointments, queue, past visits, bills and stock as JSON. Money is in sen and times in Unix seconds.</li><li><b>The desk:</b> <code>tools.js</code> builds each person's copy of the tools (<code>toolsFor</code>), then runs every call through PreToolUse, the tool and PostToolUse, and logs it. The consultation form and the desk buttons call the same tools and hooks as the chat.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> lists the resources and the tools for the signed-in person, each tool with only that person's actions. The staff ID arrives in the request <code>_meta</code>, and the hook record goes back in the result <code>_meta</code>.</li><li><b>Clinic desk:</b> <code>clinic-desk.html</code> is one page for all three people, chosen in the header. It replays every recorded run step by step, or runs live with the visitor's own key, with Under the hood beside the chat.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

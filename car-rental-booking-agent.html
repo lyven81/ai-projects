@@ -38,16 +38,28 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .bar .gap{flex:1}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:none;stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12.5px;font-family:Consolas,monospace}
-.dg .note{font-size:12px;font-style:italic;fill:var(--muted)}.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+
+
+
+
+
+
+
+
+
 .muted{color:var(--muted);font-size:13px}
+
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -108,22 +120,17 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 520" role="img" aria-label="How the agent works with the three resources, the nine MCP tools and staff" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="170" width="135" height="84" rx="10" class="bx person"/><text x="36" y="200" class="h">Customer</text><text x="36" y="222" class="t">Asks, books,</text><text x="36" y="240" class="t">sends receipts</text>
-<rect x="195" y="142" width="190" height="140" rx="10" class="bx ai"/><text x="211" y="170" class="h">Claude agent</text><text x="211" y="194" class="t">Reads the resources</text><text x="211" y="212" class="t">Asks the tools</text><text x="211" y="230" class="t">Requests or hands over</text><text x="211" y="248" class="t">Reply checked by code</text>
-<rect x="425" y="18" width="245" height="444" rx="10" class="bx mcp"/><text x="441" y="42" class="h">MCP server</text>
-<rect x="440" y="56" width="215" height="100" rx="10" class="bx inner"/><text x="454" y="80" class="h2">Resources (read)</text><text x="454" y="102" class="t">Rental Policy</text><text x="454" y="120" class="t">Car Inventory</text><text x="454" y="138" class="t">Fleet schedule</text>
-<rect x="440" y="170" width="215" height="282" rx="10" class="bx inner"/><text x="454" y="194" class="h2">Tools (act)</text><text x="454" y="216" class="mono">check_availability</text><text x="454" y="239" class="mono">request_booking</text><text x="454" y="262" class="mono">verify_booking</text><text x="454" y="285" class="mono">get_booking</text><text x="454" y="308" class="mono">report_payment</text><text x="454" y="331" class="mono">quote_cancellation</text><text x="454" y="354" class="mono">request_cancellation</text><text x="454" y="377" class="mono">hand_to_staff</text><text x="454" y="400" class="mono">reply_to_customer</text><text x="454" y="440" class="note">Rules checked in code</text>
-<rect x="710" y="200" width="130" height="102" rx="10" class="bx data"/><text x="724" y="226" class="h">Records</text><text x="724" y="248" class="t">Requests,</text><text x="724" y="266" class="t">payments and</text><text x="724" y="284" class="t">handovers</text>
-<rect x="710" y="332" width="130" height="110" rx="10" class="bx person"/><text x="724" y="358" class="h">Staff phone</text><text x="724" y="380" class="t">Confirm, reject</text><text x="724" y="398" class="t">Set the charge</text><text x="724" y="416" class="t">Act on handovers</text>
-<line x1="155" y1="202" x2="193" y2="202" class="ar" marker-end="url(#ah)"/><line x1="195" y1="224" x2="157" y2="224" class="ar" marker-end="url(#ah)"/>
-<path d="M385,188 L438,110" class="ar" marker-end="url(#ah)"/><text x="392" y="140" class="lab">reads</text>
-<path d="M385,246 L438,310" class="ar" marker-end="url(#ah)"/><text x="392" y="300" class="lab">calls</text>
-<line x1="655" y1="252" x2="708" y2="252" class="ar" marker-end="url(#ah)"/><text x="662" y="244" class="lab">saves</text>
-<line x1="775" y1="330" x2="775" y2="304" class="ar" marker-end="url(#ah)"/>
-<path d="M775,442 L775,490 L88,490 L88,256" class="ar dash" marker-end="url(#ah)"/><text x="200" y="510" class="lab">A staff click sends a fixed message into the customer's chat</text>
-</svg>
+<div class="arch" role="img" aria-label="The customer asks the agent, which reads three resources and calls nine MCP tools with the rules checked in code; requests, payments and handovers are saved for staff, whose click sends a fixed message into the customer's chat.">
+<div class="ar"><div class="ab who"><b>Customer</b><span>Asks, books, sends receipts</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Claude agent</b><span>Reads the resources, asks the tools, requests or hands over; reply checked by code</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>MCP server: nine tools</b><span>check_availability, request_booking, verify_booking, get_booking, report_payment, quote_cancellation, request_cancellation, hand_to_staff, reply_to_customer; rules in code</span></div><div class="ab read"><b>Three resources</b><span>Rental Policy, Car Inventory, Fleet schedule</span></div></div>
+<div class="ad"><em>saves</em></div>
+<div class="ar"><div class="ab data"><b>Records</b><span>Requests, payments and handovers</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab person"><b>Staff phone</b><span>Confirm or reject, set the charge, act on handovers; a click sends a fixed message to the customer's chat</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Sonnet 5.5 (benchmarked) · Anthropic Messages API · Tool use, tool_choice auto · Prompt caching</td></tr><tr><td><b>MCP Server</b></td><td>Node.js · Model Context Protocol SDK · stdio transport · Shared tools.js</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · localStorage and BroadcastChannel · Python 3 build scripts · GitHub Pages</td></tr></table>
 <ul><li><b>One rule file:</b> <code>tools.js</code> holds the nine tools, every rule, the pricing and the staff actions with their fixed messages. The server, the tests, the benchmark and both pages use it.</li><li><b>Resources:</b> <code>build_policies.py</code> writes the Rental Policy as a page, a Markdown copy for Claude and the clause list; <code>generate_seed.py</code> writes the fleet, the bookings, the inventory and the schedule.</li><li><b>MCP server:</b> <code>mcp_server.mjs</code> offers three resources and nine tools. The host passes the turn, the uploaded images, the customer's words and the chat contact.</li><li><b>Agent:</b> <code>agent.js</code> runs the tool loop on <code>tool_choice</code> "auto", because Sonnet 5.5 does not accept "any". A reply that skips <code>reply_to_customer</code> is sent back once; in the recorded run that happened 0 times.</li><li><b>Pages:</b> <code>assistant.html</code> shows the customer's phone and the staff phone side by side; <code>demo.html</code> is the staff phone page on its own.</li></ul>
 <h2>Tools, Resources and Workflow</h2>

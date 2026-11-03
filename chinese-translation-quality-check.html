@@ -49,6 +49,18 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
 .muted{color:var(--muted);font-size:13px}
 .legend{font-size:13px;color:var(--muted);margin:-2px 0 10px}
+
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -111,25 +123,21 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 0 860 540" role="img" aria-label="The multi-agent review: glossary stage, coordinator, three specialists, checks in code, one box per fault, grader, editor, Word file" class="dg"><defs><marker id="ah-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="30" width="170" height="120" rx="10" class="bx data"/><text x="34" y="56" class="h">Translator's file</text><text x="34" y="78" class="t">Chinese Word file</text><text x="34" y="96" class="t">and the English</text><text x="34" y="114" class="t">original</text>
-<rect x="235" y="30" width="170" height="120" rx="10" class="bx code"/><text x="249" y="56" class="h">Glossary stage</text><text x="249" y="78" class="t">Settled terms</text><text x="249" y="96" class="t">corrected in code</text><text x="249" y="114" class="t">No model asked</text>
-<rect x="450" y="30" width="170" height="120" rx="10" class="bx code"/><text x="464" y="56" class="h">Coordinator</text><text x="464" y="78" class="t">Splits each section</text><text x="464" y="96" class="t">Routes paragraphs</text><text x="464" y="114" class="t">Redoes gaps once</text>
-<rect x="665" y="30" width="170" height="120" rx="10" class="bx ai"/><text x="679" y="56" class="h">Three specialists</text><text x="679" y="78" class="t">Accuracy (1 or 2 requests)</text><text x="679" y="96" class="t">Section</text><text x="679" y="114" class="t">Tone</text>
-<rect x="450" y="420" width="385" height="90" rx="10" class="bx data"/><text x="464" y="446" class="h">Brief, glossary, house style</text><text x="464" y="468" class="t">Read by every specialist; every finding</text><text x="464" y="486" class="t">must cite one of them</text>
-<path d="M835,465 L852,465 L852,110 L837,110" class="ar" marker-end="url(#ah-flow)"/><text x="806" y="400" class="lab">reads</text>
-<rect x="665" y="230" width="170" height="120" rx="10" class="bx code"/><text x="679" y="256" class="h">Checks in code</text><text x="679" y="278" class="t">tools.js rules</text><text x="679" y="296" class="t">Source, spans,</text><text x="679" y="314" class="t">protected passage</text>
-<rect x="450" y="230" width="170" height="120" rx="10" class="bx ai"/><text x="464" y="256" class="h">One box per fault</text><text x="464" y="278" class="t">Overlapping flags</text><text x="464" y="296" class="t">merged, every flag</text><text x="464" y="314" class="t">kept, one correction</text>
-<rect x="235" y="230" width="170" height="120" rx="10" class="bx ai"/><text x="249" y="256" class="h">Grader</text><text x="249" y="278" class="t">Fresh context</text><text x="249" y="296" class="t">Sound, doubtful</text><text x="249" y="314" class="t">or wrong; drops none</text>
-<rect x="20" y="230" width="170" height="120" rx="10" class="bx person"/><text x="34" y="256" class="h">Editor</text><text x="34" y="278" class="t">Accepts, edits or</text><text x="34" y="296" class="t">rejects every box</text>
-<rect x="20" y="420" width="385" height="90" rx="10" class="bx data"/><text x="34" y="446" class="h">Word file and review summary</text><text x="34" y="468" class="t">Tracked changes and comments,</text><text x="34" y="486" class="t">only for decided findings</text>
-<path d="M190,90 L233,90" class="ar" marker-end="url(#ah-flow)"/><path d="M405,90 L448,90" class="ar" marker-end="url(#ah-flow)"/><path d="M620,90 L663,90" class="ar" marker-end="url(#ah-flow)"/>
-<path d="M735,150 L735,228" class="ar" marker-end="url(#ah-flow)"/><text x="648" y="194" class="lab">every finding</text>
-<path d="M795,228 L795,152" class="ar" marker-end="url(#ah-flow)"/><text x="801" y="194" class="lab">refused</text>
-<path d="M665,290 L622,290" class="ar" marker-end="url(#ah-flow)"/><path d="M450,290 L407,290" class="ar" marker-end="url(#ah-flow)"/><path d="M235,290 L192,290" class="ar" marker-end="url(#ah-flow)"/>
-<path d="M105,350 L105,418" class="ar" marker-end="url(#ah-flow)"/><text x="112" y="392" class="lab">decisions</text>
-<text x="20" y="532" class="note">AI proposes; code checks; a person decides.</text>
-</svg><p class="legend">Solid blue: Claude. Dashed: code. Bold: a person. Light: documents.</p>
+<div class="arch" role="img" aria-label="The translator's file passes the glossary stage in code, the coordinator routes paragraphs to three specialists, checks in code merge their flags into one box per fault, a grader with a fresh context grades every box, and the editor decides; only decided findings reach the Word file.">
+<div class="ar"><div class="ab who"><b>Translator's file</b><span>Chinese Word file and the English original</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Glossary stage</b><span>Settled terms corrected in code; no model asked</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Coordinator</b><span>Splits each section, routes paragraphs, redoes gaps once</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Three specialists</b><span>Accuracy, Section, Tone; every finding cites a source</span></div><div class="ab read"><b>Brief, glossary, house style</b><span>Read by every specialist</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Checks in code, one box per fault</b><span>Source, spans, protected passage; overlapping flags merged, every flag kept</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>Grader</b><span>Fresh context; sound, doubtful or wrong; drops none</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab person"><b>Editor</b><span>Accepts, edits or rejects every box; only decided findings reach the Word file and review summary</span></div></div>
+</div><p class="legend">Solid blue: Claude. Dashed: code. Bold: a person. Light: documents.</p>
 <table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Review</b></td><td>Claude Sonnet 5.5 (accuracy, section, consolidator) · Claude Opus 5.5 (tone, grader) · Structured outputs · Prompt caching · Message Batches API</td></tr><tr><td><b>Rules and tools</b></td><td>Node.js · One shared tools.js · Model Context Protocol SDK · stdio transport</td></tr><tr><td><b>Documents and pages</b></td><td>Word OOXML (tracked changes, comments) · @xmldom/xmldom, JSZip · Vanilla HTML and JavaScript · GitHub Pages</td></tr></table>
 <ul><li><b>One rule file:</b> <code>tools.js</code> holds the six tools and every rule. The MCP server, the live and batch paths, the tests and the demo page all load it.</li><li><b>Settings:</b> <code>config/document.json</code> holds everything that changes per document: front-matter names, the protected passage, sections and banned wording. The code itself carries no domain wording.</li><li><b>Review:</b> <code>coordinator.js</code> runs a section live; <code>lib/batch.js</code> runs it on the Message Batches API. Both hand results to the same checks, <code>consolidator.js</code> and <code>grader.js</code>.</li><li><b>Decisions:</b> <code>lib/apply_decisions.js</code> turns the editor's decisions into the reviewed text. The Word writer, the review summary and the demo all use it, so they cannot disagree.</li></ul>
 <h2>Multi-Agent Workflow</h2>

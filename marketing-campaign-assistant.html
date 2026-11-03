@@ -40,16 +40,17 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 .cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
 .panel{display:none}.panel.on{display:block}
 .wf .hz{z-index:0}
-.dg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0}
-.dg .bx{fill:var(--box);stroke:var(--line);stroke-width:1.5}
-.dg .ai{stroke:var(--accent);stroke-width:2}.dg .mcp{fill:var(--card);stroke:var(--navy);stroke-width:2;stroke-dasharray:6 4}
-.dg .hook{fill:var(--card);stroke:var(--accent);stroke-width:2}
-.dg .inner{fill:var(--card);stroke:var(--accent)}.dg .person{stroke:var(--navy);stroke-width:2}.dg .data{fill:var(--box);stroke:var(--navy)}
-.dg text{fill:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
-.dg .h{font-size:15px;font-weight:700;fill:var(--navy)}.dg .h2{font-size:14px;font-weight:700;fill:var(--accent)}
-.dg .t{font-size:13px}.dg .mono{font-size:12px;font-family:Consolas,monospace}
-.dg .lab{font-size:12px;fill:var(--muted)}
-.dg .ar{stroke:var(--accent);stroke-width:1.8;fill:none}.dg .dash{stroke-dasharray:5 4}.dg .ahf{fill:var(--accent)}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -109,32 +110,19 @@ pre code{background:none;border:0;padding:0;font-size:inherit}
 </div>
 <div class="panel" id="source">
 <h2>Architecture and Technology</h2>
-<svg viewBox="0 -4 860 604" role="img" aria-label="The owner asks the AI assistant in the chat; the assistant calls the four tools in tools.js, which read the sample data and the next period only through the guard hook and save proposals to the plan for the owner; the reply check reads every reply before it reaches the owner; the MCP server serves the same tools and the four resources; the owner approves, rejects and records actions on the workspace" class="dg">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahf"/></marker></defs>
-<rect x="20" y="30" width="170" height="150" rx="10" class="bx person"/><text x="34" y="56" class="h">The owner</text><text x="34" y="80" class="t">Asks in the chat</text><text x="34" y="98" class="t">Approves or rejects</text><text x="34" y="116" class="t">Records each action</text><text x="34" y="134" class="t">May enter targets</text>
-<rect x="230" y="30" width="190" height="150" rx="10" class="bx ai"/><text x="244" y="56" class="h">AI assistant</text><text x="244" y="80" class="t">Claude Haiku 5.5</text><text x="244" y="98" class="t">Tool-use loop (agent.js)</text><text x="244" y="116" class="t">A tool first each turn</text><text x="244" y="134" class="t">At most 9 model calls a turn</text>
-<rect x="460" y="30" width="230" height="150" rx="10" class="bx hook"/><text x="474" y="56" class="h">Reply check</text><text x="474" y="80" class="t">Each tag matches its figure</text><text x="474" y="98" class="t">No number without a source</text><text x="474" y="116" class="t">No causal or profit wording</text><text x="474" y="134" class="t">Sent back, at most twice</text>
-<rect x="720" y="30" width="125" height="150" rx="10" class="bx data"/><text x="732" y="56" class="h">Resources</text><text x="732" y="80" class="t">Business profile</text><text x="732" y="98" class="t">Metric definitions</text><text x="732" y="116" class="t">Review policy</text><text x="732" y="134" class="t">Planning rules</text><text x="732" y="152" class="t">Also in the prompt</text>
-<rect x="230" y="225" width="190" height="165" rx="10" class="bx mcp"/><text x="244" y="249" class="h">tools.js</text><text x="244" y="271" class="mono">get_performance</text><text x="244" y="288" class="mono">get_campaign</text><text x="244" y="305" class="mono">propose_change</text><text x="244" y="322" class="mono">check_plan</text><text x="244" y="349" class="h2">Every rule in code</text><text x="244" y="369" class="t">status, caps, targets</text>
-<rect x="460" y="225" width="230" height="165" rx="10" class="bx inner"/><text x="474" y="249" class="h">MCP server</text><text x="474" y="271" class="t">The same four tools</text><text x="474" y="289" class="t">The four resources</text><text x="474" y="307" class="t">For Claude Code</text><text x="474" y="325" class="t">One process, one conversation</text>
-<rect x="720" y="225" width="125" height="165" rx="10" class="bx data"/><text x="732" y="249" class="h">Sample data</text><text x="732" y="273" class="t">60 Sales</text><text x="732" y="291" class="t">campaigns</text><text x="732" y="309" class="t">Weekly results</text><text x="732" y="327" class="t">Next period</text><text x="732" y="345" class="t">Owner's notes</text>
-<rect x="20" y="430" width="170" height="140" rx="10" class="bx person"/><text x="34" y="456" class="h">Owner workspace</text><text x="34" y="480" class="t">Review &amp; Propose</text><text x="34" y="498" class="t">Approve &amp; Record</text><text x="34" y="516" class="t">Check Results</text><text x="34" y="534" class="t">Chat: replay, live</text>
-<rect x="230" y="430" width="190" height="140" rx="10" class="bx data"/><text x="244" y="456" class="h">data/plan.json</text><text x="244" y="480" class="t">Tools save proposals;</text><text x="244" y="498" class="t">only the workspace</text><text x="244" y="516" class="t">approves, rejects</text><text x="244" y="534" class="t">and records actions</text>
-<rect x="460" y="430" width="230" height="140" rx="10" class="bx hook"/><text x="474" y="456" class="h">Hooks (guards.js)</text><text x="474" y="480" class="t">Next period closed until</text><text x="474" y="498" class="t">it ends: a second guard</text><text x="474" y="516" class="t">Tool log, any key removed</text>
-<line x1="190" y1="72" x2="228" y2="72" class="ar" marker-end="url(#ah)"/><text x="194" y="64" class="lab">asks</text>
-<line x1="420" y1="72" x2="458" y2="72" class="ar" marker-end="url(#ah)"/><text x="424" y="64" class="lab">reply</text>
-<line x1="460" y1="150" x2="422" y2="150" class="ar dash" marker-end="url(#ah)"/><text x="426" y="170" class="lab">fix</text>
-<path d="M575,30 L575,14 L105,14 L105,28" class="ar dash" marker-end="url(#ah)"/><text x="250" y="9" class="lab">checked reply to the owner</text>
-<line x1="325" y1="180" x2="325" y2="223" class="ar" marker-end="url(#ah)"/><text x="332" y="207" class="lab">tool calls</text>
-<line x1="420" y1="300" x2="458" y2="300" class="ar" marker-end="url(#ah)"/><text x="424" y="292" class="lab">same</text>
-<path d="M760,180 L760,205 L620,205 L620,223" class="ar dash" marker-end="url(#ah)"/><text x="630" y="200" class="lab">served</text>
-<path d="M782,390 L782,410 L380,410 L380,393" class="ar" marker-end="url(#ah)"/><text x="560" y="405" class="lab">review-period rows</text>
-<path d="M820,390 L820,520 L692,520" class="ar dash" marker-end="url(#ah)"/><text x="700" y="540" class="lab">next period, after it closes</text>
-<line x1="300" y1="390" x2="300" y2="428" class="ar" marker-end="url(#ah)"/><text x="238" y="422" class="lab">proposals</text>
-<path d="M420,360 L440,360 L440,490 L458,490" class="ar" marker-end="url(#ah)"/><text x="444" y="425" class="lab">log</text>
-<line x1="105" y1="180" x2="105" y2="428" class="ar" marker-end="url(#ah)"/><text x="112" y="300" class="lab">decides on</text><text x="112" y="316" class="lab">the workspace</text>
-<line x1="190" y1="500" x2="228" y2="500" class="ar" marker-end="url(#ah)"/><text x="192" y="492" class="lab">decides</text>
-</svg>
+<div class="arch" role="img" aria-label="The owner asks the AI assistant in the chat; the assistant calls four tools through the guard hooks, which read the sample data and save proposals to the plan; the MCP server serves the same tools and four resources; the owner approves, rejects and records actions on the workspace.">
+<div class="ar"><div class="ab who"><b>The owner</b><span>Asks in the chat; may enter targets</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab ai"><b>AI assistant, Claude Haiku 5.5</b><span>A tool first each turn; reply check in code, sent back at most twice</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Hooks (guards.js)</b><span>Next period closed until it ends; tool log with any key removed</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Four tools, also on the MCP server</b><span>get_performance, get_campaign, propose_change, check_plan</span></div><div class="ab read"><b>Four resources</b><span>Business profile, Metric definitions, Review policy, Planning rules</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Sample data and the plan</b><span>Weekly results, next period, owner's notes; proposals saved to data/plan.json</span></div></div>
+<div class="ad"><em>decides on</em></div>
+<div class="ar"><div class="ab person"><b>The owner, on the workspace</b><span>Approves or rejects each proposal and records each action</span></div></div>
+</div>
 <table><tr><th>Layer</th><th>Components</th></tr>
 <tr><td><b>AI</b></td><td>Claude Haiku 5.5 through the Anthropic Messages API · one assistant in a tool-use loop (<code>agent.js</code>): at most 9 model calls per turn, tool rounds and reply fixes together, with at most 2 reply fixes, <code>tool_choice</code> "any" on the first round with a planned fallback to "auto" · system prompt and the four resources as cached reference (<code>prompt.js</code>)</td></tr>
 <tr><td><b>Rules in code</b></td><td><code>tools.js</code>: the metrics, figure records, review status, target check, caps and the follow-up check, written once and loaded by the local server, the MCP server, the benchmark and the browser workspace</td></tr>
