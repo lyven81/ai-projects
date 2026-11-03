@@ -1,0 +1,199 @@
+{
+ "restaurant": "Jade Star Chinese Dining 吉星饭厅",
+ "note": "Sample data. The fixed facts of R1 to R4 as numbers the code reads; the .md files say the same in words. test_booking.js checks the two agree.",
+ "season": {
+  "from": "2026-12-01",
+  "to": "2026-12-31",
+  "clause": "P1"
+ },
+ "hours": {
+  "open": "10:00",
+  "close": "22:00",
+  "clause": "P2"
+ },
+ "slots": [
+  "10:00",
+  "13:00",
+  "16:00",
+  "19:00"
+ ],
+ "slot_hours": 3,
+ "cutoff_minutes": 120,
+ "hold_minutes": 15,
+ "late_hold_minutes": 15,
+ "fee_rm": 100,
+ "max_party": 10,
+ "today": "2026-12-14T14:00",
+ "rooms": [
+  {
+   "id": "R6-1",
+   "size": 6,
+   "name": "Orchid Room",
+   "zh": "兰花厅",
+   "beside": "Daisy Court"
+  },
+  {
+   "id": "R6-2",
+   "size": 6,
+   "name": "Rose Room",
+   "zh": "玫瑰厅",
+   "beside": "Daisy Court"
+  },
+  {
+   "id": "R8-1",
+   "size": 8,
+   "name": "Tulip Room",
+   "zh": "郁金香厅",
+   "beside": "Lily Court"
+  },
+  {
+   "id": "R8-2",
+   "size": 8,
+   "name": "Lotus Room",
+   "zh": "荷花厅",
+   "beside": "Lily Court"
+  },
+  {
+   "id": "R10-1",
+   "size": 10,
+   "name": "Sakura Room",
+   "zh": "樱花厅",
+   "beside": "Jasmine Court"
+  },
+  {
+   "id": "R10-2",
+   "size": 10,
+   "name": "Sunflower Room",
+   "zh": "向日葵厅",
+   "beside": "Jasmine Court"
+  }
+ ],
+ "zones": [
+  {
+   "name": "Jasmine Court",
+   "zh": "茉莉区",
+   "seats": 10,
+   "tables": 10,
+   "prefix": "T10"
+  },
+  {
+   "name": "Lily Court",
+   "zh": "百合区",
+   "seats": 8,
+   "tables": 10,
+   "prefix": "T8"
+  },
+  {
+   "name": "Daisy Court",
+   "zh": "雏菊区",
+   "seats": 4,
+   "tables": 15,
+   "prefix": "T4"
+  }
+ ],
+ "handover_reasons": [
+  {
+   "n": 1,
+   "code": "party_over_10",
+   "label": "Party over 10",
+   "clause": "H1",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 2,
+   "code": "too_soon",
+   "label": "Less than 2 hours before the slot",
+   "clause": "H2",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 3,
+   "code": "after_booking",
+   "label": "Change or cancellation of a confirmed booking",
+   "clause": "H3",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 4,
+   "code": "special_request",
+   "label": "Special request: cake, decoration, high chair, microphone",
+   "clause": "H4",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 5,
+   "code": "outside_season",
+   "label": "Date outside December 2026",
+   "clause": "H5",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 6,
+   "code": "party_changed",
+   "label": "Party size changed after the code was sent",
+   "clause": "H6",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 7,
+   "code": "service_down",
+   "label": "Booking service down",
+   "clause": "H7",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 8,
+   "code": "confirmation_failed",
+   "label": "Confirmation failed: wrong code or code expired",
+   "clause": "H8",
+   "raised_by": "code"
+  },
+  {
+   "n": 9,
+   "code": "duplicate_conflict",
+   "label": "Same phone and slot sent again with different details",
+   "clause": "H9",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 10,
+   "code": "complaint",
+   "label": "Complaint",
+   "clause": "H10",
+   "raised_by": "assistant"
+  },
+  {
+   "n": 11,
+   "code": "asks_for_person",
+   "label": "Customer asks for a person",
+   "clause": "H11",
+   "raised_by": "assistant"
+  }
+ ],
+ "resources": [
+  {
+   "id": "R1",
+   "uri": "policy://restaurant",
+   "name": "Restaurant Policy",
+   "file": "Restaurant Policy.md"
+  },
+  {
+   "id": "R2",
+   "uri": "guide://rooms",
+   "name": "Room and Table Guide",
+   "file": "Room and Table Guide.md"
+  },
+  {
+   "id": "R3",
+   "uri": "calendar://december-2026",
+   "name": "Booking Calendar",
+   "file": "Booking Calendar.md"
+  },
+  {
+   "id": "R4",
+   "uri": "guide://handover",
+   "name": "Handover Guide",
+   "file": "Handover Guide.md"
+  }
+ ]
+}

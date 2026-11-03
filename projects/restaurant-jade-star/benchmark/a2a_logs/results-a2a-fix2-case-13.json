@@ -1,0 +1,59 @@
+{
+ "case": 13,
+ "log": [
+  {
+   "at": "2026-12-14T14:00",
+   "from": "customer agent",
+   "task_id": "845a8046-081f-4f5c-909a-8a8eb24eb18b",
+   "state": "submitted",
+   "text": "Hello, I would like to book a private room at Jade Star Chinese Dining for 5 people on Wednesday, 16 December 2026 at 4pm. Could you please make this booking?",
+   "data": {
+    "customer": {
+     "name": "Ahmad Faizal",
+     "phone": "012-3456713"
+    }
+   }
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "booking system",
+   "task_id": "845a8046-081f-4f5c-909a-8a8eb24eb18b",
+   "state": "working",
+   "text": ""
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "restaurant assistant",
+   "task_id": "845a8046-081f-4f5c-909a-8a8eb24eb18b",
+   "state": "input-required",
+   "text": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for the person on Wed 16 Dec 2026 at 4pm for 5 guests. The code has gone to the person's phone; they must confirm with it within 15 minutes, and the RM 100 fee is added to the bill at check-out.",
+   "data": {
+    "outcome": "held",
+    "proposal_ref": "JS-H1001",
+    "room": "Tulip Room 郁金香厅",
+    "date": "2026-12-16",
+    "slot": "16:00",
+    "party_size": 5,
+    "expires_at": "2026-12-14T14:15",
+    "confirm": "The person confirms with the 6-digit code sent by SMS to their phone. No agent can confirm."
+   }
+  }
+ ],
+ "exchanges": [
+  {
+   "sent": "Hello, I would like to book a private room at Jade Star Chinese Dining for 5 people on Wednesday, 16 December 2026 at 4pm. Could you please make this booking?",
+   "reply": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for the person on Wed 16 Dec 2026 at 4pm for 5 guests. The code has gone to the person's phone; they must confirm with it within 15 minutes, and the RM 100 fee is added to the bill at check-out.",
+   "state": "input-required",
+   "data": {
+    "outcome": "held",
+    "proposal_ref": "JS-H1001",
+    "room": "Tulip Room 郁金香厅",
+    "date": "2026-12-16",
+    "slot": "16:00",
+    "party_size": 5,
+    "expires_at": "2026-12-14T14:15",
+    "confirm": "The person confirms with the 6-digit code sent by SMS to their phone. No agent can confirm."
+   }
+  }
+ ]
+}

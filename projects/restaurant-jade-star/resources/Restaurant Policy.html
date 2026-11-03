@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<title>Restaurant Policy</title><style>:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+:target{outline:3px solid var(--accent);outline-offset:4px}
+h3:target+p{background:var(--box)}
+.crumbs{font-size:12.5px;color:var(--muted);margin-bottom:2px}
+.crumbs a{color:inherit;text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+</style></head>
+<body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../restaurant-jade-star.html">Jade Star Chinese Dining 吉星饭厅</a> / <a href="../demo.html">Demo</a></div><h1>Restaurant Policy (R1)</h1><nav id="toc"></nav></div>
+<p>Jade Star Chinese Dining 吉星饭厅. Sample data. The rules every booking route follows: the website form, the chat with the restaurant assistant, and customer agents through A2A. This policy covers the booking only, from the request to the confirmed booking.</p>
+
+<p><b>Resource:</b> <code>policy://restaurant</code>, served by the MCP server to the restaurant assistant. Each clause has its own link, for example <code>#P1</code>.</p>
+<h2>1. Clauses</h2>
+<h3 id="P1">P1 Season</h3>
+<p>Bookings are for December 2026 only, 1 to 31 December. A request for any other date goes to the restaurant manager.</p>
+<h3 id="P2">P2 Business hours</h3>
+<p>Open 10am to 10pm, 7 days a week. No booking outside business hours.</p>
+<h3 id="P3">P3 Booking slots</h3>
+<p>Four booking slots a day: 10am, 1pm, 4pm and 7pm. Each booking lasts 3 hours; the room can be booked again when the slot ends.</p>
+<h3 id="P4">P4 Private rooms only</h3>
+<p>Only the private rooms are booked: 6 rooms, 2 each for 6, 8 and 10 guests.</p>
+<h3 id="P5">P5 Room by party size</h3>
+<p>1 to 6 guests: a 6-pax room. 7 to 8 guests: an 8-pax room. 9 to 10 guests: a 10-pax room. If that size is full, the next size up is offered, never a smaller one.</p>
+<h3 id="P6">P6 Parties over 10</h3>
+<p>Parties of more than 10 are handed to the restaurant manager, who advises from what is free at the time.</p>
+<h3 id="P7">P7 Walk-in tables</h3>
+<p>The hall tables are walk-in only and never booked: 15 tables of 4 in Daisy Court, 10 tables of 8 in Lily Court, 10 tables of 10 in Jasmine Court.</p>
+<h3 id="P8">P8 Booking cut-off</h3>
+<p>A booking can be made up to 2 hours before the slot starts. A request for a slot that starts sooner goes to the restaurant manager.</p>
+<h3 id="P9">P9 What a booking records</h3>
+<p>A booking records the date, the slot, the party size, the name and the phone number. There is no menu in the booking: guests order when they arrive.</p>
+<h3 id="P10">P10 One booking per phone per slot</h3>
+<p>One booking per phone number per slot, on any route. The same request sent again gets the existing reference; nothing new is created. The same phone and slot with different details goes to the restaurant manager.</p>
+<h3 id="P11">P11 Hold and confirmation</h3>
+<p>Every route ends in a room held for 15 minutes. A 6-digit code goes by SMS to the customer's phone. Only the customer's click on the confirmation screen, with the right code within the 15 minutes, confirms the booking. With no click the booking is not processed and the room is released. A change after the code is sent goes to the restaurant manager. Every confirmation, successful or not, is sent to the restaurant manager.</p>
+<h3 id="P12">P12 Booking fee</h3>
+<p>Every confirmed booking carries a RM 100 booking fee, added to the bill at check-out with the meal. Nothing is collected at booking.</p>
+<h3 id="P13">P13 Late arrival</h3>
+<p>The room is held for 15 minutes after the slot starts, then released.</p>
+<h3 id="P14">P14 After booking</h3>
+<p>Changes, cancellations, overstay and no-show are handled by the restaurant manager and are outside this booking system.</p>
+<footer>© 2026 Lee Yih Ven · Restaurant Policy</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id=h.id||'s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('h3[id]').forEach(h=>{const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.id;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

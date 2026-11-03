@@ -1,0 +1,85 @@
+{
+ "case": 14,
+ "log": [
+  {
+   "at": "2026-12-14T14:00",
+   "from": "customer agent",
+   "task_id": "687e20d1-964c-46c3-8dd3-6a5546eb810d",
+   "state": "submitted",
+   "text": "Hello, I'd like to book a private room at Jade Star Chinese Dining for 6 people on Friday, 1 January 2027, for lunch at 1pm. Could you please confirm the booking?",
+   "data": {
+    "customer": {
+     "name": "Cheryl Wong",
+     "phone": "012-3456714"
+    }
+   }
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "booking system",
+   "task_id": "687e20d1-964c-46c3-8dd3-6a5546eb810d",
+   "state": "working",
+   "text": ""
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "restaurant assistant",
+   "task_id": "687e20d1-964c-46c3-8dd3-6a5546eb810d",
+   "state": "completed",
+   "text": "Welcome to Jade Star Chinese Dining 吉星饭厅. We take bookings for December 2026 only, so I've passed the request to our restaurant manager, who will call the person on 012-***6714.",
+   "data": {
+    "outcome": "handover",
+    "handover_note": {
+     "ref": "JS-M3001",
+     "reason": "outside_season",
+     "reason_label": "Date outside December 2026",
+     "receiver": "Restaurant manager",
+     "name": "Cheryl Wong",
+     "phone": "012-3456714",
+     "date": "2027-01-01",
+     "slot": "13:00",
+     "party_size": 6,
+     "room": null,
+     "proposal_ref": null,
+     "route": "A2A agent",
+     "words": "Hello, I'd like to book a private room at Jade Star Chinese Dining for 6 people on Friday, 1 January 2027, for lunch at 1pm. Could you please confirm the booking?",
+     "summary": "Guest wants a private room for 6 on Fri 1 Jan 2027 at 1pm. Date is outside December 2026, so the restaurant manager needs to advise.",
+     "created_at": "2026-12-14T14:00",
+     "status": "open",
+     "conversation": "a6209ac9-139f-4634-b122-1e7bf153570b"
+    },
+    "booking": null
+   }
+  }
+ ],
+ "exchanges": [
+  {
+   "sent": "Hello, I'd like to book a private room at Jade Star Chinese Dining for 6 people on Friday, 1 January 2027, for lunch at 1pm. Could you please confirm the booking?",
+   "reply": "Welcome to Jade Star Chinese Dining 吉星饭厅. We take bookings for December 2026 only, so I've passed the request to our restaurant manager, who will call the person on 012-***6714.",
+   "state": "completed",
+   "data": {
+    "outcome": "handover",
+    "handover_note": {
+     "ref": "JS-M3001",
+     "reason": "outside_season",
+     "reason_label": "Date outside December 2026",
+     "receiver": "Restaurant manager",
+     "name": "Cheryl Wong",
+     "phone": "012-3456714",
+     "date": "2027-01-01",
+     "slot": "13:00",
+     "party_size": 6,
+     "room": null,
+     "proposal_ref": null,
+     "route": "A2A agent",
+     "words": "Hello, I'd like to book a private room at Jade Star Chinese Dining for 6 people on Friday, 1 January 2027, for lunch at 1pm. Could you please confirm the booking?",
+     "summary": "Guest wants a private room for 6 on Fri 1 Jan 2027 at 1pm. Date is outside December 2026, so the restaurant manager needs to advise.",
+     "created_at": "2026-12-14T14:00",
+     "status": "open",
+     "conversation": "a6209ac9-139f-4634-b122-1e7bf153570b"
+    },
+    "booking": null
+   }
+  }
+ ]
+}

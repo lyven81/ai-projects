@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<title>Room and Table Guide</title><style>:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+:target{outline:3px solid var(--accent);outline-offset:4px}
+h3:target+p{background:var(--box)}
+.crumbs{font-size:12.5px;color:var(--muted);margin-bottom:2px}
+.crumbs a{color:inherit;text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+</style></head>
+<body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../restaurant-jade-star.html">Jade Star Chinese Dining 吉星饭厅</a> / <a href="../demo.html">Demo</a></div><h1>Room and Table Guide (R2)</h1><nav id="toc"></nav></div>
+<p>Jade Star Chinese Dining 吉星饭厅. Sample data. Room IDs are for the system; guests see the room names.</p>
+
+<p><b>Resource:</b> <code>guide://rooms</code>, served by the MCP server to the restaurant assistant. Each clause has its own link, for example <code>#G1</code>.</p>
+<h2>1. Clauses</h2>
+<h3 id="G1">G1 Private rooms</h3>
+<table><tr><th>ID</th><th>Room</th><th>Guests</th></tr><tr><td>R6-1</td><td>Orchid Room 兰花厅</td><td>up to 6</td></tr><tr><td>R6-2</td><td>Rose Room 玫瑰厅</td><td>up to 6</td></tr><tr><td>R8-1</td><td>Tulip Room 郁金香厅</td><td>up to 8</td></tr><tr><td>R8-2</td><td>Lotus Room 荷花厅</td><td>up to 8</td></tr><tr><td>R10-1</td><td>Sakura Room 樱花厅</td><td>up to 10</td></tr><tr><td>R10-2</td><td>Sunflower Room 向日葵厅</td><td>up to 10</td></tr></table>
+<h3 id="G2">G2 Which room fits which party</h3>
+<p>1 to 6 guests: Orchid Room or Rose Room. 7 to 8 guests: Tulip Room or Lotus Room. 9 to 10 guests: Sakura Room or Sunflower Room. When both rooms of that size are taken, a room of the next size up is offered; a party is never seated in a smaller room. More than 10 guests: the restaurant manager advises.</p>
+<h3 id="G3">G3 Walk-in dining zones (never booked)</h3>
+<table><tr><th>Zone</th><th>Tables</th></tr><tr><td>Jasmine Court 茉莉区</td><td>10 tables of 10</td></tr><tr><td>Lily Court 百合区</td><td>10 tables of 8</td></tr><tr><td>Daisy Court 雏菊区</td><td>15 tables of 4</td></tr></table>
+<p>These tables are walk-in only. Guests are seated in order of arrival.</p>
+<footer>© 2026 Lee Yih Ven · Room and Table Guide</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id=h.id||'s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('h3[id]').forEach(h=>{const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.id;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

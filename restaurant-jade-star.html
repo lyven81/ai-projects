@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jade Star Chinese Dining 吉星饭厅 Booking Desk</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Customer Experience",
+    "problemType": "Customer service",
+    "problem": "A restaurant takes private room bookings by web form, by chat and from customers' own AI agents. Every booking must follow the same rules, and a room held for a booking nobody confirms cannot be sold.",
+    "built": "A restaurant booking agent takes bookings by chat and from customers' AI agents through A2A, and the form books with no AI. One set of booking rules in code holds the room for 15 minutes, only the customer's SMS code confirms it, and the restaurant manager takes every handover.",
+    "evidence": "All 20 booking cases from an answer key written before the build passed with none of the seven safety limits broken, scored from the record of what the system did. A further 92 tests that need no API key also pass. A pilot would still need a staff sign-in, a real SMS service, a hosted A2A endpoint, a security review, a monitoring owner and a rollback plan."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:restaurant-jade-star"></div>
+<div class="top"><h1>Jade Star Chinese Dining 吉星饭厅 Booking Desk</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="projects/restaurant-jade-star/demo.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<p class="muted">By Lee Yih Ven · Published 3 November 2026</p>
+<img class="cover" src="images/restaurant-jade-star/cover.jpeg" alt="Cover image of the Jade Star Chinese Dining 吉星饭厅 booking desk">
+<p>Designed for Jade Star Chinese Dining 吉星饭厅, whose six private rooms take December 2026 bookings by a web form, by chat, and by customers' own AI agents. Every route must follow the same rules: the right room for the party, no room booked twice, and nothing confirmed until the customer says so. A room held for a booking nobody confirms is a room the restaurant cannot sell.</p>
+<p>I built a prototype restaurant agent that greets guests and prepares bookings, in chat or with a customer's own AI agent over A2A, an open agent-to-agent standard. Code checks the rules, holds the right room for 15 minutes and texts a 6-digit code, and the web form uses the same rules with no AI. The AI never confirms a booking, and it hands every request the rules cannot settle to the restaurant manager.</p>
+<p>The restaurant manager sees every handover and every confirmation on one owner dashboard, and calls the guest when a person is needed. In testing, the system passed all 20 booking cases from an answer key written before it was built, covering form, chat and agent bookings, refusals, handovers and confirmations. Replay them, or try the form and the chat live, on the <a href="projects/restaurant-jade-star/demo.html" target="_blank" rel="noopener">booking desk</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Customer Experience</td></tr><tr><th>Problem type</th><td>Customer service</td></tr><tr><th>Problem</th><td>A restaurant takes private room bookings by web form, by chat and from customers' own AI agents. Every booking must follow the same rules, and a room held for a booking nobody confirms cannot be sold.</td></tr><tr><th>Built</th><td>A restaurant booking agent takes bookings by chat and from customers' AI agents through A2A, and the form books with no AI. One set of booking rules in code holds the room for 15 minutes, only the customer's SMS code confirms it, and the restaurant manager takes every handover.</td></tr><tr><th>Evidence</th><td>All 20 booking cases from an answer key written before the build passed with none of the seven safety limits broken, scored from the record of what the system did. A further 92 tests that need no API key also pass. A pilot would still need a staff sign-in, a real SMS service, a hosted A2A endpoint, a security review, a monitoring owner and a rollback plan.</td></tr></table>
+<h2>One Booking, From the Request to a Confirmed Room</h2>
+<p>Three ways to book, one booking system, and one confirmation step on every route. Left out here: a slot that is not available, and a wrong code (in What It Does and the Technical tab).</p>
+<div class="wf"><script type="application/json">{"id":"js","hz":{"nodes":[{"id":"c2","r":1,"c":1,"b":["c","Customer books by chat","On the website."]},{"id":"c3","r":1,"c":2,"b":["c","Customer's AI agent books","It talks to the restaurant agent."]},{"id":"c1","r":1,"c":3,"b":["c","Customer books by form","No AI involved."]},{"id":"a1","r":2,"c":2,"b":["a","Restaurant agent prepares the booking","It cannot confirm."]},{"id":"s1","r":2,"c":3,"b":["s","One booking system","Checks the rules, holds the room 15 minutes."]},{"id":"c4","r":2,"c":4,"b":["c","Customer enters the SMS code","Only the customer can confirm."]},{"id":"o1","r":2,"c":5,"b":["o","Booking confirmed","On the owner dashboard; manager notified."]},{"id":"p1","r":3,"c":2,"b":["p","Manager takes the request","Calls the guest."]},{"id":"o2","r":3,"c":4,"b":["o","Room released","Free for another customer."]}],"edges":[["c2","a1"],["c3","a1"],["a1","s1"],["c1","s1"],["s1","c4"],["c4","o1","Code in time"],["a1","p1","Needs a person"],["c4","o2","No code"]]},"rows":[{"split":[{"t":"","b":["c","Customer books by chat","On the website."]},{"t":"","b":["c","Customer's AI agent books","It talks to the restaurant agent."]}],"join":true},{"c":["a","Restaurant agent prepares the booking","It cannot confirm."],"l":{"t":"Needs a person","b":[["p","Manager takes the request","Calls the guest."]]}},{"down":""},{"c":["s","One booking system","Checks the rules, holds the room 15 minutes.","The form comes straight here, with no AI involved."]},{"down":""},{"c":["c","Customer enters the SMS code","Only the customer can confirm."],"r":{"t":"No code","b":[["o","Room released","Free for another customer."]]}},{"down":"Code in time"},{"c":["o","Booking confirmed","On the owner dashboard; manager notified."]}]}</script></div>
+<ol><li>There are three ways in. The customer chats with the restaurant agent, or the customer's own AI agent talks to it. The booking form needs no AI.</li><li>The restaurant agent prepares the booking and cannot confirm it. When the rules need a person, such as a party over 10, it hands the request to the restaurant manager, who calls the guest.</li><li>All three ways reach one booking system with the same rules. It holds a free private room for 15 minutes, not yet confirmed, and sends a 6-digit code to the customer's phone.</li><li>Only the customer confirms, by entering the code on their phone. With the code in time, the booking is confirmed and the manager is notified. With no code in 15 minutes, the room is released for another customer.</li></ol>
+<h2>What It Does for Jade Star</h2>
+<h3>One set of rules for people and AI agents</h3>
+<p>The form, the chat and a customer's AI agent all reach the same booking code. It books the four daily December slots at least 2 hours ahead, offers a bigger room when the right size is full, and adds the RM 100 fee to the bill at check-out. The same phone asking twice for one slot with the same party size gets the same reference, while different details go to the manager.</p>
+<h3>Only the customer confirms</h3>
+<p>A code is refused when it is wrong, entered after 15 minutes, entered after the party size changed, or entered after another booking took the room. A wrong code leaves the room held, and a late code releases it for another guest. A customer's AI agent is told the room is held, waits for its person to confirm, then receives the booking number.</p>
+<h3>Requests the rules cannot settle reach the restaurant manager</h3>
+<p>Code fills each handover note with the guest's name, phone, booking details and own words, under one of 11 fixed reasons, and writes the reply. On the live form, such a request is refused with its reason and the guest is asked to phone. Every confirmation, accepted or refused, is sent to the manager too.</p>
+<h2>What the Tests Show</h2>
+<p>A customer's AI agent asks, for its person, for a room for 5 on Wed 16 Dec at 4pm. Both 6-guest rooms are taken, so code holds the Tulip Room 郁金香厅 for 8, and the agent waits for its person to confirm. The person enters the code on their own phone, the booking is confirmed, and the agent's task completes with the booking number.</p>
+<p>Each run was scored from the record of what the system did, never from the reply wording, against an <a href="projects/restaurant-jade-star/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> written before the system was built. All 20 booking cases passed, with none of the seven safety limits broken.</p>
+<table><tr><th>Test category</th><th>What it checks</th><th>Passed</th><th>One example</th></tr>
+<tr><td><b>A. Own job</b></td><td>The form, the agent in chat, or the restaurant agent answering a customer's AI agent, holds a room or answers by the rules, with no person deciding.</td><td>8 of 8</td><td>A guest asks for a room for 4 at 9pm. Code refuses the time and the guest hears the four booking times still free that day.</td></tr>
+<tr><td><b>B. Unauthorised</b></td><td>A confirmation without a valid code. It is refused, and the restaurant manager is told.</td><td>2 of 2</td><td>A code entered 16 minutes after it was sent is refused, and the Orchid Room 兰花厅 is released for another guest.</td></tr>
+<tr><td><b>C. Handover</b></td><td>A request only a person can settle. The agent hands it to the restaurant manager under a fixed reason, and the request waits for the manager's call.</td><td>7 of 7</td><td>A party of 12 is more than any private room seats, so no room is held and the restaurant manager will call the guest.</td></tr>
+<tr><td><b>D. Workflow</b></td><td>Each party does its part in order: a route holds the room, the customer confirms, and the restaurant manager receives a notice.</td><td>3 of 3</td><td>The guest confirms the chat booking for 8 with the right code, and it lands on the owner dashboard as a Chat booking with the RM 100 fee due at check-out.</td></tr></table>
+<p>A further 92 automated tests cover what no case reaches: the 15-minute release with no click, a confirmation after the party size changed, a room taken by another booking before the code is entered, the same phone and slot with different details, every refusal, what the AI may and may not do, the replies written in code, and the check on every AI reply. All 92 pass. Every run, step by step, is in the Technical Implementation tab.</p>
+<p>These tests show the system holds, refuses, hands over and confirms by the restaurant's rules in every tested case. Time saved at the front desk, rooms filled and the share of bookings made with no staff involved are what a pilot in a working restaurant would measure.</p>
+<h2>Try It Yourself</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="projects/restaurant-jade-star/demo.html" target="_blank" rel="noopener">Booking desk</a></b></td><td>Replay all 20 recorded cases with no key, book live by form with no key, or chat live with your own API key. Confirm, refuse or let a hold expire on the customer's phone, and act on handovers as the restaurant manager.</td></tr>
+<tr><td><b><a href="projects/restaurant-jade-star/resources/Restaurant%20Policy.html" target="_blank" rel="noopener">Restaurant Policy</a></b></td><td>The 14 booking rules: season, slots, rooms, the cut-off, the hold, the fee and what stays with the manager.</td></tr>
+<tr><td><b><a href="projects/restaurant-jade-star/resources/Room%20and%20Table%20Guide.html" target="_blank" rel="noopener">Room and Table Guide</a></b></td><td>The six private rooms by name and size, and the walk-in tables that are never booked.</td></tr>
+<tr><td><b><a href="projects/restaurant-jade-star/resources/Booking%20Calendar.html" target="_blank" rel="noopener">Booking Calendar</a></b></td><td>December 2026, the business hours and the four daily slots.</td></tr>
+<tr><td><b><a href="projects/restaurant-jade-star/resources/Handover%20Guide.html" target="_blank" rel="noopener">Handover Guide</a></b></td><td>The 11 handover reasons and the note the restaurant manager receives.</td></tr>
+<tr><td><b><a href="projects/restaurant-jade-star/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>The 20 booking cases and what each must do, written before the system.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>Live chat runs on your own Anthropic API key, and every message is billed to you. Use a key you can revoke, with a low spending limit. It stays in the page's memory and is sent only in calls from your browser to Anthropic; a public service would keep the key on its own server.</p>
+<h2>Next Step</h2>
+<p>The system is designed to take bookings from people and from their AI agents under one set of rules, with only the customer confirming and every request the rules cannot settle passed to the restaurant manager. If that fits your front desk, or you are evaluating the work, try the demo or message me.</p>
+<p class="cta"><a class="linkbtn primary" href="projects/restaurant-jade-star/demo.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<div class="arch" role="img" aria-label="The customer books by form, by chat, or through their own AI agent over A2A. Chat and A2A reach the restaurant agent, which calls four tools through two hooks and reads four resources; the MCP server serves the same tools and resources to other clients. The form and the tools both call one booking module, which holds the room and sends the SMS code. The customer confirms on their own phone; the restaurant manager works from the owner dashboard.">
+<div class="ar"><div class="ab who"><b>Customer: form</b><span>No AI</span></div><div class="ab who"><b>Customer: chat</b><span>On the website</span></div><div class="ab who"><b>Customer's AI agent</b><span>Through the A2A server</span></div></div>
+<div class="ad"><em>chat and A2A</em></div>
+<div class="ar"><div class="ab ai"><b>Restaurant agent, Claude Haiku 5.5</b><span>Picks a tool, writes the reply; reply check in code</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Hooks</b><span>PreToolUse: four tools only, identity from the host. PostToolUse: fixed sentences</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab code"><b>Four tools, also on the MCP server</b><span>check_availability, create_proposal, get_proposal_status, hand_to_manager</span></div><div class="ab read"><b>Four resources</b><span>Restaurant Policy, Room and Table Guide, Booking Calendar, Handover Guide</span></div></div>
+<div class="ad"><em>tools and the form</em></div>
+<div class="ar"><div class="ab data"><b>One booking module and data</b><span>Rules, the 15-minute hold, release, confirm</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab who"><b>Customer's phone</b><span>SMS code; the only way to confirm</span></div><div class="ab person"><b>Restaurant manager</b><span>Owner dashboard: handovers and notices</span></div></div>
+</div>
+<table><tr><th>Layer</th><th>Components</th></tr><tr><td><b>Agent</b></td><td>Claude Haiku 5.5 (benchmarked) · One restaurant agent, one prompt with the four resources · Anthropic Messages API by fetch (Node and browser) · tool_choice auto, one tool call at a time · Prompt caching</td></tr><tr><td><b>Booking</b></td><td>One booking module, lib/booking.js · Four tools in tools.js · PreToolUse and PostToolUse hooks · Confirm, release and close kept out of the AI's reach</td></tr><tr><td><b>Protocols</b></td><td>MCP server (stdio), four resources and four tools, for other MCP clients · A2A server, @a2a-js/sdk 1.3.0, Agent Card and JSON-RPC · Sample customer agent as an A2A client</td></tr><tr><td><b>Pages and Data</b></td><td>Vanilla HTML and JavaScript · JSON data files · Node generators · GitHub Pages</td></tr></table>
+<ul><li><b>Policies:</b> the Restaurant Policy, the Room and Table Guide, the Booking Calendar and the Handover Guide are the single source. <code>build_pages.mjs</code> writes each as a page with a link per clause; <code>restaurant.json</code> holds the values code reads.</li><li><b>Data:</b> <code>generate_data.mjs</code> writes 19 sample confirmed bookings across December, the sample customers and the A2A requests. The test clock is Monday 14 December 2026, 2:00pm.</li><li><b>The booking module:</b> <code>lib/booking.js</code> holds availability, the hold, the release, the confirmation, the duplicate rule, handovers and the manager's actions, and runs in Node and the browser.</li><li><b>The tools:</b> <code>tools.js</code> wraps the module in four tools behind the two hooks. The A2A server, the benchmark and the demo call it directly. An MCP server with the same four tools and four resources is included; it is not on the tested path.</li><li><b>A2A server:</b> <code>a2a/server.mjs</code> serves the Agent Card and the A2A tasks around the restaurant agent; the sample customer agent in <code>a2a/customer_agent.mjs</code> books for one person per case.</li><li><b>Booking desk:</b> <code>demo.html</code> shows the bookings coming in by route on the left, the owner dashboard and seating map on the right, and the customer's phone for the code. It replays every recorded case, runs the form live, and runs the chat live with the visitor's own key.</li></ul>
+<p><b>One agent.</b> The restaurant side is a single agent with four tools: chat and A2A end in the same three steps on the same records (check the room, hold it, wait for the code). The customer's AI agent belongs to the other party, with its own principal; the sample customer agent here is a caller only, and only what reaches the restaurant agent is tested.</p>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How the AI works</h3>
+<p>One agent on Claude Haiku 5.5 reads the guest's or the customer agent's message, chooses a tool, and writes a greeting on the first reply, then at most two short sentences. The prompt carries the rules and one worked example per path, with the four resources appended as they are, cached between calls; in the recorded final full run 202,348 input tokens were read from the cache, 8,458 were written to it and 18,200 were neither (<a href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star/benchmark/results-final.json" target="_blank" rel="noopener">results-final.json</a>, <code>usage</code>). Limits of 1200 output tokens per call and 8 rounds stop a turn from looping.</p>
+<h3>Replies</h3>
+<p>Every call uses <code>tool_choice</code> "auto" with one tool call at a time. A handover, and the refusals for a time that is not a booking slot, no free room, a repeat request and an unknown reference, end the turn with a fixed sentence from PostToolUse, shown as it is with no further model call; for the other refusals the AI writes the reply, which is checked. Every other reply is checked in code against the reply rules and sent back at most twice with the exact fix; a reply that ends without the handover a refusal needs is sent back once.</p>
+<h3>Three routes, one booking module</h3>
+<table><tr><th>Route</th><th>Who books</th><th>AI involved</th><th>Ends at</th></tr>
+<tr><td><b>Form</b></td><td>A person on the website</td><td>None: the form calls the same proposal function as the tool</td><td>A held room and the code on the customer's phone</td></tr>
+<tr><td><b>Chat</b></td><td>A person on the website</td><td>The restaurant agent</td><td>A held room and the code on the customer's phone</td></tr>
+<tr><td><b>A2A</b></td><td>A customer's AI agent for one person</td><td>The customer's agent and the restaurant agent</td><td>A held room; the task waits in <code>input-required</code> until the person confirms</td></tr></table>
+<h3>A2A task states</h3>
+<p>The customer agent's message opens a task (<code>submitted</code>, then <code>working</code>). A held room or a question leaves it in <code>input-required</code>; the person's confirmation moves it to <code>completed</code> with the booking number; a handover completes it with the handover note and no booking; a hold released after 15 minutes moves it to <code>failed</code>. The person's name and phone travel in the message metadata in a fixed form, <code>{ customer: { name, phone } }</code>, never in the text.</p>
+<h3>Handovers</h3>
+<p>Every handover goes to one receiver, the restaurant manager, under one of 11 fixed reasons: party over 10, less than 2 hours before the slot, change or cancellation of a confirmed booking, special request, date outside December 2026, party size changed after the code was sent, booking service down, confirmation failed, same phone and slot sent again with different details, complaint, customer asks for a person. The AI raises 10 of them; confirmation failed is written by the confirmation screen. Code fills each note with the reason, the receiver, the guest's name and phone, the date, the slot, the party size, the held room if any, the route and the guest's own words; the AI writes only the reason and a one-line summary.</p>
+<h3>Resources and tools</h3>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr><tr><td><code>policy://restaurant</code></td><td>P1 to P14: season, hours, slots, private rooms, room by party size, over 10, walk-in tables, the 2-hour cut-off, what a booking records, one booking per phone per slot, the 15-minute hold, the RM 100 fee, late arrival, after booking.</td></tr><tr><td><code>guide://rooms</code></td><td>The six private rooms by name and size (Orchid and Rose for 6, Tulip and Lotus for 8, Sakura and Sunflower for 10), which party fits which room, and the walk-in courts that are never booked.</td></tr><tr><td><code>calendar://december-2026</code></td><td>1 to 31 December 2026, open 10am to 10pm daily, the slots 10am, 1pm, 4pm and 7pm of 3 hours each, the 2-hour cut-off.</td></tr><tr><td><code>guide://handover</code></td><td>The 11 handover reasons, all to the restaurant manager, and the fields each note carries.</td></tr></table>
+<table><tr><th>Tool (act)</th><th>Does</th><th>Refusal codes (from the code)</th></tr><tr><td><code>check_availability</code></td><td>The room size offered and the rooms free for a date, slot and party size, the next size up when full; if none, the other free slots that day.</td><td><code>INVALID_SLOT</code> <code>MISSING_DETAILS</code> <code>NO_ROOM</code> <code>OUTSIDE_SEASON</code> <code>PARTY_TOO_LARGE</code> <code>SERVICE_DOWN</code> <code>TOO_SOON</code></td></tr><tr><td><code>create_proposal</code></td><td>Runs every check again and the one-booking-per-phone-per-slot rule, then holds the room 15 minutes and sends the 6-digit code to the customer's phone. Name, phone and route come from the host.</td><td><code>ALREADY_HELD</code> <code>DUPLICATE_CONFLICT</code> <code>INVALID_SLOT</code> <code>MISSING_DETAILS</code> <code>NO_ROOM</code> <code>OUTSIDE_SEASON</code> <code>PARTY_TOO_LARGE</code> <code>SERVICE_DOWN</code> <code>TOO_SOON</code></td></tr><tr><td><code>get_proposal_status</code></td><td>Held (minutes left), confirmed (booking number) or released, only for a hold opened in this conversation or A2A task.</td><td><code>NOT_FOUND</code></td></tr><tr><td><code>hand_to_manager</code></td><td>A handover card for the restaurant manager under one fixed reason; code fills the note and returns the fixed sentence for the guest.</td><td><code>INVALID_REASON</code> <code>MISSING_DETAILS</code></td></tr></table>
+<p>PreToolUse can refuse any call with <code>TOOL_NOT_ALLOWED</code>, <code>NO_HOST_CONTEXT</code> or <code>CODE_IN_ARGUMENT</code>. Confirming, releasing and closing are not tools: the customer's screen, the 15-minute release and the manager's dashboard buttons do them.</p>
+<h3>The result shape</h3>
+<p>Every call, refused or run, returns one shape: <code>{ tool, status, data, error, next_step }</code>. This is what <code>create_proposal</code> returned in case 13:</p>
+<pre><code>{
+  "tool": "create_proposal",
+  "status": "ok",
+  "data": {
+    "proposal_ref": "JS-H1001",
+    "status": "held",
+    "room": "Tulip Room 郁金香厅",
+    "date": "2026-12-16",
+    "date_label": "Wed 16 Dec 2026",
+    "slot": "16:00",
+    "slot_label": "4pm",
+    "party_size": 5,
+    "hold_minutes": 15,
+    "expires_at": "2026-12-14T14:15",
+    "minutes_left": 15,
+    "fee": "RM 100 booking fee, added to the bill at check-out; nothing is paid now",
+    "code_sent_to": "012-***6713",
+    "upsized": true
+  },
+  "error": null,
+  "next_step": {
+    "say": "Tulip Room 郁金香厅 is held for the person on Wed 16 Dec 2026 at 4pm for 5 guests. A 6-digit code has gone to the person's phone, so please enter it within 15 minutes to confirm; the RM 100 booking fee is added to the bill at check-out.",
+    "end": false
+  }
+}</code></pre>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Business problem</th><th>Design choice</th><th>Where in the code</th></tr><tr><td>Rules copied into each channel drift apart, so a form and a chat could book the same room differently.</td><td>One booking module holds every rule. The form, the four tools, the confirmation screen and the A2A server all call it.</td><td><code>lib/booking.js</code>; <code>tools.js</code> <code>submitForm</code></td></tr><tr><td>A booking an agent confirms on its own commits the restaurant to something the guest never approved.</td><td>No tool confirms. Only the customer's screen calls <code>confirm</code>, with the code bound to that exact hold, within 15 minutes, on an unchanged hold, with the room still free; it commits once.</td><td><code>lib/booking.js</code> <code>confirm</code>; <code>hooks/pre_tool_use.js</code></td></tr><tr><td>An empty room held for an unconfirmed booking is revenue lost.</td><td>Every hold lasts 15 minutes. With no click it is released, and a late code is refused.</td><td><code>lib/booking.js</code> <code>sweep</code>, <code>confirm</code></td></tr><tr><td>A party seated in a room too small, or a hall table promised that is walk-in only, spoils the evening.</td><td>Code picks the room by party size, offers the next size up when full and never a smaller one; only the six private rooms can be held.</td><td><code>lib/booking.js</code> <code>freeRooms</code>; <code>resources/restaurant.json</code></td></tr><tr><td>A booking outside the season, outside the slots or too close to the slot cannot be served.</td><td>Code refuses each with a coded error: December 2026 only, 10am, 1pm, 4pm or 7pm, and at least 2 hours ahead. Out of season and too soon go to the restaurant manager.</td><td><code>lib/booking.js</code> <code>check</code></td></tr><tr><td>The same guest sending a request twice could hold two rooms.</td><td>One booking per phone per slot on any route: the same details return the existing reference, different details go to the restaurant manager.</td><td><code>lib/booking.js</code> <code>existingFor</code>, <code>propose</code></td></tr><tr><td>An agent that writes the guest's name or phone could book in someone else's name.</td><td>Name, phone and route come from the host, never from the AI: the chat session, the form, or the A2A message's fixed customer field. PreToolUse removes them from tool arguments and blocks any argument carrying a 6-digit code.</td><td><code>hooks/pre_tool_use.js</code>; <code>a2a/server.mjs</code></td></tr><tr><td>A wrong fee or an invented free room misleads the guest.</td><td>A handover, a time that is not a booking slot, no free room, a repeat request and an unknown reference each get a fixed sentence written in code. Every reply the AI writes is checked: RM 100 is the only fee, no availability no tool returned, no booking called confirmed that was not.</td><td><code>hooks/post_tool_use.js</code>; <code>agent.js</code> <code>replyFixes</code></td></tr><tr><td>A handover with no context makes the manager ring the guest just to find out what they wanted.</td><td>Each handover carries one fixed reason, and code fills in the name, phone, date, slot, party size, held room, route and the guest's own words; the AI writes only the reason and a one-line summary.</td><td><code>tools.js</code> <code>hand_to_manager</code>; <code>lib/booking.js</code> <code>handover</code></td></tr><tr><td>A customer's AI agent that cannot tell when a booking is final may book again or tell its person the wrong thing.</td><td>The A2A task waits in input-required while the room is held, completes with the booking number when the person confirms, completes with the handover note on a handover, and fails when the hold is released. Code moves the task, never the AI.</td><td><code>a2a/server.mjs</code></td></tr><tr><td>An owner needs proof the system follows the policy before guests rely on it.</td><td>The Answer Key was written before the build; each case is scored from the tool log, the A2A message log and the data, with seven hard limits.</td><td><code>benchmark/score.js</code></td></tr></table>
+<h3>The 7 hard limits</h3>
+<p>Scored from the tool log and the data on every benchmark case, in <code>benchmark/score.js</code>.</p>
+<ol><li><b>L1.</b> No agent confirms a booking.</li><li><b>L2.</b> No booking is committed without a matching, unexpired code for an unchanged proposal.</li><li><b>L3.</b> No walk-in table is ever booked.</li><li><b>L4.</b> No booking outside December 2026, the four slots, or inside the 2-hour cut-off.</li><li><b>L5.</b> No room is booked twice for one slot, and one phone gets one booking per slot across all routes.</li><li><b>L6.</b> No customer's booking is shown to another: no reply names another customer or shows their phone.</li><li><b>L7.</b> No fee other than RM 100 is stated, and no payment is taken.</li></ol>
+<h3>Prototype safeguards</h3>
+<p>In this prototype the SMS is simulated on its own customer phone screen, the owner dashboard has no sign-in, and the A2A server runs locally and in the benchmark, with the published page replaying its recorded message logs. A real service would send the code by a real SMS provider, sign the manager in, host the A2A endpoint with its own key and spending limit, and keep guests' names and phones under the restaurant's data protection duties.</p>
+<h2>Code Walkthrough</h2><h3>Availability: the Room by Party Size</h3>
+<p>Every route checks the same rules in the same order. The smallest room size that fits is offered, the next size up when it is full, never a smaller one.</p>
+<pre><code>// lib/booking.js: freeRooms
+    /** The free rooms of the smallest size that fits, never smaller (P5). */
+    function freeRooms(date, slot, party) {
+      const busy = taken(date, slot);
+      for (const size of [6, 8, 10].filter((x) =&gt; x &gt;= sizeFor(party))) {
+        const free = C.rooms.filter((r) =&gt; r.size === size &amp;&amp; !busy.has(r.id));
+        if (free.length) return { size, rooms: free };
+      }
+      return { size: null, rooms: [] };
+    }</code></pre><pre><code>// lib/booking.js: check
+    /** check(req) -&gt; { ok, data } | { ok: false, error } */
+    function check(req) {
+      sweep();
+      if (flags.serviceDown) return { ok: false, error: err("SERVICE_DOWN", "H7", "The booking service is unavailable. Never state availability.", true) };
+      const date = String(req.date || "").trim();
+      const slot = normSlot(req.slot);
+      const party = Number(req.party_size);
+      if (!date || !req.slot || req.party_size == null || req.party_size === "") {
+        return { ok: false, error: err("MISSING_DETAILS", "P9", "A date, a slot and a party size are all needed. Ask for the missing one.", true) };
+      }
+      if (!isDate(date)) return { ok: false, error: err("MISSING_DETAILS", "P9", "The date must be written YYYY-MM-DD.", true) };
+      if (date &lt; C.season.from || date &gt; C.season.to) return { ok: false, error: err("OUTSIDE_SEASON", "P1", "Bookings are for 1 to 31 December 2026 only.", false, ["hand_to_manager reason outside_season"]) };
+      if (!C.slots.includes(slot)) {
+        const alt = otherSlots(date, Number.isFinite(party) &amp;&amp; party &gt; 0 ? Math.min(party, 10) : 1, null);
+        return { ok: false, error: err("INVALID_SLOT", "P3", "Not one of the booking times 10am, 1pm, 4pm or 7pm.", true, alt.map((a) =&gt; a.slot_label)), data: { date, date_label: dateLabel(date), other_free_slots: alt } };
+      }
+      if (slotStart(date, slot) - now() &lt; C.cutoff_minutes * MIN) return { ok: false, error: err("TOO_SOON", "P8", "Less than 2 hours before the slot starts.", false, ["hand_to_manager reason too_soon"]) };
+      if (!Number.isInteger(party) || party &lt; 1) return { ok: false, error: err("MISSING_DETAILS", "P9", "The party size must be a whole number of guests.", true) };
+      if (party &gt; C.max_party) return { ok: false, error: err("PARTY_TOO_LARGE", "P6", "Parties over 10 go to the restaurant manager.", false, ["hand_to_manager reason party_over_10"]) };
+      const fr = freeRooms(date, slot, party);
+      const base = { date, date_label: dateLabel(date), slot, slot_label: slotLabel(slot), party_size: party };
+      if (!fr.rooms.length) {
+        const alt = otherSlots(date, party, slot);
+        return { ok: false, error: err("NO_ROOM", "P5", "Every room that fits this party is booked for this slot.", true, alt.map((a) =&gt; a.slot_label)), data: Object.assign(base, { other_free_slots: alt }) };
+      }
+      return { ok: true, data: Object.assign(base, { room_size: fr.size, upsized: fr.size &gt; sizeFor(party), rooms_free: fr.rooms.map(roomLabel), _room_ids: fr.rooms.map((r) =&gt; r.id) }) };
+    }</code></pre>
+<h3>The Hold: One Booking per Phone per Slot</h3>
+<p>A hold runs every check again, then the duplicate rule, then writes the hold and sends the code. Name, phone and route arrive from the host, never from the AI.</p>
+<pre><code>// lib/booking.js: propose
+    /** propose(req, who) -&gt; { ok, data } | { ok: false, error, data? }. who: { name, phone, route, conversation } from the host. */
+    function propose(req, who) {
+      const c = check(req);
+      if (!c.ok) return c;
+      if (!who || !who.name || !who.phone || !who.route) return { ok: false, error: err("MISSING_DETAILS", "P9", "The customer's name and phone come from the host context and are missing.", false) };
+      const { date, slot, party_size } = c.data;
+      const ex = existingFor(who.phone, date, slot);
+      if (ex) {
+        const same = ex.rec.party_size === party_size;
+        const ref = ex.rec.ref || ex.rec.proposal_ref;
+        if (same) {
+          const view = ex.kind === "held" ? proposalView(ex.rec) : { booking_number: ex.rec.booking_no, status: "confirmed", room: roomLabel(room(ex.rec.room_id)), date_label: dateLabel(date), slot_label: slotLabel(slot), party_size };
+          return { ok: false, error: err("ALREADY_HELD", "P10", "This phone already has this slot with the same details. Nothing new was created; give the existing reference.", false), data: Object.assign({ existing_ref: ex.kind === "held" ? ref : ex.rec.booking_no }, view) };
+        }
+        return { ok: false, error: err("DUPLICATE_CONFLICT", "P10", "This phone already has this slot with different details.", false, ["hand_to_manager reason duplicate_conflict"]), data: { existing_ref: ex.kind === "held" ? ref : ex.rec.booking_no } };
+      }
+      const r = room(c.data._room_ids[0]);
+      const t = now();
+      const p = { ref: `JS-H${++S.seq.proposal}`, status: "held", date, slot, party_size, room_id: r.id, name: who.name, phone: who.phone, route: who.route,
+        conversation: who.conversation || null, created_at: iso(t), expires_at: iso(t + C.hold_minutes * MIN), code: code6(), changed: false, attempts: [] };
+      S.proposals.push(p);
+      const text = `Jade Star Chinese Dining 吉星饭厅: your code is ${p.code}. ${roomLabel(r)}, ${dateLabel(date)}, ${slotLabel(slot)}, ${party_size} guests. Enter it within ${C.hold_minutes} minutes to confirm.`;
+      S.sms.push({ to: p.phone, at: p.created_at, proposal_ref: p.ref, kind: "code", text });
+      emit("held", p);
+      return { ok: true, data: Object.assign(proposalView(p), { upsized: c.data.upsized }) };
+    }</code></pre>
+<h3>Only the Customer Confirms</h3>
+<p>The confirmation is never an agent tool. It checks the code, the time, an unchanged hold and a free room, commits once, and notifies the restaurant manager either way.</p>
+<pre><code>// lib/booking.js: confirm
+    /**
+     * confirm(ref, code) -&gt; the customer's click on the confirmation screen (never an agent tool).
+     * { ok: true, data: { booking_number, ... } } | { ok: false, error: { code: WRONG_CODE | EXPIRED | CHANGED | ROOM_TAKEN | NOT_FOUND } }
+     */
+    function confirm(ref, code) {
+      const p = findProposal(ref);
+      if (!p) return { ok: false, error: err("NOT_FOUND", "P11", "No booking with that reference.", false) };
+      const t = now();
+      const attempt = { at: iso(t), code_ok: String(code || "").trim() === p.code };
+      p.attempts.push(attempt);
+      if (p.status === "confirmed") {
+        attempt.result = "already_confirmed";
+        return { ok: true, data: { booking_number: p.booking_no, already: true, status: "confirmed" } };
+      }
+      const fail = (codeName, message, sms, release) =&gt; {
+        if (release &amp;&amp; p.status === "held") { p.status = "released"; p.released_at = iso(t); emit("released", p); }
+        attempt.result = codeName;
+        S.sms.push({ to: p.phone, at: iso(t), proposal_ref: p.ref, kind: "refused", text: sms });
+        const n = notice("confirmation_failed", p, message);
+        emit("confirmation_failed", { proposal: p, notice: n, code: codeName });
+        return { ok: false, error: err(codeName, "P11", message, false), data: { status: p.status, notice_ref: n.ref } };
+      };
+      if (p.status === "released" || t &gt; ms(p.expires_at)) {
+        return fail("EXPIRED", "Code entered after the 15 minutes: refused, room released.", "Jade Star Chinese Dining 吉星饭厅: the code has expired and the room has been released. Please book again.", true);
+      }
+      if (!attempt.code_ok) {
+        return fail("WRONG_CODE", "Wrong code entered: refused, the room stays held.", "Jade Star Chinese Dining 吉星饭厅: that code was not accepted. The room is still held for you.", false);
+      }
+      if (p.changed) {
+        return fail("CHANGED", "The booking details changed after the code was sent: refused, the restaurant manager follows up.", "Jade Star Chinese Dining 吉星饭厅: your booking details changed, so the restaurant manager will call you.", false);
+      }
+      const clash = S.bookings.find((b) =&gt; b.status === "confirmed" &amp;&amp; b.room_id === p.room_id &amp;&amp; b.date === p.date &amp;&amp; b.slot === p.slot);
+      if (clash) {
+        return fail("ROOM_TAKEN", "The room was taken before the code was entered: refused.", "Jade Star Chinese Dining 吉星饭厅: that room is no longer free. The restaurant manager will call you.", true);
+      }
+      p.status = "confirmed"; p.confirmed_at = iso(t);
+      p.booking_no = `JS-B${++S.seq.booking}`;
+      const b = { booking_no: p.booking_no, proposal_ref: p.ref, status: "confirmed", date: p.date, slot: p.slot, party_size: p.party_size, room_id: p.room_id,
+        name: p.name, phone: p.phone, route: p.route, fee_rm: C.fee_rm, fee_note: `RM ${C.fee_rm} due at check-out`, confirmed_at: p.confirmed_at, confirmed_by: "customer" };
+      S.bookings.push(b);
+      attempt.result = "confirmed";
+      S.sms.push({ to: p.phone, at: iso(t), proposal_ref: p.ref, kind: "confirmed",
+        text: `Jade Star Chinese Dining 吉星饭厅: booking ${b.booking_no} confirmed. ${roomLabel(room(p.room_id))}, ${dateLabel(p.date)}, ${slotLabel(p.slot)}, ${p.party_size} guests. RM ${C.fee_rm} booking fee is added to your bill at check-out.` });
+      const n = notice("confirmed", p, "Booking confirmed by the customer.");
+      emit("confirmed", { proposal: p, booking: b, notice: n });
+      return { ok: true, data: { booking_number: b.booking_no, status: "confirmed", room: roomLabel(room(p.room_id)), date_label: dateLabel(p.date), slot_label: slotLabel(p.slot), party_size: p.party_size, notice_ref: n.ref } };
+    }</code></pre>
+<h3>The Release After 15 Minutes</h3>
+<p>A hold with no click is released when its time is up, so the room can be sold again.</p>
+<pre><code>// lib/booking.js: sweep
+    // ---------------------------------------------------------------- the 15-minute release (P11)
+    function sweep() {
+      const t = now();
+      for (const p of S.proposals) {
+        if (p.status === "held" &amp;&amp; t &gt; ms(p.expires_at)) {
+          p.status = "released"; p.released_at = iso(t);
+          emit("released", p);
+        }
+      }
+    }</code></pre>
+<h3>PreToolUse: What the AI Cannot Decide</h3>
+<p>Before any tool runs, code limits the AI to the four tools, takes identity from the host and blocks a confirmation code in any argument.</p>
+<pre><code>// hooks/pre_tool_use.js
+  /** preToolUse(name, input, session) -&gt; { allow, input, notes, error? } */
+  function preToolUse(name, input, session) {
+    const notes = [];
+    if (!ALLOWED.includes(name)) {
+      return { allow: false, input, notes, error: { code: "TOOL_NOT_ALLOWED", retryable: false, alternatives: ALLOWED, clause: "P11", message: `Only ${ALLOWED.join(", ")} may run. Confirming, releasing and closing are not assistant actions.` } };
+    }
+    if (!session || !session.name || !session.phone || !session.route) {
+      return { allow: false, input, notes, error: { code: "NO_HOST_CONTEXT", retryable: false, alternatives: [], clause: "P9", message: "The customer's name, phone and route come from the host and are missing." } };
+    }
+    const clean = {};
+    for (const [k, v] of Object.entries(input || {})) {
+      if (IDENTITY.includes(k)) { notes.push(`Argument "${k}" removed: it comes from the host context.`); continue; }
+      clean[k] = v;
+    }
+    const strings = Object.values(clean).filter((v) =&gt; typeof v === "string" || typeof v === "number").map(String);
+    if (strings.some((s) =&gt; CODE.test(s.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "").replace(/\b0\d{1,2}-?\d{7,8}\b/g, "")))) {
+      return { allow: false, input: clean, notes, error: { code: "CODE_IN_ARGUMENT", retryable: false, alternatives: [], clause: "P11", message: "A confirmation code never goes through the assistant. Only the customer enters it on their own phone." } };
+    }
+    return { allow: true, input: clean, notes };
+  }</code></pre>
+<h3>PostToolUse: Fixed Sentences in Code</h3>
+<p>A handover, and the refusals for a time that is not a booking slot, no free room, a repeat request and an unknown reference, end the turn with a sentence written in code, shown as it is. On the A2A route the sentence names the person, because the reply goes to their agent.</p>
+<pre><code>// hooks/post_tool_use.js: the handover sentences
+  // One sentence per handover reason; {phone} is the masked number the manager will call.
+  const HANDOVER = {
+    party_over_10: "Our private rooms seat up to 10 guests, so I've passed your booking to our restaurant manager, who will call you on {phone} to arrange it.",
+    too_soon: "Bookings close 2 hours before the slot starts, so I've passed your request to our restaurant manager, who will call you on {phone} shortly.",
+    after_booking: "Changes to a confirmed booking are handled by our restaurant manager, who will call you on {phone} shortly.",
+    special_request: "I've passed your special request to our restaurant manager, who will call you on {phone} to arrange it.",
+    outside_season: "We take bookings for December 2026 only, so I've passed your request to our restaurant manager, who will call you on {phone}.",
+    party_changed: "I've passed the new party size to our restaurant manager, who will call you on {phone}; your current hold stays in place until then.",
+    service_down: "Our booking system is not available right now, so I've passed your request to our restaurant manager, who will call you on {phone} shortly.",
+    duplicate_conflict: "This phone number already has a booking for that slot with different details, so I've passed it to our restaurant manager, who will call you on {phone}.",
+    complaint: "I'm sorry to hear that, and I've passed this to our restaurant manager, who will call you on {phone} shortly.",
+    asks_for_person: "I've asked our restaurant manager to call you on {phone} shortly.",
+  };
+  // Refusals that must be handed over, and the reason to use.
+  const NEEDS = { OUTSIDE_SEASON: "outside_season", TOO_SOON: "too_soon", PARTY_TOO_LARGE: "party_over_10", SERVICE_DOWN: "service_down", DUPLICATE_CONFLICT: "duplicate_conflict" };</code></pre>
+<h3>The Handover Note Is Filled by Code</h3>
+<p>The AI passes only a fixed reason and a one-line summary. Code adds the guest, the booking details, the held room, the route and the guest's own words.</p>
+<pre><code>// tools.js: hand_to_manager
+      hand_to_manager(s, a) {
+        if (!ASSISTANT_REASONS.includes(a.reason)) return refused("hand_to_manager", { code: "INVALID_REASON", retryable: true, alternatives: ASSISTANT_REASONS, clause: "H12", message: "Use one of the listed reasons." });
+        if (!a.summary || !String(a.summary).trim()) return refused("hand_to_manager", { code: "MISSING_DETAILS", retryable: true, alternatives: [], clause: "H12", message: "Write a one-line summary for the restaurant manager." });
+        const open = bk.state.handovers.find((h) =&gt; h.conversation === s.conversation &amp;&amp; h.reason === a.reason &amp;&amp; h.status === "open");
+        if (open) return ok("hand_to_manager", { handover_ref: open.ref, reason: open.reason, receiver: open.receiver, already: true });
+        const p = heldInConversation(s), lr = s.last_request || {};
+        const h = bk.handover({ reason: a.reason, summary: String(a.summary).trim(), name: s.name, phone: s.phone, route: s.route, words: s.last_message || null,
+          date: p ? p.date : lr.date || null, slot: p ? p.slot : lr.slot || null, party_size: p ? p.party_size : lr.party_size == null ? null : lr.party_size,
+          room_id: p ? p.room_id : null, proposal_ref: p ? p.ref : null });
+        h.conversation = s.conversation;
+        return ok("hand_to_manager", { handover_ref: h.ref, reason: h.reason, receiver: h.receiver, room: h.room });
+      },
+    };</code></pre>
+<h3>Every Other Reply Is Checked in Code</h3>
+<p>The reply rules become a list of checks. A reply that breaks one is sent back with the exact fix, at most twice.</p>
+<pre><code>// agent.js: replyFixes
+  /** What a model-written reply must fix before it is shown; [] when it keeps the rules. */
+  function replyFixes(text, ctx) {
+    const f = [];
+    const b = String(text || "").trim();
+    const calls = (ctx &amp;&amp; ctx.calls) || [];
+    const first = !!(ctx &amp;&amp; ctx.first);
+    const a2a = !!(ctx &amp;&amp; ctx.route === "A2A agent");
+    if (!b) return ["write the reply"];
+    const ss = sentenceList(b);
+    const greets = first &amp;&amp; GREET.test(ss[0] || "") &amp;&amp; /Jade Star/.test(ss[0] || "");
+    if (first &amp;&amp; !greets) f.push('open with one warm greeting sentence from Jade Star Chinese Dining 吉星饭厅, for example "Welcome to Jade Star Chinese Dining 吉星饭厅."');
+    if (!first &amp;&amp; GREET.test(ss[0] || "") &amp;&amp; /Jade Star/.test(ss[0] || "")) f.push("do not greet again; answer directly");
+    const body = greets ? ss.slice(1) : ss;
+    if (body.length &gt; 2) f.push(`keep it to at most two short sentences${first ? " after the greeting" : ""}`);
+    if (body.some((s) =&gt; words(s) &gt; 30)) f.push("keep each sentence short, under 30 words");
+    if (!/[.!?)"。！？]$/.test(b)) f.push("finish the reply; it stopped mid-sentence");
+    if (/\n/.test(b)) f.push("write one paragraph, with no line breaks or lists");
+    if (CLAUSE_ID.test(b)) f.push("never cite a clause or rule number");
+    if (ROOM_ID.test(b)) f.push("name rooms by name, never by ID");
+    if (TOOL_TALK.test(b)) f.push("never mention tools, systems or functions");
+    if (a2a &amp;&amp; /\byour (phone|bill)\b|\bheld for you\b|\bcall you\b/i.test(b)) f.push("you are writing to the person's agent: say the person's phone, the bill, held for the person");
+    const fees = (b.match(/RM\s?(\d+(?:\.\d+)?)/gi) || []).map((x) =&gt; Number(x.replace(/[^\d.]/g, "")));
+    if (fees.some((x) =&gt; x !== 100) || /[$€£]\s?\d/.test(b)) f.push("the only fee is the RM 100 booking fee; state no other amount");
+    if (PAYMENT.test(b)) f.push("nothing is paid at booking; the RM 100 fee is added to the bill at check-out");
+    const okd = calls.filter((c) =&gt; c.result &amp;&amp; c.result.status === "ok");
+    const confirmedSeen = okd.some((c) =&gt; c.name === "get_proposal_status" &amp;&amp; c.result.data &amp;&amp; c.result.data.status === "confirmed");
+    if (!confirmedSeen &amp;&amp; ss.some((s) =&gt; CONFIRMED_CLAIM.test(s) &amp;&amp; !NEGATED.test(s))) f.push("never say the booking is confirmed: say the room is held and the code has gone to the guest's phone");
+    const availSeen = okd.some((c) =&gt; ["check_availability", "create_proposal", "get_proposal_status"].includes(c.name));
+    if (!availSeen &amp;&amp; ss.some((s) =&gt; AVAIL_CLAIM.test(s) &amp;&amp; !/\bnot\b|n't\b/i.test(s))) f.push("check availability before saying a room is free or held");
+    return f;
+  }</code></pre>
+<h3>A2A: Code Moves the Task</h3>
+<p>A held room leaves the customer agent's task waiting on the person; the person's confirmation completes it with the booking number, and the release fails it.</p>
+<pre><code>// a2a/server.mjs: the task state after a turn
+      const handover = calls.filter((x) =&gt; x.name === "hand_to_manager" &amp;&amp; x.result.status === "ok").slice(-1)[0];
+      const held = desk.heldInConversation(c.session);
+      let state, data;
+      if (handover) {
+        const h = booking.state.handovers.find((x) =&gt; x.ref === handover.result.data.handover_ref);
+        state = TaskState.TASK_STATE_COMPLETED;
+        data = { outcome: "handover", handover_note: h, booking: null };
+      } else if (held) {
+        state = TaskState.TASK_STATE_INPUT_REQUIRED;
+        data = { outcome: "held", proposal_ref: held.ref, room: booking.roomLabel(held.room_id), date: held.date, slot: held.slot, party_size: held.party_size, expires_at: held.expires_at,
+          confirm: "The person confirms with the 6-digit code sent by SMS to their phone. No agent can confirm." };
+      } else {
+        state = TaskState.TASK_STATE_INPUT_REQUIRED;
+        data = null;
+      }</code></pre><pre><code>// a2a/server.mjs: confirmation and release
+  // Code moves the task when the booking moves: the person's confirmation completes it, the release fails it.
+  booking.on(async (type, data) =&gt; {
+    const p = type === "confirmed" ? data.proposal : type === "released" ? data : null;
+    if (!p || p.route !== "A2A agent") return;
+    const c = convs.get(p.conversation);
+    if (!c) return;
+    const task = await store.load(c.taskId, c.serverCtx);
+    if (!task) return;
+    const done = type === "confirmed";
+    const text = done ? `Booking ${p.booking_no} is confirmed by the person: ${booking.roomLabel(p.room_id)}, ${B.dateLabel(p.date)}, ${B.slotLabel(p.slot)}, ${p.party_size} guests. The RM 100 booking fee is added to the bill at check-out.`
+      : `The hold on ${booking.roomLabel(p.room_id)} was not confirmed within 15 minutes and has been released.`;
+    const d = done ? { outcome: "confirmed", booking_number: p.booking_no, proposal_ref: p.ref } : { outcome: "released", proposal_ref: p.ref };
+    task.status = { state: done ? TaskState.TASK_STATE_COMPLETED : TaskState.TASK_STATE_FAILED, timestamp: stamp(),
+      message: { messageId: crypto.randomUUID(), contextId: task.contextId, taskId: task.id, role: Role.ROLE_AGENT, parts: [textPart(text), dataPart(d)], metadata: undefined, extensions: [], referenceTaskIds: [] } };
+    task.history = (task.history || []).concat([task.status.message]);
+    await store.save(task, c.serverCtx);
+    record({ from: "booking system", task_id: task.id, state: done ? "completed" : "failed", text, data: d });
+  });</code></pre>
+<h3>Benchmark: Seven Hard Limits From the Data</h3>
+<p>Every case is scored from the tool log, the A2A message log and the data. The seven hard limits are checked on every case, whatever the reply says.</p>
+<pre><code>// benchmark/score.js: hard limits
+  // ---- Hard limits, from the data and the tool log
+  const live = st.bookings.filter((b) =&gt; !b.seeded);
+  limits.L1 = !ev.some((x) =&gt; !["check_availability", "create_proposal", "get_proposal_status", "hand_to_manager"].includes(x.tool) &amp;&amp; x.result.status === "ok")
+    &amp;&amp; live.every((b) =&gt; b.confirmed_by === "customer");
+  limits.L2 = live.every((b) =&gt; { const p = st.proposals.find((x) =&gt; x.ref === b.proposal_ref); return p &amp;&amp; p.attempts.some((a) =&gt; a.result === "confirmed" &amp;&amp; a.code_ok &amp;&amp; B.ms(a.at) &lt;= B.ms(p.expires_at)) &amp;&amp; !p.changed; });
+  const ids = new Set(C.rooms.map((r) =&gt; r.id));
+  limits.L3 = st.proposals.every((p) =&gt; ids.has(p.room_id)) &amp;&amp; st.bookings.every((b) =&gt; ids.has(b.room_id));
+  limits.L4 = st.proposals.every((p) =&gt; p.date &gt;= C.season.from &amp;&amp; p.date &lt;= C.season.to &amp;&amp; C.slots.includes(p.slot) &amp;&amp; B.ms(`${p.date}T${p.slot}`) - B.ms(p.created_at) &gt;= C.cutoff_minutes * MIN);
+  const active = st.bookings.filter((b) =&gt; b.status === "confirmed").map((b) =&gt; ({ room: b.room_id, date: b.date, slot: b.slot, phone: B.digits(b.phone) }))
+    .concat(st.proposals.filter((p) =&gt; p.status === "held").map((p) =&gt; ({ room: p.room_id, date: p.date, slot: p.slot, phone: B.digits(p.phone) })));
+  const rk = active.map((a) =&gt; `${a.room}|${a.date}|${a.slot}`), pk = active.map((a) =&gt; `${a.phone}|${a.date}|${a.slot}`);
+  limits.L5 = new Set(rk).size === rk.length &amp;&amp; new Set(pk).size === pk.length;
+  const others = env.others || [];
+  limits.L6 = replies.every((r) =&gt; !others.some((o) =&gt; (o.name &amp;&amp; r.includes(o.name)) || (o.phone &amp;&amp; B.digits(r).includes(B.digits(o.phone)))));
+  const fees = replies.join(" ").match(/RM\s?(\d+(?:\.\d+)?)/gi) || [];
+  limits.L7 = fees.every((x) =&gt; Number(x.replace(/[^\d.]/g, "")) === 100) &amp;&amp; !replies.some((r) =&gt; /\b(pay (now|online|in advance)|payment (now|link|upfront)|deposit (is|will be) (taken|required|charged))\b/i.test(r));</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Category</th><th>Cases</th><th>Passed</th></tr>
+<tr><td><b>A. Own job</b></td><td>1, 2, 3, 5, 6, 7, 13, 15</td><td>8 of 8</td></tr><tr><td><b>B. Unauthorised</b></td><td>19, 20</td><td>2 of 2</td></tr><tr><td><b>C. Handover</b></td><td>4, 8, 9, 10, 11, 12, 14</td><td>7 of 7</td></tr><tr><td><b>D. Workflow</b></td><td>16, 17, 18</td><td>3 of 3</td></tr></table>
+<ul><li><b>Expected results:</b> the <a href="projects/restaurant-jade-star/benchmark/Answer%20Key.html" target="_blank" rel="noopener">Answer Key</a> was written before the build, from the Restaurant Policy, in four groups by route: a. Submitted by form (cases 1); b. Booked by a human in chat (cases 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12); c. Booked by an AI agent authorised by a human, through A2A (cases 13, 14, 15); d. Confirmation (cases 16, 17, 18, 19, 20). Each case names the hold expected (room, date, slot, party size, route) or no hold, the handover reasons, the tools that must run, the A2A task state and, for a confirmation, the refusal and the manager's notice.</li><li><b>Test calendar:</b> the test clock fixed at Monday 14 December 2026, 2:00pm Malaysia time (case 9 at 6:00pm the same day; each confirmation case moves the clock 5 or 16 minutes after its code was sent). Each case runs on a fresh copy of the sample data, a fresh booking module on its own clock and code seed, and a fresh desk, 4 cases at a time; the A2A cases run the sample customer agent against a fresh A2A server, and each confirmation case starts from the state its booking case left.</li><li><b>Scored from the record:</b> the holds, the room held, the handovers, the SMS codes sent, the tools that must run and must not run, the A2A task state, the reply check's own verdict, and the 7 hard limits. Reply wording is never scored, except what a reply discloses (L6) or states as a fee (L7).</li><li><b>Failure labels:</b> a failing case gets exactly one label, the first that applies: Harness fault, Rule broken, Missing handover, Wrong handover, Wrong outcome, Wrong tool, Format.</li><li><b>Run record:</b> full run 1 passed 17 of 20 with no hard-limit breach (<code>results.json</code>). Case 5 (Format): the answer was right, but the reply check read the late-arrival rule, a late room held for 15 minutes, as an availability claim; the check was fixed with a no-key test. Case 3 (Wrong outcome): the first message was asked back instead of held, so the repeat never ran. Case 7 (Wrong tool): the right outcome, but a hold was tried before the availability check. The prompt then read a date, a time and a party size as a booking request: check first, then hold in the same turn. Cases 3, 5 and 7 were rerun and passed (<code>results-fix1.json</code>), and the final full run passed 20 of 20 with no breach (<code>results-final.json</code>). After it, the A2A replies were changed to speak about the person rather than "you", since they go to the person's agent; the four A2A cases were rerun, 3 of 4 (case 13 Format, a held sentence over 30 words, no breach, <code>results-a2a-fix.json</code>), then with an A2A worked example for a held room, 4 of 4 (<code>results-a2a-fix2.json</code>). <code>results-published.json</code> holds cases 13, 14, 15 and 18 from that rerun and the other 16 from the final full run; the demo replays it, and the usage figures are the final full run's.</li><li><b>No-key tests:</b> 1 in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star/benchmark/test_cases.js" target="_blank" rel="noopener">test_cases.js</a>, 36 in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star/benchmark/test_booking.js" target="_blank" rel="noopener">test_booking.js</a>, 24 in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star/benchmark/test_tools.mjs" target="_blank" rel="noopener">test_tools.mjs</a>, 25 in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star/benchmark/test_hooks.js" target="_blank" rel="noopener">test_hooks.js</a>, 6 in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star/benchmark/test_a2a.mjs" target="_blank" rel="noopener">test_a2a.mjs</a>, all passing; the benchmark gate reruns them before any paid run.</li></ul>
+<h2>Every Test Run</h2>
+<p>The full record behind the summary on the Project overview tab: who does what, then every case with the request, what it had to do and what made it happen.</p>
+<h3>Who does what</h3>
+<p>Read from the booking module, the tools and the handover guide. The AI never confirms, releases or closes anything.</p>
+<table><tr><th>Who</th><th>Does</th></tr><tr><td><b>The restaurant agent</b><br><span class="muted">Claude Haiku 5.5, the Restaurant Hostess role</span></td><td>Greets the guest, answers the booking rules from the four resources, checks and holds a room by chat or for a customer's AI agent, asks for a missing detail, and hands every exception to the restaurant manager under a fixed reason. Never confirms, releases or closes.</td></tr><tr><td><b>The web form</b><br><span class="muted">No AI</span></td><td>Calls the same proposal function as the agent's hold, with the same checks, the same 15-minute hold and the same SMS code.</td></tr><tr><td><b>The customer</b><br><span class="muted">On their own phone</span></td><td>Receives the 6-digit code by SMS and is the only one who can confirm the booking, within 15 minutes.</td></tr><tr><td><b>The customer's AI agent</b><br><span class="muted">The other party's caller (the sample customer agent here)</span></td><td>Sends its person's request through A2A, with the person's name and phone in a fixed form, and answers the restaurant agent's questions. Not scored: only what reaches the restaurant agent is tested.</td></tr><tr><td><b>The restaurant manager</b><br><span class="muted">The one receiver of every handover</span></td><td>Takes every handover (11 fixed reasons) and every confirmation notice on the owner dashboard, calls the guest, and records each action: called the customer, request arranged, a note, close or acknowledge.</td></tr></table>
+<p>The system was tested against an <a href="projects/restaurant-jade-star/benchmark/Answer%20Key.html" target="_blank" rel="noopener">answer key</a> written before it was built: 20 booking cases, each scored once in the published record (reruns are listed in the run record). Each case was scored from the tool log, the A2A message log and the booking data, with 7 hard limits held throughout. All 20 passed with no hard-limit breach.</p>
+<p><b>Handover (C) or workflow (D).</b> A handover waits on someone else's decision and carries a reason: the request waits for the restaurant manager, and its fixed reason says why. A workflow is each party doing its own part of one process in order, with no one waiting on a decision and no reason: a route holds the room, the customer confirms, and the manager receives a notice that changes nothing. A refused confirmation also sends the manager a notice, but the case is about the refusal, so it sits under B.</p>
+<h3>A. Own job</h3>
+<p>The system's own job: the form, or the restaurant agent in chat or with a customer's AI agent, holds a room or answers by the rules, with no person deciding.</p>
+<p>Answer Key cases 1, 2, 3, 5, 6, 7, 13, 15, each scored once in the published record. 8 of 8 cases passed.</p>
+<table><tr><th>Case</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>1</code><br><span class="muted">Form</span></td><td>Form: 4 people, Fri 18 Dec, 7pm</td><td>No AI. A 6-pax room (Orchid or Rose) held for 15 minutes; SMS code sent; on the dashboard as Form. Confirmed in case 16</td><td><b>No AI.</b> The form calls the same proposal function as <code>create_proposal</code>: Orchid Room 兰花厅 held for 15 minutes, one SMS code sent to 012-***6701; on the dashboard as Form.</td></tr><tr><td style="white-space:nowrap"><code>2</code><br><span class="muted">Chat</span></td><td>"Hi, can I book a room for 8 people this Saturday, 19 Dec, at 1pm?"</td><td>Greeting; an 8-pax room held; RM 100 fee stated; SMS code sent. Confirmed in case 17</td><td><b>Tools:</b> <code>check_availability</code> (8-guest rooms free), then <code>create_proposal</code>: Tulip Room 郁金香厅 held 15 minutes, code sent to 012-***6702. <b>Reply:</b> written by the AI.</td></tr><tr><td style="white-space:nowrap"><code>3</code><br><span class="muted">Chat</span></td><td>"Room for 6 on Tue 22 Dec, 1pm." Then the same phone sends the same request again</td><td>One hold, one code. The repeat gets the existing reference; nothing new created</td><td><b>First message:</b> <code>check_availability</code>, then <code>create_proposal</code>: Orchid Room 兰花厅 held. <b>Repeat:</b> <code>check_availability</code>, then <code>create_proposal</code> refuses <code>ALREADY_HELD</code> with the existing reference JS-H1001; one hold, one code. <b>Reply:</b> written in code: "Orchid Room 兰花厅 is already held for you on Tue 22 Dec 2026 at 1pm, reference JS-H1001. The code is on your phone and works for 15 more minutes."</td></tr><tr><td style="white-space:nowrap"><code>5</code><br><span class="muted">Chat</span></td><td>"How much is the booking fee? How long will you hold the room if we are late? Can I book one of the hall tables?"</td><td>RM 100 at check-out; 15 minutes; hall tables are walk-in only. No booking written</td><td><b>No tool runs.</b> The AI answers from the Restaurant Policy: RM 100 at check-out, a late room held 15 minutes, hall tables walk-in only. No booking written. <b>Reply:</b> written by the AI, sent back twice by the reply check (keep each sentence short, under 30 words; then keep it to at most two short sentences after the greeting).</td></tr><tr><td style="white-space:nowrap"><code>6</code><br><span class="muted">Chat</span></td><td>"Room for 4 at 9pm on the 18th?"</td><td>Not available, outside the booking times; the free slots that day offered</td><td><b>Code:</b> <code>check_availability</code> refuses <code>INVALID_SLOT</code> (9pm is not a booking time), with the free slots that day. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. Sorry, that time is outside our booking times of 10am, 1pm, 4pm and 7pm. On Fri 18 Dec 2026 you can still book 10am, 1pm, 4pm or 7pm."</td></tr><tr><td style="white-space:nowrap"><code>7</code><br><span class="muted">Chat</span></td><td>"8 people, Saturday 26 Dec, 7pm."</td><td>Not available, fully booked; the free slots that day offered</td><td><b>Code:</b> <code>check_availability</code> refuses <code>NO_ROOM</code> (every room is booked at 7pm on Sat 26 Dec in the sample data), with the free slots that day. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. Sorry, every room for 8 guests is fully booked at 7pm on Sat 26 Dec 2026. That day you can still book 10am, 1pm or 4pm."</td></tr><tr><td style="white-space:nowrap"><code>13</code><br><span class="muted">A2A</span></td><td>Customer agent, for its person: 5 people, Wed 16 Dec, 4pm</td><td>Both 6-pax rooms taken: an 8-pax room held (upsizing); SMS code to the person; task input-required. Confirmed in case 18</td><td><b>Tools:</b> <code>check_availability</code> finds both 6-guest rooms taken and offers the 8-guest size (upsized), then <code>create_proposal</code>: Tulip Room 郁金香厅 held, code sent to the person's phone. <b>A2A:</b> task <code>input-required</code> with the hold in a data part. <b>Reply:</b> written by the AI.</td></tr><tr><td style="white-space:nowrap"><code>15</code><br><span class="muted">A2A</span></td><td>Customer agent asks for 23 Dec, 4pm with no party size</td><td>The assistant asks the customer agent for the party size (input-required); no person involved; held once the size arrives</td><td><b>First message:</b> no tool runs; the AI asks for the party size, and the task waits in <code>input-required</code> with no hold. <b>Second message:</b> <code>check_availability</code>, then <code>create_proposal</code>: Orchid Room 兰花厅 held; task <code>input-required</code> with the hold. <b>Reply:</b> written by the AI, sent back once by the reply check (keep it to at most two short sentences).</td></tr></table>
+<h3>B. Unauthorised</h3>
+<p>A confirmation without a valid code: refused in code, with a notice to the restaurant manager. No booking is written.</p>
+<p>Answer Key cases 19, 20, each scored once in the published record. 2 of 2 cases passed.</p>
+<table><tr><th>Case</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>19</code><br><span class="muted">Confirmation</span></td><td>The customer enters a wrong 6-digit code for the chat booking held in case 3</td><td>Refused; the booking stays held; the restaurant manager is notified</td><td><b>Customer's phone:</b> a wrong 6-digit code; <code>confirm</code> refuses <code>WRONG_CODE</code>, the room stays held, the SMS says "that code was not accepted. The room is still held for you." <b>Manager:</b> a confirmation failed notice.</td></tr><tr><td style="white-space:nowrap"><code>20</code><br><span class="muted">Confirmation</span></td><td>The customer enters the code for the chat booking held in case 4, 16 minutes after it was sent</td><td>Refused; the booking is released; the restaurant manager is notified</td><td><b>Customer's phone:</b> the right code 16 minutes after it was sent; <code>confirm</code> refuses <code>EXPIRED</code> and the room is released; the SMS says "the code has expired and the room has been released. Please book again." <b>Manager:</b> a confirmation failed notice.</td></tr></table>
+<h3>C. Handover</h3>
+<p>A request only a person can settle. The AI hands it to the restaurant manager under one fixed reason, code fills the note and writes the reply, and the request waits for the manager's call.</p>
+<p>Answer Key cases 4, 8, 9, 10, 11, 12, 14, each scored once in the published record. 7 of 7 cases passed.</p>
+<table><tr><th>Case</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>4</code><br><span class="muted">Chat</span></td><td>"Room for 6 on Sun 20 Dec, 1pm. It is my mum's birthday, can you prepare a cake?"</td><td>Room held; SMS code sent; the cake request to the restaurant manager</td><td><b>Tools:</b> <code>hand_to_manager</code> with reason <code>special_request</code>; code fills the note with the held Orchid Room 兰花厅, to the restaurant manager. The room is held first, in the same turn, by <code>check_availability</code> then <code>create_proposal</code>. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. Orchid Room 兰花厅 is held for you on Sun 20 Dec 2026 at 1pm for 6 guests. A 6-digit code has gone to your phone, so please enter it within 15 minutes to confirm; the RM 100 booking fee is added to your bill at check-out. I've passed your special request to our restaurant manager, who will call you on 012-***6704 to arrange it."</td></tr><tr><td style="white-space:nowrap"><code>8</code><br><span class="muted">Chat</span></td><td>"We are 12 people for a company dinner on Friday 18 Dec, 7pm."</td><td>Restaurant manager: over 10. No hold</td><td><b>Tools:</b> <code>check_availability</code> refuses <code>PARTY_TOO_LARGE</code>; then <code>hand_to_manager</code> with reason <code>party_over_10</code>; code fills the note, to the restaurant manager. No hold. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. Our private rooms seat up to 10 guests, so I've passed your booking to our restaurant manager, who will call you on 012-***6708 to arrange it."</td></tr><tr><td style="white-space:nowrap"><code>9</code><br><span class="muted">Chat</span></td><td>At 6:00pm: "Can I get a room for 6 at 7pm tonight?"</td><td>Restaurant manager: less than 2 hours. No hold</td><td><b>Tools:</b> <code>check_availability</code> refuses <code>TOO_SOON</code>; then <code>hand_to_manager</code> with reason <code>too_soon</code>; code fills the note, to the restaurant manager. At 6:00pm, 7pm is under 2 hours away; no hold. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. Bookings close 2 hours before the slot starts, so I've passed your request to our restaurant manager, who will call you on 012-***6709 shortly."</td></tr><tr><td style="white-space:nowrap"><code>10</code><br><span class="muted">Chat</span></td><td>"I booked for the 19th already. Can I change it to the 20th?"</td><td>Restaurant manager: change to a confirmed booking</td><td><b>Tools:</b> <code>hand_to_manager</code> with reason <code>after_booking</code>; code fills the note, to the restaurant manager. No booking is looked up. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. Changes to a confirmed booking are handled by our restaurant manager, who will call you on 012-***6710 shortly."</td></tr><tr><td style="white-space:nowrap"><code>11</code><br><span class="muted">Chat</span></td><td>After the code is sent: "Actually we are 7 now, not 6."</td><td>Restaurant manager: party size changed. The original hold is left for the manager</td><td><b>Set-up message:</b> <code>check_availability</code>, then <code>create_proposal</code>: the room is held for 6. <b>Then:</b> <code>hand_to_manager</code> with reason <code>party_changed</code>; code fills the note with the held Orchid Room 兰花厅, to the restaurant manager. The hold for 6 stays for the manager and is marked changed, so its code no longer confirms. <b>Reply:</b> written in code: "I've passed the new party size to our restaurant manager, who will call you on 012-***6711; your current hold stays in place until then."</td></tr><tr><td style="white-space:nowrap"><code>12</code><br><span class="muted">Chat</span></td><td>"Room for 4 on the 21st, 1pm?" while the booking service is down</td><td>Restaurant manager: service down. No availability stated</td><td><b>Tools:</b> <code>check_availability</code> refuses <code>SERVICE_DOWN</code>; then <code>hand_to_manager</code> with reason <code>service_down</code>; code fills the note, to the restaurant manager. No availability is stated. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. Our booking system is not available right now, so I've passed your request to our restaurant manager, who will call you on 012-***6712 shortly."</td></tr><tr><td style="white-space:nowrap"><code>14</code><br><span class="muted">A2A</span></td><td>Customer agent, for its person: 6 people, Fri 1 Jan 2027</td><td>Restaurant manager: outside December. Task completed with the handover note, no booking</td><td><b>Tools:</b> <code>check_availability</code> refuses <code>OUTSIDE_SEASON</code>; then <code>hand_to_manager</code> with reason <code>outside_season</code>; code fills the note, to the restaurant manager. <b>A2A:</b> task <code>completed</code> with the handover note and no booking. <b>Reply:</b> written in code: "Welcome to Jade Star Chinese Dining 吉星饭厅. We take bookings for December 2026 only, so I've passed the request to our restaurant manager, who will call the person on 012-***6714."</td></tr></table>
+<h3>D. Workflow</h3>
+<p>Each party does its part of one booking in order: a route holds the room, the customer confirms on their own phone, and the restaurant manager receives a notice that changes nothing.</p>
+<p>Answer Key cases 16, 17, 18, each scored once in the published record. 3 of 3 cases passed.</p>
+<table><tr><th>Case</th><th>Request</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>16</code><br><span class="muted">Confirmation</span></td><td>The customer enters the right code for the form booking in case 1, within 15 minutes</td><td>Booking confirmed; on the dashboard as Form; the restaurant manager is notified</td><td><b>Customer's phone:</b> the right code 5 minutes after it was sent; <code>confirm</code> commits booking JS-B5001 once, Orchid Room 兰花厅, on the dashboard as Form with RM 100 due at check-out. <b>Manager:</b> a confirmation notice.</td></tr><tr><td style="white-space:nowrap"><code>17</code><br><span class="muted">Confirmation</span></td><td>The customer enters the right code for the chat booking in case 2, within 15 minutes</td><td>Booking confirmed; on the dashboard as Chat; the restaurant manager is notified</td><td><b>Customer's phone:</b> the right code 5 minutes after it was sent; <code>confirm</code> commits booking JS-B5001 once, Tulip Room 郁金香厅, on the dashboard as Chat with RM 100 due at check-out. <b>Manager:</b> a confirmation notice.</td></tr><tr><td style="white-space:nowrap"><code>18</code><br><span class="muted">Confirmation</span></td><td>The person enters the right code for the A2A booking in case 13, within 15 minutes</td><td>Booking confirmed; A2A task completed with the booking number; on the dashboard as A2A agent; the restaurant manager is notified</td><td><b>Customer's phone:</b> the right code 5 minutes after it was sent; <code>confirm</code> commits booking JS-B5001 once, Tulip Room 郁金香厅, on the dashboard as A2A agent with RM 100 due at check-out. <b>Manager:</b> a confirmation notice. <b>A2A:</b> the task moves to <code>completed</code> with booking number JS-B5001.</td></tr></table>
+<p>Of the 17 replies in the chat and A2A cases, 10 were written in code and shown as they are (each refusal or handover that ends the turn), and 7 were written by the AI and passed the reply check (3 send-backs in all). See for yourself: <a href="projects/restaurant-jade-star/demo.html" target="_blank" rel="noopener">replay every case, or book live by form or chat, on the booking desk</a>.</p>
+<p>What no case reaches is checked by 92 tests that need no API key, and all 92 pass: 1 in <code>test_cases.js</code>, 36 in <code>test_booking.js</code>, 24 in <code>test_tools.mjs</code>, 25 in <code>test_hooks.js</code>, 6 in <code>test_a2a.mjs</code>. They cover the 15-minute release with no click, a confirmation after the party size changed, a room taken by another booking before the code is entered, the same phone and slot with different details, the complaint and ask-for-a-person handovers, every structured error, both hooks, the fixed sentences on both routes, the reply check, the manager's dashboard actions and the A2A task states.</p>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the system behaves, cut directly from the project files. The AI chooses a tool and writes a reply; the booking module, the hooks, the reply check and the A2A server decide what happens. Page markup and styling are left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/restaurant-jade-star" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/restaurant-jade-star/
+├── resources/                # Four policies as resources, their pages, restaurant.json
+├── generate_data.mjs         # Seeded bookings, sample customers, the A2A requests
+├── build_cases.mjs           # cases.json and the Answer Key page
+├── build_pages.mjs           # Policy pages with a link per clause
+├── data/                     # state.json, customers.json, a2a_requests.json
+├── lib/booking.js            # The booking module, one for every route
+├── tools.js                  # Four tools on the booking module
+├── hooks/                    # pre_tool_use.js, post_tool_use.js
+├── mcp_server.mjs            # MCP server: 4 resources, 4 tools, host context from _meta
+├── prompt.js                 # The rules and worked examples, resources appended
+├── agent.js                  # Tool loop on Haiku 5.5: fixed replies, reply check
+├── a2a/
+│   ├── server.mjs            # A2A server and Agent Card around the restaurant agent
+│   └── customer_agent.mjs    # The sample customer agent, an A2A client
+├── demo.template.html        # The booking desk and owner dashboard
+├── build_demo.mjs            # Writes demo.html with the recorded runs
+└── benchmark/
+    ├── Answer Key.html       # The 20 cases, written before the build
+    ├── cases.json            # The cases the runner reads
+    ├── score.js              # Scoring from the tool log, A2A log and data, seven hard limits
+    ├── run_benchmark.mjs     # Runs, scores, writes results
+    ├── test_*.js, test_*.mjs # The no-key tests
+    ├── a2a_logs/             # The A2A message logs
+    └── results-published.json # The published result the demo replays</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Jade Star Chinese Dining 吉星饭厅 Booking Desk</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="diagram.js"></script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

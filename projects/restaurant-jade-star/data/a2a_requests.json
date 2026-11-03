@@ -1,0 +1,39 @@
+{
+ "13": {
+  "person": {
+   "name": "Ahmad Faizal",
+   "phone": "012-3456713"
+  },
+  "request": "Book a private room at Jade Star Chinese Dining for 5 people on Wednesday 16 December 2026 at 4pm.",
+  "facts": {
+   "party_size": 5,
+   "date": "2026-12-16",
+   "time": "4pm"
+  }
+ },
+ "14": {
+  "person": {
+   "name": "Cheryl Wong",
+   "phone": "012-3456714"
+  },
+  "request": "Book a private room at Jade Star Chinese Dining for 6 people on Friday 1 January 2027 for lunch at 1pm.",
+  "facts": {
+   "party_size": 6,
+   "date": "2027-01-01",
+   "time": "1pm"
+  }
+ },
+ "15": {
+  "person": {
+   "name": "Suresh Kumar",
+   "phone": "012-3456715"
+  },
+  "request": "Book a private room at Jade Star Chinese Dining on Wednesday 23 December 2026 at 4pm.",
+  "facts": {
+   "party_size": 4,
+   "date": "2026-12-23",
+   "time": "4pm"
+  },
+  "note": "The person's request carries no party size. The agent sends the request as given and answers the restaurant's question from the facts."
+ }
+}

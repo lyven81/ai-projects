@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<title>Handover Guide</title><style>:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+:target{outline:3px solid var(--accent);outline-offset:4px}
+h3:target+p{background:var(--box)}
+.crumbs{font-size:12.5px;color:var(--muted);margin-bottom:2px}
+.crumbs a{color:inherit;text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+</style></head>
+<body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../restaurant-jade-star.html">Jade Star Chinese Dining 吉星饭厅</a> / <a href="../demo.html">Demo</a></div><h1>Handover Guide (R4)</h1><nav id="toc"></nav></div>
+<p>Jade Star Chinese Dining 吉星饭厅. Sample data. Every handover goes to one receiver: the restaurant manager.</p>
+<h2>1. The reasons</h2>
+<table><tr><th>#</th><th>Code</th><th>Reason</th></tr><tr id="H1"><td>H1</td><td>party_over_10</td><td>Party over 10</td></tr><tr id="H2"><td>H2</td><td>too_soon</td><td>Less than 2 hours before the slot</td></tr><tr id="H3"><td>H3</td><td>after_booking</td><td>Change or cancellation of a confirmed booking</td></tr><tr id="H4"><td>H4</td><td>special_request</td><td>Special request: cake, decoration, high chair, microphone</td></tr><tr id="H5"><td>H5</td><td>outside_season</td><td>Date outside December 2026</td></tr><tr id="H6"><td>H6</td><td>party_changed</td><td>Party size changed after the code was sent</td></tr><tr id="H7"><td>H7</td><td>service_down</td><td>Booking service down</td></tr><tr id="H8"><td>H8</td><td>confirmation_failed</td><td>Confirmation failed: wrong code or code expired (written by the confirmation screen, never by the assistant)</td></tr><tr id="H9"><td>H9</td><td>duplicate_conflict</td><td>Same phone and slot sent again with different details</td></tr><tr id="H10"><td>H10</td><td>complaint</td><td>Complaint</td></tr><tr id="H11"><td>H11</td><td>asks_for_person</td><td>Customer asks for a person: handed over at once, with no questions first</td></tr></table>
+
+<p><b>Resource:</b> <code>guide://handover</code>, served by the MCP server to the restaurant assistant. Each clause has its own link, for example <code>#H12</code>.</p>
+<h3 id="H12">H12 The note</h3>
+<p>Every note carries: the reason, the receiver (restaurant manager), the customer's name and phone, the date, the slot, the party size, the room if one is held, the route (Form, Chat or A2A agent), the customer's words and a one-line summary. Name, phone, route and the held room are filled in by the system; the assistant writes only the reason and the summary. Each note reads on its own, without the conversation.</p>
+<h3 id="H13">H13 What the guest is told</h3>
+<p>The guest is told the request has gone to the restaurant manager, who will call them on the phone number they gave.</p>
+<footer>© 2026 Lee Yih Ven · Handover Guide</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id=h.id||'s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('h3[id]').forEach(h=>{const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.id;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

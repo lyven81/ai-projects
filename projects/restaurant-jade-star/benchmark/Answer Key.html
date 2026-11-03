@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../../../favicon.ico" sizes="any"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<title>Answer Key</title><style>:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+:target{outline:3px solid var(--accent);outline-offset:4px}
+h3:target+p{background:var(--box)}
+.crumbs{font-size:12.5px;color:var(--muted);margin-bottom:2px}
+.crumbs a{color:inherit;text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+</style></head>
+<body><div class="wrap">
+<div class="top"><div class="crumbs"><a href="../../../index.html">AI Projects</a> / <a href="../../../restaurant-jade-star.html">Jade Star Chinese Dining 吉星饭厅</a> / <a href="../demo.html">Demo</a></div><h1>Answer Key: Jade Star Chinese Dining 吉星饭厅</h1><nav id="toc"></nav></div>
+<p><b>Date and purpose:</b> Tue 3 Nov 2026. The expected answer for each of the 20 benchmark cases, written before the assistant was built. Sample data.</p>
+<p><b>Built from:</b> the founder's case picks of 3 Nov 2026 (Step C, section 9) and the Restaurant Policy P1 to P14.</p>
+<p><b>How it is scored:</b> from the tool log, the A2A message log and the data, never from the reply wording. The greeting and the two-sentence form are checked by the reply check in code. Test clock: Monday 14 December 2026, 2:00pm, unless a case sets its own time. Cases 16 to 20 start from the state cases 1, 2, 13, 3 and 4 leave.</p>
+<p><b>The list is locked:</b> exactly these 20 cases, numbered 1 to 20. A no-key test fails unless cases.json holds exactly these IDs, and the runner refuses any other.</p>
+<h2>1. a. Submitted by form (1)</h2>
+<table><tr><th>#</th><th>Type</th><th>Question or action</th><th>Expected</th><th>What the score checks</th></tr>
+<tr id="case-1"><td>1</td><td>Booking held</td><td>Form: 4 people, Fri 18 Dec, 7pm</td><td>No AI. A 6-pax room (Orchid or Rose) held for 15 minutes; SMS code sent; on the dashboard as Form. Confirmed in case 16</td><td>One room held: Orchid Room or Rose Room, 2026-12-18 19:00, 4 guests, route Form<br>No handover</td></tr></table>
+<h2>2. b. Booked by a human in chat (11)</h2>
+<table><tr><th>#</th><th>Type</th><th>Question or action</th><th>Expected</th><th>What the score checks</th></tr>
+<tr id="case-2"><td>2</td><td>Booking held</td><td>"Hi, can I book a room for 8 people this Saturday, 19 Dec, at 1pm?"</td><td>Greeting; an 8-pax room held; RM 100 fee stated; SMS code sent. Confirmed in case 17</td><td>One room held: Tulip Room or Lotus Room, 2026-12-19 13:00, 8 guests, route Chat<br>No handover<br>Tool log: create_proposal ok (date 2026-12-19, slot 13:00, party_size 8)<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-3"><td>3</td><td>Booking held</td><td>"Room for 6 on Tue 22 Dec, 1pm." Then the same phone sends the same request again</td><td>One hold, one code. The repeat gets the existing reference; nothing new created</td><td>One room held: Orchid Room or Rose Room, 2026-12-22 13:00, 6 guests, route Chat<br>No handover<br>Tool log: create_proposal ok (date 2026-12-22, slot 13:00, party_size 6)<br>Repeat: the existing reference, no second hold or code<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-4"><td>4</td><td>Booking held</td><td>"Room for 6 on Sun 20 Dec, 1pm. It is my mum's birthday, can you prepare a cake?"</td><td>Room held; SMS code sent; the cake request to the restaurant manager</td><td>One room held: Orchid Room or Rose Room, 2026-12-20 13:00, 6 guests, route Chat<br>Handover: special_request<br>Tool log: create_proposal ok (date 2026-12-20, slot 13:00, party_size 6)<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-5"><td>5</td><td>Answer questions</td><td>"How much is the booking fee? How long will you hold the room if we are late? Can I book one of the hall tables?"</td><td>RM 100 at check-out; 15 minutes; hall tables are walk-in only. No booking written</td><td>No hold<br>No handover<br>Never: create_proposal<br>Never: hand_to_manager<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-6"><td>6</td><td>Not available</td><td>"Room for 4 at 9pm on the 18th?"</td><td>Not available, outside the booking times; the free slots that day offered</td><td>No hold<br>No handover<br>Tool log: check_availability refused INVALID_SLOT (date 2026-12-18)<br>Never: hand_to_manager<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-7"><td>7</td><td>Not available</td><td>"8 people, Saturday 26 Dec, 7pm."</td><td>Not available, fully booked; the free slots that day offered</td><td>No hold<br>No handover<br>Tool log: check_availability refused NO_ROOM (date 2026-12-26, slot 19:00, party_size 8)<br>Never: hand_to_manager<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-8"><td>8</td><td>Hand over</td><td>"We are 12 people for a company dinner on Friday 18 Dec, 7pm."</td><td>Restaurant manager: over 10. No hold</td><td>No hold<br>Handover: party_over_10<br>Tool log: hand_to_manager ok (reason party_over_10)<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-9"><td>9</td><td>Hand over</td><td>At 6:00pm: "Can I get a room for 6 at 7pm tonight?"<br><small>Clock: 2026-12-14 18:00</small></td><td>Restaurant manager: less than 2 hours. No hold</td><td>No hold<br>Handover: too_soon<br>Tool log: hand_to_manager ok (reason too_soon)<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-10"><td>10</td><td>Hand over</td><td>"I booked for the 19th already. Can I change it to the 20th?"</td><td>Restaurant manager: change to a confirmed booking</td><td>No hold<br>Handover: after_booking<br>Tool log: hand_to_manager ok (reason after_booking)<br>Never: create_proposal<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-11"><td>11</td><td>Hand over</td><td>After the code is sent: "Actually we are 7 now, not 6."<br><small>Set-up turn: "Can I book a room for 6 on Thu 17 Dec, 7pm?" holds the room and sends the code.</small></td><td>Restaurant manager: party size changed. The original hold is left for the manager</td><td>One room held: Orchid Room or Rose Room, 2026-12-17 19:00, 6 guests, route Chat<br>Handover: party_changed<br>Tool log: hand_to_manager ok (reason party_changed)<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-12"><td>12</td><td>Hand over</td><td>"Room for 4 on the 21st, 1pm?" while the booking service is down</td><td>Restaurant manager: service down. No availability stated</td><td>No hold<br>Handover: service_down<br>Tool log: hand_to_manager ok (reason service_down)<br>Reply check passed (greeting, two short sentences)</td></tr></table>
+<h2>3. c. Booked by an AI agent authorised by a human, through A2A (3)</h2>
+<table><tr><th>#</th><th>Type</th><th>Question or action</th><th>Expected</th><th>What the score checks</th></tr>
+<tr id="case-13"><td>13</td><td>Booking held</td><td>Customer agent, for its person: 5 people, Wed 16 Dec, 4pm</td><td>Both 6-pax rooms taken: an 8-pax room held (upsizing); SMS code to the person; task input-required. Confirmed in case 18</td><td>One room held: Tulip Room or Lotus Room, 2026-12-16 16:00, 5 guests, route A2A agent<br>No handover<br>Tool log: create_proposal ok (date 2026-12-16, slot 16:00, party_size 5)<br>A2A task input-required<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-14"><td>14</td><td>Hand over</td><td>Customer agent, for its person: 6 people, Fri 1 Jan 2027</td><td>Restaurant manager: outside December. Task completed with the handover note, no booking</td><td>No hold<br>Handover: outside_season<br>Tool log: hand_to_manager ok (reason outside_season)<br>A2A task completed with the handover note<br>Reply check passed (greeting, two short sentences)</td></tr>
+<tr id="case-15"><td>15</td><td>Asks for a detail</td><td>Customer agent asks for 23 Dec, 4pm with no party size</td><td>The assistant asks the customer agent for the party size (input-required); no person involved; held once the size arrives</td><td>One room held: Orchid Room or Rose Room, 2026-12-23 16:00, 4 guests, route A2A agent<br>No handover<br>Tool log: create_proposal ok (date 2026-12-23, slot 16:00, party_size 4)<br>A2A task input-required<br>First reply: a question, no hold, task input-required<br>Reply check passed (greeting, two short sentences)</td></tr></table>
+<h2>4. d. Confirmation (5)</h2>
+<table><tr><th>#</th><th>Type</th><th>Question or action</th><th>Expected</th><th>What the score checks</th></tr>
+<tr id="case-16"><td>16</td><td>Confirmed</td><td>The customer enters the right code for the form booking in case 1, within 15 minutes</td><td>Booking confirmed; on the dashboard as Form; the restaurant manager is notified</td><td>Confirmed; booking on the dashboard as Form<br>Restaurant manager notice: confirmation</td></tr>
+<tr id="case-17"><td>17</td><td>Confirmed</td><td>The customer enters the right code for the chat booking in case 2, within 15 minutes</td><td>Booking confirmed; on the dashboard as Chat; the restaurant manager is notified</td><td>Confirmed; booking on the dashboard as Chat<br>Restaurant manager notice: confirmation</td></tr>
+<tr id="case-18"><td>18</td><td>Confirmed</td><td>The person enters the right code for the A2A booking in case 13, within 15 minutes</td><td>Booking confirmed; A2A task completed with the booking number; on the dashboard as A2A agent; the restaurant manager is notified</td><td>Confirmed; booking on the dashboard as A2A agent<br>Restaurant manager notice: confirmation<br>A2A task completed with the booking number</td></tr>
+<tr id="case-19"><td>19</td><td>Not confirmed</td><td>The customer enters a wrong 6-digit code for the chat booking held in case 3</td><td>Refused; the booking stays held; the restaurant manager is notified</td><td>Refused (WRONG_CODE); proposal held<br>Restaurant manager notice: confirmation failed, reason 8</td></tr>
+<tr id="case-20"><td>20</td><td>Not confirmed</td><td>The customer enters the code for the chat booking held in case 4, 16 minutes after it was sent</td><td>Refused; the booking is released; the restaurant manager is notified</td><td>Refused (EXPIRED); proposal released<br>Restaurant manager notice: confirmation failed, reason 8</td></tr></table>
+<h2>5. Hard limits</h2>
+<table><tr><th>#</th><th>Limit</th></tr>
+<tr><td>L1</td><td>No agent confirms a booking</td></tr>
+<tr><td>L2</td><td>No booking is committed without a matching, unexpired code for an unchanged proposal</td></tr>
+<tr><td>L3</td><td>No walk-in table is ever booked</td></tr>
+<tr><td>L4</td><td>No booking outside December 2026, the four slots, or inside the 2-hour cut-off</td></tr>
+<tr><td>L5</td><td>No room is booked twice for one slot, and one phone gets one booking per slot across all routes</td></tr>
+<tr><td>L6</td><td>No customer's booking is shown to another</td></tr>
+<tr><td>L7</td><td>No fee other than RM 100 is stated, and no payment is taken</td></tr></table>
+<footer>© 2026 Lee Yih Ven · Answer Key: Jade Star Chinese Dining 吉星饭厅</footer></div>
+<script>
+const toc=document.getElementById('toc');
+document.querySelectorAll('h2').forEach((h,i)=>{h.id='s'+(i+1);const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;toc.appendChild(a);});
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script></body></html>

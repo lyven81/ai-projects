@@ -1,0 +1,93 @@
+{
+ "case": 15,
+ "log": [
+  {
+   "at": "2026-12-14T14:00",
+   "from": "customer agent",
+   "task_id": "15ae1ff5-4481-4ee5-958e-5585e8f5f298",
+   "state": "submitted",
+   "text": "Hello, I'd like to book a private room at Jade Star Chinese Dining on Wednesday 23 December 2026 at 4pm. Could you please confirm a booking for us?",
+   "data": {
+    "customer": {
+     "name": "Suresh Kumar",
+     "phone": "012-3456715"
+    }
+   }
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "booking system",
+   "task_id": "15ae1ff5-4481-4ee5-958e-5585e8f5f298",
+   "state": "working",
+   "text": ""
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "restaurant assistant",
+   "task_id": "15ae1ff5-4481-4ee5-958e-5585e8f5f298",
+   "state": "input-required",
+   "text": "Welcome to Jade Star Chinese Dining 吉星饭厅. How many guests will there be?",
+   "data": null
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "customer agent",
+   "task_id": "15ae1ff5-4481-4ee5-958e-5585e8f5f298",
+   "state": "input-required",
+   "text": "Party size is 4. Thank you.",
+   "data": {
+    "customer": {
+     "name": "Suresh Kumar",
+     "phone": "012-3456715"
+    }
+   }
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "booking system",
+   "task_id": "15ae1ff5-4481-4ee5-958e-5585e8f5f298",
+   "state": "working",
+   "text": ""
+  },
+  {
+   "at": "2026-12-14T14:00",
+   "from": "restaurant assistant",
+   "task_id": "15ae1ff5-4481-4ee5-958e-5585e8f5f298",
+   "state": "input-required",
+   "text": "The Orchid Room 兰花厅 is held for the person on Wed 23 Dec 2026 at 4pm for 4 guests. A 6-digit code has gone to their phone; they must enter it within 15 minutes to confirm, and the RM 100 booking fee is added at check-out.",
+   "data": {
+    "outcome": "held",
+    "proposal_ref": "JS-H1001",
+    "room": "Orchid Room 兰花厅",
+    "date": "2026-12-23",
+    "slot": "16:00",
+    "party_size": 4,
+    "expires_at": "2026-12-14T14:15",
+    "confirm": "The person confirms with the 6-digit code sent by SMS to their phone. No agent can confirm."
+   }
+  }
+ ],
+ "exchanges": [
+  {
+   "sent": "Hello, I'd like to book a private room at Jade Star Chinese Dining on Wednesday 23 December 2026 at 4pm. Could you please confirm a booking for us?",
+   "reply": "Welcome to Jade Star Chinese Dining 吉星饭厅. How many guests will there be?",
+   "state": "input-required",
+   "data": null
+  },
+  {
+   "sent": "Party size is 4. Thank you.",
+   "reply": "The Orchid Room 兰花厅 is held for the person on Wed 23 Dec 2026 at 4pm for 4 guests. A 6-digit code has gone to their phone; they must enter it within 15 minutes to confirm, and the RM 100 booking fee is added at check-out.",
+   "state": "input-required",
+   "data": {
+    "outcome": "held",
+    "proposal_ref": "JS-H1001",
+    "room": "Orchid Room 兰花厅",
+    "date": "2026-12-23",
+    "slot": "16:00",
+    "party_size": 4,
+    "expires_at": "2026-12-14T14:15",
+    "confirm": "The person confirms with the 6-digit code sent by SMS to their phone. No agent can confirm."
+   }
+  }
+ ]
+}

@@ -1,0 +1,1607 @@
+{
+ "summary": {
+  "date": "2026-11-03T04:47:30.656Z",
+  "today": "2026-12-14T14:00",
+  "model": "claude-haiku-5-5",
+  "runs": 3,
+  "passed": 3,
+  "hard_limit_breaches": 0,
+  "by_group": {
+   "b": {
+    "runs": 2,
+    "passed": 2
+   },
+   "c": {
+    "runs": 1,
+    "passed": 1
+   }
+  },
+  "labels": {},
+  "usage": {
+   "input_tokens": 2376,
+   "output_tokens": 1200,
+   "cache_read_input_tokens": 21408,
+   "cache_creation_input_tokens": 12498
+  },
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 2376,
+    "output_tokens": 1200,
+    "cache_read_input_tokens": 21408,
+    "cache_creation_input_tokens": 12498
+   }
+  },
+  "wall_ms": 4544,
+  "sample": true,
+  "only": null
+ },
+ "results": [
+  {
+   "id": 2,
+   "group": "b",
+   "type": "Booking held",
+   "title": "\"Hi, can I book a room for 8 people this Saturday, 19 Dec, at 1pm?\"",
+   "route": "chat",
+   "clock": "2026-12-14T14:00",
+   "turns": [
+    {
+     "message": "Hi, can I book a room for 8 people this Saturday, 19 Dec, at 1pm?",
+     "reply": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for you on Sat 19 Dec at 1pm for 8 guests, and a 6-digit code has gone to your phone. Please enter it within 15 minutes to confirm; the RM 100 booking fee is added to your bill at check-out.",
+     "stoppedBy": "end_turn",
+     "fixesLeft": [],
+     "reworded": 0,
+     "sentBack": false,
+     "trace": [
+      {
+       "type": "tool",
+       "name": "create_proposal",
+       "input": {
+        "date": "2026-12-19",
+        "slot": "13:00",
+        "party_size": 8
+       },
+       "result": {
+        "tool": "create_proposal",
+        "status": "ok",
+        "data": {
+         "proposal_ref": "JS-H1001",
+         "status": "held",
+         "room": "Tulip Room 郁金香厅",
+         "date": "2026-12-19",
+         "date_label": "Sat 19 Dec 2026",
+         "slot": "13:00",
+         "slot_label": "1pm",
+         "party_size": 8,
+         "hold_minutes": 15,
+         "expires_at": "2026-12-14T14:15",
+         "minutes_left": 15,
+         "fee": "RM 100 booking fee, added to the bill at check-out; nothing is paid now",
+         "code_sent_to": "012-***6702",
+         "upsized": false
+        },
+        "error": null,
+        "next_step": {
+         "say": "Tulip Room 郁金香厅 is held for you on Sat 19 Dec 2026 at 1pm for 8 guests. A 6-digit code has gone to your phone, so please enter it within 15 minutes to confirm; the RM 100 booking fee is added to your bill at check-out.",
+         "end": false
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for you on Sat 19 Dec at 1pm for 8 guests, and a 6-digit code has gone to your phone. Please enter it within 15 minutes to confirm; the RM 100 booking fee is added to your bill at check-out.",
+       "by": "model"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "turn": 1,
+     "at": "2026-12-14T14:00",
+     "tool": "create_proposal",
+     "input": {
+      "date": "2026-12-19",
+      "slot": "13:00",
+      "party_size": 8
+     },
+     "result": {
+      "tool": "create_proposal",
+      "status": "ok",
+      "data": {
+       "proposal_ref": "JS-H1001",
+       "status": "held",
+       "room": "Tulip Room 郁金香厅",
+       "date": "2026-12-19",
+       "date_label": "Sat 19 Dec 2026",
+       "slot": "13:00",
+       "slot_label": "1pm",
+       "party_size": 8,
+       "hold_minutes": 15,
+       "expires_at": "2026-12-14T14:15",
+       "minutes_left": 15,
+       "fee": "RM 100 booking fee, added to the bill at check-out; nothing is paid now",
+       "code_sent_to": "012-***6702",
+       "upsized": false
+      },
+      "error": null,
+      "next_step": {
+       "say": "Tulip Room 郁金香厅 is held for you on Sat 19 Dec 2026 at 1pm for 8 guests. A 6-digit code has gone to your phone, so please enter it within 15 minutes to confirm; the RM 100 booking fee is added to your bill at check-out.",
+       "end": false
+      }
+     }
+    }
+   ],
+   "state": {
+    "proposals": [
+     {
+      "ref": "JS-H1001",
+      "status": "held",
+      "date": "2026-12-19",
+      "slot": "13:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Nurul Aina",
+      "phone": "012-3456702",
+      "route": "Chat",
+      "conversation": "case-2",
+      "created_at": "2026-12-14T14:00",
+      "expires_at": "2026-12-14T14:15",
+      "code": "661955",
+      "changed": false,
+      "attempts": []
+     }
+    ],
+    "bookings": [
+     {
+      "booking_no": "JS-B4001",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 5,
+      "room_id": "R6-1",
+      "name": "Chong Kah Wai",
+      "phone": "016-5510000",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4002",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 6,
+      "room_id": "R6-2",
+      "name": "Siti Mariam",
+      "phone": "016-5510137",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4003",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Raj Kumar",
+      "phone": "016-5510274",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4004",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 7,
+      "room_id": "R8-2",
+      "name": "Lau Pei Shan",
+      "phone": "016-5510411",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4005",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Mohd Hafiz",
+      "phone": "016-5510548",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4006",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 9,
+      "room_id": "R10-2",
+      "name": "Ong Bee Lian",
+      "phone": "016-5510685",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4007",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 6,
+      "room_id": "R6-1",
+      "name": "Kavitha Nair",
+      "phone": "016-5510822",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4008",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 4,
+      "room_id": "R6-2",
+      "name": "Teoh Jun Hao",
+      "phone": "016-5510959",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4009",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-15",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Farah Izzati",
+      "phone": "016-5511096",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4010",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-17",
+      "slot": "13:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Goh Siew Ling",
+      "phone": "016-5511233",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4011",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-18",
+      "slot": "13:00",
+      "party_size": 7,
+      "room_id": "R8-2",
+      "name": "Arun Pillai",
+      "phone": "016-5511370",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4012",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-19",
+      "slot": "19:00",
+      "party_size": 6,
+      "room_id": "R6-1",
+      "name": "Ng Chee Keong",
+      "phone": "016-5511507",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4013",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-20",
+      "slot": "19:00",
+      "party_size": 9,
+      "room_id": "R10-2",
+      "name": "Zainab Yusof",
+      "phone": "016-5511644",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4014",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-24",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Wong Kok Leong",
+      "phone": "016-5511781",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4015",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-24",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-2",
+      "name": "Aisyah Rahim",
+      "phone": "016-5511918",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4016",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-25",
+      "slot": "13:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Low Mun Yee",
+      "phone": "016-5512055",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4017",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-27",
+      "slot": "13:00",
+      "party_size": 5,
+      "room_id": "R6-2",
+      "name": "Daniel Chin",
+      "phone": "016-5512192",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4018",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-31",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Priya Menon",
+      "phone": "016-5512329",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4019",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-31",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-2",
+      "name": "Hafizah Omar",
+      "phone": "016-5512466",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     }
+    ],
+    "handovers": [],
+    "notices": [],
+    "sms": [
+     {
+      "to": "012-3456702",
+      "at": "2026-12-14T14:00",
+      "proposal_ref": "JS-H1001",
+      "kind": "code",
+      "text": "Jade Star Chinese Dining 吉星饭厅: your code is 661955. Tulip Room 郁金香厅, Sat 19 Dec 2026, 1pm, 8 guests. Enter it within 15 minutes to confirm."
+     }
+    ],
+    "seq": {
+     "proposal": 1001,
+     "booking": 5000,
+     "handover": 3000,
+     "notice": 7000
+    }
+   },
+   "usage": {
+    "input_tokens": 685,
+    "output_tokens": 265,
+    "cache_read_input_tokens": 7112,
+    "cache_creation_input_tokens": 4142
+   },
+   "ms": 2495,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Holds": true,
+     "Room held": true,
+     "Handovers": true,
+     "SMS codes sent": true,
+     "Tools": true,
+     "Tools that must not run": true,
+     "Reply check": true
+    },
+    "limits": {
+     "L1": true,
+     "L2": true,
+     "L3": true,
+     "L4": true,
+     "L5": true,
+     "L6": true,
+     "L7": true
+    }
+   }
+  },
+  {
+   "id": 8,
+   "group": "b",
+   "type": "Hand over",
+   "title": "\"We are 12 people for a company dinner on Friday 18 Dec, 7pm.\"",
+   "route": "chat",
+   "clock": "2026-12-14T14:00",
+   "turns": [
+    {
+     "message": "We are 12 people for a company dinner on Friday 18 Dec, 7pm.",
+     "reply": "Welcome to Jade Star Chinese Dining 吉星饭厅. Our private rooms seat up to 10 guests, so I've passed your booking to our restaurant manager, who will call you on 012-***6708 to arrange it.",
+     "stoppedBy": "fixed_reply",
+     "fixesLeft": [],
+     "reworded": 0,
+     "sentBack": false,
+     "trace": [
+      {
+       "type": "tool",
+       "name": "check_availability",
+       "input": {
+        "date": "2026-12-18",
+        "slot": "19:00",
+        "party_size": 12
+       },
+       "result": {
+        "tool": "check_availability",
+        "status": "refused",
+        "data": null,
+        "error": {
+         "code": "PARTY_TOO_LARGE",
+         "retryable": false,
+         "alternatives": [
+          "hand_to_manager reason party_over_10"
+         ],
+         "clause": "P6",
+         "message": "Parties over 10 go to the restaurant manager."
+        },
+        "next_step": {
+         "action": "call hand_to_manager with reason party_over_10",
+         "reason": "party_over_10"
+        }
+       }
+      },
+      {
+       "type": "tool",
+       "name": "hand_to_manager",
+       "input": {
+        "reason": "party_over_10",
+        "summary": "12 guests for a company dinner, Fri 18 Dec 2026 at 7pm."
+       },
+       "result": {
+        "tool": "hand_to_manager",
+        "status": "ok",
+        "data": {
+         "handover_ref": "JS-M3001",
+         "reason": "party_over_10",
+         "receiver": "Restaurant manager",
+         "room": null
+        },
+        "error": null,
+        "next_step": {
+         "say": "Our private rooms seat up to 10 guests, so I've passed your booking to our restaurant manager, who will call you on 012-***6708 to arrange it.",
+         "end": true
+        }
+       }
+      },
+      {
+       "type": "note",
+       "text": "Reply written in code (fixed sentence)."
+      },
+      {
+       "type": "reply",
+       "text": "Welcome to Jade Star Chinese Dining 吉星饭厅. Our private rooms seat up to 10 guests, so I've passed your booking to our restaurant manager, who will call you on 012-***6708 to arrange it.",
+       "by": "code"
+      }
+     ]
+    }
+   ],
+   "events": [
+    {
+     "turn": 1,
+     "at": "2026-12-14T14:00",
+     "tool": "check_availability",
+     "input": {
+      "date": "2026-12-18",
+      "slot": "19:00",
+      "party_size": 12
+     },
+     "result": {
+      "tool": "check_availability",
+      "status": "refused",
+      "data": null,
+      "error": {
+       "code": "PARTY_TOO_LARGE",
+       "retryable": false,
+       "alternatives": [
+        "hand_to_manager reason party_over_10"
+       ],
+       "clause": "P6",
+       "message": "Parties over 10 go to the restaurant manager."
+      },
+      "next_step": {
+       "action": "call hand_to_manager with reason party_over_10",
+       "reason": "party_over_10"
+      }
+     }
+    },
+    {
+     "turn": 1,
+     "at": "2026-12-14T14:00",
+     "tool": "hand_to_manager",
+     "input": {
+      "reason": "party_over_10",
+      "summary": "12 guests for a company dinner, Fri 18 Dec 2026 at 7pm."
+     },
+     "result": {
+      "tool": "hand_to_manager",
+      "status": "ok",
+      "data": {
+       "handover_ref": "JS-M3001",
+       "reason": "party_over_10",
+       "receiver": "Restaurant manager",
+       "room": null
+      },
+      "error": null,
+      "next_step": {
+       "say": "Our private rooms seat up to 10 guests, so I've passed your booking to our restaurant manager, who will call you on 012-***6708 to arrange it.",
+       "end": true
+      }
+     }
+    }
+   ],
+   "state": {
+    "proposals": [],
+    "bookings": [
+     {
+      "booking_no": "JS-B4001",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 5,
+      "room_id": "R6-1",
+      "name": "Chong Kah Wai",
+      "phone": "016-5510000",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4002",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 6,
+      "room_id": "R6-2",
+      "name": "Siti Mariam",
+      "phone": "016-5510137",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4003",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Raj Kumar",
+      "phone": "016-5510274",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4004",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 7,
+      "room_id": "R8-2",
+      "name": "Lau Pei Shan",
+      "phone": "016-5510411",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4005",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Mohd Hafiz",
+      "phone": "016-5510548",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4006",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 9,
+      "room_id": "R10-2",
+      "name": "Ong Bee Lian",
+      "phone": "016-5510685",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4007",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 6,
+      "room_id": "R6-1",
+      "name": "Kavitha Nair",
+      "phone": "016-5510822",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4008",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 4,
+      "room_id": "R6-2",
+      "name": "Teoh Jun Hao",
+      "phone": "016-5510959",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4009",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-15",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Farah Izzati",
+      "phone": "016-5511096",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4010",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-17",
+      "slot": "13:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Goh Siew Ling",
+      "phone": "016-5511233",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4011",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-18",
+      "slot": "13:00",
+      "party_size": 7,
+      "room_id": "R8-2",
+      "name": "Arun Pillai",
+      "phone": "016-5511370",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4012",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-19",
+      "slot": "19:00",
+      "party_size": 6,
+      "room_id": "R6-1",
+      "name": "Ng Chee Keong",
+      "phone": "016-5511507",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4013",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-20",
+      "slot": "19:00",
+      "party_size": 9,
+      "room_id": "R10-2",
+      "name": "Zainab Yusof",
+      "phone": "016-5511644",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4014",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-24",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Wong Kok Leong",
+      "phone": "016-5511781",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4015",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-24",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-2",
+      "name": "Aisyah Rahim",
+      "phone": "016-5511918",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4016",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-25",
+      "slot": "13:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Low Mun Yee",
+      "phone": "016-5512055",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4017",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-27",
+      "slot": "13:00",
+      "party_size": 5,
+      "room_id": "R6-2",
+      "name": "Daniel Chin",
+      "phone": "016-5512192",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4018",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-31",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Priya Menon",
+      "phone": "016-5512329",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4019",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-31",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-2",
+      "name": "Hafizah Omar",
+      "phone": "016-5512466",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     }
+    ],
+    "handovers": [
+     {
+      "ref": "JS-M3001",
+      "reason": "party_over_10",
+      "reason_label": "Party over 10",
+      "receiver": "Restaurant manager",
+      "name": "Marcus Tan",
+      "phone": "012-3456708",
+      "date": "2026-12-18",
+      "slot": "19:00",
+      "party_size": 12,
+      "room": null,
+      "proposal_ref": null,
+      "route": "Chat",
+      "words": "We are 12 people for a company dinner on Friday 18 Dec, 7pm.",
+      "summary": "12 guests for a company dinner, Fri 18 Dec 2026 at 7pm.",
+      "created_at": "2026-12-14T14:00",
+      "status": "open",
+      "conversation": "case-8"
+     }
+    ],
+    "notices": [],
+    "sms": [],
+    "seq": {
+     "proposal": 1000,
+     "booking": 5000,
+     "handover": 3001,
+     "notice": 7000
+    }
+   },
+   "usage": {
+    "input_tokens": 634,
+    "output_tokens": 378,
+    "cache_read_input_tokens": 7112,
+    "cache_creation_input_tokens": 4142
+   },
+   "ms": 2993,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Holds": true,
+     "No hold": true,
+     "Handovers": true,
+     "SMS codes sent": true,
+     "Tools": true,
+     "Tools that must not run": true,
+     "Reply check": true
+    },
+    "limits": {
+     "L1": true,
+     "L2": true,
+     "L3": true,
+     "L4": true,
+     "L5": true,
+     "L6": true,
+     "L7": true
+    }
+   }
+  },
+  {
+   "id": 13,
+   "group": "c",
+   "type": "Booking held",
+   "title": "Customer agent, for its person: 5 people, Wed 16 Dec, 4pm",
+   "route": "a2a",
+   "clock": "2026-12-14T14:00",
+   "turns": [
+    {
+     "message": "Hello, I'd like to book a private room at Jade Star Chinese Dining for 5 people on Wednesday 16 December 2026 at 4pm. Could you please make this booking?",
+     "reply": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for 5 guests on Wed 16 Dec 2026 at 4pm, and a 6-digit code has gone to your phone. Please enter it within 15 minutes to confirm; the RM 100 booking fee is added to the bill at check-out.",
+     "trace": [
+      {
+       "type": "tool",
+       "name": "create_proposal",
+       "input": {
+        "date": "2026-12-16",
+        "slot": "16:00",
+        "party_size": 5
+       },
+       "result": {
+        "tool": "create_proposal",
+        "status": "ok",
+        "data": {
+         "proposal_ref": "JS-H1001",
+         "status": "held",
+         "room": "Tulip Room 郁金香厅",
+         "date": "2026-12-16",
+         "date_label": "Wed 16 Dec 2026",
+         "slot": "16:00",
+         "slot_label": "4pm",
+         "party_size": 5,
+         "hold_minutes": 15,
+         "expires_at": "2026-12-14T14:15",
+         "minutes_left": 15,
+         "fee": "RM 100 booking fee, added to the bill at check-out; nothing is paid now",
+         "code_sent_to": "012-***6713",
+         "upsized": true
+        },
+        "error": null,
+        "next_step": {
+         "say": "Tulip Room 郁金香厅 is held for you on Wed 16 Dec 2026 at 4pm for 5 guests. A 6-digit code has gone to your phone, so please enter it within 15 minutes to confirm; the RM 100 booking fee is added to your bill at check-out.",
+         "end": false
+        }
+       }
+      },
+      {
+       "type": "reply",
+       "text": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for 5 guests on Wed 16 Dec 2026 at 4pm, and a 6-digit code has gone to your phone. Please enter it within 15 minutes to confirm; the RM 100 booking fee is added to the bill at check-out.",
+       "by": "model"
+      }
+     ],
+     "usage": {
+      "input_tokens": 749,
+      "output_tokens": 495,
+      "cache_read_input_tokens": 7184,
+      "cache_creation_input_tokens": 4214
+     },
+     "stoppedBy": "end_turn",
+     "fixesLeft": [],
+     "reworded": 0,
+     "sentBack": false
+    }
+   ],
+   "events": [
+    {
+     "turn": 1,
+     "at": "2026-12-14T14:00",
+     "tool": "create_proposal",
+     "input": {
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 5
+     },
+     "result": {
+      "tool": "create_proposal",
+      "status": "ok",
+      "data": {
+       "proposal_ref": "JS-H1001",
+       "status": "held",
+       "room": "Tulip Room 郁金香厅",
+       "date": "2026-12-16",
+       "date_label": "Wed 16 Dec 2026",
+       "slot": "16:00",
+       "slot_label": "4pm",
+       "party_size": 5,
+       "hold_minutes": 15,
+       "expires_at": "2026-12-14T14:15",
+       "minutes_left": 15,
+       "fee": "RM 100 booking fee, added to the bill at check-out; nothing is paid now",
+       "code_sent_to": "012-***6713",
+       "upsized": true
+      },
+      "error": null,
+      "next_step": {
+       "say": "Tulip Room 郁金香厅 is held for you on Wed 16 Dec 2026 at 4pm for 5 guests. A 6-digit code has gone to your phone, so please enter it within 15 minutes to confirm; the RM 100 booking fee is added to your bill at check-out.",
+       "end": false
+      }
+     }
+    }
+   ],
+   "a2a": {
+    "exchanges": [
+     {
+      "sent": "Hello, I'd like to book a private room at Jade Star Chinese Dining for 5 people on Wednesday 16 December 2026 at 4pm. Could you please make this booking?",
+      "reply": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for 5 guests on Wed 16 Dec 2026 at 4pm, and a 6-digit code has gone to your phone. Please enter it within 15 minutes to confirm; the RM 100 booking fee is added to the bill at check-out.",
+      "state": "input-required",
+      "data": {
+       "outcome": "held",
+       "proposal_ref": "JS-H1001",
+       "room": "Tulip Room 郁金香厅",
+       "date": "2026-12-16",
+       "slot": "16:00",
+       "party_size": 5,
+       "expires_at": "2026-12-14T14:15",
+       "confirm": "The person confirms with the 6-digit code sent by SMS to their phone. No agent can confirm."
+      }
+     }
+    ],
+    "task_id": "96099e8e-f4df-48ce-bd06-f5d90ab3748a",
+    "customer_agent_usage": {
+     "input_tokens": 308,
+     "output_tokens": 62,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 0
+    }
+   },
+   "a2a_log": [
+    {
+     "at": "2026-12-14T14:00",
+     "from": "customer agent",
+     "task_id": "96099e8e-f4df-48ce-bd06-f5d90ab3748a",
+     "state": "submitted",
+     "text": "Hello, I'd like to book a private room at Jade Star Chinese Dining for 5 people on Wednesday 16 December 2026 at 4pm. Could you please make this booking?",
+     "data": {
+      "customer": {
+       "name": "Ahmad Faizal",
+       "phone": "012-3456713"
+      }
+     }
+    },
+    {
+     "at": "2026-12-14T14:00",
+     "from": "booking system",
+     "task_id": "96099e8e-f4df-48ce-bd06-f5d90ab3748a",
+     "state": "working",
+     "text": ""
+    },
+    {
+     "at": "2026-12-14T14:00",
+     "from": "restaurant assistant",
+     "task_id": "96099e8e-f4df-48ce-bd06-f5d90ab3748a",
+     "state": "input-required",
+     "text": "Welcome to Jade Star Chinese Dining 吉星饭厅. The Tulip Room 郁金香厅 is held for 5 guests on Wed 16 Dec 2026 at 4pm, and a 6-digit code has gone to your phone. Please enter it within 15 minutes to confirm; the RM 100 booking fee is added to the bill at check-out.",
+     "data": {
+      "outcome": "held",
+      "proposal_ref": "JS-H1001",
+      "room": "Tulip Room 郁金香厅",
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 5,
+      "expires_at": "2026-12-14T14:15",
+      "confirm": "The person confirms with the 6-digit code sent by SMS to their phone. No agent can confirm."
+     }
+    }
+   ],
+   "state": {
+    "proposals": [
+     {
+      "ref": "JS-H1001",
+      "status": "held",
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 5,
+      "room_id": "R8-1",
+      "name": "Ahmad Faizal",
+      "phone": "012-3456713",
+      "route": "A2A agent",
+      "conversation": "03732cfc-d1a4-49db-a4a2-9757e7b60d28",
+      "created_at": "2026-12-14T14:00",
+      "expires_at": "2026-12-14T14:15",
+      "code": "665792",
+      "changed": false,
+      "attempts": []
+     }
+    ],
+    "bookings": [
+     {
+      "booking_no": "JS-B4001",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 5,
+      "room_id": "R6-1",
+      "name": "Chong Kah Wai",
+      "phone": "016-5510000",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4002",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 6,
+      "room_id": "R6-2",
+      "name": "Siti Mariam",
+      "phone": "016-5510137",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4003",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Raj Kumar",
+      "phone": "016-5510274",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4004",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 7,
+      "room_id": "R8-2",
+      "name": "Lau Pei Shan",
+      "phone": "016-5510411",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4005",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Mohd Hafiz",
+      "phone": "016-5510548",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4006",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-26",
+      "slot": "19:00",
+      "party_size": 9,
+      "room_id": "R10-2",
+      "name": "Ong Bee Lian",
+      "phone": "016-5510685",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4007",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 6,
+      "room_id": "R6-1",
+      "name": "Kavitha Nair",
+      "phone": "016-5510822",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4008",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-16",
+      "slot": "16:00",
+      "party_size": 4,
+      "room_id": "R6-2",
+      "name": "Teoh Jun Hao",
+      "phone": "016-5510959",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4009",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-15",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Farah Izzati",
+      "phone": "016-5511096",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4010",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-17",
+      "slot": "13:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Goh Siew Ling",
+      "phone": "016-5511233",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4011",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-18",
+      "slot": "13:00",
+      "party_size": 7,
+      "room_id": "R8-2",
+      "name": "Arun Pillai",
+      "phone": "016-5511370",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4012",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-19",
+      "slot": "19:00",
+      "party_size": 6,
+      "room_id": "R6-1",
+      "name": "Ng Chee Keong",
+      "phone": "016-5511507",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4013",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-20",
+      "slot": "19:00",
+      "party_size": 9,
+      "room_id": "R10-2",
+      "name": "Zainab Yusof",
+      "phone": "016-5511644",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4014",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-24",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-1",
+      "name": "Wong Kok Leong",
+      "phone": "016-5511781",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4015",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-24",
+      "slot": "19:00",
+      "party_size": 8,
+      "room_id": "R8-2",
+      "name": "Aisyah Rahim",
+      "phone": "016-5511918",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4016",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-25",
+      "slot": "13:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Low Mun Yee",
+      "phone": "016-5512055",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4017",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-27",
+      "slot": "13:00",
+      "party_size": 5,
+      "room_id": "R6-2",
+      "name": "Daniel Chin",
+      "phone": "016-5512192",
+      "route": "Chat",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4018",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-31",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-1",
+      "name": "Priya Menon",
+      "phone": "016-5512329",
+      "route": "A2A agent",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     },
+     {
+      "booking_no": "JS-B4019",
+      "proposal_ref": null,
+      "status": "confirmed",
+      "seeded": true,
+      "date": "2026-12-31",
+      "slot": "19:00",
+      "party_size": 10,
+      "room_id": "R10-2",
+      "name": "Hafizah Omar",
+      "phone": "016-5512466",
+      "route": "Form",
+      "fee_rm": 100,
+      "fee_note": "RM 100 due at check-out",
+      "confirmed_at": "2026-12-10T12:00",
+      "confirmed_by": "customer"
+     }
+    ],
+    "handovers": [],
+    "notices": [],
+    "sms": [
+     {
+      "to": "012-3456713",
+      "at": "2026-12-14T14:00",
+      "proposal_ref": "JS-H1001",
+      "kind": "code",
+      "text": "Jade Star Chinese Dining 吉星饭厅: your code is 665792. Tulip Room 郁金香厅, Wed 16 Dec 2026, 4pm, 5 guests. Enter it within 15 minutes to confirm."
+     }
+    ],
+    "seq": {
+     "proposal": 1001,
+     "booking": 5000,
+     "handover": 3000,
+     "notice": 7000
+    }
+   },
+   "usage": {
+    "input_tokens": 1057,
+    "output_tokens": 557,
+    "cache_read_input_tokens": 7184,
+    "cache_creation_input_tokens": 4214
+   },
+   "ms": 4516,
+   "score": {
+    "pass": true,
+    "label": null,
+    "checks": {
+     "Holds": true,
+     "Room held": true,
+     "Handovers": true,
+     "SMS codes sent": true,
+     "Tools": true,
+     "Tools that must not run": true,
+     "A2A task": true,
+     "Reply check": true
+    },
+    "limits": {
+     "L1": true,
+     "L2": true,
+     "L3": true,
+     "L4": true,
+     "L5": true,
+     "L6": true,
+     "L7": true
+    }
+   }
+  }
+ ]
+}

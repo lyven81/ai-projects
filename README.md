@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 13**
+**Total published AI projects: 14**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 14 | 2026-11-03 | Jade Star Chinese Dining 吉星饭厅 Booking Desk | [page](https://lyven81.github.io/ai-projects/restaurant-jade-star.html) |
 | 13 | 2026-11-02 | Cepat Express Customer Service | [page](https://lyven81.github.io/ai-projects/cepat-express-customer-service.html) |
 | 12 | 2026-10-30 | Comel Diaper Marketing Campaign Assistant | [page](https://lyven81.github.io/ai-projects/marketing-campaign-assistant.html) |
 | 11 | 2026-10-29 | Kiddoz Back-to-School Campaign Team | [page](https://lyven81.github.io/ai-projects/back-to-school-campaign.html) |
@@ -91,6 +92,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-19
 
 ### Customer service
+
+#### Jade Star Chinese Dining 吉星饭厅 Booking Desk
+- **What it does:** A restaurant booking desk where the AI prepares bookings by chat and for customers' own AI agents, code holds every rule and the 15-minute hold, only the customer's SMS code confirms, and the restaurant manager takes every handover.
+- **How it's built:** Claude Haiku with four tools behind two hooks, an A2A server for customers' own AI agents (@a2a-js/sdk) and an MCP server offering the same tools and four resources; one booking module in code checks every rule, holds the room, sends the code and is shared with the web form, which uses no AI; only the customer's confirmation screen can confirm.
+- **Problem solved:** A restaurant takes private room bookings by web form, by chat and from customers' own AI agents, and every route must follow the same rules. The desk applies one set of rules everywhere, releases unconfirmed holds after 15 minutes and passes every request the rules cannot settle to the restaurant manager.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/restaurant-jade-star.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/restaurant-jade-star/demo.html)
+- **Rebuilt:** 2026-11-03
 
 #### Cepat Express Customer Service
 - **What it does:** A courier customer service agent where the AI answers parcel status from the latest scan, code holds every limit, the phone match and every route, and the Customer Service Lead reviews every handover.
