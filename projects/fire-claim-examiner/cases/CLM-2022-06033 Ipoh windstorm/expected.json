@@ -1,0 +1,197 @@
+{
+  "claim_no": "CLM-2022-06033",
+  "label": "Ipoh windstorm",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "storm (windstorm)",
+    "sequence": [
+      "Thunderstorm with strong wind on the late afternoon of 30 June 2022, gusts up to 68 km/h",
+      "The wind lifts and displaces clay tiles on the rear roof slope, breaks two battens and dislodges part of the rear gable coping",
+      "Rain enters the roof space through that opening and comes through the ceilings of the rear bedroom and passage",
+      "In the same storm a branch breaks off a rain tree on the neighbouring lot and falls across the car porch"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 30 June 2022 falls inside 2 June 2022 to 1 June 2023."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: storm; the wind opened the roof and the rain followed through that opening, with no intervening event. Windstorm is excluded by Condition 6(b) under the base policy but brought in by FP503, which is held."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 1 July 2022; written claim delivered 8 July 2022, day 8 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "FP503 is on the schedule and overrides Condition 6(b). FP513 is also held and answers the branch that fell on the car porch."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "FP503 Special Condition 1 satisfied: the wind first displaced roof tiles and broke battens, and rain then entered through those openings. No warranties. Condition 9(d) not engaged: the claimant is the Insured's daughter under his written authorisation and the Insured remains the registered owner."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Six of eight items admitted. Signboard (ref 6) and awning (ref 7) excluded by FP503 Special Condition 4(a), outdoor fixtures not separately insured. Car porch (ref 5) priced under FP513, the branch from the neighbouring tree, with its own excess. Tarpaulin (ref 8) admitted with the storm group and flagged (see ambiguity). Two excesses run in parallel, each after average."
+    }
+  ],
+  "governing_clause": "FP503",
+  "supporting_clauses": [
+    "FP503 Special Condition 1",
+    "FP503 Special Condition 4(a)",
+    "FP513",
+    "Condition 6(b)"
+  ],
+  "quotes": [
+    {
+      "clause": "FP503",
+      "chunk_id": "ENDORSEMENT-FP503",
+      "text": "notwithstanding anything stated to the contrary in Condition No. 6 of the Policy, this insurance extends to cover loss or damage directly caused by fire or otherwise occasioned by or through or in consequence of Hurricane, Cyclone, Typhoon and Windstorm,"
+    },
+    {
+      "clause": "FP503 Special Condition 1",
+      "chunk_id": "ENDORSEMENT-FP503",
+      "text": "1. The Company shall not be liable for any loss or damage caused by water or rain, whether driven by wind or not unless the building insured or containing the property insured shall first sustain actual damage to the roof or walls of same by the direct force of Hurricane, Cyclone, Typhoon and Windstorm and shall then be liable only for such damage to the interior of the building or the insured property therein as may be caused by water or rain entering the building through openings in the roof or walls made by the direct force of the said perils."
+    },
+    {
+      "clause": "FP503 Excess Clause",
+      "chunk_id": "ENDORSEMENT-FP503",
+      "text": "(a) 1% of the total sums insured against such peril on said property by Policies in the name of the insured, or (b) RM200.00 whichever shall be the less, as ascertained after the application of any condition of average."
+    },
+    {
+      "clause": "FP503 Special Condition 4(a)",
+      "chunk_id": "ENDORSEMENT-FP503",
+      "text": "4. Unless specifically and separately insured this endorsement does not cover:- (a) Metal smoke stacks, awnings, blinds, signs or other outdoor fixtures or fittings of any description."
+    },
+    {
+      "clause": "FP513",
+      "chunk_id": "ENDORSEMENT-FP513",
+      "text": "loss or damage to the property described in the Schedule and/or to walls, gates and fences around and pertaining thereto directly resulting from damage by falling trees or branches and objects therefrom, provided that the first RM250.00 of each and every claim under this endorsement shall be borne by the insured as ascertained after the application of any condition of average."
+    },
+    {
+      "clause": "Condition 6(b)",
+      "chunk_id": "CONDITION-6",
+      "text": "(b) Typhoon, hurricane, tornado, cyclone or other atmospheric disturbance."
+    },
+    {
+      "clause": "Condition 13",
+      "chunk_id": "CONDITION-13",
+      "text": "Provided always that the liability of the Company in respect of such wages, costs and charges shall be limited to those necessarily and reasonably incurred in extinguishing fires at or adjoining the situation of the property insured by this policy or immediately threatening to involve such property."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP504",
+      "reason": "Not held, and the water was rain entering through openings the wind made in the roof, not a flow of water from outside the building."
+    },
+    {
+      "clause": "Condition 9(d)",
+      "reason": "Not engaged. The daughter lodges under the Insured's written authorisation; the Insured remains the registered owner."
+    }
+  ],
+  "payable": 49950.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 6 signboard 1,850.00 and ref 7 awning 3,600.00 (FP503 Special Condition 4(a), outdoor fixtures not separately insured). Excluded total 5,450.00.",
+    "Step 2 Condition 20: Item 1 SI 380,000.00 vs value 365,000.00, Item 2 SI 95,000.00 vs value 80,000.00; factor 1.0 on both.",
+    "FP503 group: refs 1, 2, 3, 4, 8 = 28,400.00 + 6,700.00 + 2,900.00 + 7,150.00 + 950.00 = 46,100.00. Excess lesser of (a) 1% of 475,000.00 = 4,750.00 or (b) 200.00 = 200.00. Net 45,900.00.",
+    "FP513 group: ref 5 = 4,300.00, less the first 250.00 of each and every claim = 4,050.00.",
+    "Payable 45,900.00 + 4,050.00 = 49,950.00. Reconciliation: 46,100.00 + 4,300.00 + 5,450.00 = 55,850.00 claimed.",
+    "Wrong-method checks: one FP503 excess over the whole claim gives 50,200.00; taking the greater of 1% and 200.00 gives an excess of 4,750.00 and 41,350.00 on the FP503 group alone."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 6  RM     1,850.00  EXCLUDED by FP503 SC4(a)  (Metal signboard on boundary wall)",
+    "  ref 7  RM     3,600.00  EXCLUDED by FP503 SC4(a)  (Retractable fabric awning, front windows)",
+    "  excluded total       RM     5,450.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  380,000.00  value    RM 365,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   95,000.00  value     RM 80,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP503] refs [1, 2, 3, 4, 8]",
+    "     subtotal          RM    46,100.00",
+    "     excess            RM       200.00   Lesser of (a) 1.0% of total sums insured RM 475,000.00 = RM 4,750.00, or (b) RM 200.00. Lesser = RM 200.00.",
+    "     net               RM    45,900.00",
+    "  [FP513] refs [5]",
+    "     subtotal          RM     4,300.00",
+    "     excess            RM       250.00   Flat first RM 250.00 of each and every loss.",
+    "     net               RM     4,050.00",
+    "",
+    "  CLAIMED             RM    55,850.00",
+    "  RECOMMENDED PAYABLE RM    49,950.00"
+  ],
+  "facts": [
+    {
+      "fact": "Wind displaced tiles on the rear slope, broke two battens and dislodged the gable coping; rain then entered through that opening.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Findings, Damage found per item"
+    },
+    {
+      "fact": "Maximum gusts 68 km/h, 5:20 pm to 6:15 pm on 30 June 2022.",
+      "source": "Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "Branch from a rain tree on the neighbouring vacant lot fell on the car porch.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Incident report, WhatsApp of 30 June 2022"
+    },
+    {
+      "fact": "Signboard and awning are outdoor fixtures, not separately insured.",
+      "source": "Adjuster's report, Measurement; Schedule, Sums insured"
+    },
+    {
+      "fact": "FP503 and FP513 on the schedule.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "Claimant is the Insured's daughter under his written authorisation of 5 July 2022; the Insured remains the registered owner.",
+      "source": "Incident report, WhatsApp of 1 and 8 July 2022; Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "Emergency tarpaulin laid on 1 July 2022, RM 950.00.",
+      "source": "Incident report, WhatsApp of 1 July 2022; Adjuster's report, Measurement, ref 8"
+    },
+    {
+      "fact": "Values at risk below sums insured on both items.",
+      "source": "Adjuster's report, Measurement, value table"
+    },
+    {
+      "fact": "Notice 1 July 2022; written claim delivered 8 July 2022.",
+      "source": "Incident report, WhatsApp of 1 and 8 July 2022"
+    }
+  ],
+  "ambiguity": [
+    {
+      "clause": "Condition 13",
+      "question": "Whether the emergency tarpaulin and labour (ref 8, RM 950.00), spent to stop further rain entering after the storm, is admissible: Condition 13 provides expressly for fire fighting costs, not storm mitigation.",
+      "expected_behaviour": "Admit ref 8 with the FP503 group as mitigation expenditure and flag it for the claims examiner to confirm. The payable of RM 49,950.00 includes it."
+    },
+    {
+      "clause": "FP503 and FP513",
+      "question": "Whether the windstorm caused the branch to fall, so that FP503 may also respond to the car porch (ref 5). The adjuster records only that the branch fell in the same storm; neither clause states that FP513 overrides FP503.",
+      "expected_behaviour": "Price ref 5 under FP513 with its own RM 250.00 excess, the clause that matches the damage found, and flag FP503 for the claims examiner. The payable of RM 49,950.00 rests on FP513."
+    }
+  ]
+}

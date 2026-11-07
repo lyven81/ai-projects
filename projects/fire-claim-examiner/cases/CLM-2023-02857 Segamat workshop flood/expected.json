@@ -1,0 +1,136 @@
+{
+  "claim_no": "CLM-2023-02857",
+  "label": "Segamat workshop flood",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "flood",
+    "sequence": [
+      "Prolonged heavy rain from 28 February 2023",
+      "Sungai Segamat overflows",
+      "Water enters the workshop from the road and the rear drain and stands inside overnight on 1 to 2 March 2023",
+      "Roof sheets, ridge cap and walls intact; no opening made by wind"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on the night of 1 to 2 March 2023 falls inside 15 June 2022 to 14 June 2023."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: flood (overflow of Sungai Segamat), with no intervening event. Flood is not a base peril; it can be brought in only by FP504, so the chain proceeds to test whether FP504 is held."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 2 March 2023; written claim delivered 9 March 2023, day 7 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "fail",
+      "reason": "FP504 is not on the schedule. Only FP503 is held, and it answers wind, not flood. Condition 6(b) stands and the loss is not covered."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "Condition 6(b)",
+  "supporting_clauses": [
+    "FP504 (not held)",
+    "FP503 Special Condition 1"
+  ],
+  "quotes": [
+    {
+      "clause": "Condition 6(b)",
+      "chunk_id": "CONDITION-6",
+      "text": "This insurance does not cover any loss or damage occasioned by or through or in consequence, directly or indirectly, of any of the following occurrences, namely:-"
+    },
+    {
+      "clause": "Condition 6(b)",
+      "chunk_id": "CONDITION-6",
+      "text": "(b) Typhoon, hurricane, tornado, cyclone or other atmospheric disturbance."
+    },
+    {
+      "clause": "FP503 Special Condition 1",
+      "chunk_id": "ENDORSEMENT-FP503",
+      "text": "1. The Company shall not be liable for any loss or damage caused by water or rain, whether driven by wind or not unless the building insured or containing the property insured shall first sustain actual damage to the roof or walls of same by the direct force of Hurricane, Cyclone, Typhoon and Windstorm and shall then be liable only for such damage to the interior of the building or the insured property therein as may be caused by water or rain entering the building through openings in the roof or walls made by the direct force of the said perils."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP503",
+      "reason": "Held, but it does not answer flood. Its Special Condition 1 admits water damage only through openings made by the wind; the roof and walls were intact. Citing FP503 as the ground of cover is wrong."
+    },
+    {
+      "clause": "FP504",
+      "reason": "Not held. It must not be applied as if it were, nor its RM2,500 excess computed as a payable."
+    },
+    {
+      "clause": "FW704B",
+      "reason": "The warranty is on the schedule and was complied with: no spray painting found. It is not a ground of declinature."
+    },
+    {
+      "clause": "Condition 8(a)",
+      "reason": "The customer's car would fall out as goods held in trust, but the claim fails at gate 4 before items are tested; it is not the ground."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": false,
+    "reason": "No basis to price. FP504 is not held, so Condition 6(b) stands regardless of quantum."
+  },
+  "working": [
+    "Declined at gate 4. No calculation: there is no endorsement under which the flood loss could be priced."
+  ],
+  "facts": [
+    {
+      "fact": "Water from the overflow of Sungai Segamat entered at ground level from outside; roof and walls intact.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Schedule holds FP503 only; FP504 is not listed.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "The Insured attributes the loss partly to strong wind.",
+      "source": "Incident report, WhatsApp of 2 and 9 March 2023"
+    },
+    {
+      "fact": "No wind damage to the roof or walls.",
+      "source": "Adjuster's report, Findings, Discrepancies with the incident report"
+    },
+    {
+      "fact": "Written claim delivered 9 March 2023.",
+      "source": "Incident report, WhatsApp of 9 March 2023"
+    }
+  ],
+  "ambiguity": [
+    {
+      "clause": "Condition 6(b) or peril not insured",
+      "question": "Whether the ground is better framed as Condition 6(b) (the exclusion FP504 is written against) or as flood lying outside the base insuring clause altogether.",
+      "expected_behaviour": "Either framing gives the same result; name Condition 6(b) as the clause FP504 would have displaced and state that FP504 is not held."
+    }
+  ]
+}

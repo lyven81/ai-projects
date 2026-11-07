@@ -1,0 +1,144 @@
+{
+  "claim_no": "CLM-2024-06472",
+  "label": "Kuala Terengganu terrace house storm",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "storm rain (thunderstorm), no wind damage",
+    "sequence": [
+      "Thunderstorm with heavy rain from 6:45 pm on 21 May 2024, maximum gust 48 km/h",
+      "The rear box gutter, blocked with leaves and silt, overflows",
+      "Rainwater runs back under the bottom row of tiles into the roof space above the rear bedroom and corridor",
+      "Further water is driven in through deteriorated sealant around the rear bedroom window frame",
+      "All roof tiles in place; nothing displaced or broken by the wind"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 21 May 2024 falls inside 1 October 2023 to 30 September 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: storm rain in a thunderstorm, entering through a blocked gutter and window frame gaps, with no intervening event. Storm damage is excluded under Condition 6 but brought in by FP503."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 22 May 2024; written claim delivered 28 May 2024, day 7 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "FP503 is on the schedule and overrides Condition 6(b)."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "fail",
+      "reason": "FP503 Special Condition 1 not met: the building did not first sustain damage to its roof or walls by the direct force of the wind. Rain entered through a blocked gutter and window frame gaps, not through openings made by the storm."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "FP503 Special Condition 1",
+  "supporting_clauses": [
+    "FP503",
+    "Condition 6(b)"
+  ],
+  "quotes": [
+    {
+      "clause": "FP503 Special Condition 1",
+      "chunk_id": "ENDORSEMENT-FP503",
+      "text": "1. The Company shall not be liable for any loss or damage caused by water or rain, whether driven by wind or not unless the building insured or containing the property insured shall first sustain actual damage to the roof or walls of same by the direct force of Hurricane, Cyclone, Typhoon and Windstorm and shall then be liable only for such damage to the interior of the building or the insured property therein as may be caused by water or rain entering the building through openings in the roof or walls made by the direct force of the said perils."
+    },
+    {
+      "clause": "FP503",
+      "chunk_id": "ENDORSEMENT-FP503",
+      "text": "notwithstanding anything stated to the contrary in Condition No. 6 of the Policy, this insurance extends to cover loss or damage directly caused by fire or otherwise occasioned by or through or in consequence of Hurricane, Cyclone, Typhoon and Windstorm,"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP504",
+      "reason": "Not held, and the water was rain entering through the roof edge and a window, not a flow or accumulation of water from outside the building."
+    },
+    {
+      "clause": "Condition 1",
+      "reason": "The Insured's belief about the tiles is a mistaken account, not a misrepresentation at proposal. The decision rests on the verified cause."
+    },
+    {
+      "clause": "Condition 15",
+      "reason": "No fraud. The Insured honestly attributed the damage to the wind; the adjuster's finding corrects the cause, it does not show a false declaration."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 14200.0,
+    "blocked_by": "FP503 Special Condition 1",
+    "basis": "Priced under FP503 but for Special Condition 1, on the adjuster's assessed loss. Not payable.",
+    "steps": [
+      "Assessed 14,400.00; no average (values below sums insured).",
+      "Excess lesser of 1% of 400,000.00 = 4,000.00 or 200.00 = 200.00.",
+      "Would have paid 14,200.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 5. Counterfactual only: 6,300.00 + 2,400.00 + 4,200.00 + 1,500.00 = 14,400.00, less FP503 excess 200.00 = 14,200.00, not payable."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  350,000.00  value    RM 330,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   50,000.00  value     RM 45,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP503] refs [1, 2, 3, 4]",
+    "     subtotal          RM    14,400.00",
+    "     excess            RM       200.00   Lesser of (a) 1.0% of total sums insured RM 400,000.00 = RM 4,000.00, or (b) RM 200.00. Lesser = RM 200.00.",
+    "     net               RM    14,200.00",
+    "",
+    "  CLAIMED             RM    14,400.00",
+    "  RECOMMENDED PAYABLE RM    14,200.00"
+  ],
+  "facts": [
+    {
+      "fact": "All roof tiles in place; no tile, ridge or wall displaced by the wind.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Water entered through the blocked rear box gutter and gaps in the window frame sealant.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Findings, Maintenance and prior defects"
+    },
+    {
+      "fact": "The two cracked tiles carry lichen in the cracks and the roof space beneath them was dry.",
+      "source": "Adjuster's report, Findings, Maintenance and prior defects"
+    },
+    {
+      "fact": "The Insured believed wind blew off tiles.",
+      "source": "Incident report, email of 22 May 2024"
+    },
+    {
+      "fact": "Maximum gust 48 km/h recorded.",
+      "source": "Adjuster's report, Investigation, Reports relied on"
+    }
+  ],
+  "ambiguity": []
+}

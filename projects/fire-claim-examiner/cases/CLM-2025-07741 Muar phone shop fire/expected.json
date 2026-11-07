@@ -1,0 +1,156 @@
+{
+  "claim_no": "CLM-2025-07741",
+  "label": "Muar phone shop fire",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "fire",
+    "sequence": [
+      "A lithium battery pack on overnight charge at the multi-port charging station on the front counter goes into thermal runaway",
+      "Fire starts at the charging station",
+      "Fire spreads to the counter, cabinets and ceiling"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 23 June 2025 falls inside 1 January 2025 to 31 December 2025."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: fire, from a battery in thermal runaway, with no intervening event. Accidental fire from a battery on charge is the base insured peril."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "fail",
+      "reason": "Condition 12 timing is met (written claim on day 10), but Condition 15 is breached: four supplier invoices for RM 55,000.00 used in support of the claim were created after the loss at the Insured's request, for goods never delivered. A false declaration used in support of the claim forfeits all benefit under the policy."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "Condition 15",
+  "supporting_clauses": [
+    "Condition 12"
+  ],
+  "quotes": [
+    {
+      "clause": "Condition 15",
+      "chunk_id": "CONDITION-15",
+      "text": "If the claim be in any respect fraudulent, or if any false declaration be made or used in support thereof, or if any fraudulent means or devices are used by the Insured or any one acting on his behalf to obtain any benefit under this"
+    },
+    {
+      "clause": "Condition 15",
+      "chunk_id": "CONDITION-15",
+      "text": "all benefit under this Policy shall be forfeited."
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "The Insured shall also at all times at his own expense produce, procure and give to the Company all such further particulars, plans, specifications, books, vouchers, invoices,"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "Condition 20",
+      "reason": "Not reached. Even on the claimed figures, Item 3 shows no underinsurance; average is not the issue."
+    },
+    {
+      "clause": "Condition 12 (late claim)",
+      "reason": "The written claim arrived on day 10, within 15 days. Condition 12 is not the ground."
+    },
+    {
+      "clause": "FP508A.01 / FP508B",
+      "reason": "Neither is on the schedule, and the fire began in a battery pack, not the shop's electrical installation."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 78500.0,
+    "blocked_by": "Condition 15",
+    "basis": "What the verified loss would have paid but for the forfeiture. Not payable: Condition 15 forfeits all benefit, not only the inflated part.",
+    "steps": [
+      "Item 1: 22,000.00. Item 2: 15,500.00. Item 3: 41,000.00 verified stock. No average: values at risk below sums insured.",
+      "Excess nil for the fire peril.",
+      "Would have paid 78,500.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 3. Counterfactual only: 22,000.00 + 15,500.00 + 41,000.00 = 78,500.00, not payable."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM   60,000.00  value     RM 55,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   40,000.00  value     RM 35,000.00  factor 1.0  no average",
+    "  Item 3  SI RM  150,000.00  value     RM 41,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [BASE] refs [1, 2, 3]",
+    "     subtotal          RM    78,500.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM    78,500.00",
+    "",
+    "  CLAIMED             RM    78,500.00",
+    "  RECOMMENDED PAYABLE RM    78,500.00"
+  ],
+  "facts": [
+    {
+      "fact": "Four Teknik Gadget Trading invoices, dated 12 May to 14 June 2025, total RM 55,000.00, created in the supplier's system on 30 June 2025.",
+      "source": "Adjuster's report, Findings, Irregularities; supplier letter of 21 July 2025"
+    },
+    {
+      "fact": "Supplier states the invoices were issued at the Insured's request and no goods were delivered.",
+      "source": "Adjuster's report, Findings, Irregularities"
+    },
+    {
+      "fact": "The invoices were submitted with the written claim.",
+      "source": "Incident report, email of 3 July 2025, attachments"
+    },
+    {
+      "fact": "No bank payments for the invoices; IMEI numbers match no recovered handset.",
+      "source": "Adjuster's report, Findings, Irregularities"
+    },
+    {
+      "fact": "Verified stock at cost RM 41,000.00 on 22 June 2025.",
+      "source": "Adjuster's report, Findings, Discrepancies; Measurement"
+    },
+    {
+      "fact": "Written claim delivered 3 July 2025, day 10.",
+      "source": "Incident report, email of 3 July 2025"
+    }
+  ],
+  "ambiguity": []
+}

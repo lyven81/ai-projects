@@ -1,0 +1,174 @@
+{
+  "claim_no": "CLM-2022-08841",
+  "label": "Bukit Mertajam fire",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "fire",
+    "sequence": [
+      "Fire in the rear ground floor storeroom in the early hours of 28 July 2022, heaviest burning at and around the distribution board (cause undetermined)",
+      "Heat and smoke travel up the internal staircase to the first floor store",
+      "The rear section of the roof collapses during firefighting",
+      "Smoke staining throughout the front retail area"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass_flagged",
+      "reason": "The schedule runs 1 January 2021 to 31 January 2021 and holds FC815, the Automatic Renewal Clause. The premium was paid by bank standing instruction from January 2021 to July 2022, and the fire was on 28 July 2022. No receipt signed by an official or duly appointed agent of the Company was produced (Condition 2) and no renewal schedule is on file. Flagged for the claims examiner to decide."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: fire, with its origin at or near the distribution board, and no intervening event. Fire is the base insured peril."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Fire on 28 July 2022; notice on 4 August 2022; written claim delivered 11 August 2022, day 14 of 15. No fraud indicator."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "No endorsement required for fire."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "fail",
+      "reason": "Condition 9(d): the interest in the property passed from the Insured, Tan Cheng Hock, to his son with effect from 1 March 2022, by transfer of the sole proprietorship, not by will or operation of law. No sanction of the Company was endorsed on the policy before the loss. The insurance ceased to attach."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "Condition 9(d)",
+  "governing_chunk_id": "OPERATIVE-CLAUSE",
+  "supporting_clauses": [
+    "FC815",
+    "Condition 2",
+    "Condition 12"
+  ],
+  "quotes": [
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "FC815",
+      "chunk_id": "CLAUSE-FC815",
+      "text": "This Policy is deemed to be automatically renewed and the appropriate premium charged upon expiry"
+    },
+    {
+      "clause": "Condition 2",
+      "chunk_id": "CONDITION-2",
+      "text": "2. No payment in respect of any premium shall be deemed to be payment to the Company unless a printed form of receipt for the same signed by an Official or duly appointed Agent of the Company shall have been given to the Insured."
+    },
+    {
+      "clause": "Condition 9",
+      "chunk_id": "CONDITION-9",
+      "text": "Under any of the following circumstances the insurance ceases to attach as regards the property affected unless the Insured, before the occurrence of any loss or damage, obtains the sanction of the Company signified by endorsement upon the Policy, by or on behalf of the Company:"
+    },
+    {
+      "clause": "Condition 9(d)",
+      "chunk_id": "CONDITION-9",
+      "text": "(d) If the interest in the property insured pass from the Insured otherwise than by will or operation of law."
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "Operative clause, period of insurance (as a fail)",
+      "reason": "FC815 is on the schedule and the premium was paid by standing instruction up to the month of the loss. The missing receipt is flagged at gate 1 for the claims examiner; it does not fail the gate (founder, 7 Nov 2026)."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 295700.0,
+    "blocked_by": "Condition 9(d)",
+    "basis": "Priced on the adjuster's assessed loss but for Condition 9(d). Not payable: the insurance ceased to attach when the interest passed without the Company's sanction.",
+    "steps": [
+      "Assessed 295,700.00; no average (values at risk below sums insured on every item).",
+      "Excess nil for the fire peril.",
+      "Would have paid 295,700.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 5. Counterfactual only: Item 1 185,000.00 + 14,500.00 + 12,400.00 = 211,900.00; Item 2 21,800.00; Item 3 62,000.00; total 295,700.00, nil excess, not payable.",
+    "Gate 1 passed with a flag: FC815 and the standing instruction against Condition 2's receipt requirement, for the claims examiner."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  450,000.00  value    RM 430,000.00  factor 1.0  no average",
+    "  Item 2  SI RM  120,000.00  value    RM 100,000.00  factor 1.0  no average",
+    "  Item 3  SI RM   80,000.00  value     RM 70,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [BASE] refs [1, 2, 3, 4, 5]",
+    "     subtotal          RM   295,700.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM   295,700.00",
+    "",
+    "  CLAIMED             RM   295,700.00",
+    "  RECOMMENDED PAYABLE RM   295,700.00"
+  ],
+  "facts": [
+    {
+      "fact": "Schedule period 1 January 2021 to 31 January 2021.",
+      "source": "Schedule, Period of insurance"
+    },
+    {
+      "fact": "Fire in the early hours of 28 July 2022.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Incident report, email of 4 August 2022"
+    },
+    {
+      "fact": "Renewal notice issued for the period after 31 January 2021; no renewal schedule, endorsement or later policy on file.",
+      "source": "Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "Premium paid by bank standing instruction; no receipt signed by an official or appointed agent of the Company produced.",
+      "source": "Incident report, emails of 4 and 11 August 2022; Adjuster's report, Findings, Discrepancies with the incident report"
+    },
+    {
+      "fact": "Sole proprietorship transferred from Tan Cheng Hock to Tan Wei Ming with effect from 1 March 2022; no endorsement recording the change.",
+      "source": "Adjuster's report, Findings, Risk as found against the schedule; Incident report, email of 11 August 2022"
+    },
+    {
+      "fact": "Claimant is the Insured's son, not the named Insured.",
+      "source": "Incident report, email of 4 August 2022; Schedule, Insured"
+    },
+    {
+      "fact": "Written claim delivered 11 August 2022.",
+      "source": "Incident report, email of 11 August 2022"
+    },
+    {
+      "fact": "FC815 Automatic Renewal Clause on the schedule.",
+      "source": "Schedule, Endorsements and clauses"
+    }
+  ],
+  "ambiguity": [],
+  "underwriting_flags": [
+    {
+      "flag": "Renewal not proven by receipt: FC815 deems the policy renewed and the bank standing instruction paid the premium up to July 2022, but no receipt signed by the Company was produced under Condition 2 and no renewal schedule is on file.",
+      "scope_reference": null,
+      "scope_reference_source": null,
+      "decision": "for the claims examiner to decide"
+    }
+  ]
+}

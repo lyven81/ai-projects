@@ -1,0 +1,158 @@
+{
+  "claim_no": "CLM-2024-08853",
+  "label": "Miri lorry impact shopfront",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "impact (road vehicle)",
+    "sequence": [
+      "A 3-tonne lorry of a third party, reversing along the service lane, strikes the shopfront at the corner pillar",
+      "The shutter frame and glass panels give way and the display shelves are knocked over",
+      "The falling shutter frame strikes the rear door of the Insured's van parked in front"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 16 July 2024 falls inside 1 March 2024 to 28 February 2025."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: impact by a third party's road vehicle, with no intervening event. Impact by a road vehicle is not a base peril; FP506A brings it in."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 16 July 2024. The written claim arrived on 9 August 2024, day 24, later than 15 days, but the Company allowed further time in writing to 16 August 2024 by its email of 26 July 2024, requested on day 9. Delivered within the time allowed."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "FP506A (excluding the Insured's own vehicles) is on the schedule and fits: the lorry belongs to a third party, not to the Insured, her family or anyone in her service. FP506B is not needed."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "FP506A's own condition met: impact by a road vehicle not belonging to or under the control of the Insured. No warranties; Condition 9 not engaged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Four of five items admitted. The Insured's van (ref 5) is not property described in the Schedule nor a wall, gate or fence. Condition 20 average applies to Item 3 only. FP506A excess deducted after average."
+    }
+  ],
+  "governing_clause": "FP506A",
+  "supporting_clauses": [
+    "Condition 12",
+    "Condition 20",
+    "Condition 18"
+  ],
+  "quotes": [
+    {
+      "clause": "FP506A",
+      "chunk_id": "ENDORSEMENT-FP506A",
+      "text": "this Policy shall extend to include loss or damage to the property described in the Schedule and/or to walls, gates and fences around and pertaining thereto directly resulting from impact by any road vehicles, forklift, other mechanically or electrically propelled vehicles (other than vehicles held as stock), railway locomotives and/or rolling stocks, animals not belonging to or under the control of the Insured or any member of his family, or any person in and upon the Insured’s service,"
+    },
+    {
+      "clause": "FP506A excess",
+      "chunk_id": "ENDORSEMENT-FP506A",
+      "text": "provided that the first RM50.00 of each and every claim under this endorsement shall be borne by the Insured, as ascertained after the application of any condition of average."
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "shall within 15 days after the loss or damage, or such further time as the Company may in writing allow in that behalf, deliver to the Company:"
+    },
+    {
+      "clause": "Condition 20",
+      "chunk_id": "CONDITION-20",
+      "text": "If the property hereby insured shall, at the breaking out of any fire, be collectively of greater value than the sum insured thereon, then the Insured shall be considered as being his own Insurer for the difference, and shall bear a rateable proportion of the loss accordingly. Every item, if more than one, of the Policy shall be separately subject to this Condition."
+    },
+    {
+      "clause": "Condition 18",
+      "chunk_id": "CONDITION-18",
+      "text": "The Insured shall, at the expense of the Company, do, and concur in doing, and permit to be done, all such acts and things as may be necessary or reasonably required by the Company for the purpose of enforcing any rights and remedies, or of obtaining relief or indemnity from other parties to which the Company shall be or would become entitled or subrogated,"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP506B",
+      "reason": "Not held and not needed; the vehicle is a third party's. Its RM250.00 excess does not apply."
+    },
+    {
+      "clause": "Condition 12 (as a ground of declinature)",
+      "reason": "The claim was late against the 15 days but within the further time allowed in writing on 26 July 2024."
+    },
+    {
+      "clause": "Condition 19",
+      "reason": "The lorry owner's motor policy does not insure the Insured's property; there is no other insurance on the same property. Recovery is by subrogation under Condition 18."
+    }
+  ],
+  "payable": 31150.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 5 van 3,200.00, not property described in the Schedule.",
+    "Step 2 Condition 20 per item: Item 1 SI 400,000.00 vs value 380,000.00, factor 1.0. Item 2 SI 60,000.00 vs value 55,000.00, factor 1.0. Item 3 SI 50,000.00 vs value 62,500.00, factor 0.80.",
+    "Item 1: 12,600.00 + 8,900.00 = 21,500.00. Item 2: 4,300.00. Item 3: 6,750.00 x 0.80 = 5,400.00. After average 31,200.00.",
+    "Step 3 excess: FP506A, the first 50.00 of each and every claim, after average. calculator.py has no FP506A rule; applied by hand as a flat 50.00 in the same position as its flat rules.",
+    "Payable 31,200.00 - 50.00 = 31,150.00."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 5  RM     3,200.00  EXCLUDED by Not property described in the Schedule  (Insured's delivery van, rear door dented)",
+    "  excluded total       RM     3,200.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  400,000.00  value    RM 380,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   60,000.00  value     RM 55,000.00  factor 1.0  no average",
+    "  Item 3  SI RM   50,000.00  value RM   62,500.00  factor 0.8000  UNDERINSURED",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP506A] refs [1, 2, 3, 4]",
+    "     subtotal          RM    32,550.00",
+    "     after average     RM    31,200.00",
+    "     excess            RM        50.00   Flat first RM 50.00 of each and every loss.",
+    "     net               RM    31,150.00",
+    "",
+    "  CLAIMED             RM    35,750.00",
+    "  RECOMMENDED PAYABLE RM    31,150.00"
+  ],
+  "facts": [
+    {
+      "fact": "Lorry owned by Syarikat Angkut Pantas Sdn Bhd, driven by its employee, reversed into the shopfront.",
+      "source": "Adjuster's report, Investigation, Cause and origin and People interviewed; police report"
+    },
+    {
+      "fact": "Written claim delivered 9 August 2024, 24 days after the loss.",
+      "source": "Incident report, email of 9 August 2024"
+    },
+    {
+      "fact": "Extension requested 25 July 2024; insurer allowed further time in writing to 16 August 2024 on 26 July 2024.",
+      "source": "Incident report, emails of 25 and 26 July 2024; Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "Item 3 value at risk RM 62,500.00 against a sum insured of RM 50,000.00.",
+      "source": "Adjuster's report, Measurement, Value at risk, Item 3"
+    },
+    {
+      "fact": "The van is the Insured's own vehicle, not a schedule item.",
+      "source": "Incident report, claim item 5; Schedule, Sums insured"
+    }
+  ],
+  "ambiguity": []
+}

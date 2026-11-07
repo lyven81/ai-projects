@@ -1,0 +1,196 @@
+{
+  "claim_no": "CLM-2025-09207",
+  "label": "Kuantan shophouse burst pipe",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "burst pipe",
+    "sequence": [
+      "A brass compression fitting on the 15 mm cold water supply to the first floor washroom basin, in the ceiling void, splits along its body",
+      "Water discharges into the void through the night",
+      "The ceiling boards over the front half of the pharmacy come down",
+      "Discharge stops when the main valve is closed at about 7:35 am"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 14 August 2025 falls inside 1 March 2025 to 28 February 2026."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: burst pipe (a split compression fitting), with no intervening event. Bursting of a water pipe is not a base peril; the FP507 endorsement on the schedule brings it in. FP504 does not apply: the water came from inside the building."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 14 August 2025; written claim delivered 22 August 2025, day 8 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass_flagged",
+      "reason": "FP507A is on the schedule and its wording, identical to FP507B, responds to a burst pipe. Class mismatch: this is a two-storey building with no mezzanine, but it holds FP507A, which applies to buildings exceeding five storeys including mezzanine; the variant for this building is FP507B. Flagged for the claims examiner to decide."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "Exclusion (a) not engaged: the pharmacy was trading and occupied by the Insured. Exclusion (b) not engaged: no sprinkler installation. Special Condition 3 not engaged: no defect notified before the loss. No warranties; Condition 9 not engaged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Three of four items admitted. Loss of sales (ref 4) excluded by Special Condition 2. Condition 20 average applies to Item 3 only. Exclusion (c) excess applied after average."
+    }
+  ],
+  "underwriting_flags": [
+    {
+      "flag": "Building-class mismatch: a two-storey building with no mezzanine holds FP507A, which applies to buildings exceeding five storeys including mezzanine. The variant for this building is FP507B.",
+      "scope_reference": "FP507A: Applies to buildings exceeding five (5) storeys (including a mezzanine floor). FP507B: Applies to other buildings (generally 5 storeys and below).",
+      "scope_reference_source": "Founder's scope reference, 6 November 2026. Not policy wording; not in chunks.json.",
+      "decision": "for the claims examiner to decide"
+    }
+  ],
+  "governing_clause": "FP507A",
+  "supporting_clauses": [
+    "FP507A exclusion (c)",
+    "FP507A Special Condition 2",
+    "Condition 20",
+    "Condition 12"
+  ],
+  "quotes": [
+    {
+      "clause": "FP507A",
+      "chunk_id": "ENDORSEMENT-FP507A",
+      "text": "this Policy shall extend to include loss or damage to the property insured caused by the bursting or overflowing of water tanks, apparatus or pipes installed in or on the buildings insured or containing the property insured"
+    },
+    {
+      "clause": "FP507A exclusion (a)",
+      "chunk_id": "ENDORSEMENT-FP507A",
+      "text": "(a) loss or damage caused whilst the premises are untenanted."
+    },
+    {
+      "clause": "FP507A exclusion (c)",
+      "chunk_id": "ENDORSEMENT-FP507A",
+      "text": "(c) the first RM1,000.00** of each and every loss at each separate premises, as ascertained after the application of average, or the Company’s rateable proportion of that amount."
+    },
+    {
+      "clause": "FP507A exclusion (c) footnote",
+      "chunk_id": "ENDORSEMENT-FP507A",
+      "text": "** Where the sum insured is less than RM50,000.00 the amount of this excess may be reduced to 1% of the sum insured subject to a minimum of RM100.00"
+    },
+    {
+      "clause": "FP507A Special Condition 2",
+      "chunk_id": "ENDORSEMENT-FP507A",
+      "text": "2. This insurance does not cover loss of earnings, loss by delay, loss of market or other consequential or indirect loss or damage of any kind or description whatsoever except loss of rent when such loss is included in the cover under the policy."
+    },
+    {
+      "clause": "Condition 20",
+      "chunk_id": "CONDITION-20",
+      "text": "If the property hereby insured shall, at the breaking out of any fire, be collectively of greater value than the sum insured thereon, then the Insured shall be considered as being his own Insurer for the difference, and shall bear a rateable proportion of the loss accordingly. Every item, if more than one, of the Policy shall be separately subject to this Condition."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP507B (as held)",
+      "reason": "FP507B is the variant that fits this building but it is not on the schedule. Do not treat it as held; raise the mismatch as an underwriting flag."
+    },
+    {
+      "clause": "Scope reference (as policy wording)",
+      "reason": "The five-storey dividing line comes from the founder's scope reference, not from the policy wording. Cite it as the scope reference only, never as a clause."
+    },
+    {
+      "clause": "FP504",
+      "reason": "Water originated inside the building from a burst fitting; FP504 requires water from outside the building and is not held."
+    },
+    {
+      "clause": "FP507A Special Condition 3",
+      "reason": "No defect was notified before the loss; the June 2025 service record notes none."
+    }
+  ],
+  "payable": 35000.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 4 loss of sales 3,200.00 (FP507A Special Condition 2, consequential loss).",
+    "Step 2 Condition 20 per item: Item 1 SI 450,000.00 vs value 430,000.00, factor 1.0. Item 2 SI 60,000.00 vs value 55,000.00, factor 1.0. Item 3 SI 80,000.00 vs value 100,000.00, factor 0.80.",
+    "Item 1: 18,400.00. Item 2: 7,600.00. Item 3: 12,500.00 x 0.80 = 10,000.00. After average: 36,000.00.",
+    "Step 3 excess, FP507A exclusion (c): first 1,000.00 of each and every loss at each separate premises, after average. The footnote reduction does not apply (total sums insured 590,000.00).",
+    "Payable 36,000.00 - 1,000.00 = 35,000.00. The same figure results under FP507B: the operative wording and the excess are identical.",
+    "Wrong order check: excess before average on Item 3 would give ((12,500.00 - 1,000.00) x 0.80) + 18,400.00 + 7,600.00 = 35,200.00, overstating by 200.00."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 4  RM     3,200.00  EXCLUDED by FP507A Special Condition 2  (Two days' loss of sales)",
+    "  excluded total       RM     3,200.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  450,000.00  value    RM 430,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   60,000.00  value     RM 55,000.00  factor 1.0  no average",
+    "  Item 3  SI RM   80,000.00  value RM  100,000.00  factor 0.8000  UNDERINSURED",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP507A] refs [1, 2, 3]",
+    "     subtotal          RM    38,500.00",
+    "     after average     RM    36,000.00",
+    "     excess            RM     1,000.00   Flat first RM 1,000.00 of each and every loss.",
+    "     net               RM    35,000.00",
+    "",
+    "  CLAIMED             RM    41,700.00",
+    "  RECOMMENDED PAYABLE RM    35,000.00"
+  ],
+  "facts": [
+    {
+      "fact": "Split compression fitting on the first floor washroom supply in the ceiling void; water brought down the ground floor ceiling.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Pharmacy trading daily and occupied by the Insured.",
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+    },
+    {
+      "fact": "No defect reported before the loss; service record of 10 June 2025 found none.",
+      "source": "Adjuster's report, Investigation, Reports relied on; Findings, Maintenance and prior defects"
+    },
+    {
+      "fact": "No automatic sprinkler installation.",
+      "source": "Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "Two-storey intermediate shophouse, no mezzanine, as found on site.",
+      "source": "Adjuster's report, Findings, Risk as found against the schedule; Schedule, Construction"
+    },
+    {
+      "fact": "FP507A on the schedule; FP507B not.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "Item 3 value at risk RM 100,000.00 against a sum insured of RM 80,000.00.",
+      "source": "Adjuster's report, Measurement, Value at risk, Item 3"
+    },
+    {
+      "fact": "Written claim delivered 22 August 2025.",
+      "source": "Incident report, email of 22 August 2025"
+    }
+  ],
+  "ambiguity": [],
+  "must_not_apply": [
+    {
+      "clause": "FP507A exclusion (c) footnote",
+      "reason": "The reduced excess applies only where the sum insured is under RM50,000.00. Total sums insured are RM590,000.00, so the flat RM1,000.00 applies."
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+ "run_id": "20261107-101518-sonnet",
+ "model": "claude-sonnet-5-5",
+ "claim_nos": [
+  "CLM-2023-09814",
+  "CLM-2025-03362"
+ ],
+ "sample": false,
+ "results": [
+  {
+   "claim_no": "CLM-2023-09814",
+   "model": "claude-sonnet-5-5",
+   "outcome": "recorded",
+   "turns": 5,
+   "tool_calls": 9,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 12,
+    "output_tokens": 4123,
+    "cache_creation_input_tokens": 16718,
+    "cache_read_input_tokens": 51535
+   },
+   "cost_usd": 0.09336,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": "clause_mismatch"
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 26.7
+  },
+  {
+   "claim_no": "CLM-2025-03362",
+   "model": "claude-sonnet-5-5",
+   "outcome": "recorded",
+   "turns": 5,
+   "tool_calls": 11,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 12,
+    "output_tokens": 4198,
+    "cache_creation_input_tokens": 11411,
+    "cache_read_input_tokens": 55132
+   },
+   "cost_usd": 0.08156,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": "clause_mismatch"
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 27.4
+  }
+ ],
+ "scores": [
+  {
+   "claim_no": "CLM-2023-09814",
+   "label": "Alor Setar falling tree power surge",
+   "peril": "Falling tree",
+   "tool_calls": 9,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "peril_not_insured",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": false,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2025-03362",
+   "label": "Sitiawan house break-in damage",
+   "peril": "Riot and malicious damage",
+   "tool_calls": 11,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "peril_not_insured",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  }
+ ],
+ "summary": {
+  "usage_by_model": {
+   "claude-sonnet-5-5": {
+    "input_tokens": 24,
+    "output_tokens": 8321,
+    "cache_creation_input_tokens": 28129,
+    "cache_read_input_tokens": 106667,
+    "cost_usd": 0.17492
+   }
+  },
+  "cost_usd": 0.17492,
+  "score": {
+   "cases_passed": "2/2",
+   "proximate_cause": "2/2",
+   "gate_statuses": "2/2",
+   "governing_clause": "2/2",
+   "payable": "2/2",
+   "advice_recorded": "2/2",
+   "no_forbidden_ground": "2/2",
+   "flags": "2/2",
+   "by_peril": {
+    "Falling tree": "1/1",
+    "Riot and malicious damage": "1/1"
+   },
+   "facts_by_field": {
+    "date_of_loss": "1/2",
+    "intervening_event": "1/2",
+    "period_end": "2/2",
+    "period_start": "2/2",
+    "proximate_cause": "2/2"
+   },
+   "facts_by_document": {
+    "Adjuster's report": "4/6",
+    "Schedule": "4/4"
+   },
+   "tool_calls_per_case": {
+    "CLM-2023-09814": 9,
+    "CLM-2025-03362": 11
+   }
+  }
+ }
+}

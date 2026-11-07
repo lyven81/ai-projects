@@ -1,0 +1,36 @@
+{
+ "cap_usd": 2.0,
+ "total_usd": 0.42563,
+ "runs": [
+  {
+   "run_id": "20261107-093232-sample-haiku",
+   "model": "claude-haiku-5-5",
+   "claims": 3,
+   "cost_usd": 0.03197
+  },
+  {
+   "run_id": "20261107-095122-haiku",
+   "model": "claude-haiku-5-5",
+   "claims": 22,
+   "cost_usd": 0.17085
+  },
+  {
+   "run_id": "20261107-101037-haiku",
+   "model": "claude-haiku-5-5",
+   "claims": 3,
+   "cost_usd": 0.02961
+  },
+  {
+   "run_id": "20261107-101518-sonnet",
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "cost_usd": 0.17492
+  },
+  {
+   "run_id": "20261107-101951-haiku",
+   "model": "claude-haiku-5-5",
+   "claims": 2,
+   "cost_usd": 0.01828
+  }
+ ]
+}

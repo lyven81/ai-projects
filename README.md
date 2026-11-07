@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 14**
+**Total published AI projects: 15**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 15 | 2026-11-07 | Fire Policy Underwriter Advisor | [page](https://lyven81.github.io/ai-projects/fire-claim-examiner.html) |
 | 14 | 2026-11-03 | Jade Star Chinese Dining 吉星饭厅 Booking Desk | [page](https://lyven81.github.io/ai-projects/restaurant-jade-star.html) |
 | 13 | 2026-11-02 | Cepat Express Customer Service | [page](https://lyven81.github.io/ai-projects/cepat-express-customer-service.html) |
 | 12 | 2026-10-30 | Comel Diaper Marketing Campaign Assistant | [page](https://lyven81.github.io/ai-projects/marketing-campaign-assistant.html) |
@@ -83,6 +84,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-21
 
 ### Document processing
+
+#### Fire Policy Underwriter Advisor
+- **What it does:** A fire claims desk where the AI underwriter reads the claim file and advises the claims examiner gate by gate, code sets every gate status and the figure, and the examiner decides.
+- **How it's built:** Claude through an MCP server with four tools and four resources; policy search by clause code or plain words (vector plus keyword, ranked by authority against the claim's schedule); six gates and the payable calculator in Python; a guard that checks every quote, status, governing clause and amount before the advice is recorded.
+- **Problem solved:** A claims examiner must test the facts against the base wording and the endorsements that vary it, gate by gate, and price the loss in the right order; the advice does that with every status and figure set in code.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/fire-claim-examiner.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/fire-claim-examiner/demo.html)
+- **Rebuilt:** 2026-11-07
 
 #### Chinese Translation Quality Check
 - **What it does:** A translation review where Claude specialists check the Chinese against the English, and an editor decides every change.

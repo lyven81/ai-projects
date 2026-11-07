@@ -1,0 +1,176 @@
+{
+  "claim_no": "CLM-2024-13208",
+  "label": "Kluang workshop lightning surge",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "lightning",
+    "sequence": [
+      "Thunderstorm over Kluang from 2:50 pm to 4:30 pm on 17 October 2024",
+      "Lightning strikes the ridge finial on the roof of the adjoining unit, No. 9, at about 3:41 pm",
+      "The strike induces a surge on the incoming low voltage supply and the earthing system of the workshop",
+      "The surge damages the switchboard devices, the drives and control boards of two CNC machines, the air compressor motor and the crane controls",
+      "No fire ensues"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 17 October 2024 falls inside 1 July 2024 to 30 June 2025."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: lightning. A strike on the adjoining unit's roof during a thunderstorm induced a surge through the incoming supply, with no intervening event and no fire. Lightning is a base insured peril under the operative clause; no Condition 6 exclusion engaged. Whether FP508A.01 removes the items claimed is tested at gate 6."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 18 October 2024; written claim delivered 29 October 2024, day 12 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "No endorsement required for lightning, a base peril. FP508A.01 is on the schedule and is tested at item level; FP508B is not held."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "No warranties. Condition 9 not engaged: the workshop was in operation that day; trade and occupation unchanged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "fail",
+      "reason": "No item admitted. Every item claimed is an electrical machine, apparatus or portion of the electrical installation damaged by overvoltage from the lightning surge, which FP508A.01 frees from liability from whatever cause, lightning included. The proviso keeps cover only for other property damaged by fire set up by the affected machine; no fire ensued, so it does not apply."
+    }
+  ],
+  "governing_clause": "FP508A.01",
+  "supporting_clauses": [
+    "FP508A.01 proviso",
+    "Condition 12"
+  ],
+  "quotes": [
+    {
+      "clause": "FP508A.01",
+      "chunk_id": "ENDORSEMENT-FP508A.01",
+      "text": "This Company is expressly declared to be free from liability for loss of or damage to, any electrical machine, apparatus, or any portion of the electrical installation arising from or occasioned by over-running, excessive pressure, short-circuiting, self heating, arcing or leakage of electricity from whatever cause (lightning included) arising."
+    },
+    {
+      "clause": "FP508A.01 proviso",
+      "chunk_id": "ENDORSEMENT-FP508A.01",
+      "text": "Provided that this exemption shall only apply to the particular electrical machine, apparatus, or portion of the electrical installation so affected, and not to other machines, apparatus or electrical installation destroyed or damaged by fire set up by such particular machine, apparatus or other electrical installation."
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "shall within 15 days after the loss or damage, or such further time as the Company may in writing allow in that behalf, deliver to the Company:"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP508B",
+      "reason": "Not on this schedule; FP508A.01 is. Its 'unless caused by fire or lightning' exception does not apply to this policy."
+    },
+    {
+      "clause": "FP508A.01 proviso (as preserving cover)",
+      "reason": "The proviso keeps cover only for other machines or installation damaged by fire set up by the affected machine. No fire ensued."
+    },
+    {
+      "clause": "Operative clause (as settling the claim)",
+      "reason": "Lightning passes gate 2 as a base peril, but the endorsement on the schedule removes the electrical machines and installation at item level."
+    },
+    {
+      "clause": "Condition 6(b)",
+      "reason": "Lightning is named in the operative clause as an insured peril, and no wind damage is claimed. The decline rests on FP508A.01, not on Condition 6."
+    },
+    {
+      "clause": "Condition 20",
+      "reason": "All values at risk are below the sums insured; no average, and nothing remains to average after the exclusion."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 100950.0,
+    "blocked_by": "FP508A.01, electrical machines and installation damaged by lightning-induced overvoltage with no fire",
+    "basis": "What the policy would have paid but for FP508A.01: the lightning damage to the machines and installation as assessed. Not payable.",
+    "steps": [
+      "Assessed 100,950.00; values at risk below sums insured, no average.",
+      "Nil excess for the fire and lightning peril.",
+      "Would have paid 100,950.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 6. Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: refs 1 to 5, 100,950.00, every item excluded by FP508A.01. Nothing remains to average or pay.",
+    "Payable 0.00. Counterfactual only, but for FP508A.01: 100,950.00 less nil excess = 100,950.00, not payable."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 1  RM    44,500.00  EXCLUDED by FP508A.01  (CNC turning centre, spindle drive and contro)",
+    "  ref 2  RM    28,600.00  EXCLUDED by FP508A.01  (CNC vertical machining centre, two servo amp)",
+    "  ref 3  RM    14,200.00  EXCLUDED by FP508A.01  (Screw air compressor, 22 kW motor windings a)",
+    "  ref 4  RM     9,750.00  EXCLUDED by FP508A.01  (Main switchboard incoming MCCB, surge arrest)",
+    "  ref 5  RM     3,900.00  EXCLUDED by FP508A.01  (Overhead crane pendant control and contactor)",
+    "  excluded total       RM   100,950.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM 1,100,000.00  value  RM 1,050,000.00  factor 1.0  no average",
+    "  Item 2  SI RM 1,500,000.00  value  RM 1,380,000.00  factor 1.0  no average",
+    "  Item 3  SI RM  250,000.00  value    RM 210,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "",
+    "  CLAIMED             RM   100,950.00",
+    "  RECOMMENDED PAYABLE RM         0.00"
+  ],
+  "facts": [
+    {
+      "fact": "Lightning struck the ridge finial on the adjoining unit's roof at about 3:41 pm; finial tip melted and the down conductor test joint scorched.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Thunderstorm in Kluang from 2:50 pm to 4:30 pm; cloud-to-ground strike at 3:41 pm within 100 metres of the risk.",
+      "source": "Adjuster's report, Investigation, Reports relied on (Malaysian Meteorological Department records)"
+    },
+    {
+      "fact": "Engineer: drives, motor windings and switchboard devices damaged by a lightning-induced surge; no fire, no flame, no charring outside the components.",
+      "source": "Adjuster's report, Investigation, Reports relied on (engineer's report of 21 October 2024)"
+    },
+    {
+      "fact": "Every item claimed is an electrical machine, apparatus or part of the electrical installation.",
+      "source": "Adjuster's report, Measurement"
+    },
+    {
+      "fact": "No fire; Bomba not called.",
+      "source": "Incident report, email of 17 October 2024"
+    },
+    {
+      "fact": "FP508A.01 on the schedule; FP508B not.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "Notice 18 October 2024; written claim delivered 29 October 2024.",
+      "source": "Incident report, emails of 18 and 29 October 2024"
+    }
+  ],
+  "ambiguity": []
+}

@@ -1,0 +1,186 @@
+{
+  "claim_no": "CLM-2023-11207",
+  "label": "Taiping burst pipe",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "burst pipe",
+    "sequence": [
+      "A corroded soldered joint on the concealed 15 mm copper supply pipe to the first floor washroom fails",
+      "Water runs down the cavity into the ground floor ceiling void",
+      "Water damage on the ground floor"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 2 December 2023 falls inside 1 January 2023 to 31 December 2023."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: burst pipe (failure of a corroded joint), with no intervening event. A burst pipe is not a base peril; the FP507B endorsement on the schedule brings it in. FP504 does not apply: the water came from a concealed supply pipe inside the building."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 4 December 2023; written claim delivered 8 December 2023, day 6 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "FP507B is on the schedule and is the variant for this building: two storeys, no mezzanine. FP507A is not held and applies to buildings exceeding five storeys including mezzanine (founder's scope reference)."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "fail",
+      "reason": "FP507B exclusion (a): the ground floor lot was untenanted from 15 October 2023 to the loss on 2 December 2023, 48 days, and the damage claimed is on the ground floor. FP507B Special Condition 3 is a second ground: the Insured's own contractor reported the corroded washroom pipework on 19 September 2023, the repair was deferred, and the joint failed on that pipework. Condition 9(b) points the same way: no one in daily occupation for 48 days and no sanction endorsed."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "FP507B(a)",
+  "supporting_clauses": [
+    "FP507 Special Condition 3",
+    "Condition 9(b)"
+  ],
+  "quotes": [
+    {
+      "clause": "FP507B",
+      "chunk_id": "ENDORSEMENT-FP507B",
+      "text": "the insurance under this Policy shall extend to include loss or damage to the property insured caused by the bursting or overflowing of water tanks, apparatus or pipes installed in or on the buildings insured or containing the property insured"
+    },
+    {
+      "clause": "FP507B exclusion (a)",
+      "chunk_id": "ENDORSEMENT-FP507B",
+      "text": "(a) loss or damage caused whilst the premises are untenanted."
+    },
+    {
+      "clause": "Condition 9",
+      "chunk_id": "CONDITION-9",
+      "text": "Under any of the following circumstances the insurance ceases to attach as regards the property affected unless the Insured, before the occurrence of any loss or damage, obtains the sanction of the Company signified by endorsement upon the Policy, by or on behalf of the Company:"
+    },
+    {
+      "clause": "Condition 9(b)",
+      "chunk_id": "CONDITION-9",
+      "text": "(b) If the building insured or containing the insured property becomes unoccupied and so remains for a period of more than thirty (30) days."
+    },
+    {
+      "clause": "FP507 Special Condition 3",
+      "chunk_id": "ENDORSEMENT-FP507B",
+      "text": "the Company shall not be liable for any loss or damage caused by a defect which the Insured has failed to remedy after having received notice of such defect either from the Company or any person or public body."
+    },
+    {
+      "clause": "FP507B exclusion (c)",
+      "chunk_id": "ENDORSEMENT-FP507B",
+      "text": "(c) the first RM1,000.00** of each and every loss at each separate premises, as ascertained after the application of average, or the Company’s rateable proportion of that amount."
+    },
+    {
+      "clause": "FP507B exclusion (c) footnote",
+      "chunk_id": "ENDORSEMENT-FP507B",
+      "text": "** Where the sum insured is less than RM50,000.00 the amount of this excess may be reduced to 1% of the sum insured subject to a minimum of RM100.00"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP504",
+      "reason": "FP504 requires water originating from outside the building. This was a concealed supply pipe within the wall cavity."
+    },
+    {
+      "clause": "FP507A",
+      "reason": "Not held, and not the variant for this building: two storeys with no mezzanine. FP507A applies to buildings exceeding five storeys including mezzanine."
+    },
+    {
+      "clause": "Scope reference (as policy wording)",
+      "reason": "The five-storey dividing line comes from the founder's scope reference, not from the policy wording. Cite it as the scope reference only, never as a clause."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 29900.0,
+    "blocked_by": "FP507B(a)",
+    "basis": "Priced under FP507B but for exclusion (a), on the adjuster's assessed loss. Not payable.",
+    "steps": [
+      "Assessed 30,900.00; no average (values at risk below sums insured on every item).",
+      "Excess, FP507B exclusion (c): the first 1,000.00 of each and every loss, after average. The footnote reduction does not apply (total sums insured 383,000.00).",
+      "Would have paid 29,900.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 5. Counterfactual only: Item 1 9,600.00 + 8,900.00 + 1,950.00 = 20,450.00; Item 2 7,300.00 + 3,150.00 = 10,450.00; total 30,900.00, less FP507B excess 1,000.00 = 29,900.00, not payable."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  320,000.00  value    RM 310,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   45,000.00  value     RM 42,000.00  factor 1.0  no average",
+    "  Item 3  SI RM   18,000.00  value     RM 16,500.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP507B] refs [1, 2, 3, 4, 5]",
+    "     subtotal          RM    30,900.00",
+    "     excess            RM     1,000.00   Flat first RM 1,000.00 of each and every loss.",
+    "     net               RM    29,900.00",
+    "",
+    "  CLAIMED             RM    30,900.00",
+    "  RECOMMENDED PAYABLE RM    29,900.00"
+  ],
+  "facts": [
+    {
+      "fact": "Soldered joint failed on the concealed 15 mm copper supply pipe to the first floor washroom, inside the wall cavity; heavy corrosion at the joint.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Ground floor untenanted from 15 October 2023 to 2 December 2023, 48 days; the Insured attended about weekly.",
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss; Incident report, WhatsApp of 2 December 2023"
+    },
+    {
+      "fact": "Damage claimed is on the ground floor.",
+      "source": "Adjuster's report, Findings, Damage found per item"
+    },
+    {
+      "fact": "Corrosion reported on 19 September 2023 by a contractor the Insured engaged; replacement recommended; repair deferred; the failure occurred on that pipework.",
+      "source": "Adjuster's report, Investigation, Reports relied on; Findings, Maintenance and prior defects; Incident report, WhatsApp of 8 December 2023"
+    },
+    {
+      "fact": "Two-storey intermediate shophouse, no mezzanine; no sprinkler installation.",
+      "source": "Adjuster's report, Findings, Risk as found against the schedule; Schedule, Construction"
+    },
+    {
+      "fact": "FP507B on the schedule; FP507A not; no sanction endorsed under Condition 9.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "Values at risk below sums insured on every item.",
+      "source": "Adjuster's report, Measurement, value table"
+    },
+    {
+      "fact": "Notice 4 December 2023; written claim delivered 8 December 2023.",
+      "source": "Incident report, WhatsApp of 4 and 8 December 2023"
+    }
+  ],
+  "ambiguity": [],
+  "must_not_apply": [
+    {
+      "clause": "FP507B exclusion (c) footnote",
+      "reason": "The reduced excess applies only where the sum insured is under RM50,000.00. Total sums insured are RM383,000.00, so the flat RM1,000.00 applies."
+    }
+  ]
+}

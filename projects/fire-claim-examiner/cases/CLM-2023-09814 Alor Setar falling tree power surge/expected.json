@@ -1,0 +1,143 @@
+{
+  "claim_no": "CLM-2023-09814",
+  "label": "Alor Setar falling tree power surge",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "power surge from a fault on the supply network",
+    "sequence": [
+      "An angsana tree with root decay on the Jalan Langgar road reserve, about 350 metres from the risk, falls at about 3:30 pm on 19 September 2023; no thunderstorm or strong wind on record",
+      "The tree falls across the overhead low voltage lines",
+      "Line fault on the feeder serving Taman Uda",
+      "Overvoltage surge on the feeder",
+      "Electrical appliances and air-conditioner control boards in the house damaged; the tree never touches the property"
+    ],
+    "intervening_event": "The tree fell about 350 metres away across the public overhead line and never touched the insured property; the feeder fault that followed sent the overvoltage surge to the appliances.",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 19 September 2023 falls inside 1 June 2023 to 31 May 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "fail",
+      "reason": "Proximate cause: an overvoltage surge from a fault on the supply network, with no fire and no lightning. The tree fell on the public line 350 metres away and never struck the property described in the Schedule, so FP513 does not answer the damage. An electrical surge is insured nowhere in the policy, base cover or any endorsement."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "peril_not_insured",
+  "supporting_clauses": [
+    "Operative clause",
+    "FP513"
+  ],
+  "quotes": [
+    {
+      "clause": "FP513",
+      "chunk_id": "ENDORSEMENT-FP513",
+      "text": "this Policy shall extend to include loss or damage to the property described in the Schedule and/or to walls, gates and fences around and pertaining thereto directly resulting from damage by falling trees or branches and objects therefrom,"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP508B / FP508A.01",
+      "reason": "Neither is on the schedule. They concern electrical damage to the insured's own installation and are not a route to cover here."
+    },
+    {
+      "clause": "Condition 6(b)",
+      "reason": "No storm or atmospheric disturbance: the tree fell from root decay on a calm afternoon."
+    },
+    {
+      "clause": "FP503",
+      "reason": "Not held, and no windstorm."
+    },
+    {
+      "clause": "FP513 excess",
+      "reason": "The RM250.00 excess is not reached; the claim fails on the endorsement's operative words before any quantum."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": false,
+    "reason": "No basis to price. The proximate cause, a surge on the supply network, is insured nowhere in the policy, so there is no cover to quantify at any figure."
+  },
+  "working": [
+    "Declined at gate 2. No calculation: the proximate cause is insured nowhere in the policy."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  420,000.00  value    RM 400,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   80,000.00  value     RM 70,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP513] refs [1, 2, 3, 4, 5]",
+    "     subtotal          RM    11,950.00",
+    "     excess            RM       250.00   Flat first RM 250.00 of each and every loss.",
+    "     net               RM    11,700.00",
+    "",
+    "  CLAIMED             RM    11,950.00",
+    "  RECOMMENDED PAYABLE RM    11,700.00"
+  ],
+  "facts": [
+    {
+      "fact": "The tree fell on the overhead power line on Jalan Langgar, about 350 metres from the risk.",
+      "source": "Adjuster's report, Investigation, Cause and origin; TNB outage record"
+    },
+    {
+      "fact": "The tree did not touch the house, compound, walls, gate or fence; no branch or object reached the property.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Findings, Damage found per item"
+    },
+    {
+      "fact": "Appliances damaged by overvoltage on the supply feeder.",
+      "source": "Adjuster's report, Investigation, Reports relied on; technician reports"
+    },
+    {
+      "fact": "No storm that afternoon; the tree had root decay.",
+      "source": "Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "FP513 on the schedule.",
+      "source": "Schedule, Endorsements and clauses"
+    }
+  ],
+  "ambiguity": [
+    {
+      "clause": "FP513, 'directly resulting from damage by falling trees'",
+      "question": "Whether FP513's 'directly resulting from damage by falling trees' responds when the proximate cause is the falling tree but the tree struck the power line, not the insured property.",
+      "expected_behaviour": "Decline on the operative wording, as expected: the endorsement extends cover to the property described or its walls, gates and fences directly resulting from damage by falling trees, and the tree struck none of these. Put the question to the reviewer, and note that the Insured's complaint to the electricity supplier is the route for recovery of the surge damage."
+    }
+  ],
+  "decision_note": "Founder, 7 Nov 2026: the model judgement kept as the answer after Haiku 5.5 and Sonnet 5.5 both named the surge as the proximate cause. Previously: falling tree, declined at gate 5 under FP513, but-for RM 11,700.00."
+}

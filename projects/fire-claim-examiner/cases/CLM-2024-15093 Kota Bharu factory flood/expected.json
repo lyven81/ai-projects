@@ -1,0 +1,165 @@
+{
+  "claim_no": "CLM-2024-15093",
+  "label": "Kota Bharu factory flood",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "flood",
+    "sequence": [
+      "River overflow on 29 November 2024",
+      "Water enters from the rear drainage reserve and the front yard",
+      "Water stands inside the factory from the afternoon of 29 November to 2 December 2024; roof and walls intact"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 29 November 2024 falls inside 1 January 2024 to 31 December 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: flood (river overflow), with no intervening event. Flood is excluded by Condition 6(b) under the base policy but is brought in by FP504, which is held."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 29 November 2024; written claim delivered 10 December 2024, day 11 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "FP504 is on the schedule and overrides Condition 6(b). The river overflow fits its definition: water originating from outside the building."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "No hail, subsidence, landslip or explosion; no other policy. No warranties; Condition 9 not engaged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Three of five items admitted. Front gate signboard (ref 4) excluded by FP504 Special Condition 3; loss of production (ref 5) excluded by FP504 Special Condition 1(a). FP504 excess applied after average."
+    }
+  ],
+  "governing_clause": "FP504",
+  "supporting_clauses": [
+    "Condition 6(b)",
+    "FP504 Special Condition 1(a)",
+    "FP504 Special Condition 3",
+    "FP504 Excess Clause",
+    "Condition 12"
+  ],
+  "quotes": [
+    {
+      "clause": "FP504",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "notwithstanding anything stated to the contrary in Condition No. 6 of the Policy, this insurance extends to cover loss or damage directly caused by fire or otherwise occasioned by or through or in consequence of Flood (including overflow of the sea)"
+    },
+    {
+      "clause": "FP504 definition",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "Flood, for the purpose of this extension, shall mean the overflowing or deviation from their normal channels of either natural or artificial water courses, bursting or overflowing of public water mains and any other flow or accumulation of water originating from outside the building insured or containing the property insured"
+    },
+    {
+      "clause": "FP504 Excess Clause",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "(a) 1% of the total sums insured against such peril on said property by Policies in the name of the Insured, or (b) the first RM2,500.00 of each and every loss. whichever shall be the less, as ascertained after the application of any condition of average."
+    },
+    {
+      "clause": "FP504 Special Condition 1(a)",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "(a) Consequential loss of any kind."
+    },
+    {
+      "clause": "FP504 Special Condition 3",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "3. Unless specifically and separately insured this endorsement does not cover Metal smoke stacks, awnings, blinds, signs or other outdoor fixtures or fittings of any description."
+    },
+    {
+      "clause": "Condition 6(b)",
+      "chunk_id": "CONDITION-6",
+      "text": "(b) Typhoon, hurricane, tornado, cyclone or other atmospheric disturbance."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP503",
+      "reason": "Held, but the loss is flood water from outside the building; roof and walls were intact. FP503 and its RM200 excess do not govern."
+    },
+    {
+      "clause": "FP510",
+      "reason": "Not held, and the signboard toppled because the water undermined it; it falls out under FP504 Special Condition 3 as an outdoor fixture, not as subsidence."
+    }
+  ],
+  "payable": 72200.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 4 signboard 2,200.00 (FP504 SC3, outdoor fixture not separately insured); ref 5 loss of production 9,000.00 (FP504 SC1(a), consequential loss). Excluded total 11,200.00.",
+    "Step 2 Condition 20: values at risk below sums insured on Items 1, 2 and 3; factor 1.0 throughout.",
+    "FP504 group: 18,600.00 + 24,300.00 + 31,800.00 = 74,700.00.",
+    "Step 3 excess: lesser of (a) 1% of total sums insured 750,000.00 = 7,500.00 or (b) 2,500.00. Lesser = 2,500.00, applied after average.",
+    "Payable 74,700.00 - 2,500.00 = 72,200.00."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 4  RM     2,200.00  EXCLUDED by FP504 SC3  (Front gate signboard)",
+    "  ref 5  RM     9,000.00  EXCLUDED by FP504 SC1(a)  (Two weeks' loss of production, wages and sal)",
+    "  excluded total       RM    11,200.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  450,000.00  value    RM 430,000.00  factor 1.0  no average",
+    "  Item 2  SI RM  180,000.00  value    RM 175,000.00  factor 1.0  no average",
+    "  Item 3  SI RM  120,000.00  value    RM 100,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP504] refs [1, 2, 3]",
+    "     subtotal          RM    74,700.00",
+    "     excess            RM     2,500.00   Lesser of (a) 1.0% of total sums insured RM 750,000.00 = RM 7,500.00, or (b) RM 2,500.00. Lesser = RM 2,500.00.",
+    "     net               RM    72,200.00",
+    "",
+    "  CLAIMED             RM    85,900.00",
+    "  RECOMMENDED PAYABLE RM    72,200.00"
+  ],
+  "facts": [
+    {
+      "fact": "River overflow; water entered from outside and stood inside 29 November to 2 December 2024; roof and walls intact.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "FP504 and FP503 on the schedule.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "Written claim delivered 10 December 2024.",
+      "source": "Incident report, email of 10 December 2024"
+    },
+    {
+      "fact": "Signboard is a free-standing outdoor fixture at the front gate, not separately insured.",
+      "source": "Adjuster's report, Findings, Damage found per item; Schedule, Sums insured"
+    },
+    {
+      "fact": "Loss of production claimed as wages and lost sales.",
+      "source": "Incident report, claim email item 5"
+    },
+    {
+      "fact": "Total sums insured RM 750,000.00.",
+      "source": "Schedule, Sums insured"
+    }
+  ],
+  "ambiguity": []
+}

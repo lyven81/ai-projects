@@ -1,0 +1,129 @@
+{
+  "claim_no": "CLM-2024-05128",
+  "label": "Kulim cold room motor burnout",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "electrical fault",
+    "sequence": [
+      "One phase of the supply to the condensing unit is lost at a loose, overheated terminal in the motor starter",
+      "The compressor motor runs on two phases, overruns and its windings burn out at about 2:00 am on 23 April 2024; the welded overload relay contacts fail to trip",
+      "The cold room temperature rises and the frozen stock thaws and is condemned",
+      "No fire and no lightning"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 23 April 2024 falls inside 1 October 2023 to 30 September 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "fail",
+      "reason": "Proximate cause: electrical fault (single phasing and overrunning of the compressor motor), with no intervening event. No fire and no lightning. The compressor motor burnt out internally from single phasing and overrunning. FP508B states that no liability exists for loss or damage to any electrical machine, apparatus or installation unless caused by fire or lightning, and the spoilt stock follows from the breakdown, not from any insured peril. No endorsement on the schedule brings in electrical or mechanical breakdown or deterioration of stock."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "FP508B",
+  "supporting_clauses": [
+    "peril_not_insured"
+  ],
+  "quotes": [
+    {
+      "clause": "FP508B",
+      "chunk_id": "ENDORSEMENT-FP508B",
+      "text": "but it is expressly understood that no liability exists under this Policy for loss or damage to any electrical machine, apparatus, fixture or fitting, or to any portion of the electrical installation, unless caused by fire or lightning."
+    },
+    {
+      "clause": "FP508B cover",
+      "chunk_id": "ENDORSEMENT-FP508B",
+      "text": "Loss or damage by fire to the electrical appliances and installation insured by this Policy arising from or occasioned by over-running, excessive pressure, short-circuiting, arcing, self-heating or leakage of electricity, from whatever cause (lightning included) is covered subject to the terms and conditions of this Policy,"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP508A.01",
+      "reason": "Not on this schedule; FP508B is. Its proviso about fire set up by a machine has no application where there was no fire."
+    },
+    {
+      "clause": "FP508B (as granting cover)",
+      "reason": "FP508B covers damage BY FIRE arising from electrical causes. Reading it as cover for electrical burnout without fire inverts it."
+    },
+    {
+      "clause": "FP514A / FP514B",
+      "reason": "Cold storage clauses are not on the schedule; no cover for deterioration of stock from a temperature change."
+    },
+    {
+      "clause": "Condition 12",
+      "reason": "Notice on 23 April and written claim on 2 May 2024, day 9 of 15; compliant and not reached in any case."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": false,
+    "reason": "No basis to price. The loss is not a fire or lightning loss, so no insured peril operated and there is no cover to quantify at any figure."
+  },
+  "working": [
+    "Declined at gate 2. No calculation."
+  ],
+  "facts": [
+    {
+      "fact": "Compressor motor windings burnt out from single phasing and overrunning; no fire, no charring outside the motor casing and starter.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Engineer: no fire and no lightning involvement; surge arrester not operated.",
+      "source": "Adjuster's report, Investigation, Reports relied on (engineer's report of 26 April 2024)"
+    },
+    {
+      "fact": "No thunderstorm or lightning in Kulim on 22 to 23 April 2024.",
+      "source": "Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "The Insured reported no fire.",
+      "source": "Incident report, WhatsApp of 23 April 2024, 8:05 am"
+    },
+    {
+      "fact": "FP508B is the only endorsement on the schedule.",
+      "source": "Schedule, Endorsements and clauses"
+    }
+  ],
+  "ambiguity": []
+}

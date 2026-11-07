@@ -1,0 +1,250 @@
+{
+ "passed": 61,
+ "total": 61,
+ "checks": [
+  {
+   "name": "cases.json holds exactly the 22 approved claims",
+   "ok": true
+  },
+  {
+   "name": "cases.json sorted by peril, then claim number",
+   "ok": true
+  },
+  {
+   "name": "gold_facts.json covers the same 22 claims",
+   "ok": true
+  },
+  {
+   "name": "FC815 and FC816 texts differ",
+   "ok": true
+  },
+  {
+   "name": "FC815 holds the automatic renewal wording",
+   "ok": true
+  },
+  {
+   "name": "operative clause is a chunk",
+   "ok": true
+  },
+  {
+   "name": "FP512A and FP512B carry no stored excess",
+   "ok": true
+  },
+  {
+   "name": "every paired variant has a scope note",
+   "ok": true
+  },
+  {
+   "name": "no NRIC-format or phone-format number in any case file",
+   "ok": true
+  },
+  {
+   "name": "every chunk_id in the rules exists in chunks.json",
+   "ok": true
+  },
+  {
+   "name": "claim://{claim_no}/schedule serves the schedule",
+   "ok": true
+  },
+  {
+   "name": "policy://clause/{code} serves a clause with its scope note",
+   "ok": true
+  },
+  {
+   "name": "exactly four tools",
+   "ok": true
+  },
+  {
+   "name": "clause_not_retrieved: gate 1 before the operative clause is retrieved",
+   "ok": true
+  },
+  {
+   "name": "gate_out_of_order: gate 3 before gate 1",
+   "ok": true
+  },
+  {
+   "name": "missing_fact names the fact",
+   "ok": true
+  },
+  {
+   "name": "missing_fact when a fact has no source",
+   "ok": true
+  },
+  {
+   "name": "clause_not_retrieved for a clause listed but never returned",
+   "ok": true
+  },
+  {
+   "name": "gate 1 passes once the wording is retrieved and facts are complete",
+   "ok": true
+  },
+  {
+   "name": "no_test_for_clause for an unknown cause",
+   "ok": true
+  },
+  {
+   "name": "clause_not_retrieved: burst pipe before FP507 is retrieved",
+   "ok": true
+  },
+  {
+   "name": "gates_incomplete: calculate_payable before the gates",
+   "ok": true
+  },
+  {
+   "name": "unknown_case for a claim not on file",
+   "ok": true
+  },
+  {
+   "name": "George Town fails gate 1",
+   "ok": true
+  },
+  {
+   "name": "chain_stopped: no gate after a failure",
+   "ok": true
+  },
+  {
+   "name": "not priced after a gate 1 failure",
+   "ok": true
+  },
+  {
+   "name": "empty result is a valid result, not an error",
+   "ok": true
+  },
+  {
+   "name": "held FP507A ranks first and overrides; FP507B not held is informational",
+   "ok": true
+  },
+  {
+   "name": "results are trimmed to id, code, title, authority, note, scope note, text",
+   "ok": true
+  },
+  {
+   "name": "quote_not_retrieved names the line",
+   "ok": true
+  },
+  {
+   "name": "clause_mismatch for a quote cited to the wrong chunk",
+   "ok": true
+  },
+  {
+   "name": "rejected after two retries",
+   "ok": true
+  },
+  {
+   "name": "figure_mismatch when no figure was computed",
+   "ok": true
+  },
+  {
+   "name": "missing_gate",
+   "ok": true
+  },
+  {
+   "name": "status_mismatch names the gate",
+   "ok": true
+  },
+  {
+   "name": "clause_mismatch when the governing clause is not the deciding gate's clause",
+   "ok": true
+  },
+  {
+   "name": "figure_mismatch on the but-for figure",
+   "ok": true
+  },
+  {
+   "name": "valid advice is recorded",
+   "ok": true
+  },
+  {
+   "name": "CLM-2021-05512 George Town burglary: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2023-11207 Taiping burst pipe: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2025-09207 Kuantan shophouse burst pipe: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-05128 Kulim cold room motor burnout: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2023-09814 Alor Setar falling tree power surge: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2022-08841 Bukit Mertajam fire: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2023-06205 Melaka terrace house fire: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2023-07326 Batu Pahat restaurant kitchen fire: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-01385 Klang warehouse fire: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-03187 Sungai Petani bakery fire: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2025-07741 Muar phone shop fire: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2023-02857 Segamat workshop flood: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2023-12440 Kampar flood: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-15093 Kota Bharu factory flood: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-08853 Miri lorry impact shopfront: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-13208 Kluang workshop lightning surge: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2025-05106 Temerloh house lightning surge: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-11564 Seremban restaurant riot damage: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2025-03362 Sitiawan house break-in damage: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2022-06033 Ipoh windstorm: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2024-06472 Kuala Terengganu terrace house storm: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "CLM-2025-00417 Ampang landslip terrace house: gates and figure",
+   "ok": true
+  },
+  {
+   "name": "search_unavailable is a retryable error, not an empty result",
+   "ok": true
+  }
+ ]
+}

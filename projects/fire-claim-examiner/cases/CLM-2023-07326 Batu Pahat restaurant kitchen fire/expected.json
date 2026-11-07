@@ -1,0 +1,155 @@
+{
+  "claim_no": "CLM-2023-07326",
+  "label": "Batu Pahat restaurant kitchen fire",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "fire",
+    "sequence": [
+      "Cooking oil overheats at the wok burner of the main gas stove, left unattended",
+      "The oil ignites",
+      "Flames enter the exhaust hood and ducting and spread across the kitchen ceiling"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 12 August 2023 falls inside 1 May 2023 to 30 April 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: fire, from overheated cooking oil, with no intervening event. Accidental kitchen fire is the base insured peril. No explosion; Condition 8(h) not engaged."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 12 August 2023; written claim delivered 20 August 2023, day 8 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "No endorsement required for fire; none on the schedule."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "No warranties. Condition 9 not engaged: trading daily, occupation unchanged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Four of seven items admitted. Cash (ref 5) and sales books (ref 7) fall out under Condition 8(e); the motorcycle (ref 6) is not property insured under any schedule item. The claim stands for the rest."
+    }
+  ],
+  "governing_clause": "base_insuring_clause",
+  "governing_chunk_id": "OPERATIVE-CLAUSE",
+  "supporting_clauses": [
+    "Condition 8(e)",
+    "Condition 12",
+    "Condition 20"
+  ],
+  "quotes": [
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Condition 8(e)",
+      "chunk_id": "CONDITION-8",
+      "text": "Unless otherwise expressly stated in this Policy this Insurance does not cover:"
+    },
+    {
+      "clause": "Condition 8(e)",
+      "chunk_id": "CONDITION-8",
+      "text": "(e) Securities, obligations, or documents of any kind, stamps, coins or paper money, cheques, books of account or other business books, or computer systems records."
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "shall within 15 days after the loss or damage, or such further time as the Company may in writing allow in that behalf, deliver to the Company:"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FC804",
+      "reason": "Other Contents Clause would admit money up to RM1,000.00 and business books, but it is not on this schedule."
+    },
+    {
+      "clause": "Condition 8(h)",
+      "reason": "No explosion occurred; the gas installation was intact. The fire is a plain base-peril fire."
+    },
+    {
+      "clause": "Condition 20",
+      "reason": "Cite only to confirm no average: every value at risk is below its sum insured. It must not reduce any item."
+    }
+  ],
+  "payable": 76900.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 5 cash 3,400.00 (Condition 8(e)); ref 7 sales books 800.00 (Condition 8(e)); ref 6 motorcycle 5,200.00 (no schedule item covers it). Excluded total 9,400.00.",
+    "Step 2 Condition 20: all three values at risk below the sums insured, factor 1.0 on every item.",
+    "Item 1: 38,000.00. Item 2: 26,500.00 + 9,800.00 = 36,300.00. Item 3: 2,600.00.",
+    "Step 3 excess: nil for the fire peril.",
+    "Payable 38,000.00 + 36,300.00 + 2,600.00 = 76,900.00. Assessed 86,300.00 less excluded 9,400.00 = 76,900.00."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 5  RM     3,400.00  EXCLUDED by Condition 8(e)  (Cash in the back counter drawer)",
+    "  ref 6  RM     5,200.00  EXCLUDED by Not property insured: no schedule item  (Motorcycle, Honda RS150, parked in the rear )",
+    "  ref 7  RM       800.00  EXCLUDED by Condition 8(e)  (Sales books and receipt books)",
+    "  excluded total       RM     9,400.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  300,000.00  value    RM 290,000.00  factor 1.0  no average",
+    "  Item 2  SI RM  120,000.00  value    RM 110,000.00  factor 1.0  no average",
+    "  Item 3  SI RM   15,000.00  value     RM 12,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [BASE] refs [1, 2, 3, 4]",
+    "     subtotal          RM    76,900.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM    76,900.00",
+    "",
+    "  CLAIMED             RM    86,300.00",
+    "  RECOMMENDED PAYABLE RM    76,900.00"
+  ],
+  "facts": [
+    {
+      "fact": "Accidental fire from overheated cooking oil, no explosion.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Findings, Maintenance and prior defects"
+    },
+    {
+      "fact": "Written claim delivered 20 August 2023.",
+      "source": "Incident report, WhatsApp of 20 August 2023"
+    },
+    {
+      "fact": "Cash RM 3,400.00 and sales books RM 800.00 claimed; schedule states money and cash not insured; no FC804.",
+      "source": "Incident report, claim message; Schedule, Sums insured and Endorsements"
+    },
+    {
+      "fact": "Motorcycle claimed; the schedule items are renovation and building, furniture fittings and kitchen equipment, and stock.",
+      "source": "Incident report, claim message; Schedule, Sums insured"
+    },
+    {
+      "fact": "Values at risk below sums insured on all items.",
+      "source": "Adjuster's report, Measurement, value table"
+    }
+  ],
+  "ambiguity": []
+}

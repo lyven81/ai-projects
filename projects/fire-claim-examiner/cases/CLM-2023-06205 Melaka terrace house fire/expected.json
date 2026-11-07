@@ -1,0 +1,152 @@
+{
+  "claim_no": "CLM-2023-06205",
+  "label": "Melaka terrace house fire",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "fire",
+    "sequence": [
+      "Arcing at the double power socket behind the refrigerator in the kitchen",
+      "Fire starts at the socket and spreads to the kitchen cabinets",
+      "Fire spreads up into the rear roof"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 10 June 2023 falls inside 1 February 2023 to 31 January 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: fire, started by arcing at a kitchen power socket, with no intervening event. Accidental electrical fire is the base insured peril."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 10 June 2023; written claim delivered 19 June 2023, day 9 of 15. The Insured's statement about occupancy was mistaken, not knowingly false (see ambiguity)."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "No endorsement required for fire; none on the schedule."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "fail",
+      "reason": "Condition 9(b): the building had been unoccupied since 15 April 2023, 56 days, with no sanction of the Company endorsed on the policy. The Insured's statement that the tenant was living there is contradicted by the verified evidence, and the verified fact governs. The insurance ceased to attach."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "Condition 9(b)",
+  "supporting_clauses": [
+    "Condition 15 (considered, not relied on)"
+  ],
+  "quotes": [
+    {
+      "clause": "Condition 9",
+      "chunk_id": "CONDITION-9",
+      "text": "Under any of the following circumstances the insurance ceases to attach as regards the property affected unless the Insured, before the occurrence of any loss or damage, obtains the sanction of the Company signified by endorsement upon the Policy, by or on behalf of the Company:"
+    },
+    {
+      "clause": "Condition 9(b)",
+      "chunk_id": "CONDITION-9",
+      "text": "(b) If the building insured or containing the insured property becomes unoccupied and so remains for a period of more than thirty (30) days."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "Condition 15",
+      "reason": "The Insured believed the tenant lived there; rent was paid and the tenant had not told her. A mistaken statement is not shown to be a false declaration. Declining on fraud would be the wrong ground."
+    },
+    {
+      "clause": "Condition 9(d)",
+      "reason": "Letting the house does not pass the Insured's interest in it."
+    },
+    {
+      "clause": "Condition 9(a)",
+      "reason": "No change of trade or occupation type; the risk is still a let dwelling. The defect is vacancy, which is Condition 9(b)."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 90000.0,
+    "blocked_by": "Condition 9(b)",
+    "basis": "Priced on the adjuster's assessed loss but for Condition 9(b). Not payable.",
+    "steps": [
+      "Item 1: 79,000.00 (factor 1.0). Item 2: 11,000.00 (factor 1.0).",
+      "Excess nil for the fire peril.",
+      "Would have paid 90,000.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 5. Counterfactual only: 79,000.00 + 11,000.00 = 90,000.00, not payable."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  250,000.00  value    RM 240,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   20,000.00  value     RM 15,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [BASE] refs [1, 2]",
+    "     subtotal          RM    90,000.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM    90,000.00",
+    "",
+    "  CLAIMED             RM    90,000.00",
+    "  RECOMMENDED PAYABLE RM    90,000.00"
+  ],
+  "facts": [
+    {
+      "fact": "The Insured states the tenant was staying in the house at the time.",
+      "source": "Incident report, emails of 10 and 19 June 2023"
+    },
+    {
+      "fact": "The tenant moved to Johor Bahru on 15 April 2023 and did not return; signed statement of 20 June 2023.",
+      "source": "Adjuster's report, Investigation, People interviewed"
+    },
+    {
+      "fact": "Electricity 9 kWh and water 0 cubic metres in May 2023; mail piling at the gate; neighbours saw no one since mid April.",
+      "source": "Adjuster's report, Investigation, Reports relied on and People interviewed"
+    },
+    {
+      "fact": "Unoccupied 56 days at the date of loss.",
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+    },
+    {
+      "fact": "No sanction endorsed under Condition 9.",
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+    }
+  ],
+  "ambiguity": [
+    {
+      "clause": "Condition 15",
+      "question": "Whether the Insured's written statement that the house was occupied is a false declaration used in support of the claim.",
+      "expected_behaviour": "Do not rest on Condition 15. The evidence shows a mistaken belief (rent paid, tenant silent), not a knowing falsehood. Decline on Condition 9(b), which the verified facts establish independently."
+    }
+  ]
+}

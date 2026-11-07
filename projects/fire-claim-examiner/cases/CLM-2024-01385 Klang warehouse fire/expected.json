@@ -1,0 +1,151 @@
+{
+  "claim_no": "CLM-2024-01385",
+  "label": "Klang warehouse fire",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "fire",
+    "sequence": [
+      "An electrically driven tyre shredding machine in the rear bay is in use until about 9:00 pm",
+      "Smouldering rubber crumb at the discharge chute ignites the stockpile of used tyres",
+      "Fire spreads through the rear bay and roof into the front bay holding the Insured's garment stock"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 27 to 28 January 2024 falls inside 1 July 2023 to 30 June 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: fire, started at the tyre shredder, with no intervening event. Fire is the base insured peril."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 28 January 2024; written claim delivered 2 February 2024, day 6 of 15. No fraud indicator on the amounts."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "No endorsement required for fire; none on the schedule."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "fail",
+      "reason": "Condition 9(a): the occupation of the building changed from garment storage to include tyre storage and mechanical tyre shredding, increasing the risk of fire, from about four months before the loss, with no sanction of the Company endorsed on the policy. The insurance ceased to attach to the property affected."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "Condition 9(a)",
+  "supporting_clauses": [
+    "Condition 1"
+  ],
+  "quotes": [
+    {
+      "clause": "Condition 9",
+      "chunk_id": "CONDITION-9",
+      "text": "Under any of the following circumstances the insurance ceases to attach as regards the property affected unless the Insured, before the occurrence of any loss or damage, obtains the sanction of the Company signified by endorsement upon the Policy, by or on behalf of the Company:"
+    },
+    {
+      "clause": "Condition 9(a)",
+      "chunk_id": "CONDITION-9",
+      "text": "(a) If the trade or manufacture carried on be altered, or if the nature of the occupation of or other circumstances affecting the building insured or containing the insured property be changed in such a way as to increase the risk of loss or damage by fire."
+    },
+    {
+      "clause": "Condition 1",
+      "chunk_id": "CONDITION-1",
+      "text": "The Insured also has a duty to tell the Company immediately if at any time after the Insured’s contract of insurance has been entered into, varied or renewed with the Company any of the information given in the Proposal Form (or when the Insured applied for this insurance) is inaccurate or has changed."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "Condition 9(b)",
+      "reason": "The building was occupied daily; unoccupancy is not the ground."
+    },
+    {
+      "clause": "Condition 9(d)",
+      "reason": "A sublease does not pass the Insured's interest in the property; the Insured remains owner of the building and the garments."
+    },
+    {
+      "clause": "FW701",
+      "reason": "Not on the schedule."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 233000.0,
+    "blocked_by": "Condition 9(a)",
+    "basis": "Priced on the adjuster's assessed loss but for Condition 9(a). Not payable.",
+    "steps": [
+      "Item 1: 172,000.00 (SI 900,000.00, value 850,000.00, factor 1.0). Item 2: 61,000.00 (SI 300,000.00, value 260,000.00, factor 1.0).",
+      "Excess nil for the fire peril.",
+      "Would have paid 233,000.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 5. Counterfactual only: 172,000.00 + 61,000.00 = 233,000.00, not payable."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  900,000.00  value    RM 850,000.00  factor 1.0  no average",
+    "  Item 2  SI RM  300,000.00  value    RM 260,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [BASE] refs [1, 2]",
+    "     subtotal          RM   233,000.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM   233,000.00",
+    "",
+    "  CLAIMED             RM   233,000.00",
+    "  RECOMMENDED PAYABLE RM   233,000.00"
+  ],
+  "facts": [
+    {
+      "fact": "Schedule occupation: warehouse for the storage of finished garments.",
+      "source": "Schedule, Occupation"
+    },
+    {
+      "fact": "Rear bay sublet from 1 September 2023 for storing about 3,000 used tyres and shredding them, from October 2023.",
+      "source": "Adjuster's report, Investigation, Reports relied on; Findings, Occupancy at the date of loss"
+    },
+    {
+      "fact": "Fire began at the tyre shredder; no fire wall between the bays.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Findings, Occupancy"
+    },
+    {
+      "fact": "No endorsement on the policy records the change.",
+      "source": "Schedule, Sanctions endorsed under Condition 9; Adjuster's report, Findings, Risk as found"
+    },
+    {
+      "fact": "The Insured describes the sub-tenant as only keeping things there.",
+      "source": "Incident report, WhatsApp of 28 January 2024; Adjuster's report, Findings, Discrepancies"
+    }
+  ],
+  "ambiguity": []
+}

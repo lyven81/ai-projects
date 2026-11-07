@@ -1,0 +1,338 @@
+{
+ "run_id": "20261107-101951-haiku",
+ "model": "claude-haiku-5-5",
+ "claim_nos": [
+  "CLM-2023-09814",
+  "CLM-2025-03362"
+ ],
+ "sample": false,
+ "results": [
+  {
+   "claim_no": "CLM-2023-09814",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 10,
+   "tool_calls": 18,
+   "tool_errors": 2,
+   "usage": {
+    "input_tokens": 22,
+    "output_tokens": 10865,
+    "cache_creation_input_tokens": 21915,
+    "cache_read_input_tokens": 145579
+   },
+   "cost_usd": 0.00963,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": "clause_not_retrieved"
+    },
+    {
+     "tool": "check_gate",
+     "error": "gate_out_of_order"
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 54.7
+  },
+  {
+   "claim_no": "CLM-2025-03362",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 7,
+   "tool_calls": 16,
+   "tool_errors": 2,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 8789,
+    "cache_creation_input_tokens": 24058,
+    "cache_read_input_tokens": 124166
+   },
+   "cost_usd": 0.00865,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": "clause_not_retrieved"
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": "clause_mismatch"
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 41.7
+  }
+ ],
+ "scores": [
+  {
+   "claim_no": "CLM-2023-09814",
+   "label": "Alor Setar falling tree power surge",
+   "peril": "Falling tree",
+   "tool_calls": 18,
+   "proximate_cause": false,
+   "gate_statuses": false,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "fail",
+    "not_reached"
+   ],
+   "governing_clause": false,
+   "governing_got": "FP513, insuring wording (loss or damage directly resulting from damage by falling trees or branches)",
+   "payable": false,
+   "figure_got": 11700.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": false,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": false
+  },
+  {
+   "claim_no": "CLM-2025-03362",
+   "label": "Sitiawan house break-in damage",
+   "peril": "Riot and malicious damage",
+   "tool_calls": 16,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "peril_not_insured",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  }
+ ],
+ "summary": {
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 38,
+    "output_tokens": 19654,
+    "cache_creation_input_tokens": 45973,
+    "cache_read_input_tokens": 269745,
+    "cost_usd": 0.01828
+   }
+  },
+  "cost_usd": 0.01828,
+  "score": {
+   "cases_passed": "1/2",
+   "proximate_cause": "1/2",
+   "gate_statuses": "1/2",
+   "governing_clause": "1/2",
+   "payable": "1/2",
+   "advice_recorded": "2/2",
+   "no_forbidden_ground": "1/2",
+   "flags": "2/2",
+   "by_peril": {
+    "Falling tree": "0/1",
+    "Riot and malicious damage": "1/1"
+   },
+   "facts_by_field": {
+    "date_of_loss": "1/2",
+    "intervening_event": "2/2",
+    "period_end": "2/2",
+    "period_start": "2/2",
+    "proximate_cause": "1/2"
+   },
+   "facts_by_document": {
+    "Adjuster's report": "4/6",
+    "Schedule": "4/4"
+   },
+   "tool_calls_per_case": {
+    "CLM-2023-09814": 18,
+    "CLM-2025-03362": 16
+   }
+  }
+ }
+}

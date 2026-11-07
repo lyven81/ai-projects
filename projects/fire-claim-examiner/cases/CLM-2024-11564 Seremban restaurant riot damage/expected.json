@@ -1,0 +1,162 @@
+{
+  "claim_no": "CLM-2024-11564",
+  "label": "Seremban restaurant riot damage",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "riot",
+    "sequence": [
+      "A fight between two groups of football supporters, about 20 persons, spills onto the five-foot way at about 11:30 pm on 8 September 2024",
+      "Chairs and tables thrown at the shopfront; glass panels and door broken; counter equipment struck",
+      "During the commotion one person reaches over the counter and takes cash from the till",
+      "No fire"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 8 September 2024 falls inside 1 April 2024 to 31 March 2025."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: riot (a disturbance of the public peace), with no intervening event; the cash taken in the commotion is dealt with at item level. Riot is excluded by Condition 6(d) under the base policy; FP512B brings in damage by persons taking part in a disturbance of the public peace."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 9 September 2024; written claim delivered 16 September 2024, day 8 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "FP512B, the variant for property other than residential, is on the schedule and fits a commercial restaurant. FP512A (residential) would not."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "The disturbance is not a popular rising, insurrection or terrorism under FP512B Special Condition 6; no fire or explosion. No warranties; Condition 9 not engaged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Four of six items admitted. Cash taken from the till (ref 5) excluded: FP512B excludes theft and its substituted Condition 8(e) excludes paper money. Loss of business (ref 6) excluded by FP512B substituted Condition 5(a)."
+    }
+  ],
+  "governing_clause": "FP512B",
+  "supporting_clauses": [
+    "Condition 6(d)",
+    "FP512B Special Condition 5(a)",
+    "FP512B Special Condition 6",
+    "FP512B Special Condition 8(e)"
+  ],
+  "quotes": [
+    {
+      "clause": "FP512B",
+      "chunk_id": "ENDORSEMENT-FP512B",
+      "text": "1. The act of any person taking part together with other in any disturbance of the public peace (whether in connection with a strike or lock-out or not) not being an occurrence mentioned in Condition 6 of the Special Conditions hereof."
+    },
+    {
+      "clause": "Condition 6(d)",
+      "chunk_id": "CONDITION-6",
+      "text": "(d) Mutiny, riot, military or popular rising, insurrection, rebellion, revolution, military or usurped power, martial law or"
+    },
+    {
+      "clause": "FP512B theft exclusion",
+      "chunk_id": "ENDORSEMENT-FP512B",
+      "text": "nor for any loss or damage arising out of or in the course of burglary, housebreaking, theft or larceny or any attempt thereat or caused by any person taking part therein."
+    },
+    {
+      "clause": "FP512B Special Condition 5(a)",
+      "chunk_id": "ENDORSEMENT-FP512B",
+      "text": "(a) Loss of earnings, loss by delay, loss of market or other consequential or indirect loss or damage of any kind or description whatsoever."
+    },
+    {
+      "clause": "FP512B Special Condition 6(b)",
+      "chunk_id": "ENDORSEMENT-FP512B",
+      "text": "(b) Mutiny, civil commotion assuming the proportions of or amounting to a popular rising, military rising, insurrection, rebellion, revolution, military or usurped power."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP512A",
+      "reason": "The residential variant; not held and not the right variant for a restaurant."
+    },
+    {
+      "clause": "FP512B excess",
+      "reason": "The FP512B wording in this policy carries no excess clause. The RM500.00 figure in FP512B is the Condition 8(c) limit for works of art, not an excess; deducting RM500.00 is wrong."
+    }
+  ],
+  "payable": 22750.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 5 cash 1,850.00 (theft excluded under the malicious damage extension; paper money excluded under FP512B Condition 8(e)); ref 6 loss of business 4,500.00 (FP512B Condition 5(a)). Excluded total 6,350.00.",
+    "Step 2 Condition 20 (as substituted by FP512B): values at risk below sums insured on every item; factor 1.0.",
+    "FP512B group: 9,800.00 + 6,300.00 + 5,400.00 + 1,250.00 = 22,750.00.",
+    "Step 3 excess: none. FP512B carries no excess clause and the schedule states no excess for it.",
+    "Payable 22,750.00."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 5  RM     1,850.00  EXCLUDED by FP512B (theft excluded); FP512B Condition 8(e)  (Cash taken from the till)",
+    "  ref 6  RM     4,500.00  EXCLUDED by FP512B Condition 5(a)  (Three days' loss of business)",
+    "  excluded total       RM     6,350.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  150,000.00  value    RM 140,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   90,000.00  value     RM 85,000.00  factor 1.0  no average",
+    "  Item 3  SI RM   20,000.00  value     RM 15,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP512B] refs [1, 2, 3, 4]",
+    "     subtotal          RM    22,750.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM    22,750.00",
+    "",
+    "  CLAIMED             RM    29,100.00",
+    "  RECOMMENDED PAYABLE RM    22,750.00"
+  ],
+  "facts": [
+    {
+      "fact": "Fight between about 20 football supporters on the street and five-foot way; nine arrested; scene cleared by 12:15 am.",
+      "source": "Adjuster's report, Investigation, Cause and origin and Reports relied on"
+    },
+    {
+      "fact": "No political or organised motive; confined to one street for about 45 minutes.",
+      "source": "Adjuster's report, Findings, Irregularities"
+    },
+    {
+      "fact": "Commercial restaurant, no residential use; FP512B on the schedule.",
+      "source": "Adjuster's report, Findings, Risk as found; Schedule, Endorsements"
+    },
+    {
+      "fact": "Cash taken from the till during the commotion, seen on CCTV.",
+      "source": "Adjuster's report, Findings, Damage found per item"
+    },
+    {
+      "fact": "Written claim delivered 16 September 2024.",
+      "source": "Incident report, WhatsApp of 16 September 2024"
+    }
+  ],
+  "ambiguity": [],
+  "must_not_apply": [
+    {
+      "clause": "Condition 6(d)",
+      "reason": "Cite only as the exclusion FP512B displaces. It must not be applied to decline the claim."
+    }
+  ]
+}

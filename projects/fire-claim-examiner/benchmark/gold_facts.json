@@ -1,0 +1,3238 @@
+{
+ "about": "Reference facts for the 22 claims: what a careful reader of the incident report, adjuster's report and schedule passes to check_gate and calculate_payable. Used by the no-key tool tests and to score extracted facts per field.",
+ "cases": [
+  {
+   "claim_no": "CLM-2021-05512",
+   "proximate_cause": "burglary_or_theft",
+   "endorsements_held": [
+    "FC804",
+    "FC820",
+    "FC815"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2021-07-14",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2021-07-30",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2022-07-29",
+      "source": "Schedule, Period of insurance"
+     }
+    }
+   },
+   "items": null,
+   "sums_insured": null,
+   "values_at_risk": null
+  },
+  {
+   "claim_no": "CLM-2022-06033",
+   "proximate_cause": "storm",
+   "endorsements_held": [
+    "FP503",
+    "FP513",
+    "FC816"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2022-06-30",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2022-06-02",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2023-06-01",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "storm",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2022-06-30",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2022-07-08",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP503",
+       "FP513",
+       "FC816"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     },
+     "water_or_rain_damage_claimed": {
+      "value": true,
+      "source": "Adjuster's report, Findings"
+     },
+     "wind_damaged_roof_or_walls_first": {
+      "value": true,
+      "source": "Adjuster's report, Findings"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 28400,
+        "category": "insured_damage",
+        "description": "Roof reinstatement",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 1,
+        "assessed": 6700,
+        "category": "insured_damage",
+        "description": "Ceiling boards",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 1,
+        "assessed": 2900,
+        "category": "insured_damage",
+        "description": "Floor finishes",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 2,
+        "assessed": 7150,
+        "category": "insured_damage",
+        "description": "Wardrobe, mattress, bedding",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": 1,
+        "assessed": 4300,
+        "category": "falling_tree_damage",
+        "description": "Car porch",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 6,
+        "schedule_item": null,
+        "assessed": 1850,
+        "category": "outdoor_fixture",
+        "description": "Signboard",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 7,
+        "schedule_item": null,
+        "assessed": 3600,
+        "category": "outdoor_fixture",
+        "description": "Awning",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 8,
+        "schedule_item": 1,
+        "assessed": 950,
+        "category": "mitigation_expense",
+        "description": "Emergency tarpaulin",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 28400,
+     "category": "insured_damage",
+     "description": "Roof reinstatement",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 1,
+     "assessed": 6700,
+     "category": "insured_damage",
+     "description": "Ceiling boards",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 1,
+     "assessed": 2900,
+     "category": "insured_damage",
+     "description": "Floor finishes",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 2,
+     "assessed": 7150,
+     "category": "insured_damage",
+     "description": "Wardrobe, mattress, bedding",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 1,
+     "assessed": 4300,
+     "category": "falling_tree_damage",
+     "description": "Car porch",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 6,
+     "schedule_item": null,
+     "assessed": 1850,
+     "category": "outdoor_fixture",
+     "description": "Signboard",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 7,
+     "schedule_item": null,
+     "assessed": 3600,
+     "category": "outdoor_fixture",
+     "description": "Awning",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 8,
+     "schedule_item": 1,
+     "assessed": 950,
+     "category": "mitigation_expense",
+     "description": "Emergency tarpaulin",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 380000,
+    "2": 95000
+   },
+   "values_at_risk": {
+    "1": 365000,
+    "2": 80000
+   }
+  },
+  {
+   "claim_no": "CLM-2022-08841",
+   "proximate_cause": "fire",
+   "endorsements_held": [
+    "FP509",
+    "FC805",
+    "FC815"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2022-07-28",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2021-01-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2021-01-31",
+      "source": "Schedule, Period of insurance"
+     },
+     "auto_renewal_clause_held": {
+      "value": true,
+      "source": "Schedule, Endorsements and clauses"
+     },
+     "premium_paid_to_date_of_loss": {
+      "value": true,
+      "source": "Incident report, email of 11 August 2022; Adjuster's report, Investigation, Reports relied on"
+     },
+     "company_receipt_produced": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Discrepancies with the incident report"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "fire",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2022-07-28",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2022-08-11",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP509",
+       "FC805",
+       "FC815"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": true,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 185000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 1,
+     "assessed": 14500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 3,
+     "assessed": 62000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 2,
+     "assessed": 21800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 1,
+     "assessed": 12400,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 450000,
+    "2": 120000,
+    "3": 80000
+   },
+   "values_at_risk": {
+    "1": 430000,
+    "2": 100000,
+    "3": 70000
+   }
+  },
+  {
+   "claim_no": "CLM-2023-02857",
+   "proximate_cause": "flood",
+   "endorsements_held": [
+    "FP503"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2023-03-01",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2022-06-15",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2023-06-14",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "flood",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2023-03-01",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2023-03-09",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP503"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 13900,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 21400,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 3,
+     "assessed": 18900,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": null,
+     "assessed": 6500,
+     "category": "not_property_insured",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 250000,
+    "2": 90000,
+    "3": 40000
+   },
+   "values_at_risk": {
+    "1": 240000,
+    "2": 85000,
+    "3": 36000
+   }
+  },
+  {
+   "claim_no": "CLM-2023-06205",
+   "proximate_cause": "fire",
+   "endorsements_held": [],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2023-06-10",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-02-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-01-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "fire",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2023-06-10",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2023-06-19",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 56,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 79000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 11000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 250000,
+    "2": 20000
+   },
+   "values_at_risk": {
+    "1": 240000,
+    "2": 15000
+   }
+  },
+  {
+   "claim_no": "CLM-2023-07326",
+   "proximate_cause": "fire",
+   "endorsements_held": [],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2023-08-12",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-05-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-04-30",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "fire",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2023-08-12",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2023-08-20",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 38000,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 2,
+        "assessed": 26500,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 2,
+        "assessed": 9800,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 3,
+        "assessed": 2600,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": null,
+        "assessed": 3400,
+        "category": "money_or_documents",
+        "description": "Cash",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 6,
+        "schedule_item": null,
+        "assessed": 5200,
+        "category": "not_property_insured",
+        "description": "Motorcycle",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 7,
+        "schedule_item": null,
+        "assessed": 800,
+        "category": "money_or_documents",
+        "description": "Sales books",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 38000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 26500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 9800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 3,
+     "assessed": 2600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": null,
+     "assessed": 3400,
+     "category": "money_or_documents",
+     "description": "Cash",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 6,
+     "schedule_item": null,
+     "assessed": 5200,
+     "category": "not_property_insured",
+     "description": "Motorcycle",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 7,
+     "schedule_item": null,
+     "assessed": 800,
+     "category": "money_or_documents",
+     "description": "Sales books",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 300000,
+    "2": 120000,
+    "3": 15000
+   },
+   "values_at_risk": {
+    "1": 290000,
+    "2": 110000,
+    "3": 12000
+   }
+  },
+  {
+   "claim_no": "CLM-2023-09814",
+   "proximate_cause": "electrical_fault",
+   "endorsements_held": [
+    "FP513"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2023-09-19",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-06-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-05-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "electrical_fault",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 2,
+     "assessed": 3600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 2800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 1,
+     "assessed": 2250,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 2,
+     "assessed": 2400,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 2,
+     "assessed": 900,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 420000,
+    "2": 80000
+   },
+   "values_at_risk": {
+    "1": 400000,
+    "2": 70000
+   }
+  },
+  {
+   "claim_no": "CLM-2023-11207",
+   "proximate_cause": "burst_pipe",
+   "endorsements_held": [
+    "FP503",
+    "FP507B",
+    "FC804"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2023-12-02",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-01-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2023-12-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "burst_pipe",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2023-12-02",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2023-12-08",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP503",
+       "FP507B",
+       "FC804"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     },
+     "storeys_including_mezzanine": {
+      "value": 2,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 48,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     },
+     "premises_untenanted": {
+      "value": true,
+      "source": "Adjuster's report, Findings"
+     },
+     "sprinkler_leakage": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     },
+     "defect_notified_not_remedied": {
+      "value": true,
+      "source": "Adjuster's report, Findings"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 9600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 1,
+     "assessed": 8900,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 7300,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 2,
+     "assessed": 3150,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 1,
+     "assessed": 1950,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 320000,
+    "2": 45000,
+    "3": 18000
+   },
+   "values_at_risk": {
+    "1": 310000,
+    "2": 42000,
+    "3": 16500
+   }
+  },
+  {
+   "claim_no": "CLM-2023-12440",
+   "proximate_cause": "flood",
+   "endorsements_held": [
+    "FP504",
+    "FP510",
+    "FC816"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2023-12-20",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-12-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-11-30",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "flood",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2023-12-20",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-01-20",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 34600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 11200,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 9800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 3,
+     "assessed": 22400,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 2,
+     "assessed": 8900,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 6,
+     "schedule_item": 1,
+     "assessed": 7600,
+     "category": "subsidence_or_landslip_damage",
+     "description": "Rear boundary wall",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 7,
+     "schedule_item": 1,
+     "assessed": 5300,
+     "category": "subsidence_or_landslip_damage",
+     "description": "Rear driveway",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 8,
+     "schedule_item": null,
+     "assessed": 6800,
+     "category": "money_or_documents",
+     "description": "Cash",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 9,
+     "schedule_item": 1,
+     "assessed": 4150,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 300000,
+    "2": 85000,
+    "3": 40000
+   },
+   "values_at_risk": {
+    "1": 285000,
+    "2": 76000,
+    "3": 35000
+   }
+  },
+  {
+   "claim_no": "CLM-2024-01385",
+   "proximate_cause": "fire",
+   "endorsements_held": [],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-01-27",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-07-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-06-30",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "fire",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2024-01-27",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-02-02",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": true,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 172000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 61000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 900000,
+    "2": 300000
+   },
+   "values_at_risk": {
+    "1": 850000,
+    "2": 260000
+   }
+  },
+  {
+   "claim_no": "CLM-2024-03187",
+   "proximate_cause": "fire",
+   "endorsements_held": [
+    "FP508A.01",
+    "FC816",
+    "FC805"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-09-14",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2024-03-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2025-02-28",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "fire",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2024-09-14",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-09-25",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP508A.01",
+       "FC816",
+       "FC805"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 46000,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 2,
+        "assessed": 18500,
+        "category": "electrical_machine_where_fault_began",
+        "description": "Spiral dough mixer",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 2,
+        "assessed": 62000,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 2,
+        "assessed": 14000,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": 3,
+        "assessed": 21500,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 6,
+        "schedule_item": 1,
+        "assessed": 6200,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 46000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 18500,
+     "category": "electrical_machine_where_fault_began",
+     "description": "Spiral dough mixer",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 62000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 2,
+     "assessed": 14000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 3,
+     "assessed": 21500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 6,
+     "schedule_item": 1,
+     "assessed": 6200,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 280000,
+    "2": 150000,
+    "3": 60000
+   },
+   "values_at_risk": {
+    "1": 275000,
+    "2": 200000,
+    "3": 52000
+   }
+  },
+  {
+   "claim_no": "CLM-2024-05128",
+   "proximate_cause": "electrical_fault",
+   "endorsements_held": [
+    "FP508B"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-04-23",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-10-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-09-30",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "electrical_fault",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "endorsements_held": {
+      "value": [
+       "FP508B"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 2,
+     "assessed": 18500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 2300,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 3,
+     "assessed": 24800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 380000,
+    "2": 120000,
+    "3": 150000
+   },
+   "values_at_risk": {
+    "1": 360000,
+    "2": 110000,
+    "3": 130000
+   }
+  },
+  {
+   "claim_no": "CLM-2024-06472",
+   "proximate_cause": "storm",
+   "endorsements_held": [
+    "FP503"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-05-21",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2023-10-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-09-30",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "storm",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2024-05-21",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-05-28",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP503"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     },
+     "water_or_rain_damage_claimed": {
+      "value": true,
+      "source": "Adjuster's report, Findings"
+     },
+     "wind_damaged_roof_or_walls_first": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 6300,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 1,
+     "assessed": 2400,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 4200,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 2,
+     "assessed": 1500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 350000,
+    "2": 50000
+   },
+   "values_at_risk": {
+    "1": 330000,
+    "2": 45000
+   }
+  },
+  {
+   "claim_no": "CLM-2024-08853",
+   "proximate_cause": "impact",
+   "endorsements_held": [
+    "FP506A"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-07-16",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2024-03-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2025-02-28",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "impact",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2024-07-16",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-08-09",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": "2024-08-16",
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP506A"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     },
+     "vehicle_belongs_to_insured": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 12600,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 1,
+        "assessed": 8900,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 2,
+        "assessed": 4300,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 3,
+        "assessed": 6750,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": null,
+        "assessed": 3200,
+        "category": "not_property_insured",
+        "description": "Insured's van",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 12600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 1,
+     "assessed": 8900,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 4300,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 3,
+     "assessed": 6750,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": null,
+     "assessed": 3200,
+     "category": "not_property_insured",
+     "description": "Insured's van",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 400000,
+    "2": 60000,
+    "3": 50000
+   },
+   "values_at_risk": {
+    "1": 380000,
+    "2": 55000,
+    "3": 62500
+   }
+  },
+  {
+   "claim_no": "CLM-2024-11564",
+   "proximate_cause": "riot",
+   "endorsements_held": [
+    "FP512B"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-09-08",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2024-04-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2025-03-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "riot",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2024-09-08",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-09-16",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP512B"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     },
+     "residential": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     },
+     "popular_rising_or_terrorism": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 9800,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 2,
+        "assessed": 6300,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 2,
+        "assessed": 5400,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 3,
+        "assessed": 1250,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": null,
+        "assessed": 1850,
+        "category": "money_or_documents",
+        "description": "Cash from the till",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 6,
+        "schedule_item": null,
+        "assessed": 4500,
+        "category": "consequential_loss",
+        "description": "Loss of business",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 9800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 6300,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 5400,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 3,
+     "assessed": 1250,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": null,
+     "assessed": 1850,
+     "category": "money_or_documents",
+     "description": "Cash from the till",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 6,
+     "schedule_item": null,
+     "assessed": 4500,
+     "category": "consequential_loss",
+     "description": "Loss of business",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 150000,
+    "2": 90000,
+    "3": 20000
+   },
+   "values_at_risk": {
+    "1": 140000,
+    "2": 85000,
+    "3": 15000
+   }
+  },
+  {
+   "claim_no": "CLM-2024-13208",
+   "proximate_cause": "lightning",
+   "endorsements_held": [
+    "FP508A.01"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-10-17",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2024-07-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2025-06-30",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "lightning",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2024-10-17",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-10-29",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP508A.01"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 2,
+        "assessed": 44500,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 2,
+        "assessed": 28600,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 2,
+        "assessed": 14200,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 1,
+        "assessed": 9750,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": 2,
+        "assessed": 3900,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 2,
+     "assessed": 44500,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 28600,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 14200,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 1,
+     "assessed": 9750,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 2,
+     "assessed": 3900,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 1100000,
+    "2": 1500000,
+    "3": 250000
+   },
+   "values_at_risk": {
+    "1": 1050000,
+    "2": 1380000,
+    "3": 210000
+   }
+  },
+  {
+   "claim_no": "CLM-2024-15093",
+   "proximate_cause": "flood",
+   "endorsements_held": [
+    "FP503",
+    "FP504"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2024-11-29",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2024-01-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2024-12-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "flood",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2024-11-29",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2024-12-10",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP503",
+       "FP504"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 18600,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 2,
+        "assessed": 24300,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 3,
+        "assessed": 31800,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": null,
+        "assessed": 2200,
+        "category": "outdoor_fixture",
+        "description": "Front gate signboard",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": null,
+        "assessed": 9000,
+        "category": "consequential_loss",
+        "description": "Loss of production",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 18600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 24300,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 3,
+     "assessed": 31800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": null,
+     "assessed": 2200,
+     "category": "outdoor_fixture",
+     "description": "Front gate signboard",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": null,
+     "assessed": 9000,
+     "category": "consequential_loss",
+     "description": "Loss of production",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 450000,
+    "2": 180000,
+    "3": 120000
+   },
+   "values_at_risk": {
+    "1": 430000,
+    "2": 175000,
+    "3": 100000
+   }
+  },
+  {
+   "claim_no": "CLM-2025-00417",
+   "proximate_cause": "subsidence_or_landslip",
+   "endorsements_held": [
+    "FP510",
+    "FC806B"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2025-01-04",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2024-04-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2025-03-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "subsidence_or_landslip",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2025-01-04",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2025-01-15",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP510",
+       "FC806B"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     },
+     "coastal_or_river_erosion": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     },
+     "demolition_or_structural_works": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     },
+     "defective_foundations": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     },
+     "fall_or_displacement": {
+      "value": true,
+      "source": "Adjuster's report, Findings"
+     },
+     "displacement_caused_by_insured_peril": {
+      "value": true,
+      "source": "Adjuster's report, Findings"
+     },
+     "displaced_part_isolated": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 64000,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 1,
+        "assessed": 14500,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 1,
+        "assessed": 6800,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 1,
+        "assessed": 22000,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": 1,
+        "assessed": 4800,
+        "category": "not_caused_by_event",
+        "description": "Front driveway cracks",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 64000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 1,
+     "assessed": 14500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 1,
+     "assessed": 6800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 1,
+     "assessed": 22000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 1,
+     "assessed": 4800,
+     "category": "not_caused_by_event",
+     "description": "Front driveway cracks",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 600000,
+    "2": 80000
+   },
+   "values_at_risk": {
+    "1": 580000,
+    "2": 70000
+   }
+  },
+  {
+   "claim_no": "CLM-2025-03362",
+   "proximate_cause": "burglary_or_theft",
+   "endorsements_held": [
+    "FP512A"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2025-03-08",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2025-01-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2025-12-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "burglary_or_theft",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 3800,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 1,
+     "assessed": 1600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 2900,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 2,
+     "assessed": 1200,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 2,
+     "assessed": 6500,
+     "category": "stolen_property",
+     "description": "Gold jewellery",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 6,
+     "schedule_item": null,
+     "assessed": 800,
+     "category": "money_or_documents",
+     "description": "Cash",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 300000,
+    "2": 60000
+   },
+   "values_at_risk": {
+    "1": 290000,
+    "2": 50000
+   }
+  },
+  {
+   "claim_no": "CLM-2025-05106",
+   "proximate_cause": "lightning",
+   "endorsements_held": [
+    "FP508B"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2025-04-22",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2025-02-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2026-01-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "lightning",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2025-04-22",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2025-04-30",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP508B"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 2,
+        "assessed": 4200,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 2,
+        "assessed": 1850,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 2,
+        "assessed": 780,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": 1,
+        "assessed": 1600,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 5,
+        "schedule_item": 1,
+        "assessed": 1450,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 6,
+        "schedule_item": 2,
+        "assessed": 2900,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 7,
+        "schedule_item": 2,
+        "assessed": 620,
+        "category": "electrical_damage_by_lightning",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 2,
+     "assessed": 4200,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 1850,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 2,
+     "assessed": 780,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": 1,
+     "assessed": 1600,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 5,
+     "schedule_item": 1,
+     "assessed": 1450,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 6,
+     "schedule_item": 2,
+     "assessed": 2900,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 7,
+     "schedule_item": 2,
+     "assessed": 620,
+     "category": "electrical_damage_by_lightning",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 320000,
+    "2": 80000
+   },
+   "values_at_risk": {
+    "1": 300000,
+    "2": 72000
+   }
+  },
+  {
+   "claim_no": "CLM-2025-07741",
+   "proximate_cause": "fire",
+   "endorsements_held": [],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2025-06-23",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2025-01-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2025-12-31",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "fire",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2025-06-23",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2025-07-03",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": true,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 22000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 15500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 3,
+     "assessed": 41000,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 60000,
+    "2": 40000,
+    "3": 150000
+   },
+   "values_at_risk": {
+    "1": 55000,
+    "2": 35000,
+    "3": 41000
+   }
+  },
+  {
+   "claim_no": "CLM-2025-09207",
+   "proximate_cause": "burst_pipe",
+   "endorsements_held": [
+    "FP507A",
+    "FP503"
+   ],
+   "gates": {
+    "1": {
+     "date_of_loss": {
+      "value": "2025-08-14",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "period_start": {
+      "value": "2025-03-01",
+      "source": "Schedule, Period of insurance"
+     },
+     "period_end": {
+      "value": "2026-02-28",
+      "source": "Schedule, Period of insurance"
+     }
+    },
+    "2": {
+     "proximate_cause": {
+      "value": "burst_pipe",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "intervening_event": {
+      "value": "none",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     }
+    },
+    "3": {
+     "date_of_loss": {
+      "value": "2025-08-14",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+     },
+     "written_claim_date": {
+      "value": "2025-08-22",
+      "source": "Incident report, written claim"
+     },
+     "extension_until": {
+      "value": null,
+      "source": "Incident report and adjuster's report"
+     },
+     "false_declaration_or_fraud": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Irregularities"
+     }
+    },
+    "4": {
+     "endorsements_held": {
+      "value": [
+       "FP507A",
+       "FP503"
+      ],
+      "source": "Schedule, Endorsements and clauses"
+     },
+     "storeys_including_mezzanine": {
+      "value": 2,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     }
+    },
+    "5": {
+     "warranty_breached": {
+      "value": false,
+      "source": "Schedule, Warranties"
+     },
+     "occupation_changed_increasing_risk": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "unoccupied_days": {
+      "value": 0,
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss"
+     },
+     "interest_passed_not_by_will_or_law": {
+      "value": false,
+      "source": "Adjuster's report, Findings, Risk as found against the schedule"
+     },
+     "sanction_endorsed": {
+      "value": false,
+      "source": "Schedule, Sanctions endorsed under Condition 9"
+     },
+     "premises_untenanted": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     },
+     "sprinkler_leakage": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     },
+     "defect_notified_not_remedied": {
+      "value": false,
+      "source": "Adjuster's report, Findings"
+     }
+    },
+    "6": {
+     "items": {
+      "value": [
+       {
+        "ref": 1,
+        "schedule_item": 1,
+        "assessed": 18400,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 2,
+        "schedule_item": 2,
+        "assessed": 7600,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 3,
+        "schedule_item": 3,
+        "assessed": 12500,
+        "category": "insured_damage",
+        "description": "",
+        "source": "Adjuster's report, Measurement"
+       },
+       {
+        "ref": 4,
+        "schedule_item": null,
+        "assessed": 3200,
+        "category": "consequential_loss",
+        "description": "Loss of sales",
+        "source": "Adjuster's report, Measurement"
+       }
+      ],
+      "source": "Adjuster's report, Measurement"
+     }
+    }
+   },
+   "items": [
+    {
+     "ref": 1,
+     "schedule_item": 1,
+     "assessed": 18400,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 2,
+     "schedule_item": 2,
+     "assessed": 7600,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 3,
+     "schedule_item": 3,
+     "assessed": 12500,
+     "category": "insured_damage",
+     "description": "",
+     "source": "Adjuster's report, Measurement"
+    },
+    {
+     "ref": 4,
+     "schedule_item": null,
+     "assessed": 3200,
+     "category": "consequential_loss",
+     "description": "Loss of sales",
+     "source": "Adjuster's report, Measurement"
+    }
+   ],
+   "sums_insured": {
+    "1": 450000,
+    "2": 60000,
+    "3": 80000
+   },
+   "values_at_risk": {
+    "1": 430000,
+    "2": 55000,
+    "3": 100000
+   }
+  }
+ ]
+}

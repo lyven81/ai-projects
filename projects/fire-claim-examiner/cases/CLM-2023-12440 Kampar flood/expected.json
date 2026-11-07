@@ -1,0 +1,184 @@
+{
+  "claim_no": "CLM-2023-12440",
+  "label": "Kampar flood",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "flood",
+    "sequence": [
+      "Continuous heavy rain from the afternoon of 19 December 2023",
+      "Sungai Kampar overflows; water enters the ground floor from the rear lane at about 3:00 am on 20 December 2023 and rises to about 1.2 metres",
+      "Water stands until the afternoon of 21 December",
+      "As the water recedes, the saturated and washed-out ground lets a section of the rear boundary wall lean and partly collapse and the rear driveway settle"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 20 December 2023 falls inside 1 December 2023 to 30 November 2024."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: flood (overflow of Sungai Kampar); the wall collapse and driveway settlement follow from the flood-saturated ground, with no intervening event. Flood is excluded by Condition 6(b) under the base policy; FP504, held, brings it in."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "fail",
+      "reason": "Loss on 20 December 2023; first notice and written claim both on 20 January 2024, day 31 against 15. No written extension on file and none requested before that date. Condition 12 closes: no claim shall be payable unless its terms have been complied with. The Company may still allow further time in writing: refer to a senior examiner before issuing the declinature."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "Condition 12",
+  "supporting_clauses": [
+    "FP504",
+    "FP504 SC1(c)",
+    "FP510",
+    "Condition 8(e)"
+  ],
+  "quotes": [
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "On the happening of any loss or damage the Insured shall forthwith give notice thereof to the Company and shall within 15 days after the loss or damage, or such further time as the Company may in writing allow in that behalf, deliver to the Company:"
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "No claim under this Policy shall be payable unless the terms of this Condition have been complied with."
+    },
+    {
+      "clause": "FP504",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "notwithstanding anything stated to the contrary in Condition No. 6 of the Policy, this insurance extends to cover loss or damage directly caused by fire or otherwise occasioned by or through or in consequence of Flood (including overflow of the sea)"
+    },
+    {
+      "clause": "FP504 definition",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "Flood, for the purpose of this extension, shall mean the overflowing or deviation from their normal channels of either natural or artificial water courses, bursting or overflowing of public water mains and any other flow or accumulation of water originating from outside the building insured or containing the property insured, but excluding loss or damage caused by subsidence or landslip."
+    },
+    {
+      "clause": "FP504 Special Condition 1(c)",
+      "chunk_id": "ENDORSEMENT-FP504",
+      "text": "(c) Loss or damage caused by subsidence or landslip except when this is occasioned by earthquake or volcanic eruption, provided that these perils are insured against by this Policy."
+    },
+    {
+      "clause": "FP510 exclusion (a)",
+      "chunk_id": "ENDORSEMENT-FP510",
+      "text": "(a) loss or damage to swimming pools, terraces, patios, drives, footpaths, walls, gates or fences unless the building, its outbuildings or garages are damaged by the same cause and at the same time."
+    },
+    {
+      "clause": "Condition 8(e)",
+      "chunk_id": "CONDITION-8",
+      "text": "(e) Securities, obligations, or documents of any kind, stamps, coins or paper money, cheques, books of account or other business books, or computer systems records."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP504 (as the ground of cover)",
+      "reason": "Held, and the flood falls squarely within its definition, but Condition 12 is a condition precedent and defeats it. An assistant that reasons only about perils will approve this claim."
+    },
+    {
+      "clause": "Condition 9(d)",
+      "reason": "Not engaged. The claimant is the Insured's spouse managing the business; the Insured remains the registered proprietor."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": true,
+    "amount": 88550.0,
+    "blocked_by": "Condition 12",
+    "basis": "Priced under FP504 but for Condition 12, on the adjuster's assessed loss. Not payable unless the Company allows further time in writing.",
+    "steps": [
+      "Excluded: refs 6 and 7, 12,900.00 (FP504 Special Condition 1(c) and FP510 exclusion (a)); ref 8 cash 6,800.00 (Condition 8(e)).",
+      "Remaining refs 1, 2, 3, 4, 5, 9 = 91,050.00; no average (values at risk below sums insured on every item).",
+      "Excess lesser of 1% of 425,000.00 = 4,250.00 or 2,500.00 = 2,500.00.",
+      "Would have paid 88,550.00, labelled not payable."
+    ]
+  },
+  "working": [
+    "Declined at gate 3. Counterfactual only, for the senior referral: 34,600.00 + 11,200.00 + 9,800.00 + 22,400.00 + 8,900.00 + 4,150.00 = 91,050.00, less FP504 excess 2,500.00 = 88,550.00, not payable.",
+    "Items that would fail anyway: refs 6 and 7, 12,900.00. FP504 Special Condition 1(c) excludes subsidence or landslip; FP510 exclusion (a) excludes drives and walls unless the building is damaged by the same cause at the same time, and it was not; the FP510 excess, 5% of total sums insured (21,250.00) or 25,000.00 whichever is lower, exceeds the amount claimed. Ref 8 cash 6,800.00: Condition 8(e), no money item on the schedule."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 6  RM     7,600.00  EXCLUDED by FP504 SC1(c)  (Rear boundary wall, rebuild four metre secti)",
+    "  ref 7  RM     5,300.00  EXCLUDED by FP504 SC1(c)  (Rear paved driveway, relay settled section)",
+    "  ref 8  RM     6,800.00  EXCLUDED by Condition 8(e)  (Cash in counter drawer)",
+    "  excluded total       RM    19,700.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  300,000.00  value    RM 285,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   85,000.00  value     RM 76,000.00  factor 1.0  no average",
+    "  Item 3  SI RM   40,000.00  value     RM 35,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP504] refs [1, 2, 3, 4, 5, 9]",
+    "     subtotal          RM    91,050.00",
+    "     excess            RM     2,500.00   Lesser of (a) 1.0% of total sums insured RM 425,000.00 = RM 4,250.00, or (b) RM 2,500.00. Lesser = RM 2,500.00.",
+    "     net               RM    88,550.00",
+    "",
+    "  CLAIMED             RM   110,750.00",
+    "  RECOMMENDED PAYABLE RM    88,550.00"
+  ],
+  "facts": [
+    {
+      "fact": "Sungai Kampar overflowed; water entered from the rear lane at about 3:00 am on 20 December 2023.",
+      "source": "Adjuster's report, Investigation, Cause and origin and Reports relied on"
+    },
+    {
+      "fact": "First notice and written claim both on 20 January 2024, 31 days after the loss.",
+      "source": "Incident report, WhatsApp of 20 January 2024; Adjuster's report, Findings, Irregularities"
+    },
+    {
+      "fact": "No request for more time before 20 January 2024; no written extension on file.",
+      "source": "Adjuster's report, Findings, Irregularities"
+    },
+    {
+      "fact": "Boundary wall leaned and driveway settled as the saturated ground washed out; main building not affected.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Incident report, WhatsApp of 20 January 2024"
+    },
+    {
+      "fact": "Cash RM 6,800.00 claimed; money and cash not itemised on the schedule.",
+      "source": "Incident report, claim message; Schedule, Sums insured"
+    },
+    {
+      "fact": "FP504 and FP510 on the schedule; total sums insured RM 425,000.00.",
+      "source": "Schedule, Endorsements and clauses; Sums insured"
+    }
+  ],
+  "ambiguity": [
+    {
+      "clause": "Condition 12",
+      "question": "Whether the Company will exercise its discretion to allow further time in writing, given the claimant's reasons (no power or mobile coverage for several days, clean-up, the Insured abroad).",
+      "expected_behaviour": "The Company may still allow further time in writing. Correct output is a declinature on Condition 12 with the discretion flagged for senior referral, not a silent refusal."
+    }
+  ]
+}

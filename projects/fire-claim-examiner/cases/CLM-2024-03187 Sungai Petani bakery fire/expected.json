@@ -1,0 +1,175 @@
+{
+  "claim_no": "CLM-2024-03187",
+  "label": "Sungai Petani bakery fire",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "fire",
+    "sequence": [
+      "Insulation failure within the motor of the spiral dough mixer; short circuiting and overheating of its windings",
+      "Fire starts at the mixer",
+      "Fire spreads to the timber shelving and packaging, then across the production area, burning through part of the ground floor ceiling",
+      "Smoke and soot throughout the ground floor and lower staircase"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 14 September 2024 falls inside 1 March 2024 to 28 February 2025."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: fire, started by an electrical fault in the mixer motor, with no intervening event; the mixer's own damage is from the fault. Fire is the base insured peril. No Condition 6 exclusion engaged: an accidental electrical fire, not atmospheric, seismic, war, riot or terrorism."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 15 September 2024; written claim delivered 25 September 2024, day 11 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "No endorsement required for fire. FP508A.01 is on the schedule and is tested at item level; FP508B is not held."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "No warranties. Condition 9 not engaged: trade unchanged; closing overnight is not unoccupancy; the Insured remains registered proprietor, and the claimant lodges under his written authorisation."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Five of six items admitted. The spiral dough mixer (ref 2), the machine in which the electrical fault began, is excluded by FP508A.01; its proviso keeps the oven, proofer and worktables (ref 3) damaged by the fire it set up. Condition 20 average on Item 2 only (factor 0.75), applied after the exclusion. Nil excess for the fire peril."
+    }
+  ],
+  "governing_clause": "base_insuring_clause",
+  "governing_chunk_id": "OPERATIVE-CLAUSE",
+  "supporting_clauses": [
+    "FP508A.01",
+    "Condition 20",
+    "Condition 12",
+    "FC816"
+  ],
+  "quotes": [
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "FP508A.01",
+      "chunk_id": "ENDORSEMENT-FP508A.01",
+      "text": "This Company is expressly declared to be free from liability for loss of or damage to, any electrical machine, apparatus, or any portion of the electrical installation arising from or occasioned by over-running, excessive pressure, short-circuiting, self heating, arcing or leakage of electricity from whatever cause (lightning included) arising."
+    },
+    {
+      "clause": "FP508A.01 proviso",
+      "chunk_id": "ENDORSEMENT-FP508A.01",
+      "text": "Provided that this exemption shall only apply to the particular electrical machine, apparatus, or portion of the electrical installation so affected, and not to other machines, apparatus or electrical installation destroyed or damaged by fire set up by such particular machine, apparatus or other electrical installation."
+    },
+    {
+      "clause": "Condition 20",
+      "chunk_id": "CONDITION-20",
+      "text": "If the property hereby insured shall, at the breaking out of any fire, be collectively of greater value than the sum insured thereon, then the Insured shall be considered as being his own Insurer for the difference, and shall bear a rateable proportion of the loss accordingly. Every item, if more than one, of the Policy shall be separately subject to this Condition."
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "shall within 15 days after the loss or damage, or such further time as the Company may in writing allow in that behalf, deliver to the Company:"
+    },
+    {
+      "clause": "FC816 Special Provision 3",
+      "chunk_id": "CLAUSE-FC816",
+      "text": "Each item of the Policy (if more than one) to which this Memorandum applies shall be separately subject to the foregoing provision."
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP508B",
+      "reason": "FP508B is not on this policy. FP508A.01 is."
+    },
+    {
+      "clause": "Endorsement excesses (FP503, FP504, FP507, FP513)",
+      "reason": "Specific to those endorsed perils, none of which is on this schedule. The schedule states nil excess for the fire peril."
+    },
+    {
+      "clause": "Condition 9(b)",
+      "reason": "Closing overnight is not unoccupancy; the bakery traded daily."
+    }
+  ],
+  "payable": 130700.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 2 spiral dough mixer 18,500.00 (FP508A.01, the machine in which the electrical fault originated). Ref 3 stays in under the FP508A.01 proviso.",
+    "Step 2 Condition 20 per item: Item 1 SI 280,000.00 vs value 275,000.00, factor 1.0. Item 2 SI 150,000.00 vs value 200,000.00, factor 0.75. Item 3 SI 60,000.00 vs value 52,000.00, factor 1.0.",
+    "Item 1: 46,000.00 + 6,200.00 = 52,200.00. Item 2: (62,000.00 + 14,000.00) x 0.75 = 57,000.00. Item 3: 21,500.00.",
+    "Step 3 excess: nil for the fire peril.",
+    "Payable 52,200.00 + 57,000.00 + 21,500.00 = 130,700.00. Reconciliation: 168,200.00 claimed less 18,500.00 excluded less 19,000.00 average (76,000.00 x 0.25) = 130,700.00.",
+    "Wrong order check: average before the exclusion gives (62,000.00 + 14,000.00 + 18,500.00) x 0.75 = 70,875.00 on Item 2 instead of 57,000.00."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 2  RM    18,500.00  EXCLUDED by FP508A.01  (Spiral dough mixer, origin of the electrical)",
+    "  excluded total       RM    18,500.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  280,000.00  value    RM 275,000.00  factor 1.0  no average",
+    "  Item 2  SI RM  150,000.00  value RM  200,000.00  factor 0.7500  UNDERINSURED",
+    "  Item 3  SI RM   60,000.00  value     RM 52,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [BASE] refs [1, 3, 4, 5, 6]",
+    "     subtotal          RM   149,700.00",
+    "     after average     RM   130,700.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM   130,700.00",
+    "",
+    "  CLAIMED             RM   168,200.00",
+    "  RECOMMENDED PAYABLE RM   130,700.00"
+  ],
+  "facts": [
+    {
+      "fact": "Fire began at the spiral dough mixer: insulation failure within its motor; the motor's own damage is from the fault, not external burning.",
+      "source": "Adjuster's report, Investigation, Cause and origin and Reports relied on"
+    },
+    {
+      "fact": "Oven, proofer and worktables damaged by the fire spreading from the mixer; no pre-existing defect in wiring or other machines.",
+      "source": "Adjuster's report, Investigation, Reports relied on; Findings, Maintenance and prior defects"
+    },
+    {
+      "fact": "FP508A.01 on the schedule; FP508B not.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "Values at risk: Item 1 RM 275,000.00, Item 2 RM 200,000.00, Item 3 RM 52,000.00, per the valuation report of 24 September 2024.",
+      "source": "Adjuster's report, Measurement, Value at risk"
+    },
+    {
+      "fact": "Closed overnight, staff left by 10:30 pm; no change of trade, occupation or interest.",
+      "source": "Adjuster's report, Findings, Occupancy at the date of loss and Risk as found against the schedule"
+    },
+    {
+      "fact": "Claimant is the Insured's daughter under his written authorisation of 20 September 2024.",
+      "source": "Incident report, emails of 15 and 25 September 2024"
+    },
+    {
+      "fact": "Notice 15 September 2024; written claim delivered 25 September 2024.",
+      "source": "Incident report, emails of 15 and 25 September 2024"
+    }
+  ],
+  "ambiguity": []
+}

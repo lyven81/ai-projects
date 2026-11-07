@@ -1,0 +1,166 @@
+{
+  "claim_no": "CLM-2025-00417",
+  "label": "Ampang landslip terrace house",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "landslip",
+    "sequence": [
+      "Prolonged rainfall from 29 December 2024",
+      "Shallow landslip of the cut slope behind Nos. 21 to 27",
+      "The slipped soil pushes over the rear retaining wall and moves the ground beneath the rear external wall of the house",
+      "The strip footing settles about 40 mm and rotates, cracking the wall and the kitchen floor slab"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 4 January 2025 falls inside 1 April 2024 to 31 March 2025."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: landslip of the cut slope after prolonged rain, with no intervening event. Landslip is not a base peril; FP510 extends cover to it."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 4 January 2025; written claim delivered 15 January 2025, day 11 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "FP510 (standard cover) is on the schedule."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "FP510 exclusions tested: (a) the retaining wall is admitted because the building was damaged by the same cause at the same time; (b) the floor slab is admitted because the foundation beneath the external wall was damaged by the same cause at the same time; (c) no coastal or river erosion, no demolition or structural works, and the engineer finds the foundations not defective. No warranties; Condition 9 not engaged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "Four of five items admitted. The front driveway (ref 5) falls out: its cracking predates the loss and was not caused by the landslip. FP510 (d) excess deducted after average."
+    }
+  ],
+  "governing_clause": "FP510",
+  "supporting_clauses": [
+    "FP510 exclusion (a)",
+    "FP510 exclusion (b)",
+    "FP510 exclusion (c)",
+    "FP510 (d)",
+    "FC806B"
+  ],
+  "quotes": [
+    {
+      "clause": "FP510",
+      "chunk_id": "ENDORSEMENT-FP510",
+      "text": "this Policy shall extend to cover loss or damage to the property insured caused by subsidence and/or heave of the site on which the buildings stand or land belonging thereto, or landslip excluding :-"
+    },
+    {
+      "clause": "FP510 exclusion (a)",
+      "chunk_id": "ENDORSEMENT-FP510",
+      "text": "(a) loss or damage to swimming pools, terraces, patios, drives, footpaths, walls, gates or fences unless the building, its outbuildings or garages are damaged by the same cause and at the same time."
+    },
+    {
+      "clause": "FP510 exclusion (b)",
+      "chunk_id": "ENDORSEMENT-FP510",
+      "text": "(b) loss or damage to or resulting from movement of solid floor slabs unless the foundation beneath the external walls of the Buildings are damaged by the same cause and at the same time."
+    },
+    {
+      "clause": "FP510 exclusion (c)",
+      "chunk_id": "ENDORSEMENT-FP510",
+      "text": "defective design or inadequate construction of foundations."
+    },
+    {
+      "clause": "FP510 (d)",
+      "chunk_id": "ENDORSEMENT-FP510",
+      "text": "d) in respect of each and every loss, 5% of the total sum insured or RM25,000.00 whichever is the lower, as ascertained after the application of any condition of average."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP510D",
+      "reason": "Not held; the standard cover FP510 applies."
+    },
+    {
+      "clause": "FP504 Special Condition 1(c)",
+      "reason": "FP504 is not held, and the loss is landslip, not flood."
+    },
+    {
+      "clause": "FP510 exclusion (a) against the driveway",
+      "reason": "The driveway falls out because it was not damaged by this landslip at all, not because of exclusion (a); the building was damaged by the same cause, so (a) would not bar a driveway damaged at the same time."
+    }
+  ],
+  "payable": 82300.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures.",
+    "Step 1 exclusions: ref 5 front driveway 4,800.00, damage not caused by the landslip.",
+    "Step 2 Condition 20: Item 1 SI 600,000.00 vs value 580,000.00, factor 1.0. Item 2 not claimed.",
+    "FP510 group: 64,000.00 + 14,500.00 + 6,800.00 + 22,000.00 = 107,300.00.",
+    "Step 3 excess FP510 (d): lower of 5% of total sum insured 680,000.00 = 34,000.00 or 25,000.00. Lower = 25,000.00, after average.",
+    "Payable 107,300.00 - 25,000.00 = 82,300.00. Within the proviso limit: Item 1 SI 600,000.00 less 25,000.00 = 575,000.00.",
+    "Payment subject to FC806B: the chargee bank's interest is noted on the policy."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 5  RM     4,800.00  EXCLUDED by Not caused by the landslip  (Front driveway cracks)",
+    "  excluded total       RM     4,800.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  600,000.00  value    RM 580,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   80,000.00  value     RM 70,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP510] refs [1, 2, 3, 4]",
+    "     subtotal          RM   107,300.00",
+    "     excess            RM    25,000.00   Lower of 5.0% of sum insured RM 34,000.00 or RM 25,000.00. Lower = RM 25,000.00.",
+    "     net               RM    82,300.00",
+    "",
+    "  CLAIMED             RM   112,100.00",
+    "  RECOMMENDED PAYABLE RM    82,300.00"
+  ],
+  "facts": [
+    {
+      "fact": "Rain-induced landslip of the cut slope behind the row; rear wall footing settled about 40 mm.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "The building was damaged by the same cause at the same time as the retaining wall; the foundation beneath the rear external wall was damaged with the floor slab.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Findings, Damage found per item"
+    },
+    {
+      "fact": "Foundations not defective; no erosion; no structural works under way.",
+      "source": "Adjuster's report, Investigation, Reports relied on (engineer's report)"
+    },
+    {
+      "fact": "Front driveway cracks predate the loss.",
+      "source": "Adjuster's report, Findings, Maintenance and prior defects"
+    },
+    {
+      "fact": "Total sums insured RM 680,000.00; FP510 and FC806B on the schedule.",
+      "source": "Schedule"
+    }
+  ],
+  "ambiguity": [
+    {
+      "clause": "Condition 4",
+      "question": "Whether the settlement and rotation of the rear wall footing, with the kitchen cordoned off, is a fall or displacement under Condition 4 so that the insurance ceased.",
+      "expected_behaviour": "Condition 4 does not apply where the cordoned kitchen is a partitioned space isolated from the rest of the house (founder, 7 Nov 2026); the family lives in the front of the house, and the adjuster does not record the layout, so flag it for the claims examiner. The second proviso points the same way: FP510 deems landslip loss to be loss by fire, so the displacement is caused by a covered peril. Approve under FP510."
+    }
+  ]
+}

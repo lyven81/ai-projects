@@ -1,0 +1,4842 @@
+{
+ "run_id": "20261107-095122-haiku",
+ "model": "claude-haiku-5-5",
+ "claim_nos": [
+  "CLM-2021-05512",
+  "CLM-2023-11207",
+  "CLM-2025-09207",
+  "CLM-2024-05128",
+  "CLM-2023-09814",
+  "CLM-2022-08841",
+  "CLM-2023-06205",
+  "CLM-2023-07326",
+  "CLM-2024-01385",
+  "CLM-2024-03187",
+  "CLM-2025-07741",
+  "CLM-2023-02857",
+  "CLM-2023-12440",
+  "CLM-2024-15093",
+  "CLM-2024-08853",
+  "CLM-2024-13208",
+  "CLM-2025-05106",
+  "CLM-2024-11564",
+  "CLM-2025-03362",
+  "CLM-2022-06033",
+  "CLM-2024-06472",
+  "CLM-2025-00417"
+ ],
+ "sample": false,
+ "results": [
+  {
+   "claim_no": "CLM-2021-05512",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 5,
+   "tool_calls": 7,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 12,
+    "output_tokens": 6245,
+    "cache_creation_input_tokens": 32043,
+    "cache_read_input_tokens": 94200
+   },
+   "cost_usd": 0.00807,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": "quote_not_retrieved"
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 28.6
+  },
+  {
+   "claim_no": "CLM-2023-11207",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 8,
+   "tool_calls": 19,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 18,
+    "output_tokens": 17146,
+    "cache_creation_input_tokens": 30972,
+    "cache_read_input_tokens": 166806
+   },
+   "cost_usd": 0.01411,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": "quote_not_retrieved"
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 77.6
+  },
+  {
+   "claim_no": "CLM-2025-09207",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 10,
+   "tool_calls": 17,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 22,
+    "output_tokens": 13633,
+    "cache_creation_input_tokens": 20868,
+    "cache_read_input_tokens": 151306
+   },
+   "cost_usd": 0.01094,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": "quote_not_retrieved"
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 52.6
+  },
+  {
+   "claim_no": "CLM-2024-05128",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 6,
+   "tool_calls": 12,
+   "tool_errors": 2,
+   "usage": {
+    "input_tokens": 14,
+    "output_tokens": 5735,
+    "cache_creation_input_tokens": 9533,
+    "cache_read_input_tokens": 62834
+   },
+   "cost_usd": 0.00469,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": "clause_not_retrieved"
+    },
+    {
+     "tool": "check_gate",
+     "error": "gate_out_of_order"
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 26.7
+  },
+  {
+   "claim_no": "CLM-2023-09814",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 7,
+   "tool_calls": 18,
+   "tool_errors": 3,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 9438,
+    "cache_creation_input_tokens": 18944,
+    "cache_read_input_tokens": 111391
+   },
+   "cost_usd": 0.0082,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": "clause_not_retrieved"
+    },
+    {
+     "tool": "check_gate",
+     "error": "gate_out_of_order"
+    },
+    {
+     "tool": "check_gate",
+     "error": "gate_out_of_order"
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 46.8
+  },
+  {
+   "claim_no": "CLM-2022-08841",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 12,
+   "tool_calls": 18,
+   "tool_errors": 3,
+   "usage": {
+    "input_tokens": 26,
+    "output_tokens": 13227,
+    "cache_creation_input_tokens": 18332,
+    "cache_read_input_tokens": 175502
+   },
+   "cost_usd": 0.01066,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": "clause_not_retrieved"
+    },
+    {
+     "tool": "check_gate",
+     "error": "clause_not_retrieved"
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": "quote_not_retrieved"
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 54.4
+  },
+  {
+   "claim_no": "CLM-2023-06205",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 6,
+   "tool_calls": 12,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 14,
+    "output_tokens": 7029,
+    "cache_creation_input_tokens": 11325,
+    "cache_read_input_tokens": 68231
+   },
+   "cost_usd": 0.00561,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 34.3
+  },
+  {
+   "claim_no": "CLM-2023-07326",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 9,
+   "tool_calls": 14,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 20,
+    "output_tokens": 8558,
+    "cache_creation_input_tokens": 12095,
+    "cache_read_input_tokens": 109554
+   },
+   "cost_usd": 0.00689,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 36.8
+  },
+  {
+   "claim_no": "CLM-2024-01385",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 7,
+   "tool_calls": 14,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 7014,
+    "cache_creation_input_tokens": 11544,
+    "cache_read_input_tokens": 80585
+   },
+   "cost_usd": 0.00576,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 30.5
+  },
+  {
+   "claim_no": "CLM-2024-03187",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 9,
+   "tool_calls": 16,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 20,
+    "output_tokens": 10926,
+    "cache_creation_input_tokens": 15832,
+    "cache_read_input_tokens": 133285
+   },
+   "cost_usd": 0.00878,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": "clause_not_retrieved"
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 46.8
+  },
+  {
+   "claim_no": "CLM-2025-07741",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 6,
+   "tool_calls": 10,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 14,
+    "output_tokens": 6516,
+    "cache_creation_input_tokens": 9916,
+    "cache_read_input_tokens": 61204
+   },
+   "cost_usd": 0.00511,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 28.8
+  },
+  {
+   "claim_no": "CLM-2023-02857",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 7,
+   "tool_calls": 16,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 7502,
+    "cache_creation_input_tokens": 16074,
+    "cache_read_input_tokens": 102208
+   },
+   "cost_usd": 0.00678,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 34.4
+  },
+  {
+   "claim_no": "CLM-2023-12440",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 6,
+   "tool_calls": 13,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 14,
+    "output_tokens": 7449,
+    "cache_creation_input_tokens": 14534,
+    "cache_read_input_tokens": 79842
+   },
+   "cost_usd": 0.00634,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 30.7
+  },
+  {
+   "claim_no": "CLM-2024-15093",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 8,
+   "tool_calls": 14,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 18,
+    "output_tokens": 7990,
+    "cache_creation_input_tokens": 12905,
+    "cache_read_input_tokens": 102762
+   },
+   "cost_usd": 0.00664,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 31.5
+  },
+  {
+   "claim_no": "CLM-2024-08853",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 7,
+   "tool_calls": 15,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 10097,
+    "cache_creation_input_tokens": 14751,
+    "cache_read_input_tokens": 93172
+   },
+   "cost_usd": 0.00783,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 39.0
+  },
+  {
+   "claim_no": "CLM-2024-13208",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 7,
+   "tool_calls": 16,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 11170,
+    "cache_creation_input_tokens": 16076,
+    "cache_read_input_tokens": 93115
+   },
+   "cost_usd": 0.00853,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 48.4
+  },
+  {
+   "claim_no": "CLM-2025-05106",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 9,
+   "tool_calls": 14,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 20,
+    "output_tokens": 9824,
+    "cache_creation_input_tokens": 13368,
+    "cache_read_input_tokens": 118623
+   },
+   "cost_usd": 0.00777,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 42.3
+  },
+  {
+   "claim_no": "CLM-2024-11564",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 8,
+   "tool_calls": 15,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 18,
+    "output_tokens": 10627,
+    "cache_creation_input_tokens": 22506,
+    "cache_read_input_tokens": 134964
+   },
+   "cost_usd": 0.00948,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 48.8
+  },
+  {
+   "claim_no": "CLM-2025-03362",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 4,
+   "tool_calls": 11,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 10,
+    "output_tokens": 6193,
+    "cache_creation_input_tokens": 12155,
+    "cache_read_input_tokens": 42018
+   },
+   "cost_usd": 0.00504,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 28.4
+  },
+  {
+   "claim_no": "CLM-2022-06033",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 10,
+   "tool_calls": 17,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 22,
+    "output_tokens": 10402,
+    "cache_creation_input_tokens": 20138,
+    "cache_read_input_tokens": 158445
+   },
+   "cost_usd": 0.0093,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 49.6
+  },
+  {
+   "claim_no": "CLM-2024-06472",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 8,
+   "tool_calls": 14,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 18,
+    "output_tokens": 8008,
+    "cache_creation_input_tokens": 12792,
+    "cache_read_input_tokens": 102537
+   },
+   "cost_usd": 0.00663,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": "invalid_items"
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 32.2
+  },
+  {
+   "claim_no": "CLM-2025-00417",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 7,
+   "tool_calls": 15,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 10077,
+    "cache_creation_input_tokens": 13947,
+    "cache_read_input_tokens": 90913
+   },
+   "cost_usd": 0.00769,
+   "calls": [
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "search_policy",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "check_gate",
+     "error": null
+    },
+    {
+     "tool": "calculate_payable",
+     "error": null
+    },
+    {
+     "tool": "submit_advice",
+     "error": null
+    }
+   ],
+   "seconds": 40.6
+  }
+ ],
+ "scores": [
+  {
+   "claim_no": "CLM-2021-05512",
+   "label": "George Town burglary",
+   "peril": "Burglary",
+   "tool_calls": 7,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "Operative clause (period of insurance during the Period of Insurance stated in the Schedule)",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2023-11207",
+   "label": "Taiping burst pipe",
+   "peril": "Burst pipe",
+   "tool_calls": 19,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "fail",
+    "not_reached"
+   ],
+   "governing_clause": false,
+   "governing_got": "FP507B, Special Condition 3",
+   "payable": true,
+   "figure_got": 29900.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": false,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 4,
+     "field": "storeys_including_mezzanine",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "premises_untenanted",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sprinkler_leakage",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "defect_notified_not_remedied",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": false
+  },
+  {
+   "claim_no": "CLM-2025-09207",
+   "label": "Kuantan shophouse burst pipe",
+   "peril": "Burst pipe",
+   "tool_calls": 17,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass_flagged",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP507A, exclusion (a) and (b), Special Condition 2; Condition 20 average as applied by calculate_payable",
+   "payable": true,
+   "figure_got": 35000.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 4,
+     "field": "storeys_including_mezzanine",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "premises_untenanted",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sprinkler_leakage",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "defect_notified_not_remedied",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-05128",
+   "label": "Kulim cold room motor burnout",
+   "peril": "Electrical fault",
+   "tool_calls": 12,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": false,
+   "governing_got": "Operative clause (fire or lightning only), read with FP508B, Electrical Installation Clause (B)",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    }
+   ],
+   "pass": false
+  },
+  {
+   "claim_no": "CLM-2023-09814",
+   "label": "Alor Setar falling tree power surge",
+   "peril": "Falling tree",
+   "tool_calls": 18,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": false,
+   "governing_got": "Operative clause",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": false,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": false
+  },
+  {
+   "claim_no": "CLM-2022-08841",
+   "label": "Bukit Mertajam fire",
+   "peril": "Fire",
+   "tool_calls": 18,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass_flagged",
+    "pass",
+    "pass",
+    "pass",
+    "fail",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "Condition 9(d)",
+   "payable": true,
+   "figure_got": 295700.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "auto_renewal_clause_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "premium_paid_to_date_of_loss",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 1,
+     "field": "company_receipt_produced",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2023-06205",
+   "label": "Melaka terrace house fire",
+   "peril": "Fire",
+   "tool_calls": 12,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "fail",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "Condition 9(b)",
+   "payable": true,
+   "figure_got": 90000.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2023-07326",
+   "label": "Batu Pahat restaurant kitchen fire",
+   "peril": "Fire",
+   "tool_calls": 14,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "Operative clause (fire is the insured peril). Items excluded under Condition 8(e). Condition 9 not engaged. Condition 20 average not applied (factor 1.0 on all items).",
+   "payable": true,
+   "figure_got": 76900.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-01385",
+   "label": "Klang warehouse fire",
+   "peril": "Fire",
+   "tool_calls": 14,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "fail",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "Condition 9(a)",
+   "payable": true,
+   "figure_got": 233000.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-03187",
+   "label": "Sungai Petani bakery fire",
+   "peril": "Fire",
+   "tool_calls": 16,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "Operative clause (fire during the period, gate 2); FP508A.01 exclusion for the electrical machine where the fault began (gate 6); Condition 20 average on Item 2.",
+   "payable": true,
+   "figure_got": 130700.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2025-07741",
+   "label": "Muar phone shop fire",
+   "peril": "Fire",
+   "tool_calls": 10,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "Condition 15 (fraud or false declaration in support of the claim forfeits all benefit under the policy), read with Condition 12.",
+   "payable": true,
+   "figure_got": 78500.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2023-02857",
+   "label": "Segamat workshop flood",
+   "peril": "Flood",
+   "tool_calls": 16,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": false,
+   "governing_got": "Operative clause (fire or lightning only); FP504 not held, so flood is not brought in (Schedule, Endorsements and clauses).",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    }
+   ],
+   "pass": false
+  },
+  {
+   "claim_no": "CLM-2023-12440",
+   "label": "Kampar flood",
+   "peril": "Flood",
+   "tool_calls": 13,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "Condition 12",
+   "payable": true,
+   "figure_got": 88550.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-15093",
+   "label": "Kota Bharu factory flood",
+   "peril": "Flood",
+   "tool_calls": 14,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP504 Flood Endorsement, Excess Clause and Special Conditions 1(a) and 3",
+   "payable": true,
+   "figure_got": 72200.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": false,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-08853",
+   "label": "Miri lorry impact shopfront",
+   "peril": "Impact",
+   "tool_calls": 15,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP506A, impact damage by road vehicle (Operative clause for the property described in the Schedule)",
+   "payable": true,
+   "figure_got": 31150.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": false,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "vehicle_belongs_to_insured",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-13208",
+   "label": "Kluang workshop lightning surge",
+   "peril": "Lightning",
+   "tool_calls": 16,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "fail"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP508A.01, Electrical Installations Clause (A), exclusion for electrical machine, apparatus or installation damaged by lightning-induced surge with no fire",
+   "payable": true,
+   "figure_got": 100950.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2025-05106",
+   "label": "Temerloh house lightning surge",
+   "peril": "Lightning",
+   "tool_calls": 14,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "Operative clause (lightning, base peril), read with FP508B, Electrical Installation Clause (B), which admits electrical appliances and installation damaged by lightning.",
+   "payable": true,
+   "figure_got": 13400.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-11564",
+   "label": "Seremban restaurant riot damage",
+   "peril": "Riot and malicious damage",
+   "tool_calls": 15,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP512B, riot limb 1 (insuring clause), with Special Condition 5(a) and substituted Condition 8(e) for the excluded items",
+   "payable": true,
+   "figure_got": 22750.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 4,
+     "field": "residential",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "popular_rising_or_terrorism",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2025-03362",
+   "label": "Sitiawan house break-in damage",
+   "peril": "Riot and malicious damage",
+   "tool_calls": 11,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "fail",
+    "not_reached",
+    "not_reached",
+    "not_reached",
+    "not_reached"
+   ],
+   "governing_clause": false,
+   "governing_got": "Operative clause (fire or lightning only), with FP512A malicious damage extension exclusion for loss arising in the course of burglary, housebreaking or theft.",
+   "payable": true,
+   "figure_got": null,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": false
+  },
+  {
+   "claim_no": "CLM-2022-06033",
+   "label": "Ipoh windstorm",
+   "peril": "Storm",
+   "tool_calls": 17,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP503, Excess Clause and Special Condition 1; FP503 Special Condition 4(a); FP513",
+   "payable": true,
+   "figure_got": 49950.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "water_or_rain_damage_claimed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "wind_damaged_roof_or_walls_first",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2024-06472",
+   "label": "Kuala Terengganu terrace house storm",
+   "peril": "Storm",
+   "tool_calls": 14,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "fail",
+    "not_reached"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP503, Special Condition 1",
+   "payable": true,
+   "figure_got": 14200.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "water_or_rain_damage_claimed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "wind_damaged_roof_or_walls_first",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "claim_no": "CLM-2025-00417",
+   "label": "Ampang landslip terrace house",
+   "peril": "Subsidence and landslip",
+   "tool_calls": 15,
+   "proximate_cause": true,
+   "gate_statuses": true,
+   "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ],
+   "governing_clause": true,
+   "governing_got": "FP510 (insuring wording, exclusions (a) and (d)); Condition 9(b)",
+   "payable": true,
+   "figure_got": 82300.0,
+   "advice_recorded": true,
+   "no_forbidden_ground": true,
+   "flags": true,
+   "facts": [
+    {
+     "gate": 1,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 1,
+     "field": "period_start",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 1,
+     "field": "period_end",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 2,
+     "field": "proximate_cause",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 2,
+     "field": "intervening_event",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "date_of_loss",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "written_claim_date",
+     "ok": true,
+     "doc": "Incident report"
+    },
+    {
+     "gate": 3,
+     "field": "extension_until",
+     "ok": true,
+     "doc": "Incident report and adjuster's report"
+    },
+    {
+     "gate": 3,
+     "field": "false_declaration_or_fraud",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 4,
+     "field": "endorsements_held",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "warranty_breached",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "occupation_changed_increasing_risk",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "unoccupied_days",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "interest_passed_not_by_will_or_law",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "sanction_endorsed",
+     "ok": true,
+     "doc": "Schedule"
+    },
+    {
+     "gate": 5,
+     "field": "coastal_or_river_erosion",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "demolition_or_structural_works",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "defective_foundations",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "fall_or_displacement",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "displacement_caused_by_insured_peril",
+     "ok": false,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 5,
+     "field": "displaced_part_isolated",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.category",
+     "ok": true,
+     "doc": "Adjuster's report"
+    },
+    {
+     "gate": 6,
+     "field": "item.assessed",
+     "ok": true,
+     "doc": "Adjuster's report"
+    }
+   ],
+   "pass": true
+  }
+ ],
+ "summary": {
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 376,
+    "output_tokens": 204806,
+    "cache_creation_input_tokens": 360650,
+    "cache_read_input_tokens": 2333497,
+    "cost_usd": 0.17085
+   }
+  },
+  "cost_usd": 0.17085,
+  "score": {
+   "cases_passed": "17/22",
+   "proximate_cause": "22/22",
+   "gate_statuses": "22/22",
+   "governing_clause": "17/22",
+   "payable": "22/22",
+   "advice_recorded": "22/22",
+   "no_forbidden_ground": "22/22",
+   "flags": "22/22",
+   "by_peril": {
+    "Burglary": "1/1",
+    "Burst pipe": "1/2",
+    "Electrical fault": "0/1",
+    "Falling tree": "0/1",
+    "Fire": "6/6",
+    "Flood": "2/3",
+    "Impact": "1/1",
+    "Lightning": "2/2",
+    "Riot and malicious damage": "1/2",
+    "Storm": "2/2",
+    "Subsidence and landslip": "1/1"
+   },
+   "facts_by_field": {
+    "auto_renewal_clause_held": "1/1",
+    "coastal_or_river_erosion": "1/1",
+    "company_receipt_produced": "1/1",
+    "date_of_loss": "38/40",
+    "defect_notified_not_remedied": "2/2",
+    "defective_foundations": "1/1",
+    "demolition_or_structural_works": "1/1",
+    "displaced_part_isolated": "1/1",
+    "displacement_caused_by_insured_peril": "0/1",
+    "endorsements_held": "16/17",
+    "extension_until": "18/18",
+    "fall_or_displacement": "0/1",
+    "false_declaration_or_fraud": "18/18",
+    "interest_passed_not_by_will_or_law": "15/15",
+    "intervening_event": "20/21",
+    "item.assessed": "58/58",
+    "item.category": "58/58",
+    "occupation_changed_increasing_risk": "15/15",
+    "period_end": "22/22",
+    "period_start": "22/22",
+    "popular_rising_or_terrorism": "1/1",
+    "premises_untenanted": "1/2",
+    "premium_paid_to_date_of_loss": "1/1",
+    "proximate_cause": "21/21",
+    "residential": "1/1",
+    "sanction_endorsed": "13/15",
+    "sprinkler_leakage": "2/2",
+    "storeys_including_mezzanine": "2/2",
+    "unoccupied_days": "15/15",
+    "vehicle_belongs_to_insured": "1/1",
+    "warranty_breached": "15/15",
+    "water_or_rain_damage_claimed": "2/2",
+    "wind_damaged_roof_or_walls_first": "2/2",
+    "written_claim_date": "18/18"
+   },
+   "facts_by_document": {
+    "Adjuster's report": "277/283",
+    "Incident report": "19/19",
+    "Incident report and adjuster's report": "18/18",
+    "Schedule": "89/92"
+   },
+   "tool_calls_per_case": {
+    "CLM-2021-05512": 7,
+    "CLM-2023-11207": 19,
+    "CLM-2025-09207": 17,
+    "CLM-2024-05128": 12,
+    "CLM-2023-09814": 18,
+    "CLM-2022-08841": 18,
+    "CLM-2023-06205": 12,
+    "CLM-2023-07326": 14,
+    "CLM-2024-01385": 14,
+    "CLM-2024-03187": 16,
+    "CLM-2025-07741": 10,
+    "CLM-2023-02857": 16,
+    "CLM-2023-12440": 13,
+    "CLM-2024-15093": 14,
+    "CLM-2024-08853": 15,
+    "CLM-2024-13208": 16,
+    "CLM-2025-05106": 14,
+    "CLM-2024-11564": 15,
+    "CLM-2025-03362": 11,
+    "CLM-2022-06033": 17,
+    "CLM-2024-06472": 14,
+    "CLM-2025-00417": 15
+   }
+  }
+ }
+}

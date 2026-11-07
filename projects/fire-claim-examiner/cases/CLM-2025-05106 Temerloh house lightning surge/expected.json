@@ -1,0 +1,167 @@
+{
+  "claim_no": "CLM-2025-05106",
+  "label": "Temerloh house lightning surge",
+  "determination": "APPROVE",
+  "proximate_cause": {
+    "cause": "lightning",
+    "sequence": [
+      "Thunderstorm over Temerloh from 4:35 pm to 6:20 pm on 22 April 2025",
+      "Lightning strikes a coconut palm at the rear of No. 14, about 20 metres from the house, at about 5:08 pm",
+      "The strike induces a surge on the overhead service cable to the house",
+      "The surge enters through the distribution board and burns the RCCB, two MCBs, the porch lighting circuit, two air-conditioner control boards and the appliances",
+      "No fire ensues"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on 22 April 2025 falls inside 1 February 2025 to 31 January 2026."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "pass",
+      "reason": "Proximate cause: lightning. A strike about 20 metres from the house during a thunderstorm induced a surge through the service cable, with no intervening event and no fire. Lightning is a base insured peril under the operative clause. FP508B does not take the damage out: it removes liability for electrical machines, apparatus and installation unless caused by fire or lightning, and this damage was caused by lightning. No Condition 6 exclusion engaged."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "pass",
+      "reason": "Notice on 23 April 2025; written claim delivered 30 April 2025, day 8 of 15."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "pass",
+      "reason": "No endorsement required for lightning, a base peril. FP508B is on the schedule and is tested at item level; FP508A.01 is not held."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "pass",
+      "reason": "No warranties. Condition 9 not engaged: occupied daily as the Insured's home, occupation unchanged."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "pass",
+      "reason": "All seven items admitted. Each is an electrical appliance or part of the electrical installation damaged by the lightning surge, and FP508B keeps cover where the damage is caused by lightning. Assessed figures used: the refrigerator at repair cost and the laptop at actual value. Values at risk below sums insured, no average. Nil excess for the fire and lightning peril."
+    }
+  ],
+  "governing_clause": "base_insuring_clause",
+  "governing_chunk_id": "OPERATIVE-CLAUSE",
+  "supporting_clauses": [
+    "FP508B",
+    "Condition 12",
+    "Condition 20"
+  ],
+  "quotes": [
+    {
+      "clause": "Operative clause (fire or lightning)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "if the Property Insured described in the said Schedule or any part of such property be destroyed or damaged by FIRE or LIGHTNING"
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Operative clause (measure of indemnity)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "the Company will pay or make good to the Insured the actual value of the Property Insured at the time of the happening of its destruction or the actual amount of such damage."
+    },
+    {
+      "clause": "FP508B",
+      "chunk_id": "ENDORSEMENT-FP508B",
+      "text": "but it is expressly understood that no liability exists under this Policy for loss or damage to any electrical machine, apparatus, fixture or fitting, or to any portion of the electrical installation, unless caused by fire or lightning."
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "shall within 15 days after the loss or damage, or such further time as the Company may in writing allow in that behalf, deliver to the Company:"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "FP508B (as excluding the damage)",
+      "reason": "FP508B removes liability for electrical damage unless caused by fire or lightning. Reading it as excluding lightning damage drops its own exception."
+    },
+    {
+      "clause": "FP508A.01",
+      "reason": "Not on this schedule; FP508B is. Its exemption for electrical machines 'from whatever cause (lightning included)' has no application here."
+    },
+    {
+      "clause": "Condition 6(b)",
+      "reason": "Lightning is named in the operative clause as an insured peril. No wind damage is claimed; Condition 6(b) is not a route to exclude damage by lightning."
+    },
+    {
+      "clause": "FP503",
+      "reason": "Not held, and no storm or wind damage is claimed."
+    },
+    {
+      "clause": "Condition 20",
+      "reason": "Cite only to confirm no average: both values at risk are below the sums insured. It must not reduce any item."
+    }
+  ],
+  "payable": 13400.0,
+  "counterfactual": null,
+  "working": [
+    "Amounts are the adjuster's assessed figures: claimed 14,950.00, assessed 13,400.00 (refrigerator at repair cost 1,850.00 against 3,100.00 claimed; laptop at actual value 2,900.00 against 3,200.00 claimed).",
+    "Step 1 exclusions: none. FP508B does not exclude electrical damage caused by lightning.",
+    "Step 2 Condition 20: Item 1 SI 320,000.00 vs value 300,000.00, factor 1.0. Item 2 SI 80,000.00 vs value 72,000.00, factor 1.0.",
+    "Item 1: 1,600.00 + 1,450.00 = 3,050.00. Item 2: 4,200.00 + 1,850.00 + 780.00 + 2,900.00 + 620.00 = 10,350.00.",
+    "Step 3 excess: nil for the fire and lightning peril.",
+    "Payable 3,050.00 + 10,350.00 = 13,400.00."
+  ],
+  "calculator_working": [
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  320,000.00  value    RM 300,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   80,000.00  value     RM 72,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [BASE] refs [1, 2, 3, 4, 5, 6, 7]",
+    "     subtotal          RM    13,400.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM    13,400.00",
+    "",
+    "  CLAIMED             RM    13,400.00",
+    "  RECOMMENDED PAYABLE RM    13,400.00"
+  ],
+  "facts": [
+    {
+      "fact": "Lightning struck a coconut palm about 20 metres from the house at about 5:08 pm; scorched crown and burnt strip down the trunk.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Thunderstorm in Temerloh from 4:35 pm to 6:20 pm; cloud-to-ground strike at 5:08 pm within 150 metres of the risk.",
+      "source": "Adjuster's report, Investigation, Reports relied on (Malaysian Meteorological Department records)"
+    },
+    {
+      "fact": "Electrician: damage consistent with a lightning-induced surge through the service cable; no fire. No network fault recorded by the supplier.",
+      "source": "Adjuster's report, Investigation, Reports relied on"
+    },
+    {
+      "fact": "No fire; nobody hurt.",
+      "source": "Incident report, WhatsApp of 22 April 2025, 7:09 pm"
+    },
+    {
+      "fact": "FP508B is the only endorsement on the schedule; excess nil for the fire and lightning peril.",
+      "source": "Schedule, Endorsements and clauses"
+    },
+    {
+      "fact": "Notice 23 April 2025; written claim delivered 30 April 2025.",
+      "source": "Incident report, WhatsApp of 23 and 30 April 2025"
+    },
+    {
+      "fact": "Values at risk below sums insured on both items.",
+      "source": "Adjuster's report, Measurement, value table"
+    }
+  ],
+  "ambiguity": []
+}

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fire Policy Underwriter Advisor</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Information and Decision Support",
+    "problemType": "RAG pipelines and knowledge assistant",
+    "problem": "A fire claim turns on which clause governs, and the base wording and the endorsement that displaces it both bear on the same question. The examiner must test the facts against the policy gate by gate and price the loss in the right order.",
+    "built": "An AI underwriter reads the claimant's report, the adjuster's report and the schedule, retrieves the wording (a plain-words search ranked by authority), and supplies each gate's facts with their source. Code sets every gate status and the figure, a guard checks the advice before it is recorded, and the claims examiner decides.",
+    "evidence": "All 22 claims across 11 perils passed on every gate status, the governing clause and the figure to the ringgit. 61 no-key tests cover refused calls and search failure. Before real users, Version 1 still needs a security review, a named owner for monitoring and incidents, the insurer's own wording and schedules, and the claims manager's approval."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:fire-claim-examiner"></div>
+<div class="top"><h1>Fire Policy Underwriter Advisor</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="projects/fire-claim-examiner/demo.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/fire-claim-examiner" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<p class="muted">By Lee Yih Ven · Published 7 November 2026</p>
+<img class="cover" src="images/fire-claim-examiner/cover.jpeg" alt="Cover image of the Fire Policy Underwriter Advisor">
+<p>Designed for a fire insurance claims desk, where a claims examiner decides each claim from the claimant's account, the loss adjuster's report and the policy schedule. A fire policy is a base wording plus the endorsements on each schedule that vary it, so the answer turns on which clause governs. The facts are tested against the wording gate by gate, and the loss is priced in a fixed order.</p>
+<p>I built an AI underwriter that reads the claim file and advises the claims examiner gate by gate, while code sets every gate status and the figure. The system reviews 22 claims across 11 perils. It retrieves the policy wording by clause code or in plain words, and ranks a plain-words search by authority.</p>
+<p>The decision stays with the claims examiner, who also receives every point the policy leaves open, such as a building that does not fit the endorsement it holds. In testing, the system passed all 22 claims, covering approvals, declines at each gate and flagged claims. Read every claim file with its advice on the <a href="projects/fire-claim-examiner/demo.html" target="_blank" rel="noopener">claim file page</a>.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Information and Decision Support</td></tr><tr><th>Problem type</th><td>RAG pipelines and knowledge assistant</td></tr><tr><th>Problem</th><td>A fire claim turns on which clause governs, and the base wording and the endorsement that displaces it both bear on the same question. The examiner must test the facts against the policy gate by gate and price the loss in the right order.</td></tr><tr><th>Built</th><td>An AI underwriter reads the claimant's report, the adjuster's report and the schedule, retrieves the wording (a plain-words search ranked by authority), and supplies each gate's facts with their source. Code sets every gate status and the figure, a guard checks the advice before it is recorded, and the claims examiner decides.</td></tr><tr><th>Evidence</th><td>All 22 claims across 11 perils passed on every gate status, the governing clause and the figure to the ringgit. 61 no-key tests cover refused calls and search failure. Before real users, Version 1 still needs a security review, a named owner for monitoring and incidents, the insurer's own wording and schedules, and the claims manager's approval.</td></tr></table>
+<h2>One Claim, From the Claim File to the Examiner</h2>
+<p>One claim from the claim file to the examiner's decision: the Kuantan burst pipe. The six gates, in order: 1. Period of insurance, 2. Peril insured, 3. Conditions precedent, 4. Endorsement held, 5. Endorsement satisfied, 6. Item admitted. Left out here: the search for each clause and each gate's facts (in the Technical tab and the claim file's Under the hood tab).</p>
+<div class="wf"><script type="application/json">{"id":"fu","hz":{"nodes":[{"id":"c1","r":1,"c":1,"b":["c","Examiner opens the claim","Claimant's account, adjuster's report and schedule."]},{"id":"a1","r":1,"c":2,"b":["a","Reads and retrieves wording","Names the cause; gives sourced facts and clauses."]},{"id":"s1","r":1,"c":3,"b":["s","Checks six gates in order","Stops at the first failure unless re-checked; flags a building the endorsement does not fit."]},{"id":"s3","r":1,"c":4,"b":["s","Calculates RM 35,000.00","Exclusions, then average per item, then excess."]},{"id":"s2","r":1,"c":5,"b":["s","Validates the advice","Quotes, statuses, governing clause and amount."]},{"id":"a2","r":2,"c":4,"b":["a","AI revises the advice","Checked again; after two retries, goes to the examiner without advice."]},{"id":"p1","r":2,"c":5,"b":["p","Claims examiner decides","Reviews the evidence, figure and flag."]}],"edges":[["c1","a1"],["a1","s1"],["s1","s3"],["s3","s2"],["s2","p1","Checks passed"],["s2","a2","Correction needed"]]},"rows":[{"c":["c","Examiner opens the claim","Claimant's account, adjuster's report and schedule."]},{"down":""},{"c":["a","Reads and retrieves wording","Names the cause; gives sourced facts and clauses."]},{"down":""},{"c":["s","Checks six gates in order","Stops at the first failure unless re-checked; flags a building the endorsement does not fit."]},{"down":""},{"c":["s","Calculates RM 35,000.00","Exclusions, then average per item, then excess."]},{"down":""},{"c":["s","Validates the advice","Quotes, statuses, governing clause and amount."],"r":{"t":"Correction needed","b":[["a","AI revises the advice","Checked again; after two retries, goes to the examiner without advice."]]}},{"down":"Checks passed"},{"c":["p","Claims examiner decides","Reviews the evidence, figure and flag."]}]}</script></div>
+<ol><li>The claims examiner opens the claim file: the claimant's account, the adjuster's report and the policy schedule. The AI underwriter reads all three and names the cause of the loss from the adjuster's findings. It looks up the policy wording and gives each fact with the document it came from.</li><li>Code checks the six gates in order, on wording looked up for this claim, and the first gate that fails stops the chain unless that gate is re-checked. A building that does not fit the endorsement it holds passes with a flag for the examiner.</li><li>Code then prices the claim: exclusions first, then average on each item, then the excess.</li><li>Before the advice reaches the examiner, code checks every quote, status, the governing clause and the amount. A line that does not match goes back to the AI underwriter to fix; after two retries the claim goes to the examiner without advice. The claims examiner reads the advice and decides, including any flag.</li></ol>
+<h2>What It Does for the Claims Desk</h2>
+<h3>The clause that governs, ranked by authority</h3>
+<p>A plain-words search ranks an endorsement on the claim's schedule above the exclusion it displaces, and marks one not held as unable to override, as the Under the hood tab shows on seven claims. A building that does not fit the variant held is flagged for the examiner, never refused. The advice quotes only wording returned for that claim, word for word.</p>
+<h3>Six gates in order, each status set in code</h3>
+<p>The six gates run in order, and the first that fails stops the chain unless it is re-checked with corrected facts. The underwriter gives each fact with the document and section it came from, and names the cause of the loss from the adjuster's findings. Where the accounts differ, the advice names both and applies the adjuster's finding: in one storm claim the claimant blamed wind-blown tiles, and the adjuster found no tile missing and an overflowing gutter.</p>
+<h3>A figure the examiner can check line by line</h3>
+<p>Code removes the excluded items first, then cuts each item insured below its value in proportion (average), then takes the excess. Where there is a basis to price it, a declined claim shows what the policy would have paid but for the deciding ground, marked not payable. The working sits beside the advice on every claim file.</p>
+<h2>What the Tests Show</h2>
+<p>The Kuantan claim in the diagram: a pharmacy's ceiling came down when a pipe fitting split overnight. The shop is a two-storey building holding the burst-pipe variant written for buildings over five storeys, so gate 4 passed with a flag for the examiner instead of failing. Code then priced the claim at RM 35,000.00: loss of sales excluded, average on the under-insured stock, then the RM 1,000.00 excess.</p>
+<p>Each claim was scored from the tool log and the advice the guard accepted, against an <a href="projects/fire-claim-examiner/answer-key.html" target="_blank" rel="noopener">answer key</a> written before the build, checked by an independent reviewer and fixed before the final run. All 22 claims passed on the cause of the loss, every gate status, the governing clause and the figure to the ringgit.</p>
+<table><tr><th>Test category</th><th>What it checks</th><th>Passed</th><th>One example</th></tr>
+<tr><td><b>A. Approved</b></td><td>Every gate passes, and the advice gives the figure with its working.</td><td>8 of 8</td><td>A factory flood with flood cover held: the signboard and two weeks' lost production are excluded, and the figure is RM 72,200.00 after the flood excess.</td></tr>
+<tr><td><b>B. Declined at a gate</b></td><td>One gate fails, the gates after it are not reached, and the advice names the clause that decides it.</td><td>12 of 12</td><td>A burst pipe in a shop lot empty for 48 days fails gate 5 on the burst-pipe cover's exclusion for empty premises; the advice shows RM 29,900.00 as the figure but for that ground, not payable.</td></tr>
+<tr><td><b>C. Flagged for the examiner</b></td><td>The policy leaves a point open, so the gate passes with a flag and the examiner decides it.</td><td>2 of 2</td><td>A fire 18 months after the only schedule on file passes gate 1 with a flag (automatic renewal, premium paid, no receipt), then is declined at gate 5 because the business changed hands without the insurer's sanction.</td></tr></table>
+<p>A further 61 automated tests need no API key and test each fault on its own: a gate tested out of order, wording relied on but never retrieved, a fact given without its source, a search that finds nothing, policy search down, and every fault the advice check sends back. All 61 pass, including all 22 claims run through the tools from reference facts. Every claim, gate by gate, is in the Technical Implementation tab.</p>
+<p>These tests show the advice follows the policy wording and the claim file, gate by gate, on every tested claim. Time saved per claim file, and how often examiners accept the advice unchanged, are what a working claims desk would measure.</p>
+<h2>Try It Yourself</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="projects/fire-claim-examiner/demo.html" target="_blank" rel="noopener">Claim file page</a></b></td><td>Open any of the 22 claims in five tabs: the incident report, the adjuster's report, the policy schedule, the underwriter's advice gate by gate with the figure and its working, and Under the hood, which replays every search, gate check and advice check from the recorded run. No key needed.</td></tr>
+<tr><td><b><a href="projects/fire-claim-examiner/answer-key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>The expected result for each claim: the cause, every gate, the governing clause, the figure and the wording to quote, fixed before the final run.</td></tr></table>
+<h2>Next Step</h2>
+<p>The system is designed to give a claims examiner advice that follows the policy wording gate by gate, with every status and figure set in code and every open point left to the examiner. If that fits your claims desk, or you are evaluating the work, read the claim files or message me.</p>
+<p class="cta"><a class="linkbtn primary" href="projects/fire-claim-examiner/demo.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<div class="arch" role="img" aria-label="A claim file opens with three documents. The AI underwriter reads them and calls four tools on the MCP server beside four read-only resources. The tools reach retrieval, the gates and calculator, and the guard, which records the advice. The claims examiner reads the advice and decides.">
+<div class="ar"><div class="ab who"><b>Claim file opens</b><span>Claimant's report, adjuster's report, policy schedule</span></div></div>
+<div class="ad"><em>three documents</em></div>
+<div class="ar"><div class="ab ai"><b>AI underwriter, Claude Haiku 5.5; Claude Sonnet 5.5 on one claim</b><span>Reads the file, searches the wording, supplies each gate's facts, explains</span></div></div>
+<div class="ad"><em>four tools</em></div>
+<div class="ar"><div class="ab code"><b>MCP server: four tools</b><span>search_policy, check_gate, calculate_payable, submit_advice</span></div><div class="ab read"><b>Four resources</b><span>claim incident, adjuster, schedule; policy clause</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Retrieval and the policy</b><span>117 clauses; vector and keyword pools, rerank, precedence</span></div><div class="ab data"><b>Gates and calculator</b><span>Tests held as data; the figure in a fixed order</span></div><div class="ab code"><b>Guard</b><span>Checks the advice before it is recorded</span></div></div>
+<div class="ad"><em>advice on file</em></div>
+<div class="ar"><div class="ab person"><b>Claims examiner</b><span>Reads the claim file and the advice, and decides</span></div></div>
+</div>
+<table><tr><th>Layer</th><th>Components</th></tr>
+<tr><td><b>Agent</b></td><td>Claude Haiku 5.5; Claude Sonnet 5.5 on one claim · one underwriter, one prompt with three invented worked examples · Anthropic SDK (Python), manual tool loop, 40-turn limit · effort medium · prompt caching</td></tr>
+<tr><td><b>MCP server</b></td><td>Python <code>mcp</code> package, stdio · four resources, three templated by claim number and one by clause code · four tools · a log of every call per claim</td></tr>
+<tr><td><b>Retrieval</b></td><td>Qdrant (in memory) with all-MiniLM-L6-v2 · a keyword (BM25) pool beside the vector pool · cross-encoder rerank (ms-marco-MiniLM-L-6-v2) · precedence by authority against the open claim's schedule</td></tr>
+<tr><td><b>Policy and rules</b></td><td>117 clause-level chunks of the fire policy wording, the operative clause and scope notes included · the gate tests held as JSON · a calculator with no model in its path</td></tr>
+<tr><td><b>Pages</b></td><td>A static claim file page and answer key, built by Python from the frozen run · GitHub Pages</td></tr></table>
+<p><b>One agent.</b> One role advises one person: the underwriter reads the claim file and advises the claims examiner. Everything that must be exact, the gate statuses, the figure and the check on the advice, sits in code beside it.</p>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How the AI works</h3>
+<p>The loop reads the three claim resources and gives them to the underwriter with the system prompt, which is cached between calls. The underwriter searches the wording for each gate, calls <code>check_gate</code> with the facts, then <code>calculate_payable</code>, then <code>submit_advice</code>. The loop ends when the advice is recorded, when the guard rejects it after two retries, or at 40 turns.</p>
+<h3>Who produces each part of the advice</h3>
+<table><tr><th>Part of the advice</th><th>Produced by</th></tr><tr><td>Gate status (pass, fail, passed with a flag)</td><td>Code: <code>check_gate</code></td></tr><tr><td>Wording quoted</td><td>Retrieval, word for word, with its chunk id; checked by the guard</td></tr><tr><td>Cause of the loss at gate 2</td><td>The AI names it from the adjuster's report; code tests whether the policy insures it anywhere</td></tr><tr><td>Facts for each gate</td><td>The AI, each with its document and section</td></tr><tr><td>Application and explanation</td><td>The AI</td></tr><tr><td>Underwriting flag</td><td>Code sets the flag; the AI writes it for the examiner</td></tr><tr><td>Figure, or the not payable label</td><td>Code: <code>calculate_payable</code></td></tr><tr><td>The decision</td><td>The claims examiner</td></tr></table>
+<h3>The six gates</h3>
+<p>The first gate that fails decides; gates after it are not reached unless the failed gate is re-checked with corrected facts, and a re-check clears every gate after it. 1. Period of insurance; 2. Peril insured; 3. Conditions precedent; 4. Endorsement held; 5. Endorsement satisfied; 6. Item admitted. At gate 2 the underwriter names the cause from the adjuster's report, as one of 18 causes in the rules file, and code tests whether the policy insures it anywhere, base cover or any endorsement. At gate 6 each item claimed is classed into one of 12 categories, and code decides from the category and the clause that answers the cause whether it is admitted.</p>
+<h3>Resources and tools</h3>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr><tr><td><code>claim://{claim_no}/incident</code></td><td>The claimant's report as received, a WhatsApp or email thread. Reading it opens a fresh session for the claim.</td></tr><tr><td><code>claim://{claim_no}/adjuster</code></td><td>The loss adjuster's investigation, findings and measurement: the source of the cause of the loss and the assessed amounts.</td></tr><tr><td><code>claim://{claim_no}/schedule</code></td><td>The policy schedule: period, construction, sums insured, endorsements and clauses held, warranties.</td></tr><tr><td><code>policy://clause/{code}</code></td><td>One clause, condition, endorsement or warranty of the policy wording, with its scope note where it has one.</td></tr></table>
+<table><tr><th>Tool (act)</th><th>Does</th><th>Structured errors (from the code)</th></tr><tr><td><code>search_policy</code></td><td>Finds wording for the open claim by clause code (returned as stored) or by plain words (ranked by authority against that claim's schedule). Returns chunk id, code, title, authority, scope note and the wording; every chunk returned is logged against the claim.</td><td><code>unknown_case</code> <code>search_unavailable (retryable)</code></td></tr><tr><td><code>check_gate</code></td><td>Code applies the gate's tests, held as data, to the facts the underwriter gives, each with its source, and returns pass, fail or pass_flagged with the reason.</td><td><code>chain_stopped</code> <code>clause_not_retrieved</code> <code>gate_out_of_order</code> <code>missing_fact</code> <code>no_test_for_clause</code> <code>invalid_items</code></td></tr><tr><td><code>calculate_payable</code></td><td>Code prices the claim after the gates: exclusions, average per schedule item, the excess after average. A decline is priced as a but-for figure, not payable, or not priced where there is no cover at any figure.</td><td><code>gates_incomplete</code> <code>invalid_items</code> <code>missing_fact</code></td></tr><tr><td><code>submit_advice</code></td><td>Records the six-gate advice once the guard passes it: quotes word for word in retrieved wording, statuses and governing clause as code set them, the figure as code computed it. Two retries with the failing line named.</td><td><code>clause_mismatch</code> <code>figure_mismatch</code> <code>missing_gate</code> <code>quote_not_retrieved</code> <code>status_mismatch</code> <code>rejected</code></td></tr></table>
+<p>A search that finds nothing returns an empty list, a valid answer. A search that cannot run returns <code>search_unavailable</code>, marked retryable. No tool decides the claim or writes to the claim file. To see the calls for any claim, open its fifth tab, Under the hood, on the <a href="projects/fire-claim-examiner/demo.html" target="_blank" rel="noopener">claim file page</a>: it replays the recorded run, every search with the clauses returned, every gate check with its facts and status, any refusal and fix, the figure and the guard.</p>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Business problem</th><th>Design choice</th><th>Where in the code</th></tr><tr><td>The base wording and the endorsement that displaces it both match the same question, so plain similarity ranking returns them side by side.</td><td>Precedence by authority runs after the rerank, against the open claim's own schedule: a held endorsement ranks above the exclusion it displaces, and one not held is shown as informational only.</td><td><code>engine/retrieval.py</code> <code>search</code>; <code>engine/policy_search.py</code></td></tr><tr><td>Wording quoted with confidence but never looked up for this claim misleads the examiner.</td><td>A gate rests only on wording returned for the claim, and the guard checks every quote word for word against it.</td><td><code>engine/gates.py</code> <code>_need</code>; <code>engine/guard.py</code></td></tr><tr><td>A gate checked out of order, or after an earlier one failed, can approve a claim the policy does not reach.</td><td>Gates run 1 to 6 in code; a gate out of order is refused, and after a failure the later gates are not reached unless the failed gate is re-checked, which clears every gate after it.</td><td><code>engine/gates.py</code> <code>_order</code></td></tr><tr><td>A status or a figure written by the AI cannot be audited.</td><td>The underwriter supplies facts with their source; code applies the tests held as data and computes the figure. The guard refuses advice whose status, governing clause or figure differs from what code set.</td><td><code>rules/condition_tests.json</code>; <code>engine/gates.py</code>; <code>engine/guard.py</code></td></tr><tr><td>A building class mismatch is an underwriting question, not a reason to refuse a claim.</td><td>A variant that does not fit the building passes gate 4 with a flag, the advice quotes the scope notes from the search results, and the examiner decides.</td><td><code>engine/gates.py</code> <code>_gate_4</code></td></tr><tr><td>Average applied to the whole claim, or the excess taken before average, gives the wrong figure.</td><td>Exclusions first, then Condition 20 average per schedule item, then the excess after average, in code.</td><td><code>engine/calculator.py</code> <code>compute</code></td></tr><tr><td>A search that is down is not the same as wording that does not exist; treated alike, the advice would tell the examiner no clause applies.</td><td>Nothing relevant returns an empty result, a valid answer; a search that cannot run returns a retryable error.</td><td><code>engine/policy_search.py</code></td></tr><tr><td>The examiner needs to see where every fact came from.</td><td>Every fact carries its document and section, every quote its chunk id, and every call is logged against the claim.</td><td><code>engine/gates.py</code> <code>_values</code>; <code>mcp_server.py</code> <code>log</code></td></tr></table>
+<h3>Safeguards</h3>
+<p>The claim files are sample documents with personal details shown as "[redacted]", and the policy wording is one fire policy cut into clauses. A service on a working claims desk would read the insurer's own wording and schedules, sign the examiner in, and keep the claim files under the insurer's data protection duties.</p>
+<h2>Code Walkthrough</h2><h3>Precedence: the Clause That Governs Ranks First</h3>
+<p>After the rerank, candidates are ordered by legal authority against the open claim's schedule. An endorsement that is not held cannot override.</p>
+<pre><code># engine/retrieval.py: search, stage 3
+        # stage 3: precedence, applied ONLY among clauses in contention
+        peril = peril or self.infer_peril(query)
+
+        for c in cands:
+            eff, note = c["authority"], ""
+
+            # Is this clause even about the question asked? A clause tagged to
+            # a different peril is not competing; promoting it on authority
+            # ranked flood and earthquake above storm on a storm query.
+            on_topic = (c["peril"] is None) or (peril is None) or (c["peril"] == peril)
+            c["on_topic"] = on_topic
+
+            if c["type"] == "coverage_decision":
+                # Carries both the base position and the override plus the rule
+                # for choosing between them, so it answers either way.
+                note = (f"{c['code']} held: override applies" if c["code"] in held
+                        else f"{c['code']} not held: {c['overrides']} stands")
+            elif eff == "override" and c["code"] and c["code"] not in held:
+                eff, note = "informational", "not held: cannot override"
+
+            c["effective_authority"] = eff
+            c["authority_note"] = note
+            # off-topic clauses are ranked on relevance alone, never promoted
+            c["authority_rank"] = AUTHORITY_RANK[eff] if on_topic else 9
+            c["tier_bias"] = 0 if (on_topic and c["type"] == "coverage_decision") else 1
+
+        cands.sort(key=lambda c: (not c["on_topic"], c["authority_rank"],
+                                  c["tier_bias"], -c["rerank_score"]))
+        return cands[:k]</code></pre>
+<h3>Order Is Enforced in Code</h3>
+<p>Before any gate runs, code checks that every earlier gate passed. After a failure, nothing later is reached.</p>
+<pre><code># engine/gates.py: _order
+    def _order(self, gate: int):
+        if gate not in NAMES:
+            raise GateError("gate_out_of_order", f"There is no gate {gate}; gates run 1 to 6.")
+        for g in range(1, gate):
+            r = self.results.get(g)
+            if r is None:
+                raise GateError("gate_out_of_order",
+                                f"Gate {g} ({NAMES[g]}) must be checked before gate {gate}.",
+                                next_gate=g)
+            if r.status == "fail":
+                raise GateError("chain_stopped",
+                                f"Gate {g} failed; gates after it are not reached. "
+                                "Call calculate_payable, then submit_advice.", failed_gate=g)
+        # re-checking a gate discards everything after it
+        for g in [k for k in self.results if k &gt;= gate]:
+            del self.results[g]
+        self.payable = None</code></pre>
+<h3>Gate 4: a Flag, Never a Fail, for a Variant Mismatch</h3>
+<p>The endorsement that answers the cause must be on the schedule. A paired variant that does not fit the building passes with a flag for the examiner.</p>
+<pre><code># engine/gates.py: _gate_4
+    def _gate_4(self, raw):
+        R = RULES["gate_4"]
+        f = _values(raw, R["required_facts"])
+        held = [str(c).strip() for c in (f["endorsements_held"] or [])]
+        self.held = held
+        spec = RULES["gate_2"]["causes"][self.cause]
+        if spec["base"]:
+            self.answer = "BASE"
+            return GateResult(4, "pass", "Operative clause",
+                              "No endorsement is required for a base peril.")
+        cands = [c for c in spec["insured_by"] if c in held]
+        if not cands:
+            self.answer = None
+            base_ex = spec.get("base_exclusion")
+            return GateResult(4, "fail", base_ex or f"{' or '.join(spec['insured_by'])} not held",
+                              f"{' or '.join(spec['insured_by'])} is not on the schedule"
+                              + (f", so {base_ex} stands" if base_ex else "")
+                              + ". The loss is not covered.")
+        variants = R["variants"]
+        fitting = [c for c in cands if c not in variants or self._fits(c, f)]
+        chosen = fitting[0] if fitting else cands[0]
+        self.answer = chosen
+        self._need([f"ENDORSEMENT-{chosen}"])
+        if chosen in variants and not self._fits(chosen, f):
+            other = [v for v in variants if v[:-1] == chosen[:-1] and v != chosen]
+            flag = (f"Building class mismatch: {chosen} is held, but the building does not fit its scope. "
+                    f"The variant that fits is {other[0] if other else 'another variant'}.")
+            return GateResult(4, "pass_flagged", chosen,
+                              f"{chosen} is on the schedule and responds on its wording. {flag} "
+                              "Flagged for the claims examiner to decide.", flags=[flag])
+        return GateResult(4, "pass", chosen, f"{chosen} is on the schedule and answers the cause.")</code></pre>
+<h3>The Gate Tests Are Data</h3>
+<p>Each endorsement's own exclusions and conditions are written as tests the code applies. This is FP507B, the burst pipe endorsement.</p>
+<pre><code># rules/condition_tests.json: gate 5, FP507B
+      "FP507B": [
+        {"id": "FP507B exclusion (a)", "chunk_id": "ENDORSEMENT-FP507B",
+         "facts": ["premises_untenanted"],
+         "fails_when": {"fact": "premises_untenanted", "op": "==", "value": true},
+         "reason": "Loss or damage caused whilst the premises are untenanted is excluded."},
+        {"id": "FP507B exclusion (b)", "chunk_id": "ENDORSEMENT-FP507B",
+         "facts": ["sprinkler_leakage"],
+         "fails_when": {"fact": "sprinkler_leakage", "op": "==", "value": true},
+         "reason": "Loss or damage by water discharged from an automatic sprinkler installation is excluded."},
+        {"id": "FP507B Special Condition 3", "chunk_id": "ENDORSEMENT-FP507B",
+         "facts": ["defect_notified_not_remedied"],
+         "fails_when": {"fact": "defect_notified_not_remedied", "op": "==", "value": true},
+         "reason": "No liability for damage caused by a defect the Insured failed to remedy after notice from the Company or any person or public body."}
+      ],</code></pre>
+<h3>The Figure, in a Fixed Order</h3>
+<p>Exclusions are removed first, average is applied to each schedule item, and the excess is taken after average.</p>
+<pre><code># engine/calculator.py: compute
+    # ---- step 1: exclusions -------------------------------------------------
+    excluded = [i for i in items if i.treatment == "excluded"]
+    covered = [i for i in items if i.treatment != "excluded"]
+    excluded_total = sum(i.claimed for i in excluded)
+    if excluded:
+        working.append("STEP 1  EXCLUSIONS")
+        for i in excluded:
+            working.append(f"  ref {i.ref}  RM {i.claimed:&gt;12,.2f}  "
+                           f"EXCLUDED by {i.clause}  ({i.desc[:44]})")
+        working.append(f"  excluded total       RM {excluded_total:&gt;12,.2f}")
+
+    # ---- step 2: average, per Schedule item, on what remains ----------------
+    if assessed_values:
+        working.append("")
+        working.append("STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM")
+        for item in sorted(factors):
+            si = sums_insured.get(item)
+            amount = si["sum_insured"] if isinstance(si, dict) else si
+            val = assessed_values.get(item)
+            if factors[item] == 1.0:
+                shown = f"RM {val:,.2f}" if val else "not in evidence"
+                working.append(
+                    f"  Item {item}  SI RM {amount:&gt;11,.2f}  value {shown:&gt;16}"
+                    f"  factor 1.0  no average")
+            else:
+                working.append(
+                    f"  Item {item}  SI RM {amount:&gt;11,.2f}  value RM {val:&gt;11,.2f}"
+                    f"  factor {factors[item]:.4f}  UNDERINSURED")
+
+    # ---- step 3: group, average, then excess -------------------------------
+    groups = {}
+    for i in covered:
+        groups.setdefault(i.group, []).append(i)
+
+    working.append("")
+    working.append("STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS")
+    payable = 0.0
+    out_groups = []
+    for name, members in groups.items():
+        subtotal = sum(m.claimed for m in members)
+        after_avg = 0.0
+        for m in members:
+            f = factors.get(m.schedule_item, 1.0)
+            after_avg += m.claimed * f
+        after_avg = round(after_avg, 2)
+
+        rule = EXCESS.get(name, EXCESS["BASE"])
+        excess, basis = rule.compute(total_si)
+        net = round(max(after_avg - excess, 0.0), 2)
+        payable += net
+
+        working.append(f"  [{name}] refs {[m.ref for m in members]}")
+        working.append(f"     subtotal          RM {subtotal:&gt;12,.2f}")
+        if abs(after_avg - subtotal) &gt; 0.004:
+            working.append(f"     after average     RM {after_avg:&gt;12,.2f}")
+        working.append(f"     excess            RM {excess:&gt;12,.2f}   {basis}")
+        working.append(f"     net               RM {net:&gt;12,.2f}")
+
+        out_groups.append({
+            "group": name, "refs": [m.ref for m in members],
+            "subtotal": round(subtotal, 2), "after_average": after_avg,
+            "excess": excess, "excess_basis": basis, "net": net,
+        })</code></pre>
+<h3>The Guard Checks the Advice</h3>
+<p>The governing clause must be the one the deciding gate rests on; quotes, statuses and the figure are checked the same way, and the failing line is named.</p>
+<pre><code># engine/guard.py: the governing clause
+    if len(session.results) == 6 or session.stopped_at() is not None:
+        want = session.governing_clause()
+        got = str(advice.get("governing_clause") or "")
+        if _key(got) != _key(want):
+            faults.append({"error": "clause_mismatch", "line": "governing_clause",
+                           "message": f"The governing clause is '{got}', but the result rests on '{want}' "
+                                      "(the clause check_gate returned at the deciding gate). Name that clause; "
+                                      "mention other grounds in the advice text."})</code></pre>
+<h3>Empty Is an Answer; Down Is an Error</h3>
+<p>Search returns only passages the reranker finds relevant, and a search that cannot run raises a retryable error instead of an empty list.</p>
+<pre><code># engine/policy_search.py: search
+    def search(self, query: str, held: list[str], k: int = 4) -&gt; list[dict]:
+        try:
+            res = self.retriever.search(query, set(held), k=40, pool=25)
+        except SearchUnavailable:
+            raise
+        except Exception as e:
+            raise SearchUnavailable(f"Policy search failed: {e}. Retry.")
+        # Precedence orders clauses competing on one peril. A query on no peril
+        # (notice, occupancy, money) is ranked on relevance alone.
+        if self.retriever.infer_peril(query) is None:
+            res = sorted(res, key=lambda r: -r["rerank_score"])
+        out, seen = [], set()
+        for r in res:
+            if r["rerank_score"] &lt; MIN_RERANK:
+                continue
+            if r["type"] == "coverage_decision":
+                # a decision node stands for its endorsement: return that instead
+                is_held = r["code"] in set(held)
+                r = dict(BY_ID.get(f"ENDORSEMENT-{r['code']}", r),
+                         effective_authority="override" if is_held else "informational",
+                         authority_note="" if is_held else "not held: cannot override")
+                if r["type"] == "coverage_decision":
+                    continue
+            if r["chunk_id"] in seen:
+                continue
+            seen.add(r["chunk_id"])
+            out.append(trim(r))
+        return out[:k]</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Category</th><th>Claims</th><th>Passed</th></tr>
+<tr><td><b>A. Approved</b></td><td>8</td><td>8 of 8</td></tr><tr><td><b>B. Declined at a gate</b></td><td>12</td><td>12 of 12</td></tr><tr><td><b>C. Flagged for the examiner</b></td><td>2</td><td>2 of 2</td></tr></table>
+<ul>
+<li><b>Expected results:</b> the <a href="projects/fire-claim-examiner/answer-key.html" target="_blank" rel="noopener">answer key</a> holds 22 claims across 11 perils, 9 approvals and 13 declines, written before the build. An independent reviewer checked every result for judgement in a separate session, and the founder decided each point raised.</li>
+<li><b>Scored from the record:</b> the cause given at gate 2, the six gate statuses and the figure from the tool log; the governing clause, the flags and the recorded advice from what the guard accepted. Where a claim stops at gate 1, before any cause is given, the cause is read by keyword from the advice's cause of loss. Results by peril: Burglary 1/1, Burst pipe 2/2, Electrical fault 1/1, Falling tree 1/1, Fire 6/6, Flood 3/3, Impact 1/1, Lightning 2/2, Riot and malicious damage 2/2, Storm 2/2, Subsidence and landslip 1/1.</li>
+<li><b>Facts:</b> the facts the underwriter gave were compared field by field with reference facts written for each claim: Adjuster's report 278/283, Incident report 19/19, Incident report and adjuster's report 18/18, Schedule 90/92.</li>
+<li><b>Run record:</b> A 3-claim sample on Claude Haiku 5.5 passed 3 of 3 and was approved on the claim file page before the full run. In full run 1 on Haiku, every claim's advice was recorded; on two claims (Kulim, Segamat) every gate status and figure was right but the advice named a governing clause other than the one the deciding gate rests on, and the guard now checks the governing clause against code. On Taiping the status and figure were right, but the underwriter gave the ground floor as tenanted, so gate 5 rested on Special Condition 3 instead of exclusion (a). The three passed on Haiku when rerun with <code>--only</code>. On two claims (Alor Setar, Sitiawan) Haiku named a different cause of the loss from the reviewed key; Claude Sonnet 5.5 named the same causes, and the founder kept that judgement as the answer (both now decline at gate 2: the cause is insured nowhere in the policy). Sitiawan then passed on Haiku. Haiku answered Alor Setar both ways across two runs, so Sonnet answers that claim. The final record, <code>runs/final-20261107</code>, takes each claim's tool log unchanged from the run named in its <code>source_runs</code> entry.</li>
+<li><b>Models and cost:</b> Claude Haiku 5.5; Claude Sonnet 5.5 on one claim, with the Sonnet claim named in the record. All runs together, the sample, the full run and the reruns, cost USD 0.43.</li>
+<li><b>Baseline:</b> the original engine this project was rebuilt from, with fixed routes and no model reading the claim, on its own six claim records, scored against the same expected results: determination 6/6, governing clause 5/6, figure 6/6. Its one different clause is Bukit Mertajam, where the expected result moved to Condition 9(d) during the review.</li>
+<li><b>No-key tests:</b> 61 checks in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/fire-claim-examiner/benchmark/test_tools.py" target="_blank" rel="noopener">test_tools.py</a>: 9 on the data files and 52 through the MCP client, all passing; the benchmark runs them first and refuses a paid run if one fails.</li>
+</ul>
+<h2>Every Test Run</h2>
+<p>The full record behind the summary on the Project overview tab: who does what, then every claim with what it had to do and what made it happen, read from its tool log.</p>
+<h3>Who does what</h3>
+<table><tr><th>Who</th><th>Does</th></tr><tr><td><b>The AI underwriter</b><br><span class="muted">Claude Haiku 5.5; Claude Sonnet 5.5 on one claim</span></td><td>Reads the three documents, searches the policy wording, names the cause of the loss from the adjuster's findings, supplies each gate's facts with their source, classes each item claimed, explains the wording and the working, and writes the advice.</td></tr><tr><td><b>Code: retrieval</b><br><span class="muted">engine/retrieval.py, engine/policy_search.py</span></td><td>Returns the wording for the open claim, a plain-words search ranked by authority against its schedule; logs every chunk returned.</td></tr><tr><td><b>Code: the gates and the figure</b><br><span class="muted">engine/gates.py, engine/calculator.py, rules/condition_tests.json</span></td><td>Sets every gate status and every figure, in order, from the facts given and the wording retrieved.</td></tr><tr><td><b>Code: the guard</b><br><span class="muted">engine/guard.py</span></td><td>Records the advice only when every quote, status, the governing clause and the figure match what code set; names the failing line otherwise.</td></tr><tr><td><b>The claims examiner</b><br><span class="muted">Outside the system</span></td><td>Reads the claim file and the advice, takes every flag, and decides.</td></tr></table>
+<p>All 22 of 22 claims passed in the final record. A flagged claim is still approved or declined by its gates; the flag is the point the examiner decides.</p>
+<h3>A. Approved</h3>
+<p>Every gate passes with no point left open, and the advice gives the figure with its working. 8 of 8 claims passed.</p>
+<table><tr><th>Claim</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>CLM-2023-07326</code><br><span class="muted">Batu Pahat restaurant kitchen fire<br>Fire</span></td><td>Approve, governed by Operative clause; RM 76,900.00. Cause: fire.</td><td><b>Search:</b> 6 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Cause given at gate 2: <code>fire</code>. <b>Figure:</b> RM 76,900.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 14 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-03187</code><br><span class="muted">Sungai Petani bakery fire<br>Fire</span></td><td>Approve, governed by Operative clause; RM 130,700.00. Cause: fire.</td><td><b>Search:</b> 7 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Cause given at gate 2: <code>fire</code>. 1 gate call refused and fixed (clause_not_retrieved). <b>Figure:</b> RM 130,700.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 16 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-15093</code><br><span class="muted">Kota Bharu factory flood<br>Flood</span></td><td>Approve, governed by FP504; RM 72,200.00. Cause: flood.</td><td><b>Search:</b> 6 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Cause given at gate 2: <code>flood</code>. <b>Figure:</b> RM 72,200.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 14 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-08853</code><br><span class="muted">Miri lorry impact shopfront<br>Impact</span></td><td>Approve, governed by FP506A; RM 31,150.00. Cause: impact (road vehicle).</td><td><b>Search:</b> 6 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Gate 5 first returned failed (FP506A), was re-checked with corrected facts and passed. Cause given at gate 2: <code>impact</code>. <b>Figure:</b> RM 31,150.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 15 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2025-05106</code><br><span class="muted">Temerloh house lightning surge<br>Lightning</span></td><td>Approve, governed by Operative clause; RM 13,400.00. Cause: lightning.</td><td><b>Search:</b> 6 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Cause given at gate 2: <code>lightning</code>. <b>Figure:</b> RM 13,400.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 14 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-11564</code><br><span class="muted">Seremban restaurant riot damage<br>Riot and malicious damage</span></td><td>Approve, governed by FP512B; RM 22,750.00. Cause: riot.</td><td><b>Search:</b> 6 clauses by code, 1 by plain words. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Cause given at gate 2: <code>riot</code>. <b>Figure:</b> RM 22,750.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 15 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2022-06033</code><br><span class="muted">Ipoh windstorm<br>Storm</span></td><td>Approve, governed by FP503; RM 49,950.00. Cause: storm (windstorm).</td><td><b>Search:</b> 8 clauses by code, 1 by plain words. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Cause given at gate 2: <code>storm</code>. <b>Figure:</b> RM 49,950.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 17 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2025-00417</code><br><span class="muted">Ampang landslip terrace house<br>Subsidence and landslip</span></td><td>Approve, governed by FP510; RM 82,300.00. Cause: landslip.</td><td><b>Search:</b> 7 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 passed. Cause given at gate 2: <code>subsidence_or_landslip</code>. <b>Figure:</b> RM 82,300.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 15 tool calls.</span></td></tr></table>
+<h3>B. Declined at a gate</h3>
+<p>One gate fails, the gates after it are not reached, and the advice names the clause that decides it and the but-for figure where there is a basis to price it. 12 of 12 claims passed.</p>
+<table><tr><th>Claim</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>CLM-2021-05512</code><br><span class="muted">George Town burglary<br>Burglary</span></td><td>Decline at gate 1 (period of insurance) on Operative clause, period of insurance; not priced. Cause: burglary.</td><td><b>Search:</b> 2 clauses by code, 1 by plain words. <b>Gates:</b> 1 failed (Operative clause (period of insurance)). <b>Figure:</b> not priced. <b>Advice:</b> recorded after one send-back (quote_not_retrieved). <span class="muted">Claude Haiku 5.5, 7 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2023-11207</code><br><span class="muted">Taiping burst pipe<br>Burst pipe</span></td><td>Decline at gate 5 (endorsement satisfied) on FP507B, exclusion (a); but for that, RM 29,900.00, not payable. Cause: burst pipe.</td><td><b>Search:</b> 9 clauses by code, 2 by plain words. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 failed (FP507B exclusion (a)). Cause given at gate 2: <code>burst_pipe</code>. 1 gate call refused and fixed (clause_not_retrieved). <b>Figure:</b> 0, but-for RM 29,900.00. <b>Advice:</b> recorded after one send-back (quote_not_retrieved). <span class="muted">Claude Haiku 5.5, 20 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-05128</code><br><span class="muted">Kulim cold room motor burnout<br>Electrical fault</span></td><td>Decline at gate 2 (peril insured) on FP508B; not priced. Cause: electrical fault.</td><td><b>Search:</b> 8 clauses by code. <b>Gates:</b> 1 passed; 2 failed (FP508B). Cause given at gate 2: <code>electrical_fault</code>. 2 gate calls refused and fixed (clause_not_retrieved, gate_out_of_order). <b>Figure:</b> not priced. <b>Advice:</b> recorded after one send-back (clause_mismatch). <span class="muted">Claude Haiku 5.5, 15 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2023-09814</code><br><span class="muted">Alor Setar falling tree power surge<br>Falling tree</span></td><td>Decline at gate 2 (peril insured) on peril_not_insured; not priced. Cause: power surge from a fault on the supply network.</td><td><b>Search:</b> 3 clauses by code, 1 by plain words. <b>Gates:</b> 1 passed; 2 failed (peril_not_insured). Cause given at gate 2: <code>electrical_fault</code>. <b>Figure:</b> not priced. <b>Advice:</b> recorded after one send-back (clause_mismatch). <span class="muted">Claude Sonnet 5.5, 9 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2023-06205</code><br><span class="muted">Melaka terrace house fire<br>Fire</span></td><td>Decline at gate 5 (endorsement satisfied) on Condition 9(b); but for that, RM 90,000.00, not payable. Cause: fire.</td><td><b>Search:</b> 4 clauses by code, 1 by plain words. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 failed (Condition 9(b)). Cause given at gate 2: <code>fire</code>. <b>Figure:</b> 0, but-for RM 90,000.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 12 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-01385</code><br><span class="muted">Klang warehouse fire<br>Fire</span></td><td>Decline at gate 5 (endorsement satisfied) on Condition 9(a); but for that, RM 233,000.00, not payable. Cause: fire.</td><td><b>Search:</b> 7 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 failed (Condition 9(a)). Cause given at gate 2: <code>fire</code>. <b>Figure:</b> 0, but-for RM 233,000.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 14 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2025-07741</code><br><span class="muted">Muar phone shop fire<br>Fire</span></td><td>Decline at gate 3 (conditions precedent) on Condition 15; but for that, RM 78,500.00, not payable. Cause: fire.</td><td><b>Search:</b> 5 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 failed (Condition 15). Cause given at gate 2: <code>fire</code>. <b>Figure:</b> 0, but-for RM 78,500.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 10 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2023-02857</code><br><span class="muted">Segamat workshop flood<br>Flood</span></td><td>Decline at gate 4 (endorsement held) on Condition 6(b); not priced. Cause: flood.</td><td><b>Search:</b> 10 clauses by code, 1 by plain words. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 failed (Condition 6(b)). Cause given at gate 2: <code>flood</code>. <b>Figure:</b> not priced. <b>Advice:</b> recorded after one send-back (clause_mismatch). <span class="muted">Claude Haiku 5.5, 18 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2023-12440</code><br><span class="muted">Kampar flood<br>Flood</span></td><td>Decline at gate 3 (conditions precedent) on Condition 12; but for that, RM 88,550.00, not payable. Cause: flood.</td><td><b>Search:</b> 8 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 failed (Condition 12). Cause given at gate 2: <code>flood</code>. <b>Figure:</b> 0, but-for RM 88,550.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 13 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-13208</code><br><span class="muted">Kluang workshop lightning surge<br>Lightning</span></td><td>Decline at gate 6 (item admitted) on FP508A.01; but for that, RM 100,950.00, not payable. Cause: lightning.</td><td><b>Search:</b> 7 clauses by code, 1 by plain words. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 passed; 6 failed (FP508A.01). Cause given at gate 2: <code>lightning</code>. <b>Figure:</b> 0, but-for RM 100,950.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 16 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2025-03362</code><br><span class="muted">Sitiawan house break-in damage<br>Riot and malicious damage</span></td><td>Decline at gate 2 (peril insured) on peril_not_insured; not priced. Cause: housebreaking and theft.</td><td><b>Search:</b> 8 clauses by code, 2 by plain words. <b>Gates:</b> 1 passed; 2 failed (peril_not_insured). Cause given at gate 2: <code>burglary_or_theft</code>. 1 gate call refused and fixed (clause_not_retrieved). <b>Figure:</b> not priced. <b>Advice:</b> recorded after one send-back (clause_mismatch). <span class="muted">Claude Haiku 5.5, 16 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2024-06472</code><br><span class="muted">Kuala Terengganu terrace house storm<br>Storm</span></td><td>Decline at gate 5 (endorsement satisfied) on FP503, Special Condition 1; but for that, RM 14,200.00, not payable. Cause: storm rain (thunderstorm), no wind damage.</td><td><b>Search:</b> 6 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed; 5 failed (FP503 Special Condition 1). Cause given at gate 2: <code>storm</code>. 1 figure call refused and fixed (invalid_items). <b>Figure:</b> 0, but-for RM 14,200.00. <b>Advice:</b> recorded first time. <span class="muted">Claude Haiku 5.5, 14 tool calls.</span></td></tr></table>
+<h3>C. Flagged for the examiner</h3>
+<p>A gate passes with a flag because the policy leaves a point open for the examiner: a building that does not fit the variant held, or a renewal shown without the insurer's receipt. 2 of 2 claims passed.</p>
+<table><tr><th>Claim</th><th>What it must do</th><th>What made it happen</th></tr><tr><td style="white-space:nowrap"><code>CLM-2025-09207</code><br><span class="muted">Kuantan shophouse burst pipe<br>Burst pipe</span></td><td>Approve, governed by FP507A; gate 4 passed with a flag; RM 35,000.00. Cause: burst pipe.</td><td><b>Search:</b> 8 clauses by code. <b>Gates:</b> 1 passed; 2 passed; 3 passed; 4 passed, flagged (FP507A); 5 passed; 6 passed. Cause given at gate 2: <code>burst_pipe</code>. <b>Figure:</b> RM 35,000.00. <b>Advice:</b> recorded after one send-back (quote_not_retrieved). <span class="muted">Claude Haiku 5.5, 17 tool calls.</span></td></tr><tr><td style="white-space:nowrap"><code>CLM-2022-08841</code><br><span class="muted">Bukit Mertajam fire<br>Fire</span></td><td>Decline at gate 5 (endorsement satisfied) on Condition 9(d); gate 1 passed with a flag; but for that, RM 295,700.00, not payable. Cause: fire.</td><td><b>Search:</b> 8 clauses by code. <b>Gates:</b> 1 passed, flagged (FC815); 2 passed; 3 passed; 4 passed; 5 failed (Condition 9(d)). Cause given at gate 2: <code>fire</code>. 2 gate calls refused and fixed (clause_not_retrieved). <b>Figure:</b> 0, but-for RM 295,700.00. <b>Advice:</b> recorded after one send-back (quote_not_retrieved). <span class="muted">Claude Haiku 5.5, 18 tool calls.</span></td></tr></table>
+<p>See for yourself: <a href="projects/fire-claim-examiner/demo.html" target="_blank" rel="noopener">open any claim on the claim file page</a>, including its Under the hood tab.</p>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the system behaves, cut directly from the project files. The AI reads the claim file, chooses what to search and supplies facts; retrieval, the gates, the calculator and the guard decide what is recorded. Page markup is left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/fire-claim-examiner" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/fire-claim-examiner/
+├── cases/                    # 22 claim files: incident.md, adjuster.md, schedule.md, expected.json
+├── data/chunks.json          # 117 clause-level chunks of the policy wording, scope notes included
+├── rules/condition_tests.json # The gate tests as data: causes, variant scopes, gate 5 tests, item rules
+├── engine/
+│   ├── retrieval.py          # Vector and keyword pools, rerank, precedence by authority
+│   ├── policy_search.py      # Search scoped to the open claim: empty result, retryable error, lookup
+│   ├── gates.py              # The six gates in order, the item rules, the figure
+│   ├── calculator.py         # Exclusions, average per item, excess after average
+│   ├── guard.py              # The check on the advice before it is recorded
+│   └── claim_file.py         # The three documents per claim
+├── mcp_server.py             # MCP server: 4 resources, 4 tools, a log per claim
+├── prompt.py, agent.py       # The underwriter's prompt and the tool loop
+├── build/                    # Chunker, cases.json, demo and answer key builders
+├── benchmark/
+│   ├── cases.json            # The 22 claims the runner reads
+│   ├── gold_facts.json       # Reference facts per gate
+│   ├── test_tools.py         # The no-key tests
+│   ├── run_benchmark.py      # Runs, scores from the tool log, keeps the cost ledger
+│   └── runs/final-20261107/  # The final results the demo shows
+├── demo.html                 # The claim file page
+└── answer-key.html           # The expected results</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Fire Policy Underwriter Advisor</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="diagram.js"></script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

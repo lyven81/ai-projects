@@ -1,0 +1,113 @@
+{
+ "engine": "original Fire Claim Examiner, unchanged",
+ "cases": 6,
+ "summary": {
+  "determination": "6/6",
+  "governing_clause": "5/6",
+  "payable": "6/6"
+ },
+ "rows": [
+  {
+   "claim_no": "CLM-2021-05512",
+   "label": "George Town burglary",
+   "determination": true,
+   "governing_clause": true,
+   "payable": true,
+   "got": {
+    "determination": "DECLINE",
+    "clause": "Operative clause, period of insurance",
+    "payable": 0.0
+   },
+   "expected": {
+    "determination": "DECLINE",
+    "clause": "Operative clause, period of insurance",
+    "payable": 0
+   }
+  },
+  {
+   "claim_no": "CLM-2022-06033",
+   "label": "Ipoh windstorm",
+   "determination": true,
+   "governing_clause": true,
+   "payable": true,
+   "got": {
+    "determination": "APPROVE",
+    "clause": "FP503",
+    "payable": 49950.0
+   },
+   "expected": {
+    "determination": "APPROVE",
+    "clause": "FP503",
+    "payable": 49950.0
+   }
+  },
+  {
+   "claim_no": "CLM-2022-08841",
+   "label": "Bukit Mertajam fire",
+   "determination": true,
+   "governing_clause": false,
+   "payable": true,
+   "got": {
+    "determination": "DECLINE",
+    "clause": "Operative clause, period of insurance",
+    "payable": 0.0
+   },
+   "expected": {
+    "determination": "DECLINE",
+    "clause": "Condition 9(d)",
+    "payable": 0
+   }
+  },
+  {
+   "claim_no": "CLM-2023-11207",
+   "label": "Taiping burst pipe",
+   "determination": true,
+   "governing_clause": true,
+   "payable": true,
+   "got": {
+    "determination": "DECLINE",
+    "clause": "FP507B, exclusion (a)",
+    "payable": 0.0
+   },
+   "expected": {
+    "determination": "DECLINE",
+    "clause": "FP507B, exclusion (a)",
+    "payable": 0
+   }
+  },
+  {
+   "claim_no": "CLM-2023-12440",
+   "label": "Kampar flood",
+   "determination": true,
+   "governing_clause": true,
+   "payable": true,
+   "got": {
+    "determination": "DECLINE",
+    "clause": "Condition 12",
+    "payable": 0.0
+   },
+   "expected": {
+    "determination": "DECLINE",
+    "clause": "Condition 12",
+    "payable": 0
+   }
+  },
+  {
+   "claim_no": "CLM-2024-03187",
+   "label": "Sungai Petani bakery fire",
+   "determination": true,
+   "governing_clause": true,
+   "payable": true,
+   "got": {
+    "determination": "APPROVE",
+    "clause": "Operative clause",
+    "payable": 130700.0
+   },
+   "expected": {
+    "determination": "APPROVE",
+    "clause": "Operative clause",
+    "payable": 130700.0
+   }
+  }
+ ]
+}

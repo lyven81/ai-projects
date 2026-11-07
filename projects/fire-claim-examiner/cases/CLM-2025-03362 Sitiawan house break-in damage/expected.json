@@ -1,0 +1,144 @@
+{
+  "claim_no": "CLM-2025-03362",
+  "label": "Sitiawan house break-in damage",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "housebreaking and theft",
+    "sequence": [
+      "Entry by night through the front: the grille padlock hasp cut and the main door lock forced",
+      "The intruders search the master bedroom, break the wardrobe mirror doors and take jewellery and cash",
+      "The intruders throw the television to the floor and spray paint on the living room wall before leaving"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "pass",
+      "reason": "Loss on the night of 8 to 9 March 2025 falls inside 1 January 2025 to 31 December 2025."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "fail",
+      "reason": "Proximate cause: housebreaking and theft by intruders at night, with no intervening event. Theft is insured nowhere in the policy. The FP512A malicious damage extension excludes loss or damage arising out of or in the course of burglary, housebreaking or theft, so the damage done by the intruders in its course is not brought in either."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "peril_not_insured",
+  "supporting_clauses": [
+    "Operative clause",
+    "FP512A"
+  ],
+  "quotes": [
+    {
+      "clause": "FP512A malicious damage",
+      "chunk_id": "ENDORSEMENT-FP512A",
+      "text": "Loss of or damage to the property insured directly caused by the malicious act of any person (whether or not such act is committed in the course of a disturbance of the public peace) not being an act amounting to or committed in connection with an occurrence mentioned in Special Condition 6 of the Endorsement but the Company shall not be liable under this extension for any loss damage by fire or explosion nor for any loss or damage arising out of or in the course of burglary, housebreaking, theft or larceny or any attempt thereat or caused by any person taking part therein."
+    },
+    {
+      "clause": "FP512A Condition 8(e)",
+      "chunk_id": "ENDORSEMENT-FP512A",
+      "text": "(e) Securities, obligations, or documents of any kind, stamps, coined or paper money, cheques, books of accounts or other business books, or computer systems records."
+    },
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "Condition 5(1)(a)",
+      "reason": "It addresses theft during or after a fire. There was no fire; citing it is the wrong ground."
+    },
+    {
+      "clause": "FP512B",
+      "reason": "The non-residential variant; not held and not the right variant for a dwelling."
+    },
+    {
+      "clause": "Condition 9(b)",
+      "reason": "The family was away two nights; the house was not unoccupied for more than 30 days."
+    },
+    {
+      "clause": "FP512A riot cover",
+      "reason": "No disturbance of the public peace; the riot and strike limbs of FP512A are not engaged."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": false,
+    "reason": "No basis to price. Housebreaking and theft are insured nowhere in the policy, and the malicious damage done in its course is excluded by FP512A, so there is no cover to quantify at any figure."
+  },
+  "working": [
+    "Declined at gate 2. No calculation: the proximate cause is insured nowhere in the policy."
+  ],
+  "calculator_working": [
+    "STEP 1  EXCLUSIONS",
+    "  ref 5  RM     6,500.00  EXCLUDED by Theft: not an insured peril  (Gold jewellery, stolen)",
+    "  ref 6  RM       800.00  EXCLUDED by Theft; FP512A Condition 8(e)  (Cash, stolen)",
+    "  excluded total       RM     7,300.00",
+    "",
+    "STEP 2  CONDITION 20 AVERAGE, PER SCHEDULE ITEM",
+    "  Item 1  SI RM  300,000.00  value    RM 290,000.00  factor 1.0  no average",
+    "  Item 2  SI RM   60,000.00  value     RM 50,000.00  factor 1.0  no average",
+    "",
+    "STEP 3  GROUPS, AVERAGE APPLIED THEN EXCESS",
+    "  [FP512A] refs [1, 2, 3, 4]",
+    "     subtotal          RM     9,500.00",
+    "     excess            RM         0.00   No excess. Schedule states nil for this peril.",
+    "     net               RM     9,500.00",
+    "",
+    "  CLAIMED             RM    16,800.00",
+    "  RECOMMENDED PAYABLE RM     9,500.00"
+  ],
+  "facts": [
+    {
+      "fact": "Entry by night through the forced front grille and door; property stolen.",
+      "source": "Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Police investigation opened as housebreaking by night and theft.",
+      "source": "Adjuster's report, Investigation, Reports relied on; police report of 9 March 2025"
+    },
+    {
+      "fact": "The damage to the TV, mirrors and wall was done by the intruders before they left.",
+      "source": "Adjuster's report, Investigation, Cause and origin; Findings, Discrepancies"
+    },
+    {
+      "fact": "The Insured describes the event as vandalism.",
+      "source": "Incident report, WhatsApp of 16 March 2025"
+    },
+    {
+      "fact": "FP512A on the schedule; residential risk.",
+      "source": "Schedule, Endorsements and Occupation"
+    }
+  ],
+  "ambiguity": [],
+  "decision_note": "Founder, 7 Nov 2026: the model judgement kept as the answer after Haiku 5.5 and Sonnet 5.5 both named housebreaking and theft as the proximate cause. Previously: malicious damage by intruders, declined at gate 5 under FP512A, but-for RM 9,500.00."
+}

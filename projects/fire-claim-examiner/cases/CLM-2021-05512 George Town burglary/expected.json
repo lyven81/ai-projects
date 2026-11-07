@@ -1,0 +1,124 @@
+{
+  "claim_no": "CLM-2021-05512",
+  "label": "George Town burglary",
+  "determination": "DECLINE",
+  "proximate_cause": {
+    "cause": "burglary",
+    "sequence": [
+      "Forced entry at the rear service door overnight between about 10:00 pm on 14 July and 6:30 am on 15 July 2021: the folding steel grille levered up at the lower track",
+      "Goods taken from the shelves and the rear store; the cash drawer prised open",
+      "No fire, smoke, heat or explosion anywhere on the premises"
+    ],
+    "intervening_event": "none",
+    "source": "Adjuster's report, Cause and origin"
+  },
+  "gates": [
+    {
+      "gate": 1,
+      "name": "Period of insurance",
+      "status": "fail",
+      "reason": "Loss on the night of 14 to 15 July 2021 falls before inception: the schedule period is 30 July 2021 to 29 July 2022, fifteen days after the loss. No schedule for any earlier period was produced or located."
+    },
+    {
+      "gate": 2,
+      "name": "Peril insured",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate. Proximate cause on the adjuster's report: burglary (forced entry and theft), which is not insured under the base cover or any endorsement in the wording."
+    },
+    {
+      "gate": 3,
+      "name": "Conditions precedent",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 4,
+      "name": "Endorsement held",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 5,
+      "name": "Endorsement satisfied",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    },
+    {
+      "gate": 6,
+      "name": "Item admitted",
+      "status": "not_reached",
+      "reason": "Not asked: the claim stopped at an earlier gate."
+    }
+  ],
+  "governing_clause": "policy_period",
+  "governing_chunk_id": "OPERATIVE-CLAUSE",
+  "supporting_clauses": [
+    "peril_not_insured",
+    "Condition 8(e)",
+    "Condition 12"
+  ],
+  "quotes": [
+    {
+      "clause": "Operative clause (period of insurance)",
+      "chunk_id": "OPERATIVE-CLAUSE",
+      "text": "during the Period of Insurance stated in the Schedule or of any subsequent period in respect of which the Insured shall have paid and the Company shall have accepted the premium required for the renewal of this Policy"
+    },
+    {
+      "clause": "Condition 8(e)",
+      "chunk_id": "CONDITION-8",
+      "text": "Unless otherwise expressly stated in this Policy this Insurance does not cover:"
+    },
+    {
+      "clause": "Condition 8(e)",
+      "chunk_id": "CONDITION-8",
+      "text": "(e) Securities, obligations, or documents of any kind, stamps, coins or paper money, cheques, books of account or other business books, or computer systems records."
+    },
+    {
+      "clause": "Condition 12",
+      "chunk_id": "CONDITION-12",
+      "text": "On the happening of any loss or damage the Insured shall forthwith give notice thereof to the Company and shall within 15 days after the loss or damage, or such further time as the Company may in writing allow in that behalf, deliver to the Company:"
+    }
+  ],
+  "must_not_cite": [
+    {
+      "clause": "Condition 5(1)(a)",
+      "reason": "Condition 5(1)(a) addresses theft during or after a fire and is an exclusion carved out of fire cover. There was no fire, so theft is outside the insuring clause entirely. Citing 5(1)(a) as the reason for declinature is the wrong ground for a right verdict and must be scored as a citation failure."
+    }
+  ],
+  "payable": 0,
+  "counterfactual": {
+    "available": false,
+    "reason": "No basis to price. No policy was in force on the date of loss, and burglary is outside the insuring clause of a fire policy, so there is no cover to quantify at any figure."
+  },
+  "working": [
+    "Declined at gate 1. No calculation: there was no policy in force on the date of loss.",
+    "Also engaged, not needed for the result: burglary and theft are not insured perils of a fire policy and no endorsement on the schedule extends cover to theft; RM 9,500.00 in notes and coin falls under Condition 8(e), with no money item on the schedule; first notice on 2 August 2021, eighteen days after the loss, and the written claim on 6 August 2021, day 22 (Condition 12)."
+  ],
+  "facts": [
+    {
+      "fact": "Break-in between about 10:00 pm on 14 July and 6:30 am on 15 July 2021; rear grille forced.",
+      "source": "Incident report, email of 2 August 2021; Adjuster's report, Investigation, Cause and origin"
+    },
+    {
+      "fact": "Schedule period 30 July 2021 to 29 July 2022.",
+      "source": "Schedule, Period of insurance"
+    },
+    {
+      "fact": "The Insured says the shop was insured for several years; no schedule before 30 July 2021 produced or located.",
+      "source": "Adjuster's report, Findings, Discrepancies with the incident report; Incident report, emails of 2 and 6 August 2021"
+    },
+    {
+      "fact": "No fire, smoke or explosion at any time.",
+      "source": "Adjuster's report, Investigation, Cause and origin and Reports relied on"
+    },
+    {
+      "fact": "RM 9,500.00 cash claimed; money and cash not itemised on the schedule.",
+      "source": "Incident report, email of 6 August 2021; Schedule, Sums insured"
+    },
+    {
+      "fact": "First notice 2 August 2021; written claim delivered 6 August 2021.",
+      "source": "Incident report, emails of 2 and 6 August 2021"
+    }
+  ],
+  "ambiguity": []
+}

@@ -1,0 +1,236 @@
+{
+  "about": "Condition tests held as data. engine/gates.py applies them to the facts the underwriter supplies, gate by gate, in order. Code sets every status; the agent supplies facts, each with its source document and section. Read with chunks.json: every chunk_id here is a chunk in data/chunks.json.",
+  "version": "2026-11-07",
+
+  "gate_names": {
+    "1": "Period of insurance",
+    "2": "Peril insured",
+    "3": "Conditions precedent",
+    "4": "Endorsement held",
+    "5": "Endorsement satisfied",
+    "6": "Item admitted"
+  },
+
+  "gate_1": {
+    "clause": "Operative clause (period of insurance)",
+    "chunk_id": "OPERATIVE-CLAUSE",
+    "required_facts": ["date_of_loss", "period_start", "period_end"],
+    "renewal": {
+      "about": "A loss after the period on the schedule passes with a flag where the schedule holds FC815 and the premium was paid up to the date of loss but no receipt signed by the Company was produced (Condition 2). The claims examiner decides (founder, 7 Nov 2026).",
+      "clause": "FC815",
+      "chunk_id": "CLAUSE-FC815",
+      "receipt_clause": "Condition 2",
+      "receipt_chunk_id": "CONDITION-2",
+      "facts": ["auto_renewal_clause_held", "premium_paid_to_date_of_loss", "company_receipt_produced"]
+    }
+  },
+
+  "gate_2": {
+    "about": "Proximate cause: the dominant effective cause, named by the underwriter from the adjuster's report. Gate 2 fails only when that cause is insured nowhere in the policy, base cover or any endorsement, held or not. Gates 4 and 5 test the endorsement that answers the cause.",
+    "required_facts": ["proximate_cause", "intervening_event"],
+    "base_chunk_id": "OPERATIVE-CLAUSE",
+    "causes": {
+      "fire":                   {"base": true,  "insured_by": []},
+      "lightning":              {"base": true,  "insured_by": []},
+      "storm":                  {"base": false, "insured_by": ["FP503"], "base_exclusion": "Condition 6(b)"},
+      "flood":                  {"base": false, "insured_by": ["FP504"], "base_exclusion": "Condition 6(b)"},
+      "earthquake":             {"base": false, "insured_by": ["FP502"], "base_exclusion": "Condition 6(a)"},
+      "aircraft":               {"base": false, "insured_by": ["FP501"]},
+      "explosion":              {"base": false, "insured_by": ["FP505A", "FP505B", "FP505C", "FP505D"], "base_exclusion": "Condition 8(h)"},
+      "impact":                 {"base": false, "insured_by": ["FP506A", "FP506B"]},
+      "burst_pipe":             {"base": false, "insured_by": ["FP507A", "FP507B"]},
+      "bush_fire":              {"base": false, "insured_by": ["FP509"], "base_exclusion": "Condition 8(i)"},
+      "subsidence_or_landslip": {"base": false, "insured_by": ["FP510", "FP510D"]},
+      "spontaneous_combustion": {"base": false, "insured_by": ["FP511A", "FP511B"]},
+      "riot":                   {"base": false, "insured_by": ["FP512A", "FP512B"], "base_exclusion": "Condition 6(d)"},
+      "malicious_damage":       {"base": false, "insured_by": ["FP512A", "FP512B"]},
+      "falling_tree":           {"base": false, "insured_by": ["FP513"]},
+      "electrical_fault":       {"base": false, "insured_by": [], "governing_if_held": ["FP508B", "FP508A.01"], "note": "Over-running, short-circuiting or burnout with no fire and no lightning. FP508A.01 and FP508B restrict cover for electrical machines; neither insures a breakdown."},
+      "mechanical_breakdown":   {"base": false, "insured_by": []},
+      "burglary_or_theft":      {"base": false, "insured_by": [], "note": "Theft is insured nowhere in the wording. Damage done maliciously by intruders is malicious_damage."}
+    }
+  },
+
+  "gate_3": {
+    "notice": {"clause": "Condition 12", "chunk_id": "CONDITION-12", "days": 15},
+    "fraud": {"clause": "Condition 15", "chunk_id": "CONDITION-15"},
+    "required_facts": ["date_of_loss", "written_claim_date", "extension_until", "false_declaration_or_fraud"]
+  },
+
+  "gate_4": {
+    "required_facts": ["endorsements_held"],
+    "variants": {
+      "FP507A": {"fact": "storeys_including_mezzanine", "fits": {"fact": "storeys_including_mezzanine", "op": ">", "value": 5}},
+      "FP507B": {"fact": "storeys_including_mezzanine", "fits": {"fact": "storeys_including_mezzanine", "op": "<=", "value": 5}},
+      "FP512A": {"fact": "residential", "fits": {"fact": "residential", "op": "==", "value": true}},
+      "FP512B": {"fact": "residential", "fits": {"fact": "residential", "op": "==", "value": false}}
+    }
+  },
+
+  "gate_5": {
+    "about": "For the endorsement that answers the cause: its own exclusions and special conditions first, then warranties, then Condition 9 changes without sanction, then Condition 4. The first test that fails governs; any other failing test is reported beside it.",
+    "endorsement_tests": {
+      "FP503": [
+        {"id": "FP503 Special Condition 1", "chunk_id": "ENDORSEMENT-FP503",
+         "facts": ["water_or_rain_damage_claimed", "wind_damaged_roof_or_walls_first"],
+         "fails_when": {"all": [{"fact": "water_or_rain_damage_claimed", "op": "==", "value": true},
+                                {"fact": "wind_damaged_roof_or_walls_first", "op": "==", "value": false}]},
+         "reason": "Rain or water damage is covered only where the wind first damaged the roof or walls and the water entered through those openings."}
+      ],
+      "FP504": [],
+      "FP506A": [
+        {"id": "FP506A", "chunk_id": "ENDORSEMENT-FP506A",
+         "facts": ["vehicle_belongs_to_insured"],
+         "fails_when": {"fact": "vehicle_belongs_to_insured", "op": "==", "value": true},
+         "reason": "FP506A covers impact by vehicles not belonging to or under the control of the Insured, his family or anyone in his service."}
+      ],
+      "FP506B": [],
+      "FP507A": [
+        {"id": "FP507A exclusion (a)", "chunk_id": "ENDORSEMENT-FP507A",
+         "facts": ["premises_untenanted"],
+         "fails_when": {"fact": "premises_untenanted", "op": "==", "value": true},
+         "reason": "Loss or damage caused whilst the premises are untenanted is excluded."},
+        {"id": "FP507A exclusion (b)", "chunk_id": "ENDORSEMENT-FP507A",
+         "facts": ["sprinkler_leakage"],
+         "fails_when": {"fact": "sprinkler_leakage", "op": "==", "value": true},
+         "reason": "Loss or damage by water discharged from an automatic sprinkler installation is excluded."},
+        {"id": "FP507A Special Condition 3", "chunk_id": "ENDORSEMENT-FP507A",
+         "facts": ["defect_notified_not_remedied"],
+         "fails_when": {"fact": "defect_notified_not_remedied", "op": "==", "value": true},
+         "reason": "No liability for damage caused by a defect the Insured failed to remedy after notice from the Company or any person or public body."}
+      ],
+      "FP507B": [
+        {"id": "FP507B exclusion (a)", "chunk_id": "ENDORSEMENT-FP507B",
+         "facts": ["premises_untenanted"],
+         "fails_when": {"fact": "premises_untenanted", "op": "==", "value": true},
+         "reason": "Loss or damage caused whilst the premises are untenanted is excluded."},
+        {"id": "FP507B exclusion (b)", "chunk_id": "ENDORSEMENT-FP507B",
+         "facts": ["sprinkler_leakage"],
+         "fails_when": {"fact": "sprinkler_leakage", "op": "==", "value": true},
+         "reason": "Loss or damage by water discharged from an automatic sprinkler installation is excluded."},
+        {"id": "FP507B Special Condition 3", "chunk_id": "ENDORSEMENT-FP507B",
+         "facts": ["defect_notified_not_remedied"],
+         "fails_when": {"fact": "defect_notified_not_remedied", "op": "==", "value": true},
+         "reason": "No liability for damage caused by a defect the Insured failed to remedy after notice from the Company or any person or public body."}
+      ],
+      "FP510": [
+        {"id": "FP510 exclusion (c)", "chunk_id": "ENDORSEMENT-FP510",
+         "facts": ["coastal_or_river_erosion", "demolition_or_structural_works", "defective_foundations"],
+         "fails_when": {"any": [{"fact": "coastal_or_river_erosion", "op": "==", "value": true},
+                                {"fact": "demolition_or_structural_works", "op": "==", "value": true},
+                                {"fact": "defective_foundations", "op": "==", "value": true}]},
+         "reason": "Loss or damage through coastal or river erosion, demolition or structural works, or defective foundations is excluded."}
+      ],
+      "FP512A": [
+        {"id": "FP512A malicious damage exclusion", "chunk_id": "ENDORSEMENT-FP512A", "only_for_cause": "malicious_damage",
+         "facts": ["in_course_of_housebreaking_or_theft"],
+         "fails_when": {"fact": "in_course_of_housebreaking_or_theft", "op": "==", "value": true},
+         "reason": "The malicious damage cover excludes loss or damage arising out of or in the course of burglary, housebreaking, theft or larceny, or caused by any person taking part therein."},
+        {"id": "FP512A Special Condition 6", "chunk_id": "ENDORSEMENT-FP512A",
+         "facts": ["popular_rising_or_terrorism"],
+         "fails_when": {"fact": "popular_rising_or_terrorism", "op": "==", "value": true},
+         "reason": "Civil commotion amounting to a popular rising, insurrection or terrorism is not covered."}
+      ],
+      "FP512B": [
+        {"id": "FP512B malicious damage exclusion", "chunk_id": "ENDORSEMENT-FP512B", "only_for_cause": "malicious_damage",
+         "facts": ["in_course_of_housebreaking_or_theft"],
+         "fails_when": {"fact": "in_course_of_housebreaking_or_theft", "op": "==", "value": true},
+         "reason": "The malicious damage cover excludes loss or damage arising out of or in the course of burglary, housebreaking, theft or larceny, or caused by any person taking part therein."},
+        {"id": "FP512B Special Condition 6", "chunk_id": "ENDORSEMENT-FP512B",
+         "facts": ["popular_rising_or_terrorism"],
+         "fails_when": {"fact": "popular_rising_or_terrorism", "op": "==", "value": true},
+         "reason": "Civil commotion amounting to a popular rising, insurrection or terrorism is not covered."}
+      ],
+      "FP513": [
+        {"id": "FP513", "chunk_id": "ENDORSEMENT-FP513",
+         "facts": ["tree_or_branch_struck_insured_property"],
+         "fails_when": {"fact": "tree_or_branch_struck_insured_property", "op": "==", "value": false},
+         "reason": "FP513 covers damage to the property described in the Schedule, or its walls, gates and fences, directly resulting from damage by falling trees or branches. The tree must strike that property."}
+      ]
+    },
+    "warranty_test": {"id": "Warranty", "chunk_id": null,
+      "facts": ["warranty_breached"],
+      "fails_when": {"fact": "warranty_breached", "op": "==", "value": true},
+      "reason": "A warranty on the schedule was breached."},
+    "condition_9": [
+      {"id": "Condition 9(a)", "chunk_id": "CONDITION-9",
+       "facts": ["occupation_changed_increasing_risk", "sanction_endorsed"],
+       "fails_when": {"all": [{"fact": "occupation_changed_increasing_risk", "op": "==", "value": true},
+                              {"fact": "sanction_endorsed", "op": "==", "value": false}]},
+       "reason": "The trade or occupation changed in a way that increased the risk of fire, with no sanction of the Company endorsed on the policy."},
+      {"id": "Condition 9(b)", "chunk_id": "CONDITION-9",
+       "facts": ["unoccupied_days", "sanction_endorsed"],
+       "fails_when": {"all": [{"fact": "unoccupied_days", "op": ">", "value": 30},
+                              {"fact": "sanction_endorsed", "op": "==", "value": false}]},
+       "reason": "The building was unoccupied for more than thirty days, with no sanction of the Company endorsed on the policy."},
+      {"id": "Condition 9(d)", "chunk_id": "CONDITION-9",
+       "facts": ["interest_passed_not_by_will_or_law", "sanction_endorsed"],
+       "fails_when": {"all": [{"fact": "interest_passed_not_by_will_or_law", "op": "==", "value": true},
+                              {"fact": "sanction_endorsed", "op": "==", "value": false}]},
+       "reason": "The interest in the property passed from the Insured otherwise than by will or operation of law, with no sanction of the Company endorsed on the policy."}
+    ],
+    "condition_4": {"id": "Condition 4", "chunk_id": "CONDITION-4",
+      "optional_fact": "fall_or_displacement",
+      "facts": ["fall_or_displacement", "displacement_caused_by_insured_peril", "displaced_part_isolated"],
+      "fails_when": {"all": [{"fact": "fall_or_displacement", "op": "==", "value": true},
+                             {"fact": "displacement_caused_by_insured_peril", "op": "==", "value": false},
+                             {"fact": "displaced_part_isolated", "op": "==", "value": false}]},
+      "reason": "The insurance ceases on a material fall or displacement of the building not caused by an insured peril. It does not apply where the displaced part is a partitioned space isolated from the rest of the building (founder, 7 Nov 2026)."},
+    "required_facts": ["warranty_breached", "occupation_changed_increasing_risk", "unoccupied_days", "interest_passed_not_by_will_or_law", "sanction_endorsed"]
+  },
+
+  "gate_6": {
+    "about": "Each item claimed carries a category the underwriter reads from the adjuster's measurement. Code decides from the category and the clause that answers the cause whether the item is admitted, and under which excess group. Gate 6 fails when no item is admitted.",
+    "categories": {
+      "insured_damage": {"treatment": "covered"},
+      "mitigation_expense": {"treatment": "covered", "flag": "Mitigation expenditure admitted with the group it protected; for the claims examiner to confirm."},
+      "falling_tree_damage": {"treatment": "covered", "group": "FP513", "requires_held": "FP513"},
+      "not_property_insured": {"treatment": "excluded", "clause": "Operative clause (Property Insured described in the Schedule)", "chunk_id": "OPERATIVE-CLAUSE"},
+      "not_caused_by_event": {"treatment": "excluded", "clause": "{answer} (damage not caused by the insured event)", "chunk_id": "{answer_chunk}"},
+      "consequential_loss": {"treatment": "excluded", "by_answer": {
+        "BASE":   {"clause": "Operative clause (actual value of the Property Insured)", "chunk_id": "OPERATIVE-CLAUSE"},
+        "FP503":  {"clause": "FP503 Special Condition 2(a)", "chunk_id": "ENDORSEMENT-FP503"},
+        "FP504":  {"clause": "FP504 Special Condition 1(a)", "chunk_id": "ENDORSEMENT-FP504"},
+        "FP507A": {"clause": "FP507A Special Condition 2", "chunk_id": "ENDORSEMENT-FP507A"},
+        "FP507B": {"clause": "FP507B Special Condition 2", "chunk_id": "ENDORSEMENT-FP507B"},
+        "FP512A": {"clause": "FP512A substituted Condition 5(a)", "chunk_id": "ENDORSEMENT-FP512A"},
+        "FP512B": {"clause": "FP512B substituted Condition 5(a)", "chunk_id": "ENDORSEMENT-FP512B"}}},
+      "money_or_documents": {"treatment": "excluded", "by_answer": {
+        "default": {"clause": "Condition 8(e)", "chunk_id": "CONDITION-8"},
+        "FP512A":  {"clause": "FP512A substituted Condition 8(e)", "chunk_id": "ENDORSEMENT-FP512A"},
+        "FP512B":  {"clause": "FP512B substituted Condition 8(e)", "chunk_id": "ENDORSEMENT-FP512B"}}},
+      "stolen_property": {"treatment": "excluded", "by_answer": {
+        "default": {"clause": "Operative clause (theft is not an insured peril)", "chunk_id": "OPERATIVE-CLAUSE"},
+        "FP512A":  {"clause": "FP512A malicious damage exclusion (theft)", "chunk_id": "ENDORSEMENT-FP512A"},
+        "FP512B":  {"clause": "FP512B malicious damage exclusion (theft)", "chunk_id": "ENDORSEMENT-FP512B"}}},
+      "outdoor_fixture": {"by_answer": {
+        "default": {"treatment": "covered"},
+        "FP503":   {"treatment": "excluded", "clause": "FP503 Special Condition 4(a)", "chunk_id": "ENDORSEMENT-FP503"},
+        "FP504":   {"treatment": "excluded", "clause": "FP504 Special Condition 3", "chunk_id": "ENDORSEMENT-FP504"}}},
+      "subsidence_or_landslip_damage": {"by_answer": {
+        "default": {"treatment": "covered"},
+        "FP503":   {"treatment": "excluded", "clause": "FP503 Special Condition 2(c)", "chunk_id": "ENDORSEMENT-FP503"},
+        "FP504":   {"treatment": "excluded", "clause": "FP504 Special Condition 1(c)", "chunk_id": "ENDORSEMENT-FP504"}}},
+      "electrical_machine_where_fault_began": {"by_held": {
+        "default":   {"treatment": "covered"},
+        "FP508A.01": {"treatment": "excluded", "clause": "FP508A.01", "chunk_id": "ENDORSEMENT-FP508A.01"},
+        "FP508B":    {"treatment": "excluded", "clause": "FP508B", "chunk_id": "ENDORSEMENT-FP508B"}}},
+      "electrical_damage_by_lightning": {"by_held": {
+        "default":   {"treatment": "covered"},
+        "FP508A.01": {"treatment": "excluded", "clause": "FP508A.01", "chunk_id": "ENDORSEMENT-FP508A.01"},
+        "FP508B":    {"treatment": "covered", "note": "FP508B keeps cover where the damage is caused by lightning."}}}
+    }
+  },
+
+  "payable": {
+    "not_priced_after_gate": {
+      "1": "No policy in force on the date of loss, so there is no cover to price.",
+      "2": "The proximate cause is insured nowhere in the policy, so there is no cover to price at any figure.",
+      "4": "The endorsement that answers the cause is not held, so there is no cover to price at any figure."
+    },
+    "excess_group_by_answer": {
+      "BASE": "BASE", "FP503": "FP503", "FP504": "FP504", "FP506A": "FP506A", "FP507A": "FP507A", "FP507B": "FP507B",
+      "FP510": "FP510", "FP512A": "FP512A", "FP512B": "FP512B", "FP513": "FP513"
+    }
+  }
+}
