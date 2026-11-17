@@ -1,0 +1,55 @@
+{
+ "cap_usd": 2.0,
+ "total_usd": 0.30619,
+ "runs": [
+  {
+   "run_id": "20261117-112718-sample-haiku",
+   "model": "claude-haiku-5-5",
+   "cases": 3,
+   "repeat": 1,
+   "cost_usd": 0.02285
+  },
+  {
+   "run_id": "20261117-113731-sample-haiku",
+   "model": "claude-haiku-5-5",
+   "cases": 3,
+   "repeat": 1,
+   "cost_usd": 0.02276
+  },
+  {
+   "run_id": "20261117-114332-sample-haiku",
+   "model": "claude-haiku-5-5",
+   "cases": 3,
+   "repeat": 1,
+   "cost_usd": 0.00934
+  },
+  {
+   "run_id": "20261117-114923-only-haiku",
+   "model": "claude-haiku-5-5",
+   "cases": 20,
+   "repeat": 2,
+   "cost_usd": 0.10939
+  },
+  {
+   "run_id": "20261117-121038-only-haiku",
+   "model": "claude-haiku-5-5",
+   "cases": 3,
+   "repeat": 2,
+   "cost_usd": 0.01946
+  },
+  {
+   "run_id": "20261117-121646-only-haiku",
+   "model": "claude-haiku-5-5",
+   "cases": 20,
+   "repeat": 2,
+   "cost_usd": 0.12011
+  },
+  {
+   "run_id": "20261117-123720-only-haiku",
+   "model": "claude-haiku-5-5",
+   "cases": 1,
+   "repeat": 1,
+   "cost_usd": 0.00228
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "source": "results-20261117-112718-sample-haiku.json",
+ "source_mtime": 1794886205,
+ "written": "2026-11-17 11:30:05",
+ "kind": "sample",
+ "build": "aaaec166b85a77bc",
+ "model": "claude-haiku-5-5",
+ "cases": {
+  "1": [
+   true
+  ],
+  "5": [
+   false
+  ],
+  "H1": [
+   true
+  ]
+ }
+}

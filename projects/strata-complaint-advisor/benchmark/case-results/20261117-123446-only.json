@@ -1,0 +1,90 @@
+{
+ "source": "results-20261117-121646-only-haiku.json",
+ "source_mtime": 1794890074,
+ "written": "2026-11-17 12:34:46",
+ "kind": "only",
+ "build": "0f27ea9203a658c6",
+ "model": "claude-haiku-5-5",
+ "cases": {
+  "1": [
+   true,
+   true
+  ],
+  "2": [
+   true,
+   true
+  ],
+  "3": [
+   true,
+   true
+  ],
+  "4": [
+   true,
+   true
+  ],
+  "5": [
+   true,
+   true
+  ],
+  "6": [
+   true,
+   true
+  ],
+  "7": [
+   true,
+   true
+  ],
+  "8": [
+   true,
+   true
+  ],
+  "9": [
+   true,
+   true
+  ],
+  "10": [
+   true,
+   true
+  ],
+  "11": [
+   true,
+   true
+  ],
+  "12": [
+   true,
+   true
+  ],
+  "13": [
+   true,
+   true
+  ],
+  "14": [
+   true,
+   true
+  ],
+  "15": [
+   true,
+   true
+  ],
+  "H1": [
+   true,
+   true
+  ],
+  "H2": [
+   true,
+   false
+  ],
+  "H3": [
+   true,
+   true
+  ],
+  "H4": [
+   true,
+   true
+  ],
+  "H5": [
+   true,
+   true
+  ]
+ }
+}

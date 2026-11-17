@@ -1,0 +1,14 @@
+{
+  "results_glob": "results*.json",
+  "cases_path": "results",
+  "id_field": "id",
+  "pass_path": "score.pass",
+  "model_path": "summary.model",
+  "cases_file": "benchmark/cases.json",
+  "cases_list": "cases",
+  "case_id_field": "id",
+  "case_tools_field": "expect.tools",
+  "prompt_files": ["prompt.py"],
+  "prompt_resources": ["corpus/building/complaint-sop.md"],
+  "code_files": ["mcp_server.py", "engine/*.py", "agent.py"]
+}

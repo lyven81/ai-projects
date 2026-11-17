@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strata Complaint Advisor</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#1f2a36;--muted:#5b6878;--line:#dbe2ea;--navy:#243b53;--accent:#2f6fb0;--box:#f8fafc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}}
+:root[data-theme="dark"]{--bg:#12171d;--card:#1a2129;--ink:#e3e8ee;--muted:#9aa7b5;--line:#2c3743;--navy:#9cc1e6;--accent:#6aa7e0;--box:#141a21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.65 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px;z-index:2}
+.top h1{font-size:22px;margin:0;color:var(--navy)}
+nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;margin-top:6px}
+nav a{color:var(--accent);text-decoration:none}
+nav .br{flex-basis:100%;height:0}
+h2{font-size:18px;color:var(--navy);margin:34px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--line)}
+h3{font-size:15.5px;color:var(--navy);margin:22px 0 6px}
+h3+p,h3+p+p,h3+p+p+p,h3+p+p+p+p,h3+p+p+p+p+p{background:var(--card);border-left:3px solid var(--accent);margin:0;padding:6px 14px}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--box);color:var(--navy)}
+.tw{overflow-x:auto}
+code{background:var(--box);border:1px solid var(--line);border-radius:4px;padding:0 4px;font-size:13px}
+hr{border:none}
+ul,ol{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 32px}
+footer{margin-top:36px;font-size:12px;color:var(--muted)}
+pre{background:var(--box);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:6px 0 14px}
+pre code{background:none;border:0;padding:0;font-size:inherit}
+.muted{color:var(--muted);font-size:13px}
+.cover{width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0 10px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.tabbtn{font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer}
+.tabbtn.on{background:var(--navy);border-color:var(--navy);color:var(--bg)}
+.linkbtn{font-size:14px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none}
+.linkbtn.primary{background:var(--accent);color:#fff}
+.bar .gap{flex:1}
+.cta{display:flex;flex-wrap:wrap;gap:10px;background:none!important;border:0!important;padding:0!important}
+.panel{display:none}.panel.on{display:block}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin:8px 0}
+.arch .ar{display:flex;gap:12px;flex-wrap:wrap}
+.arch .ab{flex:1 1 200px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--box);text-align:center}
+.arch .ab b{display:block;color:var(--navy);font-size:14.5px}
+.arch .ab span{display:block;font-size:13px;color:var(--muted);line-height:1.4;margin-top:2px}
+.arch .who{border-color:var(--muted)}.arch .ai{border-color:#7650c4}.arch .code{border-color:var(--accent)}
+.arch .read{border-color:var(--accent);border-style:dashed}.arch .data{border-color:var(--navy)}.arch .person{border-color:#c0620c}
+.arch .ad{display:flex;flex-direction:column;align-items:center;margin:4px 0}
+.arch .ad::before{content:"";width:2px;height:14px;background:var(--accent)}
+.arch .ad::after{content:"";border:6px solid transparent;border-top:7px solid var(--accent);border-bottom:0}
+.arch .ad em{font-style:normal;font-size:12px;color:var(--muted);order:-1;margin-bottom:2px}
+</style>
+</head>
+<body>
+<!-- At a Glance, machine-readable: the CV entry, cover letters and the Proof library copy these lines verbatim (checked by the sprint hook). -->
+<script type="application/json" id="glance">{
+  "glance": {
+    "valueProposition": "Information and Decision Support",
+    "problemType": "RAG pipelines and knowledge assistant",
+    "problem": "A condominium's admin officer answers complaints that turn on the Act, the Regulations, the by-laws and the house rules at once. A wrong citation, a fine nobody approved, or a neighbour blamed before anyone checked turns a complaint into a dispute.",
+    "built": "An AI advisor reads each complaint, finds the rules that apply in the building's documents, and drafts the facts to ask for, the next steps and a reply. Code masks personal numbers, hands emergencies to the building manager before any AI call, and checks every citation, fine or payment amount, and handover reason before the officer sees it.",
+    "evidence": "19 of 20 sample complaints passed in both runs, and the remaining one passed in a third run. 54 automated checks run without the AI and cover each tool and every reason the check sends a draft back. Before real users, Version 1 still needs sign-in, a security review, a named owner for monitoring, and the building's own approved documents."
+  }
+}</script>
+<div class="wrap">
+<div id="sitenav" data-active="project:strata-complaint-advisor"></div>
+<div class="top"><h1>Strata Complaint Advisor</h1>
+<div class="bar"><button class="tabbtn on" data-tab="overview">Project overview</button><button class="tabbtn" data-tab="source">Technical Implementation</button><span class="gap"></span><a class="linkbtn primary" href="projects/strata-complaint-advisor/demo.html" target="_blank" rel="noopener">Live demo</a><a class="linkbtn" href="https://github.com/lyven81/ai-projects/tree/main/projects/strata-complaint-advisor" target="_blank" rel="noopener">GitHub</a></div>
+<nav id="toc"></nav></div>
+<div class="panel on" id="overview">
+<p class="muted">By Lee Yih Ven · Published 17 November 2026</p>
+<img class="cover" src="images/strata-complaint-advisor/cover.jpeg" alt="Cover image of the Strata Complaint Advisor: a resident explains a concern at the management office counter while the admin officer listens and consults an assistant beside the desk">
+<p>Designed for the management office of Amber Residences, a condominium of four blocks and 608 units under one management corporation. The admin officer receives complaints about noise, parking, leaks, renovation and charges, and each one turns on the Strata Management Act, its Regulations, the building's by-laws and its house rules. A wrong citation, a fine nobody approved, or a neighbour blamed before anyone checked can turn a complaint into a dispute.</p>
+<p>I built an advisor the officer opens before acting on a complaint: the AI finds the rules that apply and drafts what to ask, what to do and what to reply. Code masks MyKad and phone numbers and checks every draft before the officer sees it. The advisor never speaks to residents.</p>
+<p>The officer edits and sends every reply, and the building manager decides fines, payments and disputes. In testing, the advisor passed 19 of 20 sample complaints in both runs, covering answers from the documents, handovers and an emergency, and passed the remaining complaint in a third run. Try each complaint on the <a href="projects/strata-complaint-advisor/demo.html" target="_blank" rel="noopener">advisor screen</a>.</p>
+<h2>Watch the 60-second overview</h2>
+<video class="cover" controls preload="metadata" playsinline poster="images/strata-complaint-advisor/overview-poster.jpg"><source src="images/strata-complaint-advisor/overview-video.mp4" type="video/mp4">Your browser cannot play this video. <a href="images/strata-complaint-advisor/overview-video.mp4">Download the 60-second overview</a>.</video>
+<p class="muted">See how the AI finds the rules and drafts the guidance, code masks numbers and checks every draft, and the officer decides what to send.</p>
+<h2>At a Glance</h2>
+<table><tr><th>Value proposition</th><td>Information and Decision Support</td></tr><tr><th>Problem type</th><td>RAG pipelines and knowledge assistant</td></tr><tr><th>Problem</th><td>A condominium's admin officer answers complaints that turn on the Act, the Regulations, the by-laws and the house rules at once. A wrong citation, a fine nobody approved, or a neighbour blamed before anyone checked turns a complaint into a dispute.</td></tr><tr><th>Built</th><td>An AI advisor reads each complaint, finds the rules that apply in the building's documents, and drafts the facts to ask for, the next steps and a reply. Code masks personal numbers, hands emergencies to the building manager before any AI call, and checks every citation, fine or payment amount, and handover reason before the officer sees it.</td></tr><tr><th>Evidence</th><td>19 of 20 sample complaints passed in both runs, and the remaining one passed in a third run. 54 automated checks run without the AI and cover each tool and every reason the check sends a draft back. Before real users, Version 1 still needs sign-in, a security review, a named owner for monitoring, and the building's own approved documents.</td></tr></table>
+<h2>One Complaint, From the Screen to the Reply</h2>
+<p>One complaint from the officer's screen to the reply: loud music after 11 p.m. The branch below shows an emergency from another complaint. Each search and the check sending a draft back are left out here; see the Technical tab and the screen's Under the hood tab.</p>
+<div class="wf"><script type="application/json">{"id":"sca","hz":{"nodes":[{"id":"c1","r":1,"c":1,"b":["c","Officer opens the complaint","Loud music after 11 p.m., reported by WhatsApp."]},{"id":"s1","r":1,"c":2,"b":["s","Masks numbers, checks for danger","Phone number masked; no emergency words."]},{"id":"a1","r":1,"c":3,"b":["a","Finds the rules, drafts guidance","Nuisance by-law and quiet hours house rule; asks for time and duration."]},{"id":"s2","r":1,"c":4,"b":["s","Checks the guidance","Citations, quotes, fine or payment amounts, breach wording, handover reason."]},{"id":"p1","r":1,"c":5,"b":["p","Officer edits and sends","Any site check or notice is the office's decision."]},{"id":"o1","r":2,"c":2,"b":["o","Sent to the building manager now","Note written in code; no AI call."]}],"edges":[["c1","s1"],["s1","a1"],["a1","s2"],["s2","p1","Checks passed"],["s1","o1","Emergency words"]]},"rows":[{"c":["c","Officer opens the complaint","Loud music after 11 p.m., reported by WhatsApp."]},{"down":""},{"c":["s","Masks numbers, checks for danger","Phone number masked; no emergency words."],"r":{"t":"Emergency words","b":[["o","Sent to the building manager now","Note written in code; no AI call."]]}},{"down":""},{"c":["a","Finds the rules, drafts guidance","Nuisance by-law and quiet hours house rule; asks for time and duration."]},{"down":""},{"c":["s","Checks the guidance","Citations, quotes, fine or payment amounts, breach wording, handover reason."]},{"down":"Checks passed"},{"c":["p","Officer edits and sends","Any site check or notice is the office's decision."]}]}</script></div>
+<ol><li>The admin officer opens the complaint on the screen. Code masks MyKad and phone numbers and checks for emergency words. An emergency goes straight to the building manager, with the note written in code and no AI call.</li><li>The AI advisor searches the building's documents and the law above them, in order of precedence. It drafts the guidance: Incident · Check · Act · Reply · Escalate.</li><li>Code checks every citation and quote, any fine or payment amount, any breach wording and the handover reason before the officer sees the guidance.</li><li>The officer reads the guidance, opens any rule it cites, edits the reply and sends it through the office's own channels. Any site check or notice is the officer's call; fines, payments and disputes go to the building manager.</li></ol>
+<h2>What It Does for the Management Office</h2>
+<h3>The rule that governs, cited from the documents</h3>
+<p>The advisor searches the building's documents and the law above them in order of precedence: the Act, then the Regulations and their by-laws, then the building's own by-laws, then the house rules. Where two documents differ it says which one governs, as when the building's sinking fund rate falls below the Act's minimum of ten per cent of the charges. Every citation opens its passage, with its page and the date it took effect.</p>
+<h3>A report, never a verdict</h3>
+<p>A complaint is treated as a report until staff have checked it, so the advisor asks for the facts still missing and the reply never names the reported unit. Code sends back any guidance that says a rule was broken while facts are missing. It also sends back a promised fine or payment, and any fine or payment amount that no rule retrieved for this complaint states.</p>
+<h3>Five reasons to hand over, and an emergency first</h3>
+<p>The advisor hands a complaint to the building manager for five reasons only: a fine the documents do not support, money or compensation, a legal dispute, an emergency, or a complaint about the management. Every handover note is assembled in code, with the facts collected, the facts missing, the rules cited and the steps already suggested.</p>
+<h2>What the Tests Show</h2>
+<p>A resident demanded a RM 1,000 fine for a neighbour's weekend karaoke. The documents allow the building a RM 50 fine set by a general meeting, within the Act's cap of RM 200, so the advisor handed the case to the building manager. Its first draft named the RM 1,000 and the check sent it back; the reply the officer received names no amount.</p>
+<p>Each complaint was scored from the tool log and the guidance the check accepted, against an <a href="projects/strata-complaint-advisor/answer-key.html" target="_blank" rel="noopener">answer key</a> written before the build and reviewed in a separate session by a reviewer that did not see the build. All 20 complaints ran twice, and 19 passed both runs. The remaining one passed in the third run, which covers only the cases that failed.</p>
+<table><tr><th>Test category</th><th>What it checks</th><th>Passed</th><th>One example</th></tr>
+<tr><td><b>A. Answered from the documents</b></td><td>The advisor cites the rules that apply, asks for the facts still missing and drafts the reply; no handover.</td><td>15 of 15</td><td>A bill with a sinking fund of RM 12 on RM 200 of charges: the advisor cited the building's by-law and the Act, and said the Act governs.</td></tr>
+<tr><td><b>B. Handed to the building manager</b></td><td>One of the office's five handover reasons applies, and the note carries the facts, the rules and the steps so far.</td><td>3 of 4</td><td>A resident said the night guard was rude and let visitors in unregistered: handed over as a complaint about the management.</td></tr>
+<tr><td><b>C. Emergency caught by code</b></td><td>Danger words hand the complaint to the building manager before any AI call.</td><td>1 of 1</td><td>Water gushing from a kitchen ceiling went straight to the building manager with urgency now, and no AI call was made.</td></tr></table>
+<p>A further 54 automated checks run without any AI call, and all pass: they cover each step the advisor can take, every reason the check sends a draft back, the masking and the emergency check. The benchmark runs 42 of them before any paid run.</p>
+<p>These tests show the advisor cites the rule that governs, asks for the facts a complaint is missing before it names a breach, and hands over for the right reason, while an emergency never reaches the AI. Time saved per complaint, and how often officers send the draft reply unchanged, are what a working management office would measure.</p>
+<h2>Try It Yourself</h2>
+<table><tr><th>Page</th><th>What you can do</th></tr>
+<tr><td><b><a href="projects/strata-complaint-advisor/demo.html" target="_blank" rel="noopener">Advisor screen</a></b></td><td>Pick any of the 20 sample complaints, see the unit on the building map, and read the guidance (Incident · Check · Act · Reply · Escalate) as the check accepted it in the recorded run. Under the hood replays every search and check. No key needed.</td></tr>
+<tr><td><b><a href="projects/strata-complaint-advisor/answer-key.html" target="_blank" rel="noopener">Answer Key</a></b></td><td>What the advisor must do on each complaint, why, and how each run scored it.</td></tr>
+<tr><td><b><a href="projects/strata-complaint-advisor/documents.html" target="_blank" rel="noopener">Building documents</a></b></td><td>Every passage the advisor can cite, with its tier, number, page and effective date.</td></tr></table>
+<h3>About the live chat key</h3>
+<p>To run your own complaints, clone the repository and run <code>python serve.py</code> with your own Anthropic API key; that account is billed for every review, so use a key with a spending limit. A public service would hold the key on its own server and sign the officer in.</p>
+<h2>Next Step</h2>
+<p>The advisor is designed to give a building's admin officer guidance that cites the right rule, asks before it blames, and leaves every decision with the office. If that fits your management office, or you are evaluating the work, try the advisor screen or message me.</p>
+<p class="cta"><a class="linkbtn primary" href="projects/strata-complaint-advisor/demo.html" target="_blank" rel="noopener">Try the demo</a><a class="linkbtn" href="https://wa.me/60149207099" target="_blank" rel="noopener">Discuss a project on WhatsApp</a></p>
+</div>
+<div class="panel" id="source">
+<h2>Architecture and Technology</h2>
+<div class="arch" role="img" aria-label="The admin officer opens a complaint. Code masks personal numbers and checks for emergency words before any AI call. The AI advisor calls four tools on the MCP server beside four read-only resources. The tools reach retrieval over the building's documents and the check on the guidance. The officer reads the guidance and sends the reply; the building manager receives any handover.">
+<div class="ar"><div class="ab who"><b>Admin officer</b><span>Opens a complaint on the advisor screen</span></div></div>
+<div class="ad"><em>the complaint</em></div>
+<div class="ar"><div class="ab code"><b>Intake, in code</b><span>Masks MyKad and phone numbers; emergency words go to the building manager</span></div></div>
+<div class="ad"><em>masked text</em></div>
+<div class="ar"><div class="ab ai"><b>AI advisor, Claude Haiku 5.5</b><span>Searches the documents, drafts Incident · Check · Act · Reply · Escalate</span></div></div>
+<div class="ad"><em>four tools</em></div>
+<div class="ar"><div class="ab code"><b>MCP server: four tools</b><span>search_rules, get_rule, get_template, submit_guidance</span></div><div class="ab read"><b>Four resources</b><span>complaint intake, complaint, SOP, rule</span></div></div>
+<div class="ad"></div>
+<div class="ar"><div class="ab data"><b>Retrieval and documents</b><span>75 passages; vector, keyword and type pools, rerank, precedence</span></div><div class="ab code"><b>The check</b><span>Citations, quotes, amounts, breach wording, handover reason</span></div></div>
+<div class="ad"><em>guidance recorded</em></div>
+<div class="ar"><div class="ab person"><b>Admin officer</b><span>Edits and sends the reply</span></div><div class="ab person"><b>Building manager</b><span>Receives the handover note</span></div></div>
+</div>
+<table><tr><th>Layer</th><th>Components</th></tr>
+<tr><td><b>Before the AI</b></td><td>MyKad and phone masking · emergency words with a handover note written in code · the unit register (608 units, 464 occupied) for the unit context</td></tr>
+<tr><td><b>Agent</b></td><td>Claude Haiku 5.5 · one advisor, one short prompt · Anthropic SDK (Python), manual tool loop, 16-turn limit · effort medium · prompt caching</td></tr>
+<tr><td><b>MCP server</b></td><td>Python <code>mcp</code> package, stdio · four resources · four tools · one result shape <code>{tool, status, data, error, next_step}</code> · a log of every call per complaint</td></tr>
+<tr><td><b>Retrieval</b></td><td>Qdrant (in memory) with all-MiniLM-L6-v2 · a keyword (BM25) pool beside the vector pool · a complaint-type pool · cross-encoder rerank (ms-marco-MiniLM-L-6-v2) scored paragraph by paragraph · precedence by document tier</td></tr>
+<tr><td><b>Documents</b></td><td>75 passages: 6 the Act, 30 Third Schedule by-laws, 10 the Regulations, 9 additional by-laws, 7 house rules (one a draft never adopted), 8 SOP steps, 5 reply templates. Only approved documents are searched; the draft house rule HR-7 is never returned</td></tr>
+<tr><td><b>Pages</b></td><td>The advisor screen (replay of the recorded runs; live mode on your own machine with <code>serve.py</code>), the building documents and the answer key, built by Python · GitHub Pages</td></tr></table>
+<p><b>One agent.</b> The officer needs one adviser whose guidance traces back to the building's rules, and some rules must hold on every complaint whatever the AI drafts. So one advisor reads the complaint and advises the officer, and the masking, the emergency check, precedence and the check on the guidance sit in code beside it.</p>
+<h2>Tools, Resources and Workflow</h2>
+<h3>How the AI works</h3>
+<p>Before any AI call, the loop reads the complaint's intake record; an emergency ends there with the note written in code. Otherwise the advisor gets the complaint and the building's complaint SOP, searches the documents, and submits its guidance. The loop ends when the guidance is recorded, when the check rejects it after two retries, or at 16 turns.</p>
+<h3>Who produces each part of the guidance</h3>
+<table><tr><th>Part of the guidance</th><th>Produced by</th></tr><tr><td>Masking and the emergency check</td><td>Code: <code>engine/intake.py</code>, before any AI call</td></tr><tr><td>Incident: facts known and still missing</td><td>The AI, from the complaint and the SOP's facts by complaint type</td></tr><tr><td>Check: the rules that apply</td><td>Retrieval returns them in precedence order; the AI chooses and explains; the check holds every citation and quote</td></tr><tr><td>Act: next steps</td><td>The AI, each tied to an SOP step the check recognises</td></tr><tr><td>Reply: the draft</td><td>The AI; the sign-off is added in code</td></tr><tr><td>Escalate: the handover note</td><td>The AI names the reason from the fixed list; code assembles the note</td></tr><tr><td>Sending the reply, any action</td><td>The admin officer and the building manager</td></tr></table>
+<h3>Resources and tools</h3>
+<table><tr><th>Resource (read)</th><th>Holds</th></tr><tr><td><code>complaint://{complaint_id}/intake</code></td><td>The intake record the loop reads before any AI call: the masked text, the unit, and any emergency words with the handover note.</td></tr><tr><td><code>complaint://{complaint_id}</code></td><td>The complaint as the advisor reads it: masked, with the complainant's unit and any reported source unit from the register, marked unverified.</td></tr><tr><td><code>sop://complaint</code></td><td>The building's complaint SOP: the eight steps, the five handover reasons and the facts to collect by complaint type.</td></tr><tr><td><code>rule://{code}</code></td><td>One passage with its document, number, page and effective date.</td></tr></table>
+<table><tr><th>Tool (act)</th><th>Does</th><th>Structured errors (from the code)</th></tr><tr><td><code>search_rules</code></td><td>Searches the building's documents for a query and a complaint type. Returns passages with code, tier, document, number, page and text, on-topic passages first in precedence order, plus the facts the SOP asks to collect for that type.</td><td><code>unknown_complaint</code> <code>search_unavailable (retryable)</code></td></tr><tr><td><code>get_rule</code></td><td>Returns one passage by its code and makes it citable for this complaint.</td><td><code>unknown_rule</code></td></tr><tr><td><code>get_template</code></td><td>Returns an approved reply template by name.</td><td><code>unknown_template</code> <code>template_not_approved</code></td></tr><tr><td><code>submit_guidance</code></td><td>Records the guidance once the check passes it, adds the office's sign-off and assembles any handover note in code. Two retries, each with the failing line named.</td><td><code>missing_field</code> <code>rule_not_retrieved</code> <code>quote_mismatch</code> <code>unsupported_penalty</code> <code>promised_outcome</code> <code>names_other_party</code> <code>breach_before_facts</code> <code>unknown_sop_step</code> <code>invalid_handover_reason</code> <code>precedence_mismatch</code> <code>retries_exhausted</code></td></tr></table>
+<p>A search that finds nothing returns status <code>empty</code>, a valid answer. A search that cannot run returns <code>search_unavailable</code>, marked retryable. No tool sends anything to a resident or decides a complaint. To see the calls for any complaint, open Under the hood on the <a href="projects/strata-complaint-advisor/demo.html" target="_blank" rel="noopener">advisor screen</a>.</p>
+<h2>Security and Business Rules</h2>
+<table><tr><th>Business problem</th><th>Design choice</th><th>Where in the code</th></tr><tr><td>A building's by-law and the Act can set different terms on the same point, and a search by similarity returns both side by side.</td><td>Passages on the complaint's topic are ordered by precedence in code (the Act, then the Regulations and the Third Schedule, then the additional by-laws, then the house rules), and the check refuses a conflict resolved in favour of the lower document.</td><td><code>engine/retrieval.py</code> <code>PRECEDENCE</code>; <code>engine/guard.py</code> <code>precedence_mismatch</code></td></tr><tr><td>A rule quoted with confidence but never looked up misleads the officer and the resident.</td><td>Every cited rule must have been returned for this complaint, and every quote must be word for word in its passage.</td><td><code>engine/guard.py</code> <code>rule_not_retrieved</code>, <code>quote_mismatch</code></td></tr><tr><td>A fine or a payment promised in a reply binds the office before anyone has decided it.</td><td>An amount named with a fine, penalty or payment must be in a retrieved passage, and a promise of a fine, refund or payment is sent back.</td><td><code>engine/guard.py</code> <code>unsupported_penalty</code>, <code>promised_outcome</code></td></tr><tr><td>A complaint is an allegation; calling it a breach before staff check turns it into a dispute.</td><td>Breach wording is sent back while facts are still missing, and a reply that names the reported unit is sent back.</td><td><code>engine/guard.py</code> <code>breach_before_facts</code>, <code>names_other_party</code></td></tr><tr><td>Personal numbers in a complaint should not reach a model or a log.</td><td>MyKad and phone numbers are masked before the text reaches the model, the log or the replay.</td><td><code>engine/intake.py</code> <code>mask</code></td></tr><tr><td>An emergency cannot wait for an AI to read it.</td><td>Fixed danger words hand the complaint to the building manager at once, with the note written in code and no AI call.</td><td><code>engine/intake.py</code> <code>EMERGENCY</code>; <code>engine/complaint_file.py</code> <code>emergency_note</code></td></tr><tr><td>A handover sent for the wrong reason, or with half the facts, wastes the building manager's time.</td><td>Handover reasons come from a fixed list in the SOP, and the note is assembled in code from the accepted guidance.</td><td><code>rules/sop_steps.json</code>; <code>engine/complaint_file.py</code> <code>handover_note</code></td></tr><tr><td>A draft rule, or a document not yet in force, must never be cited as the building's rule.</td><td>The search and the rule fetch the AI uses return only approved documents, so the draft house rule (HR-7, never adopted) is never returned to it; a no-key test checks both.</td><td><code>engine/retrieval.py</code> <code>eligible</code>; <code>engine/rule_search.py</code> <code>lookup</code></td></tr></table>
+<h3>Safeguards</h3>
+<p>Three test complaints carry planted MyKad and phone numbers to test masking. The legal text is the English Strata Management Act 2013 and the 2015 Regulations, the sections the complaints need, each passage with its page (<a href="projects/strata-complaint-advisor/documents.html" target="_blank" rel="noopener">building documents</a>).</p>
+<h2>Code Walkthrough</h2><h3>Precedence: the Document That Governs Ranks First</h3>
+<p>Passages on the complaint's topic are ordered by precedence, then by relevance. Statute text scores low with the reranker, so the score gates only passages off the topic.</p>
+<pre><code># engine/retrieval.py: search, the last stage
+        for c in cands:
+            c["on_topic"] = complaint_type in c["topics"]
+            c["precedence"] = PRECEDENCE[c["tier"]]
+        # Statute text scores low on this cross-encoder even when it is the answer, so the score
+        # gates only passages off the complaint's topic; a passage on the topic stays a candidate.
+        on = [c for c in cands if c["on_topic"]]
+        off = sorted([c for c in cands if not c["on_topic"] and c["rerank_score"] &gt;= min_rerank],
+                     key=lambda c: -c["rerank_score"])[:max(2, keep - len(on))]
+        cands = on + off
+        # precedence applies only among passages on the complaint's topic; the rest follow on relevance
+        cands.sort(key=lambda c: (not c["on_topic"], c["precedence"] if c["on_topic"] else 0, -c["rerank_score"]))
+        return cands[:k]</code></pre>
+<h3>Before Any AI Call: Masking and the Emergency Check</h3>
+<p>Fixed words mean danger now. A match hands the complaint over with no AI call; numbers are masked before anything else sees the text.</p>
+<pre><code># engine/intake.py
+EMERGENCY = [
+    (re.compile(r"\bgushing\b", re.I), "water gushing"),
+    (re.compile(r"\bflood(?:ing|ed)?\b(?!\s+(?:risk|insurance))", re.I), "flooding"),
+    (re.compile(r"\bburst(?:ing)?\s+(?:water\s+)?pipe", re.I), "burst pipe"),
+    (re.compile(r"\bfire\b(?!\s*(?:escape|exit|door|extinguisher|hose|route|alarm test|drill))", re.I), "fire"),
+    (re.compile(r"\bsmoke alarm\b", re.I), "smoke alarm"),
+    (re.compile(r"\b(?:trapped|stuck)\s+in\s+(?:the\s+)?lift\b|\blift entrapment\b", re.I), "lift entrapment"),
+    (re.compile(r"\bcollaps(?:e|ed|ing)\b", re.I), "collapse"),
+    (re.compile(r"\bgas leak", re.I), "gas leak"),
+    (re.compile(r"\belectric(?:al)? shock\b|\bsparking\b", re.I), "electrical danger"),
+]
+
+
+def mask(text):
+    t = MYKAD.sub(lambda m: f"******-**-{m.group(3)}", str(text or ""))
+    t = PHONE.sub(lambda m: f"***-*** {m.group(1)}", t)
+    return t
+
+
+def has_personal_numbers(text):
+    return bool(MYKAD.search(str(text or "")) or PHONE.search(str(text or "")))</code></pre>
+<h3>No Amount the Documents Do Not Hold</h3>
+<p>Every amount named beside a fine, penalty or payment must appear in a passage retrieved for this complaint. Otherwise the line is sent back.</p>
+<pre><code># engine/guard.py: unsupported_penalty
+    # no amount of fine, penalty or payment unless a retrieved passage states it
+    known = set()
+    for p in session.retrieved.values():
+        known |= amounts_in(p["text"])
+    texts = [("draft_reply", g.get("draft_reply")), ("answer", g.get("answer"))] + [(f"next_steps[{i}].action", (s or {}).get("action") if isinstance(s, dict) else s)
+                                                       for i, s in enumerate(steps)]
+    for line, text in texts:
+        for s in sentences(text):
+            if not PENALTY_WORDS.search(s):
+                continue
+            for m in AMOUNT.finditer(s):
+                v = float(m.group(1).replace(",", ""))
+                if v not in known:
+                    fault("unsupported_penalty", line,
+                          f"RM {m.group(1)} is named with a fine, penalty or payment, but no retrieved passage states it. "
+                          "Name no amount the documents do not hold.")</code></pre>
+<h3>Two Retries, Then the Building Manager</h3>
+<p>The guidance is recorded only when the check passes, with the office's sign-off added in code. A third rejection shows no guidance and tells the officer to refer the complaint.</p>
+<pre><code># mcp_server.py: submit_guidance
+    def submit_guidance(self, cid, guidance):
+        def run():
+            s = self.session(cid)
+            if s.attempts &gt; guard.MAX_RETRIES:
+                return {"status": "rejected", "error": "retries_exhausted", "message": EXHAUSTED}
+            faults = guard.check(guidance, s, complaint_file.raw(cid))
+            if not faults:
+                signed = dict(guidance, draft_reply=guard.sign(guidance["draft_reply"]))
+                s.guidance = signed            # a follow-up resubmits the whole guidance, checked again
+                s.attempts = 0
+                s.note = complaint_file.handover_note(cid, signed, s.retrieved) if signed.get("handover") else None
+                return {"status": "recorded", "data": {"handover_note": s.note, "draft_reply": signed["draft_reply"]},
+                        "next_step": "Guidance recorded for the officer."}
+            s.attempts += 1
+            if s.attempts &gt; guard.MAX_RETRIES:
+                return {"status": "rejected", "error": "retries_exhausted", "faults": faults, "message": EXHAUSTED}
+            return {"status": "rejected", "error": faults[0]["error"], "faults": faults,
+                    "retries_left": guard.MAX_RETRIES - s.attempts + 1,
+                    "next_step": "Fix each line named and submit again."}
+        return self._wrap(cid, "submit_guidance", {"guidance": guidance}, run)</code></pre>
+<h2>Benchmark Method</h2>
+<table><tr><th>Category</th><th>Complaints</th><th>Passed both runs</th></tr>
+<tr><td><b>A. Answered from the documents</b></td><td>15</td><td>15 of 15</td></tr><tr><td><b>B. Handed to the building manager</b></td><td>4</td><td>3 of 4</td></tr><tr><td><b>C. Emergency caught by code</b></td><td>1</td><td>1 of 1</td></tr></table>
+<ul>
+<li><b>Expected results:</b> the <a href="projects/strata-complaint-advisor/answer-key.html" target="_blank" rel="noopener">answer key</a> holds 20 complaints, 15 answered from the documents and 5 handed over, written before the build. An independent reviewer checked every expected result in a separate context, and each change it raised was decided and recorded before the runs.</li>
+<li><b>Scored from the record:</b> the tools called, the guidance recorded by the check, the complaint type, the rules cited (each requirement met by any of its codes), no forbidden rule, the handover reason, missing facts named, a conflict resolved by precedence, no personal number in the log, and no model call on the emergency. The wording of the reply is not scored; it was read by a person on a three-case sample before the runs.</li>
+<li><b>The 2 + 1 rule:</b> all 20 complaints ran twice on Claude Haiku 5.5, and a case passes only if it passes both runs; 19 did. The one that did not, H2 (a compensation claim), cited by-law BL-25 in run 2, which its answer key rules out. A third run covers only the cases that failed in either: H2, which passed. A case still failing after three runs is reported for a decision, not rerun.</li>
+<li><b>Cost:</b> the two runs cost USD 0.12 and the third run USD 0.0023; every run on the project, development runs included, came to USD 0.31.</li>
+<li><b>No-key tests:</b> 54 checks: 42 in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/strata-complaint-advisor/benchmark/test_tools.py" target="_blank" rel="noopener">test_tools.py</a> and 12 in <a href="https://github.com/lyven81/ai-projects/tree/main/projects/strata-complaint-advisor/benchmark/test_mcp.py" target="_blank" rel="noopener">test_mcp.py</a>, all passing; the benchmark runs the 42 tool tests first and refuses a paid run if one fails.</li>
+</ul>
+<h2>Every Test Run</h2>
+<p>The full record behind the summary on the Project overview tab: who does what, then every complaint with what it had to do and what made it happen, read from its tool log in each run.</p>
+<h3>Who does what</h3>
+<table><tr><th>Who</th><th>Does</th></tr><tr><td><b>The AI advisor</b><br><span class="muted">Claude Haiku 5.5</span></td><td>Reads the complaint and the SOP, searches the building's documents, and drafts the guidance: the facts known and missing, the rules that apply, the next steps, the reply and any handover.</td></tr><tr><td><b>Code: intake</b><br><span class="muted">engine/intake.py, engine/complaint_file.py</span></td><td>Masks personal numbers, adds the unit context from the register, and hands an emergency to the building manager with the note written in code.</td></tr><tr><td><b>Code: retrieval</b><br><span class="muted">engine/retrieval.py, engine/rule_search.py</span></td><td>Returns approved passages in force for the building, on-topic passages first in precedence order.</td></tr><tr><td><b>Code: the check</b><br><span class="muted">engine/guard.py, mcp_server.py</span></td><td>Records the guidance only when every citation, quote, amount, SOP step and handover reason holds; adds the sign-off and assembles the handover note.</td></tr><tr><td><b>The admin officer</b><br><span class="muted">Outside the system</span></td><td>Reads the guidance, edits the reply and sends it, and decides any site check or notice.</td></tr><tr><td><b>The building manager</b><br><span class="muted">Outside the system</span></td><td>Receives each handover and decides fines, payments and disputes.</td></tr></table>
+<h3>A. Answered from the documents</h3>
+<p>The advisor cites the rules that apply, asks for the facts still missing and drafts the reply; no handover. 15 of 15 passed both runs.</p>
+<table><tr><th>Complaint</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><code>1</code><br><span class="muted">Loud music late at night</span></td><td>Cite BL-10; and HR-1; never HR-7 (the draft house rule, never adopted); no handover; name the facts still missing; mask the personal number.</td><td><b>Run 1:</b> 1 search; cited BL-10, HR-1; handover none; recorded first time.<br><b>Run 2:</b> 1 search; cited BL-10, HR-1; handover none; recorded first time.</td></tr><tr><td><code>2</code><br><span class="muted">Someone parked in my bay</span></td><td>Cite BL-25; and ABL-2; never HR-7 (the draft house rule, never adopted); no handover.</td><td><b>Run 1:</b> 1 search, 1 rule fetch; cited ABL-2, BL-25; handover none; recorded first time.<br><b>Run 2:</b> 1 search; cited BL-25, ABL-2; handover none; sent back once (precedence_mismatch), then recorded.</td></tr><tr><td><code>3</code><br><span class="muted">Dog barking and fouling the corridor</span></td><td>Cite BL-14; and ABL-3; no handover.</td><td><b>Run 1:</b> 1 search, 2 rule fetches; cited BL-14, ABL-3; handover none; sent back once (precedence_mismatch), then recorded.<br><b>Run 2:</b> 2 searches; cited BL-14, ABL-3; handover none; recorded first time.</td></tr><tr><td><code>4</code><br><span class="muted">Drilling outside permitted hours</span></td><td>Cite ABL-4; and BL-27 or BL-16; no handover.</td><td><b>Run 1:</b> 1 search; cited ABL-4, BL-27; handover none; sent back once (names_other_party), then recorded.<br><b>Run 2:</b> 1 search; cited ABL-4, BL-27; handover none; sent back once (names_other_party), then recorded.</td></tr><tr><td><code>5</code><br><span class="muted">Water leaking through my ceiling</span></td><td>Cite REG-57 or BL-8; and REG-58 or REG-61 or REG-62; no handover; name the facts still missing.</td><td><b>Run 1:</b> 2 searches; cited REG-55, REG-58, BL-8, HR-6; handover none; sent back once (breach_before_facts), then recorded.<br><b>Run 2:</b> 2 searches, 3 rule fetches (refused and fixed: unknown_rule); cited REG-55, REG-57, REG-58, REG-63; handover none; recorded first time.</td></tr><tr><td><code>6</code><br><span class="muted">Furniture left by the refuse room</span></td><td>Cite BL-26; and HR-2; no handover.</td><td><b>Run 1:</b> 2 searches; cited BL-26, HR-2; handover none; recorded first time.<br><b>Run 2:</b> 1 search; cited BL-26, HR-2, BL-9; handover none; recorded first time.</td></tr><tr><td><code>7</code><br><span class="muted">Belongings in the shared corridor</span></td><td>Cite BL-20 or BL-22; and ABL-7; no handover.</td><td><b>Run 1:</b> 1 search; cited BL-20, BL-22, ABL-7; handover none; recorded first time.<br><b>Run 2:</b> 1 search; cited BL-20, BL-22, ABL-7; handover none; recorded first time.</td></tr><tr><td><code>8</code><br><span class="muted">Too many guests at the pool</span></td><td>Cite HR-3; no handover; name the facts still missing.</td><td><b>Run 1:</b> 1 search; cited HR-3; handover none; recorded first time.<br><b>Run 2:</b> 1 search; cited HR-3; handover none; recorded first time.</td></tr><tr><td><code>9</code><br><span class="muted">Visitor refused entry</span></td><td>Cite BL-17; and HR-4; no handover; mask the personal number.</td><td><b>Run 1:</b> 1 search; cited BL-17, HR-4; handover none; recorded first time.<br><b>Run 2:</b> 2 searches; cited BL-17, HR-4; handover none; recorded first time.</td></tr><tr><td><code>10</code><br><span class="muted">Moving date rejected</span></td><td>Cite ABL-6; no handover.</td><td><b>Run 1:</b> 2 searches; cited ABL-6; handover none; recorded first time.<br><b>Run 2:</b> 2 searches; cited ABL-6; handover none; recorded first time.</td></tr><tr><td><code>11</code><br><span class="muted">Smoke and smells entering my unit</span></td><td>Cite HR-5; and BL-9 or BL-10; no handover.</td><td><b>Run 1:</b> 1 search; cited BL-9, BL-10, HR-5; handover none; recorded first time.<br><b>Run 2:</b> 1 search; cited BL-9, BL-10, HR-5; handover none; sent back once (missing_field, breach_before_facts), then recorded.</td></tr><tr><td><code>12</code><br><span class="muted">Contractor damaged the lift</span></td><td>Cite BL-27 or BL-16; and ABL-5; no handover.</td><td><b>Run 1:</b> 2 searches; cited BL-27, ABL-5, ABL-4, HR-6; handover none; recorded first time.<br><b>Run 2:</b> 2 searches; cited BL-27, ABL-5, ABL-4, HR-6; handover none; sent back once (missing_field), then recorded.</td></tr><tr><td><code>13</code><br><span class="muted">Shared drain not repaired</span></td><td>Cite ACT-s59 or BL-3; and HR-6; no handover.</td><td><b>Run 1:</b> 2 searches; cited HR-6, BL-3, ACT-s59; handover none; recorded first time.<br><b>Run 2:</b> 1 search; cited HR-6, BL-3, ACT-s59; handover none; recorded first time.</td></tr><tr><td><code>14</code><br><span class="muted">Maintenance charge and late interest</span></td><td>Cite ACT-s61; and ABL-8; and BL-6 or ACT-s60; no handover; name the facts still missing; ACT-s61 governs the conflict.</td><td><b>Run 1:</b> 2 searches; cited ACT-s61, ABL-8, BL-6; handover none; recorded first time.<br><b>Run 2:</b> 2 searches; cited ACT-s61, ABL-8, BL-6, ACT-s60; handover none; recorded first time.</td></tr><tr><td><code>15</code><br><span class="muted">Which rule authorises this fine</span></td><td>Cite BL-7; and ABL-9; no handover.</td><td><b>Run 1:</b> 2 searches; cited ABL-7, BL-22, BL-7, ABL-9, ACT-s70; handover none; sent back once (quote_mismatch), then recorded.<br><b>Run 2:</b> 2 searches; cited ABL-9, ABL-7, BL-7, ACT-s70; handover none; recorded first time.</td></tr></table>
+<h3>B. Handed to the building manager</h3>
+<p>One of the SOP's handover reasons applies; the note carries the facts, the rules cited and the steps so far. 3 of 4 passed both runs.</p>
+<table><tr><th>Complaint</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><code>H1</code><br><span class="muted">Demand a RM 1,000 fine</span></td><td>Cite ACT-s70 or ABL-9 or BL-7; hand over: penalty_not_authorised.</td><td><b>Run 1:</b> 2 searches; cited BL-10, HR-1, ABL-9; handover penalty_not_authorised; sent back once (unsupported_penalty, names_other_party), then recorded.<br><b>Run 2:</b> 2 searches; cited HR-1, BL-10, ABL-9; handover penalty_not_authorised; sent back once (unsupported_penalty), then recorded.</td></tr><tr><td><code>H2</code><br><span class="muted">Compensation for a scratched car</span></td><td>No rule required; never BL-25; hand over: money_or_compensation; mask the personal number.</td><td><b>Run 1:</b> 2 searches; cited none; handover money_or_compensation; recorded first time.<br><b>Run 2, did not pass:</b> 2 searches; cited BL-25; handover money_or_compensation; sent back once (missing_field, unsupported_penalty), then recorded.<br><b>Run 3, passed:</b> 2 searches; cited none; handover money_or_compensation; recorded first time.</td></tr><tr><td><code>H3</code><br><span class="muted">Threat to go to the Tribunal</span></td><td>No rule required; hand over: legal_dispute.</td><td><b>Run 1:</b> 2 searches; cited REG-55, REG-62, BL-1; handover legal_dispute; recorded first time.<br><b>Run 2:</b> 1 search; cited REG-55, REG-58, REG-62; handover legal_dispute; recorded first time.</td></tr><tr><td><code>H5</code><br><span class="muted">Night guard rude</span></td><td>No rule required; hand over: complaint_about_management.</td><td><b>Run 1:</b> 2 searches; cited HR-4, BL-17; handover complaint_about_management; recorded first time.<br><b>Run 2:</b> 2 searches; cited HR-4, BL-17; handover complaint_about_management; sent back once (missing_field), then recorded.</td></tr></table>
+<h3>C. Emergency caught by code</h3>
+<p>Danger words hand the complaint to the building manager before any AI call. 1 of 1 passed both runs.</p>
+<table><tr><th>Complaint</th><th>What it must do</th><th>What made it happen</th></tr><tr><td><code>H4</code><br><span class="muted">Water gushing from the ceiling now</span></td><td>No rule required; hand over: emergency; no AI call.</td><td><b>Run 1:</b> emergency words (water gushing, flooding) caught in code; note with urgency now; no AI call.<br><b>Run 2:</b> emergency words (water gushing, flooding) caught in code; note with urgency now; no AI call.</td></tr></table>
+<p>See for yourself: <a href="projects/strata-complaint-advisor/demo.html" target="_blank" rel="noopener">open any complaint on the advisor screen</a>, including Under the hood.</p>
+<h2>GitHub Repository</h2>
+<p>The code that decides how the advisor behaves, cut directly from the project files. The AI reads the complaint, chooses what to search and drafts the guidance; intake, retrieval and the check decide what reaches the officer. Page markup is left out. <a href="https://github.com/lyven81/ai-projects/tree/main/projects/strata-complaint-advisor" target="_blank" rel="noopener">View the code on GitHub</a>.</p>
+<pre><code>projects/strata-complaint-advisor/
+├── corpus/legal/              # Act sections, Regulations and Third Schedule by-laws, one file each, with page
+├── corpus/building/           # Additional by-laws, house rules, complaint SOP, reply templates (sample)
+├── data/                      # chunks.json, the unit register (608 units), the 20 sample complaints
+├── rules/                     # SOP steps, handover reasons, facts to collect by complaint type
+├── engine/
+│   ├── intake.py              # MyKad and phone masking; emergency words
+│   ├── retrieval.py           # Vector and keyword pools, rerank, precedence
+│   ├── rule_search.py         # Search scoped to the building, in force on the complaint date
+│   ├── guard.py               # The check on the guidance before the officer sees it
+│   └── complaint_file.py      # The complaint as read, the unit context, the handover notes
+├── mcp_server.py              # MCP server: 4 resources, 4 tools, a log per complaint
+├── prompt.py, agent.py        # The advisor's prompt and the tool loop
+├── serve.py                   # Live mode on your own machine, with your own key
+├── build/                     # Extractor, chunker, unit register, screen and answer key builders
+├── benchmark/                 # cases.json, run_benchmark.py, test_tools.py, test_mcp.py, runs/
+├── demo.html                  # The advisor screen
+├── documents.html             # The building documents
+└── answer-key.html            # The expected results</code></pre>
+</div>
+<footer>© 2026 Lee Yih Ven · Strata Complaint Advisor</footer></div>
+<script>
+// Numbered contents menu for the open tab; tabs switch in place and keep their place in the URL.
+const toc=document.getElementById('toc');
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('h2').forEach((h,i)=>{h.dataset.n=(i+1)+'. '+h.textContent;h.textContent=h.dataset.n;h.id=p.id+'-'+(i+1);}));
+function show(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===tab));
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
+  toc.innerHTML='';
+  document.querySelectorAll('#'+tab+' h2').forEach((h,i)=>{if(tab==='source'&&i===3){const b=document.createElement('span');b.className='br';toc.appendChild(b);}const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.dataset.n;toc.appendChild(a);});
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.tab);history.replaceState(null,'','#'+b.dataset.tab);window.scrollTo(0,0);}));
+const fromHash=()=>show(location.hash.startsWith('#source')?'source':'overview');
+fromHash();window.addEventListener('hashchange',fromHash);
+document.querySelectorAll('table').forEach(t=>{const d=document.createElement('div');d.className='tw';t.parentNode.insertBefore(d,t);d.appendChild(t);});
+</script>
+<script src="diagram.js"></script>
+<script src="site-data.js"></script>
+<script src="nav.js"></script></body>
+</html>

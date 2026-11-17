@@ -1,0 +1,21 @@
+{
+ "source": "corpus/building/complaint-sop.md",
+ "steps": {
+  "SOP-1": "Acknowledge",
+  "SOP-2": "Collect the facts",
+  "SOP-3": "Check the rules",
+  "SOP-4": "Verify on site",
+  "SOP-5": "Written notice",
+  "SOP-6": "Work order",
+  "SOP-7": "Reply to the resident",
+  "SOP-8": "Hand over to the building manager"
+ },
+ "handover_reasons": [
+  "penalty_not_authorised",
+  "money_or_compensation",
+  "legal_dispute",
+  "emergency",
+  "complaint_about_management"
+ ],
+ "recipient": "building manager"
+}

@@ -1,0 +1,212 @@
+[
+ {
+  "test": "test_search_rules_returns_on_topic_rules",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_search_never_returns_draft_or_unapproved",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_search_empty_is_valid",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_search_unavailable_is_retryable",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_precedence_act_before_bylaw_on_charges",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_get_rule_ok_and_unknown",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_get_template_ok_unknown_not_approved",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_unknown_complaint",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_records_good_guidance",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_rule_not_retrieved",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_code_named_in_reply_not_retrieved",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_quote_mismatch",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_unsupported_penalty",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_amount_pattern_ignores_words",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_supported_amount_passes",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_breach_before_facts",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_unknown_sop_step",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_invalid_handover_reason",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_precedence_conflict",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_missing_field",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_retries_exhausted_after_two_retries",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_follow_up_resubmission_checked_again",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_promised_outcome",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_guard_names_other_party",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_sign_off_added_in_code",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_bad_arguments_come_back_as_result",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_masking_mykad_and_phone",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_emergency_only_on_h4",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_emergency_handover_note_written_in_code",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_handover_note_assembled_from_guidance",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_emergency_makes_no_model_call",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_tools",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_recorded",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_type",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_rules",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_not_cited",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_handover",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_facts_missing",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_conflict",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_masking",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_no_model_call",
+  "pass": true,
+  "message": ""
+ },
+ {
+  "test": "test_score_case_pass_overall",
+  "pass": true,
+  "message": ""
+ }
+]

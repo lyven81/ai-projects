@@ -1,0 +1,498 @@
+{
+ "note": "The Answer Key as data, written before the assistant exists (17 Nov 2026). must_cite: each inner list is one requirement, met when any one code in it is cited. Codes are compared without the subsection: BL-10(3) counts as BL-10.",
+ "cases": [
+  {
+   "id": "1",
+   "group": "answerable",
+   "label": "Loud music late at night",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "noise"
+    ],
+    "must_cite": [
+     [
+      "BL-10"
+     ],
+     [
+      "HR-1"
+     ]
+    ],
+    "must_not_cite": [
+     "HR-7"
+    ],
+    "handover": null,
+    "facts_missing": true,
+    "masking": true
+   },
+   "why": "Third Schedule by-law 10(3) sets low volume after 11.00 p.m.; house rule HR-1 sets the quiet hours and what a report should give. The time, duration and whether it recurs are missing, so Clarify asks for them; the source unit is only reported."
+  },
+  {
+   "id": "2",
+   "group": "answerable",
+   "label": "Someone parked in my bay",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "parking"
+    ],
+    "must_cite": [
+     [
+      "BL-25"
+     ],
+     [
+      "ABL-2"
+     ]
+    ],
+    "must_not_cite": [
+     "HR-7"
+    ],
+    "handover": null
+   },
+   "why": "By-law 25(2) allows clamping of a vehicle in another proprietor's bay, charge not exceeding RM 200; ABL-2 sets the building's release charge of RM 100 and requires staff to verify on site first. The draft RM 300 (HR-7) was never adopted."
+  },
+  {
+   "id": "3",
+   "group": "answerable",
+   "label": "Dog barking and fouling the corridor",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "pets"
+    ],
+    "must_cite": [
+     [
+      "BL-14"
+     ],
+     [
+      "ABL-3"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "By-law 14(1) and (2): an animal causing nuisance, removal within three days of written notice; ABL-3 requires fouling to be cleaned and treats persistent barking as nuisance."
+  },
+  {
+   "id": "4",
+   "group": "answerable",
+   "label": "Drilling outside permitted hours",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "renovation"
+    ],
+    "must_cite": [
+     [
+      "ABL-4"
+     ],
+     [
+      "BL-27",
+      "BL-16"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "The Third Schedule leaves the hours open; ABL-4 fills them (no works on Sunday, drilling 10.00 a.m. to 4.00 p.m. on weekdays), made under Act s.70(2); by-law 27(10) makes the proprietor responsible and by-law 16(1) binds him to the additional by-laws. By-law 29 is about drilling near concealed pipes, not hours."
+  },
+  {
+   "id": "5",
+   "group": "answerable",
+   "label": "Water leaking through my ceiling",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "leakage"
+    ],
+    "must_cite": [
+     [
+      "REG-57",
+      "BL-8"
+     ],
+     [
+      "REG-58",
+      "REG-61",
+      "REG-62"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null,
+    "facts_missing": true
+   },
+   "why": "Regulations Part XV: notice (reg 56), inspection within seven days (reg 57), cause and responsible party determined (reg 58). Whether water is still coming in, when it started and the unit above are missing; no one is blamed before inspection. Both the inspection step (reg 57, or entry under by-law 8(3)(a)) and who repairs (reg 58, 61 or 62) are required."
+  },
+  {
+   "id": "6",
+   "group": "answerable",
+   "label": "Furniture left by the refuse room",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "refuse"
+    ],
+    "must_cite": [
+     [
+      "BL-26"
+     ],
+     [
+      "HR-2"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "By-law 26(5): bulky objects not to be left at the refuse chamber; HR-2: Wednesday bulky waste collection by booking."
+  },
+  {
+   "id": "7",
+   "group": "answerable",
+   "label": "Belongings in the shared corridor",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "obstruction"
+    ],
+    "must_cite": [
+     [
+      "BL-20",
+      "BL-22"
+     ],
+     [
+      "ABL-7"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "By-law 20(1) and (2) (fire escape routes; removal, reclaim within 14 days, charge not exceeding RM 200) and 22(4); ABL-7 sets the reclaim charge at RM 150."
+  },
+  {
+   "id": "8",
+   "group": "answerable",
+   "label": "Too many guests at the pool",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "facilities"
+    ],
+    "must_cite": [
+     [
+      "HR-3"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null,
+    "facts_missing": true
+   },
+   "why": "HR-3(2): up to 4 guests per parcel at the pool, accompanied and registered. The parcel concerned is not named, so staff identify it before any notice."
+  },
+  {
+   "id": "9",
+   "group": "answerable",
+   "label": "Visitor refused entry",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "visitors_access"
+    ],
+    "must_cite": [
+     [
+      "BL-17"
+     ],
+     [
+      "HR-4"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null,
+    "masking": true
+   },
+   "why": "By-law 17: the management may require any person on the common property to identify himself and may ask a non-proprietor who refuses to leave; HR-4 records only the last four digits and returns the document. The visitor's MyKad is masked before the AI sees it."
+  },
+  {
+   "id": "10",
+   "group": "answerable",
+   "label": "Moving date rejected",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "moving"
+    ],
+    "must_cite": [
+     [
+      "ABL-6"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "ABL-6: no moving on Sundays, 3 working days' notice, RM 300 deposit released 3 days after the scheduled move after a joint inspection. A building-only rule, made under Act s.70(2)."
+  },
+  {
+   "id": "11",
+   "group": "answerable",
+   "label": "Smoke and smells entering my unit",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "smoke_odour"
+    ],
+    "must_cite": [
+     [
+      "HR-5"
+     ],
+     [
+      "BL-9",
+      "BL-10"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "By-law 9(2) and 10(4): no fuel or substance causing smoke or smells affecting other proprietors; HR-5: joss paper only at the designated burning point, care with balcony smoking."
+  },
+  {
+   "id": "12",
+   "group": "answerable",
+   "label": "Contractor damaged the lift",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "damage_common_property",
+     "renovation"
+    ],
+    "must_cite": [
+     [
+      "BL-27",
+      "BL-16"
+     ],
+     [
+      "ABL-5"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "By-law 27(7): the proprietor is responsible for damage to common property from his renovation; ABL-5: cost assessed and deducted from the RM 1,000 deposit. No repair amount is promised."
+  },
+  {
+   "id": "13",
+   "group": "answerable",
+   "label": "Shared drain not repaired",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "maintenance_repair"
+    ],
+    "must_cite": [
+     [
+      "ACT-s59",
+      "BL-3"
+     ],
+     [
+      "HR-6"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "Act s.59(1)(a) and by-law 3(2): the management corporation maintains and repairs shared drains and pipes; HR-6: a work order with a reference number."
+  },
+  {
+   "id": "14",
+   "group": "answerable",
+   "label": "Maintenance charge and late interest",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "charges"
+    ],
+    "must_cite": [
+     [
+      "ACT-s61"
+     ],
+     [
+      "ABL-8"
+     ],
+     [
+      "BL-6",
+      "ACT-s60"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null,
+    "conflict_governs": "ACT-s61",
+    "facts_missing": true
+   },
+   "why": "The conflict case: ABL-8 sets the sinking fund at 6%, but Act s.61(3) says not less than 10% of the charges. The Act governs. Late interest of 10% a year is within s.60(3)(c) and by-law 6(2). No figure is calculated. Interest under by-law 6(2) runs only 14 days after a notice, and the notice date is not given, so that fact is missing. RM 12 is below the Act's minimum; the reply implies no refund."
+  },
+  {
+   "id": "15",
+   "group": "answerable",
+   "label": "Which rule authorises this fine",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "penalty_query"
+    ],
+    "must_cite": [
+     [
+      "BL-7"
+     ],
+     [
+      "ABL-9"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": null
+   },
+   "why": "By-law 7(1): fines set by a general meeting resolution; ABL-9: RM 50 resolved on 15 March 2025, under Act s.70(2)(i) (not exceeding RM 200). The advisor names the authority; it does not decide the enforcement."
+  },
+  {
+   "id": "H1",
+   "group": "handover",
+   "label": "Demand a RM 1,000 fine",
+   "expect": {
+    "tools": [
+     "search_rules",
+     "submit_guidance"
+    ],
+    "type": [
+     "noise",
+     "penalty_query"
+    ],
+    "must_cite": [
+     [
+      "ACT-s70",
+      "ABL-9",
+      "BL-7"
+     ]
+    ],
+    "must_not_cite": [],
+    "handover": "penalty_not_authorised"
+   },
+   "why": "No document supports a RM 1,000 fine: the building's fine is RM 50 and Act s.70(2)(i) caps fines at RM 200. Hand over; the reply names no amount and promises no fine. The guidance states the gap by citing the fine rule (s.70(2)(i), by-law 7 or ABL-9)."
+  },
+  {
+   "id": "H2",
+   "group": "handover",
+   "label": "Compensation for a scratched car",
+   "expect": {
+    "tools": [
+     "submit_guidance"
+    ],
+    "type": [
+     "compensation",
+     "parking",
+     "damage_common_property"
+    ],
+    "must_cite": [],
+    "must_not_cite": [
+     "BL-25"
+    ],
+    "handover": "money_or_compensation",
+    "masking": true
+   },
+   "why": "A claim for payment is a decision for the building manager. By-law 25's no-liability clause covers towing and clamping, not a barrier, so it is not cited."
+  },
+  {
+   "id": "H3",
+   "group": "handover",
+   "label": "Threat to go to the Tribunal",
+   "expect": {
+    "tools": [
+     "submit_guidance"
+    ],
+    "type": [
+     "dispute",
+     "leakage",
+     "maintenance_repair"
+    ],
+    "must_cite": [],
+    "must_not_cite": [],
+    "handover": "legal_dispute"
+   },
+   "why": "A threat of the Strata Management Tribunal (Act s.105, Fourth Schedule) is a legal dispute for the building manager."
+  },
+  {
+   "id": "H4",
+   "group": "handover",
+   "label": "Water gushing from the ceiling now",
+   "expect": {
+    "tools": [],
+    "type": [
+     "emergency"
+    ],
+    "must_cite": [],
+    "must_not_cite": [],
+    "handover": "emergency",
+    "no_model_call": true
+   },
+   "why": "Emergency words are caught in code before any AI call; the handover note is written in code with urgency now."
+  },
+  {
+   "id": "H5",
+   "group": "handover",
+   "label": "Night guard rude",
+   "expect": {
+    "tools": [
+     "submit_guidance"
+    ],
+    "type": [
+     "management_conduct",
+     "visitors_access"
+    ],
+    "must_cite": [],
+    "must_not_cite": [],
+    "handover": "complaint_about_management"
+   },
+   "why": "A complaint about the guards is a complaint about management, for the building manager."
+  }
+ ]
+}

@@ -1,0 +1,411 @@
+{
+ "run_id": "20261117-112718-sample-haiku",
+ "kind": "sample",
+ "ids": [
+  "1",
+  "5",
+  "H1"
+ ],
+ "repeat": 1,
+ "results": [
+  {
+   "id": "1",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 3,
+   "model_calls": 3,
+   "tool_calls": 3,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 8,
+    "output_tokens": 3147,
+    "cache_creation_input_tokens": 5217,
+    "cache_read_input_tokens": 8011
+   },
+   "calls": [
+    {
+     "tool": "search_rules",
+     "error": "unknown_complaint"
+    },
+    {
+     "tool": "search_rules",
+     "error": null
+    },
+    {
+     "tool": "submit_guidance",
+     "error": null
+    }
+   ],
+   "result": {
+    "guidance": {
+     "complaint_type": "noise",
+     "facts_known": [
+      "Received 16 Nov 2026 by WhatsApp at 8.10 a.m. from B-12-05 (Block B, floor 12, tenant, 10 share units).",
+      "Resident reports very loud music from the unit above (reported as B-13-05, owner) during the night before the report (15 to 16 Nov 2026).",
+      "Resident says they could not sleep and asks for action. Resident has given a phone number for a call back.",
+      "No recording or other evidence supplied.",
+      "The source unit is as reported by the resident and has not been verified."
+     ],
+     "facts_missing": [
+      "Time the music started and stopped, and its duration.",
+      "Whether the music was heard during quiet hours (11.00 p.m. to 7.00 a.m.) and how loud it was.",
+      "Whether this has happened before, and on what dates.",
+      "Any evidence the resident can supply, such as a recording or a note of times.",
+      "Staff or guard verification on site (none done yet)."
+     ],
+     "rules": [
+      {
+       "code": "BL-10",
+       "quote": "shall be kept at a low volume after 11.00 p.m.",
+       "applies": "Third Schedule by-law 10(3), Prohibition of nuisance. Sets the duty on a proprietor to keep music and similar sound at a low volume after 11.00 p.m. so as not to disturb other proprietors. This is the rule to test against the reported facts, once verified. It applies to whoever is the proprietor of the parcel found to be the source, not to the complainant."
+      },
+      {
+       "code": "HR-1",
+       "quote": "Quiet hours are from 11.00 p.m. to 7.00 a.m. every day.",
+       "applies": "House rule 1, Quiet hours. Sets the quiet hours and says a disturbed resident may report to the guardhouse or the office, giving time, duration, unit believed to be the source and whether it has happened before. The guard on duty may attend and ask that the volume be lowered. The source is recorded as reported until verified."
+      }
+     ],
+     "conflict": null,
+     "next_steps": [
+      {
+       "sop_step": "SOP-1",
+       "action": "Acknowledge the WhatsApp complaint today, by WhatsApp, within one working day. Use the draft reply below."
+      },
+      {
+       "sop_step": "SOP-2",
+       "action": "Ask the resident for the missing facts: time music started and stopped, duration, whether it happened before, and any evidence. Record the call-back number given. Do not take any action against B-13-05 on this report alone."
+      },
+      {
+       "sop_step": "SOP-4",
+       "action": "Ask the guard on duty to check on site if the noise recurs during quiet hours, and to record what is seen and heard, with the date and time (HR-1(3) allows the guard to attend and ask for the volume to be lowered). Record the source as reported until verified."
+      },
+      {
+       "sop_step": "SOP-5",
+       "action": "Only if staff verify that quiet-hours noise came from B-13-05, consider a written notice or reminder to that parcel citing by-law 10(3) and house rule 1. No notice is to be sent on the current unverified report."
+      },
+      {
+       "sop_step": "SOP-7",
+       "action": "Reply to the resident with the rules by name and number and the facts still needed. No fine or outcome is to be promised."
+      }
+     ],
+     "draft_reply": "Thank you for your WhatsApp message of 16 November 2026 about loud music last night. The management office will check this under Third Schedule by-law 10 (Prohibition of nuisance) and house rule 1 (Quiet hours, 11.00 p.m. to 7.00 a.m.), and the guard on duty may attend if the noise happens again during quiet hours. To help us check, please tell us the approximate time the music started and stopped last night, how long it lasted, and whether this has happened before. If you have any recording or notes of times, please send them to us as well.\n\nManagement Office, Amber Residences",
+     "handover": null
+    },
+    "handover_note": null
+   },
+   "cost_usd": 0.00231,
+   "repeat": 1,
+   "seconds": 20.4,
+   "score": {
+    "tools": true,
+    "recorded": true,
+    "type": true,
+    "rules": true,
+    "not_cited": true,
+    "handover": true,
+    "facts_missing": true,
+    "conflict": true,
+    "masking": true,
+    "no_model_call": true,
+    "pass": true,
+    "cited": [
+     "BL-10",
+     "HR-1"
+    ],
+    "handover_got": null,
+    "tool_calls": 2
+   }
+  },
+  {
+   "id": "5",
+   "model": "claude-haiku-5-5",
+   "outcome": "stopped_without_guidance",
+   "turns": 16,
+   "model_calls": 16,
+   "tool_calls": 16,
+   "tool_errors": 13,
+   "usage": {
+    "input_tokens": 34,
+    "output_tokens": 20705,
+    "cache_creation_input_tokens": 25962,
+    "cache_read_input_tokens": 266245
+   },
+   "calls": [
+    {
+     "tool": "search_rules",
+     "error": null
+    },
+    {
+     "tool": "get_template",
+     "error": null
+    },
+    {
+     "tool": "search_rules",
+     "error": null
+    },
+    {
+     "tool": "get_rule",
+     "error": "unknown_rule"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "unknown_complaint"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "bad_tool_output"
+    }
+   ],
+   "result": null,
+   "cost_usd": 0.01626,
+   "repeat": 1,
+   "seconds": 96.8,
+   "score": {
+    "tools": false,
+    "recorded": false,
+    "type": false,
+    "rules": false,
+    "not_cited": true,
+    "handover": true,
+    "facts_missing": false,
+    "conflict": true,
+    "masking": true,
+    "no_model_call": true,
+    "pass": false,
+    "cited": [],
+    "handover_got": null,
+    "tool_calls": 4
+   }
+  },
+  {
+   "id": "H1",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 3,
+   "model_calls": 3,
+   "tool_calls": 4,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 8,
+    "output_tokens": 5979,
+    "cache_creation_input_tokens": 9234,
+    "cache_read_input_tokens": 13771
+   },
+   "calls": [
+    {
+     "tool": "search_rules",
+     "error": null
+    },
+    {
+     "tool": "search_rules",
+     "error": null
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "unsupported_penalty"
+    },
+    {
+     "tool": "submit_guidance",
+     "error": null
+    }
+   ],
+   "result": {
+    "guidance": {
+     "complaint_type": "noise",
+     "facts_known": [
+      "Complaint received 2026-11-16 by WhatsApp from Block A, unit A-05-08 (tenant).",
+      "Reported source: A-06-08, Block A, floor 6 (owner). This is the resident's belief and is not verified.",
+      "Reported noise: karaoke every weekend until about 2.00 a.m.",
+      "Resident asks for management to fine the source unit RM 1,000 immediately."
+     ],
+     "facts_missing": [
+      "Specific dates of the weekend episodes reported.",
+      "Start and end times of each episode (the 2.00 a.m. end time is approximate).",
+      "Duration of each episode.",
+      "Whether it has happened before and how often.",
+      "Whether the resident has reported it to the guardhouse before.",
+      "Whether the guard on duty has attended or seen the noise on site."
+     ],
+     "rules": [
+      {
+       "code": "BL-10",
+       "quote": "the sound of any electrical and electronic equipment, apparatus or appliance, or any musical instrument used in a parcel or the common property shall be kept at a low volume after 11.00 p.m. so as not interfere with the quiet rest or peaceful sleep of the other proprietors",
+       "applies": "Third Schedule by-law 10(3): after 11.00 p.m. musical instruments and sound equipment in a parcel must be kept at low volume. This is the governing rule for the reported karaoke noise after 11.00 p.m. It is a report until verified; no breach is found yet."
+      },
+      {
+       "code": "HR-1",
+       "quote": "Quiet hours are from 11.00 p.m. to 7.00 a.m. every day.",
+       "applies": "House rule 1: quiet hours 11.00 p.m. to 7.00 a.m. Consistent with by-law 10(3). Also provides that the guard may attend and ask for volume to be lowered, and that the source is recorded as reported until verified."
+      },
+      {
+       "code": "ABL-9",
+       "quote": "A fine is imposed only by the management corporation after the breach has been verified and the person concerned has been notified in writing. Staff of the management office do not impose fines on their own.",
+       "applies": "Additional by-law 9: a fine can be imposed only by the management corporation after verification and written notice. No document supports an immediate fine, and the office cannot impose any fine on its own."
+      }
+     ],
+     "conflict": null,
+     "next_steps": [
+      {
+       "sop_step": "SOP-1",
+       "action": "Acknowledge the WhatsApp complaint today, by WhatsApp, within one working day. Do not confirm any fine or outcome."
+      },
+      {
+       "sop_step": "SOP-2",
+       "action": "Record the report: weekends, approx. 2.00 a.m. end time, unit A-05-08 as complainant, A-06-08 as reported source (unverified). Ask the resident for the missing facts listed above. Take no action against A-06-08 until the facts are collected and verified."
+      },
+      {
+       "sop_step": "SOP-3",
+       "action": "Rules checked: Third Schedule by-law 10(3), house rule 1, and additional by-law 9 on who may impose fines. Third Schedule and house rule 1 agree on quiet hours, so there is no conflict."
+      },
+      {
+       "sop_step": "SOP-4",
+       "action": "Ask the guard on duty to check on site during quiet hours on the next weekend nights and record what is seen, with date and time, and whether the volume is lowered when asked (house rule 1(3))."
+      },
+      {
+       "sop_step": "SOP-5",
+       "action": "Only if the breach is verified on site or by staff records, the management office may send a written notice to the parcel concerned citing by-law 10(3) and the step required. Any fine is a matter for the management corporation under additional by-law 9; staff do not impose it."
+      },
+      {
+       "sop_step": "SOP-8",
+       "action": "Hand over to the building manager: the resident asks for an immediate fine that no rule in the documents supports (penalty_not_authorised). Routine urgency. No noise emergency is reported."
+      }
+     ],
+     "draft_reply": "Dear Resident,\nThank you for your report of karaoke noise on weekends until about 2.00 a.m., which we have received.\nThe guard on duty will check the noise on site, and the office will record what is seen with the date and time.\nThe rules that apply are Third Schedule by-law 10 (Prohibition of nuisance) and House Rule 1 (Quiet hours, 11.00 p.m. to 7.00 a.m.).\nA fine can be imposed only by the management corporation after a breach is verified and written notice is given under Additional By-law 9, so the office cannot impose one immediately; your fine request has been passed to the building manager.\nPlease send the dates of the weekends concerned, the times the noise started and stopped, and whether it has happened before.\nManagement Office, Amber Residences",
+     "handover": {
+      "reason": "penalty_not_authorised",
+      "summary": "Resident in A-05-08 (tenant) reports karaoke noise from A-06-08 (owner, unverified) every weekend until about 2.00 a.m. and asks for an immediate fine of RM 1,000. No document supports an immediate fine. Additional by-law 9 allows a fine only if imposed by the management corporation after verification and written notice.",
+      "urgency": "routine"
+     }
+    },
+    "handover_note": {
+     "reason": "penalty_not_authorised",
+     "reason_label": "Penalty not authorised by the documents",
+     "recipient": "building manager",
+     "complaint_summary": "Resident in A-05-08 (tenant) reports karaoke noise from A-06-08 (owner, unverified) every weekend until about 2.00 a.m. and asks for an immediate fine of RM 1,000. No document supports an immediate fine. Additional by-law 9 allows a fine only if imposed by the management corporation after verification and written notice.",
+     "facts_collected": [
+      "Complaint received 2026-11-16 by WhatsApp from Block A, unit A-05-08 (tenant).",
+      "Reported source: A-06-08, Block A, floor 6 (owner). This is the resident's belief and is not verified.",
+      "Reported noise: karaoke every weekend until about 2.00 a.m.",
+      "Resident asks for management to fine the source unit RM 1,000 immediately."
+     ],
+     "facts_missing": [
+      "Specific dates of the weekend episodes reported.",
+      "Start and end times of each episode (the 2.00 a.m. end time is approximate).",
+      "Duration of each episode.",
+      "Whether it has happened before and how often.",
+      "Whether the resident has reported it to the guardhouse before.",
+      "Whether the guard on duty has attended or seen the noise on site."
+     ],
+     "rules_cited": [
+      "BL-10 (by-law 10, Third Schedule By-laws, Strata Management (Maintenance and Management) Regulations 2015)",
+      "HR-1 (house rule 1, Amber Residences House Rules)",
+      "ABL-9 (additional by-law 9, Amber Residences Additional By-laws)"
+     ],
+     "steps_suggested": [
+      "SOP-1: Acknowledge the WhatsApp complaint today, by WhatsApp, within one working day. Do not confirm any fine or outcome.",
+      "SOP-2: Record the report: weekends, approx. 2.00 a.m. end time, unit A-05-08 as complainant, A-06-08 as reported source (unverified). Ask the resident for the missing facts listed above. Take no action against A-06-08 until the facts are collected and verified.",
+      "SOP-3: Rules checked: Third Schedule by-law 10(3), house rule 1, and additional by-law 9 on who may impose fines. Third Schedule and house rule 1 agree on quiet hours, so there is no conflict.",
+      "SOP-4: Ask the guard on duty to check on site during quiet hours on the next weekend nights and record what is seen, with date and time, and whether the volume is lowered when asked (house rule 1(3)).",
+      "SOP-5: Only if the breach is verified on site or by staff records, the management office may send a written notice to the parcel concerned citing by-law 10(3) and the step required. Any fine is a matter for the management corporation under additional by-law 9; staff do not impose it.",
+      "SOP-8: Hand over to the building manager: the resident asks for an immediate fine that no rule in the documents supports (penalty_not_authorised). Routine urgency. No noise emergency is reported."
+     ],
+     "urgency": "routine"
+    }
+   },
+   "cost_usd": 0.00428,
+   "repeat": 1,
+   "seconds": 29.8,
+   "score": {
+    "tools": true,
+    "recorded": true,
+    "type": true,
+    "rules": true,
+    "not_cited": true,
+    "handover": true,
+    "facts_missing": true,
+    "conflict": true,
+    "masking": true,
+    "no_model_call": true,
+    "pass": true,
+    "cited": [
+     "ABL-9",
+     "BL-10",
+     "HR-1"
+    ],
+    "handover_got": "penalty_not_authorised",
+    "tool_calls": 4
+   }
+  }
+ ],
+ "summary": {
+  "model": "claude-haiku-5-5",
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 50,
+    "output_tokens": 29831,
+    "cache_creation_input_tokens": 40413,
+    "cache_read_input_tokens": 288027,
+    "cost_usd": 0.02285
+   }
+  },
+  "cost_usd": 0.02285,
+  "score": {
+   "cases_passed": "2/3",
+   "tools": "2/3",
+   "recorded": "2/3",
+   "type": "2/3",
+   "rules": "2/3",
+   "not_cited": "3/3",
+   "handover": "3/3",
+   "facts_missing": "2/3",
+   "conflict": "3/3",
+   "masking": "3/3",
+   "no_model_call": "3/3",
+   "tool_calls_per_case": {
+    "1-r1": 2,
+    "5-r1": 4,
+    "H1-r1": 4
+   }
+  }
+ }
+}

@@ -1,0 +1,6092 @@
+{
+"building": "amber-residences",
+"note": "Sample unit register.",
+"units": [
+{
+"unit": "A-01-01",
+"block": "A",
+"floor": 1,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-01-02",
+"block": "A",
+"floor": 1,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-01-03",
+"block": "A",
+"floor": 1,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-01-04",
+"block": "A",
+"floor": 1,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-01-05",
+"block": "A",
+"floor": 1,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-01-06",
+"block": "A",
+"floor": 1,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-01-07",
+"block": "A",
+"floor": 1,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-01-08",
+"block": "A",
+"floor": 1,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-02-01",
+"block": "A",
+"floor": 2,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-02-02",
+"block": "A",
+"floor": 2,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-02-03",
+"block": "A",
+"floor": 2,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-02-04",
+"block": "A",
+"floor": 2,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-02-05",
+"block": "A",
+"floor": 2,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-02-06",
+"block": "A",
+"floor": 2,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-02-07",
+"block": "A",
+"floor": 2,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-02-08",
+"block": "A",
+"floor": 2,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-03-01",
+"block": "A",
+"floor": 3,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-03-02",
+"block": "A",
+"floor": 3,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-03-03",
+"block": "A",
+"floor": 3,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-03-04",
+"block": "A",
+"floor": 3,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-03-05",
+"block": "A",
+"floor": 3,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-03-06",
+"block": "A",
+"floor": 3,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-03-07",
+"block": "A",
+"floor": 3,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-03-08",
+"block": "A",
+"floor": 3,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-04-01",
+"block": "A",
+"floor": 4,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-04-02",
+"block": "A",
+"floor": 4,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-04-03",
+"block": "A",
+"floor": 4,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-04-04",
+"block": "A",
+"floor": 4,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-04-05",
+"block": "A",
+"floor": 4,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-04-06",
+"block": "A",
+"floor": 4,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-04-07",
+"block": "A",
+"floor": 4,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-04-08",
+"block": "A",
+"floor": 4,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-05-01",
+"block": "A",
+"floor": 5,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-05-02",
+"block": "A",
+"floor": 5,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-05-03",
+"block": "A",
+"floor": 5,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-05-04",
+"block": "A",
+"floor": 5,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-05-05",
+"block": "A",
+"floor": 5,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-05-06",
+"block": "A",
+"floor": 5,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-05-07",
+"block": "A",
+"floor": 5,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-05-08",
+"block": "A",
+"floor": 5,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-06-01",
+"block": "A",
+"floor": 6,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-06-02",
+"block": "A",
+"floor": 6,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-06-03",
+"block": "A",
+"floor": 6,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-06-04",
+"block": "A",
+"floor": 6,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-06-05",
+"block": "A",
+"floor": 6,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-06-06",
+"block": "A",
+"floor": 6,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-06-07",
+"block": "A",
+"floor": 6,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-06-08",
+"block": "A",
+"floor": 6,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-07-01",
+"block": "A",
+"floor": 7,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-07-02",
+"block": "A",
+"floor": 7,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-07-03",
+"block": "A",
+"floor": 7,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-07-04",
+"block": "A",
+"floor": 7,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-07-05",
+"block": "A",
+"floor": 7,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-07-06",
+"block": "A",
+"floor": 7,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-07-07",
+"block": "A",
+"floor": 7,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-07-08",
+"block": "A",
+"floor": 7,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-08-01",
+"block": "A",
+"floor": 8,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-08-02",
+"block": "A",
+"floor": 8,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-08-03",
+"block": "A",
+"floor": 8,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-08-04",
+"block": "A",
+"floor": 8,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-08-05",
+"block": "A",
+"floor": 8,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-08-06",
+"block": "A",
+"floor": 8,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-08-07",
+"block": "A",
+"floor": 8,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-08-08",
+"block": "A",
+"floor": 8,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-09-01",
+"block": "A",
+"floor": 9,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-09-02",
+"block": "A",
+"floor": 9,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-09-03",
+"block": "A",
+"floor": 9,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-09-04",
+"block": "A",
+"floor": 9,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-09-05",
+"block": "A",
+"floor": 9,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-09-06",
+"block": "A",
+"floor": 9,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-09-07",
+"block": "A",
+"floor": 9,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-09-08",
+"block": "A",
+"floor": 9,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-10-01",
+"block": "A",
+"floor": 10,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-10-02",
+"block": "A",
+"floor": 10,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-10-03",
+"block": "A",
+"floor": 10,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-10-04",
+"block": "A",
+"floor": 10,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-10-05",
+"block": "A",
+"floor": 10,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-10-06",
+"block": "A",
+"floor": 10,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-10-07",
+"block": "A",
+"floor": 10,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-10-08",
+"block": "A",
+"floor": 10,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-11-01",
+"block": "A",
+"floor": 11,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-11-02",
+"block": "A",
+"floor": 11,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-11-03",
+"block": "A",
+"floor": 11,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-11-04",
+"block": "A",
+"floor": 11,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-11-05",
+"block": "A",
+"floor": 11,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-11-06",
+"block": "A",
+"floor": 11,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-11-07",
+"block": "A",
+"floor": 11,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-11-08",
+"block": "A",
+"floor": 11,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-12-01",
+"block": "A",
+"floor": 12,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-12-02",
+"block": "A",
+"floor": 12,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-12-03",
+"block": "A",
+"floor": 12,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-12-04",
+"block": "A",
+"floor": 12,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-12-05",
+"block": "A",
+"floor": 12,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-12-06",
+"block": "A",
+"floor": 12,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-12-07",
+"block": "A",
+"floor": 12,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-12-08",
+"block": "A",
+"floor": 12,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-13-01",
+"block": "A",
+"floor": 13,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-13-02",
+"block": "A",
+"floor": 13,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-13-03",
+"block": "A",
+"floor": 13,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-13-04",
+"block": "A",
+"floor": 13,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-13-05",
+"block": "A",
+"floor": 13,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-13-06",
+"block": "A",
+"floor": 13,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-13-07",
+"block": "A",
+"floor": 13,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-13-08",
+"block": "A",
+"floor": 13,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-14-01",
+"block": "A",
+"floor": 14,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-14-02",
+"block": "A",
+"floor": 14,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-14-03",
+"block": "A",
+"floor": 14,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-14-04",
+"block": "A",
+"floor": 14,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-14-05",
+"block": "A",
+"floor": 14,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-14-06",
+"block": "A",
+"floor": 14,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-14-07",
+"block": "A",
+"floor": 14,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-14-08",
+"block": "A",
+"floor": 14,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-15-01",
+"block": "A",
+"floor": 15,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-15-02",
+"block": "A",
+"floor": 15,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-15-03",
+"block": "A",
+"floor": 15,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-15-04",
+"block": "A",
+"floor": 15,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-15-05",
+"block": "A",
+"floor": 15,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-15-06",
+"block": "A",
+"floor": 15,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-15-07",
+"block": "A",
+"floor": 15,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-15-08",
+"block": "A",
+"floor": 15,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-16-01",
+"block": "A",
+"floor": 16,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-16-02",
+"block": "A",
+"floor": 16,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-16-03",
+"block": "A",
+"floor": 16,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-16-04",
+"block": "A",
+"floor": 16,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-16-05",
+"block": "A",
+"floor": 16,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-16-06",
+"block": "A",
+"floor": 16,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-16-07",
+"block": "A",
+"floor": 16,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-16-08",
+"block": "A",
+"floor": 16,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-17-01",
+"block": "A",
+"floor": 17,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-17-02",
+"block": "A",
+"floor": 17,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-17-03",
+"block": "A",
+"floor": 17,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-17-04",
+"block": "A",
+"floor": 17,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-17-05",
+"block": "A",
+"floor": 17,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-17-06",
+"block": "A",
+"floor": 17,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-17-07",
+"block": "A",
+"floor": 17,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-17-08",
+"block": "A",
+"floor": 17,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-18-01",
+"block": "A",
+"floor": 18,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-18-02",
+"block": "A",
+"floor": 18,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-18-03",
+"block": "A",
+"floor": 18,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-18-04",
+"block": "A",
+"floor": 18,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-18-05",
+"block": "A",
+"floor": 18,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-18-06",
+"block": "A",
+"floor": 18,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-18-07",
+"block": "A",
+"floor": 18,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-18-08",
+"block": "A",
+"floor": 18,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-19-01",
+"block": "A",
+"floor": 19,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-19-02",
+"block": "A",
+"floor": 19,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-19-03",
+"block": "A",
+"floor": 19,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "A-19-04",
+"block": "A",
+"floor": 19,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-19-05",
+"block": "A",
+"floor": 19,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-19-06",
+"block": "A",
+"floor": 19,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "A-19-07",
+"block": "A",
+"floor": 19,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "A-19-08",
+"block": "A",
+"floor": 19,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-01-01",
+"block": "B",
+"floor": 1,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-01-02",
+"block": "B",
+"floor": 1,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-01-03",
+"block": "B",
+"floor": 1,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-01-04",
+"block": "B",
+"floor": 1,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-01-05",
+"block": "B",
+"floor": 1,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-01-06",
+"block": "B",
+"floor": 1,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-01-07",
+"block": "B",
+"floor": 1,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-01-08",
+"block": "B",
+"floor": 1,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-02-01",
+"block": "B",
+"floor": 2,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-02-02",
+"block": "B",
+"floor": 2,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-02-03",
+"block": "B",
+"floor": 2,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-02-04",
+"block": "B",
+"floor": 2,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-02-05",
+"block": "B",
+"floor": 2,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-02-06",
+"block": "B",
+"floor": 2,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-02-07",
+"block": "B",
+"floor": 2,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-02-08",
+"block": "B",
+"floor": 2,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-03-01",
+"block": "B",
+"floor": 3,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-03-02",
+"block": "B",
+"floor": 3,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-03-03",
+"block": "B",
+"floor": 3,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-03-04",
+"block": "B",
+"floor": 3,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-03-05",
+"block": "B",
+"floor": 3,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-03-06",
+"block": "B",
+"floor": 3,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-03-07",
+"block": "B",
+"floor": 3,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-03-08",
+"block": "B",
+"floor": 3,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-04-01",
+"block": "B",
+"floor": 4,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-04-02",
+"block": "B",
+"floor": 4,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-04-03",
+"block": "B",
+"floor": 4,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-04-04",
+"block": "B",
+"floor": 4,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-04-05",
+"block": "B",
+"floor": 4,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-04-06",
+"block": "B",
+"floor": 4,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-04-07",
+"block": "B",
+"floor": 4,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-04-08",
+"block": "B",
+"floor": 4,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-05-01",
+"block": "B",
+"floor": 5,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-05-02",
+"block": "B",
+"floor": 5,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-05-03",
+"block": "B",
+"floor": 5,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-05-04",
+"block": "B",
+"floor": 5,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-05-05",
+"block": "B",
+"floor": 5,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-05-06",
+"block": "B",
+"floor": 5,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-05-07",
+"block": "B",
+"floor": 5,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-05-08",
+"block": "B",
+"floor": 5,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-06-01",
+"block": "B",
+"floor": 6,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-06-02",
+"block": "B",
+"floor": 6,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-06-03",
+"block": "B",
+"floor": 6,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-06-04",
+"block": "B",
+"floor": 6,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-06-05",
+"block": "B",
+"floor": 6,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-06-06",
+"block": "B",
+"floor": 6,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-06-07",
+"block": "B",
+"floor": 6,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-06-08",
+"block": "B",
+"floor": 6,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-07-01",
+"block": "B",
+"floor": 7,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-07-02",
+"block": "B",
+"floor": 7,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-07-03",
+"block": "B",
+"floor": 7,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-07-04",
+"block": "B",
+"floor": 7,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-07-05",
+"block": "B",
+"floor": 7,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-07-06",
+"block": "B",
+"floor": 7,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-07-07",
+"block": "B",
+"floor": 7,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-07-08",
+"block": "B",
+"floor": 7,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-08-01",
+"block": "B",
+"floor": 8,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-08-02",
+"block": "B",
+"floor": 8,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-08-03",
+"block": "B",
+"floor": 8,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-08-04",
+"block": "B",
+"floor": 8,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-08-05",
+"block": "B",
+"floor": 8,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-08-06",
+"block": "B",
+"floor": 8,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-08-07",
+"block": "B",
+"floor": 8,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-08-08",
+"block": "B",
+"floor": 8,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-09-01",
+"block": "B",
+"floor": 9,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-09-02",
+"block": "B",
+"floor": 9,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-09-03",
+"block": "B",
+"floor": 9,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-09-04",
+"block": "B",
+"floor": 9,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-09-05",
+"block": "B",
+"floor": 9,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-09-06",
+"block": "B",
+"floor": 9,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-09-07",
+"block": "B",
+"floor": 9,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-09-08",
+"block": "B",
+"floor": 9,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-10-01",
+"block": "B",
+"floor": 10,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-10-02",
+"block": "B",
+"floor": 10,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-10-03",
+"block": "B",
+"floor": 10,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-10-04",
+"block": "B",
+"floor": 10,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-10-05",
+"block": "B",
+"floor": 10,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-10-06",
+"block": "B",
+"floor": 10,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-10-07",
+"block": "B",
+"floor": 10,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-10-08",
+"block": "B",
+"floor": 10,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-11-01",
+"block": "B",
+"floor": 11,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-11-02",
+"block": "B",
+"floor": 11,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-11-03",
+"block": "B",
+"floor": 11,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-11-04",
+"block": "B",
+"floor": 11,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-11-05",
+"block": "B",
+"floor": 11,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-11-06",
+"block": "B",
+"floor": 11,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-11-07",
+"block": "B",
+"floor": 11,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-11-08",
+"block": "B",
+"floor": 11,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-12-01",
+"block": "B",
+"floor": 12,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-12-02",
+"block": "B",
+"floor": 12,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-12-03",
+"block": "B",
+"floor": 12,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-12-04",
+"block": "B",
+"floor": 12,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-12-05",
+"block": "B",
+"floor": 12,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-12-06",
+"block": "B",
+"floor": 12,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-12-07",
+"block": "B",
+"floor": 12,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-12-08",
+"block": "B",
+"floor": 12,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-13-01",
+"block": "B",
+"floor": 13,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-13-02",
+"block": "B",
+"floor": 13,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-13-03",
+"block": "B",
+"floor": 13,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-13-04",
+"block": "B",
+"floor": 13,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-13-05",
+"block": "B",
+"floor": 13,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-13-06",
+"block": "B",
+"floor": 13,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-13-07",
+"block": "B",
+"floor": 13,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-13-08",
+"block": "B",
+"floor": 13,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-14-01",
+"block": "B",
+"floor": 14,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-14-02",
+"block": "B",
+"floor": 14,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-14-03",
+"block": "B",
+"floor": 14,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-14-04",
+"block": "B",
+"floor": 14,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-14-05",
+"block": "B",
+"floor": 14,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-14-06",
+"block": "B",
+"floor": 14,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-14-07",
+"block": "B",
+"floor": 14,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-14-08",
+"block": "B",
+"floor": 14,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-15-01",
+"block": "B",
+"floor": 15,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-15-02",
+"block": "B",
+"floor": 15,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-15-03",
+"block": "B",
+"floor": 15,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-15-04",
+"block": "B",
+"floor": 15,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-15-05",
+"block": "B",
+"floor": 15,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-15-06",
+"block": "B",
+"floor": 15,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-15-07",
+"block": "B",
+"floor": 15,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-15-08",
+"block": "B",
+"floor": 15,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-16-01",
+"block": "B",
+"floor": 16,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-16-02",
+"block": "B",
+"floor": 16,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-16-03",
+"block": "B",
+"floor": 16,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-16-04",
+"block": "B",
+"floor": 16,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-16-05",
+"block": "B",
+"floor": 16,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-16-06",
+"block": "B",
+"floor": 16,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-16-07",
+"block": "B",
+"floor": 16,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-16-08",
+"block": "B",
+"floor": 16,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-17-01",
+"block": "B",
+"floor": 17,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-17-02",
+"block": "B",
+"floor": 17,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-17-03",
+"block": "B",
+"floor": 17,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-17-04",
+"block": "B",
+"floor": 17,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-17-05",
+"block": "B",
+"floor": 17,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-17-06",
+"block": "B",
+"floor": 17,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-17-07",
+"block": "B",
+"floor": 17,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-17-08",
+"block": "B",
+"floor": 17,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-18-01",
+"block": "B",
+"floor": 18,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-18-02",
+"block": "B",
+"floor": 18,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-18-03",
+"block": "B",
+"floor": 18,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-18-04",
+"block": "B",
+"floor": 18,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-18-05",
+"block": "B",
+"floor": 18,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "B-18-06",
+"block": "B",
+"floor": 18,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-18-07",
+"block": "B",
+"floor": 18,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-18-08",
+"block": "B",
+"floor": 18,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-19-01",
+"block": "B",
+"floor": 19,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-19-02",
+"block": "B",
+"floor": 19,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-19-03",
+"block": "B",
+"floor": 19,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-19-04",
+"block": "B",
+"floor": 19,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-19-05",
+"block": "B",
+"floor": 19,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-19-06",
+"block": "B",
+"floor": 19,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "B-19-07",
+"block": "B",
+"floor": 19,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "B-19-08",
+"block": "B",
+"floor": 19,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-01-01",
+"block": "C",
+"floor": 1,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-01-02",
+"block": "C",
+"floor": 1,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-01-03",
+"block": "C",
+"floor": 1,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-01-04",
+"block": "C",
+"floor": 1,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-01-05",
+"block": "C",
+"floor": 1,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-01-06",
+"block": "C",
+"floor": 1,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-01-07",
+"block": "C",
+"floor": 1,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-01-08",
+"block": "C",
+"floor": 1,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-02-01",
+"block": "C",
+"floor": 2,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-02-02",
+"block": "C",
+"floor": 2,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-02-03",
+"block": "C",
+"floor": 2,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-02-04",
+"block": "C",
+"floor": 2,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-02-05",
+"block": "C",
+"floor": 2,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-02-06",
+"block": "C",
+"floor": 2,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-02-07",
+"block": "C",
+"floor": 2,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-02-08",
+"block": "C",
+"floor": 2,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-03-01",
+"block": "C",
+"floor": 3,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-03-02",
+"block": "C",
+"floor": 3,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-03-03",
+"block": "C",
+"floor": 3,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-03-04",
+"block": "C",
+"floor": 3,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-03-05",
+"block": "C",
+"floor": 3,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-03-06",
+"block": "C",
+"floor": 3,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-03-07",
+"block": "C",
+"floor": 3,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-03-08",
+"block": "C",
+"floor": 3,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-04-01",
+"block": "C",
+"floor": 4,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-04-02",
+"block": "C",
+"floor": 4,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-04-03",
+"block": "C",
+"floor": 4,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-04-04",
+"block": "C",
+"floor": 4,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-04-05",
+"block": "C",
+"floor": 4,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-04-06",
+"block": "C",
+"floor": 4,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-04-07",
+"block": "C",
+"floor": 4,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-04-08",
+"block": "C",
+"floor": 4,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-05-01",
+"block": "C",
+"floor": 5,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-05-02",
+"block": "C",
+"floor": 5,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-05-03",
+"block": "C",
+"floor": 5,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-05-04",
+"block": "C",
+"floor": 5,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-05-05",
+"block": "C",
+"floor": 5,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-05-06",
+"block": "C",
+"floor": 5,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-05-07",
+"block": "C",
+"floor": 5,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-05-08",
+"block": "C",
+"floor": 5,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-06-01",
+"block": "C",
+"floor": 6,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-06-02",
+"block": "C",
+"floor": 6,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-06-03",
+"block": "C",
+"floor": 6,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-06-04",
+"block": "C",
+"floor": 6,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-06-05",
+"block": "C",
+"floor": 6,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-06-06",
+"block": "C",
+"floor": 6,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-06-07",
+"block": "C",
+"floor": 6,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-06-08",
+"block": "C",
+"floor": 6,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-07-01",
+"block": "C",
+"floor": 7,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-07-02",
+"block": "C",
+"floor": 7,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-07-03",
+"block": "C",
+"floor": 7,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-07-04",
+"block": "C",
+"floor": 7,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-07-05",
+"block": "C",
+"floor": 7,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-07-06",
+"block": "C",
+"floor": 7,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-07-07",
+"block": "C",
+"floor": 7,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-07-08",
+"block": "C",
+"floor": 7,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-08-01",
+"block": "C",
+"floor": 8,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-08-02",
+"block": "C",
+"floor": 8,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-08-03",
+"block": "C",
+"floor": 8,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-08-04",
+"block": "C",
+"floor": 8,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-08-05",
+"block": "C",
+"floor": 8,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-08-06",
+"block": "C",
+"floor": 8,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-08-07",
+"block": "C",
+"floor": 8,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-08-08",
+"block": "C",
+"floor": 8,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-09-01",
+"block": "C",
+"floor": 9,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-09-02",
+"block": "C",
+"floor": 9,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-09-03",
+"block": "C",
+"floor": 9,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-09-04",
+"block": "C",
+"floor": 9,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-09-05",
+"block": "C",
+"floor": 9,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-09-06",
+"block": "C",
+"floor": 9,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-09-07",
+"block": "C",
+"floor": 9,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-09-08",
+"block": "C",
+"floor": 9,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-10-01",
+"block": "C",
+"floor": 10,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-10-02",
+"block": "C",
+"floor": 10,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-10-03",
+"block": "C",
+"floor": 10,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-10-04",
+"block": "C",
+"floor": 10,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-10-05",
+"block": "C",
+"floor": 10,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-10-06",
+"block": "C",
+"floor": 10,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-10-07",
+"block": "C",
+"floor": 10,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-10-08",
+"block": "C",
+"floor": 10,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-11-01",
+"block": "C",
+"floor": 11,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-11-02",
+"block": "C",
+"floor": 11,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-11-03",
+"block": "C",
+"floor": 11,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-11-04",
+"block": "C",
+"floor": 11,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-11-05",
+"block": "C",
+"floor": 11,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-11-06",
+"block": "C",
+"floor": 11,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-11-07",
+"block": "C",
+"floor": 11,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-11-08",
+"block": "C",
+"floor": 11,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-12-01",
+"block": "C",
+"floor": 12,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-12-02",
+"block": "C",
+"floor": 12,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-12-03",
+"block": "C",
+"floor": 12,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-12-04",
+"block": "C",
+"floor": 12,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-12-05",
+"block": "C",
+"floor": 12,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-12-06",
+"block": "C",
+"floor": 12,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-12-07",
+"block": "C",
+"floor": 12,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-12-08",
+"block": "C",
+"floor": 12,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-13-01",
+"block": "C",
+"floor": 13,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-13-02",
+"block": "C",
+"floor": 13,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-13-03",
+"block": "C",
+"floor": 13,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-13-04",
+"block": "C",
+"floor": 13,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-13-05",
+"block": "C",
+"floor": 13,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-13-06",
+"block": "C",
+"floor": 13,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-13-07",
+"block": "C",
+"floor": 13,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-13-08",
+"block": "C",
+"floor": 13,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-14-01",
+"block": "C",
+"floor": 14,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-14-02",
+"block": "C",
+"floor": 14,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-14-03",
+"block": "C",
+"floor": 14,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-14-04",
+"block": "C",
+"floor": 14,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-14-05",
+"block": "C",
+"floor": 14,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-14-06",
+"block": "C",
+"floor": 14,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-14-07",
+"block": "C",
+"floor": 14,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-14-08",
+"block": "C",
+"floor": 14,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-15-01",
+"block": "C",
+"floor": 15,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-15-02",
+"block": "C",
+"floor": 15,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-15-03",
+"block": "C",
+"floor": 15,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-15-04",
+"block": "C",
+"floor": 15,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-15-05",
+"block": "C",
+"floor": 15,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-15-06",
+"block": "C",
+"floor": 15,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-15-07",
+"block": "C",
+"floor": 15,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-15-08",
+"block": "C",
+"floor": 15,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-16-01",
+"block": "C",
+"floor": 16,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-16-02",
+"block": "C",
+"floor": 16,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-16-03",
+"block": "C",
+"floor": 16,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-16-04",
+"block": "C",
+"floor": 16,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-16-05",
+"block": "C",
+"floor": 16,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-16-06",
+"block": "C",
+"floor": 16,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-16-07",
+"block": "C",
+"floor": 16,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-16-08",
+"block": "C",
+"floor": 16,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-17-01",
+"block": "C",
+"floor": 17,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-17-02",
+"block": "C",
+"floor": 17,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-17-03",
+"block": "C",
+"floor": 17,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-17-04",
+"block": "C",
+"floor": 17,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-17-05",
+"block": "C",
+"floor": 17,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-17-06",
+"block": "C",
+"floor": 17,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-17-07",
+"block": "C",
+"floor": 17,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-17-08",
+"block": "C",
+"floor": 17,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-18-01",
+"block": "C",
+"floor": 18,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-18-02",
+"block": "C",
+"floor": 18,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-18-03",
+"block": "C",
+"floor": 18,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-18-04",
+"block": "C",
+"floor": 18,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-18-05",
+"block": "C",
+"floor": 18,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-18-06",
+"block": "C",
+"floor": 18,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-18-07",
+"block": "C",
+"floor": 18,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-18-08",
+"block": "C",
+"floor": 18,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-19-01",
+"block": "C",
+"floor": 19,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-19-02",
+"block": "C",
+"floor": 19,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "C-19-03",
+"block": "C",
+"floor": 19,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-19-04",
+"block": "C",
+"floor": 19,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-19-05",
+"block": "C",
+"floor": 19,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "C-19-06",
+"block": "C",
+"floor": 19,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-19-07",
+"block": "C",
+"floor": 19,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "C-19-08",
+"block": "C",
+"floor": 19,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-01-01",
+"block": "D",
+"floor": 1,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-01-02",
+"block": "D",
+"floor": 1,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-01-03",
+"block": "D",
+"floor": 1,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-01-04",
+"block": "D",
+"floor": 1,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-01-05",
+"block": "D",
+"floor": 1,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-01-06",
+"block": "D",
+"floor": 1,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-01-07",
+"block": "D",
+"floor": 1,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-01-08",
+"block": "D",
+"floor": 1,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-02-01",
+"block": "D",
+"floor": 2,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-02-02",
+"block": "D",
+"floor": 2,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-02-03",
+"block": "D",
+"floor": 2,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-02-04",
+"block": "D",
+"floor": 2,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-02-05",
+"block": "D",
+"floor": 2,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-02-06",
+"block": "D",
+"floor": 2,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-02-07",
+"block": "D",
+"floor": 2,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-02-08",
+"block": "D",
+"floor": 2,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-03-01",
+"block": "D",
+"floor": 3,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-03-02",
+"block": "D",
+"floor": 3,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-03-03",
+"block": "D",
+"floor": 3,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-03-04",
+"block": "D",
+"floor": 3,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-03-05",
+"block": "D",
+"floor": 3,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-03-06",
+"block": "D",
+"floor": 3,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-03-07",
+"block": "D",
+"floor": 3,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-03-08",
+"block": "D",
+"floor": 3,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-04-01",
+"block": "D",
+"floor": 4,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-04-02",
+"block": "D",
+"floor": 4,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-04-03",
+"block": "D",
+"floor": 4,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-04-04",
+"block": "D",
+"floor": 4,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-04-05",
+"block": "D",
+"floor": 4,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-04-06",
+"block": "D",
+"floor": 4,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-04-07",
+"block": "D",
+"floor": 4,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-04-08",
+"block": "D",
+"floor": 4,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-05-01",
+"block": "D",
+"floor": 5,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-05-02",
+"block": "D",
+"floor": 5,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-05-03",
+"block": "D",
+"floor": 5,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-05-04",
+"block": "D",
+"floor": 5,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-05-05",
+"block": "D",
+"floor": 5,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-05-06",
+"block": "D",
+"floor": 5,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-05-07",
+"block": "D",
+"floor": 5,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-05-08",
+"block": "D",
+"floor": 5,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-06-01",
+"block": "D",
+"floor": 6,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-06-02",
+"block": "D",
+"floor": 6,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-06-03",
+"block": "D",
+"floor": 6,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-06-04",
+"block": "D",
+"floor": 6,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-06-05",
+"block": "D",
+"floor": 6,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-06-06",
+"block": "D",
+"floor": 6,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-06-07",
+"block": "D",
+"floor": 6,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-06-08",
+"block": "D",
+"floor": 6,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-07-01",
+"block": "D",
+"floor": 7,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-07-02",
+"block": "D",
+"floor": 7,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-07-03",
+"block": "D",
+"floor": 7,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-07-04",
+"block": "D",
+"floor": 7,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-07-05",
+"block": "D",
+"floor": 7,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-07-06",
+"block": "D",
+"floor": 7,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-07-07",
+"block": "D",
+"floor": 7,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-07-08",
+"block": "D",
+"floor": 7,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-08-01",
+"block": "D",
+"floor": 8,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-08-02",
+"block": "D",
+"floor": 8,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-08-03",
+"block": "D",
+"floor": 8,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-08-04",
+"block": "D",
+"floor": 8,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-08-05",
+"block": "D",
+"floor": 8,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-08-06",
+"block": "D",
+"floor": 8,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-08-07",
+"block": "D",
+"floor": 8,
+"number": 7,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-08-08",
+"block": "D",
+"floor": 8,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-09-01",
+"block": "D",
+"floor": 9,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-09-02",
+"block": "D",
+"floor": 9,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-09-03",
+"block": "D",
+"floor": 9,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-09-04",
+"block": "D",
+"floor": 9,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-09-05",
+"block": "D",
+"floor": 9,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-09-06",
+"block": "D",
+"floor": 9,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-09-07",
+"block": "D",
+"floor": 9,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-09-08",
+"block": "D",
+"floor": 9,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-10-01",
+"block": "D",
+"floor": 10,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-10-02",
+"block": "D",
+"floor": 10,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-10-03",
+"block": "D",
+"floor": 10,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-10-04",
+"block": "D",
+"floor": 10,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-10-05",
+"block": "D",
+"floor": 10,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-10-06",
+"block": "D",
+"floor": 10,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-10-07",
+"block": "D",
+"floor": 10,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-10-08",
+"block": "D",
+"floor": 10,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-11-01",
+"block": "D",
+"floor": 11,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-11-02",
+"block": "D",
+"floor": 11,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-11-03",
+"block": "D",
+"floor": 11,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-11-04",
+"block": "D",
+"floor": 11,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-11-05",
+"block": "D",
+"floor": 11,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-11-06",
+"block": "D",
+"floor": 11,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-11-07",
+"block": "D",
+"floor": 11,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-11-08",
+"block": "D",
+"floor": 11,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-12-01",
+"block": "D",
+"floor": 12,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-12-02",
+"block": "D",
+"floor": 12,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-12-03",
+"block": "D",
+"floor": 12,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-12-04",
+"block": "D",
+"floor": 12,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-12-05",
+"block": "D",
+"floor": 12,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-12-06",
+"block": "D",
+"floor": 12,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-12-07",
+"block": "D",
+"floor": 12,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-12-08",
+"block": "D",
+"floor": 12,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-13-01",
+"block": "D",
+"floor": 13,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-13-02",
+"block": "D",
+"floor": 13,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-13-03",
+"block": "D",
+"floor": 13,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-13-04",
+"block": "D",
+"floor": 13,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-13-05",
+"block": "D",
+"floor": 13,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-13-06",
+"block": "D",
+"floor": 13,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-13-07",
+"block": "D",
+"floor": 13,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-13-08",
+"block": "D",
+"floor": 13,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-14-01",
+"block": "D",
+"floor": 14,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-14-02",
+"block": "D",
+"floor": 14,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-14-03",
+"block": "D",
+"floor": 14,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-14-04",
+"block": "D",
+"floor": 14,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-14-05",
+"block": "D",
+"floor": 14,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-14-06",
+"block": "D",
+"floor": 14,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-14-07",
+"block": "D",
+"floor": 14,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-14-08",
+"block": "D",
+"floor": 14,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-15-01",
+"block": "D",
+"floor": 15,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-15-02",
+"block": "D",
+"floor": 15,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-15-03",
+"block": "D",
+"floor": 15,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-15-04",
+"block": "D",
+"floor": 15,
+"number": 4,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-15-05",
+"block": "D",
+"floor": 15,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-15-06",
+"block": "D",
+"floor": 15,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-15-07",
+"block": "D",
+"floor": 15,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-15-08",
+"block": "D",
+"floor": 15,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-16-01",
+"block": "D",
+"floor": 16,
+"number": 1,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-16-02",
+"block": "D",
+"floor": 16,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-16-03",
+"block": "D",
+"floor": 16,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-16-04",
+"block": "D",
+"floor": 16,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-16-05",
+"block": "D",
+"floor": 16,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-16-06",
+"block": "D",
+"floor": 16,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-16-07",
+"block": "D",
+"floor": 16,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-16-08",
+"block": "D",
+"floor": 16,
+"number": 8,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-17-01",
+"block": "D",
+"floor": 17,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-17-02",
+"block": "D",
+"floor": 17,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-17-03",
+"block": "D",
+"floor": 17,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-17-04",
+"block": "D",
+"floor": 17,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-17-05",
+"block": "D",
+"floor": 17,
+"number": 5,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-17-06",
+"block": "D",
+"floor": 17,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-17-07",
+"block": "D",
+"floor": 17,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-17-08",
+"block": "D",
+"floor": 17,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-18-01",
+"block": "D",
+"floor": 18,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-18-02",
+"block": "D",
+"floor": 18,
+"number": 2,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-18-03",
+"block": "D",
+"floor": 18,
+"number": 3,
+"side": "left",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-18-04",
+"block": "D",
+"floor": 18,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-18-05",
+"block": "D",
+"floor": 18,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-18-06",
+"block": "D",
+"floor": 18,
+"number": 6,
+"side": "right",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-18-07",
+"block": "D",
+"floor": 18,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-18-08",
+"block": "D",
+"floor": 18,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-19-01",
+"block": "D",
+"floor": 19,
+"number": 1,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-19-02",
+"block": "D",
+"floor": 19,
+"number": 2,
+"side": "left",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-19-03",
+"block": "D",
+"floor": 19,
+"number": 3,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-19-04",
+"block": "D",
+"floor": 19,
+"number": 4,
+"side": "left",
+"occupied": true,
+"occupant": "owner",
+"share_units": 10
+},
+{
+"unit": "D-19-05",
+"block": "D",
+"floor": 19,
+"number": 5,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-19-06",
+"block": "D",
+"floor": 19,
+"number": 6,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+},
+{
+"unit": "D-19-07",
+"block": "D",
+"floor": 19,
+"number": 7,
+"side": "right",
+"occupied": true,
+"occupant": "tenant",
+"share_units": 10
+},
+{
+"unit": "D-19-08",
+"block": "D",
+"floor": 19,
+"number": 8,
+"side": "right",
+"occupied": false,
+"occupant": null,
+"share_units": 10
+}
+],
+"totals": {
+"A": 122,
+"B": 106,
+"C": 122,
+"D": 114
+}
+}

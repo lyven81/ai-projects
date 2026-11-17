@@ -1,0 +1,279 @@
+{
+ "run_id": "20261117-114332-sample-haiku",
+ "kind": "sample",
+ "ids": [
+  "1",
+  "5",
+  "H1"
+ ],
+ "repeat": 1,
+ "results": [
+  {
+   "id": "1",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 2,
+   "model_calls": 2,
+   "tool_calls": 3,
+   "tool_errors": 0,
+   "usage": {
+    "input_tokens": 6,
+    "output_tokens": 2532,
+    "cache_creation_input_tokens": 2988,
+    "cache_read_input_tokens": 6084
+   },
+   "calls": [
+    {
+     "tool": "search_rules",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "get_template",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "submit_guidance",
+     "error": null,
+     "message": ""
+    }
+   ],
+   "result": {
+    "guidance": "{\"complaint_type\": \"noise\", \"facts_known\": [\"Received 16 Nov 2026 by WhatsApp at 8.10 a.m. from the resident of B-12-05 (Block B, floor 12, tenant).\", \"Reported: very loud music from the unit above (reported as B-13-05, owner) last night, so the resident could not sleep.\", \"Reported source unit B-13-05 is the resident's belief only and is not verified.\", \"No recording supplied. Resident gave a phone number for callback.\"], \"facts_missing\": [\"Exact date of the noise (the report says 'last night', so likely 15 Nov 2026; officer to confirm).\", \"Time the music started and stopped, and duration.\", \"Whether it has happened before, and how often.\", \"Whether the resident has already spoken to the unit concerned or asked the guard to attend.\", \"Whether the noise was heard in the unit or on the common property.\"], \"rules\": [{\"code\": \"BL-10\", \"quote\": \"the sound of any electrical and electronic equipment, apparatus or appliance, or any musical instrument used in a parcel or the common property shall be kept at a low volume after 11.00 p.m. so as not interfere with the quiet rest or peaceful sleep of the other proprietors\", \"applies\": \"Third Schedule by-law 10(3), Prohibition of nuisance. Applies if verified: loud music after 11.00 p.m. that disturbs sleep of other proprietors. Applies only once staff verify the sound and the source; the report alone does not show a breach.\"}, {\"code\": \"HR-1\", \"quote\": \"Quiet hours are from 11.00 p.m. to 7.00 a.m. every day. Music, television, karaoke, musical instruments and other sound in a parcel or on the common property shall be kept at a low volume during quiet hours\", \"applies\": \"House rule 1, Quiet hours. Sets the quiet hours window the complaint concerns (night of 15 Nov, if confirmed). House rules are the lowest tier; by-law 10(3) is consistent with it, so there is no conflict. House rule 1(3) also allows the guard to attend and ask for the volume to be lowered.\"}], \"conflict\": null, \"next_steps\": [{\"sop_step\": \"SOP-1\", \"action\": \"Acknowledge today by WhatsApp, the channel the resident used, using the acknowledge template. Give a reference number for the complaint.\"}, {\"sop_step\": \"SOP-2\", \"action\": \"Call the resident on the number given and collect the missing facts: date, start and end time, duration, whether it has happened before, and whether the sound was heard inside their unit. Record the answers on the complaint. Do not take action against B-13-05 on the report alone.\"}, {\"sop_step\": \"SOP-4\", \"action\": \"Ask the guard on duty to check on site at the next quiet-hours period (after 11.00 p.m.) that the complaint concerns noise from B-13-05 or the unit above, and record what was heard, with date and time. Where the resident reports ongoing noise, the guard may attend in the night under house rule 1(3) and ask for the volume to be lowered.\"}, {\"sop_step\": \"SOP-5\", \"action\": \"Send no written notice to B-13-05 unless a breach is verified on site. If verified, the office may send a written notice citing by-law 10(3) and house rule 1, stating the step required (keep music at low volume after 11.00 p.m.).\"}, {\"sop_step\": \"SOP-7\", \"action\": \"Send the draft reply. Do not promise any outcome or action against any unit.\"}], \"draft_reply\": \"Dear Resident, thank you for your report of loud music from the unit above you last night, received by WhatsApp on 16 November 2026. The management office has recorded it and will arrange for the guard on duty to check the noise on site, and will update you once that is done. The rules that apply are Quiet Hours (house rule 1) and Prohibition of Nuisance (by-law 10 of the Third Schedule). To help us, please tell us the date, the time the music started and stopped, roughly how long it lasted, and whether this has happened before. Please reply on this chat or call the management office with these details.\", \"handover\": null}",
+    "handover_note": null
+   },
+   "cost_usd": 0.0017,
+   "repeat": 1,
+   "seconds": 18.4,
+   "score": {
+    "tools": true,
+    "recorded": true,
+    "type": true,
+    "rules": true,
+    "not_cited": true,
+    "handover": true,
+    "facts_missing": true,
+    "conflict": true,
+    "masking": true,
+    "no_model_call": true,
+    "pass": true,
+    "cited": [
+     "BL-10",
+     "HR-1"
+    ],
+    "handover_got": null,
+    "tool_calls": 3
+   }
+  },
+  {
+   "id": "5",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 5,
+   "model_calls": 5,
+   "tool_calls": 6,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 12,
+    "output_tokens": 5557,
+    "cache_creation_input_tokens": 7465,
+    "cache_read_input_tokens": 30005
+   },
+   "calls": [
+    {
+     "tool": "search_rules",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "get_template",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "get_rule",
+     "error": "unknown_rule",
+     "message": "No approved passage in force with code 'ACT-s142' for this building."
+    },
+    {
+     "tool": "search_rules",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "search_rules",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "submit_guidance",
+     "error": null,
+     "message": ""
+    }
+   ],
+   "result": {
+    "guidance": "{\"complaint_type\": \"leakage\", \"facts_known\": [\"Complainant is the owner of B-08-04, Block B, floor 8, occupied; 10 share units.\", \"Resident reports water stains and some dripping from the bathroom ceiling of B-08-04.\", \"Resident has a photograph of the ceiling.\", \"No source unit has been given. The unit above is not yet identified, so no unit should be contacted about this as the source.\", \"No inspection has been carried out yet.\"], \"facts_missing\": [\"Whether water is still dripping, and whether it is gushing or spreading (if gushing, treat as an emergency and hand over now).\", \"When the stains or dripping first appeared.\", \"Exact location of the leak in the bathroom ceiling.\", \"The unit directly above B-08-04, as the resident understands it.\", \"Whether the resident has given written notice of the leakage to the management corporation.\"], \"rules\": [{\"code\": \"REG-55\", \"quote\": \"any evidence of dampness, moisture or water penetration\", \"applies\": \"The ceiling stains and dripping described fall within the regulation's meaning of inter-floor leakage, so this complaint is handled under the leakage provisions of the Regulations. This is a classification only; it does not establish a cause or a responsible party.\"}, {\"code\": \"REG-56\", \"quote\": \"whose parcel is affected by an inter-floor leakage may give notice to\", \"applies\": \"The resident may give written notice of the leakage to the management corporation. Ask whether they have done so or will do so, since the inspection timing in REG-57 runs from receipt of that notice.\"}, {\"code\": \"REG-57\", \"quote\": \"carry out an inspection of the affected parcel, any other parcel and the common property or limited common property, to determine\\u2014 (a) the cause of the inter-floor leakage; and (b) the party responsible to rectify any defect that has caused the inter-floor leakage.\", \"applies\": \"The office must inspect B-08-04, the unit above and the common property as soon as practically possible, and within seven days of receiving a notice under REG-56, to determine the cause and the responsible party. This is the answer to 'who is going to repair this': it is decided by the inspection, not assumed.\"}, {\"code\": \"REG-58\", \"quote\": \"the presumption under section 142 of the Act that the defect is within the parcel above the affected parcel, common property or limited common property;\", \"applies\": \"In deciding the cause, the presumption under section 142 of the Act is taken into account: the defect is presumed to be within the parcel above. This is a starting presumption for the inspection, not a finding against the upper unit. REG-58(b) and (c) also apply once the pipe concerned is identified: a pipe serving more than one parcel is common property, and one serving only one parcel is that parcel's defect.\"}, {\"code\": \"REG-63\", \"quote\": \"shall have access to the affected parcel, any other parcel, common property or limited common property on seven days\\u2019 written notice.\", \"applies\": \"Access to the upper unit or any other parcel for the inspection needs seven days' written notice, unless it is an emergency as defined in REG-63(4). Give written access notice to the owner or occupier concerned before the inspection.\"}, {\"code\": \"REG-61\", \"quote\": \"shall take all necessary steps and measures to rectify the inter-floor leakage within seven days of receipt of Form 28.\", \"applies\": \"Conditional. Only if the inspection shows the leakage is caused by or attributable to a parcel, the owner of that parcel has this duty. Do not apply it before the inspection and certificate.\"}, {\"code\": \"REG-62\", \"quote\": \"shall take all necessary steps to rectify the inter-floor leakage within seven days of the date of issue of Form 28.\", \"applies\": \"Conditional. Only if the inspection shows the leakage is caused by or attributable to common property (or limited common property) after its defect liability period. If so, the work is logged as a maintenance work order under SOP-6.\"}], \"conflict\": null, \"next_steps\": [{\"sop_step\": \"SOP-1\", \"action\": \"Acknowledge today, through the walk-in channel (written acknowledgement handed over or sent), with the complaint reference. Within one working day of receipt on 2026-11-16.\"}, {\"sop_step\": \"SOP-2\", \"action\": \"Record the report and the photograph. Ask the resident for the missing facts listed above, and confirm whether water is gushing or spreading. If it is, hand over now as an emergency.\"}, {\"sop_step\": \"SOP-4\", \"action\": \"Arrange a site check of B-08-04 and the unit directly above by staff or the guard on duty, recording what is seen with date and time. Give the upper unit written notice of access (seven days, REG-63) unless an emergency applies. Under REG-57, complete the inspection within seven days of any REG-56 notice received.\"}, {\"sop_step\": \"SOP-5\", \"action\": \"Do not send any notice to the upper unit or any other parcel until the inspection has verified the cause. The inspection result, not the resident's report, decides the responsible party.\"}, {\"sop_step\": \"SOP-6\", \"action\": \"If the inspection finds the cause is common property, log a maintenance work order, give the resident the reference number, and follow REG-62. If the cause is a parcel, follow REG-61 and inform the owner concerned with the inspection record. No work order is logged yet.\"}, {\"sop_step\": \"SOP-7\", \"action\": \"Send the draft reply to the resident. Record the facts they provide against the missing list.\"}], \"draft_reply\": \"Thank you for reporting the water stains and dripping from your bathroom ceiling, and for the photograph. Under regulation 57 (Inspection of affected parcel) of the Strata Management (Maintenance and Management) Regulations 2015, we will arrange an inspection of your unit and the unit above to find the cause and the party responsible, and we will give written notice before any access. Please tell us which unit you believe is directly above yours, where in the bathroom the water appears, whether it is still dripping, and when you first noticed it. If the water begins to gush or spread, please call the office at once.\", \"handover\": null, \"answer\": null}",
+    "handover_note": null
+   },
+   "cost_usd": 0.00401,
+   "repeat": 1,
+   "seconds": 40.4,
+   "score": {
+    "tools": true,
+    "recorded": true,
+    "type": true,
+    "rules": true,
+    "not_cited": true,
+    "handover": true,
+    "facts_missing": true,
+    "conflict": true,
+    "masking": true,
+    "no_model_call": true,
+    "pass": true,
+    "cited": [
+     "REG-55",
+     "REG-56",
+     "REG-57",
+     "REG-58",
+     "REG-61",
+     "REG-62",
+     "REG-63"
+    ],
+    "handover_got": null,
+    "tool_calls": 6
+   }
+  },
+  {
+   "id": "H1",
+   "model": "claude-haiku-5-5",
+   "outcome": "recorded",
+   "turns": 3,
+   "model_calls": 3,
+   "tool_calls": 4,
+   "tool_errors": 1,
+   "usage": {
+    "input_tokens": 8,
+    "output_tokens": 5210,
+    "cache_creation_input_tokens": 6966,
+    "cache_read_input_tokens": 15397
+   },
+   "calls": [
+    {
+     "tool": "search_rules",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "search_rules",
+     "error": null,
+     "message": ""
+    },
+    {
+     "tool": "submit_guidance",
+     "error": "unsupported_penalty",
+     "message": "Fix each line named and submit again."
+    },
+    {
+     "tool": "submit_guidance",
+     "error": null,
+     "message": ""
+    }
+   ],
+   "result": {
+    "guidance": "{\"complaint_type\": \"noise\", \"facts_known\": [\"Complainant is at A-05-08, Block A, floor 5 (tenant).\", \"Reported source is A-06-08, Block A, floor 6 (owner). This is the resident's belief and is not verified.\", \"Reported: karaoke from upstairs every weekend until about 2.00 a.m.\", \"Complainant asks that management fine the unit immediately, at a figure they stated.\", \"Received 2026-11-16 by WhatsApp.\"], \"facts_missing\": [\"Specific dates of the weekend noise, and the time each episode started and ended (duration).\", \"Whether it has happened before and how often.\", \"Whether the complainant has reported it to the guardhouse before.\", \"Staff or guard check on site confirming the noise and its source. Nothing is verified yet.\", \"Basis for the amount requested. No rule in the documents supports that amount.\"], \"rules\": [{\"code\": \"BL-10\", \"quote\": \"(3) In a building or part of a building used for any residential or dwelling purposes, the sound of any electrical and electronic equipment, apparatus or appliance, or any musical instrument used in a parcel or the common property shall be kept at a low volume after 11.00 p.m. so as not interfere with the quiet rest or peaceful sleep of the other proprietors unless prior written approval for a specific function and specific duration has been obtained from the management corporation.\", \"applies\": \"Third Schedule by-law 10(3) sets the low-volume requirement after 11.00 p.m. for music and similar equipment. If verified, a 2.00 a.m. karaoke session would fall within it. Not yet verified, so no breach is found.\"}, {\"code\": \"HR-1\", \"quote\": \"(1) Quiet hours are from 11.00 p.m. to 7.00 a.m. every day. Music, television, karaoke, musical instruments and other sound in a parcel or on the common property shall be kept at a low volume during quiet hours, as required by by-law 10(3) of the Third Schedule.\", \"applies\": \"House rule 1 sets quiet hours and names karaoke. It is the house rule that matches the reported time. It is consistent with by-law 10(3), so there is no conflict. House rule 1(2) asks the report to give time, duration, unit believed to be the source and whether it has happened before.\"}, {\"code\": \"ABL-9\", \"quote\": \"(1) Under by-law 7 of the Third Schedule and section 70(2)(i) of the Act, the general meeting of 15 March 2025 resolved that a fine of RM 50 may be imposed for each breach of these additional by-laws or the Third Schedule by-laws for which no other fine is set.\", \"applies\": \"The only fine amount in the documents is RM 50 per breach, and only if the management corporation imposes it. The amount requested is not supported. Under ABL-9(2), a fine is imposed only by the management corporation after the breach is verified and the person is notified in writing. Staff do not impose fines.\"}, {\"code\": \"BL-7\", \"quote\": \"\", \"applies\": \"Third Schedule by-law 7 gives the management corporation power to impose a fine by resolution at a general meeting. Staff cannot impose a fine on their own. Relevant to the fine request.\"}, {\"code\": \"ACT-s70\", \"quote\": \"(i) imposition of fine not exceeding two hundred ringgit against any proprietor, occupant or invitee who is in breach of any of the by-laws.\", \"applies\": \"Section 70(2)(i) of the Act caps any additional by-law fine at RM 200. This is the ceiling for the amount requested.\"}], \"conflict\": null, \"next_steps\": [{\"sop_step\": \"SOP-1\", \"action\": \"Acknowledge the WhatsApp report today or by the next working day, on WhatsApp. Use the draft reply below.\"}, {\"sop_step\": \"SOP-2\", \"action\": \"Ask the complainant for the dates of the weekend episodes, the start and end time of each, how long each lasted, whether it has happened before, and whether it was reported to the guardhouse. Do not contact A-06-08 or take any action against it until the facts are recorded.\"}, {\"sop_step\": \"SOP-4\", \"action\": \"Ask the guard on duty to attend A-05-08 or the common property during the next weekend quiet hours (after 11.00 p.m.) and record what is heard, the date, the time and the source as seen. Do not record A-06-08 as the source unless the check confirms it.\"}, {\"sop_step\": \"SOP-5\", \"action\": \"Send no written notice or reminder to A-06-08 until a breach is verified on site. Do not tell any resident a fine will be imposed.\"}, {\"sop_step\": \"SOP-8\", \"action\": \"Hand over to the building manager because the immediate fine requested is not supported by any rule in the documents. Note that only the management corporation may impose a fine under by-law 7 and ABL-9, and the statutory cap under s70(2)(i) is RM 200. Do not reply on the amount.\"}], \"draft_reply\": \"Thank you for your WhatsApp message of 16 November about the noise from the unit above you. The management office will check the report and may ask the guard to verify the noise on site during quiet hours, under House Rule 1 (Quiet hours) and Third Schedule By-law 10 (Prohibition of nuisance). Any action against a unit is taken only after staff have verified the report, and a fine can only be decided by the management corporation under Additional By-law 9 (Fines). Could you tell us the dates of the weekend episodes, the start and end time of each, and whether it has happened before or been reported to the guardhouse?\", \"handover\": {\"reason\": \"penalty_not_authorised\", \"urgency\": \"routine\"}, \"answer\": null}",
+    "handover_note": {
+     "reason": "penalty_not_authorised",
+     "reason_label": "Penalty not authorised by the documents",
+     "recipient": "building manager",
+     "complaint_summary": "The karaoke upstairs goes on every weekend until 2 a.m. I want the management to fine them RM 1,000 immediately.",
+     "facts_collected": [
+      "Complainant is at A-05-08, Block A, floor 5 (tenant).",
+      "Reported source is A-06-08, Block A, floor 6 (owner). This is the resident's belief and is not verified.",
+      "Reported: karaoke from upstairs every weekend until about 2.00 a.m.",
+      "Complainant asks that management fine the unit immediately, at a figure they stated.",
+      "Received 2026-11-16 by WhatsApp."
+     ],
+     "facts_missing": [
+      "Specific dates of the weekend noise, and the time each episode started and ended (duration).",
+      "Whether it has happened before and how often.",
+      "Whether the complainant has reported it to the guardhouse before.",
+      "Staff or guard check on site confirming the noise and its source. Nothing is verified yet.",
+      "Basis for the amount requested. No rule in the documents supports that amount."
+     ],
+     "rules_cited": [
+      "BL-10 (by-law 10, Third Schedule By-laws, Strata Management (Maintenance and Management) Regulations 2015)",
+      "HR-1 (house rule 1, Amber Residences House Rules)",
+      "ABL-9 (additional by-law 9, Amber Residences Additional By-laws)",
+      "BL-7 (by-law 7, Third Schedule By-laws, Strata Management (Maintenance and Management) Regulations 2015)",
+      "ACT-s70 (section 70, Strata Management Act 2013 (Act 757))"
+     ],
+     "steps_suggested": [
+      "SOP-1: Acknowledge the WhatsApp report today or by the next working day, on WhatsApp. Use the draft reply below.",
+      "SOP-2: Ask the complainant for the dates of the weekend episodes, the start and end time of each, how long each lasted, whether it has happened before, and whether it was reported to the guardhouse. Do not contact A-06-08 or take any action against it until the facts are recorded.",
+      "SOP-4: Ask the guard on duty to attend A-05-08 or the common property during the next weekend quiet hours (after 11.00 p.m.) and record what is heard, the date, the time and the source as seen. Do not record A-06-08 as the source unless the check confirms it.",
+      "SOP-5: Send no written notice or reminder to A-06-08 until a breach is verified on site. Do not tell any resident a fine will be imposed.",
+      "SOP-8: Hand over to the building manager because the immediate fine requested is not supported by any rule in the documents. Note that only the management corporation may impose a fine under by-law 7 and ABL-9, and the statutory cap under s70(2)(i) is RM 200. Do not reply on the amount."
+     ],
+     "urgency": "routine"
+    }
+   },
+   "cost_usd": 0.00363,
+   "repeat": 1,
+   "seconds": 30.0,
+   "score": {
+    "tools": true,
+    "recorded": true,
+    "type": true,
+    "rules": true,
+    "not_cited": true,
+    "handover": true,
+    "facts_missing": true,
+    "conflict": true,
+    "masking": true,
+    "no_model_call": true,
+    "pass": true,
+    "cited": [
+     "ABL-9",
+     "ACT-s70",
+     "BL-10",
+     "BL-7",
+     "HR-1"
+    ],
+    "handover_got": "penalty_not_authorised",
+    "tool_calls": 4
+   }
+  }
+ ],
+ "summary": {
+  "model": "claude-haiku-5-5",
+  "usage_by_model": {
+   "claude-haiku-5-5": {
+    "input_tokens": 26,
+    "output_tokens": 13299,
+    "cache_creation_input_tokens": 17419,
+    "cache_read_input_tokens": 51486,
+    "cost_usd": 0.00934
+   }
+  },
+  "cost_usd": 0.00934,
+  "score": {
+   "cases_passed": "3/3",
+   "tools": "3/3",
+   "recorded": "3/3",
+   "type": "3/3",
+   "rules": "3/3",
+   "not_cited": "3/3",
+   "handover": "3/3",
+   "facts_missing": "3/3",
+   "conflict": "3/3",
+   "masking": "3/3",
+   "no_model_call": "3/3",
+   "tool_calls_per_case": {
+    "1-r1": 3,
+    "5-r1": 6,
+    "H1-r1": 4
+   }
+  }
+ }
+}

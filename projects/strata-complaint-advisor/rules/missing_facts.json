@@ -1,0 +1,105 @@
+{
+ "source": "corpus/building/complaint-sop.md",
+ "facts_by_type": {
+  "noise": [
+   "date and time",
+   "duration",
+   "unit believed to be the source",
+   "whether it has happened before"
+  ],
+  "parking": [
+   "bay number",
+   "vehicle registration number",
+   "date and time seen"
+  ],
+  "pets": [
+   "unit of the pet owner",
+   "what happened (noise",
+   "fouling",
+   "unleashed)",
+   "date and time"
+  ],
+  "renovation": [
+   "unit where works are done",
+   "date and time",
+   "type of works (drilling",
+   "hacking)"
+  ],
+  "leakage": [
+   "location of the leak in the unit",
+   "whether water is still coming in",
+   "when it started",
+   "unit above",
+   "photographs"
+  ],
+  "refuse": [
+   "what was left",
+   "where",
+   "when first seen",
+   "owner if known"
+  ],
+  "obstruction": [
+   "items",
+   "corridor and floor",
+   "how long they have been there"
+  ],
+  "facilities": [
+   "facility",
+   "date and time",
+   "number of guests",
+   "parcel concerned"
+  ],
+  "visitors_access": [
+   "date and time",
+   "visitor's name",
+   "what the guard asked for"
+  ],
+  "moving": [
+   "requested date and time",
+   "date of notice given",
+   "deposit receipt"
+  ],
+  "smoke_odour": [
+   "type of smoke or smell",
+   "times",
+   "unit believed to be the source"
+  ],
+  "damage_common_property": [
+   "what was damaged",
+   "when",
+   "contractor and unit concerned",
+   "photographs"
+  ],
+  "maintenance_repair": [
+   "fault",
+   "location",
+   "date first reported",
+   "work order number if any"
+  ],
+  "charges": [
+   "parcel",
+   "month",
+   "amount billed",
+   "the item queried"
+  ],
+  "penalty_query": [
+   "the fine or charge",
+   "the date notified",
+   "the rule named in the notice"
+  ],
+  "compensation": [
+   "what was damaged",
+   "when",
+   "amount claimed"
+  ],
+  "dispute": [
+   "the decision disputed",
+   "the action threatened"
+  ],
+  "management_conduct": [
+   "staff member or post",
+   "date and time",
+   "what happened"
+  ]
+ }
+}

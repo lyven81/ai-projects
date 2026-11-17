@@ -4,12 +4,13 @@ I build practical AI applications that help businesses answer customers, process
 
 Live site: https://lyven81.github.io/ai-projects/
 
-**Total published AI projects: 15**
+**Total published AI projects: 16**
 
 ## All Projects (newest first)
 
 | # | Added | Project | Page |
 |---|---|---|---|
+| 16 | 2026-11-17 | Strata Complaint Advisor | [page](https://lyven81.github.io/ai-projects/strata-complaint-advisor.html) |
 | 15 | 2026-11-07 | Fire Policy Underwriter Advisor | [page](https://lyven81.github.io/ai-projects/fire-claim-examiner.html) |
 | 14 | 2026-11-03 | Jade Star Chinese Dining 吉星饭厅 Booking Desk | [page](https://lyven81.github.io/ai-projects/restaurant-jade-star.html) |
 | 13 | 2026-11-02 | Cepat Express Customer Service | [page](https://lyven81.github.io/ai-projects/cepat-express-customer-service.html) |
@@ -84,6 +85,13 @@ Live site: https://lyven81.github.io/ai-projects/
 - **Rebuilt:** 2026-10-21
 
 ### Document processing
+
+#### Strata Complaint Advisor
+- **What it does:** A condominium complaint desk where the AI finds the rules that apply and drafts guidance for the admin officer, code masks personal numbers and checks every draft, and the officer and the building manager decide.
+- **How it's built:** Claude through an MCP server with four tools and four resources; retrieval over the Act, the Regulations, the by-laws and the house rules (vector, keyword and complaint-type pools, rerank, precedence by document tier); intake masking and an emergency check in code before any AI call; a check that holds every citation, quote, fine or payment amount, breach wording and handover reason before the guidance is recorded.
+- **Problem solved:** An admin officer must answer complaints that turn on four layers of rules without citing the wrong one, promising a fine or blaming a neighbour before anyone checks; the guidance cites the rule that governs and leaves every decision with the office.
+- **Page:** [Open](https://lyven81.github.io/ai-projects/strata-complaint-advisor.html) · **Demo:** [Try it](https://lyven81.github.io/ai-projects/projects/strata-complaint-advisor/demo.html)
+- **Rebuilt:** 2026-11-17
 
 #### Fire Policy Underwriter Advisor
 - **What it does:** A fire claims desk where the AI underwriter reads the claim file and advises the claims examiner gate by gate, code sets every gate status and the figure, and the examiner decides.
